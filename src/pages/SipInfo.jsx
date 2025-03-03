@@ -23,7 +23,7 @@ const SIPInfo = () => {
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Why Choose SIP?
         </h2>
-        <ul className="list-disc pl-6 space-y-2 text-base">
+        <ul className="list-disc pl-6 space-y-2 text-[15px] md:text-base">
           <li>
             <strong>Regular Investing Habit:</strong> SIP encourages regular
             investing, which helps you develop a good saving habit.

@@ -15,7 +15,7 @@ export const formatNumber = (num) => {
 
 export const formatChartNumber = (num) => {
   return num.toLocaleString("en-IN", {
-    minimumFractionDigits: 1,
-    maximumFractionDigits: 1,
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
   });
 };

@@ -10,6 +10,7 @@ import {
   Legend,
   ArcElement,
 } from "chart.js";
+import { formatChartNumber } from "../Calc";
 
 // Register necessary components for Chart.js
 ChartJS.register(
@@ -52,12 +53,11 @@ export const DoughnutChart = ({ data }) => (
         tooltip: {
           callbacks: {
             label: function (tooltipItem) {
-              return `${tooltipItem.label}: ₹${tooltipItem.raw.toLocaleString(
-                "en-IN"
-              )}`;
+              return `${tooltipItem.label}: ₹${formatChartNumber(tooltipItem.raw)}`;
             },
           },
         },
+        
       },
       cutout: '65%',
     }}

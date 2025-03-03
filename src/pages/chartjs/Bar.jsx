@@ -10,6 +10,7 @@ import {
   Legend,
   ArcElement,
 } from "chart.js";
+import { formatChartNumber } from "../Calc";
 
 // Register necessary components for Chart.js
 ChartJS.register(
@@ -50,6 +51,13 @@ export const BarChart = ({ data }) => (
         title: {
           display: false,
         },
+        tooltip: {
+          callbacks: {
+            label: function (tooltipItem) {
+              return `${tooltipItem.label}: ₹${formatChartNumber(tooltipItem.raw)}`; // Use formatChartNumber to round the value
+            },
+          },
+        },
       },
       scales: {
         x: {
@@ -73,7 +81,7 @@ export const BarChart = ({ data }) => (
               } else if (value >= 1e7) {
                 return `${(value / 1e7).toFixed(1)} Cr`;
               } else if (value >= 1e5) {
-                return `${(value / 1e5).toFixed(1)} Lakh`;
+                return `${(value / 1e5).toFixed(1)} Lac`;
               } 
               return value.toLocaleString(); // Regular formatting
             },

@@ -18,7 +18,6 @@ export default {
         crayola: "#FF8042",
         mint: "#00C49F",
 
-        // tomato: "#FF6347",
         tomato: "#F61C1C",
         crimson: "#DC143C",
         fireengine: "#CE2029",

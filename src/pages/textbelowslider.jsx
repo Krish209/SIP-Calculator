@@ -158,7 +158,6 @@ function SIPCalculator() {
       datasets: [
         {
           data: [investedAmountCalc, estimatedReturnsCalc],
-          // data: [investedAmount, estimatedReturns],
           backgroundColor: ["rgba(75,192,192,0.6)", "rgba(153,102,255,0.6)"],
         },
       ],
@@ -174,7 +173,7 @@ function SIPCalculator() {
   ]);
 
   return (
-    <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
+    <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-primary">
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
         {isSIP ? "SIP Investment Calculator" : "Lump Sum Investment Calculator"}
       </h1>
@@ -205,7 +204,7 @@ function SIPCalculator() {
           {/* User Inputs Section */}
           <div className="w-full lg:w-6/12 space-y-2 sm:space-y-4 md:space-y-8 m-auto">
             {/* Monthly Investment or Lump Sum Amount */}
-            <div className="space-y-1 sm:space-y-2 md:space-y-6">
+            <div className="space-y-1 sm:space-y-2 md:space-y-2">
               <div className="flex justify-between items-center">
                 <label className="font-medium">
                   {isSIP ? "Monthly Investment" : "Lump Sum Investment"}
@@ -259,12 +258,12 @@ function SIPCalculator() {
                   aria-labelledby="investmentSlider"
                 />
 
-                {/* <div className="flex justify-between text-sm text-gray-400 mt-0">
+                <div className="flex justify-between text-sm text-gray-400 mt-0">
                   <span>₹500</span>
                   <span>
                     ₹{isSIP ? maxMonthlyInvestment : maxLumpsumAmount}
                   </span>
-                </div> */}
+                </div>
               </div>
             </div>
 
@@ -306,11 +305,10 @@ function SIPCalculator() {
                   className="w-full"
                   aria-labelledby="investmentSlider"
                 />
-
-                {/* <div className="flex justify-between text-sm text-gray-400 mt-0">
+                <div className="flex justify-between text-sm text-gray-400 mt-0">
                   <span>1%</span>
                   <span>{maxRateOfInterest}%</span>
-                </div> */}
+                </div>
               </div>
             </div>
 
@@ -350,11 +348,10 @@ function SIPCalculator() {
                   className="w-full"
                   aria-labelledby="investmentSlider"
                 />
-
-                {/* <div className="flex justify-between text-sm text-gray-400 mt-0">
+                <div className="flex justify-between text-sm text-gray-400 mt-0">
                   <span>1Yr</span>
                   <span>{maxInvestmentPeriod}Yrs</span>
-                </div> */}
+                </div>
               </div>
             </div>
           </div>
@@ -371,12 +368,12 @@ function SIPCalculator() {
               ) : null}
 
               {/* Legend */}
-              <div className="text-left text-[13px] ws:text-[14px] us:text-lg md:text-base lg:text-lg">
+              <div className="text-gunmetal text-left text-[13px] ws:text-[14px] us:text-lg md:text-base lg:text-lg">
                 {/* Invested Amount */}
                 <div className="flex items-center mb-2.5">
-                  <div className="w-3 h-10 lg:h-12 bg-mint"></div>
+                  <div className="w-3 h-10 lg:h-12 bg-crayola"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Invested Amount:</span>
+                    <span className="">Invested Amount:</span>
                     <span className="font-semibold">
                       ₹{formatChartNumber(investedAmount)}{" "}
                       {formatNumber(investedAmount)
@@ -388,9 +385,9 @@ function SIPCalculator() {
 
                 {/* Estimated Returns */}
                 <div className="flex items-center mb-2.5">
-                  <div className="w-3 h-10 lg:h-12 bg-crayola"></div>
+                  <div className="w-3 h-10 lg:h-12 bg-mint"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Estimated Returns:</span>
+                    <span className="">Estimated Returns:</span>
                     <span className="font-semibold">
                       {" "}
                       ₹{formatChartNumber(estimatedReturns)}{" "}
@@ -405,7 +402,7 @@ function SIPCalculator() {
                 <div className="flex items-center mb-2.5">
                   <div className="w-3 h-10 lg:h-12 bg-gray-500"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Total Value:</span>
+                    <span className="">Total Value:</span>
                     <span className="font-semibold">
                       ₹{formatChartNumber(totalValue)}{" "}
                       {formatNumber(totalValue)
