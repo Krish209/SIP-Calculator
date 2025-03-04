@@ -75,7 +75,7 @@ const FAQ = () => {
       </h2>
       <div className="space-y-2">
         {questions.map((item, index) => (
-          <div key={index} className="overflow-hidden border-b rounded-lg">
+          <div key={index} className="overflow-hidden border-b">
             <div
               className="flex justify-between items-center px-2 py-2 md:py-3 cursor-pointer hover:bg-gray-100"
               onClick={() => toggleFAQ(index)}

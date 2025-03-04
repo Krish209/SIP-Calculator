@@ -281,30 +281,30 @@ const SIPInfo = () => {
           </p>
         </div>
 
-        <div className="bg-gray-100 p-4 rounded-lg mt-6">
+        <div className="bg-gray-100 p-2 vs:p-4 rounded-lg mt-6">
           <table className="table-auto w-full overflow-x-auto">
             <thead>
               <tr>
-                <th className="px-0 py-2 text-left">Feature</th>
-                <th className="px-0 py-2 text-left">SIP</th>
-                <th className="px-0 py-2 text-left">Lump Sum</th>
+                <th className="px-0.5 py-2 text-left">Feature</th>
+                <th className="px-0.5 py-2 text-left">SIP</th>
+                <th className="px-0.5 py-2 text-left">Lump Sum</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className="px-0 py-2">Investment Frequency</td>
-                <td className="px-0 py-2">Regular</td>
-                <td className="px-0 py-2">One-time</td>
+                <td className="px-0.5 py-2">Investment Frequency</td>
+                <td className="px-0.5 py-2">Regular</td>
+                <td className="px-0.5 py-2">One-time</td>
               </tr>
               <tr>
-                <td className="px-0 py-2">Risk</td>
-                <td className="px-0 py-2">Low (due to averaging)</td>
-                <td className="px-0 py-2">High (all at once)</td>
+                <td className="px-0.5 py-2">Risk</td>
+                <td className="px-0.5 py-2">Low (due to averaging)</td>
+                <td className="px-0.5 py-2">High (all at once)</td>
               </tr>
               <tr>
-                <td className="px-0 py-2">Returns</td>
-                <td className="px-0 py-2">Moderate, depends on market</td>
-                <td className="px-0 py-2">Variable, market timing impacts</td>
+                <td className="px-0.5 py-2">Returns</td>
+                <td className="px-0.5 py-2">Moderate, depends on market</td>
+                <td className="px-0.5 py-2">Variable, market timing impacts</td>
               </tr>
             </tbody>
           </table>
