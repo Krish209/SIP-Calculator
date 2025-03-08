@@ -39,7 +39,7 @@ function SIPCalculator() {
 
   const handleMonthlyInvestmentChange = (e) => {
     let value = Math.max(
-      500,
+      0,
       Math.min(Number(e.target.value), maxMonthlyInvestment)
     );
     setMonthlyInvestment(value);
@@ -47,7 +47,7 @@ function SIPCalculator() {
 
   const handleLumpsumAmountChange = (e) => {
     let value = Math.max(
-      500,
+      0,
       Math.min(Number(e.target.value), maxLumpsumAmount)
     );
     setLumpsumAmount(value);
@@ -55,7 +55,7 @@ function SIPCalculator() {
 
   const handleRateOfInterestChange = (e) => {
     let value = Math.max(
-      1,
+      0,
       Math.min(Number(e.target.value), maxRateOfInterest)
     );
     setRateOfInterest(value);
@@ -63,7 +63,7 @@ function SIPCalculator() {
 
   const handleInvestmentPeriodChange = (e) => {
     let value = Math.max(
-      1,
+      0,
       Math.min(Number(e.target.value), maxInvestmentPeriod)
     );
     setInvestmentPeriod(value);
@@ -255,7 +255,7 @@ function SIPCalculator() {
                       ? handleMonthlyInvestmentChange
                       : handleLumpsumAmountChange
                   }
-                  className="w-full"
+                  className="w-full cursor-pointer"
                   aria-labelledby="investmentSlider"
                 />
 
@@ -303,7 +303,7 @@ function SIPCalculator() {
                   step="0.1"
                   value={rateOfInterest}
                   onChange={handleRateOfInterestChange}
-                  className="w-full"
+                  className="w-full cursor-pointer"
                   aria-labelledby="investmentSlider"
                 />
 
@@ -347,7 +347,7 @@ function SIPCalculator() {
                   step="1"
                   value={investmentPeriod}
                   onChange={handleInvestmentPeriodChange}
-                  className="w-full"
+                  className="w-full cursor-pointer"
                   aria-labelledby="investmentSlider"
                 />
 
