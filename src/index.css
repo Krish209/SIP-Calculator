@@ -13,6 +13,46 @@ input[type="number"] {
   appearance: none;
 }
 
+a {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6);
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+a:hover {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.8);
+}
+
+.text-glow {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 15px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 1);
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+.text-glow:hover {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(0, 255, 255, 1), 0 0 60px rgba(0, 255, 255, 1);
+}
+
+.meteor {
+  position: absolute;
+  top: -10%;
+  width: 3px;
+  height: 20px;
+  background-color: #fff;
+  animation: meteor 3s linear infinite;
+  opacity: 0.8;
+  border-radius: 50%;
+}
+
+@keyframes meteor {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(100vh) translateX(50vw); /* Move to the bottom of the page */
+    opacity: 0;
+  }
+}
+
+
 body {
   /* font-weight: 500; */
   /* font-family: "SIPkarlo", Helvetica; */

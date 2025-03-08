@@ -1,11 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import img from '../assets/icons/bh2.jpg'; // Galaxy background image
-import vid from '../assets/icons/sky.mp4'; // Optional video background
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import img from "../assets/icons/bh2.jpg"; // Galaxy background image
+import vid from "../assets/icons/sky.mp4"; // Optional video background
+import aud from "../assets/icons/ds.mp3"; // Optional background music
+import MeteorEffect from "./Meteor";
 
 const NotFound = () => {
-  const [countdown, setCountdown] = useState(6); // Initialize the countdown to 5
+  const [countdown, setCountdown] = useState(6); // Initialize the countdown to 6
   const navigate = useNavigate(); // Initialize the navigate function
+
+  // const playBackgroundMusic = () => {
+  //   const audio = new Audio(ds); // Replace with your music file
+  //   audio.loop = true; // Loop the music
+  //   audio.play().catch((error) => {
+  //     console.error("Failed to play audio:", error);
+  //   });
+  // };
 
   useEffect(() => {
     // Start a countdown timer
@@ -13,7 +23,7 @@ const NotFound = () => {
       setCountdown((prev) => {
         if (prev === 1) {
           clearInterval(timer);
-          navigate('/'); // Redirect to homepage when countdown reaches 0
+          navigate("/"); // Redirect to homepage when countdown reaches 0
         }
         return prev - 1;
       });
@@ -44,20 +54,25 @@ const NotFound = () => {
         </video> */}
       </div>
 
+      
+
       {/* Semi-Transparent Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 z-0"></div>
       {/* <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-black via-transparent to-black opacity-80 z-0"></div> */}
 
       {/* Content */}
       <div className="relative z-10 text-white text-center px-4 sm:px-6 md:px-8 lg:px-12 max-w-4xl mx-auto">
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mb-6">
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mb-6 text-glow">
           404 - Lost in Space!
         </h1>
+
         <p className="text-base vs:text-lg sm:text-xl mb-4 leading-relaxed">
-          Looks like you've drifted into a black hole. The planet you’re looking for has vanished into the cosmos.
+          It seems you've drifted into a black hole. The planet you're searching
+          for has vanished into the cosmos.
         </p>
         <p className="text-base vs:text-lg sm:text-xl mb-6 leading-relaxed">
-          In the vast universe of the web, some planets just disappear. But don't worry, you can always return to our galaxy!
+          In the vast expanse of the web, some stars and planets just disappear.
+          But don't worry, you can always navigate back to our galaxy!
         </p>
 
         {/* Countdown Section */}
@@ -72,13 +87,13 @@ const NotFound = () => {
         {/* Manual Redirect Link */}
         <div className="text-center">
           <p className="text-sm sm:text-base text-gray-300">
-            Still stuck in space? Click{' '}
+            Still lost in space? Click{" "}
             <a
               href="/"
               className="text-blue-400 hover:text-blue-300 transition-colors duration-300 ease-in-out font-semibold"
             >
               here
-            </a>{' '}
+            </a>{" "}
             to return to safety.
           </p>
         </div>
@@ -86,6 +101,7 @@ const NotFound = () => {
 
       {/* Stars Animation (Optional) */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
+        <MeteorEffect />
         {[...Array(50)].map((_, i) => (
           <div
             key={i}

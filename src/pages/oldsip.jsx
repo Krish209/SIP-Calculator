@@ -46,10 +46,7 @@ function SIPCalculator() {
   };
 
   const handleLumpsumAmountChange = (e) => {
-    let value = Math.max(
-      0,
-      Math.min(Number(e.target.value), maxLumpsumAmount)
-    );
+    let value = Math.max(0, Math.min(Number(e.target.value), maxLumpsumAmount));
     setLumpsumAmount(value);
   };
 
@@ -71,6 +68,41 @@ function SIPCalculator() {
 
   // Recalculate data if inputs are valid
   useEffect(() => {
+    // Check if values are valid
+    if (
+      monthlyInvestment <= 0 ||
+      lumpsumAmount <= 0 ||
+      rateOfInterest <= 0 ||
+      investmentPeriod <= 0
+    ) {
+      setErrorMessages({
+        monthlyInvestment:
+          monthlyInvestment <= 0
+            ? "Investment must be greater than zero"
+            : "",
+        lumpsumAmount:
+          lumpsumAmount <= 0
+            ? "Investment must be greater than zero"
+            : "",
+        rateOfInterest:
+          rateOfInterest <= 0
+            ? "Rate of interest must be greater than zero"
+            : "",
+        investmentPeriod:
+          investmentPeriod <= 0
+            ? "Investment period must be greater than zero"
+            : "",
+      });
+      return; // Stop calculation if invalid input
+    }
+
+    setErrorMessages({
+      monthlyInvestment: "",
+      lumpsumAmount: "",
+      rateOfInterest: "",
+      investmentPeriod: "",
+    });
+
     const monthlyRate = rateOfInterest / 12 / 100;
     const inflationMultiplier = calculateWithInflation
       ? 1 + inflationRate / 100
@@ -105,22 +137,19 @@ function SIPCalculator() {
         }
       }
     } else {
-      // Lump Sum Calculation (Per Year)
+      // Lump Sum Calculation
       let tot = 0;
       let estireturn = 0;
 
       for (let i = 1; i <= investmentPeriod; i++) {
-        // Calculate total value for the year
         tot = lumpsumAmount * Math.pow(1 + rateOfInterest / 100, i);
         estireturn = tot - lumpsumAmount;
 
-        // Add the returns for that year to the chart data
         barDataInvested.push(lumpsumAmount);
         barDataReturns.push(estireturn);
         labels.push(`${i} Year${i > 1 ? "s" : ""}`);
       }
 
-      // Final total value and returns after the complete investment period
       totalValueCalc =
         lumpsumAmount * Math.pow(1 + rateOfInterest / 100, investmentPeriod);
       investedAmountCalc = lumpsumAmount;
@@ -158,7 +187,6 @@ function SIPCalculator() {
       datasets: [
         {
           data: [investedAmountCalc, estimatedReturnsCalc],
-          // data: [investedAmount, estimatedReturns],
           backgroundColor: ["rgba(75,192,192,0.6)", "rgba(153,102,255,0.6)"],
         },
       ],
@@ -206,43 +234,47 @@ function SIPCalculator() {
           <div className="w-full lg:w-6/12 space-y-2 sm:space-y-4 md:space-y-8 m-auto">
             {/* Monthly Investment or Lump Sum Amount */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="flex justify-between items-center">
-                <label className="font-medium">
-                  {isSIP ? "Monthly Investment" : "Lump Sum Investment"}
-                </label>
-                <div className="relative w-28 lg:w-32">
-                  <input
-                    type="number"
-                    value={isSIP ? monthlyInvestment : lumpsumAmount}
-                    onChange={
-                      isSIP
-                        ? handleMonthlyInvestmentChange
-                        : handleLumpsumAmountChange
-                    }
-                    className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-right ${
-                      errorMessages[
-                        isSIP ? "monthlyInvestment" : "lumpsumAmount"
-                      ]
-                        ? "border-red-500"
-                        : ""
-                    }`}
-                    placeholder={isSIP ? "1000" : "10000"}
-                    style={{
-                      WebkitAppearance: "none", // Removes the spinner in WebKit-based browsers (Chrome, Safari)
-                      MozAppearance: "textfield", // Removes the spinner in Firefox
-                    }}
-                  />
-                  <span className="absolute left-4 top-2.5 text-gray-500">
-                    ₹
-                  </span>
+              <div className="min-h-10 sm:h-14 md:h-14">
+                <div className="flex justify-between items-center">
+                  <label className="font-medium">
+                    {isSIP ? "Monthly Investment" : "Lump Sum Investment"}
+                  </label>
+                  <div className="relative w-28 lg:w-32">
+                    <input
+                      type="number"
+                      value={isSIP ? monthlyInvestment : lumpsumAmount}
+                      onChange={
+                        isSIP
+                          ? handleMonthlyInvestmentChange
+                          : handleLumpsumAmountChange
+                      }
+                      className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-right ${
+                        errorMessages[
+                          isSIP ? "monthlyInvestment" : "lumpsumAmount"
+                        ]
+                          ? "border-red-500"
+                          : ""
+                      }`}
+                      placeholder={isSIP ? "1000" : "10000"}
+                      style={{
+                        WebkitAppearance: "none", // Removes the spinner in WebKit-based browsers (Chrome, Safari)
+                        MozAppearance: "textfield", // Removes the spinner in Firefox
+                      }}
+                    />
+                    <span className="absolute left-4 top-2.5 text-gray-500">
+                      ₹
+                    </span>
+                  </div>
                 </div>
+                  
+                {/* Error Message */}
+                  {errorMessages[isSIP ? "monthlyInvestment" : "lumpsumAmount"] && (
+                    <p className="text-red-500 text-[13px] us:text-sm">
+                        {errorMessages[isSIP ? "monthlyInvestment" : "lumpsumAmount"]}
+                    </p>
+                  )}
               </div>
 
-              {errorMessages[isSIP ? "monthlyInvestment" : "lumpsumAmount"] && (
-                <p className="text-red-500 text-sm">
-                  {errorMessages[isSIP ? "monthlyInvestment" : "lumpsumAmount"]}
-                </p>
-              )}
               <div className="">
                 <input
                   type="range"
@@ -270,31 +302,33 @@ function SIPCalculator() {
 
             {/* Rate of Interest */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="flex justify-between items-center">
-                <label className="font-medium">
-                  Expected Rate of Interest (p.a)
-                </label>
-                <div className="relative w-28 lg:w-32">
-                  <input
-                    type="number"
-                    value={rateOfInterest}
-                    onChange={handleRateOfInterestChange}
-                    className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-left appearance-none ${
-                      errorMessages.rateOfInterest ? "border-red-500" : ""
-                    }`}
-                    placeholder="12"
-                  />
-                  <span className="absolute right-4 top-2 text-gray-500">
-                    %
-                  </span>
+              <div className="min-h-10 sm:h-14 md:h-14">
+                <div className="flex justify-between items-center">
+                  <label className="font-medium">
+                    Expected Rate of Interest (p.a)
+                  </label>
+                  <div className="relative w-28 lg:w-32">
+                    <input
+                      type="number"
+                      value={rateOfInterest}
+                      onChange={handleRateOfInterestChange}
+                      className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-left appearance-none ${
+                        errorMessages.rateOfInterest ? "border-red-500" : ""
+                      }`}
+                      placeholder="12"
+                    />
+                    <span className="absolute right-4 top-2 text-gray-500">
+                      %
+                    </span>
+                  </div>
                 </div>
-              </div>
 
-              {errorMessages.rateOfInterest && (
-                <p className="text-red-500 text-sm">
-                  {errorMessages.rateOfInterest}
-                </p>
-              )}
+                {errorMessages.rateOfInterest && (
+                  <p className="text-red-500 text-[13px] us:text-sm">
+                    {errorMessages.rateOfInterest}
+                  </p>
+                )}
+              </div>
               <div className="">
                 <input
                   type="range"
@@ -316,29 +350,33 @@ function SIPCalculator() {
 
             {/* Investment Period */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="flex justify-between items-center">
-                <label className="font-medium">Investment Period</label>
-                <div className="relative w-28 lg:w-32">
-                  <input
-                    type="number"
-                    value={investmentPeriod}
-                    onChange={handleInvestmentPeriodChange}
-                    className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-left appearance-none ${
-                      errorMessages.investmentPeriod ? "border-red-500" : ""
-                    }`}
-                    placeholder="5"
-                  />
-                  <span className="absolute right-4 top-2 text-gray-500">
-                    Year(s)
-                  </span>
+              <div className="min-h-10 sm:h-14 md:h-14">
+                <div className="flex justify-between items-center">
+                  <label className="font-medium">Investment Period</label>
+                  <div className="relative w-28 lg:w-32">
+                    <input
+                      type="number"
+                      value={investmentPeriod}
+                      onChange={handleInvestmentPeriodChange}
+                      className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-left appearance-none ${
+                        errorMessages.investmentPeriod ? "border-red-500" : ""
+                      }`}
+                      placeholder="5"
+                    />
+                    <span className="absolute right-4 top-2 text-gray-500">
+                      Year(s)
+                    </span>
+                  </div>
                 </div>
+
+                {/* Error Message */}
+                {errorMessages.investmentPeriod && (
+                  <p className="text-red-500 text-[13px] us:text-sm">
+                    {errorMessages.investmentPeriod}
+                  </p>
+                )}
               </div>
 
-              {errorMessages.investmentPeriod && (
-                <p className="text-red-500 text-sm">
-                  {errorMessages.investmentPeriod}
-                </p>
-              )}
               <div className="">
                 <input
                   type="range"

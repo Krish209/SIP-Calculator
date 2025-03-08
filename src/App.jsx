@@ -1,13 +1,15 @@
-import { useState } from "react";
-// import SIPCalculator from "./pages/oldsip";
-// import SIPCalculator from "./pages/textbelowslider";
-// import SIPCalculator from "./pages/chartjs/RechartsSIP";
-import SIPCalculator from "./pages/SIPCalculator";
+// App.jsx
+import { Route, Routes } from "react-router-dom";
+import SIPCalculator from "./pages/oldsip";
+import NotFound from "./pages/Notfound";
 
 function App() {
   return (
     <div className="App">
-      <SIPCalculator />
+      <Routes>
+        <Route path="/" element={<SIPCalculator />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 }
