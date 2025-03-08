@@ -5,7 +5,7 @@ import vid from "../assets/icons/sky.mp4"; // Optional video background
 import aud from "../assets/icons/ds.mp3"; // Optional background music
 import MeteorEffect from "./Meteor";
 
-const NotFound = () => {
+const ErrorPage = () => {
   const [countdown, setCountdown] = useState(6); // Initialize the countdown to 6
   const navigate = useNavigate(); // Initialize the navigate function
 
@@ -118,4 +118,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default ErrorPage;

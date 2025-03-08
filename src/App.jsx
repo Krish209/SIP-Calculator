@@ -1,14 +1,15 @@
 // App.jsx
 import { Route, Routes } from "react-router-dom";
-import SIPCalculator from "./pages/oldsip";
-import NotFound from "./pages/Notfound";
+// import SIPCalculator from "./pages/oldsip";
+import SIPCalculator from "./pages/SIPCalculator";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<SIPCalculator />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
   );
