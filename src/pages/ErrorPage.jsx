@@ -94,7 +94,7 @@ const ErrorPage = () => {
             >
               here
             </a>{" "}
-            to return to safety.
+            to return to safety. 🚀
           </p>
         </div>
       </div>
