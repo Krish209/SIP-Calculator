@@ -1,4 +1,3 @@
-// App.jsx
 import { Route, Routes } from "react-router-dom";
 // import SIPCalculator from "./pages/oldsip";
 import SIPCalculator from "./pages/SIPCalculator";
