@@ -71,8 +71,10 @@ const FAQ = () => {
   return (
     <div className="mx-auto mb-4 text-primary">
       <h2 className="text-xl md:text-2xl font-semibold text-center mb-4 md:mb-6">
-        Frequently Asked Questions
+        Frequently Asked Questions - SIP
       </h2>
+
+      {/* FAQ Section */}
       <div className="space-y-2">
         {questions.map((item, index) => (
           <div key={index} className="overflow-hidden border-b">
@@ -80,7 +82,7 @@ const FAQ = () => {
               className="flex justify-between items-center px-2 py-2 md:py-3 cursor-pointer hover:bg-gray-100"
               onClick={() => toggleFAQ(index)}
             >
-             <h3
+              <h3
                 className={`${
                   activeIndex === index ? "" : "truncate"
                 } text-[15px] md:text-base font-medium`}
@@ -92,7 +94,9 @@ const FAQ = () => {
               </span>
             </div>
             {activeIndex === index && (
-              <div className="text-[14px] md:text-[15px] px-2 py-1 md:py-3">{item.answer}</div>
+              <div className="text-[14px] md:text-[15px] px-2 py-1 md:py-3">
+                {item.answer}
+              </div>
             )}
           </div>
         ))}

@@ -3,6 +3,9 @@ import React from "react";
 const SIPInfo = () => {
   return (
     <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
+      <h1 className="text-2xl md:text-3xl font-bold text-center mb-6 text-blue-600">
+        SIP Investment- A Comprehensive Guide
+      </h1>
       {/* What is SIP? */}
       <section className="my-4 md:my-6 ">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
@@ -94,7 +97,7 @@ const SIPInfo = () => {
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Types of SIP
         </h2>
-        <ul className="list-disc pl-6 space-y-2 ">
+        <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Fixed SIP:</strong> In Fixed SIP, you invest a fixed amount
             at regular intervals, such as ₹1,000 every month. This method helps
@@ -199,7 +202,7 @@ const SIPInfo = () => {
           <code className="">A = P × [(1 + r)^n - 1] / r × (1 + r)</code>
           <p className="mt-2">
             Where:
-            <ul className="list-disc pl-6 space-y-1 ">
+            <ul className="list-disc pl-6 space-y-1">
               <li>
                 <strong>A</strong> = Final Amount (after interest)
               </li>
@@ -223,7 +226,7 @@ const SIPInfo = () => {
           understanding:
         </p>
 
-        <ul className="space-y-2 ">
+        <ul className="space-y-2">
           <li>- Monthly Investment (P) = ₹5,000</li>
           <li>
             - Annual Return Rate (r) = 12% (Monthly Interest Rate = 12% ÷ 12 =
@@ -566,7 +569,7 @@ const SIPInfo = () => {
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Key Considerations for SIP
         </h2>
-        <ul className="list-disc pl-6 space-y-2 ">
+        <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Start Early:</strong> The earlier you begin investing in an
             SIP, the more you benefit from compounding. This is crucial for
@@ -630,12 +633,16 @@ const SIPInfo = () => {
             wealth creation. Ensure your portfolio can outpace inflation.
           </li>
           <li>
-            <strong>Ignoring Your Investment Horizon:</strong> Choose funds that match your investment horizon. For example, if you're investing for
+            <strong>Ignoring Your Investment Horizon:</strong> Choose funds that
+            match your investment horizon. For example, if you're investing for
             a long-term goal (like retirement), equity funds might be more
             suitable than debt funds.
           </li>
           <li>
-            <strong>Overextending SIP Contributions:</strong> Avoid overcommitting to SIP contributions without considering one's current cash flow needs can be useful. It's important to balance SIP investments with other financial obligations.
+            <strong>Overextending SIP Contributions:</strong> Avoid
+            overcommitting to SIP contributions without considering one's
+            current cash flow needs can be useful. It's important to balance SIP
+            investments with other financial obligations.
           </li>
         </ul>
       </section>

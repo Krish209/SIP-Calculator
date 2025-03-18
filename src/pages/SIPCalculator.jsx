@@ -514,7 +514,7 @@ function SIPCalculator() {
           ) : null}
         </div>
 
-        <div>
+        <div className="py-4">
           <SIPInfo />
           <FAQ />
         </div>
