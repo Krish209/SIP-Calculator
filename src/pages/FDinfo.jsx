@@ -3,7 +3,7 @@ import React from "react";
 const FdInfo = () => {
   return (
     <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-      <h1 className="text-2xl md:text-3xl font-bold text-center mb-6 text-blue-600">
+      <h1 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         Fixed Deposit (FD) Investment - A Comprehensive Guide
       </h1>
       <p className="mb-2">
@@ -64,12 +64,16 @@ const FdInfo = () => {
             rate is usually higher than a regular savings account but lower than
             riskier investment options.
             <br />
-            <em>
-              <strong>Note:</strong> The interest rate offered on an FD can vary
-              based on the tenure chosen, with longer tenures generally offering
-              higher interest rates.
-            </em>
           </li>
+          <div className="bg-blue-50 p-2 md:p-4 rounded-lg mt-6 shadow-md">
+            <p>
+              <strong>Important Note:</strong> The interest rate offered on an
+              FD can vary based on the tenure chosen, with longer tenures
+              generally offering higher interest rates. It's always advisable to
+              check with your specific bank or financial institution for their
+              exact FD tenure options and terms and conditions.
+            </p>
+          </div>
           <li>
             <strong>Interest Payment:</strong> Interest is paid at periodic
             intervals or at the end of the tenure, depending on your preference.
@@ -167,13 +171,6 @@ const FdInfo = () => {
             <strong>Liquidity Needs:</strong> If you anticipate needing your
             funds before maturity, consider a flexible FD that allows partial
             withdrawals without penalties.
-          </li>
-          <li>
-            <em>
-              <strong>Note:</strong> It's always advisable to check with your
-              specific bank or financial institution for their exact FD tenure
-              options and terms and conditions.
-            </em>
           </li>
         </ul>
       </section>

@@ -3,7 +3,7 @@ import React from "react";
 const CompoundingInterestInfo = () => {
   return (
     <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-      <h1 className="text-2xl md:text-3xl font-bold text-center mb-6 text-blue-600">
+      <h1 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         Compound Interest - A Comprehensive Guide
       </h1>
 
@@ -166,7 +166,7 @@ const CompoundingInterestInfo = () => {
           </li>
         </ul>
 
-        <div className="bg-blue-50 p-2 md:p-4 rounded-lg mt-6 shadow-md">
+        <div className="bg-blue-50 p-2 md:p-4 rounded-lg mt-4 shadow-md">
           <p>
             <strong>Important Note:</strong> The more frequently the interest is
             compounded, the more you will earn.

@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
 import { formatNumber, formatChartNumber } from "./Calc";
-import FdInfo from "./FDinfo";
 
-function FDCalculator() {
+function NSC() {
   const [principalAmount, setPrincipalAmount] = useState(10000); // Default ₹10000 for FD
   const [rateOfInterest, setRateOfInterest] = useState(6); // Default 6% p.a.
-  const [investmentPeriod, setInvestmentPeriod] = useState(5); // Default 5 years
+  const [compoundFrequency, setCompoundFrequency] = useState(4); // Default quarterly compounding
 
   const [totalValue, setTotalValue] = useState(0);
   const [estimatedReturns, setEstimatedReturns] = useState(0);
@@ -16,29 +15,25 @@ function FDCalculator() {
   const [chartData, setChartData] = useState(null);
   const [donutChartData, setDonutChartData] = useState(null);
 
+  const investmentPeriod = 5;
+
   // Error states
   const [errorMessages, setErrorMessages] = useState({
     principalAmount: "",
     rateOfInterest: "",
-    investmentPeriod: "",
   });
 
   const maxPrincipalAmount = 10000000;
-  const maxRateOfInterest = 15;
-  const maxInvestmentPeriod = 30;
+  const maxRateOfInterest = 12;
 
   useEffect(() => {
-    if (principalAmount <= 0 || rateOfInterest <= 0 || investmentPeriod <= 0) {
+    if (principalAmount <= 0 || rateOfInterest <= 0) {
       setErrorMessages({
         principalAmount:
           principalAmount <= 0 ? "Principal must be greater than zero" : "",
         rateOfInterest:
           rateOfInterest <= 0
             ? "Rate of interest must be greater than zero"
-            : "",
-        investmentPeriod:
-          investmentPeriod <= 0
-            ? "Investment period must be greater than zero"
             : "",
       });
       return; // Stop calculation if invalid input
@@ -47,33 +42,45 @@ function FDCalculator() {
     setErrorMessages({
       principalAmount: "",
       rateOfInterest: "",
-      investmentPeriod: "",
     });
 
-    // Quarterly compounding (fixed frequency of 4)
-    const compoundFrequency = 4;
     const interestRatePerPeriod = rateOfInterest / 100 / compoundFrequency;
-    const totalPeriods = investmentPeriod * compoundFrequency;
 
-    let accumulatedValue = principalAmount;
-    const barDataInvested = [];
-    const barDataReturns = [];
+    let totalValueCalc = principalAmount;
     let investedAmountCalc = principalAmount;
 
-    // Generate yearly data
+    // Arrays to store yearly values for the bar chart
+    const barDataInvested = [];
+    const barDataReturns = [];
+    let accumulatedValue = principalAmount;
+
+    // Create yearly data
     for (let year = 1; year <= investmentPeriod; year++) {
-      const totalPeriodsThisYear = year * compoundFrequency;
-      accumulatedValue = principalAmount * Math.pow(1 + interestRatePerPeriod, totalPeriodsThisYear); // Apply compound interest
+      // Calculate the total number of periods for the current year
+      const currentYearPeriod = year * compoundFrequency;
+
+      // Calculate the value at the end of the current year
+      for (let period = 1; period <= compoundFrequency; period++) {
+        const totalPeriods = year * compoundFrequency; // Total periods for the year
+        accumulatedValue =
+          principalAmount * Math.pow(1 + interestRatePerPeriod, totalPeriods); // Compound formula
+      }
+
+      // Save the data for the current year
       barDataInvested.push(investedAmountCalc);
       barDataReturns.push(accumulatedValue - investedAmountCalc);
     }
 
-    setTotalValue(accumulatedValue);
-    setEstimatedReturns(accumulatedValue - investedAmountCalc);
+    totalValueCalc = accumulatedValue;
+    setTotalValue(totalValueCalc);
+    setEstimatedReturns(totalValueCalc - investedAmountCalc);
     setInvestedAmount(investedAmountCalc);
 
-    // Chart data
-    const labels = Array.from({ length: investmentPeriod }, (_, index) => `${index + 1} Year${index + 1 > 1 ? "s" : ""}`);
+    // Chart Data
+    const labels = Array.from(
+      { length: investmentPeriod },
+      (_, index) => `${index + 1} Year${index + 1 > 1 ? "s" : ""}`
+    );
 
     setChartData({
       labels: labels,
@@ -91,17 +98,16 @@ function FDCalculator() {
       ],
     });
 
-    // Donut chart data
     setDonutChartData({
       labels: ["Invested Amount", "Estimated Returns"],
       datasets: [
         {
-          data: [principalAmount, accumulatedValue - principalAmount],
+          data: [principalAmount, totalValueCalc - principalAmount],
           backgroundColor: ["rgba(75,192,192,0.6)", "rgba(153,102,255,0.6)"],
         },
       ],
     });
-  }, [principalAmount, rateOfInterest, investmentPeriod]);
+  }, [principalAmount, rateOfInterest, compoundFrequency]);
 
   // Handlers for inputs
   const handlePrincipalAmountChange = (e) =>
@@ -112,15 +118,13 @@ function FDCalculator() {
     setRateOfInterest(
       Math.max(0, Math.min(Number(e.target.value), maxRateOfInterest))
     );
-  const handleInvestmentPeriodChange = (e) =>
-    setInvestmentPeriod(
-      Math.max(0, Math.min(Number(e.target.value), maxInvestmentPeriod))
-    );
+  const handleCompoundFrequencyChange = (e) =>
+    setCompoundFrequency(Number(e.target.value));
 
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
-        FD Investment Calculator
+        NSC Calculator
       </h1>
 
       {/* User Inputs Section */}
@@ -203,42 +207,22 @@ function FDCalculator() {
             </div>
 
             {/* Investment Period */}
-            <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
-                <div className="flex justify-between items-center">
-                  <label className="font-medium">
-                    Investment Period (years)
-                  </label>
-                  <div className="relative w-28 lg:w-32">
-                    <input
-                      type="number"
-                      value={investmentPeriod}
-                      onChange={handleInvestmentPeriodChange}
-                      className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-left appearance-none ${
-                        errorMessages.investmentPeriod ? "border-red-500" : ""
-                      }`}
-                      placeholder="5"
-                    />
-                    <span className="absolute right-4 top-2 text-gray-500">
-                      Years
-                    </span>
-                  </div>
-                </div>
-                {errorMessages.investmentPeriod && (
-                  <p className="text-red-500 text-[13px] us:text-sm">
-                    {errorMessages.investmentPeriod}
-                  </p>
-                )}
-              </div>
-              <input
-                type="range"
-                min="1"
-                max={maxInvestmentPeriod}
-                step="1"
-                value={investmentPeriod}
-                onChange={handleInvestmentPeriodChange}
-                className="w-full cursor-pointer"
-              />
+            <div className="flex justify-between items-center">
+              <label className="font-medium">Investment Period</label>
+              <div className="">5 Years</div>
+            </div>
+
+            {/* Compound Frequency */}
+            <div className="flex justify-between items-center">
+              <label className="font-medium">Compounding Frequency</label>
+              <select
+                value={compoundFrequency}
+                onChange={handleCompoundFrequencyChange}
+                className="p-2 border rounded-md shadow-sm w-28 lg:w-32"
+              >
+                <option value={1}>Annually</option>
+                <option value={2}>Semi-Annually</option>
+              </select>
             </div>
           </div>
 
@@ -315,12 +299,10 @@ function FDCalculator() {
           ) : null}
         </div>
 
-        <div className="py-4">
-          <FdInfo />
-        </div>
+        <div className="py-4">{/*  */}</div>
       </div>
     </div>
   );
 }
 
-export default FDCalculator;
+export default NSC;

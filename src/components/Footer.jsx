@@ -40,7 +40,7 @@ function Footer() {
           </div>
 
           {/* Logo Section */}
-          <div className="md:flex-1 flex flex-col items-center gap-2">
+          <div className="md:flex-1 flex flex-col items-center">
             <Link to="/" className="flex justify-center">
               <img
                 src={logo}
@@ -214,7 +214,7 @@ function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-2">
             {/* Left Section */}
             <div className="text-center lg:left-0">
-              <p className="text-[12px]">
+              <p className="text-[13px]">
                 Copyright © 2025 Sipgo. All rights reserved.
               </p>
             </div>

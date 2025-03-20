@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const SimpleInterestInfo = () => {
   return (
     <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-      <h1 className="text-2xl md:text-3xl font-bold text-center mb-6 text-blue-600">
+      <h1 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         Simple Interest - A Comprehensive Guide
       </h1>
 
@@ -50,6 +50,8 @@ const SimpleInterestInfo = () => {
       </p>
 
       <code className="">
+        A = P + SI
+        <br />
         A = ₹50,000 + (₹50,000 × 0.12 × 5) / 100
         <br />
         A = ₹50,000 + ₹30,000

@@ -4,7 +4,7 @@ const SIPInfo = () => {
   return (
     <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
       <h1 className="text-2xl md:text-3xl font-bold text-center mb-6 text-blue-600">
-        SIP Investment- A Comprehensive Guide
+        SIP Investment - A Comprehensive Guide
       </h1>
       {/* What is SIP? */}
       <section className="my-4 md:my-6 ">

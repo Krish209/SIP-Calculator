@@ -2,241 +2,239 @@ import React, { useState, useEffect } from "react";
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
 import { formatNumber, formatChartNumber } from "./Calc";
-import FdInfo from "./FDinfo";
 
-function FDCalculator() {
-  const [principalAmount, setPrincipalAmount] = useState(10000); // Default ₹10000 for FD
-  const [rateOfInterest, setRateOfInterest] = useState(6); // Default 6% p.a.
-  const [investmentPeriod, setInvestmentPeriod] = useState(5); // Default 5 years
+function EMI() {
+  const [loanAmount, setLoanAmount] = useState(500000); // Default ₹500000
+  const [interestRate, setInterestRate] = useState(8); // Default 8% p.a.
+  const [loanTenure, setLoanTenure] = useState(20); // Default 20 years
 
-  const [totalValue, setTotalValue] = useState(0);
-  const [estimatedReturns, setEstimatedReturns] = useState(0);
-  const [investedAmount, setInvestedAmount] = useState(0);
+  const [emi, setEmi] = useState(0);
+  const [totalPayment, setTotalPayment] = useState(0);
+  const [totalInterest, setTotalInterest] = useState(0);
 
   const [chartData, setChartData] = useState(null);
   const [donutChartData, setDonutChartData] = useState(null);
 
   // Error states
   const [errorMessages, setErrorMessages] = useState({
-    principalAmount: "",
-    rateOfInterest: "",
-    investmentPeriod: "",
+    loanAmount: "",
+    interestRate: "",
+    loanTenure: "",
   });
 
-  const maxPrincipalAmount = 10000000;
-  const maxRateOfInterest = 15;
-  const maxInvestmentPeriod = 30;
+  const maxLoanAmount = 5000000;
+  const maxInterestRate = 20;
+  const maxLoanTenure = 30;
 
   useEffect(() => {
-    if (principalAmount <= 0 || rateOfInterest <= 0 || investmentPeriod <= 0) {
+    if (loanAmount <= 0 || interestRate <= 0 || loanTenure <= 0) {
       setErrorMessages({
-        principalAmount:
-          principalAmount <= 0 ? "Principal must be greater than zero" : "",
-        rateOfInterest:
-          rateOfInterest <= 0
-            ? "Rate of interest must be greater than zero"
-            : "",
-        investmentPeriod:
-          investmentPeriod <= 0
-            ? "Investment period must be greater than zero"
-            : "",
+        loanAmount:
+          loanAmount <= 0 ? "Loan Amount must be greater than zero" : "",
+        interestRate:
+          interestRate <= 0 ? "Interest Rate must be greater than zero" : "",
+        loanTenure:
+          loanTenure <= 0 ? "Loan Tenure must be greater than zero" : "",
       });
       return; // Stop calculation if invalid input
     }
 
     setErrorMessages({
-      principalAmount: "",
-      rateOfInterest: "",
-      investmentPeriod: "",
+      loanAmount: "",
+      interestRate: "",
+      loanTenure: "",
     });
 
-    // Quarterly compounding (fixed frequency of 4)
-    const compoundFrequency = 4;
-    const interestRatePerPeriod = rateOfInterest / 100 / compoundFrequency;
-    const totalPeriods = investmentPeriod * compoundFrequency;
+    const monthlyRate = interestRate / 100 / 12;
+    const numberOfMonths = loanTenure * 12;
 
-    let accumulatedValue = principalAmount;
-    const barDataInvested = [];
-    const barDataReturns = [];
-    let investedAmountCalc = principalAmount;
+    // Calculate EMI
+    const emiCalculation =
+      (loanAmount * monthlyRate * Math.pow(1 + monthlyRate, numberOfMonths)) /
+      (Math.pow(1 + monthlyRate, numberOfMonths) - 1);
 
-    // Generate yearly data
-    for (let year = 1; year <= investmentPeriod; year++) {
-      const totalPeriodsThisYear = year * compoundFrequency;
-      accumulatedValue = principalAmount * Math.pow(1 + interestRatePerPeriod, totalPeriodsThisYear); // Apply compound interest
-      barDataInvested.push(investedAmountCalc);
-      barDataReturns.push(accumulatedValue - investedAmountCalc);
+    const totalPaymentCalc = emiCalculation * numberOfMonths;
+    const totalInterestCalc = totalPaymentCalc - loanAmount;
+
+    setEmi(emiCalculation);
+    setTotalPayment(totalPaymentCalc);
+    setTotalInterest(totalInterestCalc);
+
+    // Create Chart Data for EMI Payments Over Time
+    const barDataMonthly = [];
+    const barDataInterest = [];
+    let paidAmount = 0;
+
+    for (let month = 1; month <= numberOfMonths; month++) {
+      let interestPayment = loanAmount * monthlyRate;
+      let principalPayment = emiCalculation - interestPayment;
+      paidAmount += principalPayment;
+
+      barDataMonthly.push(emiCalculation);
+      barDataInterest.push(totalInterest);
     }
 
-    setTotalValue(accumulatedValue);
-    setEstimatedReturns(accumulatedValue - investedAmountCalc);
-    setInvestedAmount(investedAmountCalc);
+    // Set the chart data for Monthly EMI and Total Interest Paid
 
-    // Chart data
-    const labels = Array.from({ length: investmentPeriod }, (_, index) => `${index + 1} Year${index + 1 > 1 ? "s" : ""}`);
+    const labels = Array.from(
+        { length: loanTenure },
+        (_, index) => `${index + 1} Year${index + 1 > 1 ? "s" : ""}`
+      );
 
     setChartData({
-      labels: labels,
+        labels: labels,
       datasets: [
         {
-          label: "Invested Amount",
-          data: barDataInvested,
+          label: "Principal ",
+          data: barDataMonthly,
           backgroundColor: "rgba(75,192,192,0.6)",
         },
         {
-          label: "Estimated Returns",
-          data: barDataReturns,
+          label: "Interest Payments",
+          data: barDataInterest,
           backgroundColor: "rgba(153,102,255,0.6)",
         },
       ],
     });
 
-    // Donut chart data
     setDonutChartData({
-      labels: ["Invested Amount", "Estimated Returns"],
+      labels: ["Principal Payment", "Total Interest"],
       datasets: [
         {
-          data: [principalAmount, accumulatedValue - principalAmount],
+          data: [loanAmount, totalInterestCalc],
           backgroundColor: ["rgba(75,192,192,0.6)", "rgba(153,102,255,0.6)"],
         },
       ],
     });
-  }, [principalAmount, rateOfInterest, investmentPeriod]);
+  }, [loanAmount, interestRate, loanTenure]);
 
   // Handlers for inputs
-  const handlePrincipalAmountChange = (e) =>
-    setPrincipalAmount(
-      Math.max(0, Math.min(Number(e.target.value), maxPrincipalAmount))
+  const handleLoanAmountChange = (e) =>
+    setLoanAmount(Math.max(0, Math.min(Number(e.target.value), maxLoanAmount)));
+  const handleInterestRateChange = (e) =>
+    setInterestRate(
+      Math.max(0, Math.min(Number(e.target.value), maxInterestRate))
     );
-  const handleRateOfInterestChange = (e) =>
-    setRateOfInterest(
-      Math.max(0, Math.min(Number(e.target.value), maxRateOfInterest))
-    );
-  const handleInvestmentPeriodChange = (e) =>
-    setInvestmentPeriod(
-      Math.max(0, Math.min(Number(e.target.value), maxInvestmentPeriod))
-    );
+  const handleLoanTenureChange = (e) =>
+    setLoanTenure(Math.max(0, Math.min(Number(e.target.value), maxLoanTenure)));
 
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
-        FD Investment Calculator
+        EMI Calculator
       </h1>
 
       {/* User Inputs Section */}
       <div className="space-y-4">
         <div className="flex md:flex-row flex-col gap-6 md:gap-[74px] text-[15px] lg:text-lg lg:space-x-0 rounded-xl py-4 lg:py-8 p-2 vs:p-6 md:p-6 lg:p-8 border">
-          {/* User Inputs Section */}
           <div className="w-full lg:w-6/12 space-y-2 sm:space-y-4 md:space-y-8 m-auto">
-            {/* Principal Amount */}
+            {/* Loan Amount */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-14">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Principal Amount</label>
+                  <label className="font-medium">Loan Amount</label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
-                      value={principalAmount}
-                      onChange={handlePrincipalAmountChange}
+                      value={loanAmount}
+                      onChange={handleLoanAmountChange}
                       className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-right ${
-                        errorMessages.principalAmount ? "border-red-500" : ""
+                        errorMessages.loanAmount ? "border-red-500" : ""
                       }`}
-                      placeholder="10000"
+                      placeholder="500000"
                     />
                     <span className="absolute left-4 top-2.5 text-gray-500">
                       ₹
                     </span>
                   </div>
                 </div>
-                {errorMessages.principalAmount && (
+                {errorMessages.loanAmount && (
                   <p className="text-red-500 text-[13px] us:text-sm">
-                    {errorMessages.principalAmount}
+                    {errorMessages.loanAmount}
                   </p>
                 )}
               </div>
               <input
                 type="range"
                 min="1000"
-                max={maxPrincipalAmount}
-                step="100"
-                value={principalAmount}
-                onChange={handlePrincipalAmountChange}
+                max={maxLoanAmount}
+                step="1000"
+                value={loanAmount}
+                onChange={handleLoanAmountChange}
                 className="w-full cursor-pointer"
               />
             </div>
 
-            {/* Rate of Interest */}
+            {/* Interest Rate */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-14">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Rate of Interest (p.a)</label>
+                  <label className="font-medium">Interest Rate (p.a)</label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
-                      value={rateOfInterest}
-                      onChange={handleRateOfInterestChange}
+                      value={interestRate}
+                      onChange={handleInterestRateChange}
                       className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-left appearance-none ${
-                        errorMessages.rateOfInterest ? "border-red-500" : ""
+                        errorMessages.interestRate ? "border-red-500" : ""
                       }`}
-                      placeholder="6"
+                      placeholder="8"
                     />
                     <span className="absolute right-4 top-2 text-gray-500">
                       %
                     </span>
                   </div>
                 </div>
-                {errorMessages.rateOfInterest && (
+                {errorMessages.interestRate && (
                   <p className="text-red-500 text-[13px] us:text-sm">
-                    {errorMessages.rateOfInterest}
+                    {errorMessages.interestRate}
                   </p>
                 )}
               </div>
               <input
                 type="range"
                 min="1"
-                max={maxRateOfInterest}
+                max={maxInterestRate}
                 step="0.1"
-                value={rateOfInterest}
-                onChange={handleRateOfInterestChange}
+                value={interestRate}
+                onChange={handleInterestRateChange}
                 className="w-full cursor-pointer"
               />
             </div>
 
-            {/* Investment Period */}
+            {/* Loan Tenure */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-14">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">
-                    Investment Period (years)
-                  </label>
+                  <label className="font-medium">Loan Tenure (Years)</label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
-                      value={investmentPeriod}
-                      onChange={handleInvestmentPeriodChange}
+                      value={loanTenure}
+                      onChange={handleLoanTenureChange}
                       className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-left appearance-none ${
-                        errorMessages.investmentPeriod ? "border-red-500" : ""
+                        errorMessages.loanTenure ? "border-red-500" : ""
                       }`}
                       placeholder="5"
                     />
                     <span className="absolute right-4 top-2 text-gray-500">
-                      Years
+                      Year(s)
                     </span>
                   </div>
                 </div>
-                {errorMessages.investmentPeriod && (
+                {errorMessages.loanTenure && (
                   <p className="text-red-500 text-[13px] us:text-sm">
-                    {errorMessages.investmentPeriod}
+                    {errorMessages.loanTenure}
                   </p>
                 )}
               </div>
               <input
                 type="range"
                 min="1"
-                max={maxInvestmentPeriod}
+                max={maxLoanTenure}
                 step="1"
-                value={investmentPeriod}
-                onChange={handleInvestmentPeriodChange}
+                value={loanTenure}
+                onChange={handleLoanTenureChange}
                 className="w-full cursor-pointer"
               />
             </div>
@@ -245,6 +243,16 @@ function FDCalculator() {
           {/* Chart & Result Section */}
           <div className="w-full lg:w-6/12 text-[15px] vs:text-[17px] sm:text-[18px] md:text-base lg:text-base m-auto">
             <div className="flex flex-col space-y-4 md:space-y-6">
+
+                {/* Highlighted Monthly EMI Section */}
+              {/* <div className="bg-gradient-to-r from-mint to-crayola text-white p-2 rounded-xl shadow-lg"> */}
+              <div className="text-center">
+                <h2 className="text-lg  font-semibold mb-1">Monthly EMI</h2>
+                <p className="text-xl font-bold">
+                  ₹{formatChartNumber(emi)}{" "}
+                  {formatNumber(emi) ? `(${formatNumber(emi)})` : null}
+                </p>
+              </div>
               {/* Doughnut Chart */}
               {donutChartData && donutChartData.datasets ? (
                 <div className="h-32 ws:h-44 md:h-32 w-auto lg:h-44 mx-auto">
@@ -257,11 +265,11 @@ function FDCalculator() {
                 <div className="flex items-center mb-2.5">
                   <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-mint"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Invested Amount:</span>
+                    <span className="lg:text-base">Principal Payment:</span>
                     <span className="font-semibold">
-                      ₹{formatChartNumber(investedAmount)}{" "}
-                      {formatNumber(investedAmount)
-                        ? `(${formatNumber(investedAmount)})`
+                      ₹{formatChartNumber(loanAmount)}{" "}
+                      {formatNumber(loanAmount)
+                        ? `(${formatNumber(loanAmount)})`
                         : null}
                     </span>
                   </div>
@@ -270,11 +278,11 @@ function FDCalculator() {
                 <div className="flex items-center mb-2.5">
                   <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-crayola"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Estimated Returns:</span>
+                    <span className="lg:text-base">Total Interest:</span>
                     <span className="font-semibold">
-                      ₹{formatChartNumber(estimatedReturns)}{" "}
-                      {formatNumber(estimatedReturns)
-                        ? `(${formatNumber(estimatedReturns)})`
+                      ₹{formatChartNumber(totalInterest)}{" "}
+                      {formatNumber(totalInterest)
+                        ? `(${formatNumber(totalInterest)})`
                         : null}
                     </span>
                   </div>
@@ -283,11 +291,11 @@ function FDCalculator() {
                 <div className="flex items-center mb-2.5">
                   <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-gray-500"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Total Value:</span>
+                    <span className="lg:text-base">Total Payment:</span>
                     <span className="font-semibold">
-                      ₹{formatChartNumber(totalValue)}{" "}
-                      {formatNumber(totalValue)
-                        ? `(${formatNumber(totalValue)})`
+                      ₹{formatChartNumber(totalPayment)}{" "}
+                      {formatNumber(totalPayment)
+                        ? `(${formatNumber(totalPayment)})`
                         : null}
                     </span>
                   </div>
@@ -298,29 +306,26 @@ function FDCalculator() {
         </div>
 
         {/* Stacked Bar Chart */}
-        <div className="py-4 lg:py-6 lg:p-6 p-1 sm:p-2 rounded-xl border overflow-hidden">
+        {/* <div className="py-4 lg:py-6 lg:p-6 p-1 sm:p-2 rounded-xl border overflow-hidden">
           {chartData && chartData.datasets ? (
             <div className="w-full">
               <h2 className="text-center text-lg sm:text-xl font-semibold mb-4">
-                Investment Growth Over Time
+                EMI Breakdown Over Time
               </h2>
               <div className="w-full h-[350px] sm:h-[400px] lg:h-[500px]">
                 <BarChart data={chartData} />
               </div>
               <div className="text-[15px] md:text-base">
-                The above chart shows how the power of compounding increases the
-                returns over time.
+                The above chart shows the breakdown of EMI payments over time.
               </div>
             </div>
           ) : null}
-        </div>
+        </div> */}
 
-        <div className="py-4">
-          <FdInfo />
-        </div>
+        <div className="py-4">{/*  */}</div>
       </div>
     </div>
   );
 }
 
-export default FDCalculator;
+export default EMI;

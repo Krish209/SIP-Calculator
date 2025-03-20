@@ -6,6 +6,12 @@ import FdCalculator from "./pages/FDcalculator";
 import SimpleInterestCalculator from "./pages/SimpleInterest";
 import CompoundInterest from "./pages/CompondInterest";
 import PpfCalculator from "./pages/Ppf";
+import InflationCalculator from "./pages/InflationCalc";
+import GratuityCalculator from "./pages/GratuityCalc";
+import NPScalculator from "./pages/NpsCalc";
+import NSC from "./pages/NscCalc";
+import EPF from "./pages/EpfCalc";
+import EMI from "./pages/EmiCalc";
 
 function App() {
   return (
@@ -20,6 +26,13 @@ function App() {
           <Route path="simple-interest-calculator" element={<SimpleInterestCalculator />} />
           <Route path="compound-interest-calculator" element={<CompoundInterest />} />
           <Route path="ppf-calculator" element={<PpfCalculator />} />
+          <Route path="inflation-calculator" element={<InflationCalculator />} />
+          <Route path="gratuity-calculator" element={<GratuityCalculator />} />
+          <Route path="nps-calculator" element={<NPScalculator />} />
+          <Route path="nsc-calculator" element={<NSC />} />
+          <Route path="epf-calculator" element={<EPF />} />
+          <Route path="emi-calculator" element={<EMI />} />
+
         </Route>
 
         {/* ErrorPage is displayed without HomeLayout */}

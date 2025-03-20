@@ -185,7 +185,7 @@ function CompoundInterest() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-14">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Rate of Interest (%)</label>
+                  <label className="font-medium">Rate of Interest (p.a)</label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -263,7 +263,7 @@ function CompoundInterest() {
               <select
                 value={compoundFrequency}
                 onChange={handleCompoundFrequencyChange}
-                className="p-2 border rounded-md shadow-sm w-28 lg:w-32"
+                className="p-2 border bg-white rounded-md shadow-sm w-28 lg:w-32"
               >
                 <option value={1}>Annually</option>
                 <option value={2}>Semi-Annually</option>

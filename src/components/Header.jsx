@@ -54,14 +54,16 @@ function Header() {
                 {item.name}
                 {item.submenu && (
                   <FiChevronDown
-                    className={`transform ${activeDropdown === index ? "rotate-180" : ""} transition-transform duration-300`}
+                    className={`transform ${
+                      activeDropdown === index ? "rotate-180" : ""
+                    } transition-transform duration-300`}
                   />
                 )}
               </NavLink>
 
               {/* Dropdown Menu */}
               {item.submenu && activeDropdown === index && (
-                <ul className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg rounded-md">
+                <ul className="absolute left-0 mt-2 py-2 w-48 bg-white border border-gray-200 shadow-lg rounded-md">
                   {item.sublinks.map((sublink, subIndex) => (
                     <li key={subIndex} className="border-b border-gray-200">
                       <NavLink
@@ -107,13 +109,21 @@ function Header() {
                 <NavLink
                   to={item.link || "#"}
                   className="hover:text-blue-600 font-medium flex items-center"
-                  onClick={() => item.submenu && handleDropdownToggle(index)}
+                  onClick={() => {
+                    if (item.submenu) {
+                      handleDropdownToggle(index);
+                    } else {
+                      setMobileMenu(false); // Close mobile menu when clicking a link without a submenu
+                    }
+                  }}
                   aria-expanded={activeDropdown === index ? "true" : "false"}
                 >
                   {item.name}
                   {item.submenu && (
                     <FiChevronDown
-                      className={`transform ${activeDropdown === index ? "rotate-180" : ""} transition-transform duration-300`}
+                      className={`transform ${
+                        activeDropdown === index ? "rotate-180" : ""
+                      } transition-transform duration-300`}
                     />
                   )}
                 </NavLink>
@@ -126,6 +136,7 @@ function Header() {
                         <NavLink
                           to={sublink.link}
                           className="block hover:text-blue-600"
+                          onClick={() => setMobileMenu(false)} // Close mobile menu when clicking a sublink
                         >
                           {sublink.name}
                         </NavLink>

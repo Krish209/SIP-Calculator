@@ -233,7 +233,7 @@ function PPF() {
 
             {/* Rate of returns */}
             <div className="flex justify-between items-center">
-              <label className="font-medium">Rate of Interest:</label>
+              <label className="font-medium">Rate of Interest (p.a)</label>
               <div className="">7.1%</div>
             </div>
 
@@ -243,7 +243,7 @@ function PPF() {
               <select
                 value={compoundFrequency}
                 onChange={handleCompoundFrequencyChange}
-                className="p-2 border rounded-md shadow-sm w-28 lg:w-32"
+                className="p-2 border rounded-md shadow-sm w-28 lg:w-32 bg-white"
               >
                 <option value={1}>Annually</option>
                 <option value={2}>Semi-Annually</option>
