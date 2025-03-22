@@ -1,19 +1,28 @@
 export const links = [
   {
+    name: "Saving Calculator",
+    submenu: true,
+    comingsoon: "COMING SOON",
+    sublinks: [
+      { name: "PPF Calculator", link: "/ppf-calculator" },
+      { name: "FD Calculator", link: "/fd-calculator" },
+      { name: "NSC Calculator", link: "/nsc-calculator" },
+      { name: "SSY Calculator", link: "/ssy-calculator" },
+      { name: "EMI Calculator", link: "/emi-calculator" },
+    ],
+  },
+  {
     name: "Investment Calculator",
     submenu: true,
     comingsoon: "COMING SOON",
     sublinks: [
       // { name: "SIP Calculator", link: "/sip-calculator" },
       // { name: "Lump Sum Calculator", link: "/lump-sum-calculator" },
-      { name: "PPF Calculator", link: "/ppf-calculator" },
-      { name: "FD Calculator", link: "/fd-calculator" },
+      { name: "GST Calculator", link: "/gst-calculator" },
       { name: "Inflation Calculator", link: "/inflation-calculator" },
       { name: "Gratuity Calculator", link: "/gratuity-calculator" },
       // { name: "NPS Calculator", link: "/nps-calculator" },
-      { name: "NSC Calculator", link: "/nsc-calculator" },
       // { name: "EPF Calculator", link: "/epf-calculator" },
-      { name: "EMI Calculator", link: "/emi-calculator" },
       // { name: "Loan EMI Calculator", link: "/loan-emi-calculator" },
       // { name: "Retirement Planning Calculator", link: "/retirement-planning-calculator" },
       // { name: "Tax Calculator", link: "/tax-calculator" },
@@ -25,6 +34,7 @@ export const links = [
       // { name: "Dividend Yield Calculator", link: "/dividend-yield-calculator" },
     ],
   },
+  
   {
     name: "Interest Calculator",
     submenu: true,

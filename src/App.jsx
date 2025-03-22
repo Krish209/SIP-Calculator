@@ -12,6 +12,8 @@ import NPScalculator from "./pages/NpsCalc";
 import NSC from "./pages/NscCalc";
 import EPF from "./pages/EpfCalc";
 import EMI from "./pages/EmiCalc";
+import SSYCalc from "./pages/SsyCalc";
+import GSTCalculator from "./pages/GSTCalc";
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
           <Route path="nsc-calculator" element={<NSC />} />
           <Route path="epf-calculator" element={<EPF />} />
           <Route path="emi-calculator" element={<EMI />} />
+          <Route path="ssy-calculator" element={<SSYCalc />} />
+          <Route path="gst-calculator" element={<GSTCalculator />} />
 
         </Route>
 

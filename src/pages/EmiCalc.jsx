@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
-import { formatNumber, formatChartNumber } from "./Calc";
+import { formatNumber, formatChartNumber, format2decimal } from "./Calc";
 
 function EMI() {
   const [loanAmount, setLoanAmount] = useState(500000); // Default ₹500000
@@ -77,12 +77,12 @@ function EMI() {
     // Set the chart data for Monthly EMI and Total Interest Paid
 
     const labels = Array.from(
-        { length: loanTenure },
-        (_, index) => `${index + 1} Year${index + 1 > 1 ? "s" : ""}`
-      );
+      { length: loanTenure },
+      (_, index) => `${index + 1} Year${index + 1 > 1 ? "s" : ""}`
+    );
 
     setChartData({
-        labels: labels,
+      labels: labels,
       datasets: [
         {
           label: "Principal ",
@@ -243,13 +243,12 @@ function EMI() {
           {/* Chart & Result Section */}
           <div className="w-full lg:w-6/12 text-[15px] vs:text-[17px] sm:text-[18px] md:text-base lg:text-base m-auto">
             <div className="flex flex-col space-y-4 md:space-y-6">
-
-                {/* Highlighted Monthly EMI Section */}
+              {/* Highlighted Monthly EMI Section */}
               {/* <div className="bg-gradient-to-r from-mint to-crayola text-white p-2 rounded-xl shadow-lg"> */}
               <div className="text-center">
-                <h2 className="text-lg  font-semibold mb-1">Monthly EMI</h2>
+                <h2 className="text-lg font-semibold">Monthly EMI</h2>
                 <p className="text-xl font-bold">
-                  ₹{formatChartNumber(emi)}{" "}
+                  ₹{format2decimal(emi)}{" "}
                   {formatNumber(emi) ? `(${formatNumber(emi)})` : null}
                 </p>
               </div>

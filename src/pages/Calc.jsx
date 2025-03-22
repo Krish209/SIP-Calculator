@@ -19,3 +19,10 @@ export const formatChartNumber = (num) => {
     maximumFractionDigits: 0,
   });
 };
+
+export const format2decimal = (num) => {
+  return num.toLocaleString("en-IN", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
+};

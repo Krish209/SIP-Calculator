@@ -218,7 +218,7 @@ function NSC() {
               <select
                 value={compoundFrequency}
                 onChange={handleCompoundFrequencyChange}
-                className="p-2 border rounded-md shadow-sm w-28 lg:w-32"
+                className="p-2 border rounded-md shadow-sm bg-white w-28 lg:w-32"
               >
                 <option value={1}>Annually</option>
                 <option value={2}>Semi-Annually</option>
