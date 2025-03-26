@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BarChart } from "./chartjs/Bar";
 import { formatNumber, formatChartNumber } from "./Calc";
-// import GratuityInfo from "./GratuityInfo";  // You can add Gratuity information as you did with SimpleInterestInfo
+import GratuityInfo from "./Gratuity Info";
 
 function Gratuity() {
   const [basicSalary, setBasicSalary] = useState(50000); // Default ₹50,000
@@ -89,7 +89,7 @@ function Gratuity() {
           <div className="w-full lg:w-6/12 space-y-2 sm:space-y-4 md:space-y-8 m-auto">
             {/* Basic Salary */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
                   <label className="font-medium">
                     Monthly Salary (Basic + D.A)
@@ -128,7 +128,7 @@ function Gratuity() {
 
             {/* Years Worked */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
                   <label className="font-medium">Years of Service</label>
                   <div className="relative w-28 lg:w-32">
@@ -208,7 +208,9 @@ function Gratuity() {
           ) : null}
         </div>
 
-        <div className="py-4">{/* <GratuityInfo /> */}</div>
+        <div className="py-4">
+          <GratuityInfo />
+        </div>
       </div>
     </div>
   );

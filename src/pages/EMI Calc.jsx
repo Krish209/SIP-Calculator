@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
 import { formatNumber, formatChartNumber, format2decimal } from "./Calc";
+import EMIInfo from "./EMI Info";
 
 function EMI() {
   const [loanAmount, setLoanAmount] = useState(500000); // Default ₹500000
@@ -130,7 +131,7 @@ function EMI() {
           <div className="w-full lg:w-6/12 space-y-2 sm:space-y-4 md:space-y-8 m-auto">
             {/* Loan Amount */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
                   <label className="font-medium">Loan Amount</label>
                   <div className="relative w-28 lg:w-32">
@@ -167,7 +168,7 @@ function EMI() {
 
             {/* Interest Rate */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
                   <label className="font-medium">Interest Rate (p.a)</label>
                   <div className="relative w-28 lg:w-32">
@@ -204,7 +205,7 @@ function EMI() {
 
             {/* Loan Tenure */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
                   <label className="font-medium">Loan Tenure (Years)</label>
                   <div className="relative w-28 lg:w-32">
@@ -321,7 +322,9 @@ function EMI() {
           ) : null}
         </div> */}
 
-        <div className="py-4">{/*  */}</div>
+        <div className="py-4">
+          <EMIInfo />
+        </div>
       </div>
     </div>
   );

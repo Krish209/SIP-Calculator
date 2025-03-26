@@ -2,13 +2,12 @@ import React, { useState, useEffect } from "react";
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
 import { formatNumber, formatChartNumber } from "./Calc";
-import SimpleInterestInfo from "./SimpleInterestInfo";
+import FdInfo from "./FD Info";
 
-function SimpleInterest() {
+function FDCalculator() {
   const [principalAmount, setPrincipalAmount] = useState(10000); // Default ₹10000 for FD
   const [rateOfInterest, setRateOfInterest] = useState(6); // Default 6% p.a.
   const [investmentPeriod, setInvestmentPeriod] = useState(5); // Default 5 years
-  const [investmentUnit, setInvestmentUnit] = useState("years"); // Default period unit in years
 
   const [totalValue, setTotalValue] = useState(0);
   const [estimatedReturns, setEstimatedReturns] = useState(0);
@@ -24,37 +23,9 @@ function SimpleInterest() {
     investmentPeriod: "",
   });
 
-  const [period, setPeriod] = useState("Year");
-
   const maxPrincipalAmount = 10000000;
-  const maxRateOfInterest = 30;
-
-  const getMaxInvestmentPeriod = () => {
-    switch (investmentUnit) {
-      case "years":
-        return 40; // Maximum 30 years
-      case "months":
-        return 360; // Maximum 360 months (30 years)
-      case "days":
-        return 10950; // Maximum 10950 days (30 years)
-      default:
-        return 40; // Default to 30 years if unit is not set
-    }
-  };
-
-  // Function to cycle through 'Month', 'Day', 'Year'
-  const handleClick = () => {
-    if (period === "Month") {
-      setPeriod("Day");
-      setInvestmentUnit("days");
-    } else if (period === "Day") {
-      setPeriod("Year");
-      setInvestmentUnit("years");
-    } else {
-      setPeriod("Month");
-      setInvestmentUnit("months");
-    }
-  };
+  const maxRateOfInterest = 15;
+  const maxInvestmentPeriod = 30;
 
   useEffect(() => {
     if (principalAmount <= 0 || rateOfInterest <= 0 || investmentPeriod <= 0) {
@@ -62,71 +33,48 @@ function SimpleInterest() {
         principalAmount:
           principalAmount <= 0 ? "Principal must be greater than zero" : "",
         rateOfInterest:
-          rateOfInterest <= 0 ? "Rate of interest must be greater than zero" : "",
+          rateOfInterest <= 0
+            ? "Rate of interest must be greater than zero"
+            : "",
         investmentPeriod:
-          investmentPeriod <= 0 ? "Investment period must be greater than zero" : "",
+          investmentPeriod <= 0
+            ? "Investment period must be greater than zero"
+            : "",
       });
       return; // Stop calculation if invalid input
     }
-  
+
     setErrorMessages({
       principalAmount: "",
       rateOfInterest: "",
       investmentPeriod: "",
     });
-  
-    let totalValueCalc = principalAmount;
+
+    // Quarterly compounding (fixed frequency of 4)
+    const compoundFrequency = 4;
+    const interestRatePerPeriod = rateOfInterest / 100 / compoundFrequency;
+    const totalPeriods = investmentPeriod * compoundFrequency;
+
+    let accumulatedValue = principalAmount;
+    const barDataInvested = [];
+    const barDataReturns = [];
     let investedAmountCalc = principalAmount;
-  
-    // Calculate interest rate per period
-    let interestRatePerPeriod = rateOfInterest / 100;
-    let totalPeriodsInYears;
-  
-    // Convert investmentPeriod based on the selected unit
-    let totalPeriods = 0;
-    let periodsLabel = "Year"; // Default to "Year" in case of incorrect unit
-  
-    switch (investmentUnit) {
-      case "months":
-        totalPeriods = investmentPeriod; // Directly take months as is
-        periodsLabel = "Month";
-        break;
-      case "days":
-        totalPeriods = investmentPeriod / 30; // Approximate conversion to months, you could use exact day count to months if needed
-        periodsLabel = "Day";
-        break;
-      default:
-        totalPeriods = investmentPeriod; // Assume years
-        periodsLabel = "Year";
-        break;
+
+    // Generate yearly data
+    for (let year = 1; year <= investmentPeriod; year++) {
+      const totalPeriodsThisYear = year * compoundFrequency;
+      accumulatedValue = principalAmount * Math.pow(1 + interestRatePerPeriod, totalPeriodsThisYear); // Apply compound interest
+      barDataInvested.push(investedAmountCalc);
+      barDataReturns.push(accumulatedValue - investedAmountCalc);
     }
-  
-    // Calculate simple interest
-    const simpleInterest =
-      principalAmount * interestRatePerPeriod * totalPeriods;
-    totalValueCalc = principalAmount + simpleInterest;
-    setTotalValue(totalValueCalc);
-    setEstimatedReturns(simpleInterest);
+
+    setTotalValue(accumulatedValue);
+    setEstimatedReturns(accumulatedValue - investedAmountCalc);
     setInvestedAmount(investedAmountCalc);
-  
-    // Prepare bar chart data (both invested and returns data)
-    let barDataInvested = [];
-    let barDataReturns = [];
-  
-    // Loop to generate data for each period (months, years, or days)
-    for (let i = 1; i <= totalPeriods; i++) {
-      let periodInterest = principalAmount * interestRatePerPeriod * i;
-      barDataInvested.push(principalAmount);
-      barDataReturns.push(periodInterest);
-    }
-  
-    // Generate labels dynamically based on investment unit
-    const labels = Array.from(
-      { length: totalPeriods },
-      (_, index) => `${index + 1} ${periodsLabel}${index + 1 > 1 ? "s" : ""}`
-    );
-  
-    // Set the chart data
+
+    // Chart data
+    const labels = Array.from({ length: investmentPeriod }, (_, index) => `${index + 1} Year${index + 1 > 1 ? "s" : ""}`);
+
     setChartData({
       labels: labels,
       datasets: [
@@ -142,20 +90,19 @@ function SimpleInterest() {
         },
       ],
     });
-  
-    // Set Doughnut chart data
+
+    // Donut chart data
     setDonutChartData({
       labels: ["Invested Amount", "Estimated Returns"],
       datasets: [
         {
-          data: [principalAmount, simpleInterest],
+          data: [principalAmount, accumulatedValue - principalAmount],
           backgroundColor: ["rgba(75,192,192,0.6)", "rgba(153,102,255,0.6)"],
         },
       ],
     });
-  }, [principalAmount, rateOfInterest, investmentPeriod, investmentUnit]);
-  
-  
+  }, [principalAmount, rateOfInterest, investmentPeriod]);
+
   // Handlers for inputs
   const handlePrincipalAmountChange = (e) =>
     setPrincipalAmount(
@@ -166,12 +113,14 @@ function SimpleInterest() {
       Math.max(0, Math.min(Number(e.target.value), maxRateOfInterest))
     );
   const handleInvestmentPeriodChange = (e) =>
-    setInvestmentPeriod(Math.max(0, Number(e.target.value)));
+    setInvestmentPeriod(
+      Math.max(0, Math.min(Number(e.target.value), maxInvestmentPeriod))
+    );
 
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
-        Simple Interest Calculator
+        Fixed Deposit Calculator
       </h1>
 
       {/* User Inputs Section */}
@@ -181,7 +130,7 @@ function SimpleInterest() {
           <div className="w-full lg:w-6/12 space-y-2 sm:space-y-4 md:space-y-8 m-auto">
             {/* Principal Amount */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
                   <label className="font-medium">Principal Amount</label>
                   <div className="relative w-28 lg:w-32">
@@ -218,7 +167,7 @@ function SimpleInterest() {
 
             {/* Rate of Interest */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
                   <label className="font-medium">Rate of Interest (p.a)</label>
                   <div className="relative w-28 lg:w-32">
@@ -255,16 +204,10 @@ function SimpleInterest() {
 
             {/* Investment Period */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
                   <label className="font-medium">
                     Investment Period (years)
-                    {/* <button
-                      onClick={handleClick}
-                      className="p-2 text-green-500"
-                    >
-                      {period} {"<>"}
-                    </button> */}
                   </label>
                   <div className="relative w-28 lg:w-32">
                     <input
@@ -277,7 +220,7 @@ function SimpleInterest() {
                       placeholder="5"
                     />
                     <span className="absolute right-4 top-2 text-gray-500">
-                      {period}
+                      Year(s)
                     </span>
                   </div>
                 </div>
@@ -290,7 +233,7 @@ function SimpleInterest() {
               <input
                 type="range"
                 min="1"
-                max={getMaxInvestmentPeriod()}
+                max={maxInvestmentPeriod}
                 step="1"
                 value={investmentPeriod}
                 onChange={handleInvestmentPeriodChange}
@@ -365,18 +308,19 @@ function SimpleInterest() {
                 <BarChart data={chartData} />
               </div>
               <div className="text-[15px] md:text-base">
-                The above chart shows how simple interest accumulates over time.
+                The above chart shows how the power of compounding increases the
+                returns over time.
               </div>
             </div>
           ) : null}
         </div>
 
         <div className="py-4">
-          <SimpleInterestInfo />
+          <FdInfo />
         </div>
       </div>
     </div>
   );
 }
 
-export default SimpleInterest;
+export default FDCalculator;

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const FAQ = () => {
+const SIPFAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const toggleFAQ = (index) =>
     setActiveIndex(activeIndex === index ? null : index);
@@ -105,4 +105,4 @@ const FAQ = () => {
   );
 };
 
-export default FAQ;
+export default SIPFAQ;

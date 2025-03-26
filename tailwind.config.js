@@ -22,6 +22,11 @@ export default {
         crimson: "#DC143C",
         fireengine: "#CE2029",
         cherryred: "#FF4C4C",
+
+        peach: "#FFDAB9",
+        skyline: "#7EC8E3",
+        lavender: "#E6E6FA",
+        teal: "#008080",
       },
     },
   },

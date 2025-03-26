@@ -2,13 +2,12 @@ import React, { useState, useEffect } from "react";
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
 import { formatNumber, formatChartNumber } from "./Calc";
-import CompondInterestInfo from "./CompondInterestInfo";
+import RDInvestment from "./RD Info";
 
-function CompoundInterest() {
-  const [principalAmount, setPrincipalAmount] = useState(10000); // Default ₹10000 for FD
-  const [rateOfInterest, setRateOfInterest] = useState(6); // Default 6% p.a.
+function RD() {
+  const [monthlyDeposit, setMonthlyDeposit] = useState(1000); // Default ₹1000 for monthly RD contribution
+  const [rateOfInterest, setRateOfInterest] = useState(6.0); // Default 6% p.a. for RD
   const [investmentPeriod, setInvestmentPeriod] = useState(5); // Default 5 years
-  const [compoundFrequency, setCompoundFrequency] = useState(4); // Default quarterly compounding
 
   const [totalValue, setTotalValue] = useState(0);
   const [estimatedReturns, setEstimatedReturns] = useState(0);
@@ -19,20 +18,27 @@ function CompoundInterest() {
 
   // Error states
   const [errorMessages, setErrorMessages] = useState({
-    principalAmount: "",
+    monthlyDeposit: "",
     rateOfInterest: "",
     investmentPeriod: "",
   });
 
-  const maxPrincipalAmount = 10000000;
-  const maxRateOfInterest = 30;
-  const maxInvestmentPeriod = 30;
+  const maxMonthlyDeposit = 50000; // Max RD deposit
+  const maxRateOfInterest = 15; // Max RD rate of interest
+  const maxInvestmentPeriod = 10; // Max RD period (10 years)
+
+  // Function to get the correct range maximum for monthly deposit
+  const getMaxMonthlyDeposit = () => {
+    return maxMonthlyDeposit;
+  };
 
   useEffect(() => {
-    if (principalAmount <= 0 || rateOfInterest <= 0 || investmentPeriod <= 0) {
+    if (monthlyDeposit <= 0 || rateOfInterest <= 0 || investmentPeriod < 1) {
       setErrorMessages({
-        principalAmount:
-          principalAmount <= 0 ? "Principal must be greater than zero" : "",
+        monthlyDeposit:
+          monthlyDeposit <= 0
+            ? "Monthly deposit must be greater than zero"
+            : "",
         rateOfInterest:
           rateOfInterest <= 0
             ? "Rate of interest must be greater than zero"
@@ -46,45 +52,44 @@ function CompoundInterest() {
     }
 
     setErrorMessages({
-      principalAmount: "",
+      monthlyDeposit: "",
       rateOfInterest: "",
       investmentPeriod: "",
     });
 
-    const interestRatePerPeriod = rateOfInterest / 100 / compoundFrequency;
-    const periods = investmentPeriod * compoundFrequency;
+    const interestRatePerMonth = rateOfInterest / 100 / 12; // Monthly rate
+    const totalMonths = investmentPeriod * 12; // Total months for the investment period
 
-    let totalValueCalc = principalAmount;
-    let investedAmountCalc = principalAmount;
+    let totalValueCalc = 0;
+    let investedAmountCalc = 0;
+    let accumulatedValue = 0;
 
-    // Arrays to store yearly values for the bar chart
     const barDataInvested = [];
     const barDataReturns = [];
-    let accumulatedValue = principalAmount;
 
-    // Create yearly data
-    for (let year = 1; year <= investmentPeriod; year++) {
-      // Calculate the total number of periods for the current year
-      const currentYearPeriod = year * compoundFrequency;
+    // Loop through each month to calculate the total investment and returns
+    for (let month = 1; month <= totalMonths; month++) {
+      investedAmountCalc += monthlyDeposit; // Add monthly deposit to invested amount
 
-      // Calculate the value at the end of the current year
-      for (let period = 1; period <= compoundFrequency; period++) {
-        const totalPeriods = year * compoundFrequency; // Total periods for the year
-        accumulatedValue =
-          principalAmount * Math.pow(1 + interestRatePerPeriod, totalPeriods); // Compound formula
+      // Calculate compound interest for this month's deposit
+      let monthsLeft = totalMonths - month; // Months remaining for this deposit to compound
+      accumulatedValue +=
+        monthlyDeposit * Math.pow(1 + interestRatePerMonth, monthsLeft);
+
+      // Track invested and returns for each year for the bar chart
+      if (month % 12 === 0 || month === totalMonths) {
+        const year = Math.floor(month / 12);
+        barDataInvested.push(monthlyDeposit * 12 * year);
+        barDataReturns.push(accumulatedValue - investedAmountCalc);
       }
-
-      // Save the data for the current year
-      barDataInvested.push(investedAmountCalc);
-      barDataReturns.push(accumulatedValue - investedAmountCalc);
     }
 
-    totalValueCalc = accumulatedValue;
+    totalValueCalc = accumulatedValue; // Final total value after all compounding
     setTotalValue(totalValueCalc);
     setEstimatedReturns(totalValueCalc - investedAmountCalc);
     setInvestedAmount(investedAmountCalc);
 
-    // Chart Data
+    // Prepare chart data
     const labels = Array.from(
       { length: investmentPeriod },
       (_, index) => `${index + 1} Year${index + 1 > 1 ? "s" : ""}`
@@ -110,17 +115,17 @@ function CompoundInterest() {
       labels: ["Invested Amount", "Estimated Returns"],
       datasets: [
         {
-          data: [principalAmount, totalValueCalc - principalAmount],
+          data: [investedAmountCalc, totalValueCalc - investedAmountCalc],
           backgroundColor: ["rgba(75,192,192,0.6)", "rgba(153,102,255,0.6)"],
         },
       ],
     });
-  }, [principalAmount, rateOfInterest, investmentPeriod, compoundFrequency]);
+  }, [monthlyDeposit, rateOfInterest, investmentPeriod]);
 
   // Handlers for inputs
-  const handlePrincipalAmountChange = (e) =>
-    setPrincipalAmount(
-      Math.max(0, Math.min(Number(e.target.value), maxPrincipalAmount))
+  const handleMonthlyDepositChange = (e) =>
+    setMonthlyDeposit(
+      Math.max(0, Math.min(Number(e.target.value), getMaxMonthlyDeposit()))
     );
   const handleRateOfInterestChange = (e) =>
     setRateOfInterest(
@@ -128,15 +133,13 @@ function CompoundInterest() {
     );
   const handleInvestmentPeriodChange = (e) =>
     setInvestmentPeriod(
-      Math.max(0, Math.min(Number(e.target.value), maxInvestmentPeriod))
+      Math.max(1, Math.min(Number(e.target.value), maxInvestmentPeriod))
     );
-  const handleCompoundFrequencyChange = (e) =>
-    setCompoundFrequency(Number(e.target.value));
 
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
-        Compound Interest Calculator
+        Recurring Deposit Calculator
       </h1>
 
       {/* User Inputs Section */}
@@ -144,46 +147,46 @@ function CompoundInterest() {
         <div className="flex md:flex-row flex-col gap-6 md:gap-[74px] text-[15px] lg:text-lg lg:space-x-0 rounded-xl py-4 lg:py-8 p-2 vs:p-6 md:p-6 lg:p-8 border">
           {/* User Inputs Section */}
           <div className="w-full lg:w-6/12 space-y-2 sm:space-y-4 md:space-y-8 m-auto">
-            {/* Principal Amount */}
+            {/* Monthly Deposit */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Principal Amount</label>
+                  <label className="font-medium">Monthly Deposit</label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
-                      value={principalAmount}
-                      onChange={handlePrincipalAmountChange}
+                      value={monthlyDeposit}
+                      onChange={handleMonthlyDepositChange}
                       className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-right ${
-                        errorMessages.principalAmount ? "border-red-500" : ""
+                        errorMessages.monthlyDeposit ? "border-red-500" : ""
                       }`}
-                      placeholder="10000"
+                      placeholder="1000"
                     />
                     <span className="absolute left-4 top-2.5 text-gray-500">
                       ₹
                     </span>
                   </div>
                 </div>
-                {errorMessages.principalAmount && (
+                {errorMessages.monthlyDeposit && (
                   <p className="text-red-500 text-[13px] us:text-sm">
-                    {errorMessages.principalAmount}
+                    {errorMessages.monthlyDeposit}
                   </p>
                 )}
               </div>
               <input
                 type="range"
-                min="1000"
-                max={maxPrincipalAmount}
-                step="100"
-                value={principalAmount}
-                onChange={handlePrincipalAmountChange}
+                min="500"
+                max={getMaxMonthlyDeposit()}
+                step="500"
+                value={monthlyDeposit}
+                onChange={handleMonthlyDepositChange}
                 className="w-full cursor-pointer"
               />
             </div>
 
             {/* Rate of Interest */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
                   <label className="font-medium">Rate of Interest (p.a)</label>
                   <div className="relative w-28 lg:w-32">
@@ -220,7 +223,7 @@ function CompoundInterest() {
 
             {/* Investment Period */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
                   <label className="font-medium">
                     Investment Period (years)
@@ -236,7 +239,7 @@ function CompoundInterest() {
                       placeholder="5"
                     />
                     <span className="absolute right-4 top-2 text-gray-500">
-                      Years
+                      Year(s)
                     </span>
                   </div>
                 </div>
@@ -255,21 +258,6 @@ function CompoundInterest() {
                 onChange={handleInvestmentPeriodChange}
                 className="w-full cursor-pointer"
               />
-            </div>
-
-            {/* Compound Frequency */}
-            <div className="flex justify-between items-center">
-              <label className="font-medium">Compounding Frequency</label>
-              <select
-                value={compoundFrequency}
-                onChange={handleCompoundFrequencyChange}
-                className="p-2 border bg-white rounded-md shadow-sm w-28 lg:w-32"
-              >
-                <option value={1}>Annually</option>
-                <option value={2}>Semi-Annually</option>
-                <option value={4}>Quarterly</option>
-                <option value={12}>Monthly</option>
-              </select>
             </div>
           </div>
 
@@ -333,25 +321,25 @@ function CompoundInterest() {
           {chartData && chartData.datasets ? (
             <div className="w-full">
               <h2 className="text-center text-lg sm:text-xl font-semibold mb-4">
-                Investment Growth Over Time
+                RD Growth Over Time
               </h2>
               <div className="w-full h-[350px] sm:h-[400px] lg:h-[500px]">
                 <BarChart data={chartData} />
               </div>
               <div className="text-[15px] md:text-base">
-                The above chart shows how the power of compounding increases the
-                returns over time.
+                The above chart shows how the compounding works in RD over the
+                duration.
               </div>
             </div>
           ) : null}
         </div>
 
         <div className="py-4">
-          <CompondInterestInfo />
+          <RDInvestment />
         </div>
       </div>
     </div>
   );
 }
 
-export default CompoundInterest;
+export default RD;

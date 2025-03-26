@@ -6,9 +6,11 @@ export const links = [
     sublinks: [
       { name: "PPF Calculator", link: "/ppf-calculator" },
       { name: "FD Calculator", link: "/fd-calculator" },
+      { name: "NPS Calculator", link: "/nps-calculator" },
       { name: "NSC Calculator", link: "/nsc-calculator" },
       { name: "SSY Calculator", link: "/ssy-calculator" },
       { name: "EMI Calculator", link: "/emi-calculator" },
+      { name: "RD Calculator", link: "/rd-calculator" },
     ],
   },
   {
@@ -21,7 +23,6 @@ export const links = [
       { name: "GST Calculator", link: "/gst-calculator" },
       { name: "Inflation Calculator", link: "/inflation-calculator" },
       { name: "Gratuity Calculator", link: "/gratuity-calculator" },
-      // { name: "NPS Calculator", link: "/nps-calculator" },
       // { name: "EPF Calculator", link: "/epf-calculator" },
       // { name: "Loan EMI Calculator", link: "/loan-emi-calculator" },
       // { name: "Retirement Planning Calculator", link: "/retirement-planning-calculator" },

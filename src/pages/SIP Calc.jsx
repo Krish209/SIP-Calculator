@@ -3,8 +3,9 @@ import { formatNumber, formatChartNumber } from "./Calc";
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
 import { LineChart } from "./chartjs/LineChart";
-import SIPInfo from "./SipInfo";
-import FAQ from "./FAQ";
+
+import SIPFAQ from "./SIP FAQ";
+import SIPInfo from "./Sip Info";
 
 function SIPCalculator() {
   const [isSIP, setIsSIP] = useState(true); // Default is SIP
@@ -70,19 +71,19 @@ function SIPCalculator() {
   useEffect(() => {
     // Check if values are valid
     if (
-      monthlyInvestment <= 0 ||
-      lumpsumAmount <= 0 ||
+      monthlyInvestment < 100 ||
+      lumpsumAmount < 100 ||
       rateOfInterest <= 0 ||
       investmentPeriod <= 0
     ) {
       setErrorMessages({
         monthlyInvestment:
-          monthlyInvestment <= 0
-            ? "Investment must be greater than zero"
+          monthlyInvestment < 100
+            ? "Investment must be greater than 100"
             : "",
         lumpsumAmount:
-          lumpsumAmount <= 0
-            ? "Investment must be greater than zero"
+          lumpsumAmount < 100
+            ? "Investment must be greater than 100"
             : "",
         rateOfInterest:
           rateOfInterest <= 0
@@ -234,7 +235,7 @@ function SIPCalculator() {
           <div className="w-full lg:w-6/12 space-y-2 sm:space-y-4 md:space-y-8 m-auto">
             {/* Monthly Investment or Lump Sum Amount */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
                   <label className="font-medium">
                     {isSIP ? "Monthly Investment" : "Lump Sum Investment"}
@@ -302,7 +303,7 @@ function SIPCalculator() {
 
             {/* Rate of Interest */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
                   <label className="font-medium">
                     Expected Rate of Interest (p.a)
@@ -350,7 +351,7 @@ function SIPCalculator() {
 
             {/* Investment Period */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
                   <label className="font-medium">Investment Period</label>
                   <div className="relative w-28 lg:w-32">
@@ -516,7 +517,7 @@ function SIPCalculator() {
 
         <div className="py-4">
           <SIPInfo />
-          <FAQ />
+          <SIPFAQ />
         </div>
 
         {/* Line Chart (Investment Growth Over Time) */}

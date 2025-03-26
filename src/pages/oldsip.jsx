@@ -3,8 +3,8 @@ import { formatNumber, formatChartNumber } from "./Calc";
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
 import { LineChart } from "./chartjs/LineChart";
-import SIPInfo from "./SipInfo";
-import FAQ from "./FAQ";
+import SIPInfo from "./Sip Info";
+import SIPFAQ from "./SIP FAQ";
 
 function SIPCalculator() {
   const [isSIP, setIsSIP] = useState(true); // Default is SIP
@@ -77,13 +77,9 @@ function SIPCalculator() {
     ) {
       setErrorMessages({
         monthlyInvestment:
-          monthlyInvestment <= 0
-            ? "Investment must be greater than zero"
-            : "",
+          monthlyInvestment <= 0 ? "Investment must be greater than zero" : "",
         lumpsumAmount:
-          lumpsumAmount <= 0
-            ? "Investment must be greater than zero"
-            : "",
+          lumpsumAmount <= 0 ? "Investment must be greater than zero" : "",
         rateOfInterest:
           rateOfInterest <= 0
             ? "Rate of interest must be greater than zero"
@@ -234,7 +230,7 @@ function SIPCalculator() {
           <div className="w-full lg:w-6/12 space-y-2 sm:space-y-4 md:space-y-8 m-auto">
             {/* Monthly Investment or Lump Sum Amount */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
                   <label className="font-medium">
                     {isSIP ? "Monthly Investment" : "Lump Sum Investment"}
@@ -266,13 +262,19 @@ function SIPCalculator() {
                     </span>
                   </div>
                 </div>
-                  
+
                 {/* Error Message */}
-                  {errorMessages[isSIP ? "monthlyInvestment" : "lumpsumAmount"] && (
-                    <p className="text-red-500 text-[13px] us:text-sm">
-                        {errorMessages[isSIP ? "monthlyInvestment" : "lumpsumAmount"]}
-                    </p>
-                  )}
+                {errorMessages[
+                  isSIP ? "monthlyInvestment" : "lumpsumAmount"
+                ] && (
+                  <p className="text-red-500 text-[13px] us:text-sm">
+                    {
+                      errorMessages[
+                        isSIP ? "monthlyInvestment" : "lumpsumAmount"
+                      ]
+                    }
+                  </p>
+                )}
               </div>
 
               <div className="">
@@ -302,7 +304,7 @@ function SIPCalculator() {
 
             {/* Rate of Interest */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
                   <label className="font-medium">
                     Expected Rate of Interest (p.a)
@@ -350,7 +352,7 @@ function SIPCalculator() {
 
             {/* Investment Period */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
                   <label className="font-medium">Investment Period</label>
                   <div className="relative w-28 lg:w-32">
@@ -516,7 +518,7 @@ function SIPCalculator() {
 
         <div>
           <SIPInfo />
-          <FAQ />
+          <SIPFAQ />
         </div>
 
         {/* Line Chart (Investment Growth Over Time) */}

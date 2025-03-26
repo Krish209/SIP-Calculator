@@ -1,102 +1,117 @@
 import React, { useState, useEffect } from "react";
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
-import { formatNumber, formatChartNumber } from "./Calc";
-import InflationInfo from "./InflationInfo"; // Assuming you have this component like in the CompoundInterest component.
+import { formatNumber, formatChartNumber } from "./Calc"; 
+import InflationInfo from "./Inflation Info";
 
 function InflationCalculator() {
-  const [initialCost, setInitialCost] = useState(10000); // Default cost of the product/service
-  const [inflationRate, setInflationRate] = useState(5); // Default 5% inflation rate
+  const [initialAmount, setInitialAmount] = useState(10000); // Default ₹10000
+  const [annualInflationRate, setAnnualInflationRate] = useState(5); // Default 5% p.a.
   const [years, setYears] = useState(10); // Default 10 years
-  const [totalCost, setTotalCost] = useState(0);
-  const [costIncrease, setCostIncrease] = useState(0);
+
+  const [adjustedAmount, setAdjustedAmount] = useState(0);
+  const [inflatedAmount, setInflatedAmount] = useState(0);
+
   const [chartData, setChartData] = useState(null);
   const [donutChartData, setDonutChartData] = useState(null);
 
   // Error states
   const [errorMessages, setErrorMessages] = useState({
-    initialCost: "",
-    inflationRate: "",
+    initialAmount: "",
+    annualInflationRate: "",
     years: "",
   });
 
-  const maxInitialCost = 10000000;
-  const maxInflationRate = 30;
+  const maxInitialAmount = 10000000;
+  const maxAnnualInflationRate = 30;
   const maxYears = 50;
 
   useEffect(() => {
-    if (initialCost <= 0 || inflationRate <= 0 || years <= 0) {
+    if (initialAmount <= 0 || annualInflationRate < 0 || years <= 0) {
       setErrorMessages({
-        initialCost: initialCost <= 0 ? "Initial cost must be greater than zero" : "",
-        inflationRate: inflationRate <= 0 ? "Inflation rate must be greater than zero" : "",
-        years: years <= 0 ? "Number of years must be greater than zero" : "",
+        initialAmount:
+          initialAmount <= 0 ? "Initial amount must be greater than zero" : "",
+        annualInflationRate:
+          annualInflationRate < 0
+            ? "Inflation rate must be greater than or equal to zero"
+            : "",
+        years:
+          years <= 0 ? "Number of years must be greater than zero" : "",
       });
       return; // Stop calculation if invalid input
     }
 
     setErrorMessages({
-      initialCost: "",
-      inflationRate: "",
+      initialAmount: "",
+      annualInflationRate: "",
       years: "",
     });
 
-    const inflatedCostData = [];
-    const costIncreaseData = [];
-    let totalCostCalc = initialCost;
-    let totalIncrease = 0;
+    let inflatedAmountCalc = initialAmount;
 
-    // Create yearly data for bar chart
+    // Arrays to store yearly values for the bar chart
+    const barDataInflated = [];
+    const barDataAdjusted = [];
+    let accumulatedValue = initialAmount;
+
+    // Calculate the inflated amount for each year
     for (let year = 1; year <= years; year++) {
-      const inflatedCost = initialCost * Math.pow(1 + inflationRate / 100, year);
-      inflatedCostData.push(inflatedCost);
-      costIncreaseData.push(inflatedCost - initialCost);
+      // Apply inflation for the current year
+      inflatedAmountCalc =
+        inflatedAmountCalc * (1 + annualInflationRate / 100);
+
+      // Save the data for the current year
+      barDataAdjusted.push(initialAmount);
+      barDataInflated.push(inflatedAmountCalc);
     }
 
-    totalCostCalc = inflatedCostData[years - 1];
-    totalIncrease = totalCostCalc - initialCost;
-    setTotalCost(totalCostCalc);
-    setCostIncrease(totalIncrease);
+    const adjustedAmountCalc = inflatedAmountCalc - initialAmount;
+
+    setAdjustedAmount(adjustedAmountCalc);
+    setInflatedAmount(inflatedAmountCalc);
 
     // Chart Data
-    const labels = Array.from({ length: years }, (_, index) => `${index + 1} Year${index + 1 > 1 ? "s" : ""}`);
+    const labels = Array.from(
+      { length: years },
+      (_, index) => `${index + 1} Year${index + 1 > 1 ? "s" : ""}`
+    );
 
     setChartData({
       labels: labels,
       datasets: [
         {
-          label: "Original Cost",
-          data: Array(years).fill(initialCost),
+          label: "Adjusted Amount",
+          data: barDataAdjusted,
           backgroundColor: "rgba(75,192,192,0.6)",
         },
         {
-          label: "Inflated Cost",
-          data: inflatedCostData,
+          label: "Inflated Amount",
+          data: barDataInflated,
           backgroundColor: "rgba(153,102,255,0.6)",
-        },
-        {
-          label: "Cost Increase Due to Inflation",
-          data: costIncreaseData,
-          backgroundColor: "rgba(255,159,64,0.6)",
         },
       ],
     });
 
     setDonutChartData({
-      labels: ["Initial Cost", "Total Increased Cost Due to Inflation"],
+      labels: ["Adjusted Amount", "Inflated Amount"],
       datasets: [
         {
-          data: [initialCost, totalCostCalc - initialCost],
+          data: [initialAmount, inflatedAmountCalc],
           backgroundColor: ["rgba(75,192,192,0.6)", "rgba(153,102,255,0.6)"],
         },
       ],
     });
-  }, [initialCost, inflationRate, years]);
+  }, [initialAmount, annualInflationRate, years]);
 
   // Handlers for inputs
-  const handleInitialCostChange = (e) =>
-    setInitialCost(Math.max(0, Math.min(Number(e.target.value), maxInitialCost)));
-  const handleInflationRateChange = (e) =>
-    setInflationRate(Math.max(0, Math.min(Number(e.target.value), maxInflationRate)));
+  const handleInitialAmountChange = (e) =>
+    setInitialAmount(
+      Math.max(0, Math.min(Number(e.target.value), maxInitialAmount))
+    );
+  const handleAnnualInflationRateChange = (e) =>
+    setAnnualInflationRate(
+      Math.max(0, Math.min(Number(e.target.value), maxAnnualInflationRate))
+    );
   const handleYearsChange = (e) =>
     setYears(Math.max(0, Math.min(Number(e.target.value), maxYears)));
 
@@ -109,78 +124,89 @@ function InflationCalculator() {
       {/* User Inputs Section */}
       <div className="space-y-4">
         <div className="flex md:flex-row flex-col gap-6 md:gap-[74px] text-[15px] lg:text-lg lg:space-x-0 rounded-xl py-4 lg:py-8 p-2 vs:p-6 md:p-6 lg:p-8 border">
+          {/* User Inputs Section */}
           <div className="w-full lg:w-6/12 space-y-2 sm:space-y-4 md:space-y-8 m-auto">
-            {/* Initial Cost */}
+            {/* Initial Amount */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Initial Cost</label>
+                  <label className="font-medium">Initial Amount</label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
-                      value={initialCost}
-                      onChange={handleInitialCostChange}
+                      value={initialAmount}
+                      onChange={handleInitialAmountChange}
                       className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-right ${
-                        errorMessages.initialCost ? "border-red-500" : ""
+                        errorMessages.initialAmount ? "border-red-500" : ""
                       }`}
                       placeholder="10000"
                     />
-                    <span className="absolute left-4 top-2.5 text-gray-500">₹</span>
+                    <span className="absolute left-4 top-2.5 text-gray-500">
+                      ₹
+                    </span>
                   </div>
                 </div>
-                {errorMessages.initialCost && (
-                  <p className="text-red-500 text-[13px] us:text-sm">{errorMessages.initialCost}</p>
+                {errorMessages.initialAmount && (
+                  <p className="text-red-500 text-[13px] us:text-sm">
+                    {errorMessages.initialAmount}
+                  </p>
                 )}
               </div>
               <input
                 type="range"
                 min="1000"
-                max={maxInitialCost}
+                max={maxInitialAmount}
                 step="100"
-                value={initialCost}
-                onChange={handleInitialCostChange}
+                value={initialAmount}
+                onChange={handleInitialAmountChange}
                 className="w-full cursor-pointer"
               />
             </div>
 
             {/* Inflation Rate */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Inflation Rate (%)</label>
+                  <label className="font-medium">Inflation Rate (p.a)</label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
-                      value={inflationRate}
-                      onChange={handleInflationRateChange}
+                      value={annualInflationRate}
+                      onChange={handleAnnualInflationRateChange}
                       className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-left appearance-none ${
-                        errorMessages.inflationRate ? "border-red-500" : ""
+                        errorMessages.annualInflationRate
+                          ? "border-red-500"
+                          : ""
                       }`}
                       placeholder="5"
                     />
-                    <span className="absolute right-4 top-2 text-gray-500">%</span>
+                    <span className="absolute right-4 top-2 text-gray-500">
+                      %
+                    </span>
                   </div>
                 </div>
-                {errorMessages.inflationRate && (
-                  <p className="text-red-500 text-[13px] us:text-sm">{errorMessages.inflationRate}</p>
+                {errorMessages.annualInflationRate && (
+                  <p className="text-red-500 text-[13px] us:text-sm">
+                    {errorMessages.annualInflationRate}
+                  </p>
                 )}
               </div>
               <input
                 type="range"
-                min="1"
-                max={maxInflationRate}
+                min="0"
+                max={maxAnnualInflationRate}
                 step="0.1"
-                value={inflationRate}
-                onChange={handleInflationRateChange}
+                value={annualInflationRate}
+                onChange={handleAnnualInflationRateChange}
                 className="w-full cursor-pointer"
               />
             </div>
 
-            {/* Number of Years */}
+            {/* Years */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Years</label>
+                  <label className="font-medium">Time Period (years)</label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -191,11 +217,15 @@ function InflationCalculator() {
                       }`}
                       placeholder="10"
                     />
-                    <span className="absolute right-4 top-2 text-gray-500">Years</span>
+                    <span className="absolute right-4 top-2 text-gray-500">
+                      Year(s)
+                    </span>
                   </div>
                 </div>
                 {errorMessages.years && (
-                  <p className="text-red-500 text-[13px] us:text-sm">{errorMessages.years}</p>
+                  <p className="text-red-500 text-[13px] us:text-sm">
+                    {errorMessages.years}
+                  </p>
                 )}
               </div>
               <input
@@ -225,24 +255,39 @@ function InflationCalculator() {
                 <div className="flex items-center mb-2.5">
                   <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-mint"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Initial Cost:</span>
-                    <span className="font-semibold">₹{formatChartNumber(initialCost)}</span>
+                    <span className="lg:text-base">Initial Amount:</span>
+                    <span className="font-semibold">
+                      ₹{formatChartNumber(initialAmount)}{" "}
+                      {formatNumber(initialAmount)
+                        ? `(${formatNumber(initialAmount)})`
+                        : null}
+                    </span>
                   </div>
                 </div>
 
                 <div className="flex items-center mb-2.5">
                   <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-crayola"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Inflated Cost:</span>
-                    <span className="font-semibold">₹{formatChartNumber(totalCost)}</span>
+                    <span className="lg:text-base">Inflated Amount:</span>
+                    <span className="font-semibold">
+                      ₹{formatChartNumber(inflatedAmount)}{" "}
+                      {formatNumber(inflatedAmount)
+                        ? `(${formatNumber(inflatedAmount)})`
+                        : null}
+                    </span>
                   </div>
                 </div>
 
                 <div className="flex items-center mb-2.5">
-                  <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-orange-500"></div>
+                  <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-gray-500"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Cost Increase Due to Inflation:</span>
-                    <span className="font-semibold">₹{formatChartNumber(costIncrease)}</span>
+                    <span className="lg:text-base">Amount Increase</span>
+                    <span className="font-semibold">
+                      ₹{formatChartNumber(adjustedAmount)}{" "}
+                      {formatNumber(adjustedAmount)
+                        ? `(${formatNumber(adjustedAmount)})`
+                        : null}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -255,13 +300,14 @@ function InflationCalculator() {
           {chartData && chartData.datasets ? (
             <div className="w-full">
               <h2 className="text-center text-lg sm:text-xl font-semibold mb-4">
-                Cost Increase Over Time
+                Inflation Impact Over Time
               </h2>
               <div className="w-full h-[350px] sm:h-[400px] lg:h-[500px]">
                 <BarChart data={chartData} />
               </div>
               <div className="text-[15px] md:text-base">
-                The above chart shows how inflation affects the cost of the product/service over time.
+                The above chart shows how inflation reduces the purchasing
+                power over time.
               </div>
             </div>
           ) : null}

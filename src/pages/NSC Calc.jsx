@@ -2,14 +2,12 @@ import React, { useState, useEffect } from "react";
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
 import { formatNumber, formatChartNumber } from "./Calc";
-import PPFInfo from "./PpfInfo";
-import PPFFAQ from "./PpfFaq";
+import NSCInfo from "./NSC Info";
 
-function PPF() {
-  const [principalAmount, setPrincipalAmount] = useState(5000); // Default ₹5000 for monthly PPF contribution
-  const rateOfInterest = 7.1; // Fixed 7.1% p.a. for PPF
-  const [investmentPeriod, setInvestmentPeriod] = useState(15); // Default 15 years (minimum)
-  const [compoundFrequency, setCompoundFrequency] = useState(1); // Default monthly compounding
+function NSC() {
+  const [principalAmount, setPrincipalAmount] = useState(10000); // Default ₹10000 for FD
+  const [rateOfInterest, setRateOfInterest] = useState(6); // Default 6% p.a.
+  const [compoundFrequency, setCompoundFrequency] = useState(4); // Default quarterly compounding
 
   const [totalValue, setTotalValue] = useState(0);
   const [estimatedReturns, setEstimatedReturns] = useState(0);
@@ -18,42 +16,25 @@ function PPF() {
   const [chartData, setChartData] = useState(null);
   const [donutChartData, setDonutChartData] = useState(null);
 
+  const investmentPeriod = 5;
+
   // Error states
   const [errorMessages, setErrorMessages] = useState({
     principalAmount: "",
-    investmentPeriod: "",
+    rateOfInterest: "",
   });
 
-  const maxPrincipalAmount = 150000; // PPF max yearly contribution limit (₹1.5 lakh p.a.)
-  const maxInvestmentPeriod = 30; // Maximum 30 years
-
-  // Function to get the correct range maximum for investment
-  const getMaxPrincipalAmount = () => {
-    return maxPrincipalAmount / compoundFrequency;
-  };
-
-  // Update the title based on frequency
-  const getFrequencyLabel = () => {
-    switch (compoundFrequency) {
-      case 1:
-        return "Annual";
-      case 4:
-        return "Quarterly";
-      case 12:
-        return "Monthly";
-      default:
-        return "Semi-Annual";
-    }
-  };
+  const maxPrincipalAmount = 10000000;
+  const maxRateOfInterest = 12;
 
   useEffect(() => {
-    if (principalAmount <= 0 || investmentPeriod < 15) {
+    if (principalAmount <= 0 || rateOfInterest <= 0) {
       setErrorMessages({
         principalAmount:
           principalAmount <= 0 ? "Principal must be greater than zero" : "",
-        investmentPeriod:
-          investmentPeriod < 15
-            ? "Investment period must be at least 15 years"
+        rateOfInterest:
+          rateOfInterest <= 0
+            ? "Rate of interest must be greater than zero"
             : "",
       });
       return; // Stop calculation if invalid input
@@ -61,35 +42,34 @@ function PPF() {
 
     setErrorMessages({
       principalAmount: "",
-      investmentPeriod: "",
+      rateOfInterest: "",
     });
 
-    // Fixed rate of interest
     const interestRatePerPeriod = rateOfInterest / 100 / compoundFrequency;
-    const periods = investmentPeriod * compoundFrequency;
 
-    let totalValueCalc = 0;
-    let investedAmountCalc = principalAmount * periods;
+    let totalValueCalc = principalAmount;
+    let investedAmountCalc = principalAmount;
 
     // Arrays to store yearly values for the bar chart
     const barDataInvested = [];
     const barDataReturns = [];
-    let accumulatedValue = 0;
+    let accumulatedValue = principalAmount;
 
     // Create yearly data
     for (let year = 1; year <= investmentPeriod; year++) {
-      let accumulatedAmountForYear = 0;
-      let totalInvestedForYear = principalAmount * compoundFrequency * year; // Total invested up to this year
+      // Calculate the total number of periods for the current year
+      const currentYearPeriod = year * compoundFrequency;
 
-      // Calculate accumulated amount for this year
-      for (let period = 1; period <= year * compoundFrequency; period++) {
-        accumulatedAmountForYear +=
-          principalAmount * Math.pow(1 + interestRatePerPeriod, period);
+      // Calculate the value at the end of the current year
+      for (let period = 1; period <= compoundFrequency; period++) {
+        const totalPeriods = year * compoundFrequency; // Total periods for the year
+        accumulatedValue =
+          principalAmount * Math.pow(1 + interestRatePerPeriod, totalPeriods); // Compound formula
       }
 
-      barDataInvested.push(totalInvestedForYear); // This will increase each year based on total invested amount till that year
-      barDataReturns.push(accumulatedAmountForYear - totalInvestedForYear); // This will show returns for that year
-      accumulatedValue = accumulatedAmountForYear; // Total value for the last year
+      // Save the data for the current year
+      barDataInvested.push(investedAmountCalc);
+      barDataReturns.push(accumulatedValue - investedAmountCalc);
     }
 
     totalValueCalc = accumulatedValue;
@@ -123,21 +103,21 @@ function PPF() {
       labels: ["Invested Amount", "Estimated Returns"],
       datasets: [
         {
-          data: [investedAmountCalc, totalValueCalc - investedAmountCalc],
+          data: [principalAmount, totalValueCalc - principalAmount],
           backgroundColor: ["rgba(75,192,192,0.6)", "rgba(153,102,255,0.6)"],
         },
       ],
     });
-  }, [principalAmount, rateOfInterest, investmentPeriod, compoundFrequency]);
+  }, [principalAmount, rateOfInterest, compoundFrequency]);
 
   // Handlers for inputs
   const handlePrincipalAmountChange = (e) =>
     setPrincipalAmount(
-      Math.max(0, Math.min(Number(e.target.value), getMaxPrincipalAmount()))
+      Math.max(0, Math.min(Number(e.target.value), maxPrincipalAmount))
     );
-  const handleInvestmentPeriodChange = (e) =>
-    setInvestmentPeriod(
-      Math.max(15, Math.min(Number(e.target.value), maxInvestmentPeriod))
+  const handleRateOfInterestChange = (e) =>
+    setRateOfInterest(
+      Math.max(0, Math.min(Number(e.target.value), maxRateOfInterest))
     );
   const handleCompoundFrequencyChange = (e) =>
     setCompoundFrequency(Number(e.target.value));
@@ -145,7 +125,7 @@ function PPF() {
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
-        PPF Calculator
+        National Savings Certificate Calculator
       </h1>
 
       {/* User Inputs Section */}
@@ -155,11 +135,9 @@ function PPF() {
           <div className="w-full lg:w-6/12 space-y-2 sm:space-y-4 md:space-y-8 m-auto">
             {/* Principal Amount */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">
-                    {getFrequencyLabel()} Investment
-                  </label>
+                  <label className="font-medium">Principal Amount</label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -168,7 +146,7 @@ function PPF() {
                       className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-right ${
                         errorMessages.principalAmount ? "border-red-500" : ""
                       }`}
-                      placeholder="5000"
+                      placeholder="10000"
                     />
                     <span className="absolute left-4 top-2.5 text-gray-500">
                       ₹
@@ -183,72 +161,68 @@ function PPF() {
               </div>
               <input
                 type="range"
-                min="500"
-                max={getMaxPrincipalAmount()}
-                step="500"
+                min="1000"
+                max={maxPrincipalAmount}
+                step="100"
                 value={principalAmount}
                 onChange={handlePrincipalAmountChange}
                 className="w-full cursor-pointer"
               />
             </div>
 
-            {/* Investment Period */}
+            {/* Rate of Interest */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">
-                    Investment Period (years)
-                  </label>
+                  <label className="font-medium">Rate of Interest (p.a)</label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
-                      value={investmentPeriod}
-                      onChange={handleInvestmentPeriodChange}
+                      value={rateOfInterest}
+                      onChange={handleRateOfInterestChange}
                       className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-left appearance-none ${
-                        errorMessages.investmentPeriod ? "border-red-500" : ""
+                        errorMessages.rateOfInterest ? "border-red-500" : ""
                       }`}
-                      placeholder="15"
+                      placeholder="6"
                     />
                     <span className="absolute right-4 top-2 text-gray-500">
-                      Years
+                      %
                     </span>
                   </div>
                 </div>
-                {errorMessages.investmentPeriod && (
+                {errorMessages.rateOfInterest && (
                   <p className="text-red-500 text-[13px] us:text-sm">
-                    {errorMessages.investmentPeriod}
+                    {errorMessages.rateOfInterest}
                   </p>
                 )}
               </div>
               <input
                 type="range"
-                min="15"
-                max={maxInvestmentPeriod}
-                step="5"
-                value={investmentPeriod}
-                onChange={handleInvestmentPeriodChange}
+                min="1"
+                max={maxRateOfInterest}
+                step="0.1"
+                value={rateOfInterest}
+                onChange={handleRateOfInterestChange}
                 className="w-full cursor-pointer"
               />
             </div>
 
-            {/* Rate of returns */}
+            {/* Investment Period */}
             <div className="flex justify-between items-center">
-              <label className="font-medium">Rate of Interest (p.a)</label>
-              <div className="">7.1%</div>
+              <label className="font-medium">Investment Period</label>
+              <div className="">5 Years</div>
             </div>
 
             {/* Compound Frequency */}
             <div className="flex justify-between items-center">
-              <label className="font-medium">Investment Frequency</label>
+              <label className="font-medium">Compounding Frequency</label>
               <select
                 value={compoundFrequency}
                 onChange={handleCompoundFrequencyChange}
-                className="p-2 border rounded-md shadow-sm w-28 lg:w-32 bg-white"
+                className="p-2 border rounded-md shadow-sm bg-white w-28 lg:w-32"
               >
                 <option value={1}>Annually</option>
                 <option value={2}>Semi-Annually</option>
-                <option value={4}>Quarterly</option>
-                <option value={12}>Monthly</option>
               </select>
             </div>
           </div>
@@ -313,26 +287,25 @@ function PPF() {
           {chartData && chartData.datasets ? (
             <div className="w-full">
               <h2 className="text-center text-lg sm:text-xl font-semibold mb-4">
-                PPF Growth Over Time
+                Investment Growth Over Time
               </h2>
               <div className="w-full h-[350px] sm:h-[400px] lg:h-[500px]">
                 <BarChart data={chartData} />
               </div>
               <div className="text-[15px] md:text-base">
-                The above chart shows how the compounding works in PPF over the
-                duration.
+                The above chart shows how the power of compounding increases the
+                returns over time.
               </div>
             </div>
           ) : null}
         </div>
 
         <div className="py-4">
-          <PPFInfo />
-          <PPFFAQ />
+          <NSCInfo />
         </div>
       </div>
     </div>
   );
 }
 
-export default PPF;
+export default NSC;

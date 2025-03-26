@@ -1,19 +1,20 @@
 import { Route, Routes } from "react-router-dom";
 import HomeLayout from "./components/HomeLayout"; // Import HomeLayout
-import SIPCalculator from "./pages/SIPCalculator";
+import SIPCalculator from "./pages/SIP Calc";
 import ErrorPage from "./pages/ErrorPage";
-import FdCalculator from "./pages/FDcalculator";
-import SimpleInterestCalculator from "./pages/SimpleInterest";
-import CompoundInterest from "./pages/CompondInterest";
-import PpfCalculator from "./pages/Ppf";
-import InflationCalculator from "./pages/InflationCalc";
-import GratuityCalculator from "./pages/GratuityCalc";
-import NPScalculator from "./pages/NpsCalc";
-import NSC from "./pages/NscCalc";
-import EPF from "./pages/EpfCalc";
-import EMI from "./pages/EmiCalc";
-import SSYCalc from "./pages/SsyCalc";
-import GSTCalculator from "./pages/GSTCalc";
+import FdCalculator from "./pages/FD Calc";
+import SimpleInterestCalculator from "./pages/SimpleInterest Calc";
+import CompoundInterest from "./pages/CompondInterest Calc";
+import PpfCalculator from "./pages/PPF Calc";
+import InflationCalculator from "./pages/Inflation Calc";
+import GratuityCalculator from "./pages/Gratuity Calc";
+import NPScalculator from "./pages/NPS Calc";
+import NSC from "./pages/NSC Calc";
+import EPF from "./pages/EPF Calc";
+import EMI from "./pages/EMI Calc";
+import SSYCalc from "./pages/SSY Calc";
+import GSTCalculator from "./pages/GST Calc";
+import RD from "./pages/RD Calc";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="emi-calculator" element={<EMI />} />
           <Route path="ssy-calculator" element={<SSYCalc />} />
           <Route path="gst-calculator" element={<GSTCalculator />} />
+          <Route path="rd-calculator" element={<RD />} />
 
         </Route>
 

@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
 import { formatNumber, formatChartNumber } from "./Calc";
-import FdInfo from "./FDinfo";
+import PPFInfo from "./PPF Info";
+import PPFFAQ from "./PPF Faq";
 
-function FDCalculator() {
-  const [principalAmount, setPrincipalAmount] = useState(10000); // Default ₹10000 for FD
-  const [rateOfInterest, setRateOfInterest] = useState(6); // Default 6% p.a.
-  const [investmentPeriod, setInvestmentPeriod] = useState(5); // Default 5 years
+function PPF() {
+  const [principalAmount, setPrincipalAmount] = useState(5000); // Default ₹5000 for monthly PPF contribution
+  const rateOfInterest = 7.1; // Fixed 7.1% p.a. for PPF
+  const [investmentPeriod, setInvestmentPeriod] = useState(15); // Default 15 years (minimum)
+  const [compoundFrequency, setCompoundFrequency] = useState(1); // Default monthly compounding
 
   const [totalValue, setTotalValue] = useState(0);
   const [estimatedReturns, setEstimatedReturns] = useState(0);
@@ -19,26 +21,39 @@ function FDCalculator() {
   // Error states
   const [errorMessages, setErrorMessages] = useState({
     principalAmount: "",
-    rateOfInterest: "",
     investmentPeriod: "",
   });
 
-  const maxPrincipalAmount = 10000000;
-  const maxRateOfInterest = 15;
-  const maxInvestmentPeriod = 30;
+  const maxPrincipalAmount = 150000; // PPF max yearly contribution limit (₹1.5 lakh p.a.)
+  const maxInvestmentPeriod = 30; // Maximum 30 years
+
+  // Function to get the correct range maximum for investment
+  const getMaxPrincipalAmount = () => {
+    return maxPrincipalAmount / compoundFrequency;
+  };
+
+  // Update the title based on frequency
+  const getFrequencyLabel = () => {
+    switch (compoundFrequency) {
+      case 1:
+        return "Annual";
+      case 4:
+        return "Quarterly";
+      case 12:
+        return "Monthly";
+      default:
+        return "Semi-Annual";
+    }
+  };
 
   useEffect(() => {
-    if (principalAmount <= 0 || rateOfInterest <= 0 || investmentPeriod <= 0) {
+    if (principalAmount <= 0 || investmentPeriod < 15) {
       setErrorMessages({
         principalAmount:
           principalAmount <= 0 ? "Principal must be greater than zero" : "",
-        rateOfInterest:
-          rateOfInterest <= 0
-            ? "Rate of interest must be greater than zero"
-            : "",
         investmentPeriod:
-          investmentPeriod <= 0
-            ? "Investment period must be greater than zero"
+          investmentPeriod < 15
+            ? "Investment period must be at least 15 years"
             : "",
       });
       return; // Stop calculation if invalid input
@@ -46,34 +61,47 @@ function FDCalculator() {
 
     setErrorMessages({
       principalAmount: "",
-      rateOfInterest: "",
       investmentPeriod: "",
     });
 
-    // Quarterly compounding (fixed frequency of 4)
-    const compoundFrequency = 4;
+    // Fixed rate of interest
     const interestRatePerPeriod = rateOfInterest / 100 / compoundFrequency;
-    const totalPeriods = investmentPeriod * compoundFrequency;
+    const periods = investmentPeriod * compoundFrequency;
 
-    let accumulatedValue = principalAmount;
+    let totalValueCalc = 0;
+    let investedAmountCalc = principalAmount * periods;
+
+    // Arrays to store yearly values for the bar chart
     const barDataInvested = [];
     const barDataReturns = [];
-    let investedAmountCalc = principalAmount;
+    let accumulatedValue = 0;
 
-    // Generate yearly data
+    // Create yearly data
     for (let year = 1; year <= investmentPeriod; year++) {
-      const totalPeriodsThisYear = year * compoundFrequency;
-      accumulatedValue = principalAmount * Math.pow(1 + interestRatePerPeriod, totalPeriodsThisYear); // Apply compound interest
-      barDataInvested.push(investedAmountCalc);
-      barDataReturns.push(accumulatedValue - investedAmountCalc);
+      let accumulatedAmountForYear = 0;
+      let totalInvestedForYear = principalAmount * compoundFrequency * year; // Total invested up to this year
+
+      // Calculate accumulated amount for this year
+      for (let period = 1; period <= year * compoundFrequency; period++) {
+        accumulatedAmountForYear +=
+          principalAmount * Math.pow(1 + interestRatePerPeriod, period);
+      }
+
+      barDataInvested.push(totalInvestedForYear); // This will increase each year based on total invested amount till that year
+      barDataReturns.push(accumulatedAmountForYear - totalInvestedForYear); // This will show returns for that year
+      accumulatedValue = accumulatedAmountForYear; // Total value for the last year
     }
 
-    setTotalValue(accumulatedValue);
-    setEstimatedReturns(accumulatedValue - investedAmountCalc);
+    totalValueCalc = accumulatedValue;
+    setTotalValue(totalValueCalc);
+    setEstimatedReturns(totalValueCalc - investedAmountCalc);
     setInvestedAmount(investedAmountCalc);
 
-    // Chart data
-    const labels = Array.from({ length: investmentPeriod }, (_, index) => `${index + 1} Year${index + 1 > 1 ? "s" : ""}`);
+    // Chart Data
+    const labels = Array.from(
+      { length: investmentPeriod },
+      (_, index) => `${index + 1} Year${index + 1 > 1 ? "s" : ""}`
+    );
 
     setChartData({
       labels: labels,
@@ -91,36 +119,33 @@ function FDCalculator() {
       ],
     });
 
-    // Donut chart data
     setDonutChartData({
       labels: ["Invested Amount", "Estimated Returns"],
       datasets: [
         {
-          data: [principalAmount, accumulatedValue - principalAmount],
+          data: [investedAmountCalc, totalValueCalc - investedAmountCalc],
           backgroundColor: ["rgba(75,192,192,0.6)", "rgba(153,102,255,0.6)"],
         },
       ],
     });
-  }, [principalAmount, rateOfInterest, investmentPeriod]);
+  }, [principalAmount, rateOfInterest, investmentPeriod, compoundFrequency]);
 
   // Handlers for inputs
   const handlePrincipalAmountChange = (e) =>
     setPrincipalAmount(
-      Math.max(0, Math.min(Number(e.target.value), maxPrincipalAmount))
-    );
-  const handleRateOfInterestChange = (e) =>
-    setRateOfInterest(
-      Math.max(0, Math.min(Number(e.target.value), maxRateOfInterest))
+      Math.max(0, Math.min(Number(e.target.value), getMaxPrincipalAmount()))
     );
   const handleInvestmentPeriodChange = (e) =>
     setInvestmentPeriod(
-      Math.max(0, Math.min(Number(e.target.value), maxInvestmentPeriod))
+      Math.max(15, Math.min(Number(e.target.value), maxInvestmentPeriod))
     );
+  const handleCompoundFrequencyChange = (e) =>
+    setCompoundFrequency(Number(e.target.value));
 
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
-        FD Investment Calculator
+        Public Provident Fund Calculator
       </h1>
 
       {/* User Inputs Section */}
@@ -130,9 +155,11 @@ function FDCalculator() {
           <div className="w-full lg:w-6/12 space-y-2 sm:space-y-4 md:space-y-8 m-auto">
             {/* Principal Amount */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Principal Amount</label>
+                  <label className="font-medium">
+                    {getFrequencyLabel()} Investment
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -141,7 +168,7 @@ function FDCalculator() {
                       className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-right ${
                         errorMessages.principalAmount ? "border-red-500" : ""
                       }`}
-                      placeholder="10000"
+                      placeholder="5000"
                     />
                     <span className="absolute left-4 top-2.5 text-gray-500">
                       ₹
@@ -156,55 +183,18 @@ function FDCalculator() {
               </div>
               <input
                 type="range"
-                min="1000"
-                max={maxPrincipalAmount}
-                step="100"
+                min="500"
+                max={getMaxPrincipalAmount()}
+                step="500"
                 value={principalAmount}
                 onChange={handlePrincipalAmountChange}
                 className="w-full cursor-pointer"
               />
             </div>
 
-            {/* Rate of Interest */}
-            <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
-                <div className="flex justify-between items-center">
-                  <label className="font-medium">Rate of Interest (p.a)</label>
-                  <div className="relative w-28 lg:w-32">
-                    <input
-                      type="number"
-                      value={rateOfInterest}
-                      onChange={handleRateOfInterestChange}
-                      className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-left appearance-none ${
-                        errorMessages.rateOfInterest ? "border-red-500" : ""
-                      }`}
-                      placeholder="6"
-                    />
-                    <span className="absolute right-4 top-2 text-gray-500">
-                      %
-                    </span>
-                  </div>
-                </div>
-                {errorMessages.rateOfInterest && (
-                  <p className="text-red-500 text-[13px] us:text-sm">
-                    {errorMessages.rateOfInterest}
-                  </p>
-                )}
-              </div>
-              <input
-                type="range"
-                min="1"
-                max={maxRateOfInterest}
-                step="0.1"
-                value={rateOfInterest}
-                onChange={handleRateOfInterestChange}
-                className="w-full cursor-pointer"
-              />
-            </div>
-
             {/* Investment Period */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
-              <div className="min-h-10 sm:h-14 md:h-14">
+              <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
                   <label className="font-medium">
                     Investment Period (years)
@@ -217,7 +207,7 @@ function FDCalculator() {
                       className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-left appearance-none ${
                         errorMessages.investmentPeriod ? "border-red-500" : ""
                       }`}
-                      placeholder="5"
+                      placeholder="15"
                     />
                     <span className="absolute right-4 top-2 text-gray-500">
                       Years
@@ -232,13 +222,34 @@ function FDCalculator() {
               </div>
               <input
                 type="range"
-                min="1"
+                min="15"
                 max={maxInvestmentPeriod}
-                step="1"
+                step="5"
                 value={investmentPeriod}
                 onChange={handleInvestmentPeriodChange}
                 className="w-full cursor-pointer"
               />
+            </div>
+
+            {/* Rate of returns */}
+            <div className="flex justify-between items-center">
+              <label className="font-medium">Rate of Interest (p.a)</label>
+              <div className="">7.1 %</div>
+            </div>
+
+            {/* Compound Frequency */}
+            <div className="flex justify-between items-center">
+              <label className="font-medium">Investment Frequency</label>
+              <select
+                value={compoundFrequency}
+                onChange={handleCompoundFrequencyChange}
+                className="p-2 border rounded-md shadow-sm w-28 lg:w-32 bg-white"
+              >
+                <option value={1}>Annually</option>
+                <option value={2}>Semi-Annually</option>
+                <option value={4}>Quarterly</option>
+                <option value={12}>Monthly</option>
+              </select>
             </div>
           </div>
 
@@ -302,25 +313,26 @@ function FDCalculator() {
           {chartData && chartData.datasets ? (
             <div className="w-full">
               <h2 className="text-center text-lg sm:text-xl font-semibold mb-4">
-                Investment Growth Over Time
+                PPF Growth Over Time
               </h2>
               <div className="w-full h-[350px] sm:h-[400px] lg:h-[500px]">
                 <BarChart data={chartData} />
               </div>
               <div className="text-[15px] md:text-base">
-                The above chart shows how the power of compounding increases the
-                returns over time.
+                The above chart shows how the compounding works in PPF over the
+                duration.
               </div>
             </div>
           ) : null}
         </div>
 
         <div className="py-4">
-          <FdInfo />
+          <PPFInfo />
+          <PPFFAQ />
         </div>
       </div>
     </div>
   );
 }
 
-export default FDCalculator;
+export default PPF;
