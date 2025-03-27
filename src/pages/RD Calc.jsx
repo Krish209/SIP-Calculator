@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
 import { formatNumber, formatChartNumber } from "./Calc";
-import RDInvestment from "./RD Info";
+import RDFAQ from "./RD Faq";
+import RDINFO from "./RD Info";
 
 function RD() {
   const [monthlyDeposit, setMonthlyDeposit] = useState(1000); // Default ₹1000 for monthly RD contribution
@@ -335,7 +336,8 @@ function RD() {
         </div>
 
         <div className="py-4">
-          <RDInvestment />
+          <RDINFO />
+          <RDFAQ />
         </div>
       </div>
     </div>

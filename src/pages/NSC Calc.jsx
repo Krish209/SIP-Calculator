@@ -3,6 +3,7 @@ import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
 import { formatNumber, formatChartNumber } from "./Calc";
 import NSCInfo from "./NSC Info";
+import NSCFAQ from "./NSC Faq";
 
 function NSC() {
   const [principalAmount, setPrincipalAmount] = useState(10000); // Default ₹10000 for FD
@@ -302,6 +303,7 @@ function NSC() {
 
         <div className="py-4">
           <NSCInfo />
+          <NSCFAQ />
         </div>
       </div>
     </div>

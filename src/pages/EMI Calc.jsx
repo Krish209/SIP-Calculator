@@ -3,6 +3,7 @@ import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
 import { formatNumber, formatChartNumber, format2decimal } from "./Calc";
 import EMIInfo from "./EMI Info";
+import EMIFAQ from "./EMI Faq";
 
 function EMI() {
   const [loanAmount, setLoanAmount] = useState(500000); // Default ₹500000
@@ -324,6 +325,7 @@ function EMI() {
 
         <div className="py-4">
           <EMIInfo />
+          <EMIFAQ />
         </div>
       </div>
     </div>

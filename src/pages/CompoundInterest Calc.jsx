@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
 import { formatNumber, formatChartNumber } from "./Calc";
-import CompondInterestInfo from "./CompondInterest Info";
+import CompoundInterestFAQ from "./CompoundInterest Faq";
+import CompoundingInterestInfo from "./CompoundInterest Info";
 
 function CompoundInterest() {
   const [principalAmount, setPrincipalAmount] = useState(10000); // Default ₹10000 for FD
@@ -348,7 +349,8 @@ function CompoundInterest() {
         </div>
 
         <div className="py-4">
-          <CompondInterestInfo />
+          <CompoundingInterestInfo />
+          <CompoundInterestFAQ />
         </div>
       </div>
     </div>

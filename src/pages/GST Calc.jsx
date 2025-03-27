@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { DoughnutChart } from "./chartjs/Donut";
 import { formatNumber, formatChartNumber } from "./Calc";
 import GSTInfo from "./GST Info";
-import NPSInfo from "./NPS Info";
+import GSTFAQ from "./GST Faq";
 
 function GSTCalculator() {
   const [price, setPrice] = useState(10000); // Default ₹10000
@@ -245,8 +245,8 @@ function GSTCalculator() {
           
         </div>
         <div className="py-4">
-            <GSTInfo />
-            <NPSInfo />
+            {/* <GSTInfo />
+            <GSTFAQ /> */}
           </div>
       </div>
     </div>

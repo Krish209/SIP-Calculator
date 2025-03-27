@@ -3,6 +3,7 @@ import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
 import { formatNumber, formatChartNumber } from "./Calc";
 import FdInfo from "./FD Info";
+import FDFaq from "./FD Faq";
 
 function FDCalculator() {
   const [principalAmount, setPrincipalAmount] = useState(10000); // Default ₹10000 for FD
@@ -63,7 +64,9 @@ function FDCalculator() {
     // Generate yearly data
     for (let year = 1; year <= investmentPeriod; year++) {
       const totalPeriodsThisYear = year * compoundFrequency;
-      accumulatedValue = principalAmount * Math.pow(1 + interestRatePerPeriod, totalPeriodsThisYear); // Apply compound interest
+      accumulatedValue =
+        principalAmount *
+        Math.pow(1 + interestRatePerPeriod, totalPeriodsThisYear); // Apply compound interest
       barDataInvested.push(investedAmountCalc);
       barDataReturns.push(accumulatedValue - investedAmountCalc);
     }
@@ -73,7 +76,10 @@ function FDCalculator() {
     setInvestedAmount(investedAmountCalc);
 
     // Chart data
-    const labels = Array.from({ length: investmentPeriod }, (_, index) => `${index + 1} Year${index + 1 > 1 ? "s" : ""}`);
+    const labels = Array.from(
+      { length: investmentPeriod },
+      (_, index) => `${index + 1} Year${index + 1 > 1 ? "s" : ""}`
+    );
 
     setChartData({
       labels: labels,
@@ -317,6 +323,7 @@ function FDCalculator() {
 
         <div className="py-4">
           <FdInfo />
+          <FDFaq />
         </div>
       </div>
     </div>

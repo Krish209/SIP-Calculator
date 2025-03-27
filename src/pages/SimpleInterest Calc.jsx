@@ -3,6 +3,7 @@ import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
 import { formatNumber, formatChartNumber } from "./Calc";
 import SimpleInterestInfo from "./SimpleInterest Info";
+import SimpleInterestFAQ from "./SimpleInterest Faq";
 
 function SimpleInterest() {
   const [principalAmount, setPrincipalAmount] = useState(10000); // Default ₹10000 for FD
@@ -375,6 +376,7 @@ function SimpleInterest() {
 
         <div className="py-4">
           <SimpleInterestInfo />
+          <SimpleInterestFAQ />
         </div>
       </div>
     </div>

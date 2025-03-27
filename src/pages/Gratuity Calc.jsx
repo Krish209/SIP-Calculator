@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BarChart } from "./chartjs/Bar";
 import { formatNumber, formatChartNumber } from "./Calc";
 import GratuityInfo from "./Gratuity Info";
+import GratuityFAQ from "./Gratuity Faq";
 
 function Gratuity() {
   const [basicSalary, setBasicSalary] = useState(50000); // Default ₹50,000
@@ -210,6 +211,7 @@ function Gratuity() {
 
         <div className="py-4">
           <GratuityInfo />
+          <GratuityFAQ />
         </div>
       </div>
     </div>

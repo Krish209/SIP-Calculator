@@ -3,6 +3,7 @@ import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
 import { formatNumber, formatChartNumber } from "./Calc"; 
 import InflationInfo from "./Inflation Info";
+import InflationFAQ from "./Inflation Faq";
 
 function InflationCalculator() {
   const [initialAmount, setInitialAmount] = useState(10000); // Default ₹10000
@@ -315,6 +316,7 @@ function InflationCalculator() {
 
         <div className="py-4">
           <InflationInfo />
+          <InflationFAQ />
         </div>
       </div>
     </div>

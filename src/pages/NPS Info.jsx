@@ -4,19 +4,115 @@ const NPSInfo = () => {
   return (
     <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
       <h1 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
-        National Pension System (NPS) - - A Comprehensive Guide
+        National Pension System (NPS) - A Comprehensive Guide
       </h1>
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          Objective of NPS
+          What is NPS?
         </h2>
         <p>
-          The primary objective of NPS is to ensure financial security for
-          individuals in their retirement years. By encouraging individuals to
-          save during their working years and invest in a variety of asset
-          classes, NPS helps to create a corpus for retirement that provides
-          income after an individual retires.
+          The National Pension System (NPS) is a government-sponsored pension
+          scheme that allows individuals to contribute towards their retirement
+          savings during their working years. The NPS offers individuals an
+          opportunity to accumulate funds for their retirement, with the option
+          to manage and grow the funds based on different investment options.
+        </p>
+      </section>
+
+      <section className="my-4 md:my-6">
+        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+          How does NPS Work?
+        </h2>
+        <p className="mb-2">
+          NPS works by allowing individuals to contribute to their retirement
+          account during their working years. The contributions are invested in
+          different asset classes (equity, corporate bonds, government
+          securities) according to the investor's risk preference. The
+          accumulated amount can be used to provide a monthly pension after the
+          individual reaches the age of 60.
+        </p>
+
+        <div className="bg-gray-100 p-2 md:p-4 rounded-lg mt-6 shadow-md">
+          <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+            NPS Formula:
+          </h3>
+          <p className="mb-2 md:mb-4">
+            The formula to calculate NPS Corpus is:
+          </p>
+
+          <code>A = P × (1 + r/n)^(nt)</code>
+
+          <p className="mt-2">Where:</p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>
+              <strong>A</strong> = Amount of money accumulated after{" "}
+              <strong>n</strong> years, including interest
+            </li>
+            <li>
+              <strong>P</strong> = Invested amount
+            </li>
+            <li>
+              <strong>r</strong> = Annual interest rate
+            </li>
+            <li>
+              <strong>n</strong> = Number of times that interest is compounded
+              per year
+            </li>
+            <li>
+              <strong>t</strong> = Number of years the money is invested or
+              borrowed for
+            </li>
+          </ul>
+        </div>
+
+        <p className="mb-2 mt-4">
+          Let's take an example of <strong>Mr. Shyam</strong>, a 30-year-old
+          employee working in a government sector. He decides to invest in the{" "}
+          <strong>National Pension Scheme (NPS)</strong> to secure his
+          retirement. Mr. Shyam will make monthly contributions of ₹5,000
+          towards the scheme with expected annual return rate of 8%, which he
+          plans to do until he reaches the age of 60.
+        </p>
+        <ul className="space-y-2 mb-4 pl-2">
+          <li>- Monthly Investment (P) = ₹5,000</li>
+          <li>- Expected Annual Return Rate (r) = 8% (0.08)</li>
+          <li>- Number of times interest is compounded per year (n) = 1</li>
+          <li>
+            - Total Number of years the money is invested (t) = 60 - 30 = 30
+            years
+          </li>
+        </ul>
+
+        <p className="mb-4">
+          Mr. Shyam will contribute ₹5,000 every month for 30 years. His total
+          contribution over the entire period will be ₹18,00,000 (₹5,000 × 12
+          months × 30 years).
+        </p>
+
+        <p className="mb-4">
+          Using the NPS formula, the projected corpus at retirement will be
+          ₹75,01,476. This means Mr. Shyam earned ₹57,01,476 in interest over
+          the investment period.
+        </p>
+
+        <p className="mb-4">
+          At retirement, Mr. Shyam decides to allocate 40% of his corpus to buy
+          an annuity, which will provide him with a steady monthly pension. The
+          amount allocated to the annuity is ₹30,00,590, and the annuity return
+          rate is 6%.
+        </p>
+
+        <p className="mb-4">
+          Based on these figures, Mr. Shyam can expect an estimated monthly
+          pension of ₹15,003. The remaining ₹45,00,886 can be withdrawn as a
+          lump sum, tax-free.
+        </p>
+
+        <p className="mb-4">
+          This ensures that Mr. Shyam will have both a lump sum to access
+          immediately and a monthly pension that will help him manage his
+          expenses throughout retirement.
         </p>
       </section>
 
@@ -26,12 +122,12 @@ const NPSInfo = () => {
         </h2>
         <p className="mb-2">The NPS operates on a two-tier system:</p>
 
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-2 mb-2">
           <li>
             <strong>Tier 1 Account:</strong> This is the primary account used
             for retirement savings. The contributions made in this account are
             subject to withdrawal only upon retirement or in special cases such
-            as the death of the subscriber.
+            as the death of the subscriber (account holder).
           </li>
           <li>
             <strong>Tier 2 Account:</strong> This is a voluntary savings account
@@ -41,7 +137,9 @@ const NPSInfo = () => {
         </ul>
 
         <p className="mb-2">
-          Each subscriber to NPS is assigned a unique identifier called the{" "}
+          You can invest as much or as little as you like, based on your
+          earnings and financial goals. Each subscriber to NPS is assigned a
+          unique identifier called the{" "}
           <strong>Permanent Retirement Account Number (PRAN)</strong>, which
           tracks the contributions and status of the account.
         </p>
@@ -52,15 +150,16 @@ const NPSInfo = () => {
           Contributions to NPS
         </h2>
         <p className="mb-2">
-          NPS is open to all Indian citizens between the ages of 18 and 70
-          years. Here are the details on contributions:
+          NPS is open to all Indian citizens between the ages of 18 and 60. Here
+          are the details on contributions:
         </p>
 
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Minimum Contribution:</strong>- Tier 1: ₹500 for opening,
-            and a minimum of ₹1,000 annually thereafter. - Tier 2: No minimum
-            contribution for opening, but regular deposits can be made.
+            <strong>Minimum Contribution:</strong> In Tier 1, it costs ₹500 for
+            opening, and a minimum of ₹1,000 annually thereafter. For Tier 2,
+            there is no minimum contribution for opening, but regular deposits
+            can be made.
           </li>
           <li>
             <strong>Voluntary Contributions:</strong> NPS allows flexible
@@ -68,19 +167,29 @@ const NPSInfo = () => {
             depending on the subscriber’s financial situation.
           </li>
         </ul>
+
+        <div className="bg-blue-50 p-2 md:p-4 rounded-lg mt-6 shadow-md">
+          <p>
+            <strong>Important Note:</strong> if minimum annual contribution not
+            contributed the account will be frozen. In order to unfreeze the
+            account, the customer has to pay the total of minimum contributions
+            for the period of freeze, the minimum contribution for the year in
+            which the account is reactivated and a penalty of Rs.100/-.
+          </p>
+        </div>
       </section>
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Investment Options in NPS
         </h2>
-        <p>
+        <p className="mb-2">
           NPS provides subscribers with several investment options. They can
           allocate their contributions across different asset classes based on
           their risk appetite. The main asset classes are:
         </p>
 
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-2 mb-2">
           <li>
             <strong>Equity (E):</strong> Investment in stocks, limited to 50% of
             the total corpus.
@@ -116,7 +225,9 @@ const NPSInfo = () => {
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Tax Benefits of NPS
         </h2>
-        <p className="mb-2">NPS offers various tax benefits under the Income Tax Act:</p>
+        <p className="mb-2">
+          NPS offers various tax benefits under the Income Tax Act:
+        </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Tax Deduction under Section 80C:</strong> Contributions are
@@ -135,8 +246,9 @@ const NPSInfo = () => {
           </li>
           <li>
             <strong>Tax on Withdrawals:</strong> 60% of the corpus withdrawn at
-            retirement is tax-free. The remaining 40% must be used to purchase
-            an annuity, which is taxable based on income tax brackets.
+            retirement is tax-free (lump sum withdrawal). The remaining 40% must
+            be used to purchase an annuity, which is taxable based on income tax
+            brackets.
           </li>
         </ul>
       </section>
@@ -151,26 +263,36 @@ const NPSInfo = () => {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Normal Exit:</strong> At the age of 60, a subscriber can
-            withdraw 60% of the corpus as a lump sum (tax-free), while 40% must
-            be used to purchase an annuity.
+            <strong>Normal Exit:</strong> At the age of 60, a subscriber must
+            use at least 40% of their NPS corpus to purchase an annuity from an
+            Annuity Service Provider (ASP) that will provide a monthly pension.
+            The remaining 60% of their NPS corpus can be withdrawn as a tax-free
+            lump sum.
           </li>
           <li>
-            <strong>Premature Exit:</strong> If a subscriber exits before 60,
-            only 20% of the corpus can be withdrawn in a lump sum, and the rest
-            must be used to buy an annuity. The subscriber must have contributed
-            for at least 10 years.
+            <strong>Premature Exit:</strong> If a subscriber exits before 60, at
+            least 80% of the accumulated pension corpus must be used to purchase
+            an annuity, and the rest must be used for lumpsum withdrawal. The
+            subscriber must have contributed for{" "}
+            <strong>at least 10 years</strong>.
+          </li>
+          <li>
+            <strong>Deferment:</strong> If subscriber prefer to continue
+            investing in NPS after 60, you can defer your exit and withdrawal
+            until the age of 75. You can choose to defer the lump sum
+            withdrawal, the annuity purchase, or both.
           </li>
           <li>
             <strong>Death of Subscriber:</strong> In case of death, the entire
-            accumulated corpus is paid to the nominee.
+            accumulated corpus (100%) is paid to the nominee and there would not
+            be any purchase of annuity/monthly pension.
           </li>
         </ul>
       </section>
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          Advantages of NPS
+          Pros of NPS
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
@@ -198,7 +320,7 @@ const NPSInfo = () => {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          Disadvantages of NPS
+          Cons of NPS
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
@@ -207,8 +329,8 @@ const NPSInfo = () => {
           </li>
           <li>
             <strong>Limited Withdrawal Options:</strong> NPS has restrictions on
-            when and how much can be withdrawn before retirement, which could be
-            a limitation for some investors.
+            when and how much can be withdrawn before retirement, which may
+            limit flexibility for some investors.
           </li>
           <li>
             <strong>Market Risk:</strong> Since a part of the investment is

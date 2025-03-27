@@ -4,7 +4,7 @@ import SIPCalculator from "./pages/SIP Calc";
 import ErrorPage from "./pages/ErrorPage";
 import FdCalculator from "./pages/FD Calc";
 import SimpleInterestCalculator from "./pages/SimpleInterest Calc";
-import CompoundInterest from "./pages/CompondInterest Calc";
+import CompoundInterest from "./pages/CompoundInterest Calc";
 import PpfCalculator from "./pages/PPF Calc";
 import InflationCalculator from "./pages/Inflation Calc";
 import GratuityCalculator from "./pages/Gratuity Calc";
@@ -26,10 +26,19 @@ function App() {
           <Route index element={<SIPCalculator />} />
           {/* FD Calculator Route */}
           <Route path="fd-calculator" element={<FdCalculator />} />
-          <Route path="simple-interest-calculator" element={<SimpleInterestCalculator />} />
-          <Route path="compound-interest-calculator" element={<CompoundInterest />} />
+          <Route
+            path="simple-interest-calculator"
+            element={<SimpleInterestCalculator />}
+          />
+          <Route
+            path="compound-interest-calculator"
+            element={<CompoundInterest />}
+          />
           <Route path="ppf-calculator" element={<PpfCalculator />} />
-          <Route path="inflation-calculator" element={<InflationCalculator />} />
+          <Route
+            path="inflation-calculator"
+            element={<InflationCalculator />}
+          />
           <Route path="gratuity-calculator" element={<GratuityCalculator />} />
           <Route path="nps-calculator" element={<NPScalculator />} />
           <Route path="nsc-calculator" element={<NSC />} />
@@ -38,11 +47,10 @@ function App() {
           <Route path="ssy-calculator" element={<SSYCalc />} />
           <Route path="gst-calculator" element={<GSTCalculator />} />
           <Route path="rd-calculator" element={<RD />} />
-
         </Route>
-
         {/* ErrorPage is displayed without HomeLayout */}
-        <Route path="*" element={<ErrorPage />} /> {/* Wildcard for undefined routes */}
+        <Route path="*" element={<ErrorPage />} />{" "}
+        {/* Wildcard for undefined routes */}
       </Routes>
     </div>
   );

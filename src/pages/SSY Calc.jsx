@@ -3,6 +3,7 @@ import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
 import { formatNumber, formatChartNumber } from "./Calc";
 import SSYInfo from "./SSY Info";
+import SSYFAQ from "./SSY Faq";
 
 function SSY() {
   const [principalAmount, setPrincipalAmount] = useState(10000); // Default ₹10000 for FD
@@ -305,6 +306,7 @@ function SSY() {
 
         <div className="py-4">
           <SSYInfo />
+          <SSYFAQ />
         </div>
       </div>
     </div>

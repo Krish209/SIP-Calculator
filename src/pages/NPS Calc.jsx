@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { DoughnutChart } from "./chartjs/Donut";
 import { formatNumber, formatChartNumber } from "./Calc";
 import NPSInfo from "./NPS Info";
+import NPSFAQ from "./NPS Faq";
 
 function NPSCalculator() {
   const [monthlyInvestment, setMonthlyInvestment] = useState(1000);
@@ -482,6 +483,7 @@ function NPSCalculator() {
 
         <div className="py-4">
           <NPSInfo />
+          <NPSFAQ />
         </div>
       </div>
     </div>
