@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import HomeLayout from "./components/HomeLayout"; // Import HomeLayout
-import SIPCalculator from "./pages/SIP Calc";
+import HomeLayout from "./components/HomeLayout";
+// import SIPCalculator from "./pages/SIP Calc";
 import ErrorPage from "./pages/ErrorPage";
 import FdCalculator from "./pages/FD Calc";
 import SimpleInterestCalculator from "./pages/SimpleInterest Calc";
@@ -15,6 +15,7 @@ import EMI from "./pages/EMI Calc";
 import SSYCalc from "./pages/SSY Calc";
 import GSTCalculator from "./pages/GST Calc";
 import RD from "./pages/RD Calc";
+import SIPCalculator from "./pages/oldsip";
 
 function App() {
   return (
