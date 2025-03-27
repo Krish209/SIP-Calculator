@@ -4,7 +4,7 @@ import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
 import { LineChart } from "./chartjs/LineChart";
 import SIPInfo from "./SIP Info";
-import SIPFAQ from "./SIP FAQ";
+import SIPFAQ from "./SIP Faq";
 
 
 function SIPCalculator() {
