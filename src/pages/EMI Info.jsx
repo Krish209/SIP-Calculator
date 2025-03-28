@@ -4,7 +4,7 @@ function EMIInfo() {
   return (
     <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
       <h1 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
-        Compound Interest - A Comprehensive Guide
+        EMI - A Comprehensive Guide
       </h1>
 
       {/* Introduction Section */}

@@ -24,7 +24,7 @@ function InflationCalculator() {
   });
 
   const maxInitialAmount = 10000000;
-  const maxAnnualInflationRate = 30;
+  const maxAnnualInflationRate = 20;
   const maxYears = 50;
 
   useEffect(() => {
@@ -256,7 +256,7 @@ function InflationCalculator() {
                 <div className="flex items-center mb-2.5">
                   <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-mint"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Initial Amount:</span>
+                    <span className="lg:text-base">Initial Amount</span>
                     <span className="font-semibold">
                       ₹{formatChartNumber(initialAmount)}{" "}
                       {formatNumber(initialAmount)
@@ -269,7 +269,7 @@ function InflationCalculator() {
                 <div className="flex items-center mb-2.5">
                   <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-crayola"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Inflated Amount:</span>
+                    <span className="lg:text-base">Inflated Amount</span>
                     <span className="font-semibold">
                       ₹{formatChartNumber(inflatedAmount)}{" "}
                       {formatNumber(inflatedAmount)
@@ -307,7 +307,7 @@ function InflationCalculator() {
                 <BarChart data={chartData} />
               </div>
               <div className="text-[15px] md:text-base">
-                The above chart shows how inflation reduces the purchasing
+                - The above chart shows how inflation reduces the purchasing
                 power over time.
               </div>
             </div>

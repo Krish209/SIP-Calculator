@@ -3,8 +3,8 @@ import React from "react";
 const PPFInfo = () => {
   return (
     <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-      <h1 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
-        Public Provident Fund (PPF) - A Comprehensive Guide
+      <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
+        PPF - A Comprehensive Guide
       </h1>
 
       {/* What is PPF? Section */}
@@ -13,7 +13,7 @@ const PPFInfo = () => {
           What is PPF?
         </h2>
         <p className="mb-2">
-          <strong>The Public Provident Fund (PPF)</strong> is a
+          The <strong>Public Provident Fund (PPF)</strong> is a
           government-backed investment scheme aimed at promoting long-term
           savings. It offers a combination of tax benefits, good guaranteed
           returns, and safety, making it one of the most preferred savings

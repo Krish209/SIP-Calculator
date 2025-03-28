@@ -3,17 +3,23 @@ import React from "react";
 const FdInfo = () => {
   return (
     <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-      <h1 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
-        Fixed Deposit (FD) Investment - A Comprehensive Guide
+      <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
+        FD - A Comprehensive Guide
       </h1>
-      <p className="mb-2">
-        A Fixed Deposit (FD) is one of the safest and most reliable investment
-        options available, allowing you to invest a lump sum amount of money for
-        a fixed tenure at a predetermined interest rate. During this tenure, you
-        cannot withdraw your investment, but you are assured of earning a fixed
-        return on your investment at regular intervals (such as annually,
-        quarterly, etc.).
-      </p>
+
+      <section className="my-4 md:my-6">
+        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+          What is a FD?
+        </h2>
+        <p className="mb-2">
+          A <strong>Fixed Deposit (FD)</strong> is one of the safest and most reliable investment
+          options available, allowing you to invest a lump sum amount of money
+          for a fixed tenure at a predetermined interest rate. During this
+          tenure, you cannot withdraw your investment, but you are assured of
+          earning a fixed return on your investment at regular intervals (such
+          as annually, quarterly, etc.).
+        </p>
+      </section>
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
@@ -129,7 +135,7 @@ const FdInfo = () => {
           <li>
             <strong>Tax-Saving FD:</strong> These FDs offer tax deductions under
             Section 80C the Income Tax Act, 1961, investors can claim a tax
-            deduction of up to ₹ 1.5 lakh per year. They have a lock-in period
+            deduction of up to ₹1.5 lakh per year. They have a lock-in period
             of 5 years.
           </li>
           <li>

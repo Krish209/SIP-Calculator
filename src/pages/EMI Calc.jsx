@@ -266,7 +266,7 @@ function EMI() {
                 <div className="flex items-center mb-2.5">
                   <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-mint"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Principal Payment:</span>
+                    <span className="lg:text-base">Principal Payment</span>
                     <span className="font-semibold">
                       ₹{formatChartNumber(loanAmount)}{" "}
                       {formatNumber(loanAmount)
@@ -279,7 +279,7 @@ function EMI() {
                 <div className="flex items-center mb-2.5">
                   <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-crayola"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Total Interest:</span>
+                    <span className="lg:text-base">Total Interest</span>
                     <span className="font-semibold">
                       ₹{formatChartNumber(totalInterest)}{" "}
                       {formatNumber(totalInterest)
@@ -292,7 +292,7 @@ function EMI() {
                 <div className="flex items-center mb-2.5">
                   <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-gray-500"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Total Payment:</span>
+                    <span className="lg:text-base">Total Payment</span>
                     <span className="font-semibold">
                       ₹{formatChartNumber(totalPayment)}{" "}
                       {formatNumber(totalPayment)

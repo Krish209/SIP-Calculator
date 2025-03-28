@@ -6,9 +6,9 @@ import FdInfo from "./FD Info";
 import FDFaq from "./FD Faq";
 
 function FDCalculator() {
-  const [principalAmount, setPrincipalAmount] = useState(10000); // Default ₹10000 for FD
+  const [principalAmount, setPrincipalAmount] = useState(100000); // Default ₹100000 for FD
   const [rateOfInterest, setRateOfInterest] = useState(6); // Default 6% p.a.
-  const [investmentPeriod, setInvestmentPeriod] = useState(5); // Default 5 years
+  const [investmentPeriod, setInvestmentPeriod] = useState(10); // Default 10 years
 
   const [totalValue, setTotalValue] = useState(0);
   const [estimatedReturns, setEstimatedReturns] = useState(0);
@@ -126,7 +126,7 @@ function FDCalculator() {
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
-        Fixed Deposit Calculator
+        FD Calculator
       </h1>
 
       {/* User Inputs Section */}
@@ -263,7 +263,7 @@ function FDCalculator() {
                 <div className="flex items-center mb-2.5">
                   <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-mint"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Invested Amount:</span>
+                    <span className="lg:text-base">Invested Amount</span>
                     <span className="font-semibold">
                       ₹{formatChartNumber(investedAmount)}{" "}
                       {formatNumber(investedAmount)
@@ -276,7 +276,7 @@ function FDCalculator() {
                 <div className="flex items-center mb-2.5">
                   <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-crayola"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Estimated Returns:</span>
+                    <span className="lg:text-base">Estimated Returns</span>
                     <span className="font-semibold">
                       ₹{formatChartNumber(estimatedReturns)}{" "}
                       {formatNumber(estimatedReturns)
@@ -289,7 +289,7 @@ function FDCalculator() {
                 <div className="flex items-center mb-2.5">
                   <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-gray-500"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Total Value:</span>
+                    <span className="lg:text-base">Total Value</span>
                     <span className="font-semibold">
                       ₹{formatChartNumber(totalValue)}{" "}
                       {formatNumber(totalValue)
@@ -312,10 +312,6 @@ function FDCalculator() {
               </h2>
               <div className="w-full h-[350px] sm:h-[400px] lg:h-[500px]">
                 <BarChart data={chartData} />
-              </div>
-              <div className="text-[15px] md:text-base">
-                The above chart shows how the power of compounding increases the
-                returns over time.
               </div>
             </div>
           ) : null}

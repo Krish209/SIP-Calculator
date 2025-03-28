@@ -3,8 +3,8 @@ import React from "react";
 function SSYInfo() {
   return (
     <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-      <h1 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
-        Sukanya Samriddhi Yojana (SSY)- A Comprehensive Guide
+      <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
+        SSY - A Comprehensive Guide
       </h1>
 
       <section className="my-4 md:my-6">
@@ -12,7 +12,7 @@ function SSYInfo() {
           What is Sukanya Samriddhi Yojana?
         </h2>
         <p className="mb-2">
-          The Sukanya Samriddhi Yojana (SSY) is a government-backed savings
+          The <strong>Sukanya Samriddhi Yojana (SSY)</strong> is a government-backed savings
           scheme launched by the Indian government in 2015 as part of the
           <strong>‘Beti Bachao Beti Padhao’</strong> campaign. Its primary goal
           is to promote the welfare and financial security of the girl child by

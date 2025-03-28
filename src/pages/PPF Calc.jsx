@@ -145,7 +145,7 @@ function PPF() {
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
-        Public Provident Fund Calculator
+        PPF Calculator
       </h1>
 
       {/* User Inputs Section */}
@@ -268,7 +268,7 @@ function PPF() {
                 <div className="flex items-center mb-2.5">
                   <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-mint"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Invested Amount:</span>
+                    <span className="lg:text-base">Invested Amount</span>
                     <span className="font-semibold">
                       ₹{formatChartNumber(investedAmount)}{" "}
                       {formatNumber(investedAmount)
@@ -281,7 +281,7 @@ function PPF() {
                 <div className="flex items-center mb-2.5">
                   <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-crayola"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Estimated Returns:</span>
+                    <span className="lg:text-base">Estimated Returns</span>
                     <span className="font-semibold">
                       ₹{formatChartNumber(estimatedReturns)}{" "}
                       {formatNumber(estimatedReturns)
@@ -294,7 +294,7 @@ function PPF() {
                 <div className="flex items-center mb-2.5">
                   <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-gray-500"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Total Value:</span>
+                    <span className="lg:text-base">Total Value</span>
                     <span className="font-semibold">
                       ₹{formatChartNumber(totalValue)}{" "}
                       {formatNumber(totalValue)
@@ -317,10 +317,6 @@ function PPF() {
               </h2>
               <div className="w-full h-[350px] sm:h-[400px] lg:h-[500px]">
                 <BarChart data={chartData} />
-              </div>
-              <div className="text-[15px] md:text-base">
-                The above chart shows how the compounding works in PPF over the
-                duration.
               </div>
             </div>
           ) : null}

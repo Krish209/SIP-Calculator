@@ -3,8 +3,8 @@ import React from "react";
 const NSCInfo = () => {
   return (
     <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-      <h1 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
-        National Savings Certificate (NSC)- A Comprehensive Guide
+      <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
+        NSC - A Comprehensive Guide
       </h1>
 
       <section className="my-4 md:my-6">
@@ -12,7 +12,7 @@ const NSCInfo = () => {
           What is NSC?
         </h2>
         <p className="mb-2">
-          National Savings Certificate (NSC) is a safe and reliable
+          <strong>National Savings Certificate (NSC)</strong> is a safe and reliable
           investment option for individuals seeking to grow their savings while
           also benefiting from tax deductions. It is ideal for risk-averse
           investors and taxpayers who want to reduce their taxable income.
@@ -23,7 +23,7 @@ const NSCInfo = () => {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          Key Features of National Savings Certificate (NSC)
+          Key Features of NSC
         </h2>
         <ul className="list-disc pl-6 space-y-1">
           {" "}
@@ -61,7 +61,7 @@ const NSCInfo = () => {
           interest rate for a 5-year NSC is around 6.8% per annum
           (subject to change based on the government's decision).
         </p>
-        <p className="text-lg leading-relaxed mb-4">
+        <p className="mb-2">
           The interest on NSC is compounded annually, meaning interest is added
           to the principal every year and earns more interest in subsequent
           years. The total interest is paid at maturity.

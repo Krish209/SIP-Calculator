@@ -3,8 +3,8 @@ import React from "react";
 const NPSInfo = () => {
   return (
     <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-      <h1 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
-        National Pension System (NPS) - A Comprehensive Guide
+      <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
+        NPS - A Comprehensive Guide
       </h1>
 
       <section className="my-4 md:my-6">
@@ -12,7 +12,7 @@ const NPSInfo = () => {
           What is NPS?
         </h2>
         <p>
-          The National Pension System (NPS) is a government-sponsored pension
+          The <strong>National Pension System (NPS)</strong> is a government-sponsored pension
           scheme that allows individuals to contribute towards their retirement
           savings during their working years. The NPS offers individuals an
           opportunity to accumulate funds for their retirement, with the option
@@ -46,8 +46,7 @@ const NPSInfo = () => {
           <p className="mt-2">Where:</p>
           <ul className="list-disc pl-6 space-y-1">
             <li>
-              <strong>A</strong> = Amount of money accumulated after{" "}
-              <strong>n</strong> years, including interest
+              <strong>A</strong> = Amount of money accumulated after n years, including interest
             </li>
             <li>
               <strong>P</strong> = Invested amount
@@ -67,7 +66,7 @@ const NPSInfo = () => {
         </div>
 
         <p className="mb-2 mt-4">
-          Let's take an example of <strong>Mr. Shyam</strong>, a 30-year-old
+          Let's take an example of Mr. Shyam, a 30-year-old
           employee working in a government sector. He decides to invest in the{" "}
           <strong>National Pension Scheme (NPS)</strong> to secure his
           retirement. Mr. Shyam will make monthly contributions of ₹5,000

@@ -320,7 +320,7 @@ function SimpleInterest() {
                 <div className="flex items-center mb-2.5">
                   <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-mint"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Invested Amount:</span>
+                    <span className="lg:text-base">Invested Amount</span>
                     <span className="font-semibold">
                       ₹{formatChartNumber(investedAmount)}{" "}
                       {formatNumber(investedAmount)
@@ -333,7 +333,7 @@ function SimpleInterest() {
                 <div className="flex items-center mb-2.5">
                   <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-crayola"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Estimated Returns:</span>
+                    <span className="lg:text-base">Estimated Returns</span>
                     <span className="font-semibold">
                       ₹{formatChartNumber(estimatedReturns)}{" "}
                       {formatNumber(estimatedReturns)
@@ -346,7 +346,7 @@ function SimpleInterest() {
                 <div className="flex items-center mb-2.5">
                   <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-gray-500"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Total Value:</span>
+                    <span className="lg:text-base">Total Value</span>
                     <span className="font-semibold">
                       ₹{formatChartNumber(totalValue)}{" "}
                       {formatNumber(totalValue)

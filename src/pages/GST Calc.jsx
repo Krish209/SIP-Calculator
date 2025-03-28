@@ -201,7 +201,7 @@ function GSTCalculator() {
                 <div className="flex items-center mb-2.5">
                   <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-mint"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">Original Price:</span>
+                    <span className="lg:text-base">Original Price</span>
                     <span className="font-semibold">
                       ₹{formatChartNumber(originalPrice)}{" "}
                       {formatNumber(originalPrice)
@@ -214,7 +214,7 @@ function GSTCalculator() {
                 <div className="flex items-center mb-2.5">
                   <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-crayola"></div>
                   <div className="flex flex-col ml-3">
-                    <span className="lg:text-base">GST Amount:</span>
+                    <span className="lg:text-base">GST Amount</span>
                     <span className="font-semibold">
                       ₹{formatChartNumber(gstAmount)}{" "}
                       {formatNumber(gstAmount)
@@ -228,7 +228,7 @@ function GSTCalculator() {
                   <div className="w-3 h-10 us:h-12 md:h-10 lg:h-12 bg-gray-500"></div>
                   <div className="flex flex-col ml-3">
                     <span className="lg:text-base">
-                      Total Price (including GST):
+                      Total Price (including GST)
                     </span>
                     <span className="font-semibold">
                       ₹{formatChartNumber(totalPrice)}{" "}
