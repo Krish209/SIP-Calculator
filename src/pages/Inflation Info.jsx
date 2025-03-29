@@ -12,7 +12,7 @@ const InflationInfo = () => {
           What is Inflation?
         </h2>
         <p className="mb-2">
-          Inflation is the rate at which the general level of prices for goods
+          <strong>Inflation</strong> is the rate at which the general level of prices for goods
           and services rises over time, leading to a decrease in the purchasing
           power of a currency. In simpler terms, when inflation occurs, each
           unit of currency buys fewer goods and services than before.

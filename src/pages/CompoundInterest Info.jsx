@@ -12,7 +12,7 @@ const CompoundingInterestInfo = () => {
           What is Compound Interest?
         </h2>
         <p className="mb-2">
-          Compound interest is the interest on a loan or deposit that is
+          <strong>Compound interest</strong> is the interest on a loan or deposit that is
           calculated based on both the initial principal and the accumulated
           interest from previous periods. In simpler terms, it's "interest on
           interest" – the longer you let your money sit, the more interest you

@@ -13,7 +13,7 @@ function GratuityInfo() {
           What is Gratuity?
         </h2>
         <p className="mb-2">
-          Gratuity is a form of financial benefit provided by an employer to an
+          <strong>Gratuity</strong> is a form of financial benefit provided by an employer to an
           employee as a reward for long-term service. In India, it is governed
           by the <strong>Payment of Gratuity Act, 1972</strong>, which ensures
           that employees who have worked for an organization for a certain

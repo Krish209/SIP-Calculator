@@ -9,7 +9,7 @@ const SimpleInterestInfo = () => {
 
       <section className="my-4 md:my-6">
         <p className="mb-2">
-          A Simple Interest Calculator is used to calculate the interest earned
+          A <strong>Simple Interest Calculator</strong> is used to calculate the interest earned
           or paid on a principal amount over a specified period at a fixed
           interest rate. Unlike compound interest, simple interest is calculated
           only on the original principal.
