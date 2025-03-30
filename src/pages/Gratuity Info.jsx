@@ -83,8 +83,8 @@ function GratuityInfo() {
           </ul>
 
           <p className="mt-2">
-            The constant multiplier used in this formula is 15, and 30 is the
-            assumed number of days in a month.
+            The constant multiplier (15/26) represents 15 days of wages for each completed year of service, calculated based on the standard number of working days in a month (26). 
+
           </p>
         </div>
 

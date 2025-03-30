@@ -14,11 +14,7 @@ const GSTFAQ = () => {
       answer:
         "GST (Goods and Services Tax) is a single tax levied on the supply of goods and services in India. It replaced multiple indirect taxes like VAT, Service Tax, and Excise Duty. GST is designed to streamline the tax structure and make the taxation system simpler and more transparent.",
     },
-    {
-      question: "What are the types of GST?",
-      answer:
-        "There are three main types of GST in India:\n\n1. **CGST (Central Goods and Services Tax)**: Collected by the central government on intra-state sales.\n2. **SGST (State Goods and Services Tax)**: Collected by the state government on intra-state sales.\n3. **IGST (Integrated Goods and Services Tax)**: Collected by the central government on inter-state sales, and distributed between the center and the state.",
-    },
+    
     {
       question: "Who needs to register for GST?",
       answer:
@@ -27,7 +23,7 @@ const GSTFAQ = () => {
     {
       question: "What is the GST rate in India?",
       answer:
-        "GST rates in India vary depending on the type of goods and services. The tax rates are generally divided into the following slabs:\n\n1. **5%**: For essential goods and services.\n2. **12%**: For intermediate goods.\n3. **18%**: For standard goods and services.\n4. **28%**: For luxury and sin goods, such as tobacco and high-end cars.\n\nIn addition to these, some goods and services are exempt from GST or fall under special rates.",
+        "GST rates in India vary depending on the type of goods and services. The tax rates are generally divided into the following slabs:\n\n1. 5%: For essential goods and services.\n2. 12%: For intermediate goods.\n3. 18%: For standard goods and services.\n4. 28%: For luxury and sin goods, such as tobacco and high-end cars.\n\nIn addition to these, some goods and services are exempt from GST or fall under special rates.",
     },
     {
       question: "What is GSTIN?",
@@ -38,16 +34,6 @@ const GSTFAQ = () => {
       question: "What is Input Tax Credit (ITC)?",
       answer:
         "Input Tax Credit (ITC) allows businesses to reduce the tax paid on their inputs (purchases) from the tax collected on their output (sales). This means that the tax you pay on the purchase of goods and services can be deducted from the tax you collect on sales, thus reducing the overall tax liability.",
-    },
-    {
-      question: "What are the benefits of GST?",
-      answer:
-        "Some of the major benefits of GST are:\n\n1. Simplified tax structure with fewer taxes.\n2. Increased transparency in the taxation process.\n3. Reduced tax cascading (tax on tax).\n4. Boost to the economy by formalizing the business sector.\n5. Increased efficiency in the supply chain and reduction in logistics costs.\n6. Easier compliance with the help of GSTN (Goods and Services Tax Network).",
-    },
-    {
-      question: "How is GST calculated?",
-      answer:
-        "GST is calculated as a percentage of the sale price of goods or services. The formula for GST calculation is:\n\nGST = Sale Price × GST Rate\n\nFor example, if a product is sold for ₹100 and the GST rate is 18%, the GST would be ₹100 × 18% = ₹18. The total sale price with GST would be ₹118.",
     },
     {
       question: "Is GST applicable on exports?",

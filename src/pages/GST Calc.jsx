@@ -245,8 +245,8 @@ function GSTCalculator() {
           
         </div>
         <div className="py-4">
-            {/* <GSTInfo />
-            <GSTFAQ /> */}
+            <GSTInfo />
+            <GSTFAQ />
           </div>
       </div>
     </div>

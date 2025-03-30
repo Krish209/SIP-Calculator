@@ -215,7 +215,7 @@ function Footer() {
             {/* Left Section */}
             <div className="text-center lg:left-0">
               <p className="text-[13px]">
-                Copyright © 2025 Sipgo. All rights reserved.
+                Copyright © 2025 SipGo. All rights reserved.
               </p>
             </div>
           </div>

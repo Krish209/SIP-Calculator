@@ -10,11 +10,6 @@ const InflationFAQ = () => {
 
   const questions = [
     {
-      question: "What is inflation?",
-      answer:
-        "Inflation is the rate at which the general level of prices for goods and services rises, leading to a decrease in purchasing power. As inflation increases, each unit of currency buys fewer goods and services.",
-    },
-    {
       question: "What causes inflation?",
       answer:
         "Inflation can be caused by various factors, including:\n1. Demand-pull inflation: When demand for goods and services exceeds supply.\n2. Cost-push inflation: When the cost of production increases, leading to higher prices.\n3. Built-in inflation: When businesses increase prices due to previous inflation, leading to higher wage demands.",
