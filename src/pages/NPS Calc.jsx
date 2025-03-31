@@ -41,27 +41,27 @@ function NPSCalculator() {
 
   useEffect(() => {
     if (
-      monthlyInvestment <= 0 ||
-      currentAge <= 0 ||
-      retirementAge <= 0 ||
+      monthlyInvestment < 500 ||
+      currentAge < 18 ||
+      retirementAge < 60 ||
       expectedReturn <= 0 ||
-      annuityPercentage <= 0 ||
+      annuityPercentage < 40 ||
       annuityReturn <= 0
     ) {
       setErrorMessages({
         monthlyInvestment:
-          monthlyInvestment <= 0
-            ? "Monthly Invstment should be greater than 0"
+          monthlyInvestment < 500
+            ? "Monthly Invstment must be at least ₹500"
             : "",
         currentAge:
-          currentAge <= 0 ? "Current Age should be greater than 0" : "",
+          currentAge < 18 ? "Current Age must be at least 18" : "",
         retirementAge:
-          retirementAge <= 0 ? "Retirement Age should be greater than 0" : "",
+          retirementAge < 60 ? "Retirement Age must be at least 60" : "",
         expectedReturn:
           expectedReturn <= 0 ? "Expected Return should be greater than 0" : "",
         annuityPercentage:
-          annuityPercentage <= 0
-            ? "Annuity Percentage should be greater than 0"
+          annuityPercentage < 40
+            ? "Annuity Percentage must be at least 40% of the corpus"
             : "",
         annuityReturn:
           annuityReturn <= 0 ? "Annuity Return should be greater than 0" : "",
@@ -196,7 +196,7 @@ function NPSCalculator() {
               </div>
               <input
                 type="range"
-                min="1000"
+                min="500"
                 max={maxmonthlyInvestment}
                 step="100"
                 value={monthlyInvestment}
@@ -339,7 +339,7 @@ function NPSCalculator() {
               </div>
               <input
                 type="range"
-                min="1"
+                min="40"
                 max={maxannuityPercentage}
                 value={annuityPercentage}
                 onChange={handleAnnuityPercentageChange}

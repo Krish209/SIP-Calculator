@@ -6,9 +6,9 @@ import EMIInfo from "./EMI Info";
 import EMIFAQ from "./EMI Faq";
 
 function EMI() {
-  const [loanAmount, setLoanAmount] = useState(500000); // Default ₹500000
+  const [loanAmount, setLoanAmount] = useState(100000); // Default ₹500000
   const [interestRate, setInterestRate] = useState(8); // Default 8% p.a.
-  const [loanTenure, setLoanTenure] = useState(20); // Default 20 years
+  const [loanTenure, setLoanTenure] = useState(5); // Default 20 years
 
   const [emi, setEmi] = useState(0);
   const [totalPayment, setTotalPayment] = useState(0);
@@ -24,7 +24,7 @@ function EMI() {
     loanTenure: "",
   });
 
-  const maxLoanAmount = 5000000;
+  const maxLoanAmount = 100000000;
   const maxInterestRate = 20;
   const maxLoanTenure = 30;
 

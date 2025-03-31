@@ -6,8 +6,8 @@ import RDFAQ from "./RD Faq";
 import RDINFO from "./RD Info";
 
 function RD() {
-  const [monthlyDeposit, setMonthlyDeposit] = useState(1000); // Default ₹1000 for monthly RD contribution
-  const [rateOfInterest, setRateOfInterest] = useState(6.0); // Default 6% p.a. for RD
+  const [monthlyDeposit, setMonthlyDeposit] = useState(50000); // Default ₹1000 for monthly RD contribution
+  const [rateOfInterest, setRateOfInterest] = useState(7.0); // Default 6% p.a. for RD
   const [investmentPeriod, setInvestmentPeriod] = useState(5); // Default 5 years
 
   const [totalValue, setTotalValue] = useState(0);
@@ -24,7 +24,7 @@ function RD() {
     investmentPeriod: "",
   });
 
-  const maxMonthlyDeposit = 50000; // Max RD deposit
+  const maxMonthlyDeposit = 100000; // Max RD deposit
   const maxRateOfInterest = 15; // Max RD rate of interest
   const maxInvestmentPeriod = 10; // Max RD period (10 years)
 
@@ -34,11 +34,11 @@ function RD() {
   };
 
   useEffect(() => {
-    if (monthlyDeposit <= 0 || rateOfInterest <= 0 || investmentPeriod < 1) {
+    if (monthlyDeposit < 500 || rateOfInterest <= 0 || investmentPeriod <= 0) {
       setErrorMessages({
         monthlyDeposit:
-          monthlyDeposit <= 0
-            ? "Monthly deposit must be greater than zero"
+          monthlyDeposit < 500
+            ? "Monthly deposit must be at least ₹500"
             : "",
         rateOfInterest:
           rateOfInterest <= 0
@@ -58,7 +58,7 @@ function RD() {
       investmentPeriod: "",
     });
 
-    const interestRatePerMonth = rateOfInterest / 100 / 12; // Monthly rate
+    const interestRatePerQuarter = rateOfInterest / 100 / 4; // Monthly rate
     const totalMonths = investmentPeriod * 12; // Total months for the investment period
 
     let totalValueCalc = 0;
@@ -74,8 +74,9 @@ function RD() {
 
       // Calculate compound interest for this month's deposit
       let monthsLeft = totalMonths - month; // Months remaining for this deposit to compound
+      let quartersLeft = Math.ceil(monthsLeft / 3); // Convert months to quarters
       accumulatedValue +=
-        monthlyDeposit * Math.pow(1 + interestRatePerMonth, monthsLeft);
+        monthlyDeposit * Math.pow(1 + interestRatePerQuarter, quartersLeft);
 
       // Track invested and returns for each year for the bar chart
       if (month % 12 === 0 || month === totalMonths) {
@@ -134,7 +135,7 @@ function RD() {
     );
   const handleInvestmentPeriodChange = (e) =>
     setInvestmentPeriod(
-      Math.max(1, Math.min(Number(e.target.value), maxInvestmentPeriod))
+      Math.max(0, Math.min(Number(e.target.value), maxInvestmentPeriod))
     );
 
   return (

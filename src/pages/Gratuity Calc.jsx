@@ -25,7 +25,7 @@ function Gratuity() {
         basicSalary:
           basicSalary <= 0 ? "Basic salary must be greater than zero" : "",
         yearsWorked:
-          yearsWorked <= 0 ? "Years worked must be greater than zero" : "",
+          yearsWorked < 5 ? "Years worked must be at least 5" : "",
       });
       return; // Stop calculation if invalid input
     }

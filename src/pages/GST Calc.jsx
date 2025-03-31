@@ -24,10 +24,10 @@ function GSTCalculator() {
   const maxGstRate = 28;
 
   useEffect(() => {
-    if (price <= 0 || gstRate <= 4) {
+    if (price < 1000 || gstRate < 3) {
       setErrorMessages({
-        price: price <= 0 ? "Price must be greater than zero" : "",
-        gstRate: gstRate <= 4 ? "GST Rate must be greater than 5" : "",
+        price: price < 1000 ? "Price must be at least ₹1000" : "",
+        gstRate: gstRate < 3 ? "GST Rate must be at least 3%" : "",
       });
       return; // Stop calculation if invalid input
     }

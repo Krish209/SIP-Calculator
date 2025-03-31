@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
 import { formatNumber, formatChartNumber } from "./Calc";
-import FdInfo from "./FD Info";
-import FDFaq from "./FD Faq";
+import RDFAQ from "./RD Faq";
+import RDINFO from "./RD Info";
 
-function FDCalculator() {
-  const [principalAmount, setPrincipalAmount] = useState(100000); // Default ₹100000 for FD
-  const [rateOfInterest, setRateOfInterest] = useState(6); // Default 6% p.a.
-  const [investmentPeriod, setInvestmentPeriod] = useState(10); // Default 10 years
+function RD() {
+  const [monthlyDeposit, setMonthlyDeposit] = useState(50000); // Default ₹1000 for monthly RD contribution
+  const [rateOfInterest, setRateOfInterest] = useState(7.0); // Default 6% p.a. for RD
+  const [investmentPeriod, setInvestmentPeriod] = useState(5); // Default 5 years
 
   const [totalValue, setTotalValue] = useState(0);
   const [estimatedReturns, setEstimatedReturns] = useState(0);
@@ -19,20 +19,27 @@ function FDCalculator() {
 
   // Error states
   const [errorMessages, setErrorMessages] = useState({
-    principalAmount: "",
+    monthlyDeposit: "",
     rateOfInterest: "",
     investmentPeriod: "",
   });
 
-  const maxPrincipalAmount = 1000000;
-  const maxRateOfInterest = 15;
-  const maxInvestmentPeriod = 30;
+  const maxMonthlyDeposit = 100000; // Max RD deposit
+  const maxRateOfInterest = 15; // Max RD rate of interest
+  const maxInvestmentPeriod = 10; // Max RD period (10 years)
+
+  // Function to get the correct range maximum for monthly deposit
+  const getMaxMonthlyDeposit = () => {
+    return maxMonthlyDeposit;
+  };
 
   useEffect(() => {
-    if (principalAmount < 5000 || rateOfInterest <= 0 || investmentPeriod <= 0) {
+    if (monthlyDeposit <= 0 || rateOfInterest <= 0 || investmentPeriod < 1) {
       setErrorMessages({
-        principalAmount:
-          principalAmount < 5000 ? "Principal must be at least ₹5000" : "",
+        monthlyDeposit:
+          monthlyDeposit <= 0
+            ? "Monthly deposit must be greater than zero"
+            : "",
         rateOfInterest:
           rateOfInterest <= 0
             ? "Rate of interest must be greater than zero"
@@ -46,36 +53,44 @@ function FDCalculator() {
     }
 
     setErrorMessages({
-      principalAmount: "",
+      monthlyDeposit: "",
       rateOfInterest: "",
       investmentPeriod: "",
     });
 
-    // Quarterly compounding (fixed frequency of 4)
-    const compoundFrequency = 4;
-    const interestRatePerPeriod = rateOfInterest / 100 / compoundFrequency;
-    const totalPeriods = investmentPeriod * compoundFrequency;
+    const interestRatePerMonth = rateOfInterest / 100 / 12; // Monthly rate
+    const totalMonths = investmentPeriod * 12; // Total months for the investment period
 
-    let accumulatedValue = principalAmount;
+    let totalValueCalc = 0;
+    let investedAmountCalc = 0;
+    let accumulatedValue = 0;
+
     const barDataInvested = [];
     const barDataReturns = [];
-    let investedAmountCalc = principalAmount;
 
-    // Generate yearly data
-    for (let year = 1; year <= investmentPeriod; year++) {
-      const totalPeriodsThisYear = year * compoundFrequency;
-      accumulatedValue =
-        principalAmount *
-        Math.pow(1 + interestRatePerPeriod, totalPeriodsThisYear); // Apply compound interest
-      barDataInvested.push(investedAmountCalc);
-      barDataReturns.push(accumulatedValue - investedAmountCalc);
+    // Loop through each month to calculate the total investment and returns
+    for (let month = 1; month <= totalMonths; month++) {
+      investedAmountCalc += monthlyDeposit; // Add monthly deposit to invested amount
+
+      // Calculate compound interest for this month's deposit
+      let monthsLeft = totalMonths - month; // Months remaining for this deposit to compound
+      accumulatedValue +=
+        monthlyDeposit * Math.pow(1 + interestRatePerMonth, monthsLeft);
+
+      // Track invested and returns for each year for the bar chart
+      if (month % 12 === 0 || month === totalMonths) {
+        const year = Math.floor(month / 12);
+        barDataInvested.push(monthlyDeposit * 12 * year);
+        barDataReturns.push(accumulatedValue - investedAmountCalc);
+      }
     }
 
-    setTotalValue(accumulatedValue);
-    setEstimatedReturns(accumulatedValue - investedAmountCalc);
+    totalValueCalc = accumulatedValue; // Final total value after all compounding
+    setTotalValue(totalValueCalc);
+    setEstimatedReturns(totalValueCalc - investedAmountCalc);
     setInvestedAmount(investedAmountCalc);
 
-    // Chart data
+    // Prepare chart data
     const labels = Array.from(
       { length: investmentPeriod },
       (_, index) => `${index + 1} Year${index + 1 > 1 ? "s" : ""}`
@@ -97,22 +112,21 @@ function FDCalculator() {
       ],
     });
 
-    // Donut chart data
     setDonutChartData({
       labels: ["Invested Amount", "Estimated Returns"],
       datasets: [
         {
-          data: [principalAmount, accumulatedValue - principalAmount],
+          data: [investedAmountCalc, totalValueCalc - investedAmountCalc],
           backgroundColor: ["rgba(75,192,192,0.6)", "rgba(153,102,255,0.6)"],
         },
       ],
     });
-  }, [principalAmount, rateOfInterest, investmentPeriod]);
+  }, [monthlyDeposit, rateOfInterest, investmentPeriod]);
 
   // Handlers for inputs
-  const handlePrincipalAmountChange = (e) =>
-    setPrincipalAmount(
-      Math.max(0, Math.min(Number(e.target.value), maxPrincipalAmount))
+  const handleMonthlyDepositChange = (e) =>
+    setMonthlyDeposit(
+      Math.max(0, Math.min(Number(e.target.value), getMaxMonthlyDeposit()))
     );
   const handleRateOfInterestChange = (e) =>
     setRateOfInterest(
@@ -120,13 +134,13 @@ function FDCalculator() {
     );
   const handleInvestmentPeriodChange = (e) =>
     setInvestmentPeriod(
-      Math.max(0, Math.min(Number(e.target.value), maxInvestmentPeriod))
+      Math.max(1, Math.min(Number(e.target.value), maxInvestmentPeriod))
     );
 
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
-        FD Calculator
+        Recurring Deposit Calculator
       </h1>
 
       {/* User Inputs Section */}
@@ -134,39 +148,39 @@ function FDCalculator() {
         <div className="flex md:flex-row flex-col gap-6 md:gap-[74px] text-[15px] lg:text-lg lg:space-x-0 rounded-xl py-4 lg:py-8 p-2 vs:p-6 md:p-6 lg:p-8 border">
           {/* User Inputs Section */}
           <div className="w-full lg:w-6/12 space-y-2 sm:space-y-4 md:space-y-8 m-auto">
-            {/* Principal Amount */}
+            {/* Monthly Deposit */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Principal Amount</label>
+                  <label className="font-medium">Monthly Deposit</label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
-                      value={principalAmount}
-                      onChange={handlePrincipalAmountChange}
+                      value={monthlyDeposit}
+                      onChange={handleMonthlyDepositChange}
                       className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-right ${
-                        errorMessages.principalAmount ? "border-red-500" : ""
+                        errorMessages.monthlyDeposit ? "border-red-500" : ""
                       }`}
-                      placeholder="10000"
+                      placeholder="1000"
                     />
                     <span className="absolute left-4 top-2.5 text-gray-500">
                       ₹
                     </span>
                   </div>
                 </div>
-                {errorMessages.principalAmount && (
+                {errorMessages.monthlyDeposit && (
                   <p className="text-red-500 text-[13px] us:text-sm">
-                    {errorMessages.principalAmount}
+                    {errorMessages.monthlyDeposit}
                   </p>
                 )}
               </div>
               <input
                 type="range"
-                min="5000"
-                max={maxPrincipalAmount}
-                step="100"
-                value={principalAmount}
-                onChange={handlePrincipalAmountChange}
+                min="500"
+                max={getMaxMonthlyDeposit()}
+                step="500"
+                value={monthlyDeposit}
+                onChange={handleMonthlyDepositChange}
                 className="w-full cursor-pointer"
               />
             </div>
@@ -308,7 +322,7 @@ function FDCalculator() {
           {chartData && chartData.datasets ? (
             <div className="w-full">
               <h2 className="text-center text-lg sm:text-xl font-semibold mb-4">
-                Investment Growth Over Time
+                RD Growth Over Time
               </h2>
               <div className="w-full h-[350px] sm:h-[400px] lg:h-[500px]">
                 <BarChart data={chartData} />
@@ -318,12 +332,12 @@ function FDCalculator() {
         </div>
 
         <div className="py-4">
-          <FdInfo />
-          <FDFaq />
+          <RDINFO />
+          <RDFAQ />
         </div>
       </div>
     </div>
   );
 }
 
-export default FDCalculator;
+export default RD;

@@ -28,10 +28,10 @@ function InflationCalculator() {
   const maxYears = 50;
 
   useEffect(() => {
-    if (initialAmount <= 0 || annualInflationRate < 0 || years <= 0) {
+    if (initialAmount < 1000 || annualInflationRate < 0 || years <= 0) {
       setErrorMessages({
         initialAmount:
-          initialAmount <= 0 ? "Initial amount must be greater than zero" : "",
+          initialAmount <= 0 ? "Initial amount must be at least ₹1000" : "",
         annualInflationRate:
           annualInflationRate < 0
             ? "Inflation rate must be greater than or equal to zero"

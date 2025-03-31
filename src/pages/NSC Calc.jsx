@@ -29,10 +29,10 @@ function NSC() {
   const maxRateOfInterest = 12;
 
   useEffect(() => {
-    if (principalAmount <= 0 || rateOfInterest <= 0) {
+    if (principalAmount < 1000 || rateOfInterest <= 0) {
       setErrorMessages({
         principalAmount:
-          principalAmount <= 0 ? "Principal must be greater than zero" : "",
+          principalAmount < 1000 ? "Principal must be at least ₹1000" : "",
         rateOfInterest:
           rateOfInterest <= 0
             ? "Rate of interest must be greater than zero"

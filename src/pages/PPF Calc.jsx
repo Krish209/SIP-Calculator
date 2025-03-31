@@ -25,7 +25,7 @@ function PPF() {
   });
 
   const maxPrincipalAmount = 150000; // PPF max yearly contribution limit (₹1.5 lakh p.a.)
-  const maxInvestmentPeriod = 30; // Maximum 30 years
+  const maxInvestmentPeriod = 50; // Maximum 50 years
 
   // Function to get the correct range maximum for investment
   const getMaxPrincipalAmount = () => {
@@ -46,11 +46,30 @@ function PPF() {
     }
   };
 
+  // Define minimum investment limits based on frequency
+  const getMinInvestmentAmount = () => {
+    switch (compoundFrequency) {
+      case 1:
+        return 500; // Annual - ₹500 minimum
+      case 2:
+        return 250; // Semi-Annual - ₹250 minimum
+      case 4:
+        return 125; // Quarterly - ₹125 minimum
+      case 12:
+        return 75; // Monthly - ₹75 minimum
+      default:
+        return 500; // Default to ₹500 for unexpected frequency
+    }
+  };
+
   useEffect(() => {
-    if (principalAmount <= 0 || investmentPeriod < 15) {
+    if (principalAmount < getMinInvestmentAmount() || investmentPeriod < 15) {
       setErrorMessages({
         principalAmount:
-          principalAmount <= 0 ? "Principal must be greater than zero" : "",
+          principalAmount < getMinInvestmentAmount()
+            ? `Investment must be at least ₹${getMinInvestmentAmount()}`
+            : "",
+        // principalAmount < 500 && compoundFrequency == 1 ? "Investment must be at least ₹500" : "",
         investmentPeriod:
           investmentPeriod < 15
             ? "Investment period must be at least 15 years"
@@ -137,7 +156,7 @@ function PPF() {
     );
   const handleInvestmentPeriodChange = (e) =>
     setInvestmentPeriod(
-      Math.max(15, Math.min(Number(e.target.value), maxInvestmentPeriod))
+      Math.max(0, Math.min(Number(e.target.value), maxInvestmentPeriod))
     );
   const handleCompoundFrequencyChange = (e) =>
     setCompoundFrequency(Number(e.target.value));
