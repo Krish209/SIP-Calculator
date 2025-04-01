@@ -44,7 +44,7 @@ function EMIInfo() {
       {/* EMI Calculation */}
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          How EMI is Calculated?
+          How does EMI Work?
         </h2>
         <p className="mb-2">
           When you take a loan, interest is earned or paid on the principal.
@@ -56,7 +56,7 @@ function EMIInfo() {
         <p className="mb-2">
           For example, if you take a loan of ₹1,00,000 (P) at an interest rate
           of 8% (r) per year, after 5 year (n) you would have to pay ₹1,21,658
-          (₹1,00,000 + ₹21,658). So, monthly emi would be ₹2,027.64. This means
+          (₹1,00,000 + ₹21,658). So, monthly EMI would be ₹2,027.64. This means
           you would pay ₹2,027.64 every month for 5 years.
         </p>
 
@@ -90,8 +90,8 @@ function EMIInfo() {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Reducing Balance Method:</strong> The EMI is calculated on
-            the outstanding loan balance, reducing as the loan principal is
+            <strong>Reducing Balance Method:</strong> The EMI is calculated based on
+            the outstanding loan balance, which reducing as the loan principal is
             repaid.
           </li>
           <li>
@@ -161,7 +161,7 @@ function EMIInfo() {
         <p className="mb-2">
           Loan amortization refers to the process of gradually repaying a loan
           over time through regular payments (EMIs). With each EMI, a portion
-          goes towards paying off the principal loan amount, and the rest covers
+          goes toward paying off the principal loan amount, while the rest covers
           the interest.
         </p>
         <p className="mb-2">
@@ -191,10 +191,10 @@ function EMIInfo() {
             increases as the remaining loan balance decreases, reducing the
             amount paid toward interest.
           </p>
-          <p className="mb-2">
+          {/* <p className="mb-2">
             You can view this amortization breakdown for each month, which is
             often given by lenders when you take out a loan.
-          </p>
+          </p> */}
         </div>
         {/* example of an amortization table */}
         {/* <div>

@@ -12,12 +12,12 @@ const NSCInfo = () => {
           What is NSC?
         </h2>
         <p className="mb-2">
-          <strong>National Savings Certificate (NSC)</strong> is a safe and reliable
-          investment option for individuals seeking to grow their savings while
-          also benefiting from tax deductions. It is ideal for risk-averse
-          investors and taxpayers who want to reduce their taxable income.
-          Despite its lock-in period and taxable interest, NSC remains a solid
-          choice for fixed returns and government-backed security.
+          <strong>National Savings Certificate (NSC)</strong> is a safe and
+          reliable investment option for individuals seeking to grow their
+          savings while also benefiting from tax deductions. It is ideal for
+          risk-averse investors and taxpayers who want to reduce their taxable
+          income. Despite its lock-in period and taxable interest, NSC remains a
+          solid choice for fixed returns and government-backed security.
         </p>
       </section>
 
@@ -53,13 +53,31 @@ const NSCInfo = () => {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+          How Does NSC Work?
+        </h2>
+        <p className="mb-2">
+          After purchasing the National Savings Certificate (NSC) at a Post
+          Office, the amount you invest earns a fixed interest rate compounded
+          annually. The interest is added to the principal every year and is
+          paid out only at maturity (after 5 years).
+        </p>
+        <p className="mb-2">
+          For example, if you invest ₹1,000 in NSC at an interest rate of 6.8%,
+          the interest is calculated every year on the total principal. At the
+          end of the 5-year tenure, you will receive the total principal along
+          with compounded interest.
+        </p>
+      </section>
+
+      <section className="my-4 md:my-6">
+        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Interest Rates on NSC
         </h2>
         <p className="mb-2">
           The interest rate on National Savings Certificates (NSC) is fixed by
           the government and is subject to periodic revisions. Currently, the
-          interest rate for a 5-year NSC is around 6.8% per annum
-          (subject to change based on the government's decision).
+          interest rate for a 5-year NSC is around 6.8% per annum (subject to
+          change based on the government's decision).
         </p>
         <p className="mb-2">
           The interest on NSC is compounded annually, meaning interest is added
@@ -98,25 +116,7 @@ const NSCInfo = () => {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          How Does NSC Work?
-        </h2>
-        <p className="mb-2">
-          After purchasing the National Savings Certificate (NSC) at a Post
-          Office, the amount you invest earns a fixed interest rate compounded
-          annually. The interest is added to the principal every year and is
-          paid out only at maturity (after 5 years).
-        </p>
-        <p className="mb-2">
-          For example, if you invest ₹1,000 in NSC at an interest rate of 6.8%,
-          the interest is calculated every year on the total principal. At the
-          end of the 5-year tenure, you will receive the total principal along
-          with compounded interest.
-        </p>
-      </section>
-
-      <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          Types of National Savings Certificates (NSC)
+          Types of NSC
         </h2>
         <ul className="list-disc pl-6 space-y-1">
           <li>
@@ -212,8 +212,8 @@ const NSCInfo = () => {
             through authorized portals.
           </li>
           <li>
-            To purchase, you need to provide KYC documents like Aadhar card,
-            PAN card, and passport-sized photographs.
+            To purchase, you need to provide KYC documents like Aadhar card, PAN
+            card, and passport-sized photographs.
           </li>
         </ul>
       </section>

@@ -22,7 +22,7 @@ const NPSInfo = () => {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          How does NPS Work?
+          How does NPS work?
         </h2>
         <p className="mb-2">
           NPS works by allowing individuals to contribute to their retirement

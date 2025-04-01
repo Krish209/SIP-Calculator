@@ -73,42 +73,42 @@ const GSTInfo = () => {
         </h2>
 
         {/* GST Exclusive Calculation */}
-        <p className="mb-4">
+        <p className="mb-2">
           When the selling price is <strong>GST Exclusive</strong> (i.e., GST is
           not included in the price):
         </p>
-        <div className="bg-gray-100 p-4 rounded-md">
+        <div className="bg-gray-100 p-2 md:p-4 rounded-lg shadow-md">
           <code>GST amount = (Selling Price × GST Rate) / 100</code>
           <br />
           <code>Net Price = Selling Price + GST amount</code>
         </div>
-        <p className="mb-2">
+        <p className="my-2">
           For example, if a product costs ₹1000 and the GST rate is 18%, the GST
           would be:
         </p>
         <code>GST amount = (1000 × 18) / 100 = ₹180</code>
-        <p className="mb-2">
+        <p className="my-2">
           So, the final price to the consumer would be ₹1180 (₹1000 + ₹180).
         </p>
 
         {/* GST Inclusive Calculation */}
-        <p className="mb-4">
+        <p className="mb-2 mt-4">
           When the selling price is <strong>GST Inclusive</strong> (i.e., GST is
           included in the price):
         </p>
-        <pre className="bg-gray-100 p-4 rounded-md">
+        <div className="bg-gray-100 p-2 md:p-4 rounded-lg shadow-md">
           <code className="mb-2">
             GST amount = (Selling Price × GST Rate) / (100 + GST Rate)
           </code>
           <br />
           <code>Original Price = Selling Price - GST amount</code>
-        </pre>
-        <p className="mb-4">
+        </div>
+        <p className="my-2">
           For example, if the selling price of a product is ₹1180 (inclusive of
           GST) and the GST rate is 18%, the GST amount would be:
         </p>
         <code>GST amount = (1180 × 18) / (100 + 18) = ₹180</code>
-        <p className="mb-4">
+        <p className="my-2">
           The original price (before GST) would be: ₹1180 - ₹180 = ₹1000
         </p>
       </section>

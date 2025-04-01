@@ -12,8 +12,9 @@ function SSYInfo() {
           What is Sukanya Samriddhi Yojana?
         </h2>
         <p className="mb-2">
-          The <strong>Sukanya Samriddhi Yojana (SSY)</strong> is a government-backed savings
-          scheme launched by the Indian government in 2015 as part of the
+          The <strong>Sukanya Samriddhi Yojana (SSY)</strong> is a
+          government-backed savings scheme launched by the Indian government in
+          2015 as part of the
           <strong>‘Beti Bachao Beti Padhao’</strong> campaign. Its primary goal
           is to promote the welfare and financial security of the girl child by
           encouraging parents to save for their daughter’s future education and
@@ -24,8 +25,7 @@ function SSYInfo() {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          
-          Key Features of Sukanya Samriddhi Yojana
+          Key Features of SSY
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
@@ -63,7 +63,6 @@ function SSYInfo() {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          
           How to Open an SSY Account
         </h2>
         <ol className="list-decimal list-inside space-y-2">
@@ -86,8 +85,9 @@ function SSYInfo() {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          Advantages of SSY</h2>
-          <ul className="list-disc pl-6 space-y-2">
+          Pros of SSY
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>High-Interest Rates:</strong> SSY offers one of the highest
             interest rates among government-backed savings schemes.
@@ -114,8 +114,9 @@ function SSYInfo() {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          Disadvantages of SSY</h2>
-          <ul className="list-disc pl-6 space-y-2">
+          Cons of SSY
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Limited to Girls:</strong> This scheme is available only for
             the girl child.
@@ -137,7 +138,6 @@ function SSYInfo() {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          
           Who Should Invest in SSY?
         </h2>
         <ul className="list-disc pl-6 space-y-2">
@@ -159,7 +159,8 @@ function SSYInfo() {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          Conclusion</h2>
+          Conclusion
+        </h2>
         <p className="mb-2">
           The Sukanya Samriddhi Yojana (SSY) is one of the best schemes for
           ensuring the future financial security of your daughter. It combines

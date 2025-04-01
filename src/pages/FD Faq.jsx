@@ -55,7 +55,7 @@ const FDFaq = () => {
   return (
     <div className="mx-auto mb-4 text-primary">
       <h2 className="text-xl md:text-2xl font-semibold text-center mb-4 md:mb-6">
-        Frequently Asked Questions - Fixed Deposit (FD)
+        Frequently Asked Questions - FD
       </h2>
 
       {/* FAQ Section */}

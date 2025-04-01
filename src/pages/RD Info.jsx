@@ -65,7 +65,7 @@ const RDInfo = () => {
         <ul className="list-disc pl-6 space-y-1">
           <li>
             <strong>Eligibility:</strong> Any individual (single or joint) can
-            open an RD, with or without a guardian for minors.
+            open an RD, either with or without a guardian for minors.
           </li>
           <li>
             <strong>Documents Required:</strong> Basic KYC documents such as
@@ -81,11 +81,11 @@ const RDInfo = () => {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          How RD is Calculated?
+          How does RD Work?
         </h2>
         <p className="mb-2">
           The maturity amount of a Recurring Deposit (RD) is calculated using
-          the formula for compound interest, where the interest is compounded
+          the formula for compound interest, with interest is compounded
           periodically (usually quarterly or monthly). Since an RD involves
           monthly deposits, we use a formula that accounts for those periodic
           contributions.
@@ -176,7 +176,7 @@ const RDInfo = () => {
         <p className="mb-2">
           Interest rates for RDs vary from bank to bank and can range between 5%
           to 7% per annum. The interest is compounded quarterly, meaning that
-          the interest earned gets added to the principal amount at the end of
+          the interest earned is added to the principal amount at the end of
           each quarter, which increases the total interest over time.
         </p>
         <p className="mb-2">
@@ -231,8 +231,8 @@ const RDInfo = () => {
           penalty. This typically involves a reduction in the interest rate
           (usually 1% lower than the original rate). Some banks may not allow
           partial withdrawals, and if allowed, you might not receive any
-          interest or only your principal amount so it's important to plan
-          accordingly.
+          interest, or you may only receive your principal amount, so it's
+          important to plan accordingly.
         </p>
       </section>
 
