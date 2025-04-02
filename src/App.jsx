@@ -15,11 +15,11 @@ import EMI from "./pages/EMI Calc";
 import SSYCalc from "./pages/SSY Calc";
 import GSTCalculator from "./pages/GST Calc";
 import RD from "./pages/RD Calc";
-import ROICalculator from "./pages/Roi Calc";
 import KVP from "./pages/KVP Calc";
 import APYCalc from "./pages/APY Calc";
 import DividendYieldCalc from "./pages/Divident Yield Calc";
 import LumpsumCalc from "./pages/Lumpsum Calc";
+import ROICalculator from "./pages/ROI Calc";
 
 function App() {
   return (
