@@ -15,6 +15,11 @@ import EMI from "./pages/EMI Calc";
 import SSYCalc from "./pages/SSY Calc";
 import GSTCalculator from "./pages/GST Calc";
 import RD from "./pages/RD Calc";
+import ROICalculator from "./pages/Roi Calc";
+import KVP from "./pages/KVP Calc";
+import APYCalc from "./pages/APY Calc";
+import DividendYieldCalc from "./pages/Divident Yield Calc";
+import LumpsumCalc from "./pages/Lumpsum Calc";
 
 function App() {
   return (
@@ -47,6 +52,12 @@ function App() {
           <Route path="ssy-calculator" element={<SSYCalc />} />
           <Route path="gst-calculator" element={<GSTCalculator />} />
           <Route path="rd-calculator" element={<RD />} />
+          <Route path="roi-calculator" element={<ROICalculator />} />
+          <Route path="kvp-calculator" element={<KVP />} />
+          <Route path="apy-calculator" element={<APYCalc />} />
+          <Route path="dividend-calculator" element={<DividendYieldCalc />} />
+          <Route path="lumpsum-calculator" element={<LumpsumCalc />} />
+
         </Route>
         {/* ErrorPage is displayed without HomeLayout */}
         <Route path="*" element={<ErrorPage />} />{" "}

@@ -11,6 +11,8 @@ export const links = [
       { name: "SSY Calculator", link: "/ssy-calculator" },
       { name: "EMI Calculator", link: "/emi-calculator" },
       { name: "RD Calculator", link: "/rd-calculator" },
+      // { name: "APY Calculator", link: "/apy-calculator" },
+      { name: "KVP Calculator", link: "/kvp-calculator" },
     ],
   },
   {
@@ -23,6 +25,8 @@ export const links = [
       { name: "GST Calculator", link: "/gst-calculator" },
       { name: "Inflation Calculator", link: "/inflation-calculator" },
       { name: "Gratuity Calculator", link: "/gratuity-calculator" },
+      { name: "ROI Calculator", link: "/roi-calculator" },
+      { name: "Dividend Yield Calculator", link: "/dividend-calculator" },
       // { name: "EPF Calculator", link: "/epf-calculator" },
       // { name: "Loan EMI Calculator", link: "/loan-emi-calculator" },
       // { name: "Retirement Planning Calculator", link: "/retirement-planning-calculator" },
@@ -35,15 +39,20 @@ export const links = [
       // { name: "Dividend Yield Calculator", link: "/dividend-yield-calculator" },
     ],
   },
-  
+
   {
     name: "Interest Calculator",
     submenu: true,
     comingsoon: "COMING SOON",
     sublinks: [
-      
-      { name: "Simple Interest Calculator", link: "/simple-interest-calculator" },
-      { name: "Compounding Interest Calculator", link: "/compound-interest-calculator" },
+      {
+        name: "Simple Interest Calculator",
+        link: "/simple-interest-calculator",
+      },
+      {
+        name: "Compounding Interest Calculator",
+        link: "/compound-interest-calculator",
+      },
       // { name: "Loan Eligibility Calculator", link: "/loan-eligibility-calculator" },
       // { name: "Currency Converter", link: "/currency-converter" },
       // { name: "Financial Dashboard", link: "/financial-dashboard" },
