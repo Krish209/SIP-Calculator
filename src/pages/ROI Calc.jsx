@@ -88,7 +88,7 @@ function ROICalculator() {
 
     // Donut chart data
     setDonutChartData({
-      labels: ["Amount Invested", "Amount Returned"],
+      labels: ["Invested Amount", "Returned Amount"],
       datasets: [
         {
           data: [investedAmount, returnedAmount],

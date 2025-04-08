@@ -8,7 +8,14 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Updated and New pages -->
+  <!-- Added /calc page -->
+  <url>
+    <loc>https://www.sipgo.in/calc</loc>
+    <lastmod>2025-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Saving Calculator Pages -->
   <url>
     <loc>https://www.sipgo.in/ppf-calculator</loc>
@@ -61,6 +68,24 @@
 
   <!-- Investment Calculator Pages -->
   <url>
+    <loc>https://www.sipgo.in/sip-calculator</loc>
+    <lastmod>2025-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sipgo.in/lumpsum-calculator</loc>
+    <lastmod>2025-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sipgo.in/mutual-fund-returns</loc>
+    <lastmod>2025-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.sipgo.in/gst-calculator</loc>
     <lastmod>2025-03-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -85,7 +110,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.sipgo.in/div-calculator</loc>
+    <loc>https://www.sipgo.in/dividend-calculator</loc>
     <lastmod>2025-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

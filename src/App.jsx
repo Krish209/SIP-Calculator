@@ -20,6 +20,8 @@ import APYCalc from "./pages/APY Calc";
 import DividendYieldCalc from "./pages/Divident Yield Calc";
 import LumpsumCalc from "./pages/Lumpsum Calc";
 import ROICalculator from "./pages/ROI Calc";
+import LandingPage from "./pages/LandingPage";
+import AllCalculator from "./pages/All Calculator";
 
 function App() {
   return (
@@ -28,8 +30,9 @@ function App() {
         {/* HomeLayout is used for the main routes */}
         <Route path="/" element={<HomeLayout />}>
           {/* Default route */}
-          <Route index element={<SIPCalculator />} />
+          <Route index element={<LandingPage />} />
           {/* FD Calculator Route */}
+          <Route path="sip-calculator" element={<SIPCalculator />} />
           <Route path="fd-calculator" element={<FdCalculator />} />
           <Route
             path="simple-interest-calculator"
@@ -56,8 +59,9 @@ function App() {
           <Route path="kvp-calculator" element={<KVP />} />
           <Route path="apy-calculator" element={<APYCalc />} />
           <Route path="dividend-calculator" element={<DividendYieldCalc />} />
-          <Route path="lumpsum-calculator" element={<LumpsumCalc />} />
-
+          <Route path="lumpsum-calculator" element={<SIPCalculator />} />
+          <Route path="mutual-fund-returns" element={<SIPCalculator />} />
+          <Route path="calc" element={<AllCalculator />} />
         </Route>
         {/* ErrorPage is displayed without HomeLayout */}
         <Route path="*" element={<ErrorPage />} />{" "}

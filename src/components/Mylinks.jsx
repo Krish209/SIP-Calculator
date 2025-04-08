@@ -20,8 +20,9 @@ export const links = [
     submenu: true,
     comingsoon: "COMING SOON",
     sublinks: [
-      // { name: "SIP Calculator", link: "/sip-calculator" },
-      // { name: "Lump Sum Calculator", link: "/lump-sum-calculator" },
+      { name: "SIP Calculator", link: "/sip-calculator" },
+      { name: "Lump Sum Calculator", link: "/lumpsum-calculator" },
+      { name: "Mutualfund Calculator", link: "/mutual-fund-returns" },
       { name: "GST Calculator", link: "/gst-calculator" },
       { name: "Inflation Calculator", link: "/inflation-calculator" },
       { name: "Gratuity Calculator", link: "/gratuity-calculator" },
