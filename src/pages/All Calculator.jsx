@@ -119,6 +119,13 @@ const AllCalculator = () => {
       link: "/lumpsum-calculator",
     },
     {
+      title: "GST Calculator",
+      description: "Easily calculate GST for any price with reverse option.",
+      category: "Investment",
+      link: "/gst-calculator",
+      icon: <span className="text-2xl">💼</span>,
+    },
+    {
       title: "NSC Calculator",
       description:
         "Calculate returns on National Savings Certificates with tax implications.",
@@ -204,102 +211,100 @@ const AllCalculator = () => {
       category: "Planning",
       link: "/inflation-calculator",
     },
+
+    // INTEREST CALCULATORS
+  {
+    title: "Simple Interest Calculator",
+    description: "Calculate basic interest on principal and rate.",
+    category: "Interest",
+    link: "/simple-interest-calculator",
+    icon: <span className="text-2xl">➕</span>,
+  },
+  {
+    title: "Compound Interest Calculator",
+    description: "See how compounding grows your wealth faster.",
+    category: "Interest",
+    link: "/compound-interest-calculator",
+    icon: <span className="text-2xl">♾️</span>,
+  },
   ];
 
-  // Categories for filtering
-  const categories = [...new Set(calculators.map((calc) => calc.category))];
-
+  const categories = ["All", ...new Set(calculators.map((calc) => calc.category))];
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const filteredCalculators =
-    activeCategory === "All"
-      ? calculators
-      : calculators.filter((calc) => calc.category === activeCategory);
+  const filtered = activeCategory === "All" ? calculators : calculators.filter(c => c.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-50">
       {/* Calculator Categories */}
-      <section className="py-16 bg-gradient-to-br from-indigo-50 to-blue-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              Explore Our Financial Calculators
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Tools for every stage of your financial journey
-            </p>
-          </div>
+      <section className="py-12 px-2 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="text-center mb-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+            Explore Our Financial Calculators
+          </h2>
+          <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto">
+            Tools for every stage of your financial journey
+          </p>
+        </div>
 
-          {/* Category Filters */}
-          <div className="flex flex-wrap justify-center gap-3 mb-8 md:mb-10">
+        {/* Categories Filters */}
+        <div className="flex flex-wrap justify-center gap-2 mb-8">
+          {categories.map((cat, idx) => (
             <button
-              onClick={() => setActiveCategory("All")}
-              className={`px-4 py-2 rounded-full text-sm md:text-base ${
-                activeCategory === "All"
+              key={idx}
+              onClick={() => setActiveCategory(cat)}
+              className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm transition-all duration-200 ${
+                activeCategory === cat
                   ? "bg-indigo-600 text-white shadow-md"
-                  : "bg-white text-gray-700 hover:bg-gray-100 shadow-sm"
-              } transition-all duration-200`}
+                  : "bg-white text-gray-700 border border-gray-200 hover:bg-gray-50"
+              }`}
             >
-              All Calculators
+              {cat}
             </button>
-            {categories.map((category, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm md:text-base ${
-                  activeCategory === category
-                    ? "bg-indigo-600 text-white shadow-md"
-                    : "bg-white text-gray-700 hover:bg-gray-100 shadow-sm"
-                } transition-all duration-200`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
+          ))}
+        </div>
 
-          {/* Calculators Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
-            {filteredCalculators.map((calculator, index) => (
-              <Link to={calculator.link} key={index} className="group">
-                <div className="bg-white rounded-xl shadow-sm overflow-hidden h-full hover:shadow-md transition-all duration-300 transform group-hover:-translate-y-1 border border-gray-100">
-                  <div className="p-6">
-                    <div className="flex items-center mb-4">
-                      <div className="p-2 bg-indigo-50 rounded-lg">
-                        {calculator.icon}
-                      </div>
-                      <h3 className="ml-4 text-lg font-semibold text-gray-800 group-hover:text-indigo-600 transition">
-                        {calculator.title}
-                      </h3>
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {filtered.map((calc, i) => (
+            <Link 
+              to={calc.link} 
+              key={i} 
+              className="group focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded-xl"
+            >
+              <div className="h-full bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 overflow-hidden">
+                <div className="p-4 sm:p-5 h-full flex flex-col">
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="p-2 bg-indigo-50 rounded-lg flex-shrink-0">
+                      {calc.icon}
                     </div>
-                    <p className="text-gray-600 mb-6 text-sm md:text-base">
-                      {calculator.description}
-                    </p>
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded">
-                        {calculator.category}
-                      </span>
-                      <span className="text-indigo-600 font-medium group-hover:text-indigo-800 transition flex items-center">
-                        Try Now{" "}
-                        <svg
-                          className="w-4 h-4 ml-1"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                          />
-                        </svg>
-                      </span>
-                    </div>
+                    <h3 className="text-base sm:text-lg font-semibold text-gray-800 group-hover:text-indigo-600 transition">
+                      {calc.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-600 text-xs sm:text-sm mb-4 flex-grow">
+                    {calc.description}
+                  </p>
+                  <div className="flex justify-between items-center text-xs sm:text-sm">
+                    <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded">
+                      {calc.category}
+                    </span>
+                    <span className="text-indigo-600 font-medium flex items-center">
+                      Try Now
+                      <svg 
+                        className="w-3 h-3 sm:w-4 sm:h-4 ml-1" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </span>
                   </div>
                 </div>
-              </Link>
-            ))}
-          </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
     </div>

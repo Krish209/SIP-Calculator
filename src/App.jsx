@@ -20,8 +20,8 @@ import APYCalc from "./pages/APY Calc";
 import DividendYieldCalc from "./pages/Divident Yield Calc";
 import LumpsumCalc from "./pages/Lumpsum Calc";
 import ROICalculator from "./pages/ROI Calc";
-import LandingPage from "./pages/LandingPage";
 import AllCalculator from "./pages/All Calculator";
+import HomeLanding from "./components/Home";
 
 function App() {
   return (
@@ -30,23 +30,16 @@ function App() {
         {/* HomeLayout is used for the main routes */}
         <Route path="/" element={<HomeLayout />}>
           {/* Default route */}
-          <Route index element={<LandingPage />} />
+          <Route index element={<HomeLanding />} />
           {/* FD Calculator Route */}
           <Route path="sip-calculator" element={<SIPCalculator />} />
+          <Route path="lumpsum-calculator" element={<SIPCalculator />} />
+          <Route path="mutual-fund-returns" element={<SIPCalculator />} />
           <Route path="fd-calculator" element={<FdCalculator />} />
-          <Route
-            path="simple-interest-calculator"
-            element={<SimpleInterestCalculator />}
-          />
-          <Route
-            path="compound-interest-calculator"
-            element={<CompoundInterest />}
-          />
+          <Route path="simple-interest-calculator" element={<SimpleInterestCalculator />} />
+          <Route path="compound-interest-calculator" element={<CompoundInterest />} />
           <Route path="ppf-calculator" element={<PpfCalculator />} />
-          <Route
-            path="inflation-calculator"
-            element={<InflationCalculator />}
-          />
+          <Route path="inflation-calculator" element={<InflationCalculator />} />
           <Route path="gratuity-calculator" element={<GratuityCalculator />} />
           <Route path="nps-calculator" element={<NPScalculator />} />
           <Route path="nsc-calculator" element={<NSC />} />
@@ -59,8 +52,6 @@ function App() {
           <Route path="kvp-calculator" element={<KVP />} />
           <Route path="apy-calculator" element={<APYCalc />} />
           <Route path="dividend-calculator" element={<DividendYieldCalc />} />
-          <Route path="lumpsum-calculator" element={<SIPCalculator />} />
-          <Route path="mutual-fund-returns" element={<SIPCalculator />} />
           <Route path="calc" element={<AllCalculator />} />
         </Route>
         {/* ErrorPage is displayed without HomeLayout */}

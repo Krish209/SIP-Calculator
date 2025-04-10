@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const InvestmentLandingPage = () => {
+const HomeLanding = () => {
   const [activeFaq, setActiveFaq] = useState(null);
 
   // Investment products data
@@ -554,4 +554,4 @@ const InvestmentLandingPage = () => {
   );
 };
 
-export default InvestmentLandingPage;
+export default HomeLanding;

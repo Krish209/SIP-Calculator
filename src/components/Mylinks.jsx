@@ -2,7 +2,6 @@ export const links = [
   {
     name: "Saving Calculator",
     submenu: true,
-    comingsoon: "COMING SOON",
     sublinks: [
       { name: "PPF Calculator", link: "/ppf-calculator" },
       { name: "FD Calculator", link: "/fd-calculator" },
@@ -18,11 +17,10 @@ export const links = [
   {
     name: "Investment Calculator",
     submenu: true,
-    comingsoon: "COMING SOON",
     sublinks: [
       { name: "SIP Calculator", link: "/sip-calculator" },
       { name: "Lump Sum Calculator", link: "/lumpsum-calculator" },
-      { name: "Mutualfund Calculator", link: "/mutual-fund-returns" },
+      { name: "Mutual Fund Calculator", link: "/mutual-fund-returns" },
       { name: "GST Calculator", link: "/gst-calculator" },
       { name: "Inflation Calculator", link: "/inflation-calculator" },
       { name: "Gratuity Calculator", link: "/gratuity-calculator" },
@@ -37,14 +35,12 @@ export const links = [
       // { name: "Break-even Analysis Calculator", link: "/break-even-analysis-calculator" },
       // { name: "Investment Goal Calculator", link: "/investment-goal-calculator" },
       // { name: "Gold Investment Calculator", link: "/gold-investment-calculator" },
-      // { name: "Dividend Yield Calculator", link: "/dividend-yield-calculator" },
     ],
   },
 
   {
     name: "Interest Calculator",
     submenu: true,
-    comingsoon: "COMING SOON",
     sublinks: [
       {
         name: "Simple Interest Calculator",
@@ -64,7 +60,6 @@ export const links = [
   // {
   //   name: "Learning Resources",
   //   submenu: true,
-  //   comingsoon: "COMING SOON",
   //   sublinks: [
   //     { name: "Financial Glossary", link: "/financial-glossary" },
   //     { name: "Financial Tips & Articles", link: "/financial-tips-articles" },
