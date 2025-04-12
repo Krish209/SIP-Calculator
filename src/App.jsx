@@ -34,7 +34,7 @@ function App() {
           {/* FD Calculator Route */}
           <Route path="sip-calculator" element={<SIPCalculator />} />
           <Route path="lumpsum-calculator" element={<SIPCalculator />} />
-          <Route path="mutual-fund-returns" element={<SIPCalculator />} />
+          <Route path="mutual-fund-calculator" element={<SIPCalculator />} />
           <Route path="fd-calculator" element={<FdCalculator />} />
           <Route path="simple-interest-calculator" element={<SimpleInterestCalculator />} />
           <Route path="compound-interest-calculator" element={<CompoundInterest />} />

@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { RiMoneyRupeeCircleLine } from "react-icons/ri";
 import { AiOutlineStock } from "react-icons/ai";
+import { ImInfinite } from "react-icons/im";
+import { VscPercentage } from "react-icons/vsc";
+import { AiOutlinePercentage } from "react-icons/ai";
+import { FaPercentage } from "react-icons/fa";
+import { GiReceiveMoney } from "react-icons/gi";
 
 const AllCalculator = () => {
   // Data for calculators
@@ -123,7 +128,7 @@ const AllCalculator = () => {
       description: "Easily calculate GST for any price with reverse option.",
       category: "Investment",
       link: "/gst-calculator",
-      icon: <span className="text-2xl">💼</span>,
+      icon: <GiReceiveMoney className="w-8 h-8 text-indigo-500" />,
     },
     {
       title: "NSC Calculator",
@@ -218,14 +223,14 @@ const AllCalculator = () => {
     description: "Calculate basic interest on principal and rate.",
     category: "Interest",
     link: "/simple-interest-calculator",
-    icon: <span className="text-2xl">➕</span>,
+    icon: <VscPercentage className="w-8 h-8 text-indigo-500" />,
   },
   {
     title: "Compound Interest Calculator",
     description: "See how compounding grows your wealth faster.",
     category: "Interest",
     link: "/compound-interest-calculator",
-    icon: <span className="text-2xl">♾️</span>,
+    icon: <ImInfinite className="w-8 h-8 text-indigo-500" />,
   },
   ];
 
@@ -237,9 +242,9 @@ const AllCalculator = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-50">
       {/* Calculator Categories */}
-      <section className="py-12 px-2 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center mb-10">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-2">
             Explore Our Financial Calculators
           </h2>
           <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto">

@@ -20,7 +20,7 @@ export const links = [
     sublinks: [
       { name: "SIP Calculator", link: "/sip-calculator" },
       { name: "Lump Sum Calculator", link: "/lumpsum-calculator" },
-      { name: "Mutual Fund Calculator", link: "/mutual-fund-returns" },
+      { name: "Mutual Fund Calculator", link: "/mutual-fund-calculator" },
       { name: "GST Calculator", link: "/gst-calculator" },
       { name: "Inflation Calculator", link: "/inflation-calculator" },
       { name: "Gratuity Calculator", link: "/gratuity-calculator" },
