@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 
 const HomeLanding = () => {
   return (
-    <div className="min-h-screen bg-gray-50 font-sans">
+    <div className="min-h-screen bg-gray-50 font-sans overflow-hidden">
       {/* Hero Section */}
 
       <section className="bg-gradient-to-br from-indigo-600 to-purple-600 text-white py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
           {/* Text Section */}
-          <div className="text-center lg:text-left max-w-2xl">
+          <div className="text-center lg:text-left max-w-2xl min-h-[300px] sm:min-h-[350px]">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Smart <span className="text-yellow-300">Financial</span> Planning
               Starts Here
