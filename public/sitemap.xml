@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Existing pages -->
+
+  <!-- Homepage -->
   <url>
     <loc>https://www.sipgo.in/</loc>
     <lastmod>2023-10-01</lastmod>
@@ -8,7 +9,7 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Added /calc page -->
+  <!-- Utility -->
   <url>
     <loc>https://www.sipgo.in/calc</loc>
     <lastmod>2025-04-09</lastmod>
@@ -16,7 +17,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Saving Calculator Pages -->
+  <!-- Saving Calculators -->
   <url>
     <loc>https://www.sipgo.in/ppf-calculator</loc>
     <lastmod>2025-03-19</lastmod>
@@ -48,12 +49,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.sipgo.in/emi-calculator</loc>
-    <lastmod>2025-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.sipgo.in/rd-calculator</loc>
     <lastmod>2025-03-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -66,7 +61,39 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Investment Calculator Pages -->
+  <!-- Loan Calculators -->
+  <url>
+    <loc>https://www.sipgo.in/emi-calculator</loc>
+    <lastmod>2025-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sipgo.in/car-loan-calculator</loc>
+    <lastmod>2025-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sipgo.in/home-loan-calculator</loc>
+    <lastmod>2025-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sipgo.in/personal-loan-calculator</loc>
+    <lastmod>2025-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sipgo.in/education-loan-calculator</loc>
+    <lastmod>2025-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Investment Calculators -->
   <url>
     <loc>https://www.sipgo.in/sip-calculator</loc>
     <lastmod>2025-03-19</lastmod>
@@ -116,7 +143,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Interest Calculator Pages -->
+  <!-- Interest Calculators -->
   <url>
     <loc>https://www.sipgo.in/simple-interest-calculator</loc>
     <lastmod>2025-03-19</lastmod>
@@ -129,4 +156,5 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
 </urlset>

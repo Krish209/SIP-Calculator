@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { formatNumber, formatChartNumber } from "./Calc";
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
@@ -8,7 +9,16 @@ import SIPFAQ from "./SIP Faq";
 
 
 function SIPCalculator() {
-  const [isSIP, setIsSIP] = useState(true); // Default is SIP
+  const location = useLocation();
+
+  // Determine initial investment type based on route
+  const getDefaultInvestmentType = (pathname) => {
+    if (pathname.includes("lumpsum")) return false; // false => Lumpsum
+    return true; // true => SIP
+  };
+
+  const [isSIP, setIsSIP] = useState(getDefaultInvestmentType(location.pathname));
+
   const [monthlyInvestment, setMonthlyInvestment] = useState(1000); // Default ₹1000 for SIP
   const [lumpsumAmount, setLumpsumAmount] = useState(10000); // Default ₹10000 for Lump Sum
   const [rateOfInterest, setRateOfInterest] = useState(12); // Default 12% p.a.
@@ -66,6 +76,11 @@ function SIPCalculator() {
     );
     setInvestmentPeriod(value);
   };
+
+  useEffect(() => {
+    // Reset isSIP based on pathname when route changes
+    setIsSIP(getDefaultInvestmentType(location.pathname));
+  }, [location.pathname]);
 
   // Recalculate data if inputs are valid
   useEffect(() => {

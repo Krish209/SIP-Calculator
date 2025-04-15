@@ -90,7 +90,7 @@ function GSTCalculator() {
             <div className="flex justify-center space-x-4 mb-4">
               <button
                 onClick={handleInclusive}
-                className={`p-2 w-32 rounded-lg shadow-sm ${
+                className={`p-2 w-32 sm:w-36 rounded-lg shadow-sm ${
                   isInclusive
                     ? "bg-tomato text-white"
                     : "border text-tomato border-tomato"
@@ -101,7 +101,7 @@ function GSTCalculator() {
 
               <button
                 onClick={handleExclusive}
-                className={`p-2 w-32 rounded-lg shadow-sm ${
+                className={`p-2 w-32 sm:w-36 rounded-lg shadow-sm ${
                   !isInclusive
                     ? "bg-tomato text-white"
                     : "border text-tomato border-tomato"

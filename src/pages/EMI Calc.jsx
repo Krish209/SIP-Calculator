@@ -10,21 +10,24 @@ function EMI() {
   const location = useLocation();
   const path = location.pathname;
 
-  let type = "emi"; // default
-  if (path.includes("car")) type = "car";
-  else if (path.includes("home")) type = "home";
-  else if (path.includes("personal")) type = "personal";
-  else if (path.includes("education")) type = "education";
+  const getLoanTypeFromPath = (path) => {
+    if (path.includes("car")) return "car";
+    if (path.includes("home")) return "home";
+    if (path.includes("personal")) return "personal";
+    if (path.includes("education")) return "education";
+    return "emi"; // default
+  };
 
   const defaultValues = {
     emi: { loan: 100000, rate: 8, tenure: 5 },
     car: { loan: 500000, rate: 9, tenure: 7 },
     home: { loan: 3000000, rate: 7.5, tenure: 20 },
     personal: { loan: 200000, rate: 11, tenure: 4 },
-    education: { loan: 200000, rate: 11, tenure: 4 },
+    education: { loan: 20000, rate: 11, tenure: 4 },
   };
 
-  const initial = defaultValues[type] || defaultValues["emi"];
+  const loanType = getLoanTypeFromPath(path);
+  const initial = defaultValues[loanType] || defaultValues["emi"];
 
   const [pageTitle, setPageTitle] = useState("EMI Calculator");
 
@@ -34,7 +37,7 @@ function EMI() {
     "/car-loan-calculator": "Car Loan Calculator",
     "/home-loan-calculator": "Home Loan Calculator",
     "/personal-loan-calculator": "Personal Loan Calculator",
-    "/eduaction-loan-calculator": "Education Loan Calculator",
+    "/education-loan-calculator": "Education Loan Calculator",
   };
 
   useEffect(() => {
@@ -42,6 +45,13 @@ function EMI() {
     const matchedTitle = titleMap[currentPath] || "Loan Calculator";
     setPageTitle(matchedTitle);
     document.title = matchedTitle;
+  
+    const type = getLoanTypeFromPath(location.pathname);
+    const values = defaultValues[type];
+
+    setLoanAmount(values.loan);
+    setInterestRate(values.rate);
+    setLoanTenure(values.tenure);
   }, [location.pathname]);
 
   const [loanAmount, setLoanAmount] = useState(initial.loan);
@@ -65,25 +75,6 @@ function EMI() {
   const maxLoanAmount = 100000000;
   const maxInterestRate = 20;
   const maxLoanTenure = 30;
-
-  useEffect(() => {
-    const type =
-      path.includes("car")
-        ? "car"
-        : path.includes("home")
-        ? "home"
-        : path.includes("personal")
-        ? "personal"
-        : path.includes("education")
-        ? "education"
-        : "emi";
-  
-    const values = defaultValues[type];
-  
-    setLoanAmount(values.loan);
-    setInterestRate(values.rate);
-    setLoanTenure(values.tenure);
-  }, [location.pathname]);
 
   useEffect(() => {
     if (loanAmount <= 0 || interestRate <= 0 || loanTenure <= 0) {

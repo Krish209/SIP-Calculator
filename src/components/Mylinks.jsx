@@ -8,11 +8,6 @@ export const links = [
       { name: "NPS Calculator", link: "/nps-calculator" },
       { name: "NSC Calculator", link: "/nsc-calculator" },
       { name: "SSY Calculator", link: "/ssy-calculator" },
-      { name: "EMI Calculator", link: "/emi-calculator" },
-      { name: "Car Loan Calculator", link: "/car-loan-calculator" }, 
-      { name: "Home Loan Calculator", link: "/home-loan-calculator" }, 
-      { name: "Personal Loan Calculator", link: "/personal-loan-calculator" },
-      { name: "Education Loan Calculator", link: "/education-loan-calculator" },
       { name: "RD Calculator", link: "/rd-calculator" },
       // { name: "APY Calculator", link: "/apy-calculator" },
       { name: "KVP Calculator", link: "/kvp-calculator" },
@@ -41,7 +36,17 @@ export const links = [
       // { name: "Gold Investment Calculator", link: "/gold-investment-calculator" },
     ],
   },
-
+  {
+    name: "Loan Calculator",
+    submenu: true,
+    sublinks: [
+      { name: "EMI Calculator", link: "/emi-calculator" },
+      { name: "Car Loan Calculator", link: "/car-loan-calculator" },
+      { name: "Home Loan Calculator", link: "/home-loan-calculator" },
+      { name: "Personal Loan Calculator", link: "/personal-loan-calculator" },
+      { name: "Education Loan Calculator", link: "/education-loan-calculator" },
+    ],
+  },
   {
     name: "Interest Calculator",
     submenu: true,

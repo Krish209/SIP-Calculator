@@ -170,7 +170,7 @@ const NPSInfo = () => {
           </li>
         </ul>
 
-        <div className="bg-blue-50 p-2 md:p-4 rounded-lg mt-6 shadow-md">
+        <div className="bg-blue-50 p-2 md:p-4 rounded-lg mt-4 shadow-md">
           <p>
             <strong>Important Note:</strong> If minimum annual contribution not
             contributed the account will be frozen. In order to unfreeze the
