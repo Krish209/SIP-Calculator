@@ -48,7 +48,7 @@ const CompoundingInterestInfo = () => {
             The formula to calculate Compound Interest is:
           </p>
 
-          <code>A = P × (1 + r/n)^(nt)</code>
+          <code className="font-bold">A = P × (1 + r/n)^(nt)</code>
 
           <p className="mt-2">Where:</p>
           <ul className="list-disc pl-6 space-y-1">

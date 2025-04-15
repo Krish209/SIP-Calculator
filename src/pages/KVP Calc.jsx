@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { formatNumber, formatChartNumber } from "./Calc";
+import KVPInfo from "./KVP Info";
 
 function KVP() {
   const [investmentAmount, setInvestmentAmount] = useState(50000); // Default ₹50,000
@@ -109,6 +110,9 @@ function KVP() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="py-4">
+          <KVPInfo />
         </div>
       </div>
     </div>

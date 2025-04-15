@@ -63,7 +63,7 @@ function Header() {
 
               {/* Dropdown Menu */}
               {item.submenu && activeDropdown === index && (
-                <ul className="absolute left-0 mt-2 py-2 w-48 bg-white border border-gray-200 shadow-lg rounded-md">
+                <ul className="absolute text-sm left-0 mt-2 py-2 w-48 bg-white border border-gray-200 shadow-lg rounded-md">
                   {item.sublinks.map((sublink, subIndex) => (
                     <li key={subIndex} className="border-b border-gray-200">
                       <NavLink

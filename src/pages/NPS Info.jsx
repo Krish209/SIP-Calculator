@@ -12,11 +12,12 @@ const NPSInfo = () => {
           What is NPS?
         </h2>
         <p>
-          The <strong>National Pension System (NPS)</strong> is a government-sponsored pension
-          scheme that allows individuals to contribute towards their retirement
-          savings during their working years. The NPS offers individuals an
-          opportunity to accumulate funds for their retirement, with the option
-          to manage and grow the funds based on different investment options.
+          The <strong>National Pension System (NPS)</strong> is a
+          government-sponsored pension scheme that allows individuals to
+          contribute towards their retirement savings during their working
+          years. The NPS offers individuals an opportunity to accumulate funds
+          for their retirement, with the option to manage and grow the funds
+          based on different investment options.
         </p>
       </section>
 
@@ -41,12 +42,13 @@ const NPSInfo = () => {
             The formula to calculate NPS Corpus is:
           </p>
 
-          <code>A = P × (1 + r/n)^(nt)</code>
+          <code className="font-bold">A = P × (1 + r/n)^(nt)</code>
 
           <p className="mt-2">Where:</p>
           <ul className="list-disc pl-6 space-y-1">
             <li>
-              <strong>A</strong> = Amount of money accumulated after n years, including interest
+              <strong>A</strong> = Amount of money accumulated after n years,
+              including interest
             </li>
             <li>
               <strong>P</strong> = Invested amount
@@ -65,9 +67,10 @@ const NPSInfo = () => {
           </ul>
         </div>
 
-        <p className="mb-2 mt-4">
-          Let's take an example of Mr. Shyam, a 30-year-old
-          employee working in a government sector. He decides to invest in the{" "}
+        <p className="mb-2 mt-4 font-semibold">Example:</p>
+        <p className="mb-2">
+          Let's take an example of Mr. Shyam, a 30-year-old employee working in
+          a government sector. He decides to invest in the{" "}
           <strong>National Pension Scheme (NPS)</strong> to secure his
           retirement. Mr. Shyam will make monthly contributions of ₹5,000
           towards the scheme with expected annual return rate of 8%, which he
@@ -169,7 +172,7 @@ const NPSInfo = () => {
 
         <div className="bg-blue-50 p-2 md:p-4 rounded-lg mt-6 shadow-md">
           <p>
-            <strong>Important Note:</strong> if minimum annual contribution not
+            <strong>Important Note:</strong> If minimum annual contribution not
             contributed the account will be frozen. In order to unfreeze the
             account, the customer has to pay the total of minimum contributions
             for the period of freeze, the minimum contribution for the year in

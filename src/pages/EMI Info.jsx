@@ -66,7 +66,7 @@ function EMIInfo() {
           </h3>
           <p className="mb-2 md:mb-4">The formula to calculate EMI is:</p>
 
-          <code>EMI = (P × r × (1 + r)^n) / ((1 + r)^n - 1)</code>
+          <code className="font-bold">EMI = (P × r × (1 + r)^n) / ((1 + r)^n - 1)</code>
 
           <p className="mt-2">Where:</p>
           <ul className="list-disc pl-6 space-y-1">

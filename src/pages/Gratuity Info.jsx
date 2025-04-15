@@ -66,7 +66,7 @@ function GratuityInfo() {
           <p className="mb-2 md:mb-4">
             Gratuity is calculated based on the following formula:
           </p>
-          <code>
+          <code className="font-bold">
             Gratuity = (Last Drawn Salary × Years of Service × 15) / 26
           </code>
           <p className="mt-2">Where:</p>

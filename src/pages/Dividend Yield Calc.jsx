@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
+import DividendYieldInfo from "./Dividend Yield Info";
 
 function DividendYieldCalc() {
   const [annualDividend, setAnnualDividend] = useState(10); // Default ₹1,000
   const [sharePrice, setSharePrice] = useState(500); // Default ₹50
   const [dividendYield, setDividendYield] = useState(0); // Dividend Yield
-  
+
   const maxAnnualDividend = 1000000; // Maximum for annual dividend
   const maxSharePrice = 1000000; // Maximum for share price
 
@@ -39,7 +40,10 @@ function DividendYieldCalc() {
 
   // Handlers for inputs
   const handleAnnualDividendChange = (e) => {
-    const value = Math.max(0, Math.min(Number(e.target.value), maxAnnualDividend));
+    const value = Math.max(
+      0,
+      Math.min(Number(e.target.value), maxAnnualDividend)
+    );
     setAnnualDividend(value);
   };
 
@@ -73,11 +77,15 @@ function DividendYieldCalc() {
                     }`}
                     placeholder="1000"
                   />
-                  <span className="absolute left-4 top-2.5 text-gray-500">₹</span>
+                  <span className="absolute left-4 top-2.5 text-gray-500">
+                    ₹
+                  </span>
                 </div>
               </div>
               {errorMessages.annualDividend && (
-                <p className="text-red-500 text-[13px]">{errorMessages.annualDividend}</p>
+                <p className="text-red-500 text-[13px]">
+                  {errorMessages.annualDividend}
+                </p>
               )}
               <input
                 type="range"
@@ -104,11 +112,15 @@ function DividendYieldCalc() {
                     }`}
                     placeholder="50"
                   />
-                  <span className="absolute left-4 top-2.5 text-gray-500">₹</span>
+                  <span className="absolute left-4 top-2.5 text-gray-500">
+                    ₹
+                  </span>
                 </div>
               </div>
               {errorMessages.sharePrice && (
-                <p className="text-red-500 text-[13px]">{errorMessages.sharePrice}</p>
+                <p className="text-red-500 text-[13px]">
+                  {errorMessages.sharePrice}
+                </p>
               )}
               <input
                 type="range"
@@ -140,6 +152,10 @@ function DividendYieldCalc() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div>
+          <DividendYieldInfo />
         </div>
       </div>
     </div>

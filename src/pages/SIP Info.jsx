@@ -199,7 +199,7 @@ const SIPInfo = () => {
           <p className="mb-2 md:mb-4">
             The formula used to calculate SIP returns is:
           </p>
-          <code className="">A = P × [(1 + r)^n - 1] / r × (1 + r)</code>
+          <code className="font-bold">A = P × [(1 + r)^n - 1] / r × (1 + r)</code>
           <p className="mt-2">
             Where:
             <ul className="list-disc pl-6 space-y-1">

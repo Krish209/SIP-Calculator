@@ -100,7 +100,7 @@ const RDInfo = () => {
             amount (A) is:
           </p>
 
-          <code>A = P × (((1 + r/n)^(nt) - 1) × (1 + r/n)) / (r/n)</code>
+          <code className="font-bold">A = P × (((1 + r/n)^(nt) - 1) × (1 + r/n)) / (r/n)</code>
 
           <p className="mt-2">Where:</p>
           <ul className="list-disc pl-6 space-y-1">

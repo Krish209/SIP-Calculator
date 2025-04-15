@@ -17,8 +17,7 @@ import GSTCalculator from "./pages/GST Calc";
 import RD from "./pages/RD Calc";
 import KVP from "./pages/KVP Calc";
 import APYCalc from "./pages/APY Calc";
-import DividendYieldCalc from "./pages/Divident Yield Calc";
-import LumpsumCalc from "./pages/Lumpsum Calc";
+import DividendYieldCalc from "./pages/Dividend Yield Calc";
 import ROICalculator from "./pages/ROI Calc";
 import AllCalculator from "./pages/All Calculator";
 import HomeLanding from "./components/Home";
@@ -44,7 +43,12 @@ function App() {
           <Route path="nps-calculator" element={<NPScalculator />} />
           <Route path="nsc-calculator" element={<NSC />} />
           <Route path="epf-calculator" element={<EPF />} />
-          <Route path="emi-calculator" element={<EMI />} />
+          <Route path="/emi-calculator" element={<EMI type="emi" />} />
+          <Route path="/car-loan-calculator" element={<EMI type="car" />} />
+          <Route path="/home-loan-calculator" element={<EMI type="home" />} />
+          <Route path="/personal-loan-calculator" element={<EMI type="personal" />} />
+          <Route path="/education-loan-calculator" element={<EMI type="education" />} />
+
           <Route path="ssy-calculator" element={<SSYCalc />} />
           <Route path="gst-calculator" element={<GSTCalculator />} />
           <Route path="rd-calculator" element={<RD />} />
