@@ -7,6 +7,14 @@ import { VscPercentage } from "react-icons/vsc";
 import { AiOutlinePercentage } from "react-icons/ai";
 import { FaPercentage } from "react-icons/fa";
 import { GiReceiveMoney } from "react-icons/gi";
+import { FaUniversity, FaCar, FaHome, FaChartLine } from "react-icons/fa";
+import { MdSchool } from "react-icons/md";
+import { AiOutlineHome } from "react-icons/ai";
+import { IoHomeOutline } from "react-icons/io5";
+import { AiTwotoneCar } from "react-icons/ai";
+import { IoCarOutline } from "react-icons/io5";
+import { PiGraduationCap } from "react-icons/pi";
+import { GrCar } from "react-icons/gr";
 
 const AllCalculator = () => {
   // Data for calculators
@@ -72,6 +80,35 @@ const AllCalculator = () => {
       link: "/emi-calculator",
     },
     {
+      title: "Home Loan Calculator",
+      description: "Plan your EMI and interest for buying your dream home.",
+      category: "Loans",
+      link: "/home-loan-calculator",
+      icon: <AiOutlineHome className="w-8 h-8 text-indigo-500" />,
+    },
+    {
+      title: "Car Loan Calculator",
+      description: "Calculate EMIs and total cost for your next car.",
+      category: "Loans",
+      link: "/car-loan-calculator",
+      icon: <IoCarOutline className="w-8 h-8 text-indigo-500" />,
+    },
+    {
+      title: "Personal Loan Calculator",
+      description: "Figure out monthly EMIs for your personal loan needs.",
+      category: "Loans",
+      link: "/personal-loan-calculator",
+      icon: <FaChartLine className="w-8 h-8 text-indigo-500" />,
+      
+    },
+    {
+      title: "Education Loan Calculator",
+      description: "Plan your education loan with repayment insights.",
+      category: "Loans",
+      link: "/education-loan-calculator",
+      icon: <PiGraduationCap className="w-8 h-8 text-indigo-500" />,      
+    },
+    {
       title: "RD Calculator",
       description:
         "Calculate returns on your Recurring Deposits with monthly contributions.",
@@ -122,6 +159,27 @@ const AllCalculator = () => {
       ),
       category: "Mutual Funds",
       link: "/lumpsum-calculator",
+    },
+    {
+      title: "Step-Up SIP Calculator",
+      description: "Estimate returns with annually increasing SIP contributions.",
+      category: "Mutual Funds",
+      link: "/step-up-sip-calculator",
+      icon: (
+        <svg
+          className="w-8 h-8 text-indigo-500"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M3 17l6-6 4 4 8-8"
+          />
+        </svg>
+      ),
     },
     {
       title: "GST Calculator",

@@ -21,6 +21,7 @@ import DividendYieldCalc from "./pages/Dividend Yield Calc";
 import ROICalculator from "./pages/ROI Calc";
 import AllCalculator from "./pages/All Calculator";
 import HomeLanding from "./components/Home";
+import StepUpSIPCalculator from "./pages/StepUpSIP Calc";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
           <Route path="/home-loan-calculator" element={<EMI type="home" />} />
           <Route path="/personal-loan-calculator" element={<EMI type="personal" />} />
           <Route path="/education-loan-calculator" element={<EMI type="education" />} />
+          <Route path="/step-up-sip-calculator" element={<StepUpSIPCalculator />} />
 
           <Route path="ssy-calculator" element={<SSYCalc />} />
           <Route path="gst-calculator" element={<GSTCalculator />} />
