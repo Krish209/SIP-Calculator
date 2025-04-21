@@ -56,7 +56,13 @@ a:hover {
 body {
   /* font-weight: 500; */
   /* font-family: "SIPGo", Helvetica; */
-  font-family: "SIPGo", Lora, sans-serif;
+  /* font-family: "SIPGo", Lora, sans-serif; */
+  /* font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  /* font-family: "Nunito", "Segoe UI", sans-serif; */
+  font-family: "Source Sans Pro", "Open Sans", sans-serif;
+
+
+
   /* font-family: "SIPGo", Lato; */
   /* font-family: "SIPGo", ; */
 

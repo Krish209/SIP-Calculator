@@ -22,6 +22,8 @@ import ROICalculator from "./pages/ROI Calc";
 import AllCalculator from "./pages/All Calculator";
 import HomeLanding from "./components/Home";
 import StepUpSIPCalculator from "./pages/StepUpSIP Calc";
+import SWP from "./pages/SWP Calc";
+import SWPCalculator from "./pages/swp fake";
 
 function App() {
   return (
@@ -50,6 +52,7 @@ function App() {
           <Route path="/personal-loan-calculator" element={<EMI type="personal" />} />
           <Route path="/education-loan-calculator" element={<EMI type="education" />} />
           <Route path="/step-up-sip-calculator" element={<StepUpSIPCalculator />} />
+          <Route path="/swp-calculator" element={<SWP />} /> 
 
           <Route path="ssy-calculator" element={<SSYCalc />} />
           <Route path="gst-calculator" element={<GSTCalculator />} />

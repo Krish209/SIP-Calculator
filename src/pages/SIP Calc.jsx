@@ -7,7 +7,6 @@ import { LineChart } from "./chartjs/LineChart";
 import SIPInfo from "./SIP Info";
 import SIPFAQ from "./SIP Faq";
 
-
 function SIPCalculator() {
   const location = useLocation();
 

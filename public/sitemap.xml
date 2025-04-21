@@ -12,7 +12,7 @@
   <!-- Utility -->
   <url>
     <loc>https://www.sipgo.in/calc</loc>
-    <lastmod>2025-04-09</lastmod>
+    <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -20,43 +20,43 @@
   <!-- Saving Calculators -->
   <url>
     <loc>https://www.sipgo.in/ppf-calculator</loc>
-    <lastmod>2025-03-19</lastmod>
+    <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sipgo.in/fd-calculator</loc>
-    <lastmod>2025-03-19</lastmod>
+    <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sipgo.in/nps-calculator</loc>
-    <lastmod>2025-03-19</lastmod>
+    <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sipgo.in/nsc-calculator</loc>
-    <lastmod>2025-03-19</lastmod>
+    <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sipgo.in/ssy-calculator</loc>
-    <lastmod>2025-03-19</lastmod>
+    <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sipgo.in/rd-calculator</loc>
-    <lastmod>2025-03-19</lastmod>
+    <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sipgo.in/kvp-calculator</loc>
-    <lastmod>2025-03-19</lastmod>
+    <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -64,7 +64,7 @@
   <!-- Loan Calculators -->
   <url>
     <loc>https://www.sipgo.in/emi-calculator</loc>
-    <lastmod>2025-03-19</lastmod>
+    <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -96,55 +96,61 @@
   <!-- Investment Calculators -->
   <url>
     <loc>https://www.sipgo.in/sip-calculator</loc>
-    <lastmod>2025-03-19</lastmod>
+    <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sipgo.in/lumpsum-calculator</loc>
-    <lastmod>2025-03-19</lastmod>
+    <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sipgo.in/mutual-fund-calculator</loc>
-    <lastmod>2025-03-19</lastmod>
+    <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sipgo.in/step-up-sip-calculator</loc>
-    <lastmod>2025-03-19</lastmod>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.sipgo.in/swp-calculator</loc>
+    <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.sipgo.in/gst-calculator</loc>
-    <lastmod>2025-03-19</lastmod>
+    <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sipgo.in/inflation-calculator</loc>
-    <lastmod>2025-03-19</lastmod>
+    <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sipgo.in/gratuity-calculator</loc>
-    <lastmod>2025-03-19</lastmod>
+    <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sipgo.in/roi-calculator</loc>
-    <lastmod>2025-03-19</lastmod>
+    <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sipgo.in/dividend-calculator</loc>
-    <lastmod>2025-03-19</lastmod>
+    <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -152,13 +158,13 @@
   <!-- Interest Calculators -->
   <url>
     <loc>https://www.sipgo.in/simple-interest-calculator</loc>
-    <lastmod>2025-03-19</lastmod>
+    <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sipgo.in/compound-interest-calculator</loc>
-    <lastmod>2025-03-19</lastmod>
+    <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -75,7 +75,7 @@ function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-6">
+          <nav className="hidden md:flex lg:space-x-6">
             {links.map((item, index) => (
               <div
                 key={index}
@@ -162,7 +162,7 @@ function Header() {
             onClick={toggleMobileMenu}
             className="p-2 rounded-lg hover:bg-gray-100"
           >
-            <AiOutlineClose className="w-5 h-5" />
+            <AiOutlineClose className="w-6 h-6" />
           </button>
         </div>
 
@@ -196,14 +196,14 @@ function Header() {
 
               {/* Mobile Dropdown Menu */}
               {item.submenu && activeDropdown === index && (
-                <div className="ml-4 mt-1 space-y-1">
+                <div className="ml-4 mt-1 space-y-0">
                   {item.sublinks.map((sublink, subIndex) => (
                     <NavLink
                       key={subIndex}
                       to={sublink.link}
                       onClick={() => setMobileMenu(false)}
                       className={({ isActive }) =>
-                        `block px-4 py-2.5 text-sm rounded-lg
+                        `block px-4 py-2 text-sm rounded-lg
                         ${
                           isActive
                             ? "bg-indigo-50 text-indigo-600"
