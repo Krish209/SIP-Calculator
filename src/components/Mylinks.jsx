@@ -58,7 +58,7 @@ export const links = [
         link: "/simple-interest-calculator",
       },
       {
-        name: "Compounding Interest Calculator",
+        name: "Compound Interest Calculator",
         link: "/compound-interest-calculator",
       },
       // { name: "Loan Eligibility Calculator", link: "/loan-eligibility-calculator" },

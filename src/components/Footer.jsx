@@ -44,7 +44,7 @@ function Footer() {
             <Link to="/" className="flex justify-center">
               <img
                 src={logo}
-                className="md:h-28 sm:h-16 h-12 w-auto"
+                className="md:h-24 sm:h-16 h-12 w-auto"
                 alt="Logo"
               />
             </Link>
@@ -61,9 +61,9 @@ function Footer() {
           </div>
 
           {/* Links Section */}
-          {/* <div className="md:flex-1 grid grid-cols-3 gap-4"> */}
+          <div className="md:flex-1 grid grid-cols-3 gap-4">
           {/* Company */}
-          {/* <div>
+          <div>
               <h2 className="text-md font-semibold mb-4">Company</h2>
               <ul className="space-y-1 text-[13px]">
                 <li>
@@ -76,65 +76,19 @@ function Footer() {
                     About
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     href="mailto:careers@tradzo.in"
                     className="hover:text-gray-400"
                   >
                     Careers
                   </a>
-                </li>
+                </li> */}
               </ul>
-            </div> */}
-
-          {/* Resources */}
-          {/* <div>
-              <h2 className="text-md font-semibold mb-4">Resources</h2>
-              <ul className="space-y-1 text-[13px]">
-                <li>
-                  <a
-                    href="https://www.nseindia.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-gray-400"
-                  >
-                    NSE
-                  </a>{" "}
-                  |{" "}
-                  <a
-                    href="https://www.bseindia.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-gray-400"
-                  >
-                    BSE
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.sebi.gov.in"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-gray-400"
-                  >
-                    SEBI
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://scores.sebi.gov.in"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-gray-400"
-                  >
-                    SCORES
-                  </a>
-                </li>
-              </ul>
-            </div> */}
+            </div>
 
           {/* Legal */}
-          {/* <div>
+          <div>
               <h2 className="text-md font-semibold mb-4">Legal</h2>
               <ul className="space-y-1 text-[13px]">
                 <li>
@@ -149,8 +103,8 @@ function Footer() {
                   </Link>
                 </li>
               </ul>
-            </div> */}
-          {/* </div> */}
+            </div>
+          </div>
         </div>
 
         <hr className="border-gray-700 my-6" />

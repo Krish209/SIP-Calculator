@@ -23,7 +23,10 @@ import AllCalculator from "./pages/All Calculator";
 import HomeLanding from "./components/Home";
 import StepUpSIPCalculator from "./pages/StepUpSIP Calc";
 import SWP from "./pages/SWP Calc";
-import SWPCalculator from "./pages/swp fake";
+import AboutPage from "./components/About Us";
+import Contact from "./components/Contact";
+import TermsAndConditions from "./pages/Terms&Condition";
+import PrivacyPolicy from "./pages/Privacy Policy";
 
 function App() {
   return (
@@ -33,26 +36,53 @@ function App() {
         <Route path="/" element={<HomeLayout />}>
           {/* Default route */}
           <Route index element={<HomeLanding />} />
-          {/* FD Calculator Route */}
+
+          {/* About Us Route */}
+          <Route path="about" element={<AboutPage />} />
+
+          {/* Contact Us Route */}
+          <Route path="contact" element={<Contact />} />
+          <Route path="terms" element={<TermsAndConditions />} />
+          <Route path="privacy-policy" element={<PrivacyPolicy />} />
+
+          {/* Investment Options Route */}
           <Route path="sip-calculator" element={<SIPCalculator />} />
           <Route path="lumpsum-calculator" element={<SIPCalculator />} />
           <Route path="mutual-fund-calculator" element={<SIPCalculator />} />
           <Route path="fd-calculator" element={<FdCalculator />} />
-          <Route path="simple-interest-calculator" element={<SimpleInterestCalculator />} />
-          <Route path="compound-interest-calculator" element={<CompoundInterest />} />
+          <Route
+            path="simple-interest-calculator"
+            element={<SimpleInterestCalculator />}
+          />
+          <Route
+            path="compound-interest-calculator"
+            element={<CompoundInterest />}
+          />
           <Route path="ppf-calculator" element={<PpfCalculator />} />
-          <Route path="inflation-calculator" element={<InflationCalculator />} />
+          <Route
+            path="inflation-calculator"
+            element={<InflationCalculator />}
+          />
           <Route path="gratuity-calculator" element={<GratuityCalculator />} />
           <Route path="nps-calculator" element={<NPScalculator />} />
           <Route path="nsc-calculator" element={<NSC />} />
           <Route path="epf-calculator" element={<EPF />} />
-          <Route path="/emi-calculator" element={<EMI type="emi" />} />
-          <Route path="/car-loan-calculator" element={<EMI type="car" />} />
-          <Route path="/home-loan-calculator" element={<EMI type="home" />} />
-          <Route path="/personal-loan-calculator" element={<EMI type="personal" />} />
-          <Route path="/education-loan-calculator" element={<EMI type="education" />} />
-          <Route path="/step-up-sip-calculator" element={<StepUpSIPCalculator />} />
-          <Route path="/swp-calculator" element={<SWP />} /> 
+          <Route path="emi-calculator" element={<EMI type="emi" />} />
+          <Route path="car-loan-calculator" element={<EMI type="car" />} />
+          <Route path="home-loan-calculator" element={<EMI type="home" />} />
+          <Route
+            path="personal-loan-calculator"
+            element={<EMI type="personal" />}
+          />
+          <Route
+            path="education-loan-calculator"
+            element={<EMI type="education" />}
+          />
+          <Route
+            path="step-up-sip-calculator"
+            element={<StepUpSIPCalculator />}
+          />
+          <Route path="swp-calculator" element={<SWP />} />
 
           <Route path="ssy-calculator" element={<SSYCalc />} />
           <Route path="gst-calculator" element={<GSTCalculator />} />
