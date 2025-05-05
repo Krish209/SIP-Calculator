@@ -61,7 +61,7 @@ function Footer() {
           </div>
 
           {/* Links Section */}
-          <div className="md:flex-1 grid grid-cols-3 gap-4">
+          <div className="md:flex-1 grid grid-cols-2 gap-4">
           {/* Company */}
           <div>
               <h2 className="text-md font-semibold mb-4">Company</h2>

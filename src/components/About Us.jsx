@@ -1,20 +1,18 @@
 import { motion } from "framer-motion";
+import group from "../assets/icons/group.svg";
 import {
-  ChartBarIcon,
-  CalculatorIcon,
-  ShieldCheckIcon,
   CurrencyRupeeIcon,
 } from "@heroicons/react/24/outline";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <motion.section 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="bg-gradient-to-br from-indigo-900 to-blue-900 text-white py-24 px-4"
+        className="bg-gradient-to-br from-indigo-700 to-blue-700 text-white py-24 px-4"
       >
         <div className="max-w-6xl mx-auto text-center">
           <motion.div 
@@ -52,15 +50,15 @@ export default function AboutPage() {
             </p>
           </div>
           <img
-            src="../assets/icons/contact us.svg"
+            src={group} 
             alt="Investment Strategies"
-            className="rounded-lg shadow-xl"
+            className=""
           />
         </div>
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 px-4 bg-indigo-900 text-white">
+      <section className="py-16 px-4 bg-indigo-600 text-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">
             Trusted Investment Platform
@@ -78,28 +76,6 @@ export default function AboutPage() {
               <div className="text-4xl font-bold mb-2">100%</div>
               <div className="text-gray-200">Data Privacy Guaranteed</div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Meet Our Financial Experts
-          </h2>
-          <div className="flex flex-wrap justify-center gap-8">
-            {[1, 2, 3].map((member) => (
-              <div key={member} className="w-64 text-center">
-                <img
-                  src={`/team-member-${member}.jpg`}
-                  alt={`Team member ${member}`}
-                  className="rounded-full h-48 w-48 object-cover mx-auto mb-4"
-                />
-                <h3 className="text-xl font-semibold">John Doe</h3>
-                <p className="text-gray-600">CFA, Senior Financial Analyst</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
