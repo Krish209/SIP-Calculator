@@ -67,7 +67,7 @@ const PrivacyPolicy = () => {
             <h2 className="text-2xl font-semibold mb-2">8. Contact Us</h2>
             <p>
               If you have any questions or concerns about this Privacy Policy, feel free to contact us at:{" "}
-              <a href="mailto:raju@gmail.com" className="text-blue-600 underline">
+              <a href="mailto:raju@gmail.com" className="text-blue-600">
                 support@sipgo.in
               </a>
             </p>
