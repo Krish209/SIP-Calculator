@@ -62,8 +62,8 @@ function Footer() {
 
           {/* Links Section */}
           <div className="md:flex-1 grid grid-cols-2 gap-4">
-          {/* Company */}
-          <div>
+            {/* Company */}
+            <div>
               <h2 className="text-md font-semibold mb-4">Company</h2>
               <ul className="space-y-1 text-[13px]">
                 <li>
@@ -87,8 +87,8 @@ function Footer() {
               </ul>
             </div>
 
-          {/* Legal */}
-          <div>
+            {/* Legal */}
+            <div>
               <h2 className="text-md font-semibold mb-4">Legal</h2>
               <ul className="space-y-1 text-[13px]">
                 <li>
@@ -116,6 +116,7 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-400"
+              aria-label="Twitter"
             >
               <FaXTwitter />
             </a>
@@ -126,6 +127,7 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-400"
+              aria-label="Instagram"
             >
               <FaInstagram />
             </a>
@@ -136,6 +138,7 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-400"
+              aria-label="Facebook"
             >
               <FaFacebook />
             </a>
@@ -146,6 +149,7 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-400"
+              aria-label="YouTube"
             >
               <FaYoutube />
             </a>
@@ -156,6 +160,7 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-400"
+              aria-label="LinkedIn"
             >
               <FaLinkedin />
             </a>

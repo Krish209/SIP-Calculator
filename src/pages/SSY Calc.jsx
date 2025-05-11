@@ -183,6 +183,7 @@ function SSY() {
                 value={principalAmount}
                 onChange={handlePrincipalAmountChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="annualInvestmentLabel"
               />
             </div>
 
@@ -223,6 +224,7 @@ function SSY() {
                 value={startingPeriod}
                 onChange={handleStartingPeriodChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="startYearLabel"
               />
             </div>
           </div>
