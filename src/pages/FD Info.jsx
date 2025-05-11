@@ -12,12 +12,12 @@ const FdInfo = () => {
           What is a FD?
         </h2>
         <p className="mb-2">
-          A <strong>Fixed Deposit (FD)</strong> is one of the safest and most reliable investment
-          options available, allowing you to invest a lump sum amount of money
-          for a fixed tenure at a predetermined interest rate. During this
-          tenure, you cannot withdraw your investment, but you are assured of
-          earning a fixed return on your investment at regular intervals (such
-          as annually, quarterly, etc.).
+          A <strong>Fixed Deposit (FD)</strong> is one of the safest and most
+          reliable investment options available, allowing you to invest a lump
+          sum amount of money for a fixed tenure at a predetermined interest
+          rate. During this tenure, you cannot withdraw your investment, but you
+          are assured of earning a fixed return on your investment at regular
+          intervals (such as annually, quarterly, etc.).
         </p>
       </section>
 
@@ -69,17 +69,17 @@ const FdInfo = () => {
             rate, which remains constant throughout the term of your FD. The
             rate is usually higher than a regular savings account but lower than
             riskier investment options.
-            <br />
+            
+            <div className="bg-blue-50 p-2 md:p-4 rounded-lg mt-2 shadow-md">
+              <p>
+                <strong>Important Note:</strong> The interest rate offered on an
+                FD can vary based on the tenure chosen, with longer tenures
+                generally offering higher interest rates. It's always advisable
+                to check with your specific bank or financial institution for
+                their exact FD tenure options and terms and conditions.
+              </p>
+            </div>
           </li>
-          <div className="bg-blue-50 p-2 md:p-4 rounded-lg mt-6 shadow-md">
-            <p>
-              <strong>Important Note:</strong> The interest rate offered on an
-              FD can vary based on the tenure chosen, with longer tenures
-              generally offering higher interest rates. It's always advisable to
-              check with your specific bank or financial institution for their
-              exact FD tenure options and terms and conditions.
-            </p>
-          </div>
           <li>
             <strong>Interest Payment:</strong> Interest is paid at periodic
             intervals or at the end of the tenure, depending on your preference.
@@ -135,8 +135,8 @@ const FdInfo = () => {
           <li>
             <strong>Tax-Saving FD:</strong> These FDs offer tax deductions under
             Section 80C the Income Tax Act, 1961, investors can claim a tax
-            deduction of up to ₹1.5 lakh per year. They have a lock-in period
-            of 5 years.
+            deduction of up to ₹1.5 lakh per year. They have a lock-in period of
+            5 years.
           </li>
           <li>
             <strong>Senior Citizens FD:</strong> Senior citizens generally get

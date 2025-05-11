@@ -260,8 +260,11 @@ function PPF() {
 
             {/* Compound Frequency */}
             <div className="flex justify-between items-center">
-              <label className="font-medium">Investment Frequency</label>
+              <label htmlFor="compound-frequency" className="font-medium">
+                Investment Frequency
+              </label>
               <select
+                id="compound-frequency"
                 value={compoundFrequency}
                 onChange={handleCompoundFrequencyChange}
                 className="p-2 border rounded-md shadow-sm w-28 lg:w-32 bg-white"
