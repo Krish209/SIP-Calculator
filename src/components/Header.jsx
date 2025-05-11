@@ -19,9 +19,9 @@ function Header() {
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (mobileMenu) {
-      document.body.classList.add('overflow-hidden');
+      document.body.classList.add("overflow-hidden");
     } else {
-      document.body.classList.remove('overflow-hidden');
+      document.body.classList.remove("overflow-hidden");
     }
   }, [mobileMenu]);
 
@@ -33,8 +33,8 @@ function Header() {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   // Handle dropdown hover (desktop)
@@ -75,7 +75,7 @@ function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex lg:space-x-6">
+          <nav className="hidden md:flex lg:space-x-6 pr-5">
             {links.map((item, index) => (
               <div
                 key={index}
@@ -140,6 +140,7 @@ function Header() {
           <button
             onClick={toggleMobileMenu}
             className="md:hidden p-2 rounded-lg hover:bg-gray-100"
+            aria-label={mobileMenu ? "Close menu" : "Open menu"}
           >
             {mobileMenu ? (
               <AiOutlineClose className="w-6 h-6" />
@@ -161,6 +162,7 @@ function Header() {
           <button
             onClick={toggleMobileMenu}
             className="p-2 rounded-lg hover:bg-gray-100"
+            aria-label="Close menu"
           >
             <AiOutlineClose className="w-6 h-6" />
           </button>
@@ -171,7 +173,7 @@ function Header() {
             <div key={index} className="mb-2">
               <button
                 onClick={() => item.submenu && handleDropdownToggle(index)}
-                className={`w-full flex items-center justify-between p-3 rounded-lg
+                className={`w-full flex items-center justify-between px-4 py-3 rounded-lg
                   ${
                     activeDropdown === index
                       ? "bg-indigo-50 text-indigo-600"

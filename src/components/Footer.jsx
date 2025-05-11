@@ -9,24 +9,12 @@ import {
   FaHeart,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { IoIosArrowDropdownCircle } from "react-icons/io";
 
 function Footer() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleScrollToSection = () => {
-    navigate("/terms");
-    setTimeout(() => {
-      const section = document.querySelector("refund");
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 100);
-  };
 
   return (
     <footer className="bg-slate-50 text-gunmetal py-16">
-      <div className="container sm:text-sm md:text-md text-xs mx-auto px-6 lg:px-1">
+      <div className="container sm:text-sm md:text-md text-xs mx-auto px-2 lg:px-1">
         {/* Intro */}
         <div className="flex flex-col gap-4 md:flex-row md:justify-between items-center text-center mb-8 lg:px-32">
           {/* Left Text Section */}
@@ -64,18 +52,19 @@ function Footer() {
           <div className="md:flex-1 grid grid-cols-2 gap-4">
             {/* Company */}
             <div>
-              <h2 className="text-md font-semibold mb-4">Company</h2>
-              <ul className="space-y-1 text-[13px]">
-                <li>
-                  <Link to="/contact" className="hover:text-gray-400">
-                    Support
-                  </Link>
-                </li>
+              <h2 className="text-sm font-semibold mb-4">Company</h2>
+              <ul className="space-y-2 text-sm">
                 <li>
                   <Link to="/about" className="hover:text-gray-400">
                     About
                   </Link>
                 </li>
+                <li>
+                  <Link to="/contact" className="hover:text-gray-400">
+                    Support
+                  </Link>
+                </li>
+
                 {/* <li>
                   <a
                     href="mailto:careers@tradzo.in"
@@ -89,8 +78,8 @@ function Footer() {
 
             {/* Legal */}
             <div>
-              <h2 className="text-md font-semibold mb-4">Legal</h2>
-              <ul className="space-y-1 text-[13px]">
+              <h2 className="text-sm font-semibold mb-4">Legal</h2>
+              <ul className="space-y-2 text-sm">
                 <li>
                   <Link to="/privacy-policy" className="hover:text-gray-400">
                     Privacy Policy
@@ -109,59 +98,30 @@ function Footer() {
 
         <hr className="border-gray-700 my-6" />
 
-        <ul className="flex text-night justify-center space-x-4 text-2xl">
+        {/* Social Media Links */}
+        <ul className="flex justify-center space-x-6 text-xl text-gray-700">
           <li>
-            <a
-              href="https://x.com/SipGo992"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gray-400"
-              aria-label="Twitter"
-            >
+            <a href="https://x.com/SipGo992" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="hover:text-blue-500">
               <FaXTwitter />
             </a>
           </li>
           <li>
-            <a
-              href="https://www.instagram.com/sipg0/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gray-400"
-              aria-label="Instagram"
-            >
+            <a href="https://www.instagram.com/sipg0/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-pink-500">
               <FaInstagram />
             </a>
           </li>
           <li>
-            <a
-              href="https://m.facebook.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gray-400"
-              aria-label="Facebook"
-            >
+            <a href="https://m.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-blue-700">
               <FaFacebook />
             </a>
           </li>
           <li>
-            <a
-              href="https://www.youtube.com/@S1PGo"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gray-400"
-              aria-label="YouTube"
-            >
+            <a href="https://www.youtube.com/@S1PGo" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="hover:text-red-600">
               <FaYoutube />
             </a>
           </li>
           <li>
-            <a
-              href="https://in.linkedin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gray-400"
-              aria-label="LinkedIn"
-            >
+            <a href="https://in.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-blue-600">
               <FaLinkedin />
             </a>
           </li>
