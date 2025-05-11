@@ -119,7 +119,7 @@ function Header() {
                         key={subIndex}
                         to={sublink.link}
                         className={({ isActive }) =>
-                          `block px-4 py-2.5 text-sm transition-colors
+                          `block px-4 py-2 text-sm transition-colors
                           ${
                             isActive
                               ? "bg-indigo-50 text-indigo-600"
@@ -173,7 +173,7 @@ function Header() {
             <div key={index} className="mb-2">
               <button
                 onClick={() => item.submenu && handleDropdownToggle(index)}
-                className={`w-full flex items-center justify-between px-4 py-4 rounded-lg
+                className={`w-full flex items-center justify-between px-4 py-3 rounded-lg
                   ${
                     activeDropdown === index
                       ? "bg-indigo-50 text-indigo-600"
@@ -205,7 +205,7 @@ function Header() {
                       to={sublink.link}
                       onClick={() => setMobileMenu(false)}
                       className={({ isActive }) =>
-                        `block px-4 py-2.5 text-sm rounded-lg
+                        `block px-4 py-2 text-sm rounded-lg
                         ${
                           isActive
                             ? "bg-indigo-50 text-indigo-600"

@@ -222,8 +222,11 @@ function NSC() {
 
             {/* Compound Frequency */}
             <div className="flex justify-between items-center">
-              <label className="font-medium">Compounding Frequency</label>
+              <label htmlFor="compoundFrequency" className="font-medium">
+                Compounding Frequency
+              </label>
               <select
+                id="compoundFrequency"
                 value={compoundFrequency}
                 onChange={handleCompoundFrequencyChange}
                 className="p-2 border rounded-md shadow-sm bg-white w-28 lg:w-32"
