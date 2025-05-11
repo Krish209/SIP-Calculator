@@ -37,9 +37,7 @@ function RD() {
     if (monthlyDeposit < 500 || rateOfInterest <= 0 || investmentPeriod <= 0) {
       setErrorMessages({
         monthlyDeposit:
-          monthlyDeposit < 500
-            ? "Monthly deposit must be at least ₹500"
-            : "",
+          monthlyDeposit < 500 ? "Monthly deposit must be at least ₹500" : "",
         rateOfInterest:
           rateOfInterest <= 0
             ? "Rate of interest must be greater than zero"
@@ -153,7 +151,9 @@ function RD() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Monthly Deposit</label>
+                  <label id="monthly-deposit-label" className="font-medium">
+                    Monthly Deposit
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -183,6 +183,7 @@ function RD() {
                 value={monthlyDeposit}
                 onChange={handleMonthlyDepositChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="monthly-deposit-label"
               />
             </div>
 
@@ -190,7 +191,9 @@ function RD() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Rate of Interest (p.a)</label>
+                  <label id="rate-of-interest-label" className="font-medium">
+                    Rate of Interest (p.a)
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -220,6 +223,7 @@ function RD() {
                 value={rateOfInterest}
                 onChange={handleRateOfInterestChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="rate-of-interest-label"
               />
             </div>
 
@@ -227,7 +231,7 @@ function RD() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">
+                  <label id="investment-period-label" className="font-medium">
                     Investment Period (years)
                   </label>
                   <div className="relative w-28 lg:w-32">
@@ -259,6 +263,7 @@ function RD() {
                 value={investmentPeriod}
                 onChange={handleInvestmentPeriodChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="investment-period-label"
               />
             </div>
           </div>

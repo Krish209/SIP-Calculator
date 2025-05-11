@@ -22,9 +22,11 @@ function EPF() {
   useEffect(() => {
     if (basicSalary <= 0 || yearsWorked <= 0 || epfRate <= 0) {
       setErrorMessages({
-        basicSalary: basicSalary <= 0 ? "Basic salary must be greater than zero" : "",
+        basicSalary:
+          basicSalary <= 0 ? "Basic salary must be greater than zero" : "",
         epfRate: epfRate <= 0 ? "EPF rate must be greater than zero" : "",
-        yearsWorked: yearsWorked <= 0 ? "Years worked must be greater than zero" : "",
+        yearsWorked:
+          yearsWorked <= 0 ? "Years worked must be greater than zero" : "",
       });
       return; // Stop calculation if invalid input
     }
@@ -48,7 +50,10 @@ function EPF() {
     setEpfBalance(totalEpfBalance);
 
     // Prepare chart data for EPF balance over the years
-    const labels = Array.from({ length: yearsWorked }, (_, index) => `${index + 1} Year${index + 1 > 1 ? "s" : ""}`);
+    const labels = Array.from(
+      { length: yearsWorked },
+      (_, index) => `${index + 1} Year${index + 1 > 1 ? "s" : ""}`
+    );
 
     setChartData({
       labels: labels,
@@ -63,9 +68,16 @@ function EPF() {
   }, [basicSalary, epfRate, yearsWorked]);
 
   // Handlers for inputs
-  const handleBasicSalaryChange = (e) => setBasicSalary(Math.max(0, Math.min(Number(e.target.value), maxBasicSalary)));
-  const handleEpfRateChange = (e) => setEpfRate(Math.max(0, Math.min(Number(e.target.value), 100)));
-  const handleYearsWorkedChange = (e) => setYearsWorked(Math.max(0, Math.min(Number(e.target.value), maxYearsWorked)));
+  const handleBasicSalaryChange = (e) =>
+    setBasicSalary(
+      Math.max(0, Math.min(Number(e.target.value), maxBasicSalary))
+    );
+  const handleEpfRateChange = (e) =>
+    setEpfRate(Math.max(0, Math.min(Number(e.target.value), 100)));
+  const handleYearsWorkedChange = (e) =>
+    setYearsWorked(
+      Math.max(0, Math.min(Number(e.target.value), maxYearsWorked))
+    );
 
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
@@ -82,7 +94,7 @@ function EPF() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">
+                  <label id="basic-salary-label" className="font-medium">
                     Monthly Salary (Basic + D.A)
                   </label>
                   <div className="relative w-28 lg:w-32">
@@ -90,13 +102,21 @@ function EPF() {
                       type="number"
                       value={basicSalary}
                       onChange={handleBasicSalaryChange}
-                      className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-right ${errorMessages.basicSalary ? "border-red-500" : ""}`}
+                      className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-right ${
+                        errorMessages.basicSalary ? "border-red-500" : ""
+                      }`}
                       placeholder="50000"
                     />
-                    <span className="absolute left-4 top-2.5 text-gray-500">₹</span>
+                    <span className="absolute left-4 top-2.5 text-gray-500">
+                      ₹
+                    </span>
                   </div>
                 </div>
-                {errorMessages.basicSalary && <p className="text-red-500 text-[13px] us:text-sm">{errorMessages.basicSalary}</p>}
+                {errorMessages.basicSalary && (
+                  <p className="text-red-500 text-[13px] us:text-sm">
+                    {errorMessages.basicSalary}
+                  </p>
+                )}
               </div>
               <input
                 type="range"
@@ -106,6 +126,7 @@ function EPF() {
                 value={basicSalary}
                 onChange={handleBasicSalaryChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="basic-salary-label"
               />
             </div>
 
@@ -113,19 +134,29 @@ function EPF() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">EPF Contribution Rate (%)</label>
+                  <label id="epf-rate-label" className="font-medium">
+                    EPF Contribution Rate (%)
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
                       value={epfRate}
                       onChange={handleEpfRateChange}
-                      className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-right ${errorMessages.epfRate ? "border-red-500" : ""}`}
+                      className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-right ${
+                        errorMessages.epfRate ? "border-red-500" : ""
+                      }`}
                       placeholder="12"
                     />
-                    <span className="absolute left-4 top-2.5 text-gray-500">%</span>
+                    <span className="absolute left-4 top-2.5 text-gray-500">
+                      %
+                    </span>
                   </div>
                 </div>
-                {errorMessages.epfRate && <p className="text-red-500 text-[13px] us:text-sm">{errorMessages.epfRate}</p>}
+                {errorMessages.epfRate && (
+                  <p className="text-red-500 text-[13px] us:text-sm">
+                    {errorMessages.epfRate}
+                  </p>
+                )}
               </div>
               <input
                 type="range"
@@ -135,6 +166,7 @@ function EPF() {
                 value={epfRate}
                 onChange={handleEpfRateChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="epf-rate-label"
               />
             </div>
 
@@ -142,19 +174,29 @@ function EPF() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Years of Service</label>
+                  <label id="years-worked-label" className="font-medium">
+                    Years of Service
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
                       value={yearsWorked}
                       onChange={handleYearsWorkedChange}
-                      className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-left appearance-none ${errorMessages.yearsWorked ? "border-red-500" : ""}`}
+                      className={`p-2 pl-4 pr-3 border rounded-md shadow-sm w-full text-left appearance-none ${
+                        errorMessages.yearsWorked ? "border-red-500" : ""
+                      }`}
                       placeholder="10"
                     />
-                    <span className="absolute right-4 top-2 text-gray-500">Year(s)</span>
+                    <span className="absolute right-4 top-2 text-gray-500">
+                      Year(s)
+                    </span>
                   </div>
                 </div>
-                {errorMessages.yearsWorked && <p className="text-red-500 text-[13px] us:text-sm">{errorMessages.yearsWorked}</p>}
+                {errorMessages.yearsWorked && (
+                  <p className="text-red-500 text-[13px] us:text-sm">
+                    {errorMessages.yearsWorked}
+                  </p>
+                )}
               </div>
               <input
                 type="range"
@@ -164,6 +206,7 @@ function EPF() {
                 value={yearsWorked}
                 onChange={handleYearsWorkedChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="years-worked-label"
               />
             </div>
           </div>
@@ -175,10 +218,14 @@ function EPF() {
               <div className="text-left text-[13px] ws:text-[14px] us:text-lg md:text-base lg:text-lg">
                 <div className="flex items-center mb-2.5">
                   <div className="flex flex-col">
-                    <span className="text-lg sm:text-xl md:text-2xl font-semibold">Total EPF Balance</span>
+                    <span className="text-lg sm:text-xl md:text-2xl font-semibold">
+                      Total EPF Balance
+                    </span>
                     <span className="text-xl sm:text-2xl md:text-3xl font-bold">
                       ₹{formatChartNumber(epfBalance)}{" "}
-                      {formatNumber(epfBalance) ? `(${formatNumber(epfBalance)})` : null}
+                      {formatNumber(epfBalance)
+                        ? `(${formatNumber(epfBalance)})`
+                        : null}
                     </span>
                   </div>
                 </div>
@@ -191,7 +238,9 @@ function EPF() {
         <div className="py-4 lg:py-6 lg:p-6 p-1 sm:p-2 rounded-xl border overflow-hidden">
           {chartData && chartData.datasets ? (
             <div className="w-full">
-              <h2 className="text-center text-lg sm:text-xl font-semibold mb-4">EPF Balance Growth Over Time</h2>
+              <h2 className="text-center text-lg sm:text-xl font-semibold mb-4">
+                EPF Balance Growth Over Time
+              </h2>
               <div className="h-72 md:h-96 w-full mx-auto">
                 <BarChart data={chartData} />
               </div>

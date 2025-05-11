@@ -150,7 +150,9 @@ function CompoundInterest() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Principal Amount</label>
+                  <label id="amount-label" className="font-medium">
+                    Principal Amount
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -180,6 +182,7 @@ function CompoundInterest() {
                 value={principalAmount}
                 onChange={handlePrincipalAmountChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="amount-label"
               />
             </div>
 
@@ -187,7 +190,9 @@ function CompoundInterest() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Rate of Interest (p.a)</label>
+                  <label id="rate-label" className="font-medium">
+                    Rate of Interest (p.a)
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -217,6 +222,7 @@ function CompoundInterest() {
                 value={rateOfInterest}
                 onChange={handleRateOfInterestChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="rate-label"
               />
             </div>
 
@@ -224,7 +230,7 @@ function CompoundInterest() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">
+                  <label id="period-label" className="font-medium">
                     Investment Period (years)
                   </label>
                   <div className="relative w-28 lg:w-32">
@@ -256,6 +262,7 @@ function CompoundInterest() {
                 value={investmentPeriod}
                 onChange={handleInvestmentPeriodChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="period-label"
               />
             </div>
 

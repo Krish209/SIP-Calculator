@@ -24,8 +24,7 @@ function Gratuity() {
       setErrorMessages({
         basicSalary:
           basicSalary <= 0 ? "Basic salary must be greater than zero" : "",
-        yearsWorked:
-          yearsWorked < 5 ? "Years worked must be at least 5" : "",
+        yearsWorked: yearsWorked < 5 ? "Years worked must be at least 5" : "",
       });
       return; // Stop calculation if invalid input
     }
@@ -92,7 +91,7 @@ function Gratuity() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">
+                  <label id="basic-salary-label" className="font-medium">
                     Monthly Salary (Basic + D.A)
                   </label>
                   <div className="relative w-28 lg:w-32">
@@ -124,6 +123,7 @@ function Gratuity() {
                 value={basicSalary}
                 onChange={handleBasicSalaryChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="basic-salary-label"
               />
             </div>
 
@@ -131,7 +131,9 @@ function Gratuity() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Years of Service</label>
+                  <label id="years-worked-label" className="font-medium">
+                    Years of Service
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -161,6 +163,7 @@ function Gratuity() {
                 value={yearsWorked}
                 onChange={handleYearsWorkedChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="years-worked-label"
               />
             </div>
           </div>

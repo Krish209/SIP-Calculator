@@ -115,7 +115,9 @@ function GSTCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Price of Product</label>
+                  <label id="price-label" className="font-medium">
+                    Price of Product
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -145,6 +147,7 @@ function GSTCalculator() {
                 value={price}
                 onChange={handlePriceChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="price-label"
               />
             </div>
 
@@ -152,7 +155,9 @@ function GSTCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">GST Rate (%)</label>
+                  <label id="gst-rate-label" className="font-medium">
+                    GST Rate (%)
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -182,6 +187,7 @@ function GSTCalculator() {
                 value={gstRate}
                 onChange={handleGstRateChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="gst-rate-label"
               />
             </div>
           </div>
@@ -241,13 +247,11 @@ function GSTCalculator() {
               </div>
             </div>
           </div>
-
-          
         </div>
         <div className="py-4">
-            <GSTInfo />
-            <GSTFAQ />
-          </div>
+          <GSTInfo />
+          <GSTFAQ />
+        </div>
       </div>
     </div>
   );

@@ -45,7 +45,7 @@ function EMI() {
     const matchedTitle = titleMap[currentPath] || "Loan Calculator";
     setPageTitle(matchedTitle);
     document.title = matchedTitle;
-  
+
     const type = getLoanTypeFromPath(location.pathname);
     const values = defaultValues[type];
 
@@ -182,7 +182,9 @@ function EMI() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Loan Amount</label>
+                  <label id="loan-amount-label" className="font-medium">
+                    Loan Amount
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -212,6 +214,7 @@ function EMI() {
                 value={loanAmount}
                 onChange={handleLoanAmountChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="loan-amount-label"
               />
             </div>
 
@@ -219,7 +222,9 @@ function EMI() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Interest Rate (p.a)</label>
+                  <label id="interest-rate-label" className="font-medium">
+                    Interest Rate (p.a)
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -249,6 +254,7 @@ function EMI() {
                 value={interestRate}
                 onChange={handleInterestRateChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="interest-rate-label"
               />
             </div>
 
@@ -256,7 +262,9 @@ function EMI() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Loan Tenure (Years)</label>
+                  <label id="loan-tenure-label" className="font-medium">
+                    Loan Tenure (Years)
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -286,6 +294,7 @@ function EMI() {
                 value={loanTenure}
                 onChange={handleLoanTenureChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="loan-tenure-label"
               />
             </div>
           </div>

@@ -138,7 +138,9 @@ function NSC() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Principal Amount</label>
+                  <label id="principalAmount" className="font-medium">
+                    Principal Amount
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -168,6 +170,7 @@ function NSC() {
                 value={principalAmount}
                 onChange={handlePrincipalAmountChange}
                 className="w-full cursor-pointer"
+                aria-label="Principal Amount Range"
               />
             </div>
 
@@ -175,7 +178,9 @@ function NSC() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Rate of Interest (p.a)</label>
+                  <label id="rateOfInterest" className="font-medium">
+                    Rate of Interest (p.a)
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -205,6 +210,7 @@ function NSC() {
                 value={rateOfInterest}
                 onChange={handleRateOfInterestChange}
                 className="w-full cursor-pointer"
+                aria-label="Rate of Interest Range"
               />
             </div>
 

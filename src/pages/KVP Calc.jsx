@@ -49,7 +49,9 @@ function KVP() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Investment Amount</label>
+                  <label id="investment-amount-label" className="font-medium">
+                    Investment Amount
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -79,6 +81,7 @@ function KVP() {
                 value={investmentAmount}
                 onChange={handleInvestmentAmountChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="investment-amount-label"
               />
             </div>
 

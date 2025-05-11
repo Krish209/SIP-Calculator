@@ -66,7 +66,9 @@ function DividendYieldCalc() {
             {/* Annual Dividend */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="flex justify-between items-center">
-                <label className="font-medium">Annual Dividend (₹)</label>
+                <label id="annual-dividend-label" className="font-medium">
+                  Annual Dividend (₹)
+                </label>
                 <div className="relative w-32">
                   <input
                     type="number"
@@ -95,13 +97,16 @@ function DividendYieldCalc() {
                 value={annualDividend}
                 onChange={handleAnnualDividendChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="annual-dividend-label"
               />
             </div>
 
             {/* Share Price */}
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="flex justify-between items-center">
-                <label className="font-medium">Share Price (₹)</label>
+                <label id="share-price-label" className="font-medium">
+                  Share Price (₹)
+                </label>
                 <div className="relative w-32">
                   <input
                     type="number"
@@ -130,6 +135,7 @@ function DividendYieldCalc() {
                 value={sharePrice}
                 onChange={handleSharePriceChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="share-price-label"
               />
             </div>
           </div>

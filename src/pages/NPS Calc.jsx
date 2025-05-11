@@ -53,8 +53,7 @@ function NPSCalculator() {
           monthlyInvestment < 500
             ? "Monthly Invstment must be at least ₹500"
             : "",
-        currentAge:
-          currentAge < 18 ? "Current Age must be at least 18" : "",
+        currentAge: currentAge < 18 ? "Current Age must be at least 18" : "",
         retirementAge:
           retirementAge < 60 ? "Retirement Age must be at least 60" : "",
         expectedReturn:
@@ -172,7 +171,9 @@ function NPSCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Monthly Investment</label>
+                  <label id="monthly-investment-label" className="font-medium">
+                    Monthly Investment
+                  </label>
                   <div className="relative w-24 lg:w-28">
                     <input
                       type="number"
@@ -202,6 +203,7 @@ function NPSCalculator() {
                 value={monthlyInvestment}
                 onChange={handleMonthllyInvestmentChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="monthly-investment-label"
               />
             </div>
 
@@ -209,7 +211,9 @@ function NPSCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Current Age</label>
+                  <label id="current-age-label" className="font-medium">
+                    Current Age
+                  </label>
                   <div className="relative w-24 lg:w-28">
                     <input
                       type="number"
@@ -235,6 +239,7 @@ function NPSCalculator() {
                 value={currentAge}
                 onChange={handleCurrentAgeChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="current-age-label"
               />
             </div>
 
@@ -242,7 +247,9 @@ function NPSCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Retirement Age</label>
+                  <label id="retirement-age-label" className="font-medium">
+                    Retirement Age
+                  </label>
                   <div className="relative w-24 lg:w-28">
                     <input
                       type="number"
@@ -268,6 +275,7 @@ function NPSCalculator() {
                 value={retirementAge}
                 onChange={handleRetirementAgeChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="retirement-age-label"
               />
             </div>
 
@@ -275,7 +283,7 @@ function NPSCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">
+                  <label id="expected-return-label" className="font-medium">
                     Expected Rate of Return (p.a)
                   </label>
                   <div className="relative w-24 lg:w-28">
@@ -306,6 +314,7 @@ function NPSCalculator() {
                 value={expectedReturn}
                 onChange={handleExpectedReturnChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="expected-return-label"
               />
             </div>
 
@@ -313,7 +322,7 @@ function NPSCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">
+                  <label id="annuity-percentage-label" className="font-medium">
                     Percentage of Annuity Purchase (p.a)
                   </label>
                   <div className="relative w-24 lg:w-28">
@@ -344,6 +353,7 @@ function NPSCalculator() {
                 value={annuityPercentage}
                 onChange={handleAnnuityPercentageChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="annuity-percentage-label"
               />
             </div>
 
@@ -351,7 +361,9 @@ function NPSCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Annuity Return (p.a)</label>
+                  <label id="annuity-return-label" className="font-medium">
+                    Annuity Return (p.a)
+                  </label>
                   <div className="relative w-24 lg:w-28">
                     <input
                       type="number"
@@ -380,6 +392,7 @@ function NPSCalculator() {
                 value={annuityReturn}
                 onChange={handleAnnuityReturnChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="annuity-return-label"
               />
             </div>
           </div>

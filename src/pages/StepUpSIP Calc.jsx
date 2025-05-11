@@ -47,7 +47,9 @@ function StepUpSIPCalculator() {
   };
 
   const handleInvestmentPeriodChange = (e) => {
-    let value = Math.max(0, Math.min(Number(e.target.value), maxInvestmentPeriod)
+    let value = Math.max(
+      0,
+      Math.min(Number(e.target.value), maxInvestmentPeriod)
     );
     setInvestmentPeriod(value);
   };
@@ -63,7 +65,7 @@ function StepUpSIPCalculator() {
       monthlyInvestment < 100 ||
       rateOfInterest <= 0 ||
       investmentPeriod <= 0 ||
-        stepUpPercent <= 0
+      stepUpPercent <= 0
     ) {
       setErrorMessages({
         monthlyInvestment:
@@ -167,7 +169,9 @@ function StepUpSIPCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-10">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Monthly Investment</label>
+                  <label id="monthly-investment-label" className="font-medium">
+                    Monthly Investment
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -205,7 +209,7 @@ function StepUpSIPCalculator() {
                   value={monthlyInvestment}
                   onChange={handleMonthlyInvestmentChange}
                   className="w-full cursor-pointer"
-                  aria-labelledby="investmentSlider"
+                  aria-labelledby="monthly-investment-label"
                 />
               </div>
             </div>
@@ -214,7 +218,9 @@ function StepUpSIPCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-10">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Annual Step-Up</label>
+                  <label id="step-up-label" className="font-medium">
+                    Annual Step-Up
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -242,7 +248,7 @@ function StepUpSIPCalculator() {
                   value={stepUpPercent}
                   onChange={handleStepUpChange}
                   className="w-full cursor-pointer"
-                  aria-labelledby="investmentSlider"
+                  aria-labelledby="step-up-label"
                 />
               </div>
             </div>
@@ -251,7 +257,7 @@ function StepUpSIPCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-10">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">
+                  <label id="rate-label" className="font-medium">
                     Expected Rate of Interest (p.a)
                   </label>
                   <div className="relative w-28 lg:w-32">
@@ -285,7 +291,7 @@ function StepUpSIPCalculator() {
                   value={rateOfInterest}
                   onChange={handleRateOfInterestChange}
                   className="w-full cursor-pointer"
-                  aria-labelledby="investmentSlider"
+                  aria-labelledby="rate-label"
                 />
               </div>
             </div>
@@ -294,7 +300,9 @@ function StepUpSIPCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-10">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Investment Period</label>
+                  <label id="investment-period-label" className="font-medium">
+                    Investment Period
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -328,7 +336,7 @@ function StepUpSIPCalculator() {
                   value={investmentPeriod}
                   onChange={handleInvestmentPeriodChange}
                   className="w-full cursor-pointer"
-                  aria-labelledby="investmentSlider"
+                  aria-labelledby="investment-period-label"
                 />
               </div>
             </div>

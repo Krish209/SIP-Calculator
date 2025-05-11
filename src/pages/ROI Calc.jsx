@@ -39,7 +39,9 @@ function ROICalculator() {
             ? "Returned Amount must be greater than zero"
             : "",
         yearsInvested:
-          yearsInvested <= 0 ? "Investment Duration must be greater than zero" : "",
+          yearsInvested <= 0
+            ? "Investment Duration must be greater than zero"
+            : "",
       });
       return; // Stop calculation if invalid input
     }
@@ -127,7 +129,9 @@ function ROICalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Invested Amount</label>
+                  <label id="invested-amount-label" className="font-medium">
+                    Invested Amount
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -157,6 +161,7 @@ function ROICalculator() {
                 value={investedAmount}
                 onChange={handleInvestedAmountChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="invested-amount-label"
               />
             </div>
 
@@ -164,7 +169,9 @@ function ROICalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Returned Amount</label>
+                  <label id="returned-amount-label" className="font-medium">
+                    Returned Amount
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -194,6 +201,7 @@ function ROICalculator() {
                 value={returnedAmount}
                 onChange={handleReturnedAmountChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="returned-amount-label"
               />
             </div>
 
@@ -201,7 +209,9 @@ function ROICalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Investment Duration (years)</label>
+                  <label id="years-invested-label" className="font-medium">
+                    Investment Duration (years)
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -231,6 +241,7 @@ function ROICalculator() {
                 value={yearsInvested}
                 onChange={handleYearsInvestedChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="years-invested-label"
               />
             </div>
           </div>
@@ -250,7 +261,7 @@ function ROICalculator() {
                 <div className="flex items-center mb-2.5 justify-between">
                   <div className="flex flex-col space-y-3 w-full">
                     <div className="flex justify-between">
-                    <span className="text-[14px] sm:text-base lg:text-[17px]">
+                      <span className="text-[14px] sm:text-base lg:text-[17px]">
                         Total Gain on Investment
                       </span>
                       <span className="text-base sm:text-lg lg:text-[19px]">
@@ -258,7 +269,7 @@ function ROICalculator() {
                       </span>
                     </div>
                     <div className="flex justify-between">
-                    <span className="text-[14px] sm:text-base lg:text-[17px]">
+                      <span className="text-[14px] sm:text-base lg:text-[17px]">
                         Return on Investment (ROI)
                       </span>
                       <span className="text-base sm:text-lg lg:text-[19px]">
@@ -266,7 +277,7 @@ function ROICalculator() {
                       </span>
                     </div>
                     <div className="flex justify-between">
-                    <span className="text-[14px] sm:text-base lg:text-[17px]">
+                      <span className="text-[14px] sm:text-base lg:text-[17px]">
                         Compound Annual Growth Rate (CAGR)
                       </span>
                       <span className="text-base sm:text-lg lg:text-[19px]">
@@ -295,7 +306,7 @@ function ROICalculator() {
         </div> */}
 
         <div className="py-4">
-           <ROIInfo />
+          <ROIInfo />
           {/* <ROIFaq /> */}
         </div>
       </div>

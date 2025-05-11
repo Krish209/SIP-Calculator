@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FiChevronDown, FiMenu } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
-import logo from "../assets/icons/logo.png";
+import logo from "../assets/icons/logo.webp";
 import { links } from "./Mylinks";
 
 function Header() {
@@ -71,7 +71,7 @@ function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2">
-            <img src={logo} alt="Logo" className="w-10 h-auto" />
+            <img src={logo} alt="Logo" className="w-8 h-auto" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -158,7 +158,7 @@ function Header() {
         ${mobileMenu ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="px-4 sm:px-6 lg:px-8 py-2 border-b border-gray-100 flex justify-between items-center">
-          <img src={logo} alt="Logo" className="w-10 h-auto" />
+          <img src={logo} alt="Logo" className="w-8 h-auto" />
           <button
             onClick={toggleMobileMenu}
             className="p-2 rounded-lg hover:bg-gray-100"
@@ -173,7 +173,7 @@ function Header() {
             <div key={index} className="mb-2">
               <button
                 onClick={() => item.submenu && handleDropdownToggle(index)}
-                className={`w-full flex items-center justify-between px-4 py-3 rounded-lg
+                className={`w-full flex items-center justify-between px-4 py-4 rounded-lg
                   ${
                     activeDropdown === index
                       ? "bg-indigo-50 text-indigo-600"
@@ -205,7 +205,7 @@ function Header() {
                       to={sublink.link}
                       onClick={() => setMobileMenu(false)}
                       className={({ isActive }) =>
-                        `block px-4 py-2 text-sm rounded-lg
+                        `block px-4 py-2.5 text-sm rounded-lg
                         ${
                           isActive
                             ? "bg-indigo-50 text-indigo-600"

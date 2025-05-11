@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
-import { formatNumber, formatChartNumber } from "./Calc"; 
+import { formatNumber, formatChartNumber } from "./Calc";
 import InflationInfo from "./Inflation Info";
 import InflationFAQ from "./Inflation Faq";
 
@@ -36,8 +36,7 @@ function InflationCalculator() {
           annualInflationRate < 0
             ? "Inflation rate must be greater than or equal to zero"
             : "",
-        years:
-          years <= 0 ? "Number of years must be greater than zero" : "",
+        years: years <= 0 ? "Number of years must be greater than zero" : "",
       });
       return; // Stop calculation if invalid input
     }
@@ -58,8 +57,7 @@ function InflationCalculator() {
     // Calculate the inflated amount for each year
     for (let year = 1; year <= years; year++) {
       // Apply inflation for the current year
-      inflatedAmountCalc =
-        inflatedAmountCalc * (1 + annualInflationRate / 100);
+      inflatedAmountCalc = inflatedAmountCalc * (1 + annualInflationRate / 100);
 
       // Save the data for the current year
       barDataAdjusted.push(initialAmount);
@@ -131,7 +129,9 @@ function InflationCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Initial Amount</label>
+                  <label id="initial-amount-label" className="font-medium">
+                    Initial Amount
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -161,6 +161,7 @@ function InflationCalculator() {
                 value={initialAmount}
                 onChange={handleInitialAmountChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="initial-amount-label"
               />
             </div>
 
@@ -168,7 +169,9 @@ function InflationCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Inflation Rate (p.a)</label>
+                  <label id="inflation-rate-label" className="font-medium">
+                    Inflation Rate (p.a)
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -200,6 +203,7 @@ function InflationCalculator() {
                 value={annualInflationRate}
                 onChange={handleAnnualInflationRateChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="inflation-rate-label"
               />
             </div>
 
@@ -207,7 +211,9 @@ function InflationCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Time Period (years)</label>
+                  <label id="years-label" className="font-medium">
+                    Time Period (years)
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -237,6 +243,7 @@ function InflationCalculator() {
                 value={years}
                 onChange={handleYearsChange}
                 className="w-full cursor-pointer"
+                aria-labelledby="years-label"
               />
             </div>
           </div>

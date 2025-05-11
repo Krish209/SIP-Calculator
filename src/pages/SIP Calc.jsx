@@ -16,7 +16,9 @@ function SIPCalculator() {
     return true; // true => SIP
   };
 
-  const [isSIP, setIsSIP] = useState(getDefaultInvestmentType(location.pathname));
+  const [isSIP, setIsSIP] = useState(
+    getDefaultInvestmentType(location.pathname)
+  );
 
   const [monthlyInvestment, setMonthlyInvestment] = useState(1000); // Default ₹1000 for SIP
   const [lumpsumAmount, setLumpsumAmount] = useState(10000); // Default ₹10000 for Lump Sum
@@ -92,13 +94,9 @@ function SIPCalculator() {
     ) {
       setErrorMessages({
         monthlyInvestment:
-          monthlyInvestment < 100
-            ? "Investment must be greater than 100"
-            : "",
+          monthlyInvestment < 100 ? "Investment must be greater than 100" : "",
         lumpsumAmount:
-          lumpsumAmount < 100
-            ? "Investment must be greater than 100"
-            : "",
+          lumpsumAmount < 100 ? "Investment must be greater than 100" : "",
         rateOfInterest:
           rateOfInterest <= 0
             ? "Rate of interest must be greater than zero"
@@ -251,7 +249,7 @@ function SIPCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">
+                  <label id="monthly-investment-label" className="font-medium">
                     {isSIP ? "Monthly Investment" : "Lump Sum Investment"}
                   </label>
                   <div className="relative w-28 lg:w-32">
@@ -281,13 +279,19 @@ function SIPCalculator() {
                     </span>
                   </div>
                 </div>
-                  
+
                 {/* Error Message */}
-                  {errorMessages[isSIP ? "monthlyInvestment" : "lumpsumAmount"] && (
-                    <p className="text-red-500 text-[13px] us:text-sm">
-                        {errorMessages[isSIP ? "monthlyInvestment" : "lumpsumAmount"]}
-                    </p>
-                  )}
+                {errorMessages[
+                  isSIP ? "monthlyInvestment" : "lumpsumAmount"
+                ] && (
+                  <p className="text-red-500 text-[13px] us:text-sm">
+                    {
+                      errorMessages[
+                        isSIP ? "monthlyInvestment" : "lumpsumAmount"
+                      ]
+                    }
+                  </p>
+                )}
               </div>
 
               <div className="">
@@ -303,7 +307,7 @@ function SIPCalculator() {
                       : handleLumpsumAmountChange
                   }
                   className="w-full cursor-pointer"
-                  aria-labelledby="investmentSlider"
+                  aria-labelledby="monthly-investment-label"
                 />
 
                 {/* <div className="flex justify-between text-sm text-gray-400 mt-0">
@@ -319,7 +323,7 @@ function SIPCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">
+                  <label id="rate-label" className="font-medium">
                     Expected Rate of Interest (p.a)
                   </label>
                   <div className="relative w-28 lg:w-32">
@@ -353,7 +357,7 @@ function SIPCalculator() {
                   value={rateOfInterest}
                   onChange={handleRateOfInterestChange}
                   className="w-full cursor-pointer"
-                  aria-labelledby="investmentSlider"
+                  aria-labelledby="rate-label"
                 />
 
                 {/* <div className="flex justify-between text-sm text-gray-400 mt-0">
@@ -367,7 +371,9 @@ function SIPCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label className="font-medium">Investment Period</label>
+                  <label id="investment-period-label" className="font-medium">
+                    Investment Period
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -401,7 +407,7 @@ function SIPCalculator() {
                   value={investmentPeriod}
                   onChange={handleInvestmentPeriodChange}
                   className="w-full cursor-pointer"
-                  aria-labelledby="investmentSlider"
+                  aria-labelledby="investment-period-label"
                 />
 
                 {/* <div className="flex justify-between text-sm text-gray-400 mt-0">
