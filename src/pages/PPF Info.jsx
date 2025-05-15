@@ -15,20 +15,20 @@ const PPFInfo = () => {
         <p className="mb-2">
           The <strong>Public Provident Fund (PPF)</strong> is a
           government-backed investment scheme aimed at promoting long-term
-          savings. It offers a combination of tax benefits, good guaranteed
-          returns, and safety, making it one of the most preferred savings
-          instruments in India. The Ministry of Finance sets the interest rate,
-          which is subject to change.
+          savings. It offers a combination of <strong>tax benefits, guaranteed 
+          and attractive returns,</strong> and <strong>safety</strong>, making 
+          it one of the most preferred savings instruments in India. The Ministry 
+          of Finance sets the interest rate, which is subject to change.
         </p>
         <p className="mb-2">
           To maximize the benefits of your PPF investment, it is beneficial to
           make your deposit{" "}
-          <strong>between April 1st and April 5th of a financial year</strong>.
+          <strong>between April 1st and April 5th each financial year</strong>.
           This ensures that your deposit is accounted for in the current
           financial year, and you begin earning interest from the start of the
-          year. If it is not possible to make a full year's deposit at once, you
-          can make monthly deposits by the 5th of each month to maximize
-          interest accrual.
+          year. If a lump-sum deposit isn't feasible to make a full year's deposit at once, you
+          can make <strong>monthly deposits by the 5th of each month</strong> to
+          maximize interest accrual.
         </p>
       </section>
 
@@ -39,13 +39,12 @@ const PPFInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Tenure:</strong> The PPF has a lock-in period of 15 years,
-            which can be extended in blocks of 5 years.
+            <strong>Tenure:</strong> 15 years (extendable in blocks of 5 years
+            after maturity)
           </li>
           <li>
-            <strong>Interest Rate:</strong> The interest rate is set by the
-            government and revised quarterly. It is usually higher than most
-            fixed deposits and is tax-free.
+            <strong>Interest Rate:</strong> Revised quarterly by the government;
+            generally higher than most fixed deposits and entirely tax-free
           </li>
           <li>
             <strong>Tax Benefits:</strong> Contributions are eligible for tax
@@ -66,6 +65,22 @@ const PPFInfo = () => {
         </ul>
       </section>
 
+      {/* Eligibility */}
+      <section className="my-4 md:my-6">
+        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+          Who is Eligible?
+        </h2>
+        <ul className="list-disc pl-6 space-y-1">
+          <li>Indian citizens (residents)</li>
+          <li>Minors (operated by a parent or legal guardian)</li>
+          <li>
+            <strong>NRIs (Non-Resident Indians)</strong> are not eligible to
+            open new PPF accounts. However, if an NRI holds a PPF account and
+            later becomes an NRI, they can continue the account till maturity.
+          </li>
+        </ul>
+      </section>
+
       {/* How to Open a PPF Account Section */}
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
@@ -77,16 +92,8 @@ const PPFInfo = () => {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Eligibility:</strong> Individuals and minors (with a
-            guardian) can open a PPF account. Only Indian citizens who are
-            residents of India can open a PPF account. NRIs (Non-Resident
-            Indians) are not eligible to open new PPF accounts. However, if an
-            NRI holds a PPF account and later becomes an NRI, they can continue
-            the account till maturity.
-          </li>
-          <li>
             <strong>Documents Required:</strong> Proof of identity, proof of
-            address, passport-size photo, PAN card (for large investments).
+            address, Aadhar card, passport-size photo, PAN card.
           </li>
           <li>
             <strong>Process:</strong> Visit a bank/post office, fill out the
@@ -105,10 +112,6 @@ const PPFInfo = () => {
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Maturity Period
         </h2>
-        <p className="mb-2">
-          The PPF account has a lock-in period of 15 years, after which you can
-          either withdraw the balance or extend the account.
-        </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Lock-in Period:</strong> The PPF account has a mandatory

@@ -32,8 +32,8 @@ const SIPInfo = () => {
             investing, which helps you develop a good saving habit.
           </li>
           <li>
-            <strong>Rupee Cost Averaging:</strong> SIP helps reduce the impact
-            of market fluctuations by buying more units when prices are low and
+            <strong>Rupee Cost Averaging:</strong> SIP reduces the impact
+            of market volatility by buying more units when prices are low and
             fewer units when prices are high.
           </li>
           <li>
@@ -156,7 +156,7 @@ const SIPInfo = () => {
               <strong className="">Net Asset Value (NAV):</strong> NAV
               represents the market value of one unit of the mutual fund, and it
               fluctuates daily based on the performance of the underlying
-              assets. The higher the NAV at the time of your investment, the
+              assets. The lower the NAV at the time of your investment, the
               more units you will receive for the same amount invested. NAV
               growth contributes directly to your returns.
             </li>
@@ -308,6 +308,11 @@ const SIPInfo = () => {
                 <td className="px-0.5 py-2">Returns</td>
                 <td className="px-0.5 py-2">Moderate, depends on market</td>
                 <td className="px-0.5 py-2">Variable, market timing impacts</td>
+              </tr>
+              <tr>
+                <td className="px-0.5 py-2">Market Timing</td>
+                <td className="px-0.5 py-2">Not required</td>
+                <td className="px-0.5 py-2">Crucial</td>
               </tr>
             </tbody>
           </table>
@@ -578,10 +583,10 @@ const SIPInfo = () => {
           <li>
             <strong>Stay Consistent:</strong> Stick to your SIP investment even
             if the market goes down. Consistency is key, and it allows you to
-            take advantage of market volatility through dollar-cost averaging.
+            take advantage of market volatility through rupee-cost averaging.
           </li>
           <li>
-            <strong>Be Patient:</strong> SIP is a long-term investments. Over
+            <strong>Be Patient:</strong> SIP is a long-term investment. Over
             time, your investment grows as you continue to contribute and
             benefit from compounding.
           </li>
@@ -640,8 +645,8 @@ const SIPInfo = () => {
           </li>
           <li>
             <strong>Overextending SIP Contributions:</strong> Avoid
-            overcommitting to SIP contributions without considering one's
-            current cash flow needs can be useful. It's important to balance SIP
+            overcommitting to SIP contributions without considering your
+            current cash flow needs can backfire. It's important to balance SIP
             investments with other financial obligations.
           </li>
         </ul>

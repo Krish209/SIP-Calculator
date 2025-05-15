@@ -15,11 +15,12 @@ function SSYInfo() {
           The <strong>Sukanya Samriddhi Yojana (SSY)</strong> is a
           government-backed savings scheme launched by the Indian government in
           2015 as part of the
-          <strong>‘Beti Bachao Beti Padhao’</strong> campaign. Its primary goal
-          is to promote the welfare and financial security of the girl child by
-          encouraging parents to save for their daughter’s future education and
-          marriage expenses. It offers one of the highest interest rates among
-          various small savings schemes in India.
+          <strong>‘Beti Bachao Beti Padhao’</strong> initiative. Its primary
+          goal is to promote the welfare and financial security of the girl
+          child by encouraging parents to save for their daughter’s future
+          education and marriage expenses. It offers{" "}
+          <strong>one of the highest interest rates</strong> among various small
+          savings schemes in India.
         </p>
       </section>
 
@@ -30,16 +31,20 @@ function SSYInfo() {
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Eligibility:</strong> The account can be opened only for a
-            girl child under the age of 10. A single girl child or parents with
-            multiple daughters can open an account for each child.
+            girl child <strong>below the age of 10</strong>. Parents or legal
+            guardians can open one account per girl child, with a maximum of two
+            accounts for two girls (exception: more than two daughters in case
+            of twin or triplet daughters).
           </li>
           <li>
             <strong>Interest Rate:</strong> The interest rate is currently 8.0%
-            per annum, compounded annually.
+            per annum, compounded annually (subject to quarterly revision by the
+            government).
           </li>
           <li>
             <strong>Tenure:</strong> The maturity period is 21 years from the
-            date of opening the account or until the girl child turns 21.
+            date of opening the account or until the girl child turns 21,
+            whichever is earlier.
           </li>
           <li>
             <strong>Contribution Limit:</strong> Minimum deposit of ₹250 per
@@ -47,7 +52,8 @@ function SSYInfo() {
           </li>
           <li>
             <strong>Tax Benefits:</strong> Contributions qualify for tax
-            deductions under Section 80C, and the interest earned is tax-free.
+            deductions under Section 80C, and the interest earned and maturity
+            proceeds are tax-free.
           </li>
           <li>
             <strong>Partial Withdrawals:</strong> Partial withdrawals are
@@ -66,7 +72,7 @@ function SSYInfo() {
           How to Open an SSY Account
         </h2>
         <ol className="list-decimal list-inside space-y-2">
-          <li>Visit the nearest post office or bank offering SSY.</li>
+          <li>Visit the nearest post office or bank offering SSY scheme.</li>
           <li>
             Fill out the application form with the girl child's birth
             certificate and identity proof of the guardian.
@@ -89,17 +95,17 @@ function SSYInfo() {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>High-Interest Rates:</strong> SSY offers one of the highest
+            <strong>High-Interest Rates:</strong> It offers one of the highest
             interest rates among government-backed savings schemes.
           </li>
           <li>
-            <strong>Tax-Free Interest:</strong> The interest earned is
-            completely tax-free, making it an attractive option.
+            <strong>Tax-Free Returns:</strong> Both interest and maturity amount
+            are completely tax-free, making it an attractive option.
           </li>
           <li>
-            <strong>Long-Term Financial Security:</strong> SSY ensures that
-            parents can save for their daughter’s future education or marriage
-            over a long term.
+            <strong>Long-Term Security:</strong> SSY ensures that parents can
+            save for their daughter’s future education or marriage over a long
+            term.
           </li>
           <li>
             <strong>Low Minimum Deposit:</strong> The minimum deposit
@@ -162,12 +168,16 @@ function SSYInfo() {
           Conclusion
         </h2>
         <p className="mb-2">
-          The Sukanya Samriddhi Yojana (SSY) is one of the best schemes for
-          ensuring the future financial security of your daughter. It combines
-          high interest rates, tax benefits, and long-term savings with the
-          security of a government-backed investment. It’s an excellent scheme
-          to plan for your daughter’s education and marriage while contributing
-          to the overall empowerment of the girl child in India.
+          The SSY is one of the best schemes for ensuring the future financial
+          security of your daughter. It combines high returns, tax benefits, and
+          long-term savings with the security of a government-backed investment.
+          it’s one of the best options available for parents to invest in their
+          girl child’s future.
+        </p>
+        <p className="mb-2">
+          By contributing to this scheme, you not only build a financial cushion
+          for her education and marriage but also take a step toward the
+          empowerment of the girl child in India.
         </p>
       </section>
     </div>

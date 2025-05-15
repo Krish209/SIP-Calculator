@@ -22,7 +22,7 @@ const RDInfo = () => {
         </p>
         <p className="mb-2">
           While it may not offer the highest returns compared to other
-          investment options like Mutual Funds, it is perfect for risk-averse
+          investment options like Mutual Funds, they are perfect for risk-averse
           individuals and those who want a disciplined, low-risk way of saving
           for medium-term goals. The regular monthly deposit forces the investor
           to save without a large initial investment.
@@ -31,29 +31,36 @@ const RDInfo = () => {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          Benefits of Recurring Deposits
+          Benefits of RD
         </h2>
         <ul className="list-disc pl-6 space-y-1">
-          <li>Easy to start with no large initial investment required.</li>
           <li>
-            Safe and risk-free with guaranteed returns, backed by the bank.
+            <strong>Easy to Start:</strong> Easy to start with no large initial
+            investment required.
           </li>
           <li>
-            Helps develop a disciplined saving habit with regular contributions.
+            <strong>Safe and Risk-Free:</strong> Guaranteed returns, backed by
+            the bank.
           </li>
           <li>
-            Flexible tenure and deposit amount based on your financial goals.
+            <strong>Disciplined Saving:</strong> Helps develop a disciplined
+            saving habit with regular contributions.
           </li>
           <li>
-            Loan facility available against the RD balance in case of emergency.
+            <strong>Flexible Tenure:</strong> Choose the tenure and deposit
+            amount based on your financial goals.
           </li>
           <li>
-            Premature withdrawal allowed with some penalties and reduced
-            interest rates.
+            <strong>Loan Facility:</strong> Some banks offer loans against the
+            RD balance in case of emergency.
           </li>
           <li>
-            Provides an opportunity for tax-saving with certain RD schemes
-            (Section 80C).{" "}
+            <strong>Premature Withdrawal:</strong> Allowed with some penalties
+            and reduced interest rates.
+          </li>
+          <li>
+            <strong>Tax-Saving Opportunity:</strong> Certain RD schemes qualify
+            for tax benefits under Section 80C.
           </li>
         </ul>
       </section>
@@ -72,9 +79,9 @@ const RDInfo = () => {
             Aadhar, passport, address proof, and photographs.
           </li>
           <li>
-            <strong>Online Opening:</strong> Most banks offer the ability to
-            open RDs online through their websites or apps, making the process
-            easy and convenient.
+            <strong>Online Opening:</strong> Most banks offer the option to open
+            RDs online through their websites or apps, making the process easy
+            and convenient.
           </li>
         </ul>
       </section>
@@ -100,7 +107,9 @@ const RDInfo = () => {
             amount (A) is:
           </p>
 
-          <code className="font-bold">A = P × (((1 + r/n)^(nt) - 1) × (1 + r/n)) / (r/n)</code>
+          <code className="font-bold">
+            A = P × (((1 + r/n)^(nt) - 1) × (1 + r/n)) / (r/n)
+          </code>
 
           <p className="mt-2">Where:</p>
           <ul className="list-disc pl-6 space-y-1">
@@ -224,7 +233,7 @@ const RDInfo = () => {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          Early Withdrawal and Penalty
+          Premature Withdrawal and Penalty
         </h2>
         <p className="mb-2">
           Early withdrawal from an RD is possible but usually comes with a

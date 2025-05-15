@@ -5,6 +5,8 @@ import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
 import { LineChart } from "./chartjs/LineChart";
 import SIPInfo from "./SIP Info";
+import LumpsumInfo from "./Lumpsum Info";
+import LumpsumFAQ from "./Lumpsum Faq";
 import SIPFAQ from "./SIP Faq";
 
 function SIPCalculator() {
@@ -536,8 +538,8 @@ function SIPCalculator() {
         </div>
 
         <div className="py-4">
-          <SIPInfo />
-          <SIPFAQ />
+        {isSIP ? <SIPInfo /> : <LumpsumInfo />}
+        {isSIP ? <SIPFAQ /> : <LumpsumFAQ />}
         </div>
 
         {/* Line Chart (Investment Growth Over Time) */}

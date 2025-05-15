@@ -272,7 +272,7 @@ const AllCalculator = () => {
         </svg>
       ),
       category: "Mutual Funds",
-      link: "/mutual-fund-returns",
+      link: "/mutual-fund-calculator",
     },
     {
       title: "Inflation Calculator",

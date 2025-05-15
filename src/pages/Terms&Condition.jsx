@@ -4,7 +4,7 @@ const TermsAndConditions = () => {
   return (
     <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-4">Terms and Conditions</h1>
+        <h1 className="text-4xl font-bold mb-2 sm:mb-4">Terms and Conditions</h1>
         <p className="mb-6">
           <strong>Effective Date:</strong> May 03, 2025
         </p>

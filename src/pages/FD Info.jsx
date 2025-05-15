@@ -15,21 +15,22 @@ const FdInfo = () => {
           A <strong>Fixed Deposit (FD)</strong> is one of the safest and most
           reliable investment options available, allowing you to invest a lump
           sum amount of money for a fixed tenure at a predetermined interest
-          rate. During this tenure, you cannot withdraw your investment, but you
-          are assured of earning a fixed return on your investment at regular
-          intervals (such as annually, quarterly, etc.).
+          rate. During this period, the investment remains locked, and
+          ppremature withdrawal is allowed in most banks but with a penalty or
+          reduced interest. In return, you earn assured returns at fixed
+          intervals (monthly, quarterly, annually) or at maturity.
         </p>
       </section>
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          Key Features of Fixed Deposits:
+          Key Features of FDs:
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Safety:</strong> Fixed Deposits are considered one of the
-            safest investment options, as they are backed by banks and financial
-            institutions.
+            <strong>Safety:</strong> FDs are considered one of the safest
+            investment options, as they are backed by banks and regulated
+            financial institutions.
           </li>
           <li>
             <strong>Predictability:</strong> You know exactly how much you will
@@ -52,6 +53,17 @@ const FdInfo = () => {
             terms of your FD. The more frequently interest is compounded, the
             higher your returns.
           </li>
+          <li>
+            <strong>Joint FD Accounts Options:</strong> FDs can be held jointly
+            by two or more individuals. Joint FDs are popular among couples and
+            senior citizens who want hassle-free inheritance.
+          </li>
+          <li>
+            <strong>FD Laddering Strategy:</strong> This is an advanced
+            investment approach where you split your FD investment into multiple
+            FDs with different tenures. This helps balance liquidity and
+            long-term returns by spreading maturity dates.
+          </li>
         </ul>
       </section>
 
@@ -69,7 +81,6 @@ const FdInfo = () => {
             rate, which remains constant throughout the term of your FD. The
             rate is usually higher than a regular savings account but lower than
             riskier investment options.
-            
             <div className="bg-blue-50 p-2 md:p-4 rounded-lg mt-2 shadow-md">
               <p>
                 <strong>Important Note:</strong> The interest rate offered on an
@@ -97,7 +108,7 @@ const FdInfo = () => {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          Advantages of Fixed Deposits:
+          Advantages of FDs:
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
@@ -120,12 +131,52 @@ const FdInfo = () => {
             returns are not affected by market conditions, making them a
             low-risk option.
           </li>
+          <li>
+            <strong>Nomination Facility:</strong> You can nominate a family
+            member or any individual to receive the FD proceeds in the event of
+            the depositor’s demise.
+          </li>
+          <li>
+            <strong>Auto-Renewal Facility:</strong> Many banks offer an
+            auto-renewal option when booking an FD. At maturity, the FD is
+            automatically renewed for the same tenure at the prevailing interest
+            rate.
+          </li>
         </ul>
       </section>
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          Types of Fixed Deposits:
+          Deposit Insurance Coverage:
+        </h2>
+        <p className="mb-2">
+          In India, Fixed Deposits placed with scheduled banks are protected by
+          the Deposit Insurance and Credit Guarantee Corporation (DICGC), a
+          subsidiary of the Reserve Bank of India (RBI). Under this scheme:
+        </p>
+        <ul className="list-decimal pl-6 space-y-2">
+          <li>
+            <strong>Coverage Limit:</strong> Deposits (including principal and
+            interest) up to ₹5 lakh per depositor per bank are insured.
+          </li>
+          <li>
+            <strong>Applicability:</strong> This insurance covers savings,
+            fixed, current, and recurring deposits.
+          </li>
+          <li>
+            <strong>No Additional Cost:</strong> The insurance is automatic and
+            free for the depositor.
+          </li>
+        </ul>
+        <p className="mb-2">
+          This makes FDs with banks even more secure, especially for risk-averse
+          investors.
+        </p>
+      </section>
+
+      <section className="my-4 md:my-6">
+        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+          Types of FDs:
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
@@ -134,7 +185,7 @@ const FdInfo = () => {
           </li>
           <li>
             <strong>Tax-Saving FD:</strong> These FDs offer tax deductions under
-            Section 80C the Income Tax Act, 1961, investors can claim a tax
+            Section 80C of the Income Tax Act, 1961, investors can claim a tax
             deduction of up to ₹1.5 lakh per year. They have a lock-in period of
             5 years.
           </li>
@@ -198,7 +249,7 @@ const FdInfo = () => {
             year (₹50,000 for senior citizens).
           </li>
           <li>
-            <strong>Interest Rates Fluctuations:</strong> While FD rates are
+            <strong>Interest Rate Fluctuations:</strong> While FD rates are
             fixed, it's important to review them periodically as interest rates
             change with economic conditions.
           </li>
@@ -209,7 +260,7 @@ const FdInfo = () => {
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Is an FD Investment Right for You?
         </h2>
-        <p className="mb-2">Fixed Deposits are ideal for investors who:</p>
+        <p className="mb-2">FDs are ideal for investors who:</p>
         <ul className="list-disc pl-6 space-y-2">
           <li>Are looking for a low-risk, guaranteed return on investment.</li>
           <li>Want to park funds for a defined period.</li>
@@ -219,10 +270,11 @@ const FdInfo = () => {
           </li>
         </ul>
         <p className="my-2">
-          FDs may not be suitable if you are looking for high returns or if you
-          want more liquidity. If you are willing to take on some risk for
-          potentially higher returns, consider other investment options like
-          mutual funds or stocks.
+          FDs may not be suitable if you
+          <ul className="list-disc pl-6 space-y-2">
+            <li>are looking for high returns</li>
+            <li>want more liquidity.</li>
+          </ul>
         </p>
       </section>
     </div>

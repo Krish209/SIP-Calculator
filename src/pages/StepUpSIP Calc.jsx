@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { formatNumber, formatChartNumber } from "./Calc";
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
+import StepUpSIPInfo from "./StepUpSip Info";
+import StepUpSIPFAQ from "./StepUpSip Faq";
 
 function StepUpSIPCalculator() {
   const [monthlyInvestment, setMonthlyInvestment] = useState(1000); // Default ₹1000 for SIP
@@ -158,7 +160,7 @@ function StepUpSIPCalculator() {
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
-        Step Up SIP Calculator
+        Step-Up SIP Calculator
       </h1>
 
       <div className="space-y-4">
@@ -418,6 +420,10 @@ function StepUpSIPCalculator() {
               </div>
             </div>
           ) : null}
+        </div>
+        <div className="py-4">
+          <StepUpSIPInfo />
+          <StepUpSIPFAQ />
         </div>
       </div>
     </div>

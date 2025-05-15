@@ -267,19 +267,20 @@ function CompoundInterest() {
             </div>
 
             {/* Compound Frequency */}
-            <div className="flex justify-between items-center">
-              <label className="font-medium">Compounding Frequency</label>
-              <select
-                value={compoundFrequency}
-                onChange={handleCompoundFrequencyChange}
-                className="p-2 border bg-white rounded-md shadow-sm w-28 lg:w-32"
-              >
-                <option value={1}>Annually</option>
-                <option value={2}>Semi-Annually</option>
-                <option value={4}>Quarterly</option>
-                <option value={12}>Monthly</option>
-              </select>
-            </div>
+            <label htmlFor="compounding-frequency" className="font-medium">
+              Compounding Frequency
+            </label>
+            <select
+              id="compounding-frequency"
+              value={compoundFrequency}
+              onChange={handleCompoundFrequencyChange}
+              className="p-2 border bg-white rounded-md shadow-sm w-28 lg:w-32"
+            >
+              <option value={1}>Annually</option>
+              <option value={2}>Semi-Annually</option>
+              <option value={4}>Quarterly</option>
+              <option value={12}>Monthly</option>
+            </select>
           </div>
 
           {/* Chart & Result Section */}

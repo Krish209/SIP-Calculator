@@ -13,12 +13,45 @@ const NPSInfo = () => {
         </h2>
         <p>
           The <strong>National Pension System (NPS)</strong> is a
-          government-sponsored pension scheme that allows individuals to
-          contribute towards their retirement savings during their working
-          years. The NPS offers individuals an opportunity to accumulate funds
-          for their retirement, with the option to manage and grow the funds
-          based on different investment options.
+          government-backed retirement scheme designed to help individuals
+          systematically save and invest for their retirement. Subscribers can
+          contribute regularly during their working years, and the funds are
+          invested in a diversified mix of equities, corporate bonds, and
+          government securities. At retirement, a portion of the accumulated
+          corpus is used to provide a steady monthly pension, while the rest can
+          be withdrawn as a lump sum.
         </p>
+      </section>
+
+      {/* Key Features */}
+      <section className="my-4 md:my-6">
+        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+          Key Features
+        </h2>
+        <ul className="list-disc pl-6 space-y-1">
+          <li>
+            <strong>Government-Backed Scheme:</strong> Regulated by the Pension
+            Fund Regulatory and Development Authority (PFRDA).
+          </li>
+          <li>
+            <strong>Eligibility:</strong> Open to all Indian citizens (resident
+            or non-resident) aged 18 to 60 years. Non-Resident Indians (NRIs)
+            can also participate, subject to additional documentation
+            requirements.
+          </li>
+          <li>
+            <strong>Flexible Contributions:</strong> Investors can contribute
+            monthly, quarterly, or annually.
+          </li>
+          <li>
+            <strong>Portability:</strong> NPS account is portable across jobs
+            and locations, even between the public and private sectors.
+          </li>
+          <li>
+            <strong>Low Cost :</strong> Among the lowest fund management charges
+            globally (~0.01% to 0.09% per annum).
+          </li>
+        </ul>
       </section>
 
       <section className="my-4 md:my-6">
@@ -39,7 +72,7 @@ const NPSInfo = () => {
             NPS Formula:
           </h3>
           <p className="mb-2 md:mb-4">
-            The formula to calculate NPS Corpus is:
+            The formula used to calculate the NPS corpus is:
           </p>
 
           <code className="font-bold">A = P × (1 + r/n)^(nt)</code>
@@ -57,8 +90,7 @@ const NPSInfo = () => {
               <strong>r</strong> = Annual interest rate
             </li>
             <li>
-              <strong>n</strong> = Number of times that interest is compounded
-              per year
+              <strong>n</strong> = Number of compounding periods per year
             </li>
             <li>
               <strong>t</strong> = Number of years the money is invested or
@@ -69,7 +101,7 @@ const NPSInfo = () => {
 
         <p className="mb-2 mt-4 font-semibold">Example:</p>
         <p className="mb-2">
-          Let's take an example of Mr. Shyam, a 30-year-old employee working in
+          Let's take the example of Mr. Shyam, a 30-year-old employee working in
           a government sector. He decides to invest in the{" "}
           <strong>National Pension Scheme (NPS)</strong> to secure his
           retirement. Mr. Shyam will make monthly contributions of ₹5,000
@@ -139,9 +171,9 @@ const NPSInfo = () => {
         </ul>
 
         <p className="mb-2">
-          You can invest as much or as little as you like, based on your
-          earnings and financial goals. Each subscriber to NPS is assigned a
-          unique identifier called the{" "}
+          Subscribers can invest according to their financial capacity and
+          retirement goals. Each subscriber to NPS is assigned a unique
+          identifier called the{" "}
           <strong>Permanent Retirement Account Number (PRAN)</strong>, which
           tracks the contributions and status of the account.
         </p>
@@ -172,11 +204,11 @@ const NPSInfo = () => {
 
         <div className="bg-blue-50 p-2 md:p-4 rounded-lg mt-4 shadow-md">
           <p>
-            <strong>Important Note:</strong> If minimum annual contribution not
-            contributed the account will be frozen. In order to unfreeze the
+            <strong>Important Note:</strong> If the minimum annual contribution
+            is not made, the account will be frozen. In order to unfreeze the
             account, the customer has to pay the total of minimum contributions
             for the period of freeze, the minimum contribution for the year in
-            which the account is reactivated and a penalty of Rs.100/-.
+            which the account is reactivated and a penalty of ₹100.
           </p>
         </div>
       </section>
@@ -193,8 +225,8 @@ const NPSInfo = () => {
 
         <ul className="list-disc pl-6 space-y-2 mb-2">
           <li>
-            <strong>Equity (E):</strong> Investment in stocks, limited to 50% of
-            the total corpus.
+            <strong>Equity (E):</strong> Investment in stocks, with a maximum
+            allocation of 50% of the total corpus.
           </li>
           <li>
             <strong>Corporate Bonds (C):</strong> Investment in corporate debt
@@ -247,10 +279,10 @@ const NPSInfo = () => {
             deductions.
           </li>
           <li>
-            <strong>Tax on Withdrawals:</strong> 60% of the corpus withdrawn at
-            retirement is tax-free (lump sum withdrawal). The remaining 40% must
-            be used to purchase an annuity, which is taxable based on income tax
-            brackets.
+            <strong>Tax on Withdrawals:</strong> Up to 60% of the NPS corpus
+            withdrawn at retirement is tax-free. The remaining 40% must be used
+            to purchase an annuity, and the annuity income is taxable as per the
+            subscriber’s income tax slab.
           </li>
         </ul>
       </section>
@@ -274,12 +306,12 @@ const NPSInfo = () => {
           <li>
             <strong>Premature Exit:</strong> If a subscriber exits before 60, at
             least 80% of the accumulated pension corpus must be used to purchase
-            an annuity, and the rest must be used for lumpsum withdrawal. The
+            an annuity, and the rest can be withdrawn as a lump sum. The
             subscriber must have contributed for{" "}
             <strong>at least 10 years</strong>.
           </li>
           <li>
-            <strong>Deferment:</strong> If subscriber prefer to continue
+            <strong>Deferment:</strong> If a subscriber prefers to continue
             investing in NPS after 60, you can defer your exit and withdrawal
             until the age of 75. You can choose to defer the lump sum
             withdrawal, the annuity purchase, or both.
@@ -347,18 +379,19 @@ const NPSInfo = () => {
           Conclusion
         </h2>
         <p className="mb-2">
-          The National Pension System (NPS) is a robust and flexible retirement
-          savings option that provides tax benefits and allows individuals to
-          create a retirement corpus by investing in a diversified portfolio. It
-          is designed to ensure financial security after retirement while
-          offering transparency and low-cost management.
+          The National Pension System (NPS) is a well-regulated, cost-effective,
+          and flexible retirement savings scheme tailored for long-term
+          financial security. It combines government backing with exposure to
+          diversified assets, offering significant tax benefits.
         </p>
         <p className="mb-2">
-          While it offers numerous advantages, such as low-cost management and a
-          diversified investment approach, individuals should consider its
-          limitations, including the tax on annuity and restrictions on
-          withdrawals. Overall, NPS can be an important component of long-term
-          retirement planning in India.
+          While NPS provides numerous advantages—such as transparency, low cost,
+          and disciplined savings—it also comes with certain limitations, like
+          taxation on annuity income and restricted withdrawal options.
+        </p>
+        <p className="mb-2">
+          Nevertheless, NPS remains a smart and structured approach to
+          retirement planning for individuals in India.
         </p>
       </section>
     </div>

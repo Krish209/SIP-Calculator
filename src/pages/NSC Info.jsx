@@ -12,12 +12,13 @@ const NSCInfo = () => {
           What is NSC?
         </h2>
         <p className="mb-2">
-          <strong>National Savings Certificate (NSC)</strong> is a safe and
-          reliable investment option for individuals seeking to grow their
-          savings while also benefiting from tax deductions. It is ideal for
-          risk-averse investors and taxpayers who want to reduce their taxable
-          income. Despite its lock-in period and taxable interest, NSC remains a
-          solid choice for fixed returns and government-backed security.
+          <strong>National Savings Certificate (NSC)</strong> is a
+          government-backed savings scheme that offers a safe and reliable
+          investment option for individuals aiming to grow their savings while
+          enjoying tax benefits. It is ideal for risk-averse investors and
+          taxpayers who wish to reduce their taxable income. Despite its lock-in
+          period and taxable interest, NSC remains a dependable choice due to
+          its fixed returns and sovereign guarantee.
         </p>
       </section>
 
@@ -25,28 +26,43 @@ const NSCInfo = () => {
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Key Features of NSC
         </h2>
-        <ul className="list-disc pl-6 space-y-1">
-          {" "}
+        <ul className="list-disc pl-6 space-y-2">
           <li>
-            Government-backed investment scheme offering low-risk returns.
+            <strong>Government-Backed:</strong> Investment scheme offering
+            low-risk returns, backed by the Government of India.
           </li>
           <li>
-            Fixed interest rate determined by the Government of India, typically
-            revised quarterly.
+            <strong>Fixed Interest Rate:</strong> Determined by the Government
+            of India, typically revised quarterly. (Currently around 7.7% p.a.)
           </li>
           <li>
-            Tax benefits under Section 80C of the Income Tax Act (up to ₹1.5
-            lakh per year).
-          </li>
-          <li>Lock-in period of 5 years with interest compounded annually.</li>
-          <li>Minimum investment amount of ₹100, with no maximum limit.</li>
-          <li>Interest is paid only at maturity but is compounded annually.</li>
-          <li>
-            Transferable from one person to another under specific conditions.
+            <strong>Tax Benefits:</strong> Eligible for tax benefits under{" "}
+            <strong>Section 80C</strong> of the Income Tax Act (up to ₹1.5 lakh
+            per financial year).
           </li>
           <li>
-            Premature withdrawal not allowed except in cases like the death of
-            the investor.
+            <strong>Eligibility:</strong> Open only to Indian residents. NRIs
+            are not eligible.
+          </li>
+          <li>
+            <strong>Lock-in Period:</strong> A fixed lock-in period of 5 years
+            with interest compounded annually.
+          </li>
+          <li>
+            <strong>Investment Amount:</strong> Minimum of ₹100, with no maximum
+            limit.
+          </li>
+          <li>
+            <strong>Interest Payment:</strong> Interest is paid only at
+            maturity, but is compounded annually.
+          </li>
+          <li>
+            <strong>Transferability:</strong> Can be transferred from one person
+            to another under specific conditions.
+          </li>
+          <li>
+            <strong>Premature Withdrawal:</strong> Not allowed except in cases
+            like the death of the investor.
           </li>
         </ul>
       </section>
@@ -56,10 +72,10 @@ const NSCInfo = () => {
           How Does NSC Work?
         </h2>
         <p className="mb-2">
-          After purchasing the National Savings Certificate (NSC) at a Post
-          Office, the amount you invest earns a fixed interest rate compounded
-          annually. The interest is added to the principal every year and is
-          paid out only at maturity (after 5 years).
+          When you purchase an NSC at a Post Office, the amount you invest earns
+          a fixed interest rate compounded annually. The interest is added to
+          the principal every year and is paid out only at maturity (after 5
+          years).
         </p>
         <p className="mb-2">
           For example, if you invest ₹1,000 in NSC at an interest rate of 6.8%,
@@ -74,10 +90,9 @@ const NSCInfo = () => {
           Interest Rates on NSC
         </h2>
         <p className="mb-2">
-          The interest rate on National Savings Certificates (NSC) is fixed by
-          the government and is subject to periodic revisions. Currently, the
-          interest rate for a 5-year NSC is around 6.8% per annum (subject to
-          change based on the government's decision).
+          The interest rate on NSC is fixed by the government and is subject to
+          quarterly revisions. As of Q2 FY 2025, the interest rate is 7.7% per
+          annum.
         </p>
         <p className="mb-2">
           The interest on NSC is compounded annually, meaning interest is added
@@ -102,9 +117,9 @@ const NSCInfo = () => {
             under "Income from Other Sources".
           </li>
           <li>
-            <strong>TDS (Tax Deducted at Source):</strong> NSC does not deduct
-            TDS, but the interest is taxable, and the investor must declare it
-            while filing tax returns.
+            <strong>No TDS (Tax Deducted at Source):</strong> NSC does not
+            deduct TDS, but the interest is taxable, and the investor must
+            declare it while filing tax returns.
           </li>
           <li>
             <strong>Interest Reinvestment Benefit:</strong> The interest added
@@ -123,11 +138,6 @@ const NSCInfo = () => {
             <strong>NSC VIII Issue:</strong> This is the standard 5-year NSC,
             which provides interest that is compounded annually and paid only at
             maturity.
-          </li>
-          <li>
-            <strong>NSC IX Issue:</strong> This version has a longer maturity
-            period of 10 years, though it is less common than the 5-year
-            version.
           </li>
         </ul>
       </section>
@@ -213,7 +223,7 @@ const NSCInfo = () => {
           </li>
           <li>
             To purchase, you need to provide KYC documents like Aadhar card, PAN
-            card, and passport-sized photographs.
+            card, and passport-sized photographs, address and identity proof (as per KYC norms).
           </li>
         </ul>
       </section>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { formatNumber, formatChartNumber } from "./Calc";
 import KVPInfo from "./KVP Info";
+import KVPFAQ from "./KVP Faq";
 
 function KVP() {
   const [investmentAmount, setInvestmentAmount] = useState(50000); // Default ₹50,000
@@ -88,7 +89,7 @@ function KVP() {
             {/* Investment Period */}
             <div className="flex justify-between items-center">
               <label className="font-medium">Time to Maturity</label>
-              <div className="">9 Years and 5 Months</div>
+              <div className="">9 Years and 7 Months</div>
             </div>
           </div>
 
@@ -116,6 +117,7 @@ function KVP() {
         </div>
         <div className="py-4">
           <KVPInfo />
+          <KVPFAQ />
         </div>
       </div>
     </div>
