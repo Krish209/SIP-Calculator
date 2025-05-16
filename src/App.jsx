@@ -27,6 +27,7 @@ import AboutPage from "./components/About Us";
 import Contact from "./components/Contact";
 import TermsAndConditions from "./pages/Terms&Condition";
 import PrivacyPolicy from "./pages/Privacy Policy";
+import Disclaimer from "./pages/Disclaimer";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="terms" element={<TermsAndConditions />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="disclaimer" element={<Disclaimer />} />
 
           {/* Investment Options Route */}
           <Route path="sip-calculator" element={<SIPCalculator />} />

@@ -9,7 +9,7 @@ const TermsAndConditions = () => {
           <strong>Effective Date:</strong> May 03, 2025
         </p>
 
-        <div className="space-y-6 leading-relaxed">
+        <div className="space-y-6">
           <p>
             Welcome to SipGo! By accessing or using our
             website, you agree to comply with and be bound by the following

@@ -1,0 +1,188 @@
+import React from "react";
+
+const Disclaimer = () => {
+  return (
+    <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold mb-2 sm:mb-4">Disclaimer</h1>
+        <p className="mb-6">
+          <strong>Effective Date:</strong> May 16, 2025
+        </p>
+
+        <div className="space-y-6">
+          <div>
+            <p className="mb-2">
+              Welcome to Sipgo – your online investment calculator hub. We offer
+              a range of tools and content designed to help users understand and
+              estimate potential returns on various financial instruments, such
+              as SIP (Systematic Investment Plan), Lumpsum investments, PPF
+              (Public Provident Fund), NPS (National Pension System), NSC
+              (National Savings Certificate), SSY (Sukanya Samriddhi Yojana),
+              and many others.
+            </p>
+            <p className="mb-2">
+              Please read this disclaimer carefully before using our website or
+              any of our calculators.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-semibold mb-2">
+              1. Informational Purposes Only
+            </h2>
+            <p className="mb-2">
+              All content provided on Sipgo, including our investment
+              calculators, charts, projections, and scheme descriptions, is
+              intended solely for informational and educational purposes. We do
+              not offer any kind of financial, legal, tax, or investment advice.
+            </p>
+            <p className="mb-2">
+              The calculators and tools available on this platform are designed
+              to give you a basic understanding and a general estimate of
+              investment outcomes under certain assumptions. They should not be
+              considered as a substitute for professional advice.
+            </p>
+            <p className="mb-2">
+              If you are planning to invest, modify your investment strategy, or
+              take financial decisions based on these tools, we strongly
+              recommend consulting a certified financial advisor, tax
+              consultant, or investment professional.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-semibold mb-2">
+              2. No Guarantees on Accuracy or Results
+            </h2>
+            <p className="mb-2">
+              While we strive to ensure that the information and calculations
+              provided on Sipgo are up-to-date, accurate, and based on current
+              financial norms, we do not guarantee the accuracy, completeness,
+              or reliability of any information or results produced by our
+              calculators.
+            </p>
+            <p className="mb-2">
+              Actual investment results may vary significantly from the
+              estimates provided due to a wide range of factors, including but
+              not limited to:
+            </p>
+            <ul className="list-disc pl-6 mb-2">
+              <li>Market conditions</li>
+              <li>Government regulations or policy changes</li>
+              <li>Inflation rates</li>
+              <li>Fund performance</li>
+              <li>Individual financial behavior or decisions</li>
+              <li>Tax implications</li>
+              <li>Timing and duration of investments</li>
+            </ul>
+            <p className="mb-2">
+              We are not liable for any discrepancies between projected and
+              actual outcomes.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-semibold mb-2">3. No Liability</h2>
+            <p className="mb-2">
+              Sipgo, its owners, developers, and affiliates disclaim all
+              responsibility and liability for any direct, indirect, incidental,
+              consequential, or special damages arising out of or in any way
+              connected with the use of this website, the calculators, or the
+              information contained herein.
+            </p>
+            <p className="mb-2">
+              Your use of the website and any action you take based on our tools
+              and information is strictly at your own risk.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-semibold mb-2">
+              4. Not a Financial Institution
+            </h2>
+            <p className="mb-2">
+              Sipgo is not a bank, financial institution, mutual fund
+              distributor, or a SEBI-registered entity. We do not accept
+              investments, provide portfolio management, or offer any kind of
+              brokerage or distribution services.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-semibold mb-2">
+              5. External Links and References
+            </h2>
+            <p className="mb-2">
+              Sipgo may contain links to third-party websites, resources, or
+              financial tools. These are provided for convenience only. We do
+              not endorse or take responsibility for the accuracy, content, or
+              security of external sites.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-semibold mb-2">
+              6. Assumptions in Calculators
+            </h2>
+            <p className="mb-2">
+              Each calculator on our platform is based on certain preset
+              assumptions, which may include fixed interest rates, contribution
+              timelines, compounding frequency, inflation rates, and so on.
+              These assumptions are often idealized or generalized for
+              simplicity and may not reflect your individual circumstances or
+              real-world variability.
+            </p>
+            <p className="mb-2">
+              We encourage users to carefully read the detailed explanation
+              provided with each calculator to understand how the estimates are
+              generated.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-semibold mb-2">
+              7. Changes and Updates
+            </h2>
+            <p className="mb-2">
+              The content, tools, data, and calculations on Sipgo are subject to
+              change at any time without notice. We reserve the right to modify
+              or remove features, update assumptions, or correct errors and
+              omissions as needed.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-semibold mb-2">
+              8. User Responsibility
+            </h2>
+            <p className="mb-2">By using this website, you acknowledge that:</p>
+            <ul className="list-disc pl-6">
+              <li>
+                You understand the tools are for illustrative purposes only.
+              </li>
+              <li>
+                You will not rely solely on the calculators for making financial
+                decisions.
+              </li>
+              <li>
+                You will consult qualified professionals before making any
+                investment decisions.
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-semibold mb-2">Contact Us</h2>
+            <p className="mb-2">
+              If you have any questions, concerns, or feedback about this
+              disclaimer or any other aspect of Sipgo, feel free to contact us
+              at: 📧 support@sipgo.in
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Disclaimer;
