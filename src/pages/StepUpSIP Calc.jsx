@@ -171,11 +171,12 @@ function StepUpSIPCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-10">
                 <div className="flex justify-between items-center">
-                  <label id="monthly-investment-label" className="font-medium">
+                  <label htmlFor="monthly-investment" className="font-medium">
                     Monthly Investment
                   </label>
                   <div className="relative w-28 lg:w-32">
                     <input
+                      id="monthly-investment"
                       type="number"
                       value={monthlyInvestment}
                       onChange={handleMonthlyInvestmentChange}
@@ -220,11 +221,12 @@ function StepUpSIPCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-10">
                 <div className="flex justify-between items-center">
-                  <label id="step-up-label" className="font-medium">
+                  <label htmlFor="step-up" className="font-medium">
                     Annual Step-Up
                   </label>
                   <div className="relative w-28 lg:w-32">
                     <input
+                      id="step-up"
                       type="number"
                       value={stepUpPercent}
                       onChange={(e) => setStepUpPercent(Number(e.target.value))}
@@ -259,11 +261,12 @@ function StepUpSIPCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-10">
                 <div className="flex justify-between items-center">
-                  <label id="rate-label" className="font-medium">
-                    Expected Rate of Interest (p.a)
+                <label htmlFor="rate-of-interest" className="font-medium">
+                Expected Rate of Interest (p.a)
                   </label>
                   <div className="relative w-28 lg:w-32">
                     <input
+                      id="rate-of-interest"
                       type="number"
                       value={rateOfInterest}
                       onChange={handleRateOfInterestChange}
@@ -302,11 +305,12 @@ function StepUpSIPCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-10">
                 <div className="flex justify-between items-center">
-                  <label id="investment-period-label" className="font-medium">
+                <label htmlFor="investment-period" className="font-medium">
                     Investment Period
                   </label>
                   <div className="relative w-28 lg:w-32">
                     <input
+                      id="investment-period"
                       type="number"
                       value={investmentPeriod}
                       onChange={handleInvestmentPeriodChange}

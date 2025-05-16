@@ -175,11 +175,12 @@ function SWPCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-10">
                 <div className="flex justify-between items-center">
-                  <label id="investment-label" className="font-medium">
+                  <label htmlFor="total-investment" className="font-medium">
                     Total Investment
                   </label>
                   <div className="relative w-28 lg:w-32">
                     <input
+                      id="total-investment"
                       type="number"
                       value={totalInvestment}
                       onChange={handleTotalInvestmentChange}
@@ -197,14 +198,12 @@ function SWPCalculator() {
                     </span>
                   </div>
                 </div>
-
                 {errorMessages.totalInvestment && (
                   <p className="text-red-500 text-[13px] us:text-sm">
                     {errorMessages.totalInvestment}
                   </p>
                 )}
               </div>
-
               <div className="">
                 <input
                   type="range"
@@ -214,7 +213,7 @@ function SWPCalculator() {
                   value={totalInvestment}
                   onChange={handleTotalInvestmentChange}
                   className="w-full cursor-pointer"
-                  aria-labelledby="investment-label"
+                  aria-labelledby="total-investment-label"
                 />
               </div>
             </div>
@@ -223,11 +222,12 @@ function SWPCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-10">
                 <div className="flex justify-between items-center">
-                  <label id="monthly-withdrawal-label" className="font-medium">
+                  <label htmlFor="monthly-withdrawal" className="font-medium">
                     Monthly Withdrawal
                   </label>
                   <div className="relative w-28 lg:w-32">
                     <input
+                      id="monthly-withdrawal"
                       type="number"
                       value={monthlyWithdrawal}
                       onChange={handleMonthlyWithdrawal}
@@ -264,11 +264,12 @@ function SWPCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-10">
                 <div className="flex justify-between items-center">
-                  <label id="returns-label" className="font-medium">
+                  <label htmlFor="estimated-returns" className="font-medium">
                     Expected Rate of Interest (p.a)
                   </label>
                   <div className="relative w-28 lg:w-32">
                     <input
+                      id="estimated-returns"
                       type="number"
                       value={estimatedReturns}
                       onChange={handleEstimatedReturnsChange}
@@ -282,7 +283,6 @@ function SWPCalculator() {
                     </span>
                   </div>
                 </div>
-
                 {errorMessages.estimatedReturns && (
                   <p className="text-red-500 text-[13px] us:text-sm">
                     {errorMessages.estimatedReturns}
@@ -298,7 +298,7 @@ function SWPCalculator() {
                   value={estimatedReturns}
                   onChange={handleEstimatedReturnsChange}
                   className="w-full cursor-pointer"
-                  aria-labelledby="returns-label"
+                  aria-labelledby="estimated-returns-label"
                 />
               </div>
             </div>
@@ -307,11 +307,12 @@ function SWPCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-10">
                 <div className="flex justify-between items-center">
-                  <label id="period-label" className="font-medium">
+                  <label htmlFor="investment-period" className="font-medium">
                     Investment Period
                   </label>
                   <div className="relative w-28 lg:w-32">
                     <input
+                      id="investment-period"
                       type="number"
                       value={investmentPeriod}
                       onChange={handleInvestmentPeriodChange}
@@ -325,14 +326,12 @@ function SWPCalculator() {
                     </span>
                   </div>
                 </div>
-
                 {errorMessages.investmentPeriod && (
                   <p className="text-red-500 text-[13px] us:text-sm">
                     {errorMessages.investmentPeriod}
                   </p>
                 )}
               </div>
-
               <div className="">
                 <input
                   type="range"
@@ -342,7 +341,7 @@ function SWPCalculator() {
                   value={investmentPeriod}
                   onChange={handleInvestmentPeriodChange}
                   className="w-full cursor-pointer"
-                  aria-labelledby="period-label"
+                  aria-labelledby="investment-period-label"
                 />
               </div>
             </div>
