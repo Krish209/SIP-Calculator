@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { formatNumber, formatChartNumber } from "./Calc";
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
-import StepUpSIPInfo from "./StepUpSip Info";
-import StepUpSIPFAQ from "./StepUpSip Faq";
+import StepUpSIPInfo from "./StepUpSIP Info";
+import StepUpSIPFAQ from "./StepUpSIP Faq";
 
 function StepUpSIPCalculator() {
   const [monthlyInvestment, setMonthlyInvestment] = useState(1000); // Default ₹1000 for SIP
