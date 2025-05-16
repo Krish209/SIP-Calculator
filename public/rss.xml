@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>SIPGo – Financial Calculators & Tools</title>
+    <link>https://www.sipgo.in</link>
+    <description>Explore SIPGo’s suite of financial calculators for smart investing, saving, and planning.</description>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 May 2025 10:00:00 GMT</lastBuildDate>
+    <ttl>1800</ttl>
+
+    <!-- Homepage -->
+    <item>
+      <title>SIPGo – Home</title>
+      <link>https://www.sipgo.in/</link>
+      <description>Welcome to SIPGo – Smart investment and savings tools for everyone.</description>
+      <pubDate>Sun, 01 Oct 2023 10:00:00 GMT</pubDate>
+      <guid>https://www.sipgo.in/</guid>
+    </item>
+
+    <!-- SIP Calculator -->
+    <item>
+      <title>SIP Calculator</title>
+      <link>https://www.sipgo.in/sip-calculator</link>
+      <description>Plan your SIP investments with our easy-to-use SIP calculator.</description>
+      <pubDate>Mon, 21 Apr 2025 09:00:00 GMT</pubDate>
+      <guid>https://www.sipgo.in/sip-calculator</guid>
+    </item>
+
+    <!-- Lumpsum Calculator -->
+    <item>
+      <title>Lumpsum Calculator</title>
+      <link>https://www.sipgo.in/lumpsum-calculator</link>
+      <description>Calculate your returns on one-time investments with our lumpsum calculator.</description>
+      <pubDate>Mon, 21 Apr 2025 09:00:00 GMT</pubDate>
+      <guid>https://www.sipgo.in/lumpsum-calculator</guid>
+    </item>
+
+    <!-- Step-Up SIP Calculator -->
+    <item>
+      <title>Step-Up SIP Calculator</title>
+      <link>https://www.sipgo.in/step-up-sip-calculator</link>
+      <description>Estimate returns on step-up SIP investments with our calculator.</description>
+      <pubDate>Mon, 21 Apr 2025 09:00:00 GMT</pubDate>
+      <guid>https://www.sipgo.in/step-up-sip-calculator</guid>
+    </item>
+
+    <!-- SWP Calculator -->
+    <item>
+      <title>SWP Calculator</title>
+      <link>https://www.sipgo.in/swp-calculator</link>
+      <description>Calculate your Systematic Withdrawal Plan (SWP) returns.</description>
+      <pubDate>Mon, 21 Apr 2025 09:00:00 GMT</pubDate>
+      <guid>https://www.sipgo.in/swp-calculator</guid>
+    </item>
+
+    <!-- EMI Calculator -->
+    <item>
+      <title>EMI Calculator</title>
+      <link>https://www.sipgo.in/emi-calculator</link>
+      <description>Calculate monthly EMIs for personal, car, or home loans.</description>
+      <pubDate>Mon, 21 Apr 2025 09:00:00 GMT</pubDate>
+      <guid>https://www.sipgo.in/emi-calculator</guid>
+    </item>
+
+    <!-- PPF Calculator -->
+    <item>
+      <title>PPF Calculator</title>
+      <link>https://www.sipgo.in/ppf-calculator</link>
+      <description>Estimate your returns from Public Provident Fund (PPF) contributions.</description>
+      <pubDate>Mon, 21 Apr 2025 09:00:00 GMT</pubDate>
+      <guid>https://www.sipgo.in/ppf-calculator</guid>
+    </item>
+
+    <!-- FD Calculator -->
+    <item>
+      <title>Fixed Deposit Calculator</title>
+      <link>https://www.sipgo.in/fd-calculator</link>
+      <description>Calculate maturity amounts and interest for fixed deposits.</description>
+      <pubDate>Mon, 21 Apr 2025 09:00:00 GMT</pubDate>
+      <guid>https://www.sipgo.in/fd-calculator</guid>
+    </item>
+
+    <!-- RD Calculator -->
+    <item>
+      <title>RD Calculator</title>
+      <link>https://www.sipgo.in/rd-calculator</link>
+      <description>Calculate returns on recurring deposits with our RD calculator.</description>
+      <pubDate>Mon, 21 Apr 2025 09:00:00 GMT</pubDate>
+      <guid>https://www.sipgo.in/rd-calculator</guid>
+    </item>
+
+    <!-- KVP Calculator -->
+    <item>
+      <title>KVP Calculator</title>
+      <link>https://www.sipgo.in/kvp-calculator</link>
+      <description>Estimate returns on Kisan Vikas Patra investments.</description>
+      <pubDate>Mon, 21 Apr 2025 09:00:00 GMT</pubDate>
+      <guid>https://www.sipgo.in/kvp-calculator</guid>
+    </item>
+
+
+
+  </channel>
+</rss>

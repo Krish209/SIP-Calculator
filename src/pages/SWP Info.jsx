@@ -19,7 +19,7 @@ const SWPInfo = () => {
           works in the opposite way compared to a SIP. While SIPs involve
           regularly investing small amounts, SWPs allow you to withdraw a fixed
           amount periodically, rather than redeeming your entire investment at
-          once. An SWP allows for fixed, periodic withdrawals, providing a
+          once. SWP enables fixed, periodic withdrawals, thereby ensuring a
           steady cash flow.
         </p>
         <p className="mb-2">
@@ -46,8 +46,8 @@ const SWPInfo = () => {
             monthly, quarterly, or annually based on your liquidity needs.
           </li>
           <li>
-            <strong>Taxation:</strong> Only the capital gains portion of the
-            withdrawn amount is taxed, not the entire amount
+            <strong>Taxation:</strong> Only the capital gains portion of each
+            withdrawal is subject to tax, not the full amount withdrawn.
           </li>
           <li>
             <strong>Growth Potential:</strong> Even as you withdraw, your
@@ -84,18 +84,19 @@ const SWPInfo = () => {
           will apply.
         </p>
         <p className="mb-2">
-          SWP is flexible, allowing you to change the withdrawal amount or
-          frequency based on your needs. You can also stop the SWP at any time,
-          but it’s essential to plan your withdrawals carefully to avoid
-          depleting your investment too quickly.
+          SWPs are flexible, allowing investors to adjust the withdrawal amount
+          or frequency as needed. You can also stop the SWP at any time, but
+          it’s essential to plan your withdrawals carefully to avoid depleting
+          your investment too quickly.
         </p>
         <p className="mb-2">
           Since mutual funds are market-linked investments, the withdrawal
           amount may vary depending on the{" "}
           <strong>NAV (Net Asset Value)</strong> of the scheme at the time of
           withdrawal. In simple terms, the amount withdrawn depends on the value
-          of your mutual fund units. Let’s say the NAV is ₹50. So to get
-          ₹10,000, 200 units (₹10,000 / ₹50) will be redeemed.
+          of your mutual fund units. For example, if the NAV is ₹50, then 200
+          units (₹10,000 ÷ ₹50) will be redeemed to meet the withdrawal amount
+          of ₹10,000.
         </p>
         <p className="mb-2">
           The formula used to calculate the amount withdrawn is:
@@ -116,7 +117,7 @@ const SWPInfo = () => {
                 <strong>A</strong> = Final Amount (after interest)
               </li>
               <li>
-                <strong>B</strong> = Withdrawal amount per period
+                <strong>B</strong> = Periodic Withdrawal Amount
               </li>
 
               <li>
@@ -126,13 +127,6 @@ const SWPInfo = () => {
                 <strong>n</strong> = Investment Period in Years
               </li>
             </ul>
-          </p>
-        </div>
-        <div className="bg-blue-50 p-2 md:p-4 rounded-lg mt-4 shadow-md">
-          <p>
-            <strong>Important Note:</strong> If your withdrawal rate is too high
-            or the market performs poorly, you risk depleting your investment
-            prematurely.
           </p>
         </div>
       </section>
@@ -365,11 +359,12 @@ const SWPInfo = () => {
         </h2>
         <p className="mb-2">
           Systematic Withdrawal Plans (SWPs) provide an excellent way to create
-          a consistent income stream from your mutual fund investments. Whether
-          you are a retiree or just looking for regular withdrawals, SWP can
-          provide the right balance between income and capital preservation.
-          Careful planning is key to ensure that your withdrawals last over the
-          long term.
+          a consistent income stream from mutual fund investments. Whether you
+          are a retiree or just looking for regular withdrawals, SWP can provide
+          the right balance between income and capital preservation. When
+          implemented wisely—considering tax implications, market conditions,
+          and withdrawal rates—SWPs can help maintain financial stability while
+          preserving your investment corpus.
         </p>
       </section>
     </div>
