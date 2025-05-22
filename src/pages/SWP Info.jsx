@@ -1,6 +1,36 @@
 import React from "react";
+import Table from "../consts/Table";
 
 const SWPInfo = () => {
+  const columns = [
+    { key: "feature", header: "Feature" },
+    { key: "sip", header: "SIP" },
+    { key: "swp", header: "SWP" },
+  ];
+
+  const data = [
+    {
+      feature: "Purpose",
+      sip: "Invest regularly to grow wealth",
+      swp: "Withdraw regularly to generate income",
+    },
+    {
+      feature: "Transaction Type",
+      sip: "Investment (fund inflow)",
+      swp: "Withdrawal (fund outflow)",
+    },
+    {
+      feature: "Target Audience",
+      sip: "Investors looking to build wealth",
+      swp: "People needing regular income",
+    },
+    {
+      feature: "Risk",
+      sip: "Market risk (growth-oriented)",
+      swp: "Market risk (income-focused)",
+    },
+  ];
+
   return (
     <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
       <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
@@ -313,43 +343,9 @@ const SWPInfo = () => {
           Plan (SWP) are regular, disciplined financial tools, their purposes
           are opposite.
         </p>
-        <div className="bg-gray-100 p-2 vs:p-4 rounded-lg mt-6">
-          <table className="table-auto w-full overflow-x-auto">
-            <thead>
-              <tr>
-                <th className="px-0.5 py-2 text-left">Feature</th>
-                <th className="px-0.5 py-2 text-left">SIP</th>
-                <th className="px-0.5 py-2 text-left">SWP</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="px-0.5 py-2">Purpose</td>
-                <td className="px-0.5 py-2">Invest regularly to grow wealth</td>
-                <td className="px-0.5 py-2">
-                  Withdraw regularly to generate income
-                </td>
-              </tr>
-              <tr>
-                <td className="px-0.5 py-2">Transaction Type</td>
-                <td className="px-0.5 py-2">Investment (fund inflow)</td>
-                <td className="px-0.5 py-2">Withdrawal (fund outflow)</td>
-              </tr>
-              <tr>
-                <td className="px-0.5 py-2">Target Audience</td>
-                <td className="px-0.5 py-2">
-                  Investors looking to build wealth
-                </td>
-                <td className="px-0.5 py-2">People needing regular income</td>
-              </tr>
-              <tr>
-                <td className="px-0.5 py-2">Risk</td>
-                <td className="px-0.5 py-2">Market risk (growth-oriented)</td>
-                <td className="px-0.5 py-2">Market risk (income-focused)</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+
+        <Table columns={columns} data={data} />
+        
       </section>
 
       {/* Conclusion */}

@@ -1,6 +1,36 @@
 import React from "react";
+import Table from "../consts/Table";
 
 const SIPInfo = () => {
+  const columns = [
+  { key: "feature", header: "Feature" },
+  { key: "sip", header: "SIP" },
+  { key: "lumpSum", header: "Lump Sum" },
+];
+
+const data = [
+  {
+    feature: "Investment Frequency",
+    sip: "Regular",
+    lumpSum: "One-time",
+  },
+  {
+    feature: "Risk",
+    sip: "Low (due to averaging)",
+    lumpSum: "High (all at once)",
+  },
+  {
+    feature: "Returns",
+    sip: "Moderate, depends on market",
+    lumpSum: "Variable, market timing impacts",
+  },
+  {
+    feature: "Market Timing",
+    sip: "Not required",
+    lumpSum: "Crucial",
+  },
+];
+
   return (
     <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
       <h1 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
@@ -265,7 +295,7 @@ const SIPInfo = () => {
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           SIP Vs Lump Sum Investment
         </h2>
-        <div className="space-y-2 ">
+        <div className="space-y-2 mb-2">
           <p>
             <strong>SIP:</strong> In SIP, you invest smaller amounts regularly,
             reducing the risk of investing all at once during market highs. It
@@ -284,39 +314,8 @@ const SIPInfo = () => {
           </p>
         </div>
 
-        <div className="bg-gray-100 p-2 vs:p-4 rounded-lg mt-6">
-          <table className="table-auto w-full overflow-x-auto">
-            <thead>
-              <tr>
-                <th className="px-0.5 py-2 text-left">Feature</th>
-                <th className="px-0.5 py-2 text-left">SIP</th>
-                <th className="px-0.5 py-2 text-left">Lump Sum</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="px-0.5 py-2">Investment Frequency</td>
-                <td className="px-0.5 py-2">Regular</td>
-                <td className="px-0.5 py-2">One-time</td>
-              </tr>
-              <tr>
-                <td className="px-0.5 py-2">Risk</td>
-                <td className="px-0.5 py-2">Low (due to averaging)</td>
-                <td className="px-0.5 py-2">High (all at once)</td>
-              </tr>
-              <tr>
-                <td className="px-0.5 py-2">Returns</td>
-                <td className="px-0.5 py-2">Moderate, depends on market</td>
-                <td className="px-0.5 py-2">Variable, market timing impacts</td>
-              </tr>
-              <tr>
-                <td className="px-0.5 py-2">Market Timing</td>
-                <td className="px-0.5 py-2">Not required</td>
-                <td className="px-0.5 py-2">Crucial</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <Table columns={columns} data={data} />
+
       </section>
 
       {/* Benefits of SIP */}

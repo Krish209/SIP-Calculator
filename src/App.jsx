@@ -28,6 +28,13 @@ import Contact from "./components/Contact";
 import TermsAndConditions from "./pages/Terms&Condition";
 import PrivacyPolicy from "./pages/Privacy Policy";
 import Disclaimer from "./pages/Disclaimer";
+import NpsMonthlyPension from "./pages/blogs/Nps Monthly Pension";
+import SIPvsLumpsum from "./pages/blogs/SIP vs Lumpsum";
+import WhyRiskIsPartOfInvesting from "./pages/blogs/Why Risk Is Part Of Investing";
+import InvestingVsGambling from "./pages/blogs/Investing vs Gambling";
+import BeatingInflation from "./pages/blogs/Beating Inflation";
+import StockEtfMfBond from "./pages/blogs/What is Stock, ETF, MF, and Bond";
+import CreatePassiveIncome from "./pages/blogs/Create a Passive Income";
 
 function App() {
   return (
@@ -46,6 +53,15 @@ function App() {
           <Route path="terms" element={<TermsAndConditions />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="disclaimer" element={<Disclaimer />} />
+
+
+          <Route path="/blog/nps-monthly-pension" element={<NpsMonthlyPension />} />
+          <Route path="/blog/sip-vs-lumpsum" element={<SIPvsLumpsum />} />
+          <Route path="/blog/why-risk-is-part-of-investing" element={<WhyRiskIsPartOfInvesting />} />
+          <Route path="/blog/investing-vs-gambling" element={<InvestingVsGambling />} />
+          <Route path="/blog/beating-inflation" element={<BeatingInflation />} />
+          <Route path="/blog/what-stock-etf-mf-bond" element={<StockEtfMfBond />} />
+          <Route path="/blog/create-a-pasive-income" element={<CreatePassiveIncome />} />
 
           {/* Investment Options Route */}
           <Route path="sip-calculator" element={<SIPCalculator />} />

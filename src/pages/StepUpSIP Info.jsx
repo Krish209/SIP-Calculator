@@ -1,6 +1,46 @@
 import React from "react";
+import Table from "../consts/Table";
 
 const StepUpSIPInfo = () => {
+  const columns = [
+  { key: 'details', header: 'Details' },
+  { key: 'sip', header: 'SIP' },
+  { key: 'stepUpSip', header: 'Step-Up SIP' },
+];
+
+const data = [
+  {
+    details: 'Starting Amount',
+    sip: '₹5,000/month',
+    stepUpSip: '₹5,000/month',
+  },
+  {
+    details: 'Yearly Increment',
+    sip: 'No',
+    stepUpSip: '₹500/year',
+  },
+  {
+    details: 'Total Invested',
+    sip: '₹6,00,000',
+    stepUpSip: '₹7,50,000',
+  },
+  {
+    details: 'Estimated Returns',
+    sip: '₹4,55,000',
+    stepUpSip: '₹6,90,000',
+  },
+  {
+    details: 'Final Value',
+    sip: '₹10,55,000',
+    stepUpSip: '₹14,40,000',
+  },
+  {
+    details: 'Return on Investment (ROI)',
+    sip: '~76%',
+    stepUpSip: '~92%',
+  },
+];
+
   return (
     <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
       <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
@@ -111,49 +151,7 @@ const StepUpSIPInfo = () => {
           through compounding.
         </p>
 
-        <div className="bg-gray-100 p-2 vs:p-4 rounded-lg mt-6">
-          <table className="table-auto w-full overflow-x-auto">
-            <thead>
-              <tr>
-                <th className="px-0.5 py-2 text-left">Details</th>
-                <th className="px-0.5 py-2 text-left">SIP</th>
-                <th className="px-0.5 py-2 text-left">Step-Up SIP</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="px-0.5 py-2">Starting Amount</td>
-                <td className="px-0.5 py-2">₹5,000/month</td>
-                <td className="px-0.5 py-2">₹5,000/month</td>
-              </tr>
-              <tr>
-                <td className="px-0.5 py-2">Yearly Increment</td>
-                <td className="px-0.5 py-2">No</td>
-                <td className="px-0.5 py-2">₹500/year</td>
-              </tr>
-              <tr>
-                <td className="px-0.5 py-2">Total Invested</td>
-                <td className="px-0.5 py-2">₹6,00,000</td>
-                <td className="px-0.5 py-2">₹7,50,000</td>
-              </tr>
-              <tr>
-                <td className="px-0.5 py-2">Estimated Returns</td>
-                <td className="px-0.5 py-2">₹4,55,000</td>
-                <td className="px-0.5 py-2">₹6,90,000</td>
-              </tr>
-              <tr>
-                <td className="px-0.5 py-2">Final Value</td>
-                <td className="px-0.5 py-2">₹10,55,000</td>
-                <td className="px-0.5 py-2">₹14,40,000</td>
-              </tr>
-              <tr>
-                <td className="px-0.5 py-2">Return on Investment (ROI)</td>
-                <td className="px-0.5 py-2">~76%</td>
-                <td className="px-0.5 py-2">~92%</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <Table columns={columns} data={data} />
       </section>
 
       {/* Benefits */}
