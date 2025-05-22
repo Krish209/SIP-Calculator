@@ -1,4 +1,5 @@
 import React from "react";
+import img from "../../assets/icons/sip-lumpsum.jpeg";
 import Table from "../../consts/Table";
 
 const CreatePassiveIncome = () => {
@@ -111,6 +112,16 @@ const CreatePassiveIncome = () => {
           Indians
         </h1>
 
+        {/* Image Section */}
+        {/* <div className="w-full lg:w-1/2 flex justify-center">
+          <img
+            src={img}
+            alt="Investment tools"
+            className="max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[500px] h-auto object-contain"
+            loading="lazy"
+          />
+        </div> */}
+
         {/* Introduction */}
         <section className="my-4 md:my-6">
           <p className="mb-2">
@@ -209,7 +220,7 @@ const CreatePassiveIncome = () => {
           </h2>
           <div className="space-y-6">
             <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
                 1. Assess Your Financial Situation
               </h3>
               <p className="mb-2">Start by understanding:</p>
@@ -222,7 +233,7 @@ const CreatePassiveIncome = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
                 2. Set Clear Financial Goals
               </h3>
               <p className="mb-2">Are you investing to:</p>
@@ -242,7 +253,7 @@ const CreatePassiveIncome = () => {
               </p>
             </div>
             <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
                 3. Start with Low-Risk Options
               </h3>
               <p className="mb-2">
@@ -262,7 +273,7 @@ const CreatePassiveIncome = () => {
             </div>
 
             <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
                 4. Diversify with Mutual Funds Using SWP
               </h3>
               <p className="mb-2">
@@ -271,10 +282,9 @@ const CreatePassiveIncome = () => {
               </p>
 
               <p className="mb-2">
-                <strong>Example:</strong>
-                Invest ₹10,00,000 in a balanced mutual fund. Set an SWP of
-                ₹7,000/month. Your principal stays invested while your money
-                grows and provides income.
+                <strong>Example</strong>: Invest ₹10,00,000 in a balanced mutual
+                fund. Set an SWP of ₹7,000/month. Your principal stays invested
+                while your money grows and provides income.
               </p>
 
               <ul className="list-disc space-y-1 pl-6 mb-2">
@@ -285,7 +295,7 @@ const CreatePassiveIncome = () => {
             </div>
 
             <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
                 5. Invest in Dividend Stocks
               </h3>
               <p className="mb-2">
@@ -302,7 +312,7 @@ const CreatePassiveIncome = () => {
             </div>
 
             <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
                 6. Explore Real Estate for Rental Income
               </h3>
               <p className="mb-2">
@@ -316,14 +326,13 @@ const CreatePassiveIncome = () => {
               </ul>
 
               <p className="mb-2">
-                {" "}
-                Example: A 2BHK apartment bought for ₹50 lakhs could fetch
-                ₹15,000–₹25,000/month depending on location.
+                <strong>Example</strong>: A 2BHK apartment bought for ₹50 lakhs
+                could fetch ₹15,000–₹25,000/month depending on location.
               </p>
             </div>
 
             <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
                 7. Try Peer-to-Peer (P2P) Lending
               </h3>
               <p className="mb-2">
@@ -338,13 +347,13 @@ const CreatePassiveIncome = () => {
               </p>
 
               <p className="mb-2">
-                Example: If you lend ₹1 lakh across 20 borrowers at 12%
+                <strong>Example</strong>: If you lend ₹1 lakh across 20 borrowers at 12%
                 interest, you could earn ₹12,000/year.
               </p>
             </div>
 
             <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
                 8. Automate and Monitor
               </h3>
               <p className="mb-2">Automation is key to passive income. Use:</p>
@@ -357,7 +366,7 @@ const CreatePassiveIncome = () => {
             </div>
 
             <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
                 9. Reinvest Your Income
               </h3>
               <p className="mb-2">
@@ -369,7 +378,7 @@ const CreatePassiveIncome = () => {
             </div>
 
             <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
                 10. Stay Informed and Optimized
               </h3>
               <p className="mb-2">
@@ -391,7 +400,7 @@ const CreatePassiveIncome = () => {
             Example Passive Income Portfolio (Monthly Budget: ₹25,000)
           </h2>
 
-           <Table columns={columns2} data={data2} />
+          <Table columns={columns2} data={data2} />
         </section>
 
         {/* Conclusion */}

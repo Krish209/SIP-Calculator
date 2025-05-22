@@ -1,5 +1,6 @@
 import React from "react";
 import Table from "../../consts/Table";
+import img from "../../assets/icons/sip-lumpsum.jpeg";
 
 const BeatingInflation = () => {
   const columns = [
@@ -43,6 +44,16 @@ const BeatingInflation = () => {
         <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">
           Beating Inflation: How Smart Investing Protects Your Money
         </h1>
+
+        {/* Image Section */}
+        {/* <div className="w-full lg:w-1/2 flex justify-center">
+          <img
+            src={img}
+            alt="Investment tools"
+            className="max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[500px] h-auto object-contain"
+            loading="lazy"
+          />
+        </div> */}
 
         {/* Introduction */}
         <section className="my-4 md:my-6">

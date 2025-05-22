@@ -1,7 +1,13 @@
 import React from "react";
+import img from "../../assets/icons/sip-lump.jpeg";
 import Table from "../../consts/Table";
+import { CiCalendar } from "react-icons/ci";
+import { CiClock1 } from "react-icons/ci";
 
 const SIPvsLumpsum = () => {
+  const publishedDate = "May 23, 2025";
+  const readingTime = "4 min read";
+
   const columns = [
     { key: "criteria", header: "Criteria" },
     { key: "sip", header: "SIP" },
@@ -50,9 +56,31 @@ const SIPvsLumpsum = () => {
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
       <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
         {/* Title */}
-        <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">
+        <h1 className="text-2xl md:text-3xl font-bold my-4 md:my-8">
           SIP vs Lumpsum: Which Investment Strategy Is Better?
         </h1>
+
+        {/* Meta Info Section */}
+        <div className="flex items-center gap-4 text-sm text-gray-700 mb-4">
+          <div className="flex items-center gap-1">
+            <CiCalendar className="text-lg" />
+            <span>{publishedDate}</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <CiClock1 className="text-lg" />
+            <span>{readingTime}</span>
+          </div>
+        </div>
+
+        {/* Image Section */}
+        <div className="w-full lg:w-1/2 flex justify-center shadow-lg">
+          <img
+            src={img}
+            alt="Investment tools"
+            className="max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[500px] h-auto object-contain"
+            // loading="lazy"
+          />
+        </div>
 
         {/* Introduction */}
         <section className="my-4 md:my-6">
@@ -62,9 +90,9 @@ const SIPvsLumpsum = () => {
             choosing between a Systematic Investment Plan (SIP) and a Lumpsum
             investment. Both approaches offer unique benefits and cater to
             different kinds of investors depending on their financial goals,
-            risk appetite, and market outlook. So, which is better—SIP or
-            lumpsum? The answer isn’t straightforward and largely depends on the
-            individual’s financial situation and investment horizon.
+            risk appetite, and market outlook. So, which strategy is better—SIP
+            or lumpsum? The answer isn’t straightforward and largely depends on
+            the individual’s financial situation and investment horizon.
           </p>
         </section>
 
@@ -89,11 +117,11 @@ const SIPvsLumpsum = () => {
             On the other hand, a Lumpsum investment involves investing a large
             amount of money at one go. It’s typically preferred by those who
             have a substantial amount of idle money—say, from a bonus,
-            inheritance, or the sale of an asset. Lumpsum investments can
-            generate higher returns if the market is on an upward trend at the
-            time of investment, but they also expose investors to timing risk,
-            meaning if the market falls after the investment, losses can be
-            significant.
+            inheritance, or the sale of an asset. Lumpsum investments have the
+            potential to generate higher returns during a bullish market trend
+            at the time of investment, but they also expose investors to timing
+            risk, meaning if the market falls after the investment, losses can
+            be significant.
           </p>
         </section>
 
@@ -133,13 +161,12 @@ const SIPvsLumpsum = () => {
           </h2>
 
           <p className="mb-2">
-            A lumpsum investment may be better suited for investors who have a
-            high risk tolerance, can analyze market trends, and have a
-            significant amount ready to invest. If invested during a market dip,
-            a lumpsum can yield better returns in the long run as it allows the
-            full capital to benefit from market recovery and growth. It is also
-            useful for investors with shorter investment horizons who want quick
-            exposure to market movements.
+            A lumpsum approach may suit investors with a higher risk tolerance,
+            strong market insight, and access to substantial capital. If
+            invested during a market dip, a lumpsum can yield better returns in
+            the long run as it allows the full capital to benefit from market
+            recovery and growth. It is also useful for investors with shorter
+            investment horizons who want quick exposure to market movements.
           </p>
         </section>
 
@@ -151,12 +178,13 @@ const SIPvsLumpsum = () => {
 
           <p className="mb-2">
             Both SIP and lumpsum investments are subject to capital gains tax
-            depending on the investment duration and type of mutual fund.
-            However, with SIPs, each installment is treated as a separate
-            investment, so the holding period for taxation is counted separately
-            for each. In terms of liquidity, both options offer redemption
-            flexibility, although lumpsum investments may feel less flexible
-            psychologically due to the large upfront commitment.
+            depending on the investment duration and type of mutual fund. In the
+            case of SIPs, each installment is treated as a separate investment,
+            meaning the holding period for capital gains tax is calculated
+            individually for each contribution. In terms of liquidity, both
+            options offer redemption flexibility, although lumpsum investments
+            may feel less flexible psychologically due to the large upfront
+            commitment.
           </p>
         </section>
 

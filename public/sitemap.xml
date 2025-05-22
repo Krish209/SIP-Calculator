@@ -46,7 +46,14 @@
 
   <!-- Blog URLs -->
   <url>
-    <loc>https://www.sipgo.in/blog/nps-monthly-pension</loc>
+    <loc>https://www.sipgo.in/blog</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.sipgo.in/blog/how-to-achieve-a-monthly-pension-of-50k-with-nps</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -64,7 +71,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.sipgo.in/blog/investing-vs-gambling</loc>
+    <loc>https://www.sipgo.in/blog/investing-vs-gambling-whats-the-real-difference</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -76,13 +83,19 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.sipgo.in/blog/what-stock-etf-mf-bond</loc>
+    <loc>https://www.sipgo.in/blog/what-are-stocks-etfs-mutual-funds-and-bonds</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.sipgo.in/blog/create-a-pasive-income</loc>
+    <loc>https://www.sipgo.in/blog/how-to-create-a-passive-income-with-investments</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.sipgo.in/blog/how-does-compounding-work</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>

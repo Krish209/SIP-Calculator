@@ -1,4 +1,5 @@
 import React from "react";
+import img from "../../assets/icons/sip-lumpsum.jpeg";
 import Table from "../../consts/Table";
 
 const StockEtfMfBond = () => {
@@ -72,6 +73,16 @@ const StockEtfMfBond = () => {
           to Investing in India
         </h1>
 
+        {/* Image Section */}
+        {/* <div className="w-full lg:w-1/2 flex justify-center">
+          <img
+            src={img}
+            alt="Investment tools"
+            className="max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[500px] h-auto object-contain"
+            loading="lazy"
+          />
+        </div> */}
+
         {/* Introduction */}
         <section className="my-4 md:my-6">
           <p className="mb-2">
@@ -98,7 +109,7 @@ const StockEtfMfBond = () => {
             appreciation and dividends.
           </p>
 
-          <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">
+          <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-1 md:mb-2">
             Example:
           </h3>
           <p className="mb-2 md:mb-4">
@@ -107,7 +118,7 @@ const StockEtfMfBond = () => {
             investment becomes ₹30,000, giving you a capital gain of ₹5,000.
           </p>
 
-          <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">
+          <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-1 md:mb-2">
             Key Features:
           </h3>
           <ul className="list-disc space-y-1 pl-6 mb-2">
@@ -135,7 +146,7 @@ const StockEtfMfBond = () => {
             banking or IT.
           </p>
 
-          <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">
+          <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-1 md:mb-2">
             Example:
           </h3>
           <p className="mb-2 md:mb-4">
@@ -144,7 +155,7 @@ const StockEtfMfBond = () => {
             versa.
           </p>
 
-          <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">
+          <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-1 md:mb-2">
             Key Features:
           </h3>
           <ul className="list-disc space-y-1 pl-6 mb-2">
@@ -174,7 +185,7 @@ const StockEtfMfBond = () => {
             aim to replicate a market index and come with lower costs.
           </p>
 
-          <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">
+          <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-1 md:mb-2">
             Example:
           </h3>
 
@@ -185,7 +196,7 @@ const StockEtfMfBond = () => {
             stocks.
           </p>
 
-          <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">
+          <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-1 md:mb-2">
             Key Features:
           </h3>
           <ul className="list-disc space-y-1 pl-6 mb-2">
@@ -212,7 +223,7 @@ const StockEtfMfBond = () => {
             exchange.
           </p>
 
-          <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">
+          <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-1 md:mb-2">
             Example:
           </h3>
 
@@ -222,7 +233,7 @@ const StockEtfMfBond = () => {
             year and the ₹1 lakh principal after 10 years.
           </p>
 
-          <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">
+          <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-1 md:mb-2">
             Key Features:
           </h3>
           <ul className="list-disc space-y-1 pl-6 mb-2">

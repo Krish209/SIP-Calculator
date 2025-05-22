@@ -319,11 +319,11 @@ const AllCalculator = () => {
   const filtered = activeCategory === "All" ? calculators : calculators.filter(c => c.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br text-primary from-indigo-50 to-blue-50">
       {/* Calculator Categories */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
             Explore Our Financial Calculators
           </h2>
           <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto">
@@ -362,7 +362,7 @@ const AllCalculator = () => {
                     <div className="p-2 bg-indigo-50 rounded-lg flex-shrink-0">
                       {calc.icon}
                     </div>
-                    <h3 className="text-base sm:text-lg font-semibold text-gray-800 group-hover:text-indigo-600 transition">
+                    <h3 className="text-base sm:text-lg font-semibold group-hover:text-indigo-600 transition">
                       {calc.title}
                     </h3>
                   </div>
@@ -370,7 +370,7 @@ const AllCalculator = () => {
                     {calc.description}
                   </p>
                   <div className="flex justify-between items-center text-xs sm:text-sm">
-                    <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded">
+                    <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded">
                       {calc.category}
                     </span>
                     <span className="text-indigo-600 font-medium flex items-center">

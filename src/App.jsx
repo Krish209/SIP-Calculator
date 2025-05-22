@@ -33,8 +33,10 @@ import SIPvsLumpsum from "./pages/blogs/SIP vs Lumpsum";
 import WhyRiskIsPartOfInvesting from "./pages/blogs/Why Risk Is Part Of Investing";
 import InvestingVsGambling from "./pages/blogs/Investing vs Gambling";
 import BeatingInflation from "./pages/blogs/Beating Inflation";
-import StockEtfMfBond from "./pages/blogs/What is Stock, ETF, MF, and Bond";
+import StockEtfMfBond from "./pages/blogs/What Are Stocks, ETFs, Mutual Funds, and Bonds";
 import CreatePassiveIncome from "./pages/blogs/Create a Passive Income";
+import CompoundingWork from "./pages/blogs/Compounding Work";
+import BlogHome from "./consts/Blog";
 
 function App() {
   return (
@@ -55,13 +57,16 @@ function App() {
           <Route path="disclaimer" element={<Disclaimer />} />
 
 
-          <Route path="/blog/nps-monthly-pension" element={<NpsMonthlyPension />} />
+          <Route path="/blog" element={<BlogHome />} />
+
+          <Route path="/blog/how-to-achieve-a-monthly-pension-of-50k-with-nps" element={<NpsMonthlyPension />} />
           <Route path="/blog/sip-vs-lumpsum" element={<SIPvsLumpsum />} />
           <Route path="/blog/why-risk-is-part-of-investing" element={<WhyRiskIsPartOfInvesting />} />
-          <Route path="/blog/investing-vs-gambling" element={<InvestingVsGambling />} />
+          <Route path="/blog/investing-vs-gambling-whats-the-real-difference" element={<InvestingVsGambling />} />
           <Route path="/blog/beating-inflation" element={<BeatingInflation />} />
-          <Route path="/blog/what-stock-etf-mf-bond" element={<StockEtfMfBond />} />
-          <Route path="/blog/create-a-pasive-income" element={<CreatePassiveIncome />} />
+          <Route path="/blog/what-are-stocks-etfs-mutual-funds-and-bonds" element={<StockEtfMfBond />} />
+          <Route path="/blog/how-to-create-a-passive-income-with-investments" element={<CreatePassiveIncome />} />
+          <Route path="/blog/how-does-compounding-work" element={<CompoundingWork />} />
 
           {/* Investment Options Route */}
           <Route path="sip-calculator" element={<SIPCalculator />} />

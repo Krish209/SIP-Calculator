@@ -68,6 +68,11 @@ export const links = [
       // { name: "Expense Tracker", link: "/expense-tracker" },
     ],
   },
+  {
+    name: "Blog",
+    submenu: false,
+    link: "/blog",
+  },
   // {
   //   name: "Learning Resources",
   //   submenu: true,

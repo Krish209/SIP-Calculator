@@ -1,4 +1,5 @@
 import React from "react";
+import img from "../../assets/icons/sip-lumpsum.jpeg";
 import Table from "../../consts/Table";
 
 const WhyRiskIsPartOfInvesting = () => {
@@ -94,12 +95,22 @@ const WhyRiskIsPartOfInvesting = () => {
           Why Risk is Part of Investing – and How to Manage It
         </h1>
 
+        {/* Image Section */}
+        {/* <div className="w-full lg:w-1/2 flex justify-center">
+          <img
+            src={img}
+            alt="Investment tools"
+            className="max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[500px] h-auto object-contain"
+            loading="lazy"
+          />
+        </div> */}
+
         {/* Introduction */}
         <section className="my-4 md:my-6">
           <p className="mb-2">
             When people think about investing, the first thoughts often turn to
             potential gains—growing wealth, building a retirement fund, or
-            achieving financial independence. But what many overlook is the {" "}
+            achieving financial independence. But what many overlook is the{" "}
             <strong>inescapable companion of investing: risk</strong>. Risk is
             not just a side effect of investing—it’s a fundamental part of it.
             Understanding risk, accepting it, and learning how to manage it
@@ -144,7 +155,7 @@ const WhyRiskIsPartOfInvesting = () => {
           </h2>
           <div className="space-y-6">
             <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
                 1. Higher Returns Require Higher Risk
               </h3>
               <p className="mb-2">
@@ -167,7 +178,7 @@ const WhyRiskIsPartOfInvesting = () => {
             </div>
 
             <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
                 2. The Economy is Unpredictable
               </h3>
               <p className="mb-2">
@@ -205,7 +216,7 @@ const WhyRiskIsPartOfInvesting = () => {
           </p>
           <div className="space-y-6">
             <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
                 1. Diversification
               </h3>
 
@@ -224,7 +235,7 @@ const WhyRiskIsPartOfInvesting = () => {
               <Table columns={columns2} data={data2} />
             </div>
             <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
                 2. Asset Allocation
               </h3>
 
@@ -248,7 +259,7 @@ const WhyRiskIsPartOfInvesting = () => {
             </div>
 
             <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
                 3. Invest via SIPs (Rupee Cost Averaging)
               </h3>
 
@@ -265,7 +276,7 @@ const WhyRiskIsPartOfInvesting = () => {
               </p>
             </div>
             <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
                 4. Emergency Fund
               </h3>
 
@@ -276,7 +287,7 @@ const WhyRiskIsPartOfInvesting = () => {
             </div>
 
             <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
                 5. Review and Rebalance Regularly
               </h3>
 

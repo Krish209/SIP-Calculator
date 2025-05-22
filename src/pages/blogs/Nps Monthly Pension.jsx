@@ -1,4 +1,5 @@
 import React from "react";
+import img from "../../assets/icons/sip-lumpsum.jpeg";
 import Table from "../../consts/Table";
 
 const NpsMonthlyPension = () => {
@@ -38,6 +39,16 @@ const NpsMonthlyPension = () => {
         <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">
           How to Achieve a Monthly Pension of ₹50,000 with NPS
         </h1>
+
+        {/* Image Section */}
+        {/* <div className="w-full lg:w-1/2 flex justify-center">
+          <img
+            src={img}
+            alt="Investment tools"
+            className="max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[500px] h-auto object-contain"
+            loading="lazy"
+          />
+        </div> */}
 
         {/* Introduction */}
         <section className="my-4 md:my-6">
@@ -107,7 +118,7 @@ const NpsMonthlyPension = () => {
             of 9% annually, your investments will grow to around ₹2.5 crore by
             age 60. At that point:
           </p>
-          <ul className="list-disc pl-6 space-y-1">
+          <ul className="list-disc pl-6 space-y-1 mb-2">
             <li>You can withdraw ₹1.5 crore tax-free (60%)</li>
             <li>You’ll use ₹1 crore (40%) to buy an annuity</li>
             <li>
