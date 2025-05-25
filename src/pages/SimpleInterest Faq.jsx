@@ -12,41 +12,38 @@ const SimpleInterestFAQ = () => {
     {
       question: "What is Simple Interest?",
       answer:
-        "Simple Interest is a method of calculating the interest charged or earned on a principal amount over a certain period of time. The interest is calculated only on the principal amount, not on the interest accumulated over time.",
+        "Simple Interest is a method of calculating interest on a fixed principal amount over a specific period. It is calculated only on the original principal, not on any accumulated interest.",
     },
-
     {
       question:
         "What is the difference between Simple Interest and Compound Interest?",
       answer:
-        "The key difference between Simple Interest and Compound Interest is:\n\n1. Simple Interest: Interest is calculated only on the principal amount throughout the loan or investment period.\n2. Compound Interest: Interest is calculated on both the principal amount and the accumulated interest. This means the interest earned or paid is added to the principal for future interest calculations.",
+        "1. Simple Interest: Calculated only on the principal amount throughout the investment or loan period.\n2. Compound Interest: Calculated on both the principal and the accumulated interest, resulting in higher returns or costs over time.",
     },
-
     {
-      question: "What is the meaning of Rate of Interest?",
+      question: "What does Rate of Interest mean?",
       answer:
-        "The Rate of Interest is the percentage charged or paid on the principal amount for a specific time period. It is typically expressed as an annual percentage rate (APR). The rate may vary depending on the investment or loan type and the terms agreed upon.",
+        "The Rate of Interest is the percentage charged or earned on a principal amount annually. It may vary depending on the type of investment or loan and the agreed terms.",
     },
-    
     {
-      question: "Can I calculate Simple Interest for part of a year?",
+      question: "Can I calculate Simple Interest for a partial year?",
       answer:
-        "Yes, Simple Interest can be calculated for part of a year. If the time is in months or days, you just need to convert it to a fraction of a year. For example, if the time period is 6 months, you would use 0.5 years in the formula:\n\nSI = (Principal × Rate × Time) / 100\n\nFor days, you would calculate the fraction of the year (e.g., 30 days / 365 days).",
+        "Yes, you can calculate Simple Interest for part of a year. Convert the time into a fraction of a year, such as 6 months = 0.5 years. For days, divide the number of days by 365:\n\nSI = (Principal × Rate × Time) / 100",
     },
     {
       question: "Is Simple Interest always calculated annually?",
       answer:
-        "No, Simple Interest is not always calculated annually. While interest is often calculated on an annual basis, it can also be calculated monthly, quarterly, or for any other time period. In such cases, the time period in the formula should reflect the number of years, months, or days as appropriate.",
+        "No, Simple Interest can be calculated monthly, quarterly, or for any custom period. Adjust the time in the formula to reflect the correct time unit in years.",
     },
     {
       question: "Can Simple Interest be negative?",
       answer:
-        "Simple Interest is usually a positive value because it represents the cost of borrowing or the return on investment. However, in special cases (e.g., negative interest rates in the financial market), the interest could be negative, meaning you might owe less money or earn less from your investment.",
+        "Simple Interest is usually positive, representing earnings or cost. However, in rare scenarios like negative interest rate environments, it can become negative, reducing what you owe or earn.",
     },
     {
-      question: "What are the advantages of Simple Interest?",
+      question: "What are the benefits of Simple Interest?",
       answer:
-        "The advantages of Simple Interest include:\n\n1. Simplicity: The calculation is straightforward and easy to understand.\n2. Fixed Payments: For loans or investments, the amount of interest remains fixed over the term.\n3. Easy to Plan: Since the interest does not compound, it is easier to calculate the total interest and repayment amounts.\n4. Lower Cost of Borrowing: Compared to compound interest, the cost of borrowing is generally lower in simple interest.",
+        "Benefits of Simple Interest include:\n\n1. Simple and easy to calculate.\n2. Fixed interest amount throughout the term.\n3. Clear and predictable repayments.\n4. Lower cost compared to compound interest in most cases.",
     },
   ];
 
@@ -77,7 +74,12 @@ const SimpleInterestFAQ = () => {
             </div>
             {activeIndex === index && (
               <div className="text-[14px] md:text-[15px] px-2 py-1 md:py-3">
-                {item.answer}
+                {item.answer.split("\n").map((line, i) => (
+                  <React.Fragment key={i}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
               </div>
             )}
           </div>

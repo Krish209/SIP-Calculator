@@ -12,47 +12,48 @@ const InflationFAQ = () => {
     {
       question: "What causes inflation?",
       answer:
-        "Inflation can be caused by various factors, including:\n1. Demand-pull inflation: When demand for goods and services exceeds supply.\n2. Cost-push inflation: When the cost of production increases, leading to higher prices.\n3. Built-in inflation: When businesses increase prices due to previous inflation, leading to higher wage demands.",
+        "1. Demand-pull inflation: When demand exceeds supply.\n2. Cost-push inflation: When production costs rise, leading to higher prices.\n3. Built-in inflation: When businesses raise prices anticipating future inflation, causing wage increases.",
     },
     {
       question: "How is inflation measured?",
       answer:
-        "Inflation is typically measured using a price index. The Consumer Price Index (CPI) and the Producer Price Index (PPI) are the most commonly used indices. CPI tracks the average change over time in the prices paid by consumers for a basket of goods and services, while PPI measures price changes at the wholesale level.",
+        "Inflation is measured using price indices like the Consumer Price Index (CPI), which tracks changes in prices paid by consumers, and the Producer Price Index (PPI), which measures price changes at the wholesale level.",
     },
     {
       question: "What are the effects of inflation?",
       answer:
-        "Inflation can have both positive and negative effects:\n\n1. Negative Effects:\n  - Reduces purchasing power, making goods and services more expensive.\n  - Creates uncertainty in the economy, affecting investment and savings.\n  - Fixed incomes lose value as prices rise.\n\n2. Positive Effects:\n  - Helps reduce the real value of debt (for borrowers).\n  - Encourages spending and investment, as people may try to buy goods before prices rise further.",
+        "Inflation impacts the economy in several ways:\n\nNegative effects:\n- Reduces purchasing power.\n- Creates economic uncertainty.\n- Hurts those on fixed incomes.\n\nPositive effects:\n- Lowers real debt burden.\n- Encourages spending and investment.",
     },
     {
       question: "What is hyperinflation?",
       answer:
-        "Hyperinflation is an extremely high and typically accelerating inflation rate, often exceeding 50% per month. It leads to a collapse in the value of currency, making basic goods and services unaffordable for most people. Hyperinflation usually occurs due to a collapse in a country's monetary system or uncontrolled money printing.",
+        "Hyperinflation is an extremely rapid inflation rate, often over 50% per month, causing currency collapse and making basic goods unaffordable. It usually results from monetary system failure or excessive money printing.",
     },
     {
       question: "What is deflation?",
       answer:
-        "Deflation is the opposite of inflation, characterized by a decrease in the general price level of goods and services. While deflation might sound like a good thing, it can lead to lower wages, higher unemployment, and an economic recession as consumers and businesses postpone spending and investments.",
+        "Deflation is a sustained drop in general prices, which can lead to lower wages, higher unemployment, and economic recession as spending and investments are delayed.",
     },
     {
-      question: "What is the relationship between inflation and interest rates?",
+      question:
+        "What is the relationship between inflation and interest rates?",
       answer:
-        "Inflation and interest rates are closely related. Central banks, such as the Reserve Bank of India (RBI) or the Federal Reserve, often raise interest rates to combat high inflation. Higher interest rates make borrowing more expensive and saving more attractive, which can reduce spending and investment, thus lowering inflation. On the other hand, low-interest rates can increase inflation by encouraging borrowing and spending.",
+        "Central banks raise interest rates to curb inflation by making borrowing costlier and saving more attractive, reducing spending. Conversely, low interest rates can boost inflation by encouraging borrowing and spending.",
     },
     {
       question: "What is a good inflation rate?",
       answer:
-        "A moderate inflation rate of around 2-3% per year is generally considered healthy for an economy. It indicates steady growth and encourages spending and investment. Central banks usually target a low and stable inflation rate to ensure economic stability and growth.",
+        "A moderate inflation rate of 2-3% annually is considered healthy, promoting steady economic growth by encouraging spending and investment.",
     },
     {
       question: "How does inflation affect my savings?",
       answer:
-        "Inflation erodes the purchasing power of your savings. If your savings do not earn an interest rate that matches or exceeds the inflation rate, the real value of your savings declines over time. For example, if inflation is 6% and your savings account offers 4% interest, the real value of your savings is effectively losing 2% each year.",
+        "Inflation reduces the real value of savings if interest earned is lower than inflation. For example, 6% inflation with 4% interest means a 2% loss in purchasing power each year.",
     },
     {
       question: "Can inflation be controlled?",
       answer:
-        "Yes, inflation can be controlled by central banks using monetary policies. By adjusting interest rates, controlling money supply, and sometimes using fiscal policies, central banks aim to keep inflation in check. However, controlling inflation is a complex task that depends on various external and internal economic factors.",
+        "Yes, central banks control inflation using monetary policies like adjusting interest rates and regulating money supply. However, managing inflation depends on many complex economic factors.",
     },
   ];
 
@@ -83,7 +84,12 @@ const InflationFAQ = () => {
             </div>
             {activeIndex === index && (
               <div className="text-[14px] md:text-[15px] px-2 py-1 md:py-3">
-                {item.answer}
+                {item.answer.split("\n").map((line, i) => (
+                  <React.Fragment key={i}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
               </div>
             )}
           </div>

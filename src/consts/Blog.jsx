@@ -65,6 +65,30 @@ const blogPosts = [
     tag: "Compounding",
     date: "March 15, 2025",
   },
+  {
+    title: "How to Diversify Your Investment Portfolio",
+    path: "/blog/how-to-diversify-your-investment-portfolio",
+    description:
+      "Discover the importance of diversification and how it helps reduce risk.",
+    tag: "Portfolio Management",
+    date: "March 5, 2025",
+  },
+  {
+    title: "How Do Inflation and Taxes Impact Investments?",
+    path: "/blog/how-do-inflation-and-taxes-impact-investments",
+    description:
+      "Learn how inflation and taxes can affect your investment returns and what you can do about it.",
+    tag: "Tax & Inflation",
+    date: "February 25, 2025",
+  },
+  {
+    title: "How to Invest if You are Self-Employed or a Freelancer",
+    path: "/blog/how-to-invest-if-you-are-self-employed-or-a-freelancer",
+    description:
+      "Investment strategies and tips tailored for freelancers and self-employed professionals.",
+    tag: "Self-Employed",
+    date: "February 15, 2025",
+  },
 ];
 
 function BlogHome() {

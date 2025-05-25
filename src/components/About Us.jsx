@@ -69,7 +69,7 @@ export default function AboutPage() {
               <div className="text-gray-200">Years of Financial Expertise</div>
             </div>
             <div className="p-6">
-              <div className="text-4xl font-bold mb-2">50+</div>
+              <div className="text-4xl font-bold mb-2">25+</div>
               <div className="text-gray-200">Investment Calculators</div>
             </div>
             <div className="p-6">

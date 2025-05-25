@@ -260,22 +260,20 @@ const FdInfo = () => {
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Is an FD Investment Right for You?
         </h2>
-        <p className="mb-2">FDs are ideal for investors who:</p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>Are looking for a low-risk, guaranteed return on investment.</li>
-          <li>Want to park funds for a defined period.</li>
-          <li>Do not want to worry about market volatility.</li>
-          <li>
-            Need steady income at regular intervals (for instance, retirees).
-          </li>
-        </ul>
-        <p className="my-2">
-          FDs may not be suitable if you
-          <ul className="list-disc pl-6 space-y-2">
-            <li>are looking for high returns</li>
-            <li>want more liquidity.</li>
-          </ul>
+        <p className="mb-2">
+          Fixed Deposits (FDs) are ideal for investors who:
         </p>
+        <ul className="list-disc pl-6 space-y-1">
+          <li>Prefer low-risk investments with guaranteed returns.</li>
+          <li>Want to park their funds for a fixed period.</li>
+          <li>Wish to avoid the uncertainties of market volatility.</li>
+          <li>Need a steady income at regular intervals (e.g., retirees).</li>
+        </ul>
+        <p className="mt-4 mb-2">However, FDs may not be suitable if you:</p>
+        <ul className="list-disc pl-6 space-y-1">
+          <li>Are seeking higher returns compared to traditional savings.</li>
+          <li>Need quick access to your funds (higher liquidity).</li>
+        </ul>
       </section>
     </div>
   );

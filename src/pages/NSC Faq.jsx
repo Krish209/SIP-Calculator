@@ -12,48 +12,42 @@ const NSCFAQ = () => {
     {
       question: "What is the National Savings Certificate (NSC)?",
       answer:
-        "The National Savings Certificate (NSC) is a government-backed savings scheme in India that offers fixed returns and tax benefits. It is a popular investment option for individuals seeking a safe, low-risk investment with regular interest payments.",
+        "The NSC is a government-backed fixed-income investment scheme in India that offers assured returns and tax benefits under Section 80C. It is considered a low-risk savings option.",
     },
     {
       question: "Who is eligible to invest in NSC?",
       answer:
-        "Any Indian resident individual, or a minor above 10 years of age can invest in NSC. It is not available for Non-Resident Indians (NRIs).",
+        "Any Indian resident individual, including minors above 10 years of age, can invest in NSC. However, NRIs (Non-Resident Indians) are not eligible.",
     },
     {
       question: "What is the minimum and maximum amount I can invest in NSC?",
       answer:
-        "The minimum investment amount for NSC is ₹100, with no upper limit on the investment. You can invest in multiples of ₹100. The maximum investment amount depends on the investor's preference, as there is no cap on the investment.",
+        "The minimum investment is ₹100, and there is no maximum limit. You can invest in multiples of ₹100 as per your convenience.",
     },
-    
     {
       question: "How long is the investment term in NSC?",
       answer:
-        "NSC has two main maturity periods: 5 years and 10 years. Both options offer fixed returns, but the 5-year NSC is more commonly chosen by investors.",
+        "NSC currently comes with a fixed maturity period of 5 years. It offers guaranteed returns for the entire duration.",
     },
     {
       question: "Is the interest earned on NSC taxable?",
       answer:
-        "Yes, the interest earned on NSC is taxable under Income Tax. However, the interest is deemed to be reinvested and qualifies for a tax deduction under Section 80C up to ₹1.5 lakh, which reduces your taxable income.",
+        "Yes, interest on NSC is taxable. However, the interest accrued each year is considered reinvested and qualifies for tax deduction under Section 80C, up to ₹1.5 lakh annually.",
     },
     {
       question: "Can I transfer my NSC to someone else?",
       answer:
-        "Yes, NSCs can be transferred to another person. The transfer can be done through an endorsement on the certificate itself, but only after the first 6 months from the date of issue. The transfer can be done to a family member or to any other eligible person.",
+        "Yes, NSC can be transferred to another person after 6 months from the date of issue, through proper endorsement. Transfers are allowed to close family members or eligible individuals.",
     },
     {
-      question: "Can I withdraw my NSC before the maturity period?",
+      question: "Can I withdraw my NSC before maturity?",
       answer:
-        "No, NSCs cannot be redeemed before the maturity period. However, you can use your NSC as collateral to take a loan from a bank or financial institution.",
-    },
-    {
-      question: "How can I purchase an NSC?",
-      answer:
-        "You can purchase NSCs at any post office in India. The application can be done by filling out a form and submitting the required documents. You will receive the NSC certificate after completing the purchase formalities.",
+        "Premature withdrawal of NSC is not allowed except in exceptional cases like the holder's death or court order. However, you can use NSC as collateral for a secured loan.",
     },
     {
       question: "What happens after the maturity of my NSC?",
       answer:
-        "After the maturity of your NSC, the principal amount along with the accrued interest is paid to you. If you wish to continue investing, you can invest in a new NSC with the same or a different term.",
+        "On maturity, the invested amount along with accrued interest is paid out. You may choose to reinvest in a new NSC to continue earning fixed returns.",
     },
   ];
 
@@ -84,7 +78,12 @@ const NSCFAQ = () => {
             </div>
             {activeIndex === index && (
               <div className="text-[14px] md:text-[15px] px-2 py-1 md:py-3">
-                {item.answer}
+                {item.answer.split("\n").map((line, i) => (
+                  <React.Fragment key={i}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
               </div>
             )}
           </div>

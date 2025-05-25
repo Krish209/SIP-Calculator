@@ -9,27 +9,27 @@ const LumpsumFAQ = () => {
     {
       question: "What is a lump sum investment?",
       answer:
-        "A one-time investment of a large amount into mutual funds or other financial instruments, rather than investing in smaller amounts over time.",
+        "A lump sum investment is a one-time payment made into mutual funds or other financial instruments instead of spreading investments over time.",
     },
     {
       question: "Who should choose lump sum investing?",
       answer:
-        "It’s ideal for investors with a sizable amount of money ready to invest and those comfortable with market fluctuations.",
+        "Lump sum investing suits those with a substantial amount of money ready to invest and who are comfortable with market fluctuations.",
     },
     {
       question: "Is lump sum better than SIP?",
       answer:
-        "Lump sum may offer higher returns if invested during market lows, while SIP spreads risk over time. The best choice depends on your financial situation and market conditions.",
+        "Lump sum can yield higher returns if invested during market lows, while SIPs spread risk by investing regularly over time. The best option depends on your financial goals and market conditions.",
     },
     {
       question: "What are the risks of lump sum investing?",
       answer:
-        "The main risk is market timing—investing during a high may lead to short-term losses. It’s also more exposed to market volatility.",
+        "The main risk is market timing—investing at market highs may cause short-term losses. Lump sum investments are also more vulnerable to market volatility.",
     },
     {
       question: "Can I save tax with lump sum investments?",
       answer:
-        "Yes, investing a lump sum in ELSS mutual funds can provide tax benefits under Section 80C, with a deduction limit of ₹1.5 lakh per year.",
+        "Yes, lump sum investments in ELSS mutual funds offer tax benefits under Section 80C, with deductions up to ₹1.5 lakh per year.",
     },
   ];
 

@@ -12,52 +12,52 @@ const RDFAQ = () => {
     {
       question: "What is a Recurring Deposit (RD)?",
       answer:
-        "A Recurring Deposit (RD) is a type of fixed deposit where you contribute a fixed sum of money regularly for a specified period. It helps you save a fixed amount regularly, and the interest is paid at the end of the term or periodically as per the RD scheme.",
+        "A Recurring Deposit (RD) is a fixed deposit investment where you deposit a fixed amount monthly for a set period. It encourages disciplined savings and earns interest, which is paid at maturity or as per the scheme.",
     },
     {
       question: "Who is eligible to open an RD account?",
       answer:
-        "Any Indian resident individual, and minors can open a Recurring Deposit account. NRIs (Non-Resident Indians) may also open an RD account under specific conditions.",
+        "Indian residents, including minors with a guardian, can open an RD account. NRIs (Non-Resident Indians) may also open one under specific terms set by the bank.",
     },
     {
-      question: "What is the minimum and maximum amount I can invest in RD?",
+      question: "What is the minimum and maximum investment in RD?",
       answer:
-        "The minimum deposit amount for an RD account typically starts from ₹100 to ₹500 per month depending on the bank's terms. There is no upper limit on the amount you can invest, but the deposit amount should be in multiples of ₹10 or ₹100 depending on the bank.",
+        "The minimum monthly deposit typically starts from ₹100 to ₹500, depending on the bank. There’s usually no maximum limit, but deposits must be in multiples of ₹10 or ₹100, as per bank rules.",
     },
     {
-      question: "What is the interest rate on RD?",
+      question: "What is the interest rate on an RD account?",
       answer:
-        "The interest rate on Recurring Deposits is set by the bank and is usually in the range of 5.5% to 7.5% per annum (subject to change). The interest rate is fixed at the time of opening the RD and does not change during the tenure.",
+        "Recurring Deposit interest rates generally range from 5.5% to 7.5% per annum and are fixed at the time of account opening. Rates may vary by bank and scheme.",
     },
     {
-      question: "How long is the tenure for an RD?",
+      question: "What is the typical tenure for an RD?",
       answer:
-        "The tenure for an RD usually ranges from 6 months to 10 years, depending on the bank and the scheme you choose. The most common tenure is 1 year to 5 years.",
+        "The tenure for an RD ranges from 6 months to 10 years. Most banks offer terms of 1 to 5 years as the standard investment duration.",
     },
     {
-      question: "Is the interest earned on RD taxable?",
+      question: "Is RD interest taxable in India?",
       answer:
-        "Yes, the interest earned on RD is taxable as per your income tax slab. However, TDS (Tax Deducted at Source) is applicable if the interest income exceeds ₹40,000 (₹50,000 for senior citizens) in a financial year.",
+        "Yes, interest earned on an RD is taxable as per your income tax slab. TDS is deducted if annual interest exceeds ₹40,000 (₹50,000 for senior citizens).",
     },
     {
       question: "Can I withdraw my RD before maturity?",
       answer:
-        "Yes, you can withdraw your RD before maturity. However, premature withdrawal is subject to penalty charges, and the interest paid on the premature withdrawal is reduced based on the time you have invested in the deposit.",
+        "Yes, premature RD withdrawal is allowed but may attract a penalty. Also, interest is recalculated at a lower rate based on the actual holding period.",
     },
     {
-      question: "Can I take a loan against my RD?",
+      question: "Is it possible to take a loan against an RD?",
       answer:
-        "Yes, you can take a loan against your RD. Banks offer loans up to 90% of the RD balance, depending on their terms and conditions. The loan is usually provided at a rate higher than the RD interest rate.",
+        "Yes, most banks allow loans up to 90% of the RD amount. The loan interest rate is slightly higher than the RD rate and is subject to bank terms.",
     },
     {
-      question: "How is the RD interest calculated?",
+      question: "How is interest on RD calculated?",
       answer:
-        "The interest on RD is calculated quarterly and compounded quarterly as well. The rate is fixed at the time of opening the RD, and the interest is paid either monthly or at maturity based on the bank's terms.",
+        "RD interest is calculated and compounded quarterly. It remains fixed throughout the tenure and is paid either monthly or at maturity, based on the scheme.",
     },
     {
-      question: "What happens after the maturity of an RD?",
+      question: "What happens after an RD matures?",
       answer:
-        "After the RD matures, the principal amount along with the accumulated interest is credited to your account. You can either withdraw the amount or reinvest it in another RD or fixed deposit. The bank may also offer to automatically renew the RD for another term.",
+        "At maturity, the principal and interest are credited to your linked bank account. You can reinvest the amount or opt for automatic renewal, if offered by the bank.",
     },
   ];
 
@@ -88,7 +88,12 @@ const RDFAQ = () => {
             </div>
             {activeIndex === index && (
               <div className="text-[14px] md:text-[15px] px-2 py-1 md:py-3">
-                {item.answer}
+                {item.answer.split("\n").map((line, i) => (
+                  <React.Fragment key={i}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
               </div>
             )}
           </div>

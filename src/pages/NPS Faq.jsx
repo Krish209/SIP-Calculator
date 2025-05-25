@@ -12,59 +12,58 @@ const NPSFAQ = () => {
     {
       question: "Who is eligible to open an NPS account?",
       answer:
-        "Any Indian citizen between the ages of 18 and 60 is eligible to open an NPS account, including both salaried and self-employed individuals. NRIs (Non-Resident Indians) can also participate in NPS.",
+        "Any Indian citizen aged between 18 and 60 years can open an NPS account, including salaried employees, self-employed individuals, and NRIs (Non-Resident Indians).",
     },
     {
       question: "Can I have more than one NPS account?",
       answer:
-        "No, multiple NPS accounts for a single individual are not allowed and there is no necessity also as the NPS is fully portable across sectors and locations.",
+        "No, an individual can only have one NPS account. However, the account is portable across sectors and locations.",
     },
     {
       question:
-        "Can I use more than 40% of my accumulated pension wealth to purchase the annuity at the time of exit from NPS upon attaining the age of 60 years?",
+        "Can I use more than 40% of my accumulated pension wealth to purchase an annuity at age 60?",
       answer:
-        "Yes, a subscriber at the time of attaining the age of 60 years can purchase annuity up to 100% of his accumulated pension wealth.",
+        "Yes, at age 60, subscribers can use up to 100% of their accumulated pension wealth to buy an annuity.",
     },
     {
       question: "Can an NRI open an NPS account?",
       answer:
-        "Yes, a NRI can open an NPS account. Contributions made by NRI are subject to regulatory requirements as prescribed by RBI and FEMA from time to time. If the subscriber's citizenship status changes, his/ her NPS account would be closed.",
+        "Yes, NRIs can open an NPS account. Contributions are subject to RBI and FEMA regulations. The account will be closed if citizenship status changes.",
     },
-
     {
       question: "What is the minimum contribution required for NPS?",
       answer:
-        "For a Tier I account, the minimum contribution is ₹500 per month. For a Tier II account, the minimum contribution is ₹1,000 per year of account opening.",
+        "The minimum contribution for a Tier I account is ₹500 per month, and for a Tier II account, it is ₹1,000 per year.",
     },
     {
       question: "How is the NPS corpus managed?",
       answer:
-        "The NPS corpus is managed by professional Pension Fund Managers (PFMs). You can select an asset class based on your risk appetite: equity, corporate bonds, or government securities. The PFMs charge a nominal management fee for managing the fund.",
+        "Professional Pension Fund Managers (PFMs) manage the NPS corpus. Investors can choose asset classes such as equity, corporate bonds, or government securities based on risk preference. PFMs charge a nominal management fee.",
     },
     {
       question: "What are the tax benefits of NPS?",
       answer:
-        "Contributions to NPS are eligible for tax deductions under Section 80C (up to ₹1.5 lakh) and Section 80CCD(1B) (additional ₹50,000). The maturity corpus is partially tax-free: 60% of the accumulated corpus can be withdrawn tax-free, while 40% must be used to purchase an annuity, which is taxed as per income tax slabs.",
+        "Contributions qualify for tax deductions under Section 80C (up to ₹1.5 lakh) and Section 80CCD(1B) (additional ₹50,000). At maturity, 60% of the corpus can be withdrawn tax-free, while 40% used for annuity purchase is taxable.",
     },
     {
-      question: "Can I withdraw from NPS before the age of 60?",
+      question: "Can I withdraw from NPS before age 60?",
       answer:
-        "Partial withdrawals are allowed from the 3rd year under specific conditions such as for higher education, medical emergencies, or marriage. However, full withdrawal before the age of 60 is generally not allowed except in cases of permanent disability or death.",
+        "Partial withdrawals are allowed after 3 years for specific purposes like education, medical emergencies, or marriage. Full withdrawal before 60 is generally restricted except in cases of permanent disability or death.",
     },
     {
       question: "How is the pension paid out in NPS?",
       answer:
-        "Upon reaching the age of 60, you must withdraw at least 40% of the accumulated corpus as a lump sum. The remaining 60% must be used to purchase an annuity, which will provide a regular pension. The annuity options are offered by approved insurance companies.",
+        "At 60, you must withdraw at least 40% of the corpus as a lump sum. The remaining 60% is used to purchase an annuity, which pays a regular pension from approved insurers.",
     },
     {
       question: "Can I take a loan against my NPS balance?",
       answer:
-        "Yes, you can take a loan against your NPS balance from the 3rd year of your account. The loan amount can be up to 25% of the balance at the end of the previous year.",
+        "Yes, from the 3rd year onwards, loans up to 25% of the previous year’s balance are allowed.",
     },
     {
       question: "What happens after the maturity period of NPS?",
       answer:
-        "After the maturity period (typically 15 years), you can either withdraw the entire accumulated corpus or extend the account in blocks of 5 years with contributions. The extended period allows for further contributions and continues to earn returns based on the chosen asset classes.",
+        "After maturity (usually 15 years), you can withdraw the entire corpus or extend your account in 5-year blocks to continue contributing and earning returns.",
     },
   ];
 
@@ -95,7 +94,12 @@ const NPSFAQ = () => {
             </div>
             {activeIndex === index && (
               <div className="text-[14px] md:text-[15px] px-2 py-1 md:py-3">
-                {item.answer}
+                {item.answer.split("\n").map((line, i) => (
+                  <React.Fragment key={i}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
               </div>
             )}
           </div>

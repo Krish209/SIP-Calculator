@@ -10,42 +10,37 @@ const StepUpSIPFAQ = () => {
     {
       question: "What is a Step-Up SIP?",
       answer:
-        "A Step-Up SIP (also known as a Top-Up SIP) is a type of systematic investment plan where you can increase your SIP contribution automatically at regular intervals, such as annually. It helps you grow your investments as your income increases.",
+        "A Step-Up SIP (also called a Top-Up SIP) is a systematic investment plan where your SIP amount increases automatically at regular intervals—typically annually. It allows your investments to grow in line with your rising income.",
     },
     {
       question: "How is Step-Up SIP different from a regular SIP?",
       answer:
-        "In a regular SIP, the monthly investment amount remains constant. In a Step-Up SIP, you can set a fixed increment (like ₹500 or ₹1,000) that increases your SIP amount at fixed intervals, usually yearly, which helps in building a larger corpus.",
+        "In a regular SIP, the investment amount stays fixed. A Step-Up SIP lets you increase your SIP amount periodically (e.g., by ₹500 or ₹1,000 every year), helping you build a larger corpus over time.",
     },
     {
       question: "What are the benefits of Step-Up SIP?",
       answer:
-        "Step-Up SIP helps you invest more over time without manual effort. It aligns with your increasing income, helps combat inflation, builds a larger corpus, and takes advantage of compounding more effectively than a regular SIP.",
+        "- Investing more as your income grows\n- Better protection against inflation\n- Accelerated wealth creation through compounding\n- No need for manual increases",
     },
     {
       question: "Can I choose the Step-Up amount and frequency?",
       answer:
-        "Yes. Most mutual fund platforms allow you to customize both the Step-Up amount (e.g., ₹500, ₹1000) and the frequency (e.g., yearly, half-yearly) based on your financial goals.",
+        "Yes. Most mutual fund platforms let you customize both the Step-Up amount (e.g., ₹500, ₹1,000) and frequency (annually or semi-annually), based on your financial goals.",
     },
     {
       question: "Can I modify or stop the Step-Up SIP later?",
       answer:
-        "Yes. You can modify, pause, or cancel the Step-Up feature at any time through your mutual fund platform or AMC. It provides complete flexibility.",
+        "Yes. You can pause, modify, or cancel the Step-Up option anytime via your mutual fund platform or directly with the Asset Management Company (AMC).",
     },
     {
       question: "Is Step-Up SIP good for long-term goals?",
       answer:
-        "Absolutely. Step-Up SIPs are ideal for long-term financial goals like retirement, children's education, or buying a home. They help build a larger investment corpus in a disciplined and scalable way.",
+        "Yes. Step-Up SIPs are ideal for long-term financial goals like retirement planning, child’s education, or buying a home. They help you grow your investments steadily and effectively.",
     },
     {
       question: "How do I start a Step-Up SIP?",
       answer:
-        "You can start a Step-Up SIP through mutual fund apps, websites, or directly via AMCs. During setup, choose a fund, enter the starting SIP amount, then select the Step-Up option with desired increment and frequency.",
-    },
-    {
-      question: "Is there a calculator to plan Step-Up SIP returns?",
-      answer:
-        "Yes. Many online Step-Up SIP calculators let you input your base amount, increment, frequency, duration, and expected return to estimate your future corpus. These tools are free and easy to use.",
+        "You can start a Step-Up SIP via mutual fund apps, websites, or AMCs. Choose your fund, set the initial SIP amount, then select the Step-Up option with the desired increment and frequency.",
     },
   ];
 
@@ -76,7 +71,12 @@ const StepUpSIPFAQ = () => {
             </div>
             {activeIndex === index && (
               <div className="text-[14px] md:text-[15px] px-2 py-1 md:py-3">
-                {item.answer}
+                {item.answer.split("\n").map((line, i) => (
+                  <React.Fragment key={i}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
               </div>
             )}
           </div>

@@ -12,27 +12,27 @@ const KVPFAQ = () => {
     {
       question: "Can I withdraw my KVP before maturity?",
       answer:
-        "Yes, premature withdrawal is allowed after 2.5 years (30 months), with applicable conditions.",
+        "Yes, premature withdrawal is allowed after 2.5 years (30 months), subject to applicable conditions.",
     },
     {
       question: "Is KVP taxable?",
-      answer: "Yes. Interest earned is fully taxable as per your income tax slab.",
+      answer:
+        "Yes, the interest earned on KVP is fully taxable according to your income tax slab.",
     },
     {
-      question: "Is KVP better than FD?",
+      question: "Is KVP better than Fixed Deposit (FD)?",
       answer:
-        "KVP offers similar returns to fixed deposits but without tax benefits. It may suit long-term conservative investors.",
+        "KVP offers returns similar to fixed deposits but does not provide tax benefits. It may be suitable for long-term conservative investors.",
     },
     {
       question: "Can NRIs invest in KVP?",
       answer:
-        "No, Non-Resident Indians (NRIs) are not eligible to invest in KVP. Only resident Indians are eligible.",
+        "No, Non-Resident Indians (NRIs) are not eligible to invest in KVP. Only resident Indians can invest.",
     },
-
     {
       question: "Is the KVP calculator free to use?",
       answer:
-        "Yes, KVP calculators available online are generally free and accessible to all.",
+        "Yes, KVP calculators available online are generally free and easy to access.",
     },
   ];
 
@@ -63,7 +63,12 @@ const KVPFAQ = () => {
             </div>
             {activeIndex === index && (
               <div className="text-[14px] md:text-[15px] px-2 py-1 md:py-3">
-                {item.answer}
+                {item.answer.split("\n").map((line, i) => (
+                  <React.Fragment key={i}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
               </div>
             )}
           </div>

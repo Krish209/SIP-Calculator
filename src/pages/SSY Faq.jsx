@@ -12,52 +12,52 @@ const SSYFAQ = () => {
     {
       question: "What is Sukanya Samriddhi Yojana (SSY)?",
       answer:
-        "The Sukanya Samriddhi Yojana (SSY) is a government-backed savings scheme designed for the girl child in India. It aims to provide financial support for the education and marriage of the girl child. It offers one of the highest interest rates among government schemes, along with tax benefits.",
+        "Sukanya Samriddhi Yojana (SSY) is a government-backed savings scheme for the girl child in India. It aims to support education and marriage expenses and offers a high interest rate with tax benefits.",
     },
     {
       question: "Who is eligible to open an SSY account?",
       answer:
-        "An SSY account can be opened by the parents or legal guardians of a girl child who is under the age of 10 years. A maximum of two accounts can be opened for two different girls. The account can be opened at any post office or authorized bank.",
+        "Parents or legal guardians can open an SSY account for a girl child below 10 years of age. A maximum of two accounts is allowed for two different girls. It can be opened at any post office or authorized bank.",
     },
     {
-      question: "What is the minimum and maximum amount I can invest in SSY?",
+      question: "What is the minimum and maximum investment in SSY?",
       answer:
-        "The minimum amount that can be invested in SSY is ₹250 per year. The maximum annual investment is ₹1.5 lakh. Contributions should be made for a minimum of 14 years, and the account matures after 21 years from the date of opening.",
+        "You can invest a minimum of ₹250 and up to ₹1.5 lakh annually in SSY. Contributions are required for 14 years, and the account matures 21 years after opening.",
     },
     {
       question: "What is the interest rate on SSY?",
       answer:
-        "The interest rate on SSY is set by the Government of India and is revised quarterly. As of 2025, the interest rate is 7.6% per annum, compounded annually. This rate is one of the highest among small savings schemes in India.",
+        "As of 2025, the SSY interest rate is 7.6% per annum, compounded annually. The rate is set by the Government of India and revised quarterly.",
     },
     {
       question: "Can I withdraw from SSY before maturity?",
       answer:
-        "Partial withdrawals are allowed from the 21st year of the account, but withdrawals before that are not permitted except in cases of extreme conditions like the death of the account holder. The account remains active even after the completion of 21 years, but no further contributions are required.",
+        "Partial withdrawal (up to 50%) is allowed after the girl turns 18, usually for education. Early closure is permitted under specific conditions like the account holder’s death.",
     },
     {
       question: "Is the interest earned on SSY taxable?",
       answer:
-        "No, the interest earned on SSY is tax-free. Additionally, investment made in the SSY are eligible for tax deductions under Section 80C of the Income Tax Act, up to ₹1.5 lakh. This makes it an attractive option for tax savings as well.",
+        "No, the interest earned on SSY is completely tax-free. Contributions up to ₹1.5 lakh per year are eligible for tax deduction under Section 80C of the Income Tax Act.",
     },
     {
       question: "What is the tenure of an SSY account?",
       answer:
-        "The tenure of an SSY account is 21 years from the date of opening. However, contributions must be made for the first 14 years. After 14 years, the account continues to earn interest, but no further contributions are required.",
+        "SSY has a maturity period of 21 years from the date of opening. Contributions are mandatory only for the first 14 years; the account continues to earn interest until maturity.",
     },
     {
-      question: "Can I transfer my SSY account to another post office or bank?",
+      question: "Can I transfer my SSY account?",
       answer:
-        "Yes, you can transfer your SSY account to another post office or bank. The transfer can be done through a simple application process, ensuring the continuity of the scheme across locations.",
+        "Yes, the SSY account can be transferred between post offices or authorized banks using a simple application form, maintaining the same account benefits.",
     },
     {
-      question: "Can I make the SSY account a joint account?",
+      question: "Can the SSY account be a joint account?",
       answer:
-        "No, an SSY account can only be opened in the name of the girl child, and it must be operated by the parent or legal guardian. It is a single-holder account and cannot be a joint account.",
+        "No, joint accounts are not allowed. SSY accounts are single-holder accounts opened in the name of the girl child and operated by a parent or guardian.",
     },
     {
-      question: "What happens after the maturity of SSY?",
+      question: "What happens after SSY account maturity?",
       answer:
-        "After 21 years, the account matures, and the balance can be withdrawn. The girl child can either withdraw the entire amount or choose to continue the account for further interest accrual (without contributions).",
+        "Upon maturity after 21 years, the account balance can be fully withdrawn by the account holder (the girl). The account can also remain open and earn interest without further deposits.",
     },
   ];
 
@@ -88,7 +88,12 @@ const SSYFAQ = () => {
             </div>
             {activeIndex === index && (
               <div className="text-[14px] md:text-[15px] px-2 py-1 md:py-3">
-                {item.answer}
+                {item.answer.split("\n").map((line, i) => (
+                  <React.Fragment key={i}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
               </div>
             )}
           </div>

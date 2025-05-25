@@ -12,43 +12,42 @@ const GSTFAQ = () => {
     {
       question: "What is GST?",
       answer:
-        "GST (Goods and Services Tax) is a single tax levied on the supply of goods and services in India. It replaced multiple indirect taxes like VAT, Service Tax, and Excise Duty. GST is designed to streamline the tax structure and make the taxation system simpler and more transparent.",
+        "GST (Goods and Services Tax) is a single tax levied on the supply of goods and services in India. It replaced multiple indirect taxes like VAT, Service Tax, and Excise Duty, simplifying the tax system for better transparency and ease of compliance.",
     },
-    
     {
       question: "Who needs to register for GST?",
       answer:
-        "Businesses with a turnover exceeding ₹40 lakh (₹20 lakh for special category states) are required to register for GST. Additionally, businesses engaged in inter-state supply, e-commerce operators, or those receiving tax incentives may also need to register for GST.",
+        "Businesses with an annual turnover exceeding ₹40 lakh (₹20 lakh for special category states) must register for GST. Additionally, businesses involved in inter-state supply, e-commerce operators, or those receiving tax incentives are also required to register.",
     },
     {
       question: "What is the GST rate in India?",
       answer:
-        "GST rates in India vary depending on the type of goods and services. The tax rates are generally divided into the following slabs:\n\n1. 5%: For essential goods and services.\n2. 12%: For intermediate goods.\n3. 18%: For standard goods and services.\n4. 28%: For luxury and sin goods, such as tobacco and high-end cars.\n\nIn addition to these, some goods and services are exempt from GST or fall under special rates.",
+        "GST rates vary by goods and services category:\n\n1. 5% – Essential goods and services\n2. 12% – Intermediate goods\n3. 18% – Standard goods and services\n4. 28% – Luxury and sin goods (e.g., tobacco, luxury cars)\n\nSome goods and services are exempt or have special rates.",
     },
     {
       question: "What is GSTIN?",
       answer:
-        "GSTIN (Goods and Services Tax Identification Number) is a unique 15-digit identification number assigned to businesses or entities registered under GST. This number is used to track the transactions and tax payments of the business.",
+        "GSTIN (Goods and Services Tax Identification Number) is a unique 15-digit number assigned to businesses registered under GST. It is used to track tax payments and compliance.",
     },
     {
       question: "What is Input Tax Credit (ITC)?",
       answer:
-        "Input Tax Credit (ITC) allows businesses to reduce the tax paid on their inputs (purchases) from the tax collected on their output (sales). This means that the tax you pay on the purchase of goods and services can be deducted from the tax you collect on sales, thus reducing the overall tax liability.",
+        "Input Tax Credit (ITC) allows businesses to offset the tax paid on purchases against the tax collected on sales, reducing the overall tax liability.",
     },
     {
       question: "Is GST applicable on exports?",
       answer:
-        "Exports are generally considered 'zero-rated' under GST, which means that exports are exempt from GST. However, businesses involved in exports can claim a refund on the input tax paid on purchases related to the exported goods or services. This is to ensure that exporters are not taxed on their exports.",
+        "Exports are zero-rated under GST, meaning they are exempt from GST. Exporters can claim refunds on input taxes paid on goods or services related to exports, ensuring exports are not taxed.",
     },
     {
       question: "What happens if a business fails to comply with GST?",
       answer:
-        "Failure to comply with GST regulations can result in penalties, interest on late payments, and potential legal action. Some common penalties include:\n\n1. Penalty for late filing of GST returns.\n2. Penalty for failure to pay GST.\n3. Penalty for incorrect or false information provided in GST returns.\n\nThe penalties vary depending on the nature of the violation.",
+        "Non-compliance can lead to penalties, interest on late payments, and legal action. Penalties include late filing of returns, failure to pay GST, and providing incorrect information in returns. The penalty amount varies based on the violation.",
     },
     {
       question: "What are GST returns?",
       answer:
-        "GST returns are the documents that businesses must file with the GST authorities to report their sales, purchases, and the amount of tax owed or refundable. Businesses must file monthly, quarterly, or annual GST returns depending on their turnover and type of registration. Some common GST returns are GST R-1 (sales return), GST R-3B (summary return), and GST R-9 (annual return).",
+        "GST returns are periodic filings businesses submit to report sales, purchases, and tax liabilities. Depending on turnover and registration type, returns can be monthly, quarterly, or annual. Common forms include GST R-1 (sales), GST R-3B (summary), and GST R-9 (annual).",
     },
   ];
 
@@ -79,7 +78,12 @@ const GSTFAQ = () => {
             </div>
             {activeIndex === index && (
               <div className="text-[14px] md:text-[15px] px-2 py-1 md:py-3">
-                {item.answer}
+                {item.answer.split("\n").map((line, i) => (
+                  <React.Fragment key={i}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
               </div>
             )}
           </div>

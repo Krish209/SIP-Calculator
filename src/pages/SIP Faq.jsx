@@ -9,63 +9,58 @@ const SIPFAQ = () => {
     {
       question: "What is the best time to start an SIP?",
       answer:
-        "The best time to start an SIP is now! The earlier you start, the more time your money has to grow.",
+        "The best time to start a Systematic Investment Plan (SIP) is now. Starting early gives your investments more time to grow through compounding.",
     },
     {
       question: "Can I stop or change my SIP?",
       answer:
-        "Yes, you can modify or stop your SIP anytime, allowing flexibility to change the amount, fund, or duration.",
+        "Yes, SIPs are flexible. You can modify or stop your SIP at any time, including changing the amount, fund, or investment period.",
     },
     {
       question: "What are the benefits of SIP?",
       answer:
-        "SIP offers benefits such as disciplined investing, compounding, rupee cost averaging, and the ability to start with small amounts.",
+        "SIP benefits include disciplined investing, compounding returns, rupee cost averaging, and low entry points—starting from as little as ₹500.",
     },
     {
       question: "Is SIP safe?",
       answer:
-        "SIP investments are subject to market risks, but since they are long-term investments, they are generally considered safer compared to short-term investing.",
+        "SIP investments are subject to market risks. However, SIPs promote long-term investing, which helps manage volatility and reduce risk over time.",
     },
     {
       question: "Can I invest in multiple SIPs?",
       answer:
-        "Yes, you can invest in multiple SIPs across different mutual funds, depending on your financial goals and risk tolerance.",
+        "Yes, you can invest in multiple SIPs across different mutual funds to diversify your portfolio based on your goals and risk appetite.",
     },
     {
       question: "What happens if I miss an SIP payment?",
       answer:
-        "If you miss an SIP payment, your investment will be postponed until the next installment. You can also choose to stop or pause your SIP if needed.",
+        "Missing an SIP payment usually results in a skipped installment. No penalties are charged, and your SIP continues from the next scheduled date.",
     },
     {
       question: "What is the minimum amount required for SIP?",
       answer:
-        "The minimum amount for SIP can vary depending on the mutual fund you choose, but typically it can start from as low as ₹500.",
+        "Most mutual funds allow you to start an SIP with a minimum of ₹500 per month, making it accessible to all types of investors.",
     },
-    // { question: "How do I track my SIP performance?", answer: "You can track your SIP performance through your mutual fund provider's app, website, or by accessing your account statement." },
-    // { question: "What is the difference between SIP and lump sum investment?", answer: "SIP involves investing a fixed amount at regular intervals, while lump sum investment involves investing a large sum of money all at once." },
     {
       question: "Is SIP a long-term investment?",
       answer:
-        "Yes, SIP is typically considered a long-term investment strategy, allowing you to benefit from the power of compounding.",
+        "Yes, SIP is best suited for long-term goals. It allows your investment to benefit from compounding and market fluctuations over time.",
     },
     {
       question: "What is the tax benefit of investing in SIP?",
       answer:
-        "SIP investments in Equity Linked Savings Schemes (ELSS) are eligible for tax deductions under Section 80C of the Income Tax Act.",
+        "SIPs in ELSS (Equity Linked Savings Schemes) qualify for tax deductions up to ₹1.5 lakh under Section 80C of the Income Tax Act.",
     },
     {
       question: "Can I change the amount of my SIP investment?",
       answer:
-        "Yes, you can increase or decrease your SIP amount at any time, based on your financial goals and preferences.",
+        "Yes, you can increase or decrease your SIP amount anytime by modifying your mandate or creating a new SIP with the desired amount.",
     },
-    // { question: "How does SIP help in rupee cost averaging?", answer: "Rupee cost averaging helps you buy more units when prices are low and fewer units when prices are high, thereby averaging out the cost of your investment over time." },
-    // { question: "Can I withdraw money from my SIP investment anytime?", answer: "Yes, you can redeem your SIP units anytime based on the mutual fund’s redemption rules, but it's best to stay invested long-term for optimal growth." },
     {
       question: "What is NAV in SIP?",
       answer:
-        "NAV (Net Asset Value) represents the market value of the assets held by a mutual fund. The number of units you own is based on the NAV at the time of investment.",
+        "NAV (Net Asset Value) is the per-unit value of a mutual fund scheme. SIP units are allotted based on the NAV on the day of your investment.",
     },
-    // { question: "Can I start SIP in a retirement plan?", answer: "Yes, you can start SIP in a retirement mutual fund plan to build a retirement corpus over time." }
   ];
 
   return (

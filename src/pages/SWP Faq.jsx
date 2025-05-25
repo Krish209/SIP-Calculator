@@ -5,53 +5,54 @@ const SWPFAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   // Toggle active/close for each question
-  const toggleFAQ = (index) => setActiveIndex(activeIndex === index ? null : index);
+  const toggleFAQ = (index) =>
+    setActiveIndex(activeIndex === index ? null : index);
 
   const questions = [
     {
       question: "What is SWP (Systematic Withdrawal Plan)?",
       answer:
-        "A Systematic Withdrawal Plan (SWP) allows investors to withdraw a fixed amount of money from their mutual fund investments at regular intervals, providing a steady stream of income. It's the reverse of a Systematic Investment Plan (SIP), where you invest regularly into mutual funds.",
+        "A Systematic Withdrawal Plan (SWP) allows you to withdraw a fixed amount from your mutual fund investment at regular intervals. It provides steady income and is the reverse of a Systematic Investment Plan (SIP).",
     },
     {
       question: "How does SWP work?",
       answer:
-        "With SWP, you invest a lump sum in a mutual fund and then choose to withdraw a fixed amount periodically (e.g., monthly, quarterly, or annually). The mutual fund house redeems a certain number of units to meet your withdrawal request, and the remaining units stay invested in the fund.",
+        "In SWP, you invest a lump sum in a mutual fund and schedule fixed periodic withdrawals—monthly, quarterly, or annually. The fund redeems the required number of units, while the remaining investment continues to earn returns.",
     },
     {
       question: "Can I change the withdrawal amount or frequency in SWP?",
       answer:
-        "Yes, you can modify the withdrawal amount or frequency of SWP based on your needs. Most mutual fund platforms allow you to update your SWP instructions anytime.",
+        "Yes, most mutual fund platforms allow you to modify the withdrawal amount and frequency at any time based on your financial needs.",
     },
     {
       question: "Is SWP taxable?",
       answer:
-        "Yes, SWP withdrawals are subject to tax. The tax depends on the type of mutual fund (equity or debt) and the duration of your investment. For equity funds, long-term capital gains (LTCG) tax applies if held for more than a year, and short-term capital gains (STCG) tax is applicable if sold before a year.",
+        "Yes. SWP withdrawals are subject to capital gains tax. For equity funds, LTCG tax applies if held for over 1 year, while STCG tax applies for shorter periods. Taxation varies for debt funds based on holding period and fund type.",
     },
     {
       question: "Can I use SWP for retirement planning?",
       answer:
-        "Yes, SWP is an excellent tool for retirement planning. It allows you to create a steady stream of income post-retirement by withdrawing fixed amounts from your mutual fund investments. SWP helps retirees manage their expenses while preserving their capital for future growth.",
+        "Absolutely. SWP is widely used in retirement planning to generate a regular income stream while keeping the remaining capital invested for long-term growth.",
     },
     {
       question: "How can I set up an SWP?",
       answer:
-        "You can set up an SWP by investing in a mutual fund and choosing the SWP option. You will need to specify the amount and frequency of withdrawals. This can typically be done via the mutual fund's website, online investment platforms, or through your financial advisor.",
+        "You can start an SWP by investing a lump sum in a mutual fund and selecting the SWP option via the fund’s website, investment platform, or financial advisor. Set the withdrawal amount and frequency as per your preference.",
     },
     {
       question: "What happens if my mutual fund performs poorly during SWP?",
       answer:
-        "If the mutual fund's performance is poor, the value of your investment may decline, and you may need to redeem more units to maintain your withdrawal amount. This could potentially deplete your corpus faster, especially if the market continues to underperform.",
+        "If fund performance declines, more units may be redeemed to maintain your withdrawal amount. This may reduce your corpus faster, especially in prolonged market downturns.",
     },
     {
       question: "Is there a minimum amount for SWP?",
       answer:
-        "Most mutual fund houses have a minimum SWP amount requirement, usually around ₹500 or ₹1,000 per month, depending on the scheme. Always check with your fund house for specific details.",
+        "Yes, most mutual fund houses require a minimum SWP withdrawal amount—usually ₹500 or ₹1,000 per installment. Check with your fund for exact details.",
     },
     {
       question: "Can I stop my SWP anytime?",
       answer:
-        "Yes, you can stop your SWP at any time. Simply inform the mutual fund house or update your SWP preferences through the platform. However, make sure to review the potential impact of stopping the SWP on your long-term financial goals.",
+        "Yes, you can cancel or pause your SWP anytime by notifying your mutual fund or updating your request online. Ensure this aligns with your financial goals before making changes.",
     },
   ];
 
@@ -82,7 +83,12 @@ const SWPFAQ = () => {
             </div>
             {activeIndex === index && (
               <div className="text-[14px] md:text-[15px] px-2 py-1 md:py-3">
-                {item.answer}
+                {item.answer.split("\n").map((line, i) => (
+                  <React.Fragment key={i}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
               </div>
             )}
           </div>

@@ -37,6 +37,9 @@ import StockEtfMfBond from "./pages/blogs/What Are Stocks, ETFs, Mutual Funds, a
 import CreatePassiveIncome from "./pages/blogs/Create a Passive Income";
 import CompoundingWork from "./pages/blogs/Compounding Work";
 import BlogHome from "./consts/Blog";
+import DiversifyPortfolio from "./pages/blogs/How to Diversify Portfolio";
+import InflationandTaxesImpact from "./pages/blogs/Inflation and Taxes Impact Investments";
+import SelfEmployedOrFreelancer from "./pages/blogs/Invest if You're Self-Employed or a Freelancer";
 
 function App() {
   return (
@@ -67,6 +70,9 @@ function App() {
           <Route path="/blog/what-are-stocks-etfs-mutual-funds-and-bonds" element={<StockEtfMfBond />} />
           <Route path="/blog/how-to-create-a-passive-income-with-investments" element={<CreatePassiveIncome />} />
           <Route path="/blog/how-does-compounding-work" element={<CompoundingWork />} />
+          <Route path="/blog/how-to-diversify-your-investment-portfolio" element={<DiversifyPortfolio />} />
+          <Route path="/blog/how-do-inflation-and-taxes-impact-investments" element={<InflationandTaxesImpact />} />
+          <Route path="/blog/how-to-invest-if-you-are-self-employed-or-a-freelancer" element={<SelfEmployedOrFreelancer />} />
 
           {/* Investment Options Route */}
           <Route path="sip-calculator" element={<SIPCalculator />} />
