@@ -40,6 +40,8 @@ import BlogHome from "./consts/Blog";
 import DiversifyPortfolio from "./pages/blogs/How to Diversify Portfolio";
 import InflationandTaxesImpact from "./pages/blogs/Inflation and Taxes Impact Investments";
 import SelfEmployedOrFreelancer from "./pages/blogs/Invest if You're Self-Employed or a Freelancer";
+import Random from "./pages/blogs/Random";
+import Random2 from "./pages/blogs/Random2";
 
 function App() {
   return (
@@ -52,6 +54,9 @@ function App() {
 
           {/* About Us Route */}
           <Route path="about" element={<AboutPage />} />
+
+          <Route path="random" element={<Random />} />
+          <Route path="random2" element={<Random2 />} />
 
           {/* Contact Us Route */}
           <Route path="contact" element={<Contact />} />

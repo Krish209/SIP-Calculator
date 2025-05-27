@@ -1,6 +1,7 @@
 import React from "react";
-import img from "../../assets/icons/sip-lumpsum.jpeg";
 import Table from "../../consts/Table";
+import BlogLayout from "../../consts/BlogLayout";
+import img from "../../assets/icons/blogs/self-employed2.jpeg";
 
 const SelfEmployedOrFreelancer = () => {
   const columns = [
@@ -129,23 +130,19 @@ const SelfEmployedOrFreelancer = () => {
   ];
 
   return (
-    <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
-      <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-        {/* Title */}
-        <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">
-          How to Invest if You're Self-Employed or a Freelancer in India
-        </h1>
-
-        {/* Image Section */}
-        {/* <div className="w-full lg:w-1/2 flex justify-center">
-          <img
-            src={img}
-            alt="Investment tools"
-            className="max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[500px] h-auto object-contain"
-            loading="lazy"
-          />
-        </div> */}
-
+    <BlogLayout
+      title="How to Invest if You're Self-Employed or a Freelancer in India"
+      author="Your Name"
+      role="Financial Advisor"
+      date="May 26, 2025"
+      readTime="10 min read"
+      image={img}
+      tags={["Investing", "Inflation", "Finance", "Wealth"]}
+      isPremium={true} // set as per your requirement
+      isWeeklyUpdated={false}
+    >
+      {/* Blog content here */}
+      <div className="max-w-screen-lg md:mx-auto bg-white text-night">
         {/* Introduction */}
         <section className="my-4 md:my-6">
           <p className="mb-2">
@@ -205,7 +202,7 @@ const SelfEmployedOrFreelancer = () => {
                 1. Build an Emergency Fund First
               </h3>
               <p className="mb-2">
-                Before you start investing, create an emergency fund that covers
+                Before you start investing, create an emergency fund that covers{" "}
                 <strong>6–12 months</strong> of your essential expenses,
                 including rent, EMIs, groceries, and medical costs.. This fund
                 should be easily accessible and kept in a liquid mutual fund or
@@ -248,7 +245,7 @@ const SelfEmployedOrFreelancer = () => {
                 3. Use Tax-Advantaged Investment Tools
               </h3>
               <p className="mb-2">
-                Freelancers are eligible for several tax-saving options under
+                Freelancers are eligible for several tax-saving options under{" "}
                 <strong>Section 80C and 80CCD</strong>:
               </p>
 
@@ -326,15 +323,15 @@ const SelfEmployedOrFreelancer = () => {
               to mutual funds or NPS.
             </li>
             <li>
-              <strong>Maintain a Buffer</strong>Keep 1–2 months of expenses in a
-              liquid fund to manage cash flow.
+              <strong>Maintain a Buffer</strong> Keep 1–2 months of expenses in
+              a liquid fund to manage cash flow.
             </li>
             <li>
-              <strong>Review Quarterly</strong>Adjust your SIP amounts based on
+              <strong>Review Quarterly</strong> Adjust your SIP amounts based on
               your income and expenses.
             </li>
             <li>
-              <strong>Use a Financial Advisor</strong>Consider consulting a
+              <strong>Use a Financial Advisor</strong> Consider consulting a
               financial advisor for personalized investment strategies.
             </li>
           </ul>
@@ -395,7 +392,7 @@ const SelfEmployedOrFreelancer = () => {
           </p>
         </section>
       </div>
-    </div>
+    </BlogLayout>
   );
 };
 

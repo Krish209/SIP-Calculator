@@ -56,7 +56,7 @@ function Footer() {
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link to="/about" className="hover:text-gray-400">
-                    About
+                    About Us
                   </Link>
                 </li>
                 <li>
@@ -89,6 +89,12 @@ function Footer() {
                 <li>
                   <Link to="/terms" className="hover:text-gray-400">
                     Terms & Uses Policy
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/disclaimer" className="hover:text-gray-400">
+                    Disclaimer
                   </Link>
                 </li>
               </ul>

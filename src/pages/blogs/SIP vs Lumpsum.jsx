@@ -1,8 +1,7 @@
 import React from "react";
-import img from "../../assets/icons/sip-lump.jpeg";
 import Table from "../../consts/Table";
-import { CiCalendar } from "react-icons/ci";
-import { CiClock1 } from "react-icons/ci";
+import BlogLayout from "../../consts/BlogLayout";
+import img from "../../assets/icons/blogs/sip-lumpsum.jpeg";
 
 const SIPvsLumpsum = () => {
   const publishedDate = "May 23, 2025";
@@ -53,35 +52,19 @@ const SIPvsLumpsum = () => {
   ];
 
   return (
-    <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
-      <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-        {/* Title */}
-        <h1 className="text-2xl md:text-3xl font-bold my-4 md:my-8">
-          SIP vs Lumpsum: Which Investment Strategy Is Better?
-        </h1>
-
-        {/* Meta Info Section */}
-        <div className="flex items-center gap-4 text-sm text-gray-700 mb-4">
-          <div className="flex items-center gap-1">
-            <CiCalendar className="text-lg" />
-            <span>{publishedDate}</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <CiClock1 className="text-lg" />
-            <span>{readingTime}</span>
-          </div>
-        </div>
-
-        {/* Image Section */}
-        <div className="w-full lg:w-1/2 flex justify-center shadow-lg">
-          <img
-            src={img}
-            alt="Investment tools"
-            className="max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[500px] h-auto object-contain"
-            // loading="lazy"
-          />
-        </div>
-
+    <BlogLayout
+      title="SIP vs Lumpsum: Which Investment Strategy Is Better?"
+      author="Your Name"
+      role="Financial Advisor"
+      date="May 26, 2025"
+      readTime="10 min read"
+      image={img}
+      tags={["Investing", "Inflation", "Finance", "Wealth"]}
+      isPremium={true} // set as per your requirement
+      isWeeklyUpdated={false}
+    >
+      {/* Blog content here */}
+      <div className="max-w-screen-lg md:mx-auto bg-white text-night">
         {/* Introduction */}
         <section className="my-4 md:my-6">
           <p className="mb-2">
@@ -212,7 +195,7 @@ const SIPvsLumpsum = () => {
           </p>
         </section>
       </div>
-    </div>
+    </BlogLayout>
   );
 };
 
