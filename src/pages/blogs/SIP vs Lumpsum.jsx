@@ -35,14 +35,14 @@ const SIPvsLumpsum = () => {
       lumpsum: "No",
     },
     {
-      criteria: "Affordability",
-      sip: "High (starts as low as ₹500/month)",
-      lumpsum: "Requires a large amount upfront",
+      criteria: "Minimum Investment",
+      sip: "₹500/month",
+      lumpsum: "Requires larger capital",
     },
     {
       criteria: "Best When Market Is",
       sip: "Volatile or bearish",
-      lumpsum: "Bullish or on an uptrend",
+      lumpsum: "Bullish or uptrend",
     },
     {
       criteria: "Flexibility",
@@ -64,18 +64,20 @@ const SIPvsLumpsum = () => {
       isWeeklyUpdated={false}
     >
       {/* Blog content here */}
-      <div className="max-w-screen-lg md:mx-auto bg-white text-night">
+      <div className="max-w-screen-lg md:mx-auto text-night">
         {/* Introduction */}
         <section className="my-4 md:my-6">
           <p className="mb-2">
             When it comes to investing in mutual funds or other market-linked
-            instruments, one of the most common dilemmas investors face is
-            choosing between a Systematic Investment Plan (SIP) and a Lumpsum
-            investment. Both approaches offer unique benefits and cater to
-            different kinds of investors depending on their financial goals,
-            risk appetite, and market outlook. So, which strategy is better—SIP
-            or lumpsum? The answer isn’t straightforward and largely depends on
-            the individual’s financial situation and investment horizon.
+            instruments, a common question investors face is: <strong>Should I invest
+            via SIP or lumpsum?</strong>
+          </p>
+          <p className="mb-2">
+            Both investment strategies offer unique benefits and suit different
+            financial profiles. The right choice depends on your <strong>goals, risk
+            tolerance, cash flow</strong>, and <strong>market outlook</strong>. In this article, we
+            compare SIP and lumpsum investments to help you decide which
+            strategy might be better for you.
           </p>
         </section>
 
@@ -86,18 +88,18 @@ const SIPvsLumpsum = () => {
           </h2>
 
           <p className="mb-2">
-            A Systematic Investment Plan (SIP) allows an investor to invest a
+            A <strong>Systematic Investment Plan (SIP)</strong> allows an investor to invest a
             fixed amount of money regularly—usually monthly or quarterly—into a
             mutual fund. This method promotes discipline and helps build wealth
             over time, making it a great option for salaried individuals or
             those who prefer gradual investing. SIPs are especially advantageous
-            in volatile markets as they leverage the concept of rupee cost
+            in <strong>volatile markets</strong> as they leverage the concept of rupee cost
             averaging, which means you buy more units when prices are low and
             fewer units when prices are high.
           </p>
 
           <p className="mb-2">
-            On the other hand, a Lumpsum investment involves investing a large
+            On the other hand, a <strong>Lumpsum investment</strong> involves investing a large
             amount of money at one go. It’s typically preferred by those who
             have a substantial amount of idle money—say, from a bonus,
             inheritance, or the sale of an asset. Lumpsum investments have the

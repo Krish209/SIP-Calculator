@@ -73,7 +73,7 @@ function App() {
           <Route path="/blog/investing-vs-gambling-whats-the-real-difference" element={<InvestingVsGambling />} />
           <Route path="/blog/beating-inflation" element={<BeatingInflation />} />
           <Route path="/blog/what-are-stocks-etfs-mutual-funds-and-bonds" element={<StockEtfMfBond />} />
-          <Route path="/blog/how-to-create-a-passive-income-with-investments" element={<CreatePassiveIncome />} />
+          <Route path="/blog/how-to-create-passive-income-with-investments" element={<CreatePassiveIncome />} />
           <Route path="/blog/how-does-compounding-work" element={<CompoundingWork />} />
           <Route path="/blog/how-to-diversify-your-investment-portfolio" element={<DiversifyPortfolio />} />
           <Route path="/blog/how-do-inflation-and-taxes-impact-investments" element={<InflationandTaxesImpact />} />

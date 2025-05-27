@@ -101,13 +101,13 @@ const WhyRiskIsPartOfInvesting = () => {
       isWeeklyUpdated={false}
     >
       {/* Blog content here */}
-      <div className="max-w-screen-lg md:mx-auto bg-white text-night">
+      <div className="max-w-screen-lg md:mx-auto text-night">
         {/* Introduction */}
         <section className="my-4 md:my-6">
           <p className="mb-2">
-            When people think about investing, the first thoughts often turn to
-            potential gains—growing wealth, building a retirement fund, or
-            achieving financial independence. But what many overlook is the{" "}
+            When people think about investing, they often focus on the potential
+            gains—growing wealth, building a retirement fund, or achieving
+            financial independence. But what many overlook is the{" "}
             <strong>inescapable companion of investing: risk</strong>. Risk is
             not just a side effect of investing—it’s a fundamental part of it.
             Understanding risk, accepting it, and learning how to manage it
@@ -123,9 +123,10 @@ const WhyRiskIsPartOfInvesting = () => {
           </h2>
 
           <p className="mb-2">
-            Investment risk refers to the uncertainty regarding the returns on
-            an investment—this includes the possibility of losing some or all of
-            the original investment. Unlike a savings account, where your money
+            Investment risk refers to the{" "}
+            <strong>uncertainty in expected returns</strong> on an
+            investment—including the possibility of losing part or all of the
+            original investment. Unlike a savings account, where your money
             grows slowly but steadily, investing exposes your money to market
             forces, economic changes, political instability, interest rate
             shifts, and business performance.
@@ -156,11 +157,11 @@ const WhyRiskIsPartOfInvesting = () => {
                 1. Higher Returns Require Higher Risk
               </h3>
               <p className="mb-2">
-                There is a direct relationship between risk and return.
+                There is a direct relationship between{" "}
+                <strong>investment risk and potential return</strong>.
                 Generally, to earn higher returns, you must be willing to accept
-                more risk. This is known as the risk-return tradeoff. For
-                example, stocks tend to offer higher returns than bonds or
-                savings accounts, but they also have more volatility.
+                more risk. This is known as the{" "}
+                <strong>risk-return tradeoff</strong>.
               </p>
 
               <p className="mb-2">
@@ -208,8 +209,8 @@ const WhyRiskIsPartOfInvesting = () => {
             5 Smart Ways to Manage Investment Risk
           </h2>
           <p className="mb-4">
-            Risk cannot be eliminated, but it can be managed intelligently. Here
-            are proven strategies:
+            While risk can't be eliminated, it{" "}
+            <strong>can be managed strategically</strong>. Here’s how:
           </p>
           <div className="space-y-6">
             <div>
@@ -219,10 +220,11 @@ const WhyRiskIsPartOfInvesting = () => {
 
               <p className="mb-2">
                 Diversification involves spreading investments across different
-                asset classes, sectors, and geographies to reduce overall risk.
-                Don’t put all eggs in one basket. The idea is that when one
-                asset underperforms, others may perform well, balancing the
-                outcome.
+                {" "}
+                <strong>asset classes, sectors</strong>, and{" "}
+                <strong>regions</strong> to reduce overall risk. Don’t put all
+                eggs in one basket. The idea is that when one asset
+                underperforms, others may perform well, balancing the outcome.
               </p>
               <p className="mb-2">
                 <strong>Example:</strong> An investor might allocate their
@@ -244,9 +246,14 @@ const WhyRiskIsPartOfInvesting = () => {
                 financial objectives and risk appetite.
               </p>
 
+              <p className="mb-2">
+                Here's a simplified guide to asset allocation based on risk
+                appetite:
+              </p>
+
               <Table columns={columns3} data={data3} />
 
-              <p className="my-2">
+              <p className="mb-2">
                 <strong>Example:</strong> A young investor with a high-risk
                 tolerance might have a portfolio with 80% equities and 20%
                 bonds, aiming for higher growth. Conversely, an investor nearing
@@ -266,9 +273,9 @@ const WhyRiskIsPartOfInvesting = () => {
               </p>
               <p className="mb-2">
                 <strong>Example:</strong> Vikram invests ₹5,000 per month via
-                SIP in a mutual fund. Over 15 years, he invests ₹9,00,000, but
-                due to rupee cost averaging and compounding, his corpus grows to
-                over ₹20,00,000 even though the market had multiple ups and
+                SIP in a mutual fund. Over 15 years, he contributes ₹9,00,000 in
+                total. Thanks to rupee cost averaging and compounding, his
+                investment grows to over ₹20,00,000—despite market ups and
                 downs.
               </p>
             </div>
@@ -278,8 +285,10 @@ const WhyRiskIsPartOfInvesting = () => {
               </h3>
 
               <p className="mb-2">
-                Having 3–6 months’ worth of expenses in a liquid savings account
-                can reduce the need to sell investments during a crisis.
+                Having 3–6 months’ worth of expenses in a{" "}
+                <strong>liquid savings account</strong> or short-term debt fund
+                prevents you from tapping into long-term investments during
+                emergencies.
               </p>
             </div>
 
@@ -304,10 +313,10 @@ const WhyRiskIsPartOfInvesting = () => {
           </div>
         </section>
 
-        {/* Conclusion: Risk Is Not Your Enemy—Ignorance Is */}
+        {/* Conclusion: Risk Isn’t the Enemy—Ignorance Is */}
         <section className="my-4 md:my-6">
           <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-            Conclusion: Risk Is Not Your Enemy—Ignorance Is
+            Conclusion: Risk Isn’t the Enemy—Ignorance Is
           </h2>
           <p className="mb-2">
             Understanding and managing investment risk is not about avoiding
@@ -321,7 +330,7 @@ const WhyRiskIsPartOfInvesting = () => {
             Use tools like the Sipgo Investment Calculator to simulate different
             scenarios, test asset allocations, and make informed decisions. Risk
             will always be part of the journey, but with knowledge, planning,
-            and discipline, it doesn't have to be something to fear.
+            and discipline, risk becomes a manageable companion—not a threat.
           </p>
         </section>
       </div>

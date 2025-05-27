@@ -141,17 +141,17 @@ const CompoundingWork = () => {
       isWeeklyUpdated={false}
     >
       {/* Blog content here */}
-      <div className="max-w-screen-lg md:mx-auto bg-white text-night">
-
+      <div className="max-w-screen-lg md:mx-auto text-night">
         {/* Introduction */}
         <section className="my-4 md:my-6">
           <p className="mb-2">
-            Compounding is one of the most powerful forces in investing, often
-            called the <strong>eighth wonder of the world</strong>. Compounding
-            is the key to turning small, regular investments into substantial
-            wealth over time. Whether you're investing in mutual funds, fixed
-            deposits, PPF, or even the stock market, understanding how
-            compounding works can drastically improve your financial decisions.
+            <strong>Compounding</strong> is one of the most powerful forces in
+            investing often referred to as the{" "}
+            <strong>eighth wonder of the world</strong>. Compounding is the key
+            to turning small, regular investments into substantial wealth over
+            time. Whether you’re saving for retirement, a home, or your child’s
+            education, harnessing compounding can dramatically boost your
+            financial outcomes.
           </p>
         </section>
 
@@ -162,19 +162,18 @@ const CompoundingWork = () => {
           </h2>
 
           <p className="mb-2">
-            Compounding is the process where the returns you earn on an
+            Compounding is the process by which the returns you earn on an
             investment begin to generate their own returns over time. In simple
             terms, you earn interest on the principal, and then you earn
-            interest on that interest. Think of it as a snowball effect—your
+            interest on that interest. Think of it as a snowball effect — your
             money grows faster as returns accumulate on both the principal and
             past gains.
           </p>
 
           <p className="mb-2">
-            This cycle continues as long as your investment remains untouched,
-            and the returns are reinvested. Over time, compounding accelerates
-            your wealth growth, especially when combined with consistent
-            contributions and a long investment horizon.
+            This cycle continues as long as your investment remains untouched
+            and returns are reinvested, enabling your money to grow
+            exponentially.
           </p>
         </section>
 
@@ -271,9 +270,9 @@ const CompoundingWork = () => {
                 3. Compounding Reduces the Burden of Investment
               </h3>
               <p className="mb-2">
-                Instead of investing a huge amount at once, regular small
-                investments (like in an SIP) also benefit from compounding. Your
-                money keeps growing even if your monthly contribution is modest.
+                Small, regular investments benefit greatly from compounding.
+                This means you don’t need a large lump sum upfront to build
+                wealth steadily.
               </p>
             </div>
           </div>
@@ -286,9 +285,10 @@ const CompoundingWork = () => {
           </h2>
 
           <p className="mb-2">
-            Let’s say you invest ₹5,000 every month in an equity mutual fund via
-            SIP at an average annual return of 12%. Here's how much wealth you
-            could accumulate:
+            SIPs let you invest small amounts regularly and still enjoy
+            compounding’s benefits. Let’s say you invest ₹5,000 every month in
+            an equity mutual fund via SIP at an average annual return of 12%.
+            Here's how much wealth you could accumulate:
           </p>
 
           <Table columns={columns2} data={data2} />
@@ -330,7 +330,7 @@ const CompoundingWork = () => {
           </p>
 
           <p className="mb-2">
-            Below shown is common taxation on various investment options:
+            Below is the common taxation on various investment options:
           </p>
           <Table columns={columns4} data={data4} />
 
@@ -348,9 +348,9 @@ const CompoundingWork = () => {
 
           <p className="mb-2">
             While compounding helps grow your money, inflation eats into your
-            purchasing power. Inflation reduces the real value of your returns.
-            For example, if your investment returns 8% annually but inflation is
-            at 6%, your real return is only 2%.
+            purchasing power. Inflation erodes the purchasing power of your
+            returns. For example, if your investment earns 8% annually but
+            inflation is 6%, your real return is only 2%.
           </p>
 
           <p className="mb-2">
@@ -402,9 +402,9 @@ const CompoundingWork = () => {
             Conclusion
           </h2>
           <p className="mb-2">
-            Compounding is not just a financial concept—it’s a wealth creation
-            strategy that rewards patience and discipline. The earlier you start
-            and the longer you stay invested, the more your money will
+            Compounding is not just a financial concept — it’s a proven wealth
+            creation strategy that rewards patience and discipline. The earlier
+            you start and the longer you stay invested, the more your money can
             grow—often far beyond your expectations.
           </p>
           <p className="mb-2">

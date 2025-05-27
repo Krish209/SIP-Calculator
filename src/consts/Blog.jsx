@@ -21,7 +21,7 @@ function BlogHome() {
                 alt={post.title}
                 className="w-full h-46 object-cover rounded-xl mb-2"
               />
-              <div className="px-2 sm:px-4 py-2">
+              <div className="px-3 sm:px-4 py-2">
                 <div className="flex justify-between items-center mb-2 text-sm text-gray-500">
                   <span className="text-indigo-600 font-medium bg-indigo-50 px-2 py-1 rounded-md text-xs">
                     {post.tag}
@@ -35,7 +35,7 @@ function BlogHome() {
                 <h2 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 group-hover:text-indigo-600 transition">
                   {post.title}
                 </h2>
-                <p className="mt-2 text-gray-600 text-sm">{post.description}</p>
+                <p className="my-2 text-gray-600 text-sm">{post.description}</p>
               </div>
             </Link>
           ))}

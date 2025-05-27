@@ -57,7 +57,8 @@ const InflationandTaxesImpact = () => {
     },
     {
       incomeType: "Capital Gains (Debt)",
-      taxType: "Added to income (from FY 2023-24)",
+      taxType:
+        "Taxed as per income tax slab for investments made on or after April 1, 2023.",
       applicableRate: "As per slab",
     },
     {
@@ -105,9 +106,8 @@ const InflationandTaxesImpact = () => {
   ];
 
   return (
-
     <BlogLayout
-      title="How Do Inflation and Taxes Impact Investments? | A Complete Guide for
+      title="How Inflation and Taxes Impact Your Investments: A Complete Guide for
           Indian Investors"
       author="Your Name"
       role="Financial Advisor"
@@ -119,18 +119,16 @@ const InflationandTaxesImpact = () => {
       isWeeklyUpdated={false}
     >
       {/* Blog content here */}
-      <div className="max-w-screen-lg md:mx-auto bg-white text-night">
-        
+      <div className="max-w-screen-lg md:mx-auto text-night">
         {/* Introduction */}
         <section className="my-4 md:my-6">
           <p className="mb-2">
-            When planning your financial future, understanding the impact of
-            inflation and taxes on investments is just as important as choosing
-            the right assets. Many Indian investors focus solely on returns,
-            without considering how inflation erodes purchasing power and how
-            taxes reduce actual gains. This blog post will break down how both
-            these factors affect your wealth over time, and how to plan smarter
-            using practical examples and strategies.
+            When planning your financial future, it's crucial to understand how
+            inflation and taxes affect your investments. Many Indian investors
+            focus solely on returns, often overlooking how inflation reduces
+            purchasing power, and taxes eat into actual gains. In this guide,
+            we’ll explain how both factors influence your wealth—and how to plan
+            smarter, with practical examples and strategies.
           </p>
         </section>
 
@@ -149,7 +147,8 @@ const InflationandTaxesImpact = () => {
 
           <p className="mb-2">
             For investors, inflation is a silent wealth eroder. To understand
-            first understand real and nominal returns.
+            its impact, you must first differentiate between nominal and real
+            returns.
           </p>
 
           <ul className="list-disc space-y-1 pl-6 mb-2">
@@ -163,8 +162,8 @@ const InflationandTaxesImpact = () => {
               <strong>Real Return</strong>: The percentage increase in your
               investment after adjusting for inflation. It reflects the actual
               purchasing power of your returns. For example, if you earn a
-              nominal return of 6% on your investments but inflation is at 5%,
-              your real return is only 1%.
+              nominal return of 6% but inflation is 5%, your real return is only
+              1%.
             </li>
           </ul>
         </section>
@@ -280,10 +279,10 @@ const InflationandTaxesImpact = () => {
               <p className="mb-2">
                 Equity mutual funds are one of the best ways to beat inflation
                 over the long term. They invest in stocks, which historically
-                provide higher returns than inflation. If we talk Invest
-                regularly through SIPs to benefit from rupee cost averaging.
-                This reduces the impact of market volatility and allows you to
-                accumulate units at different price points.
+                provide higher returns than inflation. Invest regularly through
+                SIPs (Systematic Investment Plans) to benefit from rupee cost
+                averaging. This reduces the impact of market volatility and
+                allows you to accumulate units at different price points.
               </p>
             </div>
             <div>
@@ -348,10 +347,11 @@ const InflationandTaxesImpact = () => {
             Conclusion
           </h2>
           <p className="mb-2">
-            Inflation and taxes are two silent wealth destroyers that most
-            investors overlook. A 7% return means little if inflation is 6% and
-            you're taxed at 30%. To grow real wealth, you must aim for
-            investments that beat inflation and are tax-efficient.
+            Inflation and taxes silently erode your investment gains if ignored.
+            A 7% return is not impressive if inflation is at 6% and you're
+            paying 30% in taxes. To truly grow your wealth, focus on
+            tax-efficient, inflation-beating investment options. Make informed
+            choices and plan for the long term.
           </p>
         </section>
       </div>

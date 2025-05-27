@@ -34,7 +34,6 @@ const NpsMonthlyPension = () => {
   ];
 
   return (
-
     <BlogLayout
       title="How to Achieve a Monthly Pension of ₹50,000 with NPS"
       author="Your Name"
@@ -47,19 +46,18 @@ const NpsMonthlyPension = () => {
       isWeeklyUpdated={false}
     >
       {/* Blog content here */}
-      <div className="max-w-screen-lg md:mx-auto bg-white text-night">
-        
-
+      <div className="max-w-screen-lg md:mx-auto text-night">
         {/* Introduction */}
         <section className="my-4 md:my-6">
           <p className="mb-2">
-            Retirement is not just about stopping work; it’s about securing
-            peace of mind, financial freedom, and a lifestyle you’ve earned. One
-            of the most effective tools for retirement planning in India today
-            is the National Pension System (NPS). If you're aiming to receive a
-            monthly pension of ₹50,000 after retirement, this article will
-            explain exactly how much you need to invest, how NPS works, and how
-            to structure your contributions to make it happen.
+            Retirement isn’t just about stopping work—it’s about gaining peace
+            of mind, achieving financial freedom, and enjoying the lifestyle
+            you've worked hard to build. One of the most effective retirement
+            planning tools in India today is the{" "}
+            <strong>National Pension System (NPS)</strong>. If you're aiming for
+            a monthly pension of ₹50,000 after retirement, this article explains
+            how much you need to invest, how NPS works, and how to plan your
+            contributions to make it a reality.
           </p>
         </section>
 
@@ -73,9 +71,12 @@ const NpsMonthlyPension = () => {
             The National Pension System (NPS) is a government-backed,
             market-linked retirement savings scheme. It allows individuals to
             invest systematically during their working years and provides a
-            steady pension after retirement. The scheme invests your
-            contributions into a mix of equity, corporate debt, and government
-            securities, helping your savings grow over the long term.
+            steady pension post-retirement.
+          </p>
+
+          <p className="mb-2">
+            Your contributions are invested in a mix of equity, corporate debt,
+            and government securities, helping your money grow over time.
           </p>
 
           <p className="mb-2">
@@ -92,18 +93,17 @@ const NpsMonthlyPension = () => {
             The Goal: ₹50,000 Monthly Pension
           </h2>
           <p className="mb-2">
-            If you’re planning to retire at 60 and want a pension of ₹50,000 per
-            month (₹6 lakh per year), you need to build a sufficiently large NPS
-            corpus that can generate this amount through annuity returns.
-            Typically, annuity products offered under NPS provide around 6%
-            annual returns (subject to market conditions and the annuity
-            provider).
+            If you're planning to retire at 60 and want a monthly pension of
+            ₹50,000 (₹6 lakh per year), you'll need a large enough corpus to
+            generate this amount via annuity returns. Annuities under NPS
+            typically offer around 6% annual returns, though this can vary based
+            on market conditions and the provider.
           </p>
           <p className="mb-2">
-            To generate ₹6 lakh annually at 6% return, you will need to invest
-            ₹1 crore in an annuity plan (₹1 crore x 6% = ₹6 lakh/year). Since
-            only 40% of your NPS corpus is used to purchase the annuity, the
-            total NPS corpus required would be ₹2.5 crore.
+            To generate ₹6 lakh per year at a 6% return, you'll need to invest ₹1 crore
+            in an annuity plan. Since only 40% of your NPS corpus is used to buy
+            the annuity, your target NPS corpus should be ₹2.5 crore at
+            retirement.
           </p>
         </section>
 
@@ -113,23 +113,26 @@ const NpsMonthlyPension = () => {
             Real-Life Example: Planning at Age 30
           </h2>
           <p className="mb-2">
-            Let’s take a simple example. Suppose you’re 30 years old and start
-            investing ₹13,500 per month in NPS for 30 years. Assuming a return
-            of 9% annually, your investments will grow to around ₹2.5 crore by
-            age 60. At that point:
+            Let’s take an example. Suppose you're 30 years old and start
+            investing ₹13,500 per month in NPS for the next 30 years. Assuming
+            an annual return of 9%, your investments will grow to around ₹2.5
+            crore by age 60. At that point:
           </p>
           <ul className="list-disc pl-6 space-y-1 mb-2">
             <li>You can withdraw ₹1.5 crore tax-free (60%)</li>
-            <li>You’ll use ₹1 crore (40%) to buy an annuity</li>
+            <li>
+              You’ll allocate ₹1 crore (40% of the corpus) to purchase an
+              annuity that pays lifelong pension
+            </li>
             <li>
               The annuity will pay ₹6 lakh per year or ₹50,000 per month—for
               life
             </li>
           </ul>
           <p className="mb-2">
-            This is a conservative estimate, assuming stable returns and
-            consistent investing. The final pension may vary based on annuity
-            interest rates at retirement.
+            These are <strong>conservative estimates</strong>, assuming stable
+            returns and disciplined, long-term contributions. The final pension
+            may vary based on annuity interest rates at retirement.
           </p>
         </section>
 
@@ -161,7 +164,7 @@ const NpsMonthlyPension = () => {
         {/* How Pension is Calculated from NPS Corpus */}
         <section className="my-4 md:my-6">
           <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-            How Pension is Calculated from NPS Corpus
+            NPS Pension Estimate Table
           </h2>
 
           <Table columns={columns} data={data} />
@@ -173,13 +176,14 @@ const NpsMonthlyPension = () => {
             Conclusion
           </h2>
           <p className="mb-2">
-            Systematic Withdrawal Plans (SWPs) provide an excellent way to
-            create a consistent income stream from mutual fund investments.
-            Whether you are a retiree or just looking for regular withdrawals,
-            SWP can provide the right balance between income and capital
-            preservation. When implemented wisely—considering tax implications,
-            market conditions, and withdrawal rates—SWPs can help maintain
-            financial stability while preserving your investment corpus.
+            Achieving a monthly pension of ₹50,000 through the National Pension
+            System is entirely possible with disciplined investing and proper
+            planning. Starting early, like at age 30, allows you to take full
+            advantage of <strong>compounding and tax benefits</strong>. NPS
+            offers a secure, regulated, and tax-efficient path toward
+            retirement, making it one of the best options for long-term wealth
+            building in India. Use our NPS Calculator to find out exactly how
+            much you need to invest monthly to reach your retirement goals.
           </p>
         </section>
       </div>

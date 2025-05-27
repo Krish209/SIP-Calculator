@@ -142,16 +142,17 @@ const SelfEmployedOrFreelancer = () => {
       isWeeklyUpdated={false}
     >
       {/* Blog content here */}
-      <div className="max-w-screen-lg md:mx-auto bg-white text-night">
+      <div className="max-w-screen-lg md:mx-auto text-night">
         {/* Introduction */}
         <section className="my-4 md:my-6">
           <p className="mb-2">
-            Freelancing and self-employment in India have seen a massive rise in
-            recent years. Whether you’re a graphic designer, content writer,
-            digital marketer, or an independent consultant, one thing is certain
-            — financial planning is your own responsibility. Without the cushion
-            of employer-provided benefits like EPF, gratuity, or health
-            insurance, it becomes essential to plan your investments wisely.
+            Freelancing and self-employment in India have surged in recent
+            years. Whether you’re a graphic designer, content writer, digital
+            marketer, or independent consultant, managing your own financial
+            planning is crucial. Unlike salaried employees, you don’t have the
+            safety net of employer benefits like EPF, gratuity, or health
+            insurance—making smart investment decisions vital for your financial
+            security.
           </p>
         </section>
 
@@ -168,8 +169,14 @@ const SelfEmployedOrFreelancer = () => {
           </p>
 
           <ul className="list-disc space-y-1 pl-6 mb-2">
-            <li>Irregular income</li>
-            <li>Tax complexities</li>
+            <li>
+              Irregular income can make it difficult to plan monthly budgets and
+              investments
+            </li>
+            <li>
+              Tax complexities require awareness of deductions and filing
+              processes
+            </li>
             <li>Unpredictable expenses</li>
             <li>No employer-backed retirement benefits</li>
             <li>Long-term financial goals like buying a home or retirement</li>
@@ -204,7 +211,7 @@ const SelfEmployedOrFreelancer = () => {
               <p className="mb-2">
                 Before you start investing, create an emergency fund that covers{" "}
                 <strong>6–12 months</strong> of your essential expenses,
-                including rent, EMIs, groceries, and medical costs.. This fund
+                including rent, EMIs, groceries, and medical costs. This fund
                 should be easily accessible and kept in a liquid mutual fund or
                 a sweep-in fixed deposit (FD).
               </p>
@@ -226,8 +233,8 @@ const SelfEmployedOrFreelancer = () => {
               </p>
               <ul className="list-disc space-y-1 pl-6 mb-2">
                 <li>
-                  <strong>Consider Index Funds</strong>: They have lower expense
-                  ratios and are tax-efficient.
+                  Consider <strong>Index Funds</strong> which typically have
+                  lower expense ratios and are tax-efficient.
                 </li>
                 <li>Start with a flexi-SIP option if available.</li>
                 <li>
@@ -235,7 +242,7 @@ const SelfEmployedOrFreelancer = () => {
                   risk profile.
                 </li>
                 <li>
-                  <strong>Use SIP Calculator</strong>: Estimate how much you
+                  Use a <strong>SIP Calculator</strong> to estimate how much you
                   need to invest monthly to reach your financial goals.
                 </li>
               </ul>
@@ -319,8 +326,8 @@ const SelfEmployedOrFreelancer = () => {
               on actual inflow.
             </li>
             <li>
-              <strong>Park surplus in liquid funds</strong> and gradually shift
-              to mutual funds or NPS.
+              <strong>Park surplus funds in liquid funds</strong> and gradually
+              shift to mutual funds or NPS.
             </li>
             <li>
               <strong>Maintain a Buffer</strong> Keep 1–2 months of expenses in

@@ -106,7 +106,7 @@ const CreatePassiveIncome = () => {
 
   return (
     <BlogLayout
-      title=" How to Create a Passive Income with Investments: A Complete Guide for
+      title=" How to Create Passive Income with Investments: A Complete Guide for
           Indians"
       author="Your Name"
       role="Financial Advisor"
@@ -118,25 +118,16 @@ const CreatePassiveIncome = () => {
       isWeeklyUpdated={false}
     >
       {/* Blog content here */}
-      <div className="max-w-screen-lg md:mx-auto bg-white text-night">
-       
+      <div className="max-w-screen-lg md:mx-auto text-night">
         {/* Introduction */}
         <section className="my-4 md:my-6">
           <p className="mb-2">
             In today’s fast-paced world, creating passive income is no longer
-            just a financial aspiration—it has become a necessity for achieving
+            just a financial aspiration: it has become a necessity for achieving
             long-term financial freedom. Whether you're planning for early
-            retirement, aiming to supplement your current income, or looking to
-            secure your future, building a steady stream of passive income
-            through strategic investments can help you reach your goals.
-          </p>
-          <p className="mb-2">
-            In today’s fast-paced world, creating passive income is no longer
-            just a financial aspiration—it has become a necessity for achieving
-            long-term financial freedom. Whether you're planning for early
-            retirement, aiming to supplement your current income, or looking to
-            secure your future, building a steady stream of passive income
-            through strategic investments can help you reach your goals.
+            retirement, aiming to supplement your current income, or securing
+            your future, building a steady stream of passive income through
+            strategic investments can help you reach your goals.
           </p>
         </section>
 
@@ -147,10 +138,10 @@ const CreatePassiveIncome = () => {
           </h2>
 
           <p className="mb-2">
-            Passive income is the money you earn with little to no daily effort.
-            Unlike active income—where you trade your time for money (like a job
-            or business)—passive income continues to generate even while you're
-            asleep, traveling, or pursuing hobbies.
+            Passive income refers to earnings generated with minimal ongoing
+            effort. Unlike active income—where you exchange time for money (as
+            in a job or business)—passive income continues to flow even when
+            you're asleep, traveling, or pursuing hobbies.
           </p>
           <p className="mb-2">
             Common sources of passive income include rental properties,
@@ -164,7 +155,9 @@ const CreatePassiveIncome = () => {
             <li>Interest from fixed deposits or bonds</li>
             <li>Rental income from real estate</li>
             <li>Mutual fund returns (especially SWPs)</li>
-            <li>Royalties or online digital products</li>
+            <li>
+              Royalties or online digital products (e-books, courses, etc.)
+            </li>
           </ul>
         </section>
 
@@ -186,9 +179,9 @@ const CreatePassiveIncome = () => {
             <li>Better work-life balance</li>
           </ul>
           <p className="mb-2">
-            Moreover, thanks to India’s evolving financial ecosystem—growing
-            fintech, ease of investing, and better financial literacy—anyone can
-            begin creating passive income with as little as ₹500.
+            Moreover, India’s evolving financial ecosystem—with growing fintech
+            platforms, easier investment access, and rising financial
+            literacy—makes it possible to start with as little as ₹500.
           </p>
         </section>
 
@@ -206,12 +199,12 @@ const CreatePassiveIncome = () => {
           <Table columns={columns} data={data} />
 
           <p className="my-2">
-            Let’s now explore how you can get started on each and create a
-            passive income strategy.
+            Let’s explore how you can get started with each option and craft
+            your passive income strategy.
           </p>
         </section>
 
-        {/* Why Risk Is Inevitable in Investing */}
+        {/* Step-by-Step: How to Create Passive Income with Investments */}
         <section className="my-4 md:my-6">
           <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
             Step-by-Step: How to Create Passive Income with Investments
@@ -265,8 +258,8 @@ const CreatePassiveIncome = () => {
               </ul>
 
               <p className="mb-2">
-                If you invest ₹5,00,000 in POMIS at 7.4%, you can earn
-                ₹3,083/month as passive income.
+                If you invest ₹5,00,000 in POMIS at a 7.4% annual interest, you
+                would earn approximately ₹3,083/month in passive income.
               </p>
             </div>
 
@@ -280,9 +273,9 @@ const CreatePassiveIncome = () => {
               </p>
 
               <p className="mb-2">
-                <strong>Example</strong>: Invest ₹10,00,000 in a balanced mutual
-                fund. Set an SWP of ₹7,000/month. Your principal stays invested
-                while your money grows and provides income.
+                For example, if you invest ₹10,00,000 in a balanced mutual fund
+                and set an SWP of ₹7,000 per month, your principal stays
+                invested while your money grows and provides income.
               </p>
 
               <ul className="list-disc space-y-1 pl-6 mb-2">
@@ -324,8 +317,9 @@ const CreatePassiveIncome = () => {
               </ul>
 
               <p className="mb-2">
-                <strong>Example</strong>: A 2BHK apartment bought for ₹50 lakhs
-                could fetch ₹15,000–₹25,000/month depending on location.
+                <strong>Example</strong>: A 2BHK apartment purchased for ₹50
+                lakhs could generate rental income of ₹15,000–₹25,000/month
+                depending on the location and demand.
               </p>
             </div>
 
@@ -401,21 +395,88 @@ const CreatePassiveIncome = () => {
           <Table columns={columns2} data={data2} />
         </section>
 
+        <section className="my-4 md:my-6">
+          <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+            Tips for Success in Passive Income Investing
+          </h2>
+          <ul className="list-disc space-y-1 pl-6 mb-2">
+            <li>
+              Start small and gradually increase your investments as you gain
+              confidence.
+            </li>
+            <li>Diversify across different asset classes to reduce risk.</li>
+
+            <li>
+              Stay disciplined and stick to your investment plan, even during
+              market fluctuations.
+            </li>
+            <li>
+              Keep learning about personal finance and investment strategies.
+            </li>
+            <li>
+              Consult with a financial advisor if needed, especially for complex
+              investments like real estate or P2P lending.
+            </li>
+          </ul>
+          <p className="mb-2">
+            Remember, the key to successful passive income investing is to start
+            early, stay consistent, and make informed decisions. The earlier you
+            begin, the more time your money has to grow through compounding.
+          </p>
+        </section>
+
+        <section className="my-4 md:my-6">
+          <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+            Risks and Things to Watch Out For
+          </h2>
+          <p className="mb-2">
+            While passive income investments can be rewarding, they also come
+            with risks. Here are some challenges to be aware of:
+          </p>
+          <ul className="list-disc space-y-1 pl-6 mb-2">
+            <li>
+              <strong>Market volatility</strong> can affect stock prices and
+              mutual fund NAVs, impacting your returns.
+            </li>
+            <li>
+              <strong>Real estate investments</strong> require ongoing
+              maintenance and can have periods of vacancy, affecting rental
+              income.
+            </li>
+            <li>
+              <strong>P2P lending</strong> carries the risk of borrower
+              defaults, which can lead to loss of capital.
+            </li>
+            <li>
+              <strong>Interest rates</strong> on fixed deposits and bonds may
+              not keep pace with inflation, eroding your purchasing power over
+              time.
+            </li>
+            <li>
+              <strong>Tax implications</strong> can reduce your effective
+              returns, so it’s essential to understand how different investments
+              are taxed.
+            </li>
+          </ul>
+          <p className="mb-2">
+            To mitigate these risks, diversify your investments, stay informed
+            about market trends, and regularly review your portfolio. Consider
+            consulting with a financial advisor to tailor your investment
+            strategy to your specific financial goals and risk tolerance.
+          </p>
+        </section>
+
         {/* Conclusion */}
         <section className="my-4 md:my-6">
           <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
             Conclusion
           </h2>
           <p className="mb-2">
-            Creating passive income with investments in India is not just for
-            the wealthy. With disciplined investing, smart planning, and tools
-            like your investment calculator app, anyone can build a reliable
-            stream of income over time.
-          </p>
-          <p className="mb-2">
-            Whether you’re a salaried employee, freelancer, homemaker, or
-            entrepreneur, the path to financial freedom is within reach—start
-            today, invest smartly, and let your money work for you.
+            Creating passive income through investments in India is now within
+            reach for anyone willing to start small and stay consistent. Whether
+            you're a salaried employee, freelancer, homemaker, or entrepreneur,
+            the journey to financial independence starts with that first smart
+            investment.
           </p>
         </section>
       </div>

@@ -70,8 +70,8 @@ const DiversifyPortfolio = () => {
   ];
 
   return (
-<BlogLayout
-      title="How To Diversify Your Portfolio? | A Complete Guide for Indian Investors"
+    <BlogLayout
+      title="How to Diversify Your Portfolio — A Complete Guide for Indian Investors"
       author="Your Name"
       role="Financial Advisor"
       date="May 26, 2025"
@@ -82,19 +82,19 @@ const DiversifyPortfolio = () => {
       isWeeklyUpdated={false}
     >
       {/* Blog content here */}
-      <div className="max-w-screen-lg md:mx-auto bg-white text-night">
-
+      <div className="max-w-screen-lg md:mx-auto text-night">
         {/* Introduction */}
         <section className="my-4 md:my-6">
           <p className="mb-2">
-            When it comes to investing, one golden rule always stands true —
-            Don’t put all your eggs in one basket. This age-old saying captures
-            the essence of <strong>investment diversification</strong>. Whether
-            you're a seasoned investor or just starting with mutual funds or
-            stocks, diversifying your portfolio is key to reducing risk and
-            improving long-term returns. In this post, we'll explore how to
-            diversify your investment portfolio in India, with actionable
-            strategies, real-life examples, and expert tips.
+            When it comes to investing, one golden rule always holds true —
+            <strong>don’t put all your eggs in one basket</strong>. This age-old
+            saying captures the essence of{" "}
+            <strong>portfolio diversification</strong>. Whether you're a
+            seasoned investor or just starting with mutual funds or stocks,
+            diversifying your portfolio is key to reducing risk and improving
+            long-term returns. In this post, we'll explore how to diversify your
+            investment portfolio in India, with actionable strategies, real-life
+            examples, and expert tips.
           </p>
         </section>
 
@@ -230,8 +230,8 @@ const DiversifyPortfolio = () => {
               <p className="mb-2">
                 Most Indian investors ignore international exposure. Investing
                 in <strong>global mutual funds</strong> or{" "}
-                <strong>US ETFs</strong> (via Indian platforms ) can protect
-                your portfolio against domestic downturns.
+                <strong>US ETFs</strong> (via Indian platforms) can protect your
+                portfolio against domestic downturns.
               </p>
 
               <p className="mb-2">
@@ -295,8 +295,8 @@ const DiversifyPortfolio = () => {
           </h2>
 
           <p className="mb-2">
-            Your investment calculator web app can be the perfect tool to assist
-            users in diversifying:
+            An investment calculator on your website can be a powerful tool to
+            help users diversify:
           </p>
 
           <ul className="list-disc space-y-1 pl-6 mb-2">

@@ -75,7 +75,7 @@ export const blogPosts = [
   },
   {
     title: "How to Create a Passive Income",
-    path: "/blog/how-to-create-a-passive-income-with-investments",
+    path: "/blog/how-to-create-passive-income-with-investments",
     description:
       "Explore various strategies to generate income with minimal ongoing effort.",
     tag: "Passive Income",

@@ -32,9 +32,11 @@ const Disclaimer = () => {
             </h2>
             <p className="mb-2">
               All content provided on Sipgo, including our investment
-              calculators, charts, projections, and scheme descriptions, is
-              intended solely for informational and educational purposes. We do
-              not offer any kind of financial, legal, tax, or investment advice.
+              calculators, charts, projections, articles and scheme
+              descriptions, is intended solely for informational and educational
+              purposes. We do not offer any kind of financial, legal, tax, or
+              investment advice. Please consult a registered financial advisor
+              before making investment decisions.
             </p>
             <p className="mb-2">
               The calculators and tools available on this platform are designed

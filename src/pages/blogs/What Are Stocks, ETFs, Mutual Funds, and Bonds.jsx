@@ -79,16 +79,17 @@ const StockEtfMfBond = () => {
       isWeeklyUpdated={false}
     >
       {/* Blog content here */}
-      <div className="max-w-screen-lg md:mx-auto bg-white text-night">
+      <div className="max-w-screen-lg md:mx-auto text-night">
         {/* Introduction */}
         <section className="my-4 md:my-6">
           <p className="mb-2">
             If you're just starting your investment journey or using an
             investment calculator in India to plan your finances, you’ve
-            probably come across terms like stocks, ETFs, mutual funds, and
-            bonds. These are the core building blocks of most investment
-            portfolios. Understanding what each one is, how they work, and when
-            to use them can make a huge difference in your financial strategy.
+            probably come across terms like{" "}
+            <strong>stocks, ETFs, mutual funds, and bonds</strong>. These are
+            the core building blocks of most investment portfolios.
+            Understanding what each one is, how they work, and when to use them
+            can make a huge difference in your financial strategy.
           </p>
         </section>
 
@@ -99,11 +100,11 @@ const StockEtfMfBond = () => {
           </h2>
 
           <p className="mb-2 md:mb-4">
-            A stock represents a share in the ownership of a company. When you
-            buy a stock, you become a partial owner (also called a shareholder)
-            of that company. This ownership may entitle you to a share of the
-            company's assets and earnings, typically through capital
-            appreciation and dividends.
+            A <strong>stock</strong> represents a share in the ownership of a
+            company. When you buy a stock, you become a partial owner (also
+            called a shareholder) of that company. This ownership may entitle
+            you to a share of the company’s assets and earnings, typically
+            through capital appreciation and dividends.
           </p>
 
           <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-1 md:mb-2">
@@ -136,10 +137,10 @@ const StockEtfMfBond = () => {
           </h2>
 
           <p className="mb-2 md:mb-4">
-            An ETF is a basket of securities—such as stocks or bonds—which can
-            be bought or sold through a brokerage just like individual stocks.
-            ETFs in India are typically designed to track the performance of a
-            specific index like the Nifty 50 or Sensex, or sectors such as
+            An <strong>ETF</strong> is a basket of securities—such as stocks or
+            bonds—which can be bought or sold through a brokerage just like
+            individual stocks. ETFs in India typically track the performance of
+            a specific index like the Nifty 50 or Sensex, or sectors such as
             banking or IT.
           </p>
 
@@ -172,14 +173,18 @@ const StockEtfMfBond = () => {
           </h2>
 
           <p className="mb-2 md:mb-4">
-            A mutual fund pools money from many investors to invest in a
-            diversified portfolio of stocks, bonds, or other securities. These
-            funds are managed by professional portfolio managers who make
-            decisions about which assets to buy or sell and are regulated by
-            SEBI (Securities and Exchange Board of India). Actively managed
-            funds typically have higher expense ratios as fund managers actively
-            select investments. In contrast, passive funds, such as index funds,
-            aim to replicate a market index and come with lower costs.
+            A <strong>mutual fund</strong> pools money from many investors to
+            invest in a diversified portfolio of stocks, bonds, or other
+            securities. These funds are managed by professional portfolio
+            managers who decide which assets to buy or sell and are regulated by
+            SEBI (Securities and Exchange Board of India).
+          </p>
+
+          <p className="mb-2 md:mb-4">
+            Actively managed funds usually have higher expense ratios since fund
+            managers actively select investments. In contrast, passive funds,
+            such as index funds, aim to replicate a market index and come with
+            lower costs.
           </p>
 
           <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-1 md:mb-2">
@@ -211,13 +216,17 @@ const StockEtfMfBond = () => {
           </h2>
 
           <p className="mb-2 md:mb-4">
-            A bond represents a loan you provide to a company or government in
-            return for periodic interest payments and the repayment of principal
-            at maturity. Bonds are considered fixed-income securities as they
-            provide predictable returns in the form of interest payments, making
-            them suitable for conservative investors. In India, government bonds
-            can be bought via RBI Retail Direct or through brokers on the stock
-            exchange.
+            A <strong>bond</strong> represents a loan you provide to a company
+            or government in return for periodic interest payments and the
+            repayment of principal at maturity. Bonds are considered
+            fixed-income securities because they provide predictable returns in
+            the form of interest payments, making them suitable for conservative
+            investors.
+          </p>
+
+          <p className="mb-2 md:mb-4">
+            In India, government bonds can be bought via RBI Retail Direct or
+            through brokers on the stock exchange.
           </p>
 
           <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-1 md:mb-2">

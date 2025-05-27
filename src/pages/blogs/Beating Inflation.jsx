@@ -51,17 +51,16 @@ const BeatingInflation = () => {
       isWeeklyUpdated={false}
     >
       {/* Blog content here */}
-      <div className="max-w-screen-lg md:mx-auto bg-white text-night">
-        
+      <div className="max-w-screen-lg md:mx-auto text-night">
         {/* Introduction */}
         <section className="my-4 md:my-6">
           <p className="mb-2">
-            Inflation is a silent wealth eroder. In India, the Consumer Price
-            Index (CPI) has averaged around 8.07% over the past decade . This
-            means that ₹100 today will be worth only ₹91.93 in purchasing power
-            a decade from now. If your investments don't outpace inflation, your
-            real returns could be negative. So, how can you protect your money
-            and even grow it in an inflationary environment?
+            Inflation is a silent wealth eroder over time. In India, the
+            Consumer Price Index (CPI) has averaged around 8.07% over the past
+            decade. This means ₹100 today will only have the purchasing power of
+            about ₹91.93 a decade from now. If your investments don’t keep up
+            with inflation, your real returns could be negative. So, how can you
+            protect and grow your money during inflationary times?
           </p>
         </section>
 
@@ -72,11 +71,11 @@ const BeatingInflation = () => {
           </h2>
 
           <p className="mb-2">
-            Inflation leads to a rise in the general price level of goods and
-            services, diminishing the purchasing power of money. For instance,
-            if inflation is at 6% annually, a ₹1,000 item will cost ₹1,060 the
-            following year. If your investment returns don't exceed this rate,
-            you're effectively losing money.
+            Inflation causes the general price level of goods and services to
+            rise, reducing the purchasing power of money. For example, if
+            inflation is 6% annually, an item costing ₹1,000 today will cost
+            ₹1,060 next year. If your investment returns are lower than this
+            rate, you are effectively losing money.
           </p>
         </section>
 
@@ -92,9 +91,9 @@ const BeatingInflation = () => {
 
               <p className="mb-2">
                 Historically, equities have provided returns that outpace
-                inflation. In India, equity mutual funds have offered returns
-                between 12-15% over the long term . By investing in sectors with
-                strong growth potential, you can achieve real returns that beat
+                inflation. In India, equity mutual funds have delivered average
+                returns of 12-15% over the long term. Investing in sectors with
+                strong growth potential can help you earn real returns above
                 inflation.
               </p>
             </div>
@@ -104,11 +103,11 @@ const BeatingInflation = () => {
               </h3>
 
               <p className="mb-2">
-                TIPS are government bonds that adjust their principal value with
+                TIPS are government bonds that adjust their principal based on
                 inflation. While primarily available in the U.S., similar
-                instruments exist in other countries. They provide a guaranteed
-                real return above inflation, making them a safe choice for
-                conservative investors.
+                instruments exist globally. These provide guaranteed real
+                returns above inflation, making them ideal for conservative
+                investors.
               </p>
             </div>
 
@@ -118,10 +117,9 @@ const BeatingInflation = () => {
               </h3>
 
               <p className="mb-2">
-                Gold has traditionally been a hedge against inflation. In India,
-                investing in gold through Sovereign Gold Bonds or gold ETFs can
-                provide protection against currency depreciation and rising
-                prices.
+                Gold has traditionally been a reliable inflation hedge. In
+                India, investing in gold via Sovereign Gold Bonds or gold ETFs
+                protects against currency depreciation and rising prices.
               </p>
             </div>
             <div>
@@ -130,11 +128,10 @@ const BeatingInflation = () => {
               </h3>
 
               <p className="mb-2">
-                Real estate often appreciates with inflation. For those unable
+                Real estate tends to appreciate with inflation. For those unable
                 to invest directly, Real Estate Investment Trusts (REITs) offer
-                a way to gain exposure to property markets. REITs have
-                historically provided returns that outpace inflation, especially
-                in growing urban areas.
+                exposure to property markets. REITs have historically provided
+                returns that exceed inflation, especially in urban growth areas.
               </p>
             </div>
 
@@ -144,10 +141,9 @@ const BeatingInflation = () => {
               </h3>
 
               <p className="mb-2">
-                Investing in commodities like oil, natural gas, and agricultural
-                products can provide a hedge against inflation. These assets
-                often rise in value when inflation accelerates, offering
-                protection to investors.
+                Investing in commodities such as oil, natural gas, and
+                agricultural products can protect against inflation. These
+                assets often rise in value as inflation increases.
               </p>
             </div>
             <div>
@@ -156,10 +152,10 @@ const BeatingInflation = () => {
               </h3>
 
               <p className="mb-2">
-                A diversified portfolio that includes a mix of equities, bonds,
-                real estate, and commodities can reduce risk and enhance
-                returns. Regular rebalancing ensures that your investments align
-                with your financial goals and risk tolerance.
+                A well-diversified portfolio including equities, bonds, real
+                estate, and commodities reduces risk and enhances returns.
+                Regular rebalancing keeps your investments aligned with your
+                financial goals and risk tolerance.
               </p>
             </div>
           </div>
@@ -172,13 +168,12 @@ const BeatingInflation = () => {
           </h2>
 
           <p className="mb-2">
-            Warren Buffett, CEO of Berkshire Hathaway, emphasizes investing in
-            oneself as the best hedge against inflation. He advises that
-            personal skills and expertise are the ultimate inflation-proof
-            assets, as they can command increasing wages regardless of currency
-            fluctuations. Additionally, Buffett recommends investing in
-            businesses with strong pricing power and low capital requirements,
-            as they can maintain profitability during inflationary periods.
+            Warren Buffett, CEO of Berkshire Hathaway, highlights that investing
+            in yourself is the best inflation hedge. Skills and expertise can
+            command higher wages regardless of currency fluctuations. Buffett
+            also advises investing in businesses with strong pricing power and
+            low capital requirements, as these companies maintain profitability
+            during inflationary periods.
           </p>
 
           <Table columns={columns} data={data} />
