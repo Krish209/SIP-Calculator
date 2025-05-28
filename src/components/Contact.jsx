@@ -1,126 +1,110 @@
-import React, { useState } from "react";
-import heroimg from "../assets/icons/contact us.svg";
+import React, { useState } from 'react';
+import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid';
 
-const ContactUs = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [confirmation, setConfirmation] = useState("");
+const Contact = () => {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [submitted, setSubmitted] = useState(false);
 
-  const maxLength = 500;
+  const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setConfirmation("Thanks for contacting us! We'll get back to you soon.");
-    setName("");
-    setEmail("");
-    setMessage("");
+    console.log('Submitted:', formData);
+    setSubmitted(true);
+    setFormData({ name: '', email: '', message: '' });
   };
 
   return (
-    <section className="bg-gray-50 py-16">
-      <div className="max-w-screen-xl mx-auto px-6">
-        <h2 className="text-4xl font-semibold text-center text-gray-800 mb-12">
-          Get in Touch with SipGo
-        </h2>
+    <div className="min-h-screen bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 flex items-center justify-center py-12 px-4">
+      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 bg-white shadow-xl rounded-3xl p-8 md:p-14">
+        {/* Left - Contact Info */}
+        <div className="space-y-8">
+          <h2 className="text-4xl font-bold text-gray-800">Get in Touch</h2>
+          <p className="text-gray-600 text-lg">
+            We'd love to hear from you! Whether you have a question about our products or want to collaborate.
+          </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Contact Form */}
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-6">
-              Reach Out to Us
-            </h3>
-            <form onSubmit={handleSubmit} aria-label="Contact form">
-              <div className="mb-4">
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  autoComplete="name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                />
+          <div className="space-y-4 text-gray-700">
+            <div className="flex items-start space-x-3">
+              <MapPinIcon className="w-6 h-6 text-blue-500 mt-1" />
+              <div>
+                <h4 className="font-semibold">Our Office</h4>
+                <p>123 Tech Street, Bengaluru, India 560001</p>
               </div>
-
-              <div className="mb-4">
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Your Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  autoComplete="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                />
+            </div>
+            <div className="flex items-start space-x-3">
+              <PhoneIcon className="w-6 h-6 text-green-500 mt-1" />
+              <div>
+                <h4 className="font-semibold">Phone</h4>
+                <p>+91 98765 43210</p>
               </div>
-
-              <div className="mb-4">
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Your Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  maxLength={maxLength}
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                  aria-describedby="message-limit"
-                ></textarea>
-                <div
-                  id="message-limit"
-                  className="text-sm text-gray-500 text-right mt-1"
-                  aria-live="polite"
-                >
-                  {maxLength - message.length} characters remaining
-                </div>
+            </div>
+            <div className="flex items-start space-x-3">
+              <EnvelopeIcon className="w-6 h-6 text-red-500 mt-1" />
+              <div>
+                <h4 className="font-semibold">Email</h4>
+                <p>contact@yourcompany.com</p>
               </div>
-
-              <button
-                type="submit"
-                className="w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                Send Message
-              </button>
-
-              {confirmation && (
-                <p className="text-green-600 text-sm mt-4">{confirmation}</p>
-              )}
-            </form>
-          </div>
-
-          {/* Image Section */}
-          <div className="flex justify-center lg:justify-end">
-            <img
-              src={heroimg}
-              alt="Contact Us Illustration"
-              className="max-w-[300px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[450px] h-auto object-contain"
-            />
+            </div>
           </div>
         </div>
+
+        {/* Right - Form */}
+        <div className="bg-white space-y-6">
+          <h3 className="text-2xl font-semibold text-gray-800">Send Us a Message</h3>
+          {submitted && (
+            <div className="p-4 bg-green-100 text-green-700 rounded-md">
+              ✅ Message sent successfully!
+            </div>
+          )}
+          <form onSubmit={handleSubmit} className="space-y-5">
+            {['name', 'email'].map((field) => (
+              <div key={field} className="relative">
+                <input
+                  type={field === 'email' ? 'email' : 'text'}
+                  name={field}
+                  required
+                  value={formData[field]}
+                  onChange={handleChange}
+                  className="peer w-full px-4 pt-6 pb-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none transition"
+                  placeholder=" "
+                />
+                <label
+                  htmlFor={field}
+                  className="absolute text-gray-500 left-4 top-2 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-600"
+                >
+                  {field.charAt(0).toUpperCase() + field.slice(1)}
+                </label>
+              </div>
+            ))}
+            <div className="relative">
+              <textarea
+                name="message"
+                rows="4"
+                required
+                value={formData.message}
+                onChange={handleChange}
+                className="peer w-full px-4 pt-6 pb-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none transition"
+                placeholder=" "
+              ></textarea>
+              <label
+                htmlFor="message"
+                className="absolute text-gray-500 left-4 top-2 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-600"
+              >
+                Message
+              </label>
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-blue-500 text-white py-3 font-semibold rounded-lg transition-transform hover:scale-105"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default ContactUs;
+export default Contact;

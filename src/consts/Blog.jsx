@@ -14,29 +14,35 @@ function BlogHome() {
             <Link
               key={index}
               to={post.path}
-              className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-indigo-500 group"
+              // className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-indigo-500 group"
             >
-              <img
-                src={post.image}
-                alt={post.title}
-                className="w-full h-46 object-cover rounded-xl mb-2"
-              />
-              <div className="px-3 sm:px-4 py-2">
-                <div className="flex justify-between items-center mb-2 text-sm text-gray-500">
-                  <span className="text-indigo-600 font-medium bg-indigo-50 px-2 py-1 rounded-md text-xs">
-                    {post.tag}
-                  </span>
-                  <div className="flex items-center gap-2 text-xs">
-                    <span>{post.date}</span>
-                    <span className="text-gray-300">•</span>
-                    <span>{post.readTime}</span>
+              <article className="flex flex-col h-full bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 group">
+                <div className="aspect-w-16 aspect-h-9 overflow-hidden">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-46 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="px-4 py-4">
+                    <div className="flex justify-between items-center mb-2 text-sm text-gray-500">
+                      <span className="text-indigo-600 font-medium bg-indigo-50 px-2 py-1 rounded-md text-xs">
+                        {post.tag}
+                      </span>
+                      <div className="flex items-center gap-2 text-xs">
+                        <span>{post.date}</span>
+                        <span className="text-gray-300">•</span>
+                        <span>{post.readTime}</span>
+                      </div>
+                    </div>
+                    <h2 className="text-lg md:text-xl font-semibold group-hover:text-indigo-600 transition">
+                      {post.title}
+                    </h2>
+                    <p className="text-gray-600 text-sm">
+                      {post.description}
+                    </p>
                   </div>
                 </div>
-                <h2 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 group-hover:text-indigo-600 transition">
-                  {post.title}
-                </h2>
-                <p className="my-2 text-gray-600 text-sm">{post.description}</p>
-              </div>
+              </article>
             </Link>
           ))}
         </div>

@@ -254,7 +254,7 @@ const BlogLayout = ({
             <h3 className="text-2xl font-bold text-gray-900 mb-8">
               Continue Reading
             </h3>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-4 md:gap-6">
               {randomPosts.map((post) => (
                 <Link key={post.path} to={post.path}>
                   <article className="flex flex-col h-full bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 group">
@@ -265,19 +265,19 @@ const BlogLayout = ({
                         className="w-full h-46 object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
-                    <div className="p-4">
-                      <span className="inline-block bg-indigo-50 text-indigo-600 text-xs px-2 py-0.5 rounded-full font-semibold tracking-wide mb-3">
+                    <div className="px-4 py-4">
+                      <span className="inline-block bg-indigo-50 text-indigo-600 text-xs px-2 py-0.5 rounded-full tracking-wide mb-3">
                         {post.tag}
                       </span>
-                      <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors duration-200 min-h-[3rem]">
+                      <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors duration-200 min-h-[3rem]">
                         {post.title}
                       </h4>
                       <p className="text-gray-600 mb-2 flex-grow">
                         {post.description}
                       </p>
-                      <div className="flex items-center text-sm text-gray-500 mt-auto">
+                      <div className="flex justify-between items-center text-sm text-gray-500">
                         <span>{post.date}</span>
-                        <span className="mx-2">•</span>
+                        {/* <span className="mx-2">•</span> */}
                         <span>{post.readTime}</span>
                       </div>
                     </div>
