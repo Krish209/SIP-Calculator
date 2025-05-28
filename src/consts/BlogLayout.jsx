@@ -153,7 +153,9 @@ const BlogLayout = ({
             </div>
           </div>
 
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{title}</h1>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+            {title}
+          </h1>
 
           <div className="flex sm:flex-row flex-col space-y-4 sm:space-y-0 justify-between text-sm text-gray-500">
             <div className="flex items-center space-x-4">
@@ -191,9 +193,7 @@ const BlogLayout = ({
         )}
 
         {/* Content */}
-        <article className="prose prose-lg max-w-none">
-          {children}
-        </article>
+        <article className="prose prose-lg max-w-none">{children}</article>
 
         {/* Engagement & Sharing */}
         <div className="mb-6 sm:mb-12">
