@@ -1,7 +1,7 @@
 import React from "react";
 import Table from "../../consts/Table";
 import BlogLayout from "../../consts/BlogLayout";
-import img from "../../assets/icons/blogs/riskvsreward.jpeg";
+import img from "../../assets/icons/blogs/riskvsreward3.png";
 
 const WhyRiskIsPartOfInvesting = () => {
   const columns = [

@@ -14,11 +14,10 @@ import {
   FaBookmark,
   FaRegBookmark,
 } from "react-icons/fa";
+
 import { useEffect, useState } from "react";
 import { useMemo } from "react";
-
 import { useParams, Link } from "react-router-dom";
-
 import { blogPosts } from "./BlogPost";
 
 const BlogLayout = ({
@@ -35,7 +34,6 @@ const BlogLayout = ({
 }) => {
   const [readingProgress, setReadingProgress] = useState(0);
   const [showScrollButton, setShowScrollButton] = useState(false);
-  const [isBookmarked, setIsBookmarked] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
   const [likes, setLikes] = useState(100);
 
@@ -47,7 +45,7 @@ const BlogLayout = ({
   // Filter out the current post
   const otherPosts = blogPosts.filter((p) => p.path !== currentPost.path);
 
-  // Pick one random post
+  // Pick two random post
   const randomPosts = useMemo(() => {
     const shuffled = [...otherPosts].sort(() => 0.5 - Math.random());
     return shuffled.slice(0, 2); // get 2 random articles
@@ -251,7 +249,7 @@ const BlogLayout = ({
 
         {randomPosts && (
           <div className="my-6 sm:my-10">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">
+            <h3 className="text-2xl font-bold mb-8">
               Continue Reading
             </h3>
             <div className="grid md:grid-cols-2 gap-4 md:gap-6">
@@ -266,10 +264,10 @@ const BlogLayout = ({
                       />
                     </div>
                     <div className="px-4 py-4">
-                      <span className="inline-block bg-indigo-50 text-indigo-600 text-xs px-2 py-0.5 rounded-full tracking-wide mb-3">
+                      <span className="inline-block bg-indigo-50 text-indigo-600 text-xs px-2 py-1 rounded-md tracking-wide mb-3">
                         {post.tag}
                       </span>
-                      <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors duration-200 min-h-[3rem]">
+                      <h4 className="text-lg md:text-xl font-bold group-hover:text-indigo-600 transition-colors duration-200 md:min-h-[3rem] mb-2">
                         {post.title}
                       </h4>
                       <p className="text-gray-600 mb-2 flex-grow">

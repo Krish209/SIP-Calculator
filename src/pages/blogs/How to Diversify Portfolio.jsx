@@ -1,7 +1,7 @@
 import React from "react";
 import Table from "../../consts/Table";
 import BlogLayout from "../../consts/BlogLayout";
-import img from "../../assets/icons/blogs/tree3.jpeg";
+import img from "../../assets/icons/blogs/diversify.jpeg";
 
 const DiversifyPortfolio = () => {
   const columns = [

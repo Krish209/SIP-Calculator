@@ -1,7 +1,7 @@
 import React from "react";
 import Table from "../../consts/Table";
 import BlogLayout from "../../consts/BlogLayout";
-import img from "../../assets/icons/blogs/sip-lumpsum.jpeg";
+import img from "../../assets/icons/blogs/sip-lump2.jpeg";
 
 const SIPvsLumpsum = () => {
   const publishedDate = "May 23, 2025";

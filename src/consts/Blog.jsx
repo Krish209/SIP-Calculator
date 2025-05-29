@@ -4,8 +4,8 @@ import { blogPosts } from "./BlogPost";
 function BlogHome() {
   return (
     <div className="min-h-screen text-primary bg-gradient-to-b from-indigo-50 to-white">
-      <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12">
+      <section className="max-w-7xl mx-auto py-8 md:py-12 px-4 sm:px-6 lg:px-8">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 md:mb-12">
           📚 Our Financial Blog
         </h1>
 
@@ -34,7 +34,7 @@ function BlogHome() {
                         <span>{post.readTime}</span>
                       </div>
                     </div>
-                    <h2 className="text-lg md:text-xl font-semibold group-hover:text-indigo-600 transition">
+                    <h2 className="text-lg md:text-xl font-semibold group-hover:text-indigo-600 transition md:min-h-[3rem] mb-2">
                       {post.title}
                     </h2>
                     <p className="text-gray-600 text-sm">
