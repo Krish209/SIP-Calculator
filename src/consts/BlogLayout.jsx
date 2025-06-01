@@ -265,7 +265,7 @@ const BlogLayout = ({
                       <span className="inline-block bg-indigo-50 text-indigo-600 text-xs px-2 py-1 rounded-md tracking-wide mb-3">
                         {post.tag}
                       </span>
-                      <h4 className="text-lg md:text-xl font-bold group-hover:text-indigo-600 transition-colors duration-200 md:min-h-[3rem] mb-2">
+                      <h4 className="text-lg md:text-xl font-bold group-hover:text-indigo-600 transition-colors duration-200 md:min-h-14 mb-1">
                         {post.title}
                       </h4>
                       <p className="text-gray-600 mb-2 flex-grow">

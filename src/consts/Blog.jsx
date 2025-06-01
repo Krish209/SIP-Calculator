@@ -34,7 +34,7 @@ function BlogHome() {
                         <span>{post.readTime}</span>
                       </div>
                     </div>
-                    <h2 className="text-lg md:text-xl font-semibold group-hover:text-indigo-600 transition md:min-h-[3rem] mb-2">
+                    <h2 className="text-lg md:text-xl font-semibold group-hover:text-indigo-600 transition md:min-h-14 mb-1">
                       {post.title}
                     </h2>
                     <p className="text-gray-600 text-sm">
