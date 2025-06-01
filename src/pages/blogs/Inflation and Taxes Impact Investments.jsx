@@ -109,7 +109,7 @@ const InflationandTaxesImpact = () => {
     <BlogLayout
       title="How Inflation and Taxes Impact Your Investments: A Complete Guide for
           Indian Investors"
-      author="Your Name"
+      author="Ankit Nayak"
       role="Financial Advisor"
       date="May 26, 2025"
       readTime="10 min read"

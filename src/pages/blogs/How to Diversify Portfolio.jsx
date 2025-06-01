@@ -72,7 +72,7 @@ const DiversifyPortfolio = () => {
   return (
     <BlogLayout
       title="How to Diversify Your Portfolio — A Complete Guide for Indian Investors"
-      author="Your Name"
+      author="Vrinda Jain"
       role="Financial Advisor"
       date="May 26, 2025"
       readTime="10 min read"

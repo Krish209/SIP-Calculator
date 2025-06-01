@@ -54,7 +54,7 @@ const SIPvsLumpsum = () => {
   return (
     <BlogLayout
       title="SIP vs Lumpsum: Which Investment Strategy Is Better?"
-      author="Your Name"
+      author="Dev Pal"
       role="Financial Advisor"
       date="May 26, 2025"
       readTime="10 min read"

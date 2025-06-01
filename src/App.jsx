@@ -43,6 +43,7 @@ import SelfEmployedOrFreelancer from "./pages/blogs/Invest if You're Self-Employ
 import Random from "./pages/blogs/Random";
 import Random2 from "./pages/blogs/Random2";
 
+
 function App() {
   return (
     <div className="App">
@@ -60,6 +61,10 @@ function App() {
 
           {/* Contact Us Route */}
           <Route path="contact" element={<Contact />} />
+          {/* <Route path="contact2" element={<Contact2 />} /> */}
+
+
+
           <Route path="terms" element={<TermsAndConditions />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="disclaimer" element={<Disclaimer />} />

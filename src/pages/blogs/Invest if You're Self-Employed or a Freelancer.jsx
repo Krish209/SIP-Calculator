@@ -132,7 +132,7 @@ const SelfEmployedOrFreelancer = () => {
   return (
     <BlogLayout
       title="How to Invest if You're Self-Employed or a Freelancer in India"
-      author="Your Name"
+      author="Chaitanya Rao"
       role="Financial Advisor"
       date="May 26, 2025"
       readTime="10 min read"

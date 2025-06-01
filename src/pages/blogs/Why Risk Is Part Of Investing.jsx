@@ -91,7 +91,7 @@ const WhyRiskIsPartOfInvesting = () => {
   return (
     <BlogLayout
       title="Why Risk is Part of Investing – and How to Manage It"
-      author="Your Name"
+      author="Haresh Yadav"
       role="Financial Advisor"
       date="May 26, 2025"
       readTime="10 min read"

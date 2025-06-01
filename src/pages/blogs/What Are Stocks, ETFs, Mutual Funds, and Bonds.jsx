@@ -69,7 +69,7 @@ const StockEtfMfBond = () => {
     <BlogLayout
       title="What Are Stocks, ETFs, Mutual Funds, and Bonds? | A Beginner’s Guide
           to Investing in India"
-      author="Your Name"
+      author="Gaurav Singh"
       role="Financial Advisor"
       date="May 26, 2025"
       readTime="10 min read"

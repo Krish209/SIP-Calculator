@@ -108,7 +108,7 @@ const CreatePassiveIncome = () => {
     <BlogLayout
       title=" How to Create Passive Income with Investments: A Complete Guide for
           Indians"
-      author="Your Name"
+      author="Surabhi Sharma"
       role="Financial Advisor"
       date="May 26, 2025"
       readTime="10 min read"
@@ -211,7 +211,7 @@ const CreatePassiveIncome = () => {
           </h2>
           <div className="space-y-6">
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 1. Assess Your Financial Situation
               </h3>
               <p className="mb-2">Start by understanding:</p>
@@ -224,7 +224,7 @@ const CreatePassiveIncome = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 2. Set Clear Financial Goals
               </h3>
               <p className="mb-2">Are you investing to:</p>
@@ -244,7 +244,7 @@ const CreatePassiveIncome = () => {
               </p>
             </div>
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 3. Start with Low-Risk Options
               </h3>
               <p className="mb-2">
@@ -264,7 +264,7 @@ const CreatePassiveIncome = () => {
             </div>
 
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 4. Diversify with Mutual Funds Using SWP
               </h3>
               <p className="mb-2">
@@ -286,7 +286,7 @@ const CreatePassiveIncome = () => {
             </div>
 
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 5. Invest in Dividend Stocks
               </h3>
               <p className="mb-2">
@@ -303,7 +303,7 @@ const CreatePassiveIncome = () => {
             </div>
 
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 6. Explore Real Estate for Rental Income
               </h3>
               <p className="mb-2">
@@ -324,7 +324,7 @@ const CreatePassiveIncome = () => {
             </div>
 
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 7. Try Peer-to-Peer (P2P) Lending
               </h3>
               <p className="mb-2">
@@ -345,7 +345,7 @@ const CreatePassiveIncome = () => {
             </div>
 
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 8. Automate and Monitor
               </h3>
               <p className="mb-2">Automation is key to passive income. Use:</p>
@@ -358,7 +358,7 @@ const CreatePassiveIncome = () => {
             </div>
 
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 9. Reinvest Your Income
               </h3>
               <p className="mb-2">
@@ -370,7 +370,7 @@ const CreatePassiveIncome = () => {
             </div>
 
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 10. Stay Informed and Optimized
               </h3>
               <p className="mb-2">

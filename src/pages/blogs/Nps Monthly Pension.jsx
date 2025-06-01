@@ -36,7 +36,7 @@ const NpsMonthlyPension = () => {
   return (
     <BlogLayout
       title="How to Achieve a Monthly Pension of ₹50,000 with NPS"
-      author="Your Name"
+      author="Tarun Kumar"
       role="Financial Advisor"
       date="May 26, 2025"
       readTime="10 min read"

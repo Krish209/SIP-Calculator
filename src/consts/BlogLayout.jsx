@@ -135,7 +135,7 @@ const BlogLayout = ({
         </div>
 
         {/* Header */}
-        <div className="mb-4 sm:mb-8">
+        <div className="mb-4 sm:mb-6">
           <div className="flex justify-between items-start mb-4">
             <div className="flex space-x-2">
               {isPremium && (
@@ -169,10 +169,10 @@ const BlogLayout = ({
             </div>
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-2">
-                <FiCalendar /> <span>{date}</span>
+                <FiCalendar /> <span>{currentPost.date}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <FiClock /> <span>{readTime}</span>
+                <FiClock /> <span>{currentPost.readTime}</span>
               </div>
             </div>
           </div>
@@ -180,7 +180,7 @@ const BlogLayout = ({
 
         {/* Image */}
         {image && (
-          <figure className="mb-8">
+          <figure className="mb-4 sm:mb-6">
             <img
               src={image}
               alt={title}
@@ -249,9 +249,7 @@ const BlogLayout = ({
 
         {randomPosts && (
           <div className="my-6 sm:my-10">
-            <h3 className="text-2xl font-bold mb-8">
-              Continue Reading
-            </h3>
+            <h3 className="text-2xl font-bold mb-8">Continue Reading</h3>
             <div className="grid md:grid-cols-2 gap-4 md:gap-6">
               {randomPosts.map((post) => (
                 <Link key={post.path} to={post.path}>

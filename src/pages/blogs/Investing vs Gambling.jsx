@@ -7,7 +7,7 @@ const InvestingVsGambling = () => {
   return (
     <BlogLayout
       title="Investing vs. Gambling: What’s the Real Difference?"
-      author="Your Name"
+      author="Suresh Mohan"
       role="Financial Advisor"
       date="May 26, 2025"
       readTime="10 min read"
@@ -223,7 +223,7 @@ const InvestingVsGambling = () => {
           </h2>
           <p className="mb-2">
             Although both investing and gambling involve risk, their purpose,
-            strategies, and long-term outcomes are fundamentally different.
+            strategies, and long-term outcomes are fundamentally different.{" "}
             <strong>
               Investing is a disciplined, informed approach to building wealth
             </strong>

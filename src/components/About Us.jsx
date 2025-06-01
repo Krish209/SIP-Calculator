@@ -6,13 +6,13 @@ import {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen text-primary">
       {/* Hero Section */}
       <motion.section 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="bg-gradient-to-br from-indigo-700 to-blue-700 text-white py-24 px-4"
+        className="bg-gradient-to-br from-indigo-600 to-blue-500 text-white py-24 px-4"
       >
         <div className="max-w-6xl mx-auto text-center">
           <motion.div 

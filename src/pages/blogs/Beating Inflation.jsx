@@ -41,7 +41,7 @@ const BeatingInflation = () => {
   return (
     <BlogLayout
       title="Beating Inflation: How Smart Investing Protects Your Money"
-      author="Your Name"
+      author="Rahul Das"
       role="Financial Advisor"
       date="May 26, 2025"
       readTime="10 min read"

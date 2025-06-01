@@ -131,7 +131,7 @@ const CompoundingWork = () => {
   return (
     <BlogLayout
       title="How Does Compounding Work? The Power Behind Long-Term Wealth Creation"
-      author="Your Name"
+      author="Devika Gupta"
       role="Financial Advisor"
       date="May 26, 2025"
       readTime="10 min read"
