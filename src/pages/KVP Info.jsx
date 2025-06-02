@@ -31,36 +31,36 @@ const KVPInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Interest Rate:</strong> 7.5% p.a., compounded annually (as
+            <strong>Interest Rate</strong>: 7.5% p.a., compounded annually (as
             of April–June 2025; subject to quarterly revision)
           </li>
           <li>
-            <strong>Minimum Investment:</strong> ₹1,000 (in multiples of ₹100)
+            <strong>Minimum Investment</strong>: ₹1,000 (in multiples of ₹100)
           </li>
           <li>
-            <strong>Maximum Investment:</strong> No upper limit
+            <strong>Maximum Investment</strong>: No upper limit
           </li>
           <li>
-            <strong>Tenure:</strong> 115 months (9 years and 7 months)
+            <strong>Tenure</strong>: 115 months (9 years and 7 months)
           </li>
           <li>
-            <strong>Mode of Holding:</strong> Available in physical or digital
+            <strong>Mode of Holding</strong>: Available in physical or digital
             formats
           </li>
           <li>
-            <strong>Premature Withdrawal:</strong> Permitted after 2.5 years
+            <strong>Premature Withdrawal</strong>: Permitted after 2.5 years
             with applicable penalties
           </li>
           <li>
-            <strong>Transferability:</strong> Certificates are transferable
+            <strong>Transferability</strong>: Certificates are transferable
             between individuals or across post offices
           </li>
           <li>
-            <strong>Nomination Facility:</strong> Available at the time of
+            <strong>Nomination Facility</strong>: Available at the time of
             purchase or later
           </li>
           <li>
-            <strong>Safety:</strong> Fully government-backed, offering capital
+            <strong>Safety</strong>: Fully government-backed, offering capital
             protection
           </li>
         </ul>
@@ -77,7 +77,7 @@ const KVPInfo = () => {
           <li>Joint accounts (up to 3 individuals)</li>
           <li>Trusts (excluding Hindu Undivided Families)</li>
           <li>
-            <strong>Not eligible:</strong> Non-Resident Indians (NRIs) and Hindu
+            <strong>Not eligible</strong>: Non-Resident Indians (NRIs) and Hindu
             Undivided Families (HUFs)
           </li>
         </ul>
@@ -90,14 +90,14 @@ const KVPInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Single Holder Account:</strong> For individuals or for a
+            <strong>Single Holder Account</strong>: For individuals or for a
             minor through a guardian
           </li>
           <li>
-            <strong>Joint A Account:</strong> Payable jointly to both holders
+            <strong>Joint A Account</strong>: Payable jointly to both holders
           </li>
           <li>
-            <strong>Joint B Account:</strong> Payable to either holder (survivor
+            <strong>Joint B Account</strong>: Payable to either holder (survivor
             receives full rights)
           </li>
         </ul>
@@ -146,7 +146,7 @@ const KVPInfo = () => {
         </p>
         <div className="bg-blue-50 p-2 md:p-4 rounded-lg mt-2 shadow-md">
           <p>
-            <strong>Important Note:</strong> Even though the interest is paid at
+            <strong>Important Note</strong>: Even though the interest is paid at
             maturity, it is taxable each year on an accrual basis and must be
             reported in your income tax return.
           </p>
@@ -160,15 +160,15 @@ const KVPInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>No 80C Deductions:</strong> KVP investments are not eligible
+            <strong>No 80C Deductions</strong>: KVP investments are not eligible
             for deductions under Section 80C
           </li>
           <li>
-            <strong>Taxable Interest:</strong> Interest earned is fully taxable
+            <strong>Taxable Interest</strong>: Interest earned is fully taxable
             under the head 'Income from Other Sources'
           </li>
           <li>
-            <strong>TDS:</strong> No tax is deducted at source upon maturity;
+            <strong>TDS</strong>: No tax is deducted at source upon maturity;
             however, interest is taxable each year on an accrual basis and must
             be reported in your income tax return
           </li>
@@ -182,25 +182,25 @@ const KVPInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Government-Backed:</strong> Offers safety and capital
+            <strong>Government-Backed</strong>: Offers safety and capital
             protection
           </li>
           <li>
-            <strong>Fixed Returns:</strong> Know your maturity amount in advance
+            <strong>Fixed Returns</strong>: Know your maturity amount in advance
           </li>
           <li>
-            <strong>Easy Access:</strong> Available at post offices and
+            <strong>Easy Access</strong>: Available at post offices and
             authorized banks
           </li>
           <li>
-            <strong>Transferable:</strong> Can be transferred to another person
+            <strong>Transferable</strong>: Can be transferred to another person
             or location
           </li>
           <li>
-            <strong>Nomination Facility:</strong> Supports succession planning
+            <strong>Nomination Facility</strong>: Supports succession planning
           </li>
           <li>
-            <strong>Collateral for Loans:</strong> Can be pledged for loans
+            <strong>Collateral for Loans</strong>: Can be pledged for loans
             (subject to bank approval)
           </li>
         </ul>
@@ -213,18 +213,18 @@ const KVPInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>No Tax Benefits:</strong> Not eligible under Section 80C
+            <strong>No Tax Benefits</strong>: Not eligible under Section 80C
           </li>
           <li>
-            <strong>Taxable Returns:</strong> Interest is fully taxable each
+            <strong>Taxable Returns</strong>: Interest is fully taxable each
             financial year
           </li>
           <li>
-            <strong>Lock-in Period:</strong> Funds cannot be withdrawn before 2.5
+            <strong>Lock-in Period</strong>: Funds cannot be withdrawn before 2.5
             years
           </li>
           <li>
-            <strong>Long Tenure:</strong> Suitable only for long-term goals
+            <strong>Long Tenure</strong>: Suitable only for long-term goals
           </li>
         </ul>
       </section>

@@ -11,6 +11,8 @@ import imgCompounding from "../assets/icons/blogs/compounding.jpeg";
 import imgDiversification from "../assets/icons/blogs/diversify.jpeg";
 import imgTaxes from "../assets/icons/blogs/tax-inflation.jpeg";
 import imgFreelancer from "../assets/icons/blogs/self-employed.jpeg";
+import imgStocksVsMutual from "../assets/icons/blogs/stock-mutualfund.jpeg";
+import imgSavingVsInvesting from "../assets/icons/blogs/saving-investing.jpeg";
 
 export const blogPosts = [
   {
@@ -133,5 +135,26 @@ export const blogPosts = [
     date: "May 29, 2025",
     image: imgFreelancer,
     readTime: "4 min read",
+  },
+
+  {
+    title: "Stocks vs Mutual Funds: Which is Better for Indian Investors?",
+    path: "/blog/stocks-vs-mutual-funds",
+    description:
+      "Compare stocks and mutual funds to understand which suits your investment goals better in the Indian market.",
+    tag: "Investment",
+    date: "June 1, 2025",
+    image: imgStocksVsMutual,
+    readTime: "6 min read",
+  },
+  {
+    title: "What is the Difference Between Saving and Investing?",
+    path: "/blog/difference-between-saving-and-investing",
+    description:
+      "Learn the key differences between saving and investing and when to choose one over the other.",
+    tag: "Finance Basics",
+    date: "June 1, 2025",
+    image: imgSavingVsInvesting,
+    readTime: "3 min read",
   },
 ];

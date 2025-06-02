@@ -106,7 +106,7 @@ const CreatePassiveIncome = () => {
 
   return (
     <BlogLayout
-      title=" How to Create Passive Income with Investments: A Complete Guide for
+      title="How to Create Passive Income with Investments: A Complete Guide for
           Indians"
       author="Surabhi Sharma"
       role="Financial Advisor"

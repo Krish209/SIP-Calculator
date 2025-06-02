@@ -68,23 +68,23 @@ const SWPInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-1">
           <li>
-            <strong>Flexibility:</strong> Allows withdrawal of fixed amounts
+            <strong>Flexibility</strong>: Allows withdrawal of fixed amounts
             over time, offering a steady income stream.
           </li>
           <li>
-            <strong>Choice of Frequency:</strong> Withdrawals can be scheduled
+            <strong>Choice of Frequency</strong>: Withdrawals can be scheduled
             monthly, quarterly, or annually based on your liquidity needs.
           </li>
           <li>
-            <strong>Taxation:</strong> Only the capital gains portion of each
+            <strong>Taxation</strong>: Only the capital gains portion of each
             withdrawal is subject to tax, not the full amount withdrawn.
           </li>
           <li>
-            <strong>Growth Potential:</strong> Even as you withdraw, your
+            <strong>Growth Potential</strong>: Even as you withdraw, your
             remaining units stay invested and may benefit from market growth.
           </li>
           <li>
-            <strong>Applicability:</strong> Works with most mutual fund schemes
+            <strong>Applicability</strong>: Works with most mutual fund schemes
             (equity, debt, hybrid, etc.)
           </li>
         </ul>
@@ -168,19 +168,19 @@ const SWPInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Fixed Amount SWP:</strong> The investor sets a fixed amount
+            <strong>Fixed Amount SWP</strong>: The investor sets a fixed amount
             to be withdrawn periodically. This is the most common type of SWP,
             where you receive a fixed sum every month or year.
           </li>
           <li>
-            <strong>Fixed Percentage SWP:</strong> Instead of withdrawing a
+            <strong>Fixed Percentage SWP</strong>: Instead of withdrawing a
             fixed amount, you can choose to withdraw a fixed percentage of your
             mutual fund's balance at regular intervals. This method is more
             dynamic as it adjusts with the performance of your mutual fund and
             market conditions.
           </li>
           <li>
-            <strong>Variable SWP:</strong> In this type of SWP, the amount
+            <strong>Variable SWP</strong>: In this type of SWP, the amount
             withdrawn varies based on certain criteria, such as market
             conditions, fund performance, and investor preferences.
           </li>
@@ -194,21 +194,21 @@ const SWPInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-1">
           <li>
-            <strong>Steady Income:</strong> SWP provides a predictable income
+            <strong>Steady Income</strong>: SWP provides a predictable income
             stream, making it ideal for people in need of regular cash flow.
           </li>
           <li>
-            <strong>Tax Efficiency:</strong> Depending on the type of mutual
+            <strong>Tax Efficiency</strong>: Depending on the type of mutual
             fund and duration of investment, SWP can be tax-efficient compared
             to lump sum withdrawals.
           </li>
           <li>
-            <strong>Capital Preservation:</strong> SWP allows you to withdraw
+            <strong>Capital Preservation</strong>: SWP allows you to withdraw
             money without fully depleting your capital, as the remaining
             investment continues to grow.
           </li>
           <li>
-            <strong>Flexible Amount & Frequency:</strong> Choose how much you
+            <strong>Flexible Amount & Frequency</strong>: Choose how much you
             want to withdraw and how often. Customize your withdrawals based on
             your needs.
           </li>
@@ -249,24 +249,24 @@ const SWPInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Market Risk:</strong> NAVs fluctuate; during market
+            <strong>Market Risk</strong>: NAVs fluctuate; during market
             downturns, more units are redeemed to maintain fixed withdrawal.
           </li>
           <li>
-            <strong>Discipline Required:</strong> Avoid impulsive changes; plan
+            <strong>Discipline Required</strong>: Avoid impulsive changes; plan
             for long-term sustainability.
           </li>
           <li>
-            <strong>Capital Depletion:</strong> If withdrawal exceeds returns,
+            <strong>Capital Depletion</strong>: If withdrawal exceeds returns,
             the corpus will deplete over time. So, never exceed 4-6% of corpus
             annually to avoid depletion.
           </li>
           <li>
-            <strong>Taxation:</strong> Short-term vs long-term capital gains
+            <strong>Taxation</strong>: Short-term vs long-term capital gains
             taxation applies depending on holding period and fund type.
           </li>
           <li>
-            <strong>Inflation:</strong> Fixed withdrawals may lose value in real
+            <strong>Inflation</strong>: Fixed withdrawals may lose value in real
             terms over time.
           </li>
         </ul>
@@ -288,11 +288,11 @@ const SWPInfo = () => {
         </h3>
         <ul class="list-disc pl-6 mb-4 space-y-2">
           <li>
-            <strong>Short-Term Capital Gains (STCG):</strong> If you sell equity
+            <strong>Short-Term Capital Gains (STCG)</strong>: If you sell equity
             mutual fund units within 1 year, the gains are taxed at 15%.{" "}
           </li>
           <li>
-            <strong>Long-Term Capital Gains (LTCG):</strong> If you hold equity
+            <strong>Long-Term Capital Gains (LTCG)</strong>: If you hold equity
             mutual funds for more than 1 year, gains over ₹1 lakh are taxed at
             10%, with no indexation benefits.
           </li>

@@ -30,16 +30,16 @@ function GratuityInfo() {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Minimum Service Period:</strong> The employee must have
+            <strong>Minimum Service Period</strong>: The employee must have
             completed a minimum of 5 years of continuous service with the same
             employer.
           </li>
           <li>
-            <strong>Termination of Employment:</strong> Gratuity is payable on
+            <strong>Termination of Employment</strong>: Gratuity is payable on
             resignation, retirement, or death/disability.
           </li>
           <li>
-            <strong>Exclusions:</strong> Employees working in seasonal or
+            <strong>Exclusions</strong>: Employees working in seasonal or
             temporary establishments or unorganized sectors may not be eligible
             for gratuity.
           </li>
@@ -72,12 +72,12 @@ function GratuityInfo() {
           <p className="mt-2">Where:</p>
           <ul className="list-disc pl-6 space-y-1">
             <li>
-              <strong>Last Drawn Salary:</strong> The salary the employee was
+              <strong>Last Drawn Salary</strong>: The salary the employee was
               drawing at the time of leaving the company, which includes basic
               salary and dearness allowance (DA).
             </li>
             <li>
-              <strong>Years of Service:</strong> The number of completed years
+              <strong>Years of Service</strong>: The number of completed years
               of service with the organization.
             </li>
           </ul>
@@ -118,11 +118,11 @@ function GratuityInfo() {
         </h2>
         <ul className="list-disc pl-6 space-y-2 ">
           <li>
-            <strong>For Government Employees:</strong>
+            <strong>For Government Employees</strong>:
             Gratuity received by government employees is fully exempt from tax.
           </li>
           <li>
-            <strong>For Private Sector Employees:</strong>
+            <strong>For Private Sector Employees</strong>:
             If the amount of gratuity is below ₹10,00,000, it is exempt from
             tax. However, if the gratuity amount exceeds ₹10,00,000, the excess
             amount is taxable.
@@ -150,16 +150,16 @@ function GratuityInfo() {
         </h2>
         <ul className="list-disc pl-6 space-y-2 ">
           <li>
-            <strong>Application for Gratuity:</strong>
+            <strong>Application for Gratuity</strong>:
             The employee must submit an application for gratuity to the
             employer.
           </li>
           <li>
-            <strong>Verification:</strong> The employer verifies the service
+            <strong>Verification</strong>: The employer verifies the service
             record of the employee and confirms eligibility.
           </li>
           <li>
-            <strong>Payment:</strong> The gratuity amount is paid as a lump sum.
+            <strong>Payment</strong>: The gratuity amount is paid as a lump sum.
           </li>
         </ul>
       </section>

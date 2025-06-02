@@ -71,7 +71,7 @@ const ROIInfo = () => {
 
         <div className="bg-blue-50 p-2 md:p-4 rounded-lg mt-4 shadow-md">
           <p className="">
-            <strong>Important Note:</strong>{" "}
+            <strong>Important Note</strong>:{" "}
              CAGR helps understand annual growth rate over time, making it useful
             for comparing investments with different durations. ROI is great for
             quick comparisons, but for long-term investments, consider using
@@ -100,15 +100,15 @@ const ROIInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Annualized ROI:</strong> Adjusts ROI for time, helpful for
+            <strong>Annualized ROI</strong>: Adjusts ROI for time, helpful for
             comparing long vs short-term investments.
           </li>
           <li>
-            <strong>Marketing ROI (MROI):</strong> Used to track revenue
+            <strong>Marketing ROI (MROI)</strong>: Used to track revenue
             generated from marketing spend.
           </li>
           <li>
-            <strong>Social ROI (SROI):</strong> Evaluates social/environmental
+            <strong>Social ROI (SROI)</strong>: Evaluates social/environmental
             returns along with monetary ones.
           </li>
         </ul>

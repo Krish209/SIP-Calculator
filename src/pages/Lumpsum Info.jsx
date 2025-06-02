@@ -61,19 +61,19 @@ const LumpsumInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2 ">
           <li>
-            <strong>One-Time Investment:</strong> A single, large amount is
+            <strong>One-Time Investment</strong>: A single, large amount is
             invested at once.
           </li>
           <li>
-            <strong>Market Timing:</strong> Performance may vary significantly
+            <strong>Market Timing</strong>: Performance may vary significantly
             depending on when you invest.
           </li>
           <li>
-            <strong>Potential for Higher Returns:</strong> If timed well, lump
+            <strong>Potential for Higher Returns</strong>: If timed well, lump
             sum can outperform SIPs in rising markets.
           </li>
           <li>
-            <strong>Long-Term Growth:</strong> Best suited for long-term goals
+            <strong>Long-Term Growth</strong>: Best suited for long-term goals
             (5+ years), allowing your investment to ride out market volatility
             and benefit from compounding.
           </li>
@@ -95,13 +95,13 @@ const LumpsumInfo = () => {
         <div className="space-y-4 ">
           <ul className="list-disc pl-6 space-y-2">
             <li>
-              <strong className="">Net Asset Value (NAV):</strong> NAV
+              <strong className="">Net Asset Value (NAV)</strong>: NAV
               represents the market value of one unit of the mutual fund, and it
               fluctuates daily based on the performance of the underlying
               assets.
             </li>
             <li>
-              <strong className="">Compounding:</strong> The essence of Lumpsum
+              <strong className="">Compounding</strong>: The essence of Lumpsum
               returns is compounding. This means that the returns generated from
               your investment are reinvested and generate further returns. Over
               time, this effect leads to exponential growth in your investment
@@ -172,7 +172,7 @@ const LumpsumInfo = () => {
 
         <div className="bg-blue-50 p-2 md:p-4 rounded-lg mt-6 shadow-md">
           <p className="">
-            <strong className="">Important Note:</strong> Please note that
+            <strong className="">Important Note</strong>: Please note that
             Lumpsum returns are not fixed. They depend on the mutual fund’s
             performance and the NAV at the time of initial investment. The
             returns might vary depending on market conditions, which may cause
@@ -188,13 +188,13 @@ const LumpsumInfo = () => {
         </h2>
         <div className="space-y-2 mb-2">
           <p>
-            <strong>SIP:</strong> In SIP, you invest smaller amounts regularly,
+            <strong>SIP</strong>: In SIP, you invest smaller amounts regularly,
             reducing the risk of investing all at once during market highs. It
             helps in mitigating risks during market volatility by ensuring that
             investments are spread over time.
           </p>
           <p>
-            <strong>Lump Sum:</strong> This means investing a large amount all
+            <strong>Lump Sum</strong>: This means investing a large amount all
             at once, which exposes you to the risks of market fluctuations at
             that time.
           </p>
@@ -210,21 +210,21 @@ const LumpsumInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2 ">
           <li>
-            <strong>Power of Compounding:</strong> Since the entire amount is
+            <strong>Power of Compounding</strong>: Since the entire amount is
             invested at once, your money starts compounding from the beginning,
             leading to higher potential returns if the market performs well.
           </li>
           <li>
-            <strong>Long-Term Goals:</strong> Lump sum investments work well for
+            <strong>Long-Term Goals</strong>: Lump sum investments work well for
             long-term goals like retirement, wealth creation, or buying a house,
             especially when market valuations are favorable.
           </li>
           <li>
-            <strong>Simplified Management:</strong> You invest once and let the
+            <strong>Simplified Management</strong>: You invest once and let the
             fund grow.
           </li>
           <li>
-            <strong>Market Timing Opportunity:</strong> If the market is at a
+            <strong>Market Timing Opportunity</strong>: If the market is at a
             low point or presents a strong opportunity, a lump sum investment
             allows you to make the most of it.
           </li>
@@ -246,16 +246,16 @@ const LumpsumInfo = () => {
         </h3>
         <ul class="list-disc pl-6 mb-4 space-y-2">
           <li>
-            <strong>Short-Term Capital Gains (STCG):</strong> If you sell equity
+            <strong>Short-Term Capital Gains (STCG)</strong>: If you sell equity
             mutual fund units within 1 year, the gains are taxed at 15%.
           </li>
           <li>
-            <strong>Long-Term Capital Gains (LTCG):</strong> If you hold equity
+            <strong>Long-Term Capital Gains (LTCG)</strong>: If you hold equity
             mutual funds for more than 1 year, gains over ₹1 lakh are taxed at
             10%, with no indexation benefits.
           </li>
           <li>
-            <strong>Securities Transaction Tax (STT):</strong> An STT of 0.1%
+            <strong>Securities Transaction Tax (STT)</strong>: An STT of 0.1%
             applies when selling equity mutual funds, in addition to the capital
             gains tax.
           </li>
@@ -266,12 +266,12 @@ const LumpsumInfo = () => {
         </h3>
         <ul class="list-disc pl-6 mb-4 space-y-2">
           <li>
-            <strong>Short-Term Capital Gains (STCG):</strong> If you sell debt
+            <strong>Short-Term Capital Gains (STCG)</strong>: If you sell debt
             mutual fund units within 3 years, the gains are taxed at your income
             tax slab rate.
           </li>
           <li>
-            <strong>Long-Term Capital Gains (LTCG):</strong> If you hold debt
+            <strong>Long-Term Capital Gains (LTCG)</strong>: If you hold debt
             mutual funds for more than 3 years, the gains are taxed at 20% with
             indexation benefits to reduce taxable gains.
           </li>
@@ -322,14 +322,14 @@ const LumpsumInfo = () => {
         </h3>
         <ul className="list-disc pl-6 space-y-2 ">
           <li>
-            <strong>Erosion of Purchasing Power:</strong> Inflation reduces the
+            <strong>Erosion of Purchasing Power</strong>: Inflation reduces the
             purchasing power of money over time. For instance, if your Lumpsum
             generates a return of 8% annually, but inflation is 5%, your real
             return would only be 3%. This means the purchasing power of your
             corpus is growing slower than you might expect.
           </li>
           <li>
-            <strong>Real Returns During Inflation:</strong> If the returns from
+            <strong>Real Returns During Inflation</strong>: If the returns from
             your Lump Sum investment are lower than the rate of inflation, the
             real (inflation-adjusted) return on your investment could be
             negative.
@@ -366,21 +366,21 @@ const LumpsumInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Use STP (Systematic Transfer Plan):</strong> Park your lump
+            <strong>Use STP (Systematic Transfer Plan)</strong>: Park your lump
             sum in a debt fund and gradually transfer it into an equity fund
             over a few months.
           </li>
           <li>
-            <strong>Split the Investment:</strong> Divide your capital into 3–4
+            <strong>Split the Investment</strong>: Divide your capital into 3–4
             tranches and invest monthly to balance out volatility.
           </li>
           <li>
-            <strong>Be Patient:</strong> Lumpsum is a long-term investment. Over
+            <strong>Be Patient</strong>: Lumpsum is a long-term investment. Over
             time, your investment grows as you continue to contribute and
             benefit from compounding.
           </li>
           <li>
-            <strong>Diversify Your Lump Sum Portfolio:</strong> By allocating
+            <strong>Diversify Your Lump Sum Portfolio</strong>: By allocating
             funds to different asset classes, you reduce the risk of any single
             investment impacting your overall returns.
           </li>
@@ -394,32 +394,32 @@ const LumpsumInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2 ">
           <li>
-            <strong>Timing Dependency:</strong> Unlike SIPs, returns can vary
+            <strong>Timing Dependency</strong>: Unlike SIPs, returns can vary
             greatly depending on when you enter the market.
           </li>
           <li>
-            <strong>Psychological Stress:</strong> Watching large market swings
+            <strong>Psychological Stress</strong>: Watching large market swings
             on a big investment can be stressful.
           </li>
           <li>
-            <strong>Ignoring Risk Tolerance:</strong> Ensure that your Lumpsum
+            <strong>Ignoring Risk Tolerance</strong>: Ensure that your Lumpsum
             portfolio matches your risk profile. Avoid investing in high-risk
             assets if you have a low tolerance for risk.
           </li>
           <li>
-            <strong>Underestimating Inflation:</strong> Failing to consider the
+            <strong>Underestimating Inflation</strong>: Failing to consider the
             impact of inflation on your Lumpsum returns can affect your
             long-term wealth creation. Ensure your portfolio can outpace
             inflation.
           </li>
           <li>
-            <strong>Ignoring Your Investment Horizon:</strong> Choose funds that
+            <strong>Ignoring Your Investment Horizon</strong>: Choose funds that
             match your investment horizon. For example, if you're investing for
             a long-term goal (like retirement), equity funds might be more
             suitable than debt funds.
           </li>
           <li>
-            <strong>Overcommitting Funds:</strong> Avoid overcommitting to
+            <strong>Overcommitting Funds</strong>: Avoid overcommitting to
             lumpsum contributions without considering your current cash flow
             needs, as this can backfire. It's important to balance Lumpsum
             investments with other financial obligations.

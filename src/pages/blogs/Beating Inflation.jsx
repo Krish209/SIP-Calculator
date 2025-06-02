@@ -85,7 +85,7 @@ const BeatingInflation = () => {
           </h2>
           <div className="space-y-6">
             <div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 1. Equity Mutual Funds
               </h3>
 
@@ -98,7 +98,7 @@ const BeatingInflation = () => {
               </p>
             </div>
             <div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 2. Treasury Inflation-Protected Securities (TIPS)
               </h3>
 
@@ -112,7 +112,7 @@ const BeatingInflation = () => {
             </div>
 
             <div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 3. Gold and Precious Metals
               </h3>
 
@@ -123,7 +123,7 @@ const BeatingInflation = () => {
               </p>
             </div>
             <div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 4. Real Estate and REITs
               </h3>
 
@@ -136,7 +136,7 @@ const BeatingInflation = () => {
             </div>
 
             <div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 5. Commodities
               </h3>
 
@@ -147,7 +147,7 @@ const BeatingInflation = () => {
               </p>
             </div>
             <div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 6. Diversified Investment Portfolio
               </h3>
 

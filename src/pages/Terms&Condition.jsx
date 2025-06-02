@@ -6,7 +6,7 @@ const TermsAndConditions = () => {
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-2 sm:mb-4">Terms and Conditions</h1>
         <p className="mb-6">
-          <strong>Effective Date:</strong> May 03, 2025
+          <strong>Effective Date</strong>: May 03, 2025
         </p>
 
         <div className="space-y-6">
@@ -249,9 +249,9 @@ const TermsAndConditions = () => {
               For any questions regarding these Terms and Conditions, please
               contact us:
               <br />
-              <strong>Email:</strong> support@sipgo.in
+              <strong>Email</strong>: support@sipgo.in
               <br />
-              <strong>Phone:</strong> +91-9876543210
+              <strong>Phone</strong>: +91-9876543210
             </p>
           </div>
         </div>

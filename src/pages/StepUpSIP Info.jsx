@@ -161,27 +161,27 @@ const data = [
         </h2>
         <ul className="list-disc pl-6 space-y-1">
           <li>
-            <strong>Increased Wealth Creation:</strong> As your investment
+            <strong>Increased Wealth Creation</strong>: As your investment
             increases regularly, you accumulate more units over time, leading to
             higher long-term returns through the power of compounding.
           </li>
           <li>
-            <strong>Income Matching:</strong> Ideal for professionals and
+            <strong>Income Matching</strong>: Ideal for professionals and
             salaried individuals whose incomes increase annually, allowing your
             savings to scale with your earnings.
           </li>
           <li>
-            <strong>Helps Combats Inflation:</strong> A fixed SIP might fall
+            <strong>Helps Combats Inflation</strong>: A fixed SIP might fall
             short in the long run due to inflation. Step-Up SIP helps you stay
             ahead of inflation by investing more gradually.
           </li>
           <li>
-            <strong>Automatic & Disciplined:</strong> You don’t need to remember
+            <strong>Automatic & Disciplined</strong>: You don’t need to remember
             to increase your investment—it happens automatically, helping you
             stay disciplined in your financial planning.
           </li>
           <li>
-            <strong>Customizable:</strong> You can set the increment amount and
+            <strong>Customizable</strong>: You can set the increment amount and
             frequency based on your financial goals and comfort level. You can
             choose both the increment amount and the frequency based on your
             preferences.
@@ -195,28 +195,28 @@ const data = [
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Income stability:</strong> Ensure you can afford increased
+            <strong>Income stability</strong>: Ensure you can afford increased
             contributions in future years.
           </li>
           <li>
-            <strong>Stay Consistent:</strong> Stick to your SIP investment even
+            <strong>Stay Consistent</strong>: Stick to your SIP investment even
             if the market goes down. Consistency is key, and it allows you to
             take advantage of market volatility through rupee-cost averaging.
           </li>
           <li>
-            <strong>Investment horizon:</strong> Longer periods benefit more
+            <strong>Investment horizon</strong>: Longer periods benefit more
             from step-ups.
           </li>
           <li>
-            <strong>Goal-based planning:</strong> Use for long-term goals like
+            <strong>Goal-based planning</strong>: Use for long-term goals like
             retirement, child’s education, etc.
           </li>
           <li>
-            <strong>Fund performance:</strong> Choose consistently performing
+            <strong>Fund performance</strong>: Choose consistently performing
             mutual funds.
           </li>
           <li>
-            <strong>Diversify Your Portfolio:</strong> By allocating funds to
+            <strong>Diversify Your Portfolio</strong>: By allocating funds to
             different asset classes, you reduce the risk of any single
             investment impacting your overall returns.
           </li>

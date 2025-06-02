@@ -227,7 +227,7 @@ const InflationandTaxesImpact = () => {
 
           <div className="space-y-6">
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 1. Invest in Tax-Free Instruments
               </h3>
               <ul className="list-disc space-y-1 pl-6 mb-2">
@@ -272,7 +272,7 @@ const InflationandTaxesImpact = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 2. Use Equity Mutual Funds for Long-Term Growth
               </h3>
 
@@ -286,7 +286,7 @@ const InflationandTaxesImpact = () => {
               </p>
             </div>
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 3. Utilize ELSS Funds for 80C Benefits
               </h3>
               <p className="mb-2">
@@ -298,7 +298,7 @@ const InflationandTaxesImpact = () => {
             </div>
 
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 4. Choose Tax-Aware Investment Options
               </h3>
 
@@ -325,7 +325,7 @@ const InflationandTaxesImpact = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 5. Reinvest Wisely
               </h3>
               <p className="mb-2">

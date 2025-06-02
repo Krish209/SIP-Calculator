@@ -58,34 +58,34 @@ const data = [
         </h2>
         <ul className="list-disc pl-6 space-y-2 text-[15px] md:text-base">
           <li>
-            <strong>Regular Investing Habit:</strong> SIP encourages regular
+            <strong>Regular Investing Habit</strong>: SIP encourages regular
             investing, which helps you develop a good saving habit.
           </li>
           <li>
-            <strong>Rupee Cost Averaging:</strong> SIP reduces the impact
+            <strong>Rupee Cost Averaging</strong>: SIP reduces the impact
             of market volatility by buying more units when prices are low and
             fewer units when prices are high.
           </li>
           <li>
-            <strong>Power of Compounding:</strong> Over time, your SIP
+            <strong>Power of Compounding</strong>: Over time, your SIP
             investments can grow exponentially, as you earn returns not just on
             your principal amount but also on the returns earned previously.
           </li>
           <li>
-            <strong>Low Entry Point:</strong> You can start with as little as
+            <strong>Low Entry Point</strong>: You can start with as little as
             ₹500, making SIP affordable and accessible for everyone.
           </li>
           {/* <li>
-            <strong>Focus on Long-Term Goals:</strong> SIP is ideal for
+            <strong>Focus on Long-Term Goals</strong>: SIP is ideal for
             long-term investors who want to build wealth gradually.
           </li> */}
           <li>
-            <strong>Convenience and Automation:</strong> SIPs are automated,
+            <strong>Convenience and Automation</strong>: SIPs are automated,
             ensuring that you don't have to worry about timing the market and
             invest consistently without missing a payment.
           </li>
           <li>
-            <strong>Tax Saving Benefits (for ELSS SIPs):</strong> Certain SIPs,
+            <strong>Tax Saving Benefits (for ELSS SIPs)</strong>: Certain SIPs,
             like those in Equity Linked Savings Schemes (ELSS), may offer tax
             exemptions under Section 80C of the Income Tax Act, making them a
             great choice for tax saving. Investors can claim deductions up to
@@ -101,21 +101,21 @@ const data = [
         </h2>
         <ol className="list-decimal pl-6 space-y-2 ">
           <li>
-            <strong>Choose Your Investment Amount:</strong> You decide how much
+            <strong>Choose Your Investment Amount</strong>: You decide how much
             money you want to invest each month (for example, ₹500 or ₹1,000).
           </li>
           <li>
-            <strong>Select Your Mutual Fund:</strong> Based on your goals and
+            <strong>Select Your Mutual Fund</strong>: Based on your goals and
             risk tolerance, you choose the mutual fund or investment option that
             fits you best.
           </li>
           <li>
-            <strong>Automatic Deduction:</strong> Your selected amount will be
+            <strong>Automatic Deduction</strong>: Your selected amount will be
             deducted automatically from your bank account and invested in your
             chosen mutual fund (e.g., equity, debt) each month.
           </li>
           <li>
-            <strong>Grow Your Investment:</strong> Over time, your SIP will grow
+            <strong>Grow Your Investment</strong>: Over time, your SIP will grow
             as you earn returns, which will also earn more returns, thanks to
             compounding.
           </li>
@@ -129,37 +129,37 @@ const data = [
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Fixed SIP:</strong> In Fixed SIP, you invest a fixed amount
+            <strong>Fixed SIP</strong>: In Fixed SIP, you invest a fixed amount
             at regular intervals, such as ₹1,000 every month. This method helps
             you invest consistently, regardless of the market conditions.
           </li>
           <li>
-            <strong>Variable SIP:</strong> In Variable SIP, the investment
+            <strong>Variable SIP</strong>: In Variable SIP, the investment
             amount fluctuates based on the investor’s choice. You can increase
             or decrease the amount you invest each month depending on your
             financial situation or market conditions.
           </li>
           <li>
-            <strong>Step-Up SIP:</strong> In this type of SIP, you increase your
+            <strong>Step-Up SIP</strong>: In this type of SIP, you increase your
             investment amount periodically. For example, you may start with
             ₹1,000 per month and increase the amount by ₹500 every year. This
             allows you to gradually increase your investment as your income
             grows.
           </li>
           <li>
-            <strong>Flexible SIP:</strong> Flexible SIP allows you to increase
+            <strong>Flexible SIP</strong>: Flexible SIP allows you to increase
             or decrease your monthly investment according to your cash flow.
             This provides flexibility for investors to adjust their
             contributions during different phases of their life.
           </li>
           <li>
-            <strong>Perpetual SIP:</strong> This type of SIP does not have a
+            <strong>Perpetual SIP</strong>: This type of SIP does not have a
             fixed end date. It continues until you decide to stop it. This is
             ideal for long-term investors who want to keep investing without
             worrying about renewal.
           </li>
           <li>
-            <strong>Trigger SIP:</strong> In Trigger SIP, investments are made
+            <strong>Trigger SIP</strong>: In Trigger SIP, investments are made
             based on predefined triggers such as a sudden market dip, a
             favorable market condition, a specific index level, NAV (Net Asset
             Value), or dates. This allows investors to take advantage of market
@@ -183,7 +183,7 @@ const data = [
         <div className="space-y-4 ">
           <ul className="list-disc pl-6 space-y-2">
             <li>
-              <strong className="">Net Asset Value (NAV):</strong> NAV
+              <strong className="">Net Asset Value (NAV)</strong>: NAV
               represents the market value of one unit of the mutual fund, and it
               fluctuates daily based on the performance of the underlying
               assets. The lower the NAV at the time of your investment, the
@@ -191,7 +191,7 @@ const data = [
               growth contributes directly to your returns.
             </li>
             <li>
-              <strong className="">Compounding:</strong> The essence of SIP
+              <strong className="">Compounding</strong>: The essence of SIP
               returns is compounding. This means that the returns generated from
               your investment are reinvested and generate further returns. Over
               time, this effect leads to exponential growth in your investment
@@ -281,7 +281,7 @@ const data = [
 
         <div className="bg-blue-50 p-2 md:p-4 rounded-lg mt-6 shadow-md">
           <p className="">
-            <strong className="">Important Note:</strong> Please note that SIP
+            <strong className="">Important Note</strong>: Please note that SIP
             returns are not fixed. They depend on the mutual fund’s performance
             and the NAV at the time of each installment. The returns might vary
             depending on market conditions, which can cause the final amount to
@@ -297,18 +297,18 @@ const data = [
         </h2>
         <div className="space-y-2 mb-2">
           <p>
-            <strong>SIP:</strong> In SIP, you invest smaller amounts regularly,
+            <strong>SIP</strong>: In SIP, you invest smaller amounts regularly,
             reducing the risk of investing all at once during market highs. It
             helps in mitigating risks during market volatility by ensuring that
             investments are spread over time.
           </p>
           <p>
-            <strong>Lump Sum:</strong> This means investing a large amount all
+            <strong>Lump Sum</strong>: This means investing a large amount all
             at once, which exposes you to the risks of market fluctuations at
             that time.
           </p>
           <p>
-            <strong>SIP is better for:</strong> Beginners, long-term investors,
+            <strong>SIP is better for</strong>: Beginners, long-term investors,
             and those who prefer a consistent and disciplined investment
             approach.
           </p>
@@ -325,26 +325,26 @@ const data = [
         </h2>
         <ul className="list-disc pl-6 space-y-2 ">
           <li>
-            <strong>Affordability and Flexibility:</strong> You can start with
+            <strong>Affordability and Flexibility</strong>: You can start with
             as little as ₹500 per month and increase or decrease the amount as
             per your needs.
           </li>
           <li>
-            <strong>Lower Risk, Higher Returns:</strong> SIPs help lower market
+            <strong>Lower Risk, Higher Returns</strong>: SIPs help lower market
             risk by spreading the investment over time, leading to better
             returns in the long run.
           </li>
           <li>
-            <strong>Compounding Effect:</strong> The earlier you start, the more
+            <strong>Compounding Effect</strong>: The earlier you start, the more
             time your money has to grow through the power of compounding.
           </li>
           <li>
-            <strong>No Need to Time the Market:</strong> SIPs remove the need to
+            <strong>No Need to Time the Market</strong>: SIPs remove the need to
             predict market highs and lows. Instead, you benefit from consistent
             long-term growth.
           </li>
           <li>
-            <strong>Achieve Your Goals:</strong> SIPs can help you save for
+            <strong>Achieve Your Goals</strong>: SIPs can help you save for
             important goals like buying a home, retirement, or education.
           </li>
         </ul>
@@ -367,16 +367,16 @@ const data = [
         </h3>
         <ul class="list-disc pl-6 mb-4 space-y-2">
           <li>
-            <strong>Short-Term Capital Gains (STCG):</strong> If you sell equity
+            <strong>Short-Term Capital Gains (STCG)</strong>: If you sell equity
             mutual fund units within 1 year, the gains are taxed at 15%.{" "}
           </li>
           <li>
-            <strong>Long-Term Capital Gains (LTCG):</strong> If you hold equity
+            <strong>Long-Term Capital Gains (LTCG)</strong>: If you hold equity
             mutual funds for more than 1 year, gains over ₹1 lakh are taxed at
             10%, with no indexation benefits.
           </li>
           <li>
-            <strong>Securities Transaction Tax (STT):</strong> An STT of 0.1%
+            <strong>Securities Transaction Tax (STT)</strong>: An STT of 0.1%
             applies when selling equity mutual funds, in addition to the capital
             gains tax.
           </li>
@@ -387,12 +387,12 @@ const data = [
         </h3>
         <ul class="list-disc pl-6 mb-4 space-y-2">
           <li>
-            <strong>Short-Term Capital Gains (STCG):</strong> If you sell debt
+            <strong>Short-Term Capital Gains (STCG)</strong>: If you sell debt
             mutual fund units within 3 years, the gains are taxed at your income
             tax slab rate.
           </li>
           <li>
-            <strong>Long-Term Capital Gains (LTCG):</strong> If you hold debt
+            <strong>Long-Term Capital Gains (LTCG)</strong>: If you hold debt
             mutual funds for more than 3 years, the gains are taxed at 20% with
             indexation benefits to reduce taxable gains.
           </li>
@@ -449,24 +449,24 @@ const data = [
         </h3>
         <ul className="list-disc pl-6 space-y-2 ">
           <li>
-            <strong>Erosion of Purchasing Power:</strong> Inflation reduces the
+            <strong>Erosion of Purchasing Power</strong>: Inflation reduces the
             purchasing power of money over time. For instance, if your SIP
             generates a return of 8% annually, but inflation is 5%, your real
             return would only be 3%. This means the purchasing power of your
             corpus is growing slower than you might expect.
           </li>
           <li>
-            <strong>Real Returns During Inflation:</strong> If the returns from
+            <strong>Real Returns During Inflation</strong>: If the returns from
             your SIP are lower than the rate of inflation, the real
             (inflation-adjusted) return on your investment could be negative.
           </li>
           <li>
-            <strong>Increased Costs:</strong> Inflation increases the cost of
+            <strong>Increased Costs</strong>: Inflation increases the cost of
             living, making it more difficult to maintain the same SIP
             contribution.
           </li>
           <li>
-            <strong>Asset Performance:</strong> The performance of assets in
+            <strong>Asset Performance</strong>: The performance of assets in
             your SIP may also be affected. Some assets perform better in
             inflationary environments (e.g., equities), while others, like
             bonds, may underperform.
@@ -575,29 +575,29 @@ const data = [
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Start Early:</strong> The earlier you begin investing in an
+            <strong>Start Early</strong>: The earlier you begin investing in an
             SIP, the more you benefit from compounding. This is crucial for
             building wealth over time.
           </li>
           <li>
-            <strong>Stay Consistent:</strong> Stick to your SIP investment even
+            <strong>Stay Consistent</strong>: Stick to your SIP investment even
             if the market goes down. Consistency is key, and it allows you to
             take advantage of market volatility through rupee-cost averaging.
           </li>
           <li>
-            <strong>Be Patient:</strong> SIP is a long-term investment. Over
+            <strong>Be Patient</strong>: SIP is a long-term investment. Over
             time, your investment grows as you continue to contribute and
             benefit from compounding.
           </li>
           <li>
-            <strong>Review Regularly:</strong> Review your SIP portfolio
+            <strong>Review Regularly</strong>: Review your SIP portfolio
             periodically to ensure it still aligns with your goals, and adjust
             your strategy if necessary. You can evaluate your SIP against
             relevant benchmarks (like Nifty 50 for equity funds) to ensure it's
             meeting your growth expectations.
           </li>
           <li>
-            <strong>Diversify Your SIP Portfolio:</strong> By allocating funds
+            <strong>Diversify Your SIP Portfolio</strong>: By allocating funds
             to different asset classes, you reduce the risk of any single
             investment impacting your overall returns.
           </li>
@@ -611,39 +611,39 @@ const data = [
         </h2>
         <ul className="list-disc pl-6 space-y-2 ">
           <li>
-            <strong>Not Starting Early:</strong> Delaying your SIP means you
+            <strong>Not Starting Early</strong>: Delaying your SIP means you
             miss out on the benefits of compounding. Start as early as possible
             to maximize growth.
           </li>
           <li>
-            <strong>Switching SIPs Frequently:</strong> Frequently changing your
+            <strong>Switching SIPs Frequently</strong>: Frequently changing your
             SIP investment strategy can hurt your long-term returns. Stick to
             your plan unless there's a significant change in your financial
             goals.
           </li>
           <li>
-            <strong>Following Hype:</strong> Avoid investing based on trends or
+            <strong>Following Hype</strong>: Avoid investing based on trends or
             hearsay. Always align your investments with your financial goals and
             risk tolerance.
           </li>
           <li>
-            <strong>Ignoring Risk Tolerance:</strong> Ensure that your SIP
+            <strong>Ignoring Risk Tolerance</strong>: Ensure that your SIP
             portfolio matches your risk profile. Don’t invest in high-risk
             assets if you have a low tolerance for risk.
           </li>
           <li>
-            <strong>Underestimating Inflation:</strong> Failing to consider the
+            <strong>Underestimating Inflation</strong>: Failing to consider the
             impact of inflation on your SIP returns can affect your long-term
             wealth creation. Ensure your portfolio can outpace inflation.
           </li>
           <li>
-            <strong>Ignoring Your Investment Horizon:</strong> Choose funds that
+            <strong>Ignoring Your Investment Horizon</strong>: Choose funds that
             match your investment horizon. For example, if you're investing for
             a long-term goal (like retirement), equity funds might be more
             suitable than debt funds.
           </li>
           <li>
-            <strong>Overextending SIP Contributions:</strong> Avoid
+            <strong>Overextending SIP Contributions</strong>: Avoid
             overcommitting to SIP contributions without considering your
             current cash flow needs can backfire. It's important to balance SIP
             investments with other financial obligations.

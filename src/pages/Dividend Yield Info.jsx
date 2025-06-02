@@ -131,7 +131,7 @@ const DividendYieldInfo = () => {
 
         <div className="bg-blue-50 p-2 md:p-4 rounded-lg mt-4 shadow-md">
           <p>
-            <strong>Important Note:</strong> Regardless of TDS, all dividend
+            <strong>Important Note</strong>: Regardless of TDS, all dividend
             income must be reported in your ITR.
           </p>
         </div>
@@ -144,19 +144,19 @@ const DividendYieldInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Pro:</strong> Provides steady income even if stock prices
+            <strong>Pro</strong>: Provides steady income even if stock prices
             are flat or falling.
           </li>
           <li>
-            <strong>Pro:</strong> Signals mature, stable companies that generate
+            <strong>Pro</strong>: Signals mature, stable companies that generate
             consistent profits.
           </li>
           <li>
-            <strong>Con:</strong> Extremely high yields can be a red flag —
+            <strong>Con</strong>: Extremely high yields can be a red flag —
             possibly due to a dropping stock price or unsustainable dividends.
           </li>
           <li>
-            <strong>Con:</strong> Companies paying high dividends may have less
+            <strong>Con</strong>: Companies paying high dividends may have less
             capital to reinvest in growth.
           </li>
         </ul>

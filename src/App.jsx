@@ -42,6 +42,8 @@ import InflationandTaxesImpact from "./pages/blogs/Inflation and Taxes Impact In
 import SelfEmployedOrFreelancer from "./pages/blogs/Invest if You're Self-Employed or a Freelancer";
 import Random from "./pages/blogs/Random";
 import Random2 from "./pages/blogs/Random2";
+import StocksorMutualFunds from "./pages/blogs/Stocks or Mutual Funds";
+import SavingvsInvesting from "./pages/blogs/Saving and Investing difference";
 
 
 function App() {
@@ -83,6 +85,8 @@ function App() {
           <Route path="/blog/how-to-diversify-your-investment-portfolio" element={<DiversifyPortfolio />} />
           <Route path="/blog/how-do-inflation-and-taxes-impact-investments" element={<InflationandTaxesImpact />} />
           <Route path="/blog/how-to-invest-if-you-are-self-employed-or-a-freelancer" element={<SelfEmployedOrFreelancer />} />
+          <Route path="/blog/stocks-vs-mutual-funds" element={<StocksorMutualFunds />} />
+          <Route path="/blog/difference-between-saving-and-investing" element={<SavingvsInvesting />} />
 
           {/* Investment Options Route */}
           <Route path="sip-calculator" element={<SIPCalculator />} />

@@ -35,31 +35,31 @@ const RDInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-1">
           <li>
-            <strong>Easy to Start:</strong> Easy to start with no large initial
+            <strong>Easy to Start</strong>: Easy to start with no large initial
             investment required.
           </li>
           <li>
-            <strong>Safe and Risk-Free:</strong> Guaranteed returns, backed by
+            <strong>Safe and Risk-Free</strong>: Guaranteed returns, backed by
             the bank.
           </li>
           <li>
-            <strong>Disciplined Saving:</strong> Helps develop a disciplined
+            <strong>Disciplined Saving</strong>: Helps develop a disciplined
             saving habit with regular contributions.
           </li>
           <li>
-            <strong>Flexible Tenure:</strong> Choose the tenure and deposit
+            <strong>Flexible Tenure</strong>: Choose the tenure and deposit
             amount based on your financial goals.
           </li>
           <li>
-            <strong>Loan Facility:</strong> Some banks offer loans against the
+            <strong>Loan Facility</strong>: Some banks offer loans against the
             RD balance in case of emergency.
           </li>
           <li>
-            <strong>Premature Withdrawal:</strong> Allowed with some penalties
+            <strong>Premature Withdrawal</strong>: Allowed with some penalties
             and reduced interest rates.
           </li>
           <li>
-            <strong>Tax-Saving Opportunity:</strong> Certain RD schemes qualify
+            <strong>Tax-Saving Opportunity</strong>: Certain RD schemes qualify
             for tax benefits under Section 80C.
           </li>
         </ul>
@@ -71,15 +71,15 @@ const RDInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-1">
           <li>
-            <strong>Eligibility:</strong> Any individual (single or joint) can
+            <strong>Eligibility</strong>: Any individual (single or joint) can
             open an RD, either with or without a guardian for minors.
           </li>
           <li>
-            <strong>Documents Required:</strong> Basic KYC documents such as
+            <strong>Documents Required</strong>: Basic KYC documents such as
             Aadhar, passport, address proof, and photographs.
           </li>
           <li>
-            <strong>Online Opening:</strong> Most banks offer the option to open
+            <strong>Online Opening</strong>: Most banks offer the option to open
             RDs online through their websites or apps, making the process easy
             and convenient.
           </li>
@@ -195,7 +195,7 @@ const RDInfo = () => {
         </p>
         <div className="bg-blue-50 p-2 md:p-4 rounded-lg mt-6 shadow-md">
           <p>
-            <strong>Important Note:</strong> The interest rate on an RD varies
+            <strong>Important Note</strong>: The interest rate on an RD varies
             depending on the chosen tenure, with longer tenures generally
             offering higher interest rates. It's always advisable to check with
             your specific bank or financial institution for their exact RD
@@ -210,22 +210,22 @@ const RDInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-1">
           <li>
-            <strong>Taxability:</strong> The interest earned on RDs is taxable
+            <strong>Taxability</strong>: The interest earned on RDs is taxable
             under the Income Tax Act. TDS (Tax Deducted at Source) is deducted
             by the bank if the interest exceeds ₹40,000 in a financial year
             (₹50,000 for senior citizens).
           </li>
           <li>
-            <strong>Tax-saving RDs:</strong> These come with a 5-year lock-in
+            <strong>Tax-saving RDs</strong>: These come with a 5-year lock-in
             period and qualify for deductions under Section 80C of the Income
             Tax Act.
           </li>
           <li>
-            <strong>TDS (Tax Deducted at Source):</strong> TDS is deducted at
+            <strong>TDS (Tax Deducted at Source)</strong>: TDS is deducted at
             10% if the interest exceeds the threshold limit.
           </li>
           <li>
-            <strong>Form 15G/15H:</strong> You can submit these forms to avoid
+            <strong>Form 15G/15H</strong>: You can submit these forms to avoid
             TDS if your total income is below the tax threshold.
           </li>
         </ul>

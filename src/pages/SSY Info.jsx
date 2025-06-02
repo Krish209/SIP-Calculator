@@ -30,37 +30,37 @@ function SSYInfo() {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Eligibility:</strong> The account can be opened only for a
+            <strong>Eligibility</strong>: The account can be opened only for a
             girl child <strong>below the age of 10</strong>. Parents or legal
             guardians can open one account per girl child, with a maximum of two
             accounts for two girls (exception: more than two daughters in case
             of twin or triplet daughters).
           </li>
           <li>
-            <strong>Interest Rate:</strong> The interest rate is currently 8.0%
+            <strong>Interest Rate</strong>: The interest rate is currently 8.0%
             per annum, compounded annually (subject to quarterly revision by the
             government).
           </li>
           <li>
-            <strong>Tenure:</strong> The maturity period is 21 years from the
+            <strong>Tenure</strong>: The maturity period is 21 years from the
             date of opening the account or until the girl child turns 21,
             whichever is earlier.
           </li>
           <li>
-            <strong>Contribution Limit:</strong> Minimum deposit of ₹250 per
+            <strong>Contribution Limit</strong>: Minimum deposit of ₹250 per
             year and a maximum of ₹1.5 lakh per year.
           </li>
           <li>
-            <strong>Tax Benefits:</strong> Contributions qualify for tax
+            <strong>Tax Benefits</strong>: Contributions qualify for tax
             deductions under Section 80C, and the interest earned and maturity
             proceeds are tax-free.
           </li>
           <li>
-            <strong>Partial Withdrawals:</strong> Partial withdrawals are
+            <strong>Partial Withdrawals</strong>: Partial withdrawals are
             allowed from the 18th year for education or marriage purposes.
           </li>
           <li>
-            <strong>Premature Closure:</strong> The account can be closed
+            <strong>Premature Closure</strong>: The account can be closed
             prematurely in case of the girl’s death or in certain medical
             emergencies.
           </li>
@@ -95,24 +95,24 @@ function SSYInfo() {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>High-Interest Rates:</strong> It offers one of the highest
+            <strong>High-Interest Rates</strong>: It offers one of the highest
             interest rates among government-backed savings schemes.
           </li>
           <li>
-            <strong>Tax-Free Returns:</strong> Both interest and maturity amount
+            <strong>Tax-Free Returns</strong>: Both interest and maturity amount
             are completely tax-free, making it an attractive option.
           </li>
           <li>
-            <strong>Long-Term Security:</strong> SSY ensures that parents can
+            <strong>Long-Term Security</strong>: SSY ensures that parents can
             save for their daughter’s future education or marriage over a long
             term.
           </li>
           <li>
-            <strong>Low Minimum Deposit:</strong> The minimum deposit
+            <strong>Low Minimum Deposit</strong>: The minimum deposit
             requirement is very low, starting at just ₹250 annually.
           </li>
           <li>
-            <strong>Partial Withdrawals:</strong> Partial withdrawals for
+            <strong>Partial Withdrawals</strong>: Partial withdrawals for
             education or marriage can be made from the 18th year.
           </li>
         </ul>
@@ -124,19 +124,19 @@ function SSYInfo() {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Limited to Girls:</strong> This scheme is available only for
+            <strong>Limited to Girls</strong>: This scheme is available only for
             the girl child.
           </li>
           <li>
-            <strong>No Joint Accounts:</strong> The account cannot be opened
+            <strong>No Joint Accounts</strong>: The account cannot be opened
             jointly, which reduces flexibility.
           </li>
           <li>
-            <strong>Long Lock-In Period:</strong> The account has a lock-in
+            <strong>Long Lock-In Period</strong>: The account has a lock-in
             period of 21 years, which means you cannot access the funds easily.
           </li>
           <li>
-            <strong>No Loan Facilities:</strong> SSY does not allow loans or
+            <strong>No Loan Facilities</strong>: SSY does not allow loans or
             overdrafts against the account.
           </li>
         </ul>
@@ -148,15 +148,15 @@ function SSYInfo() {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Parents of Girl Children:</strong> If you have a daughter
+            <strong>Parents of Girl Children</strong>: If you have a daughter
             under the age of 10, this scheme is perfect for securing her future.
           </li>
           <li>
-            <strong>Conservative Investors:</strong> If you're looking for a
+            <strong>Conservative Investors</strong>: If you're looking for a
             safe, government-backed investment option, SSY is ideal.
           </li>
           <li>
-            <strong>Tax-Conscious Investors:</strong> If you are looking for a
+            <strong>Tax-Conscious Investors</strong>: If you are looking for a
             tax-saving option, SSY offers excellent tax benefits under Section
             80C.
           </li>

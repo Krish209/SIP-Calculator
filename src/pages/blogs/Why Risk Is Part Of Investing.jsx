@@ -153,7 +153,7 @@ const WhyRiskIsPartOfInvesting = () => {
           </h2>
           <div className="space-y-6">
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 1. Higher Returns Require Higher Risk
               </h3>
               <p className="mb-2">
@@ -165,7 +165,7 @@ const WhyRiskIsPartOfInvesting = () => {
               </p>
 
               <p className="mb-2">
-                <strong>Example:</strong> Consider Rahul, a 30-year-old who
+                <strong>Example</strong>: Consider Rahul, a 30-year-old who
                 decides to invest ₹10,00,000 in a diversified equity mutual
                 fund. Over 10 years, his portfolio grows at an average of 12%
                 annually. However, during this period, he sees years where
@@ -176,7 +176,7 @@ const WhyRiskIsPartOfInvesting = () => {
             </div>
 
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 2. The Economy is Unpredictable
               </h3>
               <p className="mb-2">
@@ -187,7 +187,7 @@ const WhyRiskIsPartOfInvesting = () => {
               </p>
 
               <p className="mb-2">
-                <strong>Example:</strong> During the COVID-19 pandemic, the
+                <strong>Example</strong>: During the COVID-19 pandemic, the
                 stock market initially plummeted. Many investors panicked and
                 sold their assets at a loss. Others stayed invested or even
                 bought more during the dip. A year later, markets rebounded, and
@@ -214,7 +214,7 @@ const WhyRiskIsPartOfInvesting = () => {
           </p>
           <div className="space-y-6">
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 1. Diversification
               </h3>
 
@@ -227,14 +227,14 @@ const WhyRiskIsPartOfInvesting = () => {
                 underperforms, others may perform well, balancing the outcome.
               </p>
               <p className="mb-2">
-                <strong>Example:</strong> An investor might allocate their
+                <strong>Example</strong>: An investor might allocate their
                 portfolio as follows:
               </p>
 
               <Table columns={columns2} data={data2} />
             </div>
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 2. Asset Allocation
               </h3>
 
@@ -254,7 +254,7 @@ const WhyRiskIsPartOfInvesting = () => {
               <Table columns={columns3} data={data3} />
 
               <p className="mb-2">
-                <strong>Example:</strong> A young investor with a high-risk
+                <strong>Example</strong>: A young investor with a high-risk
                 tolerance might have a portfolio with 80% equities and 20%
                 bonds, aiming for higher growth. Conversely, an investor nearing
                 retirement may prefer a 40% equities and 60% bonds allocation to
@@ -263,7 +263,7 @@ const WhyRiskIsPartOfInvesting = () => {
             </div>
 
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 3. Invest via SIPs (Rupee Cost Averaging)
               </h3>
 
@@ -272,7 +272,7 @@ const WhyRiskIsPartOfInvesting = () => {
                 market volatility and encourages disciplined investing.
               </p>
               <p className="mb-2">
-                <strong>Example:</strong> Vikram invests ₹5,000 per month via
+                <strong>Example</strong>: Vikram invests ₹5,000 per month via
                 SIP in a mutual fund. Over 15 years, he contributes ₹9,00,000 in
                 total. Thanks to rupee cost averaging and compounding, his
                 investment grows to over ₹20,00,000—despite market ups and
@@ -280,7 +280,7 @@ const WhyRiskIsPartOfInvesting = () => {
               </p>
             </div>
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 4. Emergency Fund
               </h3>
 
@@ -293,7 +293,7 @@ const WhyRiskIsPartOfInvesting = () => {
             </div>
 
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 5. Review and Rebalance Regularly
               </h3>
 
@@ -305,7 +305,7 @@ const WhyRiskIsPartOfInvesting = () => {
                 tolerance.
               </p>
               <p className="mb-2">
-                <strong>Example:</strong> If your original plan was 60% equity
+                <strong>Example</strong>: If your original plan was 60% equity
                 and 40% bonds, and equity has grown to 75%, rebalancing brings
                 it back to 60% by moving profits into bonds.
               </p>

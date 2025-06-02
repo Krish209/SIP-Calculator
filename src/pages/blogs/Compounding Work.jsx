@@ -243,7 +243,7 @@ const CompoundingWork = () => {
           </h2>
           <div className="space-y-6">
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 1. Time Is Your Best Friend
               </h3>
               <p className="mb-2">
@@ -255,7 +255,7 @@ const CompoundingWork = () => {
               </p>
             </div>
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 2. Works Best with Reinvestment
               </h3>
               <p className="mb-2">
@@ -266,7 +266,7 @@ const CompoundingWork = () => {
               </p>
             </div>
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 3. Compounding Reduces the Burden of Investment
               </h3>
               <p className="mb-2">

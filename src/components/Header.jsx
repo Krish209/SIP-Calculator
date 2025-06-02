@@ -90,7 +90,7 @@ function Header() {
                     ${
                       isActive
                         ? "group-hover:bg-indigo-50 group-hover:text-indigo-600"
-                        : "hover:text-blue-600 hover:bg-gray-100"
+                        : "group-hover:bg-indigo-50 group-hover:text-indigo-600"
                     }`
                   }
                 >

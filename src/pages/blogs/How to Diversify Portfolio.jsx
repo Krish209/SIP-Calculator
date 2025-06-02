@@ -170,7 +170,7 @@ const DiversifyPortfolio = () => {
           </p>
           <div className="space-y-6">
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 1. Invest Across Different Asset Classes
               </h3>
               <p className="mb-2">
@@ -187,7 +187,7 @@ const DiversifyPortfolio = () => {
               </p>
             </div>
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 2. Diversify Within Asset Classes
               </h3>
 
@@ -224,7 +224,7 @@ const DiversifyPortfolio = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 3. Geographic Diversification
               </h3>
               <p className="mb-2">
@@ -243,7 +243,7 @@ const DiversifyPortfolio = () => {
             </div>
 
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-4">
+              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
                 4. Rebalance Regularly
               </h3>
               <p className="mb-2">

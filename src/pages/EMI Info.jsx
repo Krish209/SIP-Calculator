@@ -25,16 +25,16 @@ function EMIInfo() {
         </h2>
         <ul className="list-disc pl-6 space-y-1">
           <li>
-            <strong>Principal Amount:</strong> The actual loan amount borrowed.
+            <strong>Principal Amount</strong>: The actual loan amount borrowed.
             The total loan amount affects the EMI, as the higher the loan, the
             higher the EMI.
           </li>
           <li>
-            <strong>Interest:</strong> The amount charged by the lender on the
+            <strong>Interest</strong>: The amount charged by the lender on the
             principal loan amount. A higher interest rate increases the EMI.
           </li>
           <li>
-            <strong>Loan Tenure:</strong> The duration for which the loan is
+            <strong>Loan Tenure</strong>: The duration for which the loan is
             borrowed, typically in months. The shorter the tenure, the higher
             the EMI, but you’ll pay less interest overall.
           </li>
@@ -90,12 +90,12 @@ function EMIInfo() {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Reducing Balance Method:</strong> The EMI is calculated based on
+            <strong>Reducing Balance Method</strong>: The EMI is calculated based on
             the outstanding loan balance, which reducing as the loan principal is
             repaid.
           </li>
           <li>
-            <strong>Flat Rate Method:</strong> EMI is calculated on the entire
+            <strong>Flat Rate Method</strong>: EMI is calculated on the entire
             principal amount throughout the loan tenure. This leads to higher
             EMIs compared to the reducing balance method.
           </li>
@@ -114,39 +114,39 @@ function EMIInfo() {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Home Loans:</strong> Used to purchase property or refinance
+            <strong>Home Loans</strong>: Used to purchase property or refinance
             existing mortgages. Home loans usually have long tenures (up to 30
             years) and relatively low-interest rates.
           </li>
           <li>
-            <strong>Personal Loans:</strong> Typically unsecured loans used for
+            <strong>Personal Loans</strong>: Typically unsecured loans used for
             personal expenses, like medical bills or weddings. They come with
             higher interest rates but offer flexibility in usage.
           </li>
           <li>
-            <strong>Auto Loans:</strong> Used for purchasing vehicles. Auto
+            <strong>Auto Loans</strong>: Used for purchasing vehicles. Auto
             loans typically have shorter repayment tenures, and the vehicle
             itself often serves as collateral for the loan.
           </li>
           <li>
-            <strong>Education Loans:</strong> Specifically for financing
+            <strong>Education Loans</strong>: Specifically for financing
             education, often with a grace period before the EMI starts. Interest
             rates are relatively low, and repayment can be extended to match
             career or post-graduation timelines.
           </li>
           <li>
-            <strong>Business Loans:</strong> For small businesses or
+            <strong>Business Loans</strong>: For small businesses or
             entrepreneurs to meet business-related expenses. These loans may
             have higher interest rates, but EMIs provide a structured repayment
             plan.
           </li>
           <li>
-            <strong>Gold Loans:</strong> Secured loans where gold is used as
+            <strong>Gold Loans</strong>: Secured loans where gold is used as
             collateral. These loans usually come with lower interest rates but
             are typically short-term.
           </li>
           <li>
-            <strong>Credit Card EMIs:</strong> Many credit card providers allow
+            <strong>Credit Card EMIs</strong>: Many credit card providers allow
             users to convert their outstanding balances into EMIs, which is
             particularly helpful for high-value purchases.
           </li>
@@ -265,22 +265,22 @@ function EMIInfo() {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Easy Financial Management:</strong> EMI breaks down large
+            <strong>Easy Financial Management</strong>: EMI breaks down large
             payments into smaller amounts, making it easier to manage your
             monthly budget without straining your finances.
           </li>
           <li>
-            <strong>Better Cash Flow Planning:</strong> With fixed monthly
+            <strong>Better Cash Flow Planning</strong>: With fixed monthly
             payments, you can plan your finances better and avoid surprises at
             the end of the month.
           </li>
           <li>
-            <strong>Improvement in Credit Score:</strong> Regular and timely EMI
+            <strong>Improvement in Credit Score</strong>: Regular and timely EMI
             payments can help improve your credit score, making you eligible for
             better loan offers in the future.
           </li>
           <li>
-            <strong>Access to Larger Loans:</strong> EMI makes it possible to
+            <strong>Access to Larger Loans</strong>: EMI makes it possible to
             access larger loans, such as home or car loans, which might
             otherwise be unaffordable if you had to pay upfront.
           </li>
@@ -298,22 +298,22 @@ function EMIInfo() {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Higher Total Loan Cost:</strong> While EMI makes monthly
+            <strong>Higher Total Loan Cost</strong>: While EMI makes monthly
             payments more affordable, the interest charged on the loan can
             significantly increase the total cost of the loan over time.
           </li>
           <li>
-            <strong>Penalties for Missed Payments:</strong> If you miss an EMI
+            <strong>Penalties for Missed Payments</strong>: If you miss an EMI
             payment, you may incur late fees or penalties. Continued missed
             payments can damage your credit score and lead to default.
           </li>
           <li>
-            <strong>Multiple EMIs Can Be Overwhelming:</strong> If you have
+            <strong>Multiple EMIs Can Be Overwhelming</strong>: If you have
             multiple loans with separate EMIs, managing all the payments and due
             dates can become overwhelming and lead to financial stress.
           </li>
           <li>
-            <strong>Early Repayment Fees:</strong> Some lenders charge
+            <strong>Early Repayment Fees</strong>: Some lenders charge
             additional fees if you wish to pay off your loan early, which can
             reduce the financial benefit of clearing the debt faster.
           </li>

@@ -114,21 +114,21 @@ const CompoundingInterestInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Exponential Growth:</strong> Compound interest helps your
+            <strong>Exponential Growth</strong>: Compound interest helps your
             money grow at a faster rate over time, especially with frequent
             compounding.
           </li>
           <li>
-            <strong>Maximizes Returns:</strong> The more often interest is
+            <strong>Maximizes Returns</strong>: The more often interest is
             compounded (monthly or daily), the higher your returns will be.
           </li>
           <li>
-            <strong>Long-Term Gains:</strong> Compound interest benefits those
+            <strong>Long-Term Gains</strong>: Compound interest benefits those
             who start saving or investing early, as the gains increase with
             time.
           </li>
           <li>
-            <strong>Time is on Your Side:</strong> One of the most important
+            <strong>Time is on Your Side</strong>: One of the most important
             factors in benefiting from compound interest is time. The earlier
             you start investing, the greater the growth you’ll see over time.
             This is why starting a retirement fund early can make a significant
@@ -147,28 +147,28 @@ const CompoundingInterestInfo = () => {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Annually:</strong> Interest is compounded once per year.
+            <strong>Annually</strong>: Interest is compounded once per year.
           </li>
           <li>
-            <strong>Semi-Annually:</strong> Interest is compounded twice per
+            <strong>Semi-Annually</strong>: Interest is compounded twice per
             year.
           </li>
           <li>
-            <strong>Quarterly:</strong> Interest is compounded four times per
+            <strong>Quarterly</strong>: Interest is compounded four times per
             year.
           </li>
           <li>
-            <strong>Monthly:</strong> Interest is compounded twelve times per
+            <strong>Monthly</strong>: Interest is compounded twelve times per
             year.
           </li>
           <li>
-            <strong>Daily:</strong> Interest is compounded every day.
+            <strong>Daily</strong>: Interest is compounded every day.
           </li>
         </ul>
 
         <div className="bg-blue-50 p-2 md:p-4 rounded-lg mt-4 shadow-md">
           <p>
-            <strong>Important Note:</strong> The more frequently the interest is
+            <strong>Important Note</strong>: The more frequently the interest is
             compounded, the more you will earn.
           </p>
         </div>

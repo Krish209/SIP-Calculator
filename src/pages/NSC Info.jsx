@@ -28,40 +28,40 @@ const NSCInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Government-Backed:</strong> Investment scheme offering
+            <strong>Government-Backed</strong>: Investment scheme offering
             low-risk returns, backed by the Government of India.
           </li>
           <li>
-            <strong>Fixed Interest Rate:</strong> Determined by the Government
+            <strong>Fixed Interest Rate</strong>: Determined by the Government
             of India, typically revised quarterly. (Currently around 7.7% p.a.)
           </li>
           <li>
-            <strong>Tax Benefits:</strong> Eligible for tax benefits under{" "}
+            <strong>Tax Benefits</strong>: Eligible for tax benefits under{" "}
             <strong>Section 80C</strong> of the Income Tax Act (up to ₹1.5 lakh
             per financial year).
           </li>
           <li>
-            <strong>Eligibility:</strong> Open only to Indian residents. NRIs
+            <strong>Eligibility</strong>: Open only to Indian residents. NRIs
             are not eligible.
           </li>
           <li>
-            <strong>Lock-in Period:</strong> A fixed lock-in period of 5 years
+            <strong>Lock-in Period</strong>: A fixed lock-in period of 5 years
             with interest compounded annually.
           </li>
           <li>
-            <strong>Investment Amount:</strong> Minimum of ₹100, with no maximum
+            <strong>Investment Amount</strong>: Minimum of ₹100, with no maximum
             limit.
           </li>
           <li>
-            <strong>Interest Payment:</strong> Interest is paid only at
+            <strong>Interest Payment</strong>: Interest is paid only at
             maturity, but is compounded annually.
           </li>
           <li>
-            <strong>Transferability:</strong> Can be transferred from one person
+            <strong>Transferability</strong>: Can be transferred from one person
             to another under specific conditions.
           </li>
           <li>
-            <strong>Premature Withdrawal:</strong> Not allowed except in cases
+            <strong>Premature Withdrawal</strong>: Not allowed except in cases
             like the death of the investor.
           </li>
         </ul>
@@ -107,22 +107,22 @@ const NSCInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-1">
           <li>
-            <strong>Section 80C Deduction:</strong> The principal amount
+            <strong>Section 80C Deduction</strong>: The principal amount
             invested in NSC is eligible for tax deduction under Section 80C,
             allowing you to save up to ₹1.5 lakh annually.
           </li>
           <li>
-            <strong>Taxable Interest:</strong> While the principal investment
+            <strong>Taxable Interest</strong>: While the principal investment
             qualifies for tax deduction, the interest earned on NSC is taxable
             under "Income from Other Sources".
           </li>
           <li>
-            <strong>No TDS (Tax Deducted at Source):</strong> NSC does not
+            <strong>No TDS (Tax Deducted at Source)</strong>: NSC does not
             deduct TDS, but the interest is taxable, and the investor must
             declare it while filing tax returns.
           </li>
           <li>
-            <strong>Interest Reinvestment Benefit:</strong> The interest added
+            <strong>Interest Reinvestment Benefit</strong>: The interest added
             to the principal amount is eligible for tax deduction under Section
             80C, making it a valuable option for tax planning.
           </li>
@@ -135,7 +135,7 @@ const NSCInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-1">
           <li>
-            <strong>NSC VIII Issue:</strong> This is the standard 5-year NSC,
+            <strong>NSC VIII Issue</strong>: This is the standard 5-year NSC,
             which provides interest that is compounded annually and paid only at
             maturity.
           </li>
@@ -169,23 +169,23 @@ const NSCInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-1">
           <li>
-            <strong>Government-Backed:</strong> The investment is backed by the
+            <strong>Government-Backed</strong>: The investment is backed by the
             Government of India, making it one of the safest options.
           </li>
           <li>
-            <strong>Tax Benefits:</strong> Investment in NSC qualifies for tax
+            <strong>Tax Benefits</strong>: Investment in NSC qualifies for tax
             deductions under Section 80C.
           </li>
           <li>
-            <strong>Fixed Returns:</strong> NSC offers fixed returns, providing
+            <strong>Fixed Returns</strong>: NSC offers fixed returns, providing
             a predictable income over the investment period.
           </li>
           <li>
-            <strong>Compounded Interest:</strong> The interest is compounded
+            <strong>Compounded Interest</strong>: The interest is compounded
             annually, which maximizes returns.
           </li>
           <li>
-            <strong>Affordable:</strong> Start investing with just ₹100, making
+            <strong>Affordable</strong>: Start investing with just ₹100, making
             it accessible for all income groups.
           </li>
         </ul>
@@ -197,15 +197,15 @@ const NSCInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-1">
           <li>
-            <strong>Taxable Interest:</strong> The interest earned is taxable,
+            <strong>Taxable Interest</strong>: The interest earned is taxable,
             which can reduce the overall returns depending on your tax bracket.
           </li>
           <li>
-            <strong>Liquidity:</strong> NSC has a lock-in period of 5 years, and
+            <strong>Liquidity</strong>: NSC has a lock-in period of 5 years, and
             early withdrawal is not allowed except in cases of death.
           </li>
           <li>
-            <strong>Interest Paid at Maturity:</strong> You will not receive
+            <strong>Interest Paid at Maturity</strong>: You will not receive
             periodic interest payments; it’s only paid out at maturity.
           </li>
         </ul>

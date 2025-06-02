@@ -52,15 +52,15 @@ const GSTInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>CGST (Central GST):</strong> Levied by the central
+            <strong>CGST (Central GST)</strong>: Levied by the central
             government for intra-state transactions.
           </li>
           <li>
-            <strong>SGST (State GST):</strong> Levied by the state government
+            <strong>SGST (State GST)</strong>: Levied by the state government
             for intra-state transactions.
           </li>
           <li>
-            <strong>IGST (Integrated GST):</strong> Levied by the central
+            <strong>IGST (Integrated GST)</strong>: Levied by the central
             government for inter-state transactions.
           </li>
         </ul>
@@ -123,21 +123,21 @@ const GSTInfo = () => {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>0%:</strong> Essential goods like unprocessed food.
+            <strong>0%</strong>: Essential goods like unprocessed food.
           </li>
           <li>
-            <strong>5%:</strong> Goods of mass consumption such as packaged
+            <strong>5%</strong>: Goods of mass consumption such as packaged
             foods, healthcare items.
           </li>
           <li>
-            <strong>12%:</strong> Goods such as computers and processed food.
+            <strong>12%</strong>: Goods such as computers and processed food.
           </li>
           <li>
-            <strong>18%:</strong> Common goods like cleaning products,
+            <strong>18%</strong>: Common goods like cleaning products,
             electrical items.
           </li>
           <li>
-            <strong>28%:</strong> Luxury goods like high-end vehicles, demerit
+            <strong>28%</strong>: Luxury goods like high-end vehicles, demerit
             goods like aerated drinks.
           </li>
         </ul>
@@ -149,23 +149,23 @@ const GSTInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Eliminates Cascading Tax Effect:</strong> GST allows Input
+            <strong>Eliminates Cascading Tax Effect</strong>: GST allows Input
             Tax Credit (ITC), reducing the tax burden.
           </li>
           <li>
-            <strong>Simplified Tax Structure:</strong> GST consolidates multiple
+            <strong>Simplified Tax Structure</strong>: GST consolidates multiple
             taxes, making compliance easier.
           </li>
           <li>
-            <strong>Boosts the Economy:</strong> By making goods and services
+            <strong>Boosts the Economy</strong>: By making goods and services
             cheaper and more competitive.
           </li>
           <li>
-            <strong>Ease of Doing Business:</strong> Businesses only need to
+            <strong>Ease of Doing Business</strong>: Businesses only need to
             deal with a single tax, improving efficiency.
           </li>
           <li>
-            <strong>Standardized Tax Rates:</strong> The same rates are applied
+            <strong>Standardized Tax Rates</strong>: The same rates are applied
             across the country, encouraging interstate trade.
           </li>
         </ul>
@@ -202,11 +202,11 @@ const GSTInfo = () => {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Service Providers:</strong> Must register if turnover
+            <strong>Service Providers</strong>: Must register if turnover
             exceeds ₹20 lakhs.
           </li>
           <li>
-            <strong>Goods Suppliers:</strong> Must register if turnover exceeds
+            <strong>Goods Suppliers</strong>: Must register if turnover exceeds
             ₹40 lakhs (for most states).
           </li>
           <li>
@@ -225,13 +225,13 @@ const GSTInfo = () => {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>GSTR-1:</strong> Outward supply (sales) return.
+            <strong>GSTR-1</strong>: Outward supply (sales) return.
           </li>
           <li>
-            <strong>GSTR-3B:</strong> Summary return for tax liabilities.
+            <strong>GSTR-3B</strong>: Summary return for tax liabilities.
           </li>
           <li>
-            <strong>GSTR-9:</strong> Annual return summarizing all monthly
+            <strong>GSTR-9</strong>: Annual return summarizing all monthly
             returns.
           </li>
         </ul>
@@ -243,19 +243,19 @@ const GSTInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Initial Implementation Issues:</strong> The switch to GST
+            <strong>Initial Implementation Issues</strong>: The switch to GST
             created confusion and required adjustments.
           </li>
           <li>
-            <strong>Compliance Burden:</strong> Small businesses may struggle
+            <strong>Compliance Burden</strong>: Small businesses may struggle
             with detailed documentation and reporting.
           </li>
           <li>
-            <strong>Technological Infrastructure:</strong> Issues with the GSTN
+            <strong>Technological Infrastructure</strong>: Issues with the GSTN
             portal have caused delays and problems with online filings.
           </li>
           <li>
-            <strong>Rate Structure Confusion:</strong> The multiple GST rates
+            <strong>Rate Structure Confusion</strong>: The multiple GST rates
             can confuse businesses when categorizing products and services.
           </li>
         </ul>
@@ -267,12 +267,12 @@ const GSTInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>GST on E-commerce Platforms:</strong> E-commerce platforms
+            <strong>GST on E-commerce Platforms</strong>: E-commerce platforms
             must comply with GST regulations and collect tax at the point of
             sale.
           </li>
           <li>
-            <strong>TCS (Tax Collected at Source):</strong> E-commerce platforms
+            <strong>TCS (Tax Collected at Source)</strong>: E-commerce platforms
             are required to collect GST on behalf of sellers for transactions.
           </li>
         </ul>

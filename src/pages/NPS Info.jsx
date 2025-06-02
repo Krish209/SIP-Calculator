@@ -30,25 +30,25 @@ const NPSInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-1">
           <li>
-            <strong>Government-Backed Scheme:</strong> Regulated by the Pension
+            <strong>Government-Backed Scheme</strong>: Regulated by the Pension
             Fund Regulatory and Development Authority (PFRDA).
           </li>
           <li>
-            <strong>Eligibility:</strong> Open to all Indian citizens (resident
+            <strong>Eligibility</strong>: Open to all Indian citizens (resident
             or non-resident) aged 18 to 60 years. Non-Resident Indians (NRIs)
             can also participate, subject to additional documentation
             requirements.
           </li>
           <li>
-            <strong>Flexible Contributions:</strong> Investors can contribute
+            <strong>Flexible Contributions</strong>: Investors can contribute
             monthly, quarterly, or annually.
           </li>
           <li>
-            <strong>Portability:</strong> NPS account is portable across jobs
+            <strong>Portability</strong>: NPS account is portable across jobs
             and locations, even between the public and private sectors.
           </li>
           <li>
-            <strong>Low Cost :</strong> Among the lowest fund management charges
+            <strong>Low Cost </strong>: Among the lowest fund management charges
             globally (~0.01% to 0.09% per annum).
           </li>
         </ul>
@@ -158,13 +158,13 @@ const NPSInfo = () => {
 
         <ul className="list-disc pl-6 space-y-2 mb-2">
           <li>
-            <strong>Tier 1 Account:</strong> This is the primary account used
+            <strong>Tier 1 Account</strong>: This is the primary account used
             for retirement savings. The contributions made in this account are
             subject to withdrawal only upon retirement or in special cases such
             as the death of the subscriber (account holder).
           </li>
           <li>
-            <strong>Tier 2 Account:</strong> This is a voluntary savings account
+            <strong>Tier 2 Account</strong>: This is a voluntary savings account
             that offers more flexibility in terms of withdrawals. It is not
             mandatory and can be opened alongside Tier 1.
           </li>
@@ -190,13 +190,13 @@ const NPSInfo = () => {
 
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Minimum Contribution:</strong> In Tier 1, it costs ₹500 for
+            <strong>Minimum Contribution</strong>: In Tier 1, it costs ₹500 for
             opening, and a minimum of ₹1,000 annually thereafter. For Tier 2,
             there is no minimum contribution for opening, but regular deposits
             can be made.
           </li>
           <li>
-            <strong>Voluntary Contributions:</strong> NPS allows flexible
+            <strong>Voluntary Contributions</strong>: NPS allows flexible
             contributions. These can be made as lump sums or on a regular basis
             depending on the subscriber’s financial situation.
           </li>
@@ -204,7 +204,7 @@ const NPSInfo = () => {
 
         <div className="bg-blue-50 p-2 md:p-4 rounded-lg mt-4 shadow-md">
           <p>
-            <strong>Important Note:</strong> If the minimum annual contribution
+            <strong>Important Note</strong>: If the minimum annual contribution
             is not made, the account will be frozen. In order to unfreeze the
             account, the customer has to pay the total of minimum contributions
             for the period of freeze, the minimum contribution for the year in
@@ -225,19 +225,19 @@ const NPSInfo = () => {
 
         <ul className="list-disc pl-6 space-y-2 mb-2">
           <li>
-            <strong>Equity (E):</strong> Investment in stocks, with a maximum
+            <strong>Equity (E)</strong>: Investment in stocks, with a maximum
             allocation of 50% of the total corpus.
           </li>
           <li>
-            <strong>Corporate Bonds (C):</strong> Investment in corporate debt
+            <strong>Corporate Bonds (C)</strong>: Investment in corporate debt
             instruments.
           </li>
           <li>
-            <strong>Government Securities (G):</strong> Investment in government
+            <strong>Government Securities (G)</strong>: Investment in government
             bonds.
           </li>
           <li>
-            <strong>Alternative Investment Funds (AIF):</strong> Investment in
+            <strong>Alternative Investment Funds (AIF)</strong>: Investment in
             alternative assets.
           </li>
         </ul>
@@ -245,11 +245,11 @@ const NPSInfo = () => {
         <p className="mb-2">Subscribers can choose between:</p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Active Choice:</strong> The subscriber decides the
+            <strong>Active Choice</strong>: The subscriber decides the
             proportion of their contribution to be invested in each asset class.
           </li>
           <li>
-            <strong>Auto Choice:</strong> The funds are automatically allocated
+            <strong>Auto Choice</strong>: The funds are automatically allocated
             based on the subscriber's age.
           </li>
         </ul>
@@ -264,22 +264,22 @@ const NPSInfo = () => {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Tax Deduction under Section 80C:</strong> Contributions are
+            <strong>Tax Deduction under Section 80C</strong>: Contributions are
             eligible for tax deduction of up to ₹1.5 lakh per financial year
             (including other eligible deductions).
           </li>
           <li>
-            <strong>Additional Deduction under Section 80CCD(1B):</strong> An
+            <strong>Additional Deduction under Section 80CCD(1B)</strong>: An
             additional tax benefit of up to ₹50,000 is available over and above
             the ₹1.5 lakh limit under Section 80C.
           </li>
           <li>
-            <strong>Tax Benefits for Employers (Section 80CCD(2)):</strong>{" "}
+            <strong>Tax Benefits for Employers (Section 80CCD(2))</strong>:{" "}
             Employers who contribute on behalf of their employees can claim tax
             deductions.
           </li>
           <li>
-            <strong>Tax on Withdrawals:</strong> Up to 60% of the NPS corpus
+            <strong>Tax on Withdrawals</strong>: Up to 60% of the NPS corpus
             withdrawn at retirement is tax-free. The remaining 40% must be used
             to purchase an annuity, and the annuity income is taxable as per the
             subscriber’s income tax slab.
@@ -297,27 +297,27 @@ const NPSInfo = () => {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Normal Exit:</strong> At the age of 60, a subscriber must
+            <strong>Normal Exit</strong>: At the age of 60, a subscriber must
             use at least 40% of their NPS corpus to purchase an annuity from an
             Annuity Service Provider (ASP) that will provide a monthly pension.
             The remaining 60% of their NPS corpus can be withdrawn as a tax-free
             lump sum.
           </li>
           <li>
-            <strong>Premature Exit:</strong> If a subscriber exits before 60, at
+            <strong>Premature Exit</strong>: If a subscriber exits before 60, at
             least 80% of the accumulated pension corpus must be used to purchase
             an annuity, and the rest can be withdrawn as a lump sum. The
             subscriber must have contributed for{" "}
             <strong>at least 10 years</strong>.
           </li>
           <li>
-            <strong>Deferment:</strong> If a subscriber prefers to continue
+            <strong>Deferment</strong>: If a subscriber prefers to continue
             investing in NPS after 60, you can defer your exit and withdrawal
             until the age of 75. You can choose to defer the lump sum
             withdrawal, the annuity purchase, or both.
           </li>
           <li>
-            <strong>Death of Subscriber:</strong> In case of death, the entire
+            <strong>Death of Subscriber</strong>: In case of death, the entire
             accumulated corpus (100%) is paid to the nominee and there would not
             be any purchase of annuity/monthly pension.
           </li>
@@ -330,22 +330,22 @@ const NPSInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Low-Cost Management:</strong> NPS has one of the lowest fund
+            <strong>Low-Cost Management</strong>: NPS has one of the lowest fund
             management costs in the industry, ensuring higher returns for
             investors.
           </li>
           <li>
-            <strong>Transparency:</strong> Governed by the Pension Fund
+            <strong>Transparency</strong>: Governed by the Pension Fund
             Regulatory and Development Authority (PFRDA), ensuring transparency
             in operations.
           </li>
           <li>
-            <strong>Flexibility:</strong> NPS allows individuals to choose their
+            <strong>Flexibility</strong>: NPS allows individuals to choose their
             investment mix, giving them more control over their retirement
             savings.
           </li>
           <li>
-            <strong>Diversification:</strong> The scheme offers exposure to a
+            <strong>Diversification</strong>: The scheme offers exposure to a
             wide range of asset classes, such as equity, bonds, and government
             securities, ensuring a balanced investment portfolio.
           </li>
@@ -358,16 +358,16 @@ const NPSInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Tax on Annuity:</strong> The annuity portion of the NPS
+            <strong>Tax on Annuity</strong>: The annuity portion of the NPS
             withdrawal is taxable based on the subscriber’s income tax bracket.
           </li>
           <li>
-            <strong>Limited Withdrawal Options:</strong> NPS has restrictions on
+            <strong>Limited Withdrawal Options</strong>: NPS has restrictions on
             when and how much can be withdrawn before retirement, which may
             limit flexibility for some investors.
           </li>
           <li>
-            <strong>Market Risk:</strong> Since a part of the investment is
+            <strong>Market Risk</strong>: Since a part of the investment is
             allocated to equities, there is a market risk that could affect
             returns, especially in volatile periods.
           </li>

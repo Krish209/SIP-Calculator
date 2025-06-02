@@ -37,20 +37,20 @@ const InflationInfo = () => {
 
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Demand-Pull Inflation:</strong> This occurs when the demand
+            <strong>Demand-Pull Inflation</strong>: This occurs when the demand
             for goods and services exceeds the economy’s productive capacity. It
             typically happens during periods of economic growth, when there’s an
             increase in consumer spending, government expenditure, or business
             investments.
           </li>
           <li>
-            <strong>Cost-Push Inflation:</strong> This arises when the cost of
+            <strong>Cost-Push Inflation</strong>: This arises when the cost of
             production increases, leading to higher prices for goods and
             services. This could be due to increased raw materials, wages, or
             energy costs.
           </li>
           <li>
-            <strong>Built-In Inflation (Wage-Price Spiral):</strong> This
+            <strong>Built-In Inflation (Wage-Price Spiral)</strong>: This
             happens when workers demand higher wages to keep up with rising
             living costs, and businesses increase prices to cover the higher
             wage costs.
@@ -75,26 +75,26 @@ const InflationInfo = () => {
 
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Creeping Inflation:</strong> This type of inflation occurs
+            <strong>Creeping Inflation</strong>: This type of inflation occurs
             at a rate of 1-3% annually and is considered mild, usually not
             disruptive.
           </li>
           <li>
-            <strong>Walking Inflation:</strong> When inflation is between 3% and
+            <strong>Walking Inflation</strong>: When inflation is between 3% and
             10% annually, it starts to erode purchasing power more noticeably.
           </li>
           <li>
-            <strong>Galloping Inflation:</strong> Galloping inflation refers to
+            <strong>Galloping Inflation</strong>: Galloping inflation refers to
             inflation rates exceeding 10%, which can have significant impacts on
             the economy.
           </li>
           <li>
-            <strong>Hyperinflation:</strong> This extreme form of inflation
+            <strong>Hyperinflation</strong>: This extreme form of inflation
             occurs when prices increase uncontrollably, often due to economic
             collapse or excessive money printing by the government.
           </li>
           <li>
-            <strong>Stagflation:</strong> This is a rare but dangerous scenario
+            <strong>Stagflation</strong>: This is a rare but dangerous scenario
             where high inflation coincides with stagnant economic growth and
             high unemployment.
           </li>
@@ -111,17 +111,17 @@ const InflationInfo = () => {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Consumer Price Index (CPI):</strong> The CPI tracks the
+            <strong>Consumer Price Index (CPI)</strong>: The CPI tracks the
             average change in prices paid by consumers for a predefined basket
             of goods and services.
           </li>
           <li>
-            <strong>Producer Price Index (PPI):</strong> The PPI tracks the
+            <strong>Producer Price Index (PPI)</strong>: The PPI tracks the
             average change in prices received by domestic producers for their
             output.
           </li>
           <li>
-            <strong>Core Inflation:</strong> This excludes volatile items like
+            <strong>Core Inflation</strong>: This excludes volatile items like
             food and energy, giving a clearer picture of long-term inflation
             trends.
           </li>
@@ -137,31 +137,31 @@ const InflationInfo = () => {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Erosion of Purchasing Power:</strong> As inflation rises,
+            <strong>Erosion of Purchasing Power</strong>: As inflation rises,
             the value of money decreases, meaning people can buy less with the
             same amount of money.
           </li>
           <li>
-            <strong>Impact on Savings:</strong> If inflation outpaces interest
+            <strong>Impact on Savings</strong>: If inflation outpaces interest
             rates, the real value of savings decreases over time.
           </li>
           <li>
-            <strong>Interest Rates and Borrowing:</strong> Higher inflation
+            <strong>Interest Rates and Borrowing</strong>: Higher inflation
             often leads central banks to raise interest rates, making borrowing
             more expensive.
           </li>
           <li>
-            <strong>Wage-Price Spiral:</strong> A cycle in which higher wages
+            <strong>Wage-Price Spiral</strong>: A cycle in which higher wages
             lead to higher prices, which then lead to more demands for higher
             wages.
           </li>
           <li>
-            <strong>Distorted Price Signals:</strong> Inflation can make it
+            <strong>Distorted Price Signals</strong>: Inflation can make it
             difficult for businesses and consumers to make accurate decisions,
             as prices are constantly rising.
           </li>
           <li>
-            <strong>Impact on International Trade:</strong> Countries with high
+            <strong>Impact on International Trade</strong>: Countries with high
             inflation rates may face reduced competitiveness in international
             markets, as their goods and services become more expensive relative
             to those of other countries.
@@ -178,20 +178,20 @@ const InflationInfo = () => {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Monetary Policy:</strong> Central banks use interest rate
+            <strong>Monetary Policy</strong>: Central banks use interest rate
             adjustments and other tools to influence inflation.
           </li>
           <li>
-            <strong>Fiscal Policy:</strong> Governments can influence inflation
+            <strong>Fiscal Policy</strong>: Governments can influence inflation
             through public spending and taxation policies.
           </li>
           <li>
-            <strong>Supply-Side Policies:</strong> These policies aim to
+            <strong>Supply-Side Policies</strong>: These policies aim to
             increase the supply of goods and services to reduce inflationary
             pressures.
           </li>
           <li>
-            <strong>Exchange Rate Policy:</strong> Countries with high inflation
+            <strong>Exchange Rate Policy</strong>: Countries with high inflation
             may adjust their currency’s exchange rate to make exports cheaper
             and imports more expensive, though this can have long-term risks.
           </li>

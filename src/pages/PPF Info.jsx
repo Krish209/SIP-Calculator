@@ -39,26 +39,26 @@ const PPFInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Tenure:</strong> 15 years (extendable in blocks of 5 years
+            <strong>Tenure</strong>: 15 years (extendable in blocks of 5 years
             after maturity)
           </li>
           <li>
-            <strong>Interest Rate:</strong> Revised quarterly by the government;
+            <strong>Interest Rate</strong>: Revised quarterly by the government;
             generally higher than most fixed deposits and entirely tax-free
           </li>
           <li>
-            <strong>Tax Benefits:</strong> Contributions are eligible for tax
+            <strong>Tax Benefits</strong>: Contributions are eligible for tax
             deductions under Section 80C (up to ₹1.5 lakh per year) of the
             Income Tax Act. The interest earned is tax-free.
           </li>
           <li>
-            <strong>Investment Limit:</strong> Minimum contribution is ₹500
+            <strong>Investment Limit</strong>: Minimum contribution is ₹500
             annually, and maximum is ₹1.5 lakh annually. Contributions can be
             made in a lump sum or in installments (maximum 12 installments per
             year).
           </li>
           <li>
-            <strong>Loan and Partial Withdrawal:</strong> Loans can be taken
+            <strong>Loan and Partial Withdrawal</strong>: Loans can be taken
             after the 3rd year. Partial withdrawals are allowed after the 6th
             year.
           </li>
@@ -92,16 +92,16 @@ const PPFInfo = () => {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Documents Required:</strong> Proof of identity, proof of
+            <strong>Documents Required</strong>: Proof of identity, proof of
             address, Aadhar card, passport-size photo, PAN card.
           </li>
           <li>
-            <strong>Process:</strong> Visit a bank/post office, fill out the
+            <strong>Process</strong>: Visit a bank/post office, fill out the
             application form, and submit the required documents. Make the
             initial deposit to activate the account.
           </li>
           <li>
-            <strong>Online Process:</strong> Many banks now allow opening PPF
+            <strong>Online Process</strong>: Many banks now allow opening PPF
             accounts online via their mobile apps or websites.
           </li>
         </ul>
@@ -114,19 +114,19 @@ const PPFInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Lock-in Period:</strong> The PPF account has a mandatory
+            <strong>Lock-in Period</strong>: The PPF account has a mandatory
             15-year lock-in period, and early withdrawal is not allowed. After
             15 years, you can either withdraw the entire balance or extend the
             account.
           </li>
           <li>
-            <strong>Extension:</strong> After 15 years, account holders can
+            <strong>Extension</strong>: After 15 years, account holders can
             extend the PPF account in blocks of 5 years with or without making
             further contributions. If no contributions are made, the balance
             continues to earn interest.
           </li>
           <li>
-            <strong>Premature Withdrawal:</strong> Partial withdrawals are
+            <strong>Premature Withdrawal</strong>: Partial withdrawals are
             allowed after the 6th year and up to 50% of the balance under
             certain conditions, but premature closure is generally not allowed.
           </li>
@@ -140,32 +140,32 @@ const PPFInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Risk-Free:</strong> Backed by the government, making it a
+            <strong>Risk-Free</strong>: Backed by the government, making it a
             safe investment option.
           </li>
           <li>
-            <strong>Tax Benefits:</strong> Contributions are eligible for tax
+            <strong>Tax Benefits</strong>: Contributions are eligible for tax
             deductions, and interest is tax-free.
           </li>
           <li>
-            <strong>Attractive Interest Rates:</strong> Offers higher returns
+            <strong>Attractive Interest Rates</strong>: Offers higher returns
             compared to regular savings accounts.
           </li>
           <li>
-            <strong>Compounding Interest:</strong> Interest is compounded
+            <strong>Compounding Interest</strong>: Interest is compounded
             annually, helping your savings grow faster over time.
           </li>
           <li>
-            <strong>Loan Facility:</strong> You can take loans against your PPF
+            <strong>Loan Facility</strong>: You can take loans against your PPF
             balance in case of an emergency.
           </li>
           <li>
-            <strong>Transferability:</strong> A PPF account can be transferred
+            <strong>Transferability</strong>: A PPF account can be transferred
             from one branch to another, even between different banks and post
             offices, within India.
           </li>
           <li>
-            <strong>Nomination Facility:</strong> Account holders can nominate
+            <strong>Nomination Facility</strong>: Account holders can nominate
             one or more persons to receive the balance in the PPF account in
             case of their death.
           </li>
@@ -178,15 +178,15 @@ const PPFInfo = () => {
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Lock-in Period:</strong> The 15-year lock-in may not be
+            <strong>Lock-in Period</strong>: The 15-year lock-in may not be
             ideal for those looking for short-term liquidity.
           </li>
           <li>
-            <strong>Contribution Limit:</strong> The maximum annual contribution
+            <strong>Contribution Limit</strong>: The maximum annual contribution
             is ₹1.5 lakh, which may be limiting for higher-income earners.
           </li>
           <li>
-            <strong>Partial Withdrawal Restrictions:</strong> While partial
+            <strong>Partial Withdrawal Restrictions</strong>: While partial
             withdrawals are allowed after 6 years, they are subject to certain
             rules.
           </li>
