@@ -3,6 +3,16 @@ import Table from "../../consts/Table";
 import BlogLayout from "../../consts/BlogLayout";
 import img from "../../assets/icons/blogs/diversify.jpeg";
 
+// In your DiversifyPortfolio.jsx or other blog pages:
+export const meta = {
+  title: "How to Diversify Your Investment Portfolio - Complete Guide",
+  description: "Step-by-step guide to portfolio diversification for Indian investors with asset allocation strategies and risk management tips.",
+  slug: "how-to-diversify-your-investment-portfolio", // New URL-friendly slug
+  image: "https://sipgo.in/assets/icons/blogs/diversify.jpeg",
+  tags: ["Investing", "Portfolio Diversification", "Asset Allocation", "Risk Management"],
+  date: "2025-05-29", // ISO format better for SEO
+};
+
 const DiversifyPortfolio = () => {
   const columns = [
     { key: "assetClass", header: "Asset Class" },
@@ -71,11 +81,12 @@ const DiversifyPortfolio = () => {
 
   return (
     <BlogLayout
+      {...meta} // Spread all meta properties
       title="How to Diversify Your Portfolio — A Complete Guide for Indian Investors"
       author="Vrinda Jain"
       role="Financial Advisor"
-      date="May 26, 2025"
-      readTime="10 min read"
+      date="May 29, 2025"
+      readTime="4 min read"
       image={img}
       tags={["Investing", "Inflation", "Finance", "Wealth"]}
       isPremium={true} // set as per your requirement

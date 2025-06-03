@@ -15,6 +15,7 @@ import {
   FaRegBookmark,
 } from "react-icons/fa";
 
+import { Helmet } from 'react-helmet-async'; // for SEO, Schema Markup, etc.
 import { useEffect, useState } from "react";
 import { useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
@@ -103,8 +104,95 @@ const BlogLayout = ({
     }
   };
 
+  // Meta description from the post or first paragraph
+  const metaDescription = currentPost?.description;
+
+  // Generate excerpt from first paragraph if no description
+  const excerpt = useMemo(() => {
+    if (metaDescription) return metaDescription;
+    const firstPara = children.props.children.find(child => child.type === 'p');
+    return firstPara?.props.children.substring(0, 160) + '...';
+  }, [metaDescription, children]);
+
   return (
     <div className="bg-gray-50 text-night min-h-screen">
+      
+    {/* Inside your BlogLayout component, add this near the top of the return statement: */}
+    <Helmet>
+      <title>{title} | Sipgo</title>
+      
+      <meta name="description" content={metaDescription || `${title} - ${excerpt}`} />
+      <meta name="keywords" content={tags.join(', ')} />
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={metaDescription || excerpt} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={`https://sipgo.in/blog/${slug}`} />
+      <meta property="og:type" content="article" />
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={metaDescription || excerpt} />
+      <meta name="twitter:image" content={image} />
+      
+      {/* Canonical */}
+      <link rel="canonical" href={`https://sipgo.in/blog/${slug}`} />
+      
+      {/* Artical Schema */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": title,
+          "description": metaDescription || excerpt,
+          "author": {
+            "@type": "Person",
+            "name": author
+          },
+          "datePublished": date,
+          "image": image,
+          "publisher": {
+            "@type": "Organization",
+            "name": "SIPGo",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://sipgo.in/logo.png"
+            }
+          }
+        })}
+      </script>
+
+      {/* Breadcrumb Schema */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://sipgo.in/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://sipgo.in/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": title,
+              "item": `https://sipgo.in/blog/${slug}`
+            }
+          ]
+        })}
+      </script>
+    </Helmet>
+
       {/* Progress bar */}
       <div
         className="fixed top-13 left-0 right-0 h-1 bg-indigo-600 z-50"
@@ -183,7 +271,7 @@ const BlogLayout = ({
           <figure className="mb-4 sm:mb-6">
             <img
               src={image}
-              alt={title}
+              alt={`${title} cover image`} // More descriptive alt text
               className="w-full rounded-xl shadow-md"
               loading="lazy"
             />

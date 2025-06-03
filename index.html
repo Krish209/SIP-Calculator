@@ -3,13 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="SIPGo is your go-to platform for comprehensive financial calculators. Get detailed insights on various investment options, interest calculations, and growth estimations. Make informed decisions and invest smarter with SIPGo."
-    />
+    <meta name="description" content="SIPGo is your go-to platform for comprehensive financial calculators. Get detailed insights on various investment options, interest calculations, and growth estimations. Make informed decisions and invest smarter with SIPGo."/>
 
-    <meta name="robots" content="max-image-preview:large">
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="googlebot" content="index, follow" />
+
     <!-- <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Lora:wght@500;700&display=swap" rel="stylesheet"> -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@500;700&display=swap" rel="stylesheet"> -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet"> -->
@@ -36,36 +34,6 @@
                                   SIP or lump sum which is better, How much to invest for retirement
     "/>
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-3N7NX9RFYF"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-3N7NX9RFYF");
-    </script>
-
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-5LBTQ7K6");
-    </script>
-    <!-- End Google Tag Manager -->
-
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.sipgo.in/" />
@@ -88,7 +56,6 @@
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
     <link rel="alternate" type="application/rss+xml" title="SIPGo RSS Feed" href="https://www.sipgo.in/rss.xml" />
 
-    
     <!-- Preconnects -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -105,7 +72,9 @@
 
     <meta property="og:site_name" content="SIPGo" />
 
-    <meta name="ezoic-site-verification" content="4ao1MHMSHfJFoMSQlgDWhWx4m9BzvS" />
+    <!-- Add this new global tag -->
+    <link rel="alternate" type="application/rss+xml" href="https://www.sipgo.in/blog/rss.xml" title="SIPGo Blog RSS" />
+
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
       {
@@ -124,8 +93,6 @@
         ]
       }
       </script>
-
-      
    
   </head>
   
@@ -136,15 +103,5 @@
     <!-- Preload critical JS -->
     <link rel="preload" href="/src/main.jsx" as="script">
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-5LBTQ7K6"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
   </body>
 </html>

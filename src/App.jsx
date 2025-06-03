@@ -36,7 +36,7 @@ import BeatingInflation from "./pages/blogs/Beating Inflation";
 import StockEtfMfBond from "./pages/blogs/What Are Stocks, ETFs, Mutual Funds, and Bonds";
 import CreatePassiveIncome from "./pages/blogs/Create a Passive Income";
 import CompoundingWork from "./pages/blogs/Compounding Work";
-import BlogHome from "./consts/Blog";
+import BlogHome from "./consts/Blog Home";
 import DiversifyPortfolio from "./pages/blogs/How to Diversify Portfolio";
 import InflationandTaxesImpact from "./pages/blogs/Inflation and Taxes Impact Investments";
 import SelfEmployedOrFreelancer from "./pages/blogs/Invest if You're Self-Employed or a Freelancer";
