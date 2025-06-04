@@ -73,39 +73,53 @@ const BlogLayout = ({
   };
 
   const shareArticle = (platform) => {
-    const url = encodeURIComponent(window.location.href);
-    const text = encodeURIComponent(title);
+    const currentUrl = window.location.href;
+    const encodedUrl = encodeURIComponent(currentUrl);
+    const encodedTitle = encodeURIComponent(title);
 
     switch (platform) {
       case "twitter":
         window.open(
-          `https://twitter.com/intent/tweet?text=${text}&url=${url}`,
+          `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`,
           "_blank"
         );
         break;
       case "linkedin":
         window.open(
-          `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${text}`,
+          `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}`,
           "_blank"
         );
         break;
       case "facebook":
         window.open(
-          `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+          `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
           "_blank"
         );
         break;
       default:
         if (navigator.share) {
-          navigator.share({ title: text, url: url }).catch(console.error);
+          navigator.share({
+            title: title,
+            text: metaDescription || excerpt,
+            url: currentUrl
+          }).catch(console.error);
         } else {
-          alert(`Share this article: ${window.location.href}`);
+          // Fallback for desktop browsers
+          navigator.clipboard.writeText(currentUrl).then(() => {
+            alert("Link copied to clipboard!");
+          }).catch(() => {
+            // Final fallback if clipboard API fails
+            prompt("Copy this link to share:", currentUrl);
+          });
         }
     }
   };
 
   // Meta description from the post or first paragraph
   const metaDescription = currentPost?.description;
+
+  // ISO date format for structured data
+  const dateISO = new Date(date).toISOString();
 
   // Generate excerpt from first paragraph if no description
   const excerpt = useMemo(() => {
@@ -123,6 +137,7 @@ const BlogLayout = ({
       
       <meta name="description" content={metaDescription || `${title} - ${excerpt}`} />
       <meta name="keywords" content={tags.join(', ')} />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
       
       {/* Open Graph */}
       <meta property="og:title" content={title} />
@@ -151,7 +166,7 @@ const BlogLayout = ({
             "@type": "Person",
             "name": author
           },
-          "datePublished": date,
+          "datePublished": dateISO,
           "image": image,
           "publisher": {
             "@type": "Organization",
@@ -160,7 +175,13 @@ const BlogLayout = ({
               "@type": "ImageObject",
               "url": "https://sipgo.in/logo.png"
             }
-          }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `https://sipgo.in/blog/${slug}`
+          },
+          "keywords": tags.join(', '),
+          "articleBody": excerpt // Consider adding full text for better SEO
         })}
       </script>
 
@@ -327,6 +348,7 @@ const BlogLayout = ({
                   key={tag}
                   href={`/tags/${tag.toLowerCase().replace(/\s+/g, "-")}`}
                   className="text-sm bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full"
+                  aria-label={`Posts tagged with ${tag}`}
                 >
                   #{tag}
                 </a>

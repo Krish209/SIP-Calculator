@@ -1,12 +1,39 @@
 import { motion } from "framer-motion";
 import group from "../assets/icons/group.svg";
-import {
-  CurrencyRupeeIcon,
-} from "@heroicons/react/24/outline";
+import { CurrencyRupeeIcon } from "@heroicons/react/24/outline";
+import { Helmet } from 'react-helmet-async'; // for SEO, Schema Markup, etc.
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen text-primary">
+
+      {/* SEO Meta Tags */}
+      <Helmet>
+        <title>About SIPGo - Our Mission, Vision & Financial Calculator Expertise</title>
+        <meta name="description" content="Learn about SIPGo's mission to simplify financial planning in India. Discover our team's expertise in creating accurate SIP, PPF, FD, and investment calculators."/>
+        <meta property="og:title" content="About SIPGo - Our Mission, Vision & Financial Calculator Expertise" />
+        <meta property="og:description" content="Learn about SIPGo's mission to simplify financial planning in India. Discover our team's expertise in creating accurate financial calculators." />
+        <meta property="og:url" content="https://www.sipgo.in/about" />
+        <meta property="og:type" content="website" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": "About SIPGo",
+            "description": "Information about SIPGo's financial calculator platform and team",
+            "url": "https://www.sipgo.in/about",
+            "publisher": {
+              "@type": "Organization",
+              "name": "SIPGo",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.sipgo.in/images/logo.png"
+              }
+            }
+          })}
+        </script>
+      </Helmet>
+      
       {/* Hero Section */}
       <motion.section 
         initial={{ opacity: 0, y: 20 }}

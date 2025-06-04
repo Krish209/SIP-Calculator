@@ -38,23 +38,42 @@ const KVPFAQ = () => {
 
   return (
     <div className="mx-auto mb-4 text-primary">
+      
+      {/* FAQ Schema (JSON-LD) */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": questions.map(q => ({
+            "@type": "Question",
+            "name": q.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": q.answer
+            }
+          }))
+        })}
+      </script>
+
       <h2 className="text-xl md:text-2xl font-semibold text-center mb-4 md:mb-6">
         Frequently Asked Questions - KVP
       </h2>
 
-      {/* FAQ Section */}
-      <div className="space-y-2">
+      <div className="space-y-2" itemScope itemType="https://schema.org/FAQPage">
         {questions.map((item, index) => (
-          <div key={index} className="overflow-hidden border-b">
+          <div 
+            key={index} 
+            className="overflow-hidden border-b"
+            itemScope 
+            itemProp="mainEntity" 
+            itemType="https://schema.org/Question"
+          >
             <div
               className="flex justify-between items-center px-2 py-2 md:py-3 cursor-pointer hover:bg-gray-100"
               onClick={() => toggleFAQ(index)}
+              itemProp="name"
             >
-              <h3
-                className={`${
-                  activeIndex === index ? "" : "truncate"
-                } text-[15px] md:text-base font-medium`}
-              >
+              <h3 className={`${activeIndex === index ? "" : "truncate"} text-[15px] md:text-base font-medium`}>
                 {item.question}
               </h3>
               <span className="text-xl">
@@ -62,13 +81,20 @@ const KVPFAQ = () => {
               </span>
             </div>
             {activeIndex === index && (
-              <div className="text-[14px] md:text-[15px] px-2 py-1 md:py-3">
-                {item.answer.split("\n").map((line, i) => (
-                  <React.Fragment key={i}>
-                    {line}
-                    <br />
-                  </React.Fragment>
-                ))}
+              <div 
+                className="text-[14px] md:text-[15px] px-2 py-1 md:py-3"
+                itemScope
+                itemProp="acceptedAnswer"
+                itemType="https://schema.org/Answer"
+              >
+                <div itemProp="text">
+                  {item.answer.split("\n").map((line, i) => (
+                    <React.Fragment key={i}>
+                      {line}
+                      <br />
+                    </React.Fragment>
+                  ))}
+                </div>
               </div>
             )}
           </div>
