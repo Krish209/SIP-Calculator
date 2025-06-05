@@ -39,7 +39,7 @@ export const blogPosts = [
   },
   {
     title: "Why Risk is a Part of Investing",
-    // slug: "why-risk-is-a-part-of-investing",
+    // slug: "why-risk-is-part-of-investing",
     path: "/blog/why-risk-is-part-of-investing",
     description:
       "Understand the relationship between risk and returns in investing.",
@@ -50,7 +50,7 @@ export const blogPosts = [
   },
   {
     title: "Investing vs Gambling – Know the Difference",
-    // slug: "investing-vs-gambling-know-the-difference",
+    // slug: "investing-vs-gambling-whats-the-real-difference",
     path: "/blog/investing-vs-gambling-whats-the-real-difference",
     description:
       "See why investing and gambling are not the same—even if both involve risk.",
@@ -139,6 +139,7 @@ export const blogPosts = [
 
   {
     title: "Stocks vs Mutual Funds: Which is Better for Indian Investors?",
+    // slug: "stocks-vs-mutual-funds",
     path: "/blog/stocks-vs-mutual-funds",
     description:
       "Compare stocks and mutual funds to understand which suits your investment goals better in the Indian market.",
@@ -149,6 +150,7 @@ export const blogPosts = [
   },
   {
     title: "What is the Difference Between Saving and Investing?",
+    // slug: "difference-between-saving-and-investing",
     path: "/blog/difference-between-saving-and-investing",
     description:
       "Learn the key differences between saving and investing and when to choose one over the other.",

@@ -44,7 +44,7 @@ import Random from "./pages/blogs/Random";
 import Random2 from "./pages/blogs/Random2";
 import StocksorMutualFunds from "./pages/blogs/Stocks or Mutual Funds";
 import SavingvsInvesting from "./pages/blogs/Saving and Investing difference";
-
+import BlogLayout from "./consts/BlogLayout"; // wherever your BlogLayout is located
 
 function App() {
   return (
@@ -63,8 +63,6 @@ function App() {
 
           {/* Contact Us Route */}
           <Route path="contact" element={<Contact />} />
-          {/* <Route path="contact2" element={<Contact2 />} /> */}
-
 
 
           <Route path="terms" element={<TermsAndConditions />} />
