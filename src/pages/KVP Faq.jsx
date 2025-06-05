@@ -36,7 +36,7 @@ const KVPFAQ = () => {
 
   return (
     <div className="mx-auto mb-4 text-primary">
-      {/* FAQ Schema (JSON-LD) */}
+      {/* SEO Structured Data - JSON-LD only */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
@@ -56,37 +56,31 @@ const KVPFAQ = () => {
         Frequently Asked Questions - KVP
       </h2>
 
-      <div itemScope itemType="https://schema.org/FAQPage" className="space-y-2">
+      <div className="space-y-2">
         {questions.map((item, index) => (
           <div
             key={index}
-            itemScope
-            itemType="https://schema.org/Question"
             className="overflow-hidden border-b"
           >
             <div
               className="flex justify-between items-center px-2 py-2 md:py-3 cursor-pointer hover:bg-gray-100"
               onClick={() => toggleFAQ(index)}
             >
-              <h3 itemProp="name" className={`${activeIndex === index ? "" : "truncate"} text-[15px] md:text-base font-medium`}>
+              <h3 className={`${activeIndex === index ? "" : "truncate"} text-[15px] md:text-base font-medium`}>
                 {item.question}
               </h3>
-              <span className="text-xl">{activeIndex === index ? "-" : "+"}</span>
+              <span className="text-xl">
+                {activeIndex === index ? "-" : "+"}
+              </span>
             </div>
             {activeIndex === index && (
-              <div
-                itemScope
-                itemType="https://schema.org/Answer"
-                className="text-[14px] md:text-[15px] px-2 py-1 md:py-3"
-              >
-                <div itemProp="text">
-                  {item.answer.split("\n").map((line, i) => (
-                    <React.Fragment key={i}>
-                      {line}
-                      <br />
-                    </React.Fragment>
-                  ))}
-                </div>
+              <div className="text-[14px] md:text-[15px] px-2 py-1 md:py-3">
+                {item.answer.split("\n").map((line, i) => (
+                  <React.Fragment key={i}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
               </div>
             )}
           </div>
