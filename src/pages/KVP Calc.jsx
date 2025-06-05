@@ -37,6 +37,9 @@ function KVP() {
     );
 
   // Inside your KVP component, before the return statement:
+  
+  const datePublished = new Date("2024-06-01").toISOString();
+  const dateModified = new Date("2024-06-01").toISOString();
   const pageTitle =
     "KVP Calculator - Calculate Maturity Value for Kisan Vikas Patra";
   const pageDescription =
