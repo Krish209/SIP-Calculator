@@ -22,6 +22,7 @@ import { useParams, Link } from "react-router-dom";
 import { blogPosts } from "./BlogPost";
 
 const BlogLayout = ({
+  slug,
   title,
   author,
   role,
@@ -38,7 +39,7 @@ const BlogLayout = ({
   const [isLiked, setIsLiked] = useState(false);
   const [likes, setLikes] = useState(100);
 
-  const { slug } = useParams();
+  // const { slug } = useParams();
   const currentPost = blogPosts.find((post) => post.slug === slug);
 
   if (!currentPost) return <div>Post not found.</div>;

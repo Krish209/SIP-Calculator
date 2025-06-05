@@ -17,7 +17,7 @@ import imgSavingVsInvesting from "../assets/icons/blogs/saving-investing.jpeg";
 export const blogPosts = [
   {
     title: "How to Get Monthly Pension from NPS",
-    // slug: "how-to-achieve-a-monthly-pension-of-50k-with-nps",
+    slug: "how-to-achieve-a-monthly-pension-of-50k-with-nps",
     path: "/blog/how-to-achieve-a-monthly-pension-of-50k-with-nps",
     description:
       "Learn how NPS can provide you with a regular monthly income after retirement.",
@@ -28,7 +28,7 @@ export const blogPosts = [
   },
   {
     title: "SIP vs Lumpsum – Which is Better?",
-    // slug: "sip-vs-lumpsum-which-is-better",
+    slug: "sip-vs-lumpsum-which-is-better",
     path: "/blog/sip-vs-lumpsum",
     description:
       "Compare Systematic Investment Plans and lump sum investments to make the right choice.",
@@ -39,7 +39,7 @@ export const blogPosts = [
   },
   {
     title: "Why Risk is a Part of Investing",
-    // slug: "why-risk-is-part-of-investing",
+    slug: "why-risk-is-part-of-investing",
     path: "/blog/why-risk-is-part-of-investing",
     description:
       "Understand the relationship between risk and returns in investing.",
@@ -50,7 +50,7 @@ export const blogPosts = [
   },
   {
     title: "Investing vs Gambling – Know the Difference",
-    // slug: "investing-vs-gambling-whats-the-real-difference",
+    slug: "investing-vs-gambling-whats-the-real-difference",
     path: "/blog/investing-vs-gambling-whats-the-real-difference",
     description:
       "See why investing and gambling are not the same—even if both involve risk.",
@@ -61,7 +61,7 @@ export const blogPosts = [
   },
   {
     title: "How to Beat Inflation with Smart Investing",
-    // slug: "how-to-beat-inflation-with-smart-investing",
+    slug: "how-to-beat-inflation-with-smart-investing",
     path: "/blog/beating-inflation",
     description:
       "Learn how to protect your money from inflation by making the right investments.",
@@ -72,7 +72,7 @@ export const blogPosts = [
   },
   {
     title: "What are Stocks, ETFs, Mutual Funds, and Bonds?",
-    // slug: "what-are-stocks-etfs-mutual-funds-and-bonds",
+    slug: "what-are-stocks-etfs-mutual-funds-and-bonds",
     path: "/blog/what-are-stocks-etfs-mutual-funds-and-bonds",
     description:
       "A quick guide to different types of financial instruments for new investors.",
@@ -83,7 +83,7 @@ export const blogPosts = [
   },
   {
     title: "How to Create a Passive Income",
-    // slug: "how-to-create-a-passive-income",
+    slug: "how-to-create-a-passive-income",
     path: "/blog/how-to-create-passive-income-with-investments",
     description:
       "Explore various strategies to generate income with minimal ongoing effort.",
@@ -94,7 +94,7 @@ export const blogPosts = [
   },
   {
     title: "How Does Compounding Work?",
-    // slug: "how-does-compounding-work",
+    slug: "how-does-compounding-work",
     path: "/blog/how-does-compounding-work",
     description:
       "Understand the powerful effect of compounding on your investments.",
@@ -105,7 +105,7 @@ export const blogPosts = [
   },
   {
     title: "How to Diversify Your Investment Portfolio",
-    // slug: "how-to-diversify-your-investment-portfolio",
+    slug: "how-to-diversify-your-investment-portfolio",
     path: "/blog/how-to-diversify-your-investment-portfolio",
     description:
       "Discover the importance of diversification and how it helps reduce risk.",
@@ -116,7 +116,7 @@ export const blogPosts = [
   },
   {
     title: "How Do Inflation and Taxes Impact Investments?",
-    // slug: "how-do-inflation-and-taxes-impact-investments",
+    slug: "how-do-inflation-and-taxes-impact-investments",
     path: "/blog/how-do-inflation-and-taxes-impact-investments",
     description:
       "Learn how inflation and taxes can affect your investment returns and what you can do about it.",
@@ -127,7 +127,7 @@ export const blogPosts = [
   },
   {
     title: "How to Invest if You are Self-Employed or a Freelancer",
-    // slug: "how-to-invest-if-you-are-self-employed-or-a-freelancer",
+    slug: "how-to-invest-if-you-are-self-employed-or-a-freelancer",
     path: "/blog/how-to-invest-if-you-are-self-employed-or-a-freelancer",
     description:
       "Investment strategies and tips tailored for freelancers and self-employed professionals.",
@@ -139,7 +139,7 @@ export const blogPosts = [
 
   {
     title: "Stocks vs Mutual Funds: Which is Better for Indian Investors?",
-    // slug: "stocks-vs-mutual-funds",
+    slug: "stocks-vs-mutual-funds",
     path: "/blog/stocks-vs-mutual-funds",
     description:
       "Compare stocks and mutual funds to understand which suits your investment goals better in the Indian market.",
@@ -150,7 +150,7 @@ export const blogPosts = [
   },
   {
     title: "What is the Difference Between Saving and Investing?",
-    // slug: "difference-between-saving-and-investing",
+    slug: "difference-between-saving-and-investing",
     path: "/blog/difference-between-saving-and-investing",
     description:
       "Learn the key differences between saving and investing and when to choose one over the other.",

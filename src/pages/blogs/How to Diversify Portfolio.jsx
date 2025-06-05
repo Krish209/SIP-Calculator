@@ -81,6 +81,7 @@ const DiversifyPortfolio = () => {
 
   return (
     <BlogLayout
+      slug={meta.slug}
       {...meta} // Spread all meta properties
       title="How to Diversify Your Portfolio — A Complete Guide for Indian Investors"
       author="Vrinda Jain"
