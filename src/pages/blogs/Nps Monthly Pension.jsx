@@ -3,6 +3,15 @@ import Table from "../../consts/Table";
 import BlogLayout from "../../consts/BlogLayout";
 import img from "../../assets/icons/blogs/registration2.jpeg";
 
+export const meta = {
+  title: "How to Get Monthly Pension from NPS - Step-by-Step Guide",
+  description: "Learn how NPS can provide you with a regular monthly income after retirement.",
+  slug: "how-to-achieve-a-monthly-pension-of-50k-with-nps",
+  image: "https://sipgo.in/assets/icons/blogs/registration.jpeg",
+  tags: ["Retirement", "NPS", "Pension Planning", "Wealth Management"],
+  date: "2025-05-25", // ISO format better for SEO
+};
+
 const NpsMonthlyPension = () => {
   const columns = [
     { key: "corpus", header: "NPS Corpus" },
@@ -35,6 +44,8 @@ const NpsMonthlyPension = () => {
 
   return (
     <BlogLayout
+      slug={meta.slug}
+      {...meta} // Spread all meta properties
       title="How to Achieve a Monthly Pension of ₹50,000 with NPS"
       author="Tarun Kumar"
       role="Financial Advisor"

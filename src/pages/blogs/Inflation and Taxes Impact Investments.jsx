@@ -3,6 +3,15 @@ import Table from "../../consts/Table";
 import BlogLayout from "../../consts/BlogLayout";
 import img from "../../assets/icons/blogs/tax-inflation.jpeg";
 
+export const meta = {
+  title: "How Do Inflation and Taxes Impact Investments?",
+  description: "Learn how inflation and taxes can affect your investment returns and what you can do about it.",
+  slug: "how-do-inflation-and-taxes-impact-investments",
+  image: "https://sipgo.in/assets/icons/blogs/tax-inflation.jpeg",
+  tags: ["Tax & Inflation", "Returns", "Investment Planning", "Finance"],
+  date: "2025-05-29", // ISO format better for SEO
+};
+
 const InflationandTaxesImpact = () => {
   const columns = [
     { key: "investmentType", header: "Investment Type" },
@@ -107,6 +116,8 @@ const InflationandTaxesImpact = () => {
 
   return (
     <BlogLayout
+      slug={meta.slug}
+      {...meta} // Spread all meta properties
       title="How Inflation and Taxes Impact Your Investments: A Complete Guide for
           Indian Investors"
       author="Ankit Nayak"

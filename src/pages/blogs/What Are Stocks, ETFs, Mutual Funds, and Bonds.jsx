@@ -3,6 +3,15 @@ import Table from "../../consts/Table";
 import BlogLayout from "../../consts/BlogLayout";
 import img from "../../assets/icons/blogs/stocketf.jpeg";
 
+export const meta = {
+  title: "What are Stocks, ETFs, Mutual Funds, and Bonds? Explained Simply",
+  description: "A quick guide to different types of financial instruments for new investors.",
+  slug: "what-are-stocks-etfs-mutual-funds-and-bonds",
+  image: "https://sipgo.in/assets/icons/blogs/stocketf.jpeg",
+  tags: ["Education", "Stocks", "ETFs", "Mutual Funds", "Bonds"],
+  date: "2025-05-28", // ISO format better for SEO
+};
+
 const StockEtfMfBond = () => {
   const columns = [
     { key: "feature", header: "Feature" },
@@ -67,6 +76,8 @@ const StockEtfMfBond = () => {
 
   return (
     <BlogLayout
+      slug={meta.slug}
+      {...meta} // Spread all meta properties
       title="What Are Stocks, ETFs, Mutual Funds, and Bonds? | A Beginner’s Guide
           to Investing in India"
       author="Gaurav Singh"

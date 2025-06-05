@@ -3,6 +3,15 @@ import Table from "../../consts/Table";
 import BlogLayout from "../../consts/BlogLayout";
 import img from "../../assets/icons/blogs/compounding.jpeg";
 
+export const meta = {
+  title: "How Does Compounding Work? – Unlock the Power of Growth",
+  description: "Understand the powerful effect of compounding on your investments.",
+  slug: "how-does-compounding-work",
+  image: "https://sipgo.in/assets/icons/blogs/compounding.jpeg",
+  tags: ["Compounding", "Long-term Investing", "Growth", "Financial Education"],
+  date: "2025-05-29", // ISO format better for SEO
+};
+
 const CompoundingWork = () => {
   const columns = [
     { key: "year", header: "Year" },
@@ -130,6 +139,8 @@ const CompoundingWork = () => {
 
   return (
     <BlogLayout
+      slug={meta.slug}
+      {...meta} // Spread all meta properties
       title="How Does Compounding Work? The Power Behind Long-Term Wealth Creation"
       author="Devika Gupta"
       role="Financial Advisor"

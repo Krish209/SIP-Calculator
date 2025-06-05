@@ -3,6 +3,15 @@ import Table from "../../consts/Table";
 import BlogLayout from "../../consts/BlogLayout";
 import img from "../../assets/icons/blogs/self-employed2.jpeg";
 
+export const meta = {
+  title: "How to Invest if You are Self-Employed or a Freelancer",
+  description: "Investment strategies and tips tailored for freelancers and self-employed professionals.",
+  slug: "how-to-invest-if-you-are-self-employed-or-a-freelancer",
+  image: "https://sipgo.in/assets/icons/blogs/self-employed.jpeg",
+  tags: ["Self-Employed", "Freelancer", "Investing", "Financial Independence"],
+  date: "2025-05-29", // ISO format better for SEO
+};
+
 const SelfEmployedOrFreelancer = () => {
   const columns = [
     { key: "goal", header: "Goal" },
@@ -131,6 +140,8 @@ const SelfEmployedOrFreelancer = () => {
 
   return (
     <BlogLayout
+      slug={meta.slug}
+      {...meta} // Spread all meta properties
       title="How to Invest if You're Self-Employed or a Freelancer in India"
       author="Chaitanya Rao"
       role="Financial Advisor"

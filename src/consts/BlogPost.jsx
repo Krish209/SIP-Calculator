@@ -28,7 +28,7 @@ export const blogPosts = [
   },
   {
     title: "SIP vs Lumpsum – Which is Better?",
-    slug: "sip-vs-lumpsum-which-is-better",
+    slug: "sip-vs-lumpsum",
     path: "/blog/sip-vs-lumpsum",
     description:
       "Compare Systematic Investment Plans and lump sum investments to make the right choice.",
@@ -61,7 +61,7 @@ export const blogPosts = [
   },
   {
     title: "How to Beat Inflation with Smart Investing",
-    slug: "how-to-beat-inflation-with-smart-investing",
+    slug: "beating-inflation",
     path: "/blog/beating-inflation",
     description:
       "Learn how to protect your money from inflation by making the right investments.",
@@ -83,7 +83,7 @@ export const blogPosts = [
   },
   {
     title: "How to Create a Passive Income",
-    slug: "how-to-create-a-passive-income",
+    slug: "how-to-create-passive-income-with-investments",
     path: "/blog/how-to-create-passive-income-with-investments",
     description:
       "Explore various strategies to generate income with minimal ongoing effort.",
@@ -107,6 +107,7 @@ export const blogPosts = [
     title: "How to Diversify Your Investment Portfolio",
     slug: "how-to-diversify-your-investment-portfolio",
     path: "/blog/how-to-diversify-your-investment-portfolio",
+    // component: DiversifyPortfolio,
     description:
       "Discover the importance of diversification and how it helps reduce risk.",
     tag: "Portfolio Management",

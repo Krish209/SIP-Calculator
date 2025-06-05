@@ -3,6 +3,15 @@ import Table from "../../consts/Table";
 import BlogLayout from "../../consts/BlogLayout";
 import img from "../../assets/icons/blogs/stock-mutualfund.jpeg";
 
+export const meta = {
+  title: "Stocks vs Mutual Funds – Which is Better for Indian Investors?",
+  description: "Compare stocks and mutual funds to understand which suits your investment goals better in the Indian market.",
+  slug: "stocks-vs-mutual-funds",
+  image: "https://sipgo.in/assets/icons/blogs/stock-mutualfund.jpeg",
+  tags: ["Investment", "Stocks", "Mutual Funds", "Comparison"],
+  date: "2025-06-01", // ISO format better for SEO
+};
+
 const StocksorMutualFunds = () => {
   const columns = [
     { key: "feature", header: "Feature" },
@@ -117,6 +126,8 @@ const StocksorMutualFunds = () => {
 
   return (
     <BlogLayout
+      slug={meta.slug}
+      {...meta} // Spread all meta properties
       title="Stocks vs Mutual Funds: Which is Better for Indian Investors?"
       author="Deepak Dube"
       role="Financial Advisor"

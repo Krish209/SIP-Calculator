@@ -163,7 +163,7 @@ const DiversifyPortfolio = () => {
               <strong>Long-Term Growth</strong>: Enhances your chance of
               consistent, compounded returns.
             </li>
-            <li>
+             <li>
               <strong>Flexibility</strong>: Allows you to adjust your portfolio
               based on changing market conditions and personal financial goals.
             </li>

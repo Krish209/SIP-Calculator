@@ -3,6 +3,15 @@ import Table from "../../consts/Table";
 import BlogLayout from "../../consts/BlogLayout";
 import img from "../../assets/icons/blogs/tree1.jpeg";
 
+export const meta = {
+  title: "How to Create a Passive Income – Strategies That Work",
+  description: "Explore various strategies to generate income with minimal ongoing effort.",
+  slug: "how-to-create-passive-income-with-investments",
+  image: "https://sipgo.in/assets/icons/blogs/tree1.jpeg",
+  tags: ["Passive Income", "Financial Freedom", "Investing", "Income Strategies"],
+  date: "2025-05-29", // ISO format better for SEO
+};
+
 const CreatePassiveIncome = () => {
   const columns = [
     { key: "investmentOption", header: "Investment Option" },
@@ -106,6 +115,8 @@ const CreatePassiveIncome = () => {
 
   return (
     <BlogLayout
+      slug={meta.slug}
+      {...meta} // Spread all meta properties
       title="How to Create Passive Income with Investments: A Complete Guide for
           Indians"
       author="Surabhi Sharma"

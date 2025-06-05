@@ -3,6 +3,15 @@ import Table from "../../consts/Table";
 import BlogLayout from "../../consts/BlogLayout";
 import img from "../../assets/icons/blogs/saving-investing.jpeg";
 
+export const meta = {
+  title: "What is the Difference Between Saving and Investing?",
+  description: "Learn the key differences between saving and investing and when to choose one over the other.",
+  slug: "difference-between-saving-and-investing",
+  image: "https://sipgo.in/assets/icons/blogs/saving-investing.jpeg",
+  tags: ["Finance Basics", "Saving", "Investing", "Money Management"],
+  date: "2025-06-01", // ISO format better for SEO
+};
+
 const SavingvsInvesting = () => {
   const columns = [
     { key: "feature", header: "Feature" },
@@ -50,6 +59,8 @@ const SavingvsInvesting = () => {
 
   return (
     <BlogLayout
+      slug={meta.slug}
+      {...meta} // Spread all meta properties
       title="What is the Difference Between Saving and Investing?"
       author="Chaitanya Rao"
       role="Financial Advisor"

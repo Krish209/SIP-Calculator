@@ -3,6 +3,15 @@ import Table from "../../consts/Table";
 import BlogLayout from "../../consts/BlogLayout";
 import img from "../../assets/icons/blogs/riskvsreward3.png";
 
+export const meta = {
+  title: "Why Risk is a Part of Investing – Know the Role of Risk in Returns",
+  description: "Understand the relationship between risk and returns in investing.",
+  slug: "why-risk-is-part-of-investing",
+  image: "https://sipgo.in/assets/icons/blogs/riskvsreward3.png",
+  tags: ["Finance Basics", "Risk Management", "Returns", "Investment Psychology"],
+  date: "2025-05-26", // ISO format better for SEO
+};
+
 const WhyRiskIsPartOfInvesting = () => {
   const columns = [
     { key: "riskType", header: "Risk Type" },
@@ -90,6 +99,8 @@ const WhyRiskIsPartOfInvesting = () => {
 
   return (
     <BlogLayout
+      slug={meta.slug}
+      {...meta} // Spread all meta properties
       title="Why Risk is Part of Investing – and How to Manage It"
       author="Haresh Yadav"
       role="Financial Advisor"

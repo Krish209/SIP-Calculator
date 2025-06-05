@@ -3,9 +3,20 @@ import Table from "../../consts/Table";
 import BlogLayout from "../../consts/BlogLayout";
 import img from "../../assets/icons/blogs/investingvsgambling.jpeg";
 
+export const meta = {
+  title: "Investing vs Gambling – What’s the Real Difference?",
+  description: "See why investing and gambling are not the same—even if both involve risk.",
+  slug: "investing-vs-gambling-whats-the-real-difference",
+  image: "https://sipgo.in/assets/icons/blogs/investingvsgambling.jpeg",
+  tags: ["Finance Mindset", "Investment Psychology", "Risk", "Gambling"],
+  date: "2025-05-26", // ISO format better for SEO
+};
+
 const InvestingVsGambling = () => {
   return (
     <BlogLayout
+      slug={meta.slug}
+      {...meta} // Spread all meta properties
       title="Investing vs. Gambling: What’s the Real Difference?"
       author="Suresh Mohan"
       role="Financial Advisor"

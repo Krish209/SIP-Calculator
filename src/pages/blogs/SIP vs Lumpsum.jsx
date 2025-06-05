@@ -3,6 +3,15 @@ import Table from "../../consts/Table";
 import BlogLayout from "../../consts/BlogLayout";
 import img from "../../assets/icons/blogs/sip-lump2.jpeg";
 
+export const meta = {
+  title: "SIP vs Lumpsum – Which Investment Option is Better?",
+  description: "Compare Systematic Investment Plans and lump sum investments to make the right choice.",
+  slug: "sip-vs-lumpsum",
+  image: "https://sipgo.in/assets/icons/blogs/sip-lump2.jpeg",
+  tags: ["Investment", "SIP", "Lumpsum", "Financial Planning"],
+  date: "2025-05-25", // ISO format better for SEO
+};
+
 const SIPvsLumpsum = () => {
   const publishedDate = "May 23, 2025";
   const readingTime = "4 min read";
@@ -53,6 +62,8 @@ const SIPvsLumpsum = () => {
 
   return (
     <BlogLayout
+      slug={meta.slug}
+      {...meta} // Spread all meta properties
       title="SIP vs Lumpsum: Which Investment Strategy Is Better?"
       author="Dev Pal"
       role="Financial Advisor"
