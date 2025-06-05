@@ -37,9 +37,6 @@ function KVP() {
     );
 
   // Inside your KVP component, before the return statement:
-  
-  const datePublished = new Date("2024-06-01").toISOString();
-  const dateModified = new Date("2024-06-01").toISOString();
   const pageTitle =
     "KVP Calculator - Calculate Maturity Value for Kisan Vikas Patra";
   const pageDescription =
@@ -114,64 +111,6 @@ function KVP() {
             ]
           })}
         </script>
-
-        
-      {/* Article as information Schema Markup */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": "Kisan Vikas Patra (KVP) – A Comprehensive Guide",
-          "description": "Learn about KVP interest rates, eligibility, tax implications, and how to invest.",
-          "image": "https://www.sipgo.in/images/logo",
-          "author": {
-            "@type": "Organization",
-            "name": "SIPGo"
-          },
-          "datePublished": datePublished, // Add this
-          "dateModified":  dateModified, // Add this
-          "publisher": {
-            "@type": "Organization",
-            "name": "SIPGo",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://www.sipgo.in/logo.png"
-            }
-          },
-          "mainEntity": {
-          "@type": "Table",
-          "about": "KVP Guide Sections",
-          "table": [
-            "What is KVP?",
-            "Key Features of KVP",
-            "Who is Eligible?",
-            "Types of KVP Accounts",
-            "How Does KVP Work?",
-            "Taxation on KVP",
-            "Pros of KVP",
-            "Cons of KVP",
-            "How to Buy KVP?",
-            "Conclusion"
-          ]
-        }
-        })}
-      </script>
-
-        {/* SEO Structured Data - JSON-LD only */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": questions.map((q) => ({
-            "@type": "Question",
-            "name": q.question,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": q.answer,
-            },
-          })),
-        })}
-      </script>
       </Helmet>
 
       <main id="kvp-calculator">
