@@ -1,6 +1,8 @@
 import React from "react";
 
 const KVPInfo = () => {
+  const datePublished = new Date("2024-06-01").toISOString();
+  const dateModified = new Date("2024-06-01").toISOString();
   return (
     <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
 
@@ -11,12 +13,13 @@ const KVPInfo = () => {
           "@type": "Article",
           "headline": "Kisan Vikas Patra (KVP) – A Comprehensive Guide",
           "description": "Learn about KVP interest rates, eligibility, tax implications, and how to invest.",
+          "image": "https://www.sipgo.in/images/logo",
           "author": {
             "@type": "Organization",
             "name": "SIPGo"
           },
-          "datePublished": "2024-06-01",
-          "dateModified": "2024-06-01", // Add this
+          "datePublished": datePublished, // Add this
+          "dateModified":  dateModified, // Add this
           "publisher": {
             "@type": "Organization",
             "name": "SIPGo",
