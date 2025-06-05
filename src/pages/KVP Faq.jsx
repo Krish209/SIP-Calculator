@@ -36,11 +36,12 @@ const KVPFAQ = () => {
 
   return (
     <div className="mx-auto mb-4 text-primary">
-      {/* SEO Structured Data - JSON-LD only */}
+      {/* JSON-LD for FAQ */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "FAQPage",
+          "@id": "https://www.sipgo.in/kvp-calculator#faq",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,

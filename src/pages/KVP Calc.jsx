@@ -40,7 +40,7 @@ function KVP() {
   const pageTitle =
     "KVP Calculator - Calculate Maturity Value for Kisan Vikas Patra";
   const pageDescription =
-    "Free online KVP calculator to estimate your maturity amount after 9 years 7 months. See how much your ₹ investment grows with Kisan Vikas Patra scheme.";
+    "Estimate KVP maturity value and learn about the Kisan Vikas Patra scheme including interest rate, tenure, and tax rules.";
   const canonicalUrl = "https://www.sipgo.in/kvp-calculator";
 
   return (
@@ -48,6 +48,7 @@ function KVP() {
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
+        <meta name="keywords" content="KVP Calculator, Kisan Vikas Patra Interest, KVP Maturity, KVP Tax, Savings Scheme India" />
         <link rel="canonical" href={canonicalUrl} />
 
         {/* Open Graph / Facebook */}
@@ -77,16 +78,17 @@ function KVP() {
             name: "KVP Calculator",
             description: pageDescription,
             url: canonicalUrl,
-            mainEntity: {
-              "@type": "FinancialProduct",
-              name: "Kisan Vikas Patra (KVP)",
-              description:
-                "A savings certificate scheme that doubles the investment in 9 years and 7 months",
-              brand: {
-                "@type": "Organization",
-                name: "Government of India",
-              },
+            "@id": "https://www.sipgo.in/kvp-calculator",
+            "hasPart": [
+            {
+              "@type": "FAQPage",
+              "@id": "https://www.sipgo.in/kvp-calculator#faq"
             },
+            {
+              "@type": "Article",
+              "@id": "https://www.sipgo.in/kvp-calculator#guide"
+            }
+          ],
           })}
         </script>
 
@@ -95,6 +97,7 @@ function KVP() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
+             "@id": "https://www.sipgo.in/kvp-calculator#breadcrumb",
             "itemListElement": [
               {
                 "@type": "ListItem",

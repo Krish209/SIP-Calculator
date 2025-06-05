@@ -4,13 +4,15 @@ const KVPInfo = () => {
   const datePublished = new Date("2024-06-01").toISOString();
   const dateModified = new Date("2024-06-01").toISOString();
   return (
-    <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
+    <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
 
       {/* Article as information Schema Markup */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
+          "url": "https://www.sipgo.in/kvp-calculator#guide",
+          "@id": "https://www.sipgo.in/kvp-calculator#guide",
           "headline": "Kisan Vikas Patra (KVP) – A Comprehensive Guide",
           "description": "Learn about KVP interest rates, eligibility, tax implications, and how to invest.",
           "image": "https://www.sipgo.in/images/logo",
@@ -301,7 +303,7 @@ const KVPInfo = () => {
           be more suitable.
         </p>
       </section>
-    </div>
+    </article>
   );
 };
 
