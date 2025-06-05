@@ -36,21 +36,7 @@ const KVPFAQ = () => {
 
   return (
     <div className="mx-auto mb-4 text-primary">
-      {/* SEO Structured Data - JSON-LD only */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": questions.map((q) => ({
-            "@type": "Question",
-            "name": q.question,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": q.answer,
-            },
-          })),
-        })}
-      </script>
+      
 
       <h2 className="text-xl md:text-2xl font-semibold text-center mb-4 md:mb-6">
         Frequently Asked Questions - KVP

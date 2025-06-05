@@ -6,46 +6,6 @@ const KVPInfo = () => {
   return (
     <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
 
-      {/* Article as information Schema Markup */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": "Kisan Vikas Patra (KVP) – A Comprehensive Guide",
-          "description": "Learn about KVP interest rates, eligibility, tax implications, and how to invest.",
-          "image": "https://www.sipgo.in/images/logo",
-          "author": {
-            "@type": "Organization",
-            "name": "SIPGo"
-          },
-          "datePublished": datePublished, // Add this
-          "dateModified":  dateModified, // Add this
-          "publisher": {
-            "@type": "Organization",
-            "name": "SIPGo",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://www.sipgo.in/logo.png"
-            }
-          },
-          "mainEntity": {
-          "@type": "Table",
-          "about": "KVP Guide Sections",
-          "table": [
-            "What is KVP?",
-            "Key Features of KVP",
-            "Who is Eligible?",
-            "Types of KVP Accounts",
-            "How Does KVP Work?",
-            "Taxation on KVP",
-            "Pros of KVP",
-            "Cons of KVP",
-            "How to Buy KVP?",
-            "Conclusion"
-          ]
-        }
-        })}
-      </script>
 
 
       <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
