@@ -1,8 +1,51 @@
 import React from "react";
 
 const DividendYieldInfo = () => {
+  const datePublished = new Date("2024-06-01").toISOString();
+  const dateModified = new Date("2024-06-01").toISOString();
   return (
-    <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
+    <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
+
+      {/* Article as information Schema Markup */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "url": "https://www.sipgo.in/dividend-calculator#guide",
+          "@id": "https://www.sipgo.in/dividend-calculator#guide",
+          "headline": "Dividend Calculator – Estimate Returns from Dividends",
+          "description": "Calculate your expected dividend income and dividend yield using SIPGo’s Dividend Calculator.",
+          "image": "https://www.sipgo.in/images/logo",
+          "author": {
+            "@type": "Organization",
+            "name": "SIPGo"
+          },
+          "datePublished": datePublished, // Add this
+          "dateModified":  dateModified, // Add this
+          "publisher": {
+            "@type": "Organization",
+            "name": "SIPGo",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.sipgo.in/logo.png"
+            }
+          },
+          "mainEntity": {
+          "@type": "Table",
+          "about": "Dividend Yield Guide Sections",
+          "table": [
+            "What is Dividend Yield?",
+            "Key Things to Understand",
+            "Who is Eligible?",
+            "How Does Dividend Yield Work?",
+            "Taxation on Dividend Income",
+            "Pros and Cons of High Dividend Yield",
+            "Conclusion"
+          ]
+        }
+        })}
+      </script>
+
       <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
         Dividend Yield - A Comprehensive Guide
       </h1>
@@ -175,7 +218,7 @@ const DividendYieldInfo = () => {
           yield with other metrics like payout ratio and growth stability.
         </p>
       </section>
-    </div>
+    </article>
   );
 };
 

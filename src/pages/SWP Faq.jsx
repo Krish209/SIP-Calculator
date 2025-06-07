@@ -58,6 +58,24 @@ const SWPFAQ = () => {
 
   return (
     <div className="mx-auto mb-4 text-primary">
+
+      {/* JSON-LD for FAQ */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "@id": "https://www.sipgo.in/swp-calculator#faq",
+          "mainEntity": questions.map((q) => ({
+            "@type": "Question",
+            "name": q.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": q.answer,
+            },
+          })),
+        })}
+      </script>
+
       <h2 className="text-xl md:text-2xl font-semibold text-center mb-4 md:mb-6">
         Frequently Asked Questions - SWP
       </h2>

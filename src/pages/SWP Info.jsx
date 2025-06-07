@@ -2,6 +2,8 @@ import React from "react";
 import Table from "../consts/Table";
 
 const SWPInfo = () => {
+  const datePublished = new Date("2024-06-01").toISOString();
+  const dateModified = new Date("2024-06-01").toISOString();
   const columns = [
     { key: "feature", header: "Feature" },
     { key: "sip", header: "SIP" },
@@ -32,7 +34,52 @@ const SWPInfo = () => {
   ];
 
   return (
-    <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
+    <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
+
+      {/* Article as information Schema Markup */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "url": "https://www.sipgo.in/SWP-calculator#guide",
+          "@id": "https://www.sipgo.in/SWP-calculator#guide",
+          "headline": "SWP Calculator – Systematic Withdrawal Planning Tool",
+          "description": "Plan regular withdrawals from your investments with the SWP Calculator. Estimate monthly payout and balance.",
+          "image": "https://www.sipgo.in/images/logo",
+          "author": {
+            "@type": "Organization",
+            "name": "SIPGo"
+          },
+          "datePublished": datePublished, // Add this
+          "dateModified":  dateModified, // Add this
+          "publisher": {
+            "@type": "Organization",
+            "name": "SIPGo",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.sipgo.in/logo.png"
+            }
+          },
+          "mainEntity": {
+          "@type": "Table",
+          "about": "KVP Guide Sections",
+          "table": [
+            "What is a SWP?",
+            "Key Features of SWP",
+            "How Does SWP Work?",
+            "Types of SWP",
+            "Benefits of SWP",
+            "Pros",
+            "Cons",
+            "Key Considerations for SWP",
+            "Tax Implications of SWP",
+            "SWP vs SIP",
+            "Conclusion"
+          ]
+        }
+        })}
+      </script>
+
       <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
         SWP - A Comprehensive Guide
       </h1>
@@ -64,7 +111,7 @@ const SWPInfo = () => {
       {/* Key Features */}
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          Key Features
+          Key Features of SWP
         </h2>
         <ul className="list-disc pl-6 space-y-1">
           <li>
@@ -363,7 +410,7 @@ const SWPInfo = () => {
           preserving your investment corpus.
         </p>
       </section>
-    </div>
+    </article>
   );
 };
 

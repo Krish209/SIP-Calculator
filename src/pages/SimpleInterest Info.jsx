@@ -1,8 +1,46 @@
 import React, { useState } from "react";
 
 const SimpleInterestInfo = () => {
+  const datePublished = new Date("2024-06-01").toISOString();
+  const dateModified = new Date("2024-06-01").toISOString();
   return (
-    <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
+    <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
+
+      {/* Article as information Schema Markup */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "url": "https://www.sipgo.in/simple-interest-calculator#guide",
+          "@id": "https://www.sipgo.in/simple-interest-calculator#guide",
+          "headline": "Simple Interest Calculator – Quick Interest Computation",
+          "description": "Easily compute the interest earned on your investment with our Simple Interest Calculator.",
+          "image": "https://www.sipgo.in/images/logo",
+          "author": {
+            "@type": "Organization",
+            "name": "SIPGo"
+          },
+          "datePublished": datePublished, // Add this
+          "dateModified":  dateModified, // Add this
+          "publisher": {
+            "@type": "Organization",
+            "name": "SIPGo",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.sipgo.in/logo.png"
+            }
+          },
+          "mainEntity": {
+          "@type": "Table",
+          "about": "Simple Interest Guide Sections",
+          "table": [
+            "Real-World Applications",
+            "Limitations of Simple Interest"
+          ]
+        }
+        })}
+      </script>
+
       <h1 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         Simple Interest - A Comprehensive Guide
       </h1>
@@ -66,7 +104,7 @@ const SimpleInterestInfo = () => {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          Real-World Applications:
+          Real-World Applications
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
@@ -82,7 +120,7 @@ const SimpleInterestInfo = () => {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          Limitations of Simple Interest:
+          Limitations of Simple Interest
         </h2>
         <p>
           Simple interest doesn’t take the compounding effect into account,
@@ -91,7 +129,7 @@ const SimpleInterestInfo = () => {
           costs.
         </p>
       </section>
-    </div>
+    </article>
   );
 };
 

@@ -49,7 +49,6 @@ const KVPInfo = () => {
         })}
       </script>
 
-
       <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
         Kisan Vikas Patra (KVP) – A Comprehensive Guide
       </h1>

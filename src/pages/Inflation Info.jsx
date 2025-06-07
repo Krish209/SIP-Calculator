@@ -1,8 +1,50 @@
 import React from "react";
 
 const InflationInfo = () => {
+  const datePublished = new Date("2024-06-01").toISOString();
+  const dateModified = new Date("2024-06-01").toISOString();
   return (
-    <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
+    <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
+
+      {/* Article as information Schema Markup */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "url": "https://www.sipgo.in/inflation-calculator#guide",
+          "@id": "https://www.sipgo.in/inflation-calculator#guide",
+          "headline": "Inflation Calculator – Understand the Real Value of Money",
+          "description": "Calculate the impact of inflation on your money over time to make better financial decisions.",
+          "image": "https://www.sipgo.in/images/logo",
+          "author": {
+            "@type": "Organization",
+            "name": "SIPGo"
+          },
+          "datePublished": datePublished, // Add this
+          "dateModified":  dateModified, // Add this
+          "publisher": {
+            "@type": "Organization",
+            "name": "SIPGo",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.sipgo.in/logo.png"
+            }
+          },
+          "mainEntity": {
+          "@type": "Table",
+          "about": "Inflation Guide Sections",
+          "table": [
+            "What is Inflation?",
+            "Causes of Inflation",
+            "Types of Inflation",
+            "Measuring Inflation",
+            "Consequences of Inflation",
+            "Inflation Control Measures"
+          ]
+        }
+        })}
+      </script>
+
       <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
         Inflation - A Comprehensive Guide
       </h1>
@@ -197,7 +239,7 @@ const InflationInfo = () => {
           </li>
         </ul>
       </section>
-    </div>
+    </article>
   );
 };
 

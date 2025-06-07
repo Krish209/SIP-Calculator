@@ -1,8 +1,52 @@
 import React from "react";
 
 const RDInfo = () => {
+  const datePublished = new Date("2024-06-01").toISOString();
+  const dateModified = new Date("2024-06-01").toISOString();
   return (
-    <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
+    <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
+
+      {/* Article as information Schema Markup */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "url": "https://www.sipgo.in/rd-calculator#guide",
+          "@id": "https://www.sipgo.in/rd-calculator#guide",
+          "headline": "RD Calculator – Recurring Deposit Interest and Maturity Calculator",
+          "description": "Estimate your monthly savings growth using the RD Calculator. Calculate returns and total maturity from recurring deposits.",
+          "image": "https://www.sipgo.in/images/logo",
+          "author": {
+            "@type": "Organization",
+            "name": "SIPGo"
+          },
+          "datePublished": datePublished, // Add this
+          "dateModified":  dateModified, // Add this
+          "publisher": {
+            "@type": "Organization",
+            "name": "SIPGo",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.sipgo.in/logo.png"
+            }
+          },
+          "mainEntity": {
+          "@type": "Table",
+          "about": "RD Guide Sections",
+          "table": [
+            "What is an RD?",
+            "Benefits of RD",
+            "How to Open an RD?",
+            "How Does RD Work?",
+            "Interest Rates on RDs",
+            "Tax on RDs",
+            "Premature Withdrawal and Penalty",
+            "Conclusion"
+          ]
+        }
+        })}
+      </script>
+
       <h1 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         Recurring Deposit (RD) - A Comprehensive Guide
       </h1>
@@ -88,7 +132,7 @@ const RDInfo = () => {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          How does RD Work?
+          How Does RD Work?
         </h2>
         <p className="mb-2">
           The maturity amount of a Recurring Deposit (RD) is calculated using
@@ -262,7 +306,7 @@ const RDInfo = () => {
           addition to your financial portfolio.
         </p>
       </section>
-    </div>
+    </article>
   );
 };
 

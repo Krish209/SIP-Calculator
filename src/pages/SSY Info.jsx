@@ -1,8 +1,51 @@
 import React from "react";
 
 function SSYInfo() {
+  const datePublished = new Date("2024-06-01").toISOString();
+  const dateModified = new Date("2024-06-01").toISOString();
   return (
-    <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
+    <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
+
+      {/* Article as information Schema Markup */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "url": "https://www.sipgo.in/ssy-calculator#guide",
+          "@id": "https://www.sipgo.in/ssy-calculator#guide",
+          "headline": "SSY Calculator – Sukanya Samriddhi Yojana Growth Planner",
+          "description": "Plan your daughter's future with the SSY Calculator. Calculate interest and maturity value for Sukanya Samriddhi Yojana.",
+          "image": "https://www.sipgo.in/images/logo",
+          "author": {
+            "@type": "Organization",
+            "name": "SIPGo"
+          },
+          "datePublished": datePublished, // Add this
+          "dateModified":  dateModified, // Add this
+          "publisher": {
+            "@type": "Organization",
+            "name": "SIPGo",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.sipgo.in/logo.png"
+            }
+          },
+          "mainEntity": {
+          "@type": "Table",
+          "about": "SSY Guide Sections",
+          "table": [
+            "What is Sukanya Samriddhi Yojana?",
+            "Key Features of SSY",
+            "How to Open an SSY Account",
+            "Pros of SSY",
+            "Cons of SSY",
+            "Who Should Invest in SSY?",
+            "Conclusion"
+          ]
+        }
+        })}
+      </script>
+
       <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
         SSY - A Comprehensive Guide
       </h1>
@@ -180,7 +223,7 @@ function SSYInfo() {
           empowerment of the girl child in India.
         </p>
       </section>
-    </div>
+    </article>
   );
 }
 

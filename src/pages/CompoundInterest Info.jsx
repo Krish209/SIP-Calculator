@@ -1,8 +1,50 @@
 import React from "react";
 
 const CompoundingInterestInfo = () => {
+  const datePublished = new Date("2024-06-01").toISOString();
+  const dateModified = new Date("2024-06-01").toISOString();
   return (
-    <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
+    <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
+
+      {/* Article as information Schema Markup */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "url": "https://www.sipgo.in/compound-interest-calculator#guide",
+          "@id": "https://www.sipgo.in/compound-interest-calculator#guide",
+          "headline": "Compound Interest Calculator – Wealth Growth Tool",
+          "description": "Understand the power of compounding with this Compound Interest Calculator. Estimate long-term returns.",
+          "image": "https://www.sipgo.in/images/logo",
+          "author": {
+            "@type": "Organization",
+            "name": "SIPGo"
+          },
+          "datePublished": datePublished, // Add this
+          "dateModified":  dateModified, // Add this
+          "publisher": {
+            "@type": "Organization",
+            "name": "SIPGo",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.sipgo.in/logo.png"
+            }
+          },
+          "mainEntity": {
+          "@type": "Table",
+          "about": "Compound Interest Guide Sections",
+          "table": [
+            "What is Compound Interest?",
+            "How Compound Interest Works",
+            "Benefits of Compound Interest",
+            "Types of Compound Interest",
+            "Compound Interest vs. Simple Interest",
+           
+          ]
+        }
+        })}
+      </script>
+
       <h1 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         Compound Interest - A Comprehensive Guide
       </h1>
@@ -195,7 +237,7 @@ const CompoundingInterestInfo = () => {
           earnings grow exponentially over time.
         </p>
       </section>
-    </div>
+    </article>
   );
 };
 

@@ -1,8 +1,52 @@
 import React from "react";
 
 const FdInfo = () => {
+  const datePublished = new Date("2024-06-01").toISOString();
+  const dateModified = new Date("2024-06-01").toISOString();
   return (
-    <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
+    <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
+
+      {/* Article as information Schema Markup */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "url": "https://www.sipgo.in/fd-calculator#guide",
+          "@id": "https://www.sipgo.in/fd-calculator#guide",
+          "headline": "FD Calculator – Fixed Deposit Maturity and Interest Estimator",
+          "description": "Calculate your fixed deposit interest and maturity amount based on deposit amount, tenure, and interest rate with SIPGo's FD Calculator.",
+          "image": "https://www.sipgo.in/images/logo",
+          "author": {
+            "@type": "Organization",
+            "name": "SIPGo"
+          },
+          "datePublished": datePublished, // Add this
+          "dateModified":  dateModified, // Add this
+          "publisher": {
+            "@type": "Organization",
+            "name": "SIPGo",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.sipgo.in/logo.png"
+            }
+          },
+          "mainEntity": {
+          "@type": "Table",
+          "about": "FD Guide Sections",
+          "table": [
+            "What is a FD?",
+            "Key Features of FD",
+            "Advantages of FDs",
+            "Deposit Insurance Coverage",
+            "Types of FDs",
+            "Choosing the Right FD Investment",
+            "Things to Consider",
+            "Is an FD Investment Right for You?"
+          ]
+        }
+        })}
+      </script>
+
       <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
         FD - A Comprehensive Guide
       </h1>
@@ -24,7 +68,7 @@ const FdInfo = () => {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          Key Features of FDs:
+          Key Features of FDs
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
@@ -69,7 +113,7 @@ const FdInfo = () => {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          How FD Investment Works:
+          How FD Investment Works
         </h2>
         <ul className="list-decimal pl-6 space-y-2">
           <li>
@@ -108,7 +152,7 @@ const FdInfo = () => {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          Advantages of FDs:
+          Advantages of FDs
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
@@ -147,7 +191,7 @@ const FdInfo = () => {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          Deposit Insurance Coverage:
+          Deposit Insurance Coverage
         </h2>
         <p className="mb-2">
           In India, Fixed Deposits placed with scheduled banks are protected by
@@ -176,7 +220,7 @@ const FdInfo = () => {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          Types of FDs:
+          Types of FDs
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
@@ -208,7 +252,7 @@ const FdInfo = () => {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          Choosing the Right FD Investment:
+          Choosing the Right FD Investment
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
@@ -234,7 +278,7 @@ const FdInfo = () => {
 
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          Things to Consider:
+          Things to Consider
         </h2>
         <ul className="list-decimal pl-6 space-y-2">
           <li>
@@ -275,7 +319,7 @@ const FdInfo = () => {
           <li>Need quick access to your funds (higher liquidity).</li>
         </ul>
       </section>
-    </div>
+    </article>
   );
 };
 

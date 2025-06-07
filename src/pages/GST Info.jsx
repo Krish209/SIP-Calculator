@@ -1,8 +1,56 @@
 import React from "react";
 
 const GSTInfo = () => {
+  const datePublished = new Date("2024-06-01").toISOString();
+  const dateModified = new Date("2024-06-01").toISOString();
   return (
-    <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
+    <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
+
+      {/* Article as information Schema Markup */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "url": "https://www.sipgo.in/gst-calculator#guide",
+          "@id": "https://www.sipgo.in/gst-calculator#guide",
+          "headline": "GST Calculator – Quick Tax Estimator for Goods and Services",
+          "description": "Easily calculate GST amount on sales or purchases with our comprehensive GST Calculator for various rates.",
+          "image": "https://www.sipgo.in/images/logo",
+          "author": {
+            "@type": "Organization",
+            "name": "SIPGo"
+          },
+          "datePublished": datePublished, // Add this
+          "dateModified":  dateModified, // Add this
+          "publisher": {
+            "@type": "Organization",
+            "name": "SIPGo",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.sipgo.in/logo.png"
+            }
+          },
+          "mainEntity": {
+          "@type": "Table",
+          "about": "GST Guide Sections",
+          "table": [
+            "What is GST?",
+            "Key Features of GST",
+            "Types of GST",
+            "GST Calculation Formula",
+            "GST Rates",
+            "Benefits of GST",
+            "Input Tax Credit (ITC)",
+            "GST Registration",
+            "GST Returns",
+            "Challenges of GST",
+            "GST and E-commerce",
+            "Conclusion"
+          ]
+        }
+        })}
+      </script>
+
       <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
         GST - A Comprehensive Guide
       </h1>
@@ -290,7 +338,7 @@ const GSTInfo = () => {
           providing a simplified tax system for businesses.
         </p>
       </section>
-    </div>
+    </article>
   );
 };
 

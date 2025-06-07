@@ -2,6 +2,8 @@ import React from "react";
 import Table from "../consts/Table";
 
 const StepUpSIPInfo = () => {
+  const datePublished = new Date("2024-06-01").toISOString();
+  const dateModified = new Date("2024-06-01").toISOString();
   const columns = [
   { key: 'details', header: 'Details' },
   { key: 'sip', header: 'SIP' },
@@ -42,7 +44,50 @@ const data = [
 ];
 
   return (
-    <div className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
+    <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
+
+      {/* Article as information Schema Markup */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "url": "https://www.sipgo.in/step-up-sip-calculator#guide",
+          "@id": "https://www.sipgo.in/step-up-sip-calculator#guide",
+          "headline": "Step-Up SIP Calculator – Calculate Increasing Investment Returns",
+          "description": "Evaluate your returns by increasing your SIP annually. Plan more effectively with our Step-Up SIP Calculator.",
+          "image": "https://www.sipgo.in/images/logo",
+          "author": {
+            "@type": "Organization",
+            "name": "SIPGo"
+          },
+          "datePublished": datePublished, // Add this
+          "dateModified":  dateModified, // Add this
+          "publisher": {
+            "@type": "Organization",
+            "name": "SIPGo",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.sipgo.in/logo.png"
+            }
+          },
+          "mainEntity": {
+          "@type": "Table",
+          "about": "Step-Up SIP Guide Sections",
+          "table": [
+            "What is a Step-Up SIP?",
+            "Key Features of Step-Up SIP",
+            "How Does Step-Up SIP Work?",
+            "Benefits of Step-Up SIP",
+            "Key Considerations for Step-Up SIP",
+            "Pros",
+            "Cons",
+            "Who Should Invest in Step-Up SIP?",
+            "Conclusion"
+          ]
+        }
+        })}
+      </script>
+
       <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
         Step-Up SIP - A Comprehensive Guide
       </h1>
@@ -70,7 +115,7 @@ const data = [
       {/* Key Features */}
       <section className="my-4 md:my-6">
         <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          Key Features
+          Key Features of Step-Up SIP
         </h2>
         <ul className="list-disc pl-6 space-y-1">
           <li>
@@ -283,7 +328,7 @@ const data = [
           portfolio can significantly improve your financial future.
         </p>
       </section>
-    </div>
+    </article>
   );
 };
 
