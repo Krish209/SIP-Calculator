@@ -36,7 +36,7 @@ function KVP() {
       Math.max(0, Math.min(Number(e.target.value), maxInvestmentAmount))
     );
 
-  // Inside your KVP component, before the return statement:
+  // For schema
   const pageTitle =
     "KVP Calculator - Calculate Maturity Value for Kisan Vikas Patra";
   const pageDescription =

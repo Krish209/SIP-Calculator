@@ -127,8 +127,78 @@ function FDCalculator() {
       Math.max(0, Math.min(Number(e.target.value), maxInvestmentPeriod))
     );
 
+  // Schema
+  const pageTitle = "FD Calculator - Calculate Fixed Deposit Interest Online";
+  const pageDescription = "Estimate maturity value and interest earned on your Fixed Deposit investment using our easy FD Calculator. Supports both cumulative and non-cumulative FDs.";
+  const canonicalUrl = "https://www.sipgo.in/fd-calculator";
+
   return (
-    <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
+    <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">    
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content="FD Calculator, Fixed Deposit Returns, FD Interest, FD Maturity Value" />
+        <link rel="canonical" href={canonicalUrl} />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:image" content="https://www.sipgo.in/images/fd-calculator-og.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content="https://www.sipgo.in/images/fd-calculator-twitter.jpg" />
+
+        {/* Schema Markup */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "FD Calculator",
+            description: pageDescription,
+            url: canonicalUrl,
+            "@id": "https://www.sipgo.in/fd-calculator",
+            "hasPart": [
+              {
+                "@type": "FAQPage",
+                "@id": "https://www.sipgo.in/fd-calculator#faq"
+              },
+              {
+                "@type": "Article",
+                "@id": "https://www.sipgo.in/fd-calculator#guide"
+              }
+            ],
+          })}
+        </script>
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://www.sipgo.in/fd-calculator#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.sipgo.in/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "FD Calculator",
+                "item": "https://www.sipgo.in/fd-calculator"
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
+
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
         FD Calculator
       </h1>

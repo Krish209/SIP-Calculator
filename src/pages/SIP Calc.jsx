@@ -216,8 +216,66 @@ function SIPCalculator() {
     isSIP,
   ]);
 
+  // For schema for sip
+  const pageTitle = isSIP
+    ? "SIP Calculator - Calculate Monthly SIP Returns Online"
+    : "Lumpsum Calculator - Calculate Returns on One-Time Investment";
+
+  const pageDescription = isSIP
+    ? "Use our SIP Calculator to estimate your mutual fund returns based on investment amount, duration, and expected rate of return. Start planning your investments today."
+    : "Estimate the future value of your one-time mutual fund investment using our Lumpsum Calculator. Ideal for long-term wealth creation planning.";
+
+  const canonicalUrl = isSIP
+    ? "https://www.sipgo.in/sip-calculator"
+    : "https://www.sipgo.in/lumpsum-calculator";
+
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
+      <Helmet>
+        <title>SIP Calculator - Systematic Investment Plan Returns</title>
+        <meta name="description" content="Calculate SIP returns and estimate your investment maturity with our online SIP calculator. Understand how compounding works for mutual funds." />
+        <meta name="keywords" content="SIP Calculator, Mutual Fund SIP Returns, Investment Planning, SIP Maturity, Compounding Calculator" />
+        <link rel="canonical" href="https://www.sipgo.in/sip-calculator" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.sipgo.in/sip-calculator" />
+        <meta property="og:title" content="SIP Calculator - Systematic Investment Plan Returns" />
+        <meta property="og:description" content="Calculate SIP returns and estimate your investment maturity with our online SIP calculator. Understand how compounding works for mutual funds." />
+        <meta property="og:image" content="https://www.sipgo.in/images/sip-calculator-og.jpg" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="SIP Calculator - Systematic Investment Plan Returns" />
+        <meta name="twitter:description" content="Calculate SIP returns and estimate your investment maturity with our online SIP calculator. Understand how compounding works for mutual funds." />
+        <meta name="twitter:image" content="https://www.sipgo.in/images/sip-calculator-twitter.jpg" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "SIP Calculator",
+            description: "Calculate SIP returns and estimate your investment maturity with our online SIP calculator. Understand how compounding works for mutual funds.",
+            url: "https://www.sipgo.in/sip-calculator",
+            "@id": "https://www.sipgo.in/sip-calculator",
+            hasPart: [
+              { "@type": "FAQPage", "@id": "https://www.sipgo.in/sip-calculator#faq" },
+              { "@type": "Article", "@id": "https://www.sipgo.in/sip-calculator#guide" }
+            ]
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://www.sipgo.in/sip-calculator#breadcrumb",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sipgo.in/" },
+              { "@type": "ListItem", position: 2, name: "SIP Calculator", item: "https://www.sipgo.in/sip-calculator" }
+            ]
+          })}
+        </script>
+      </Helmet>
+
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
         {isSIP ? "SIP Calculator" : "Lump Sum Calculator"}
       </h1>

@@ -29,7 +29,7 @@ function EMI() {
   const loanType = getLoanTypeFromPath(path);
   const initial = defaultValues[loanType] || defaultValues["emi"];
 
-  const [pageTitle, setPageTitle] = useState("EMI Calculator");
+  const [pageTitles, setpageTitles] = useState("EMI Calculator");
 
   // Map routes to headings
   const titleMap = {
@@ -43,7 +43,7 @@ function EMI() {
   useEffect(() => {
     const currentPath = location.pathname;
     const matchedTitle = titleMap[currentPath] || "Loan Calculator";
-    setPageTitle(matchedTitle);
+    setpageTitles(matchedTitle);
     document.title = matchedTitle;
 
     const type = getLoanTypeFromPath(location.pathname);
@@ -168,10 +168,64 @@ function EMI() {
   const handleLoanTenureChange = (e) =>
     setLoanTenure(Math.max(0, Math.min(Number(e.target.value), maxLoanTenure)));
 
+  // For Schema
+  const pageTitle = "EMI Calculator - Calculate Loan EMI Instantly";
+  const pageDescription = "Calculate your monthly EMI for any type of loan using our EMI Calculator. Adjust loan amount, interest rate, and tenure to compare results.";
+  const canonicalUrl = "https://www.sipgo.in/emi-calculator";
+
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
+      <Helmet>
+        <title>EMI Calculator - Calculate Your Loan EMI Easily</title>
+        <meta name="description" content="Calculate your loan EMI for home, car, personal or education loans using our easy-to-use EMI Calculator." />
+        <meta name="keywords" content="EMI Calculator, Loan EMI, Home Loan EMI, Car Loan EMI, Personal Loan EMI" />
+        <link rel="canonical" href="https://www.sipgo.in/emi-calculator" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.sipgo.in/emi-calculator" />
+        <meta property="og:title" content="EMI Calculator - Calculate Your Loan EMI Easily" />
+        <meta property="og:description" content="Calculate your loan EMI for home, car, personal or education loans using our easy-to-use EMI Calculator." />
+        <meta property="og:image" content="https://www.sipgo.in/images/emi-calculator-og.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="EMI Calculator - Calculate Your Loan EMI Easily" />
+        <meta name="twitter:description" content="Calculate your loan EMI for home, car, personal or education loans using our easy-to-use EMI Calculator." />
+        <meta name="twitter:image" content="https://www.sipgo.in/images/emi-calculator-twitter.jpg" />
+
+        {/* Schema Markup */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "EMI Calculator",
+            description: "Calculate your loan EMI for home, car, personal or education loans using our easy-to-use EMI Calculator.",
+            url: "https://www.sipgo.in/emi-calculator",
+            "@id": "https://www.sipgo.in/emi-calculator",
+            "hasPart": [
+              { "@type": "FAQPage", "@id": "https://www.sipgo.in/emi-calculator#faq" },
+              { "@type": "Article", "@id": "https://www.sipgo.in/emi-calculator#guide" }
+            ],
+          })}
+        </script>
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://www.sipgo.in/emi-calculator#breadcrumb",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sipgo.in/" },
+              { "@type": "ListItem", "position": 2, "name": "EMI Calculator", "item": "https://www.sipgo.in/emi-calculator" }
+            ]
+          })}
+        </script>
+      </Helmet>
+
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
-        {pageTitle}
+        {pageTitles}
       </h1>
 
       {/* User Inputs Section */}

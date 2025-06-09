@@ -136,8 +136,62 @@ function RD() {
       Math.max(0, Math.min(Number(e.target.value), maxInvestmentPeriod))
     );
 
+  // For Schema
+  const pageTitle = "RD Calculator - Calculate Recurring Deposit Maturity Value";
+  const pageDescription = "Estimate returns and maturity value on your recurring deposit using our RD Calculator. Helps plan monthly savings effectively.";
+  const canonicalUrl = "https://www.sipgo.in/rd-calculator";
+
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
+      <Helmet>
+        <title>RD Calculator - Calculate Recurring Deposit Returns</title>
+        <meta name="description" content="Calculate your recurring deposit maturity value and interest using our RD Calculator with flexible tenure and rates." />
+        <meta name="keywords" content="RD Calculator, Recurring Deposit Returns, RD Interest, RD Maturity Value" />
+        <link rel="canonical" href="https://www.sipgo.in/rd-calculator" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.sipgo.in/rd-calculator" />
+        <meta property="og:title" content="RD Calculator - Calculate Recurring Deposit Returns" />
+        <meta property="og:description" content="Calculate your recurring deposit maturity value and interest using our RD Calculator with flexible tenure and rates." />
+        <meta property="og:image" content="https://www.sipgo.in/images/rd-calculator-og.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="RD Calculator - Calculate Recurring Deposit Returns" />
+        <meta name="twitter:description" content="Calculate your recurring deposit maturity value and interest using our RD Calculator with flexible tenure and rates." />
+        <meta name="twitter:image" content="https://www.sipgo.in/images/rd-calculator-twitter.jpg" />
+
+        {/* Schema Markup */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "RD Calculator",
+            description: "Calculate your recurring deposit maturity value and interest using our RD Calculator with flexible tenure and rates.",
+            url: "https://www.sipgo.in/rd-calculator",
+            "@id": "https://www.sipgo.in/rd-calculator",
+            "hasPart": [
+              { "@type": "FAQPage", "@id": "https://www.sipgo.in/rd-calculator#faq" },
+              { "@type": "Article", "@id": "https://www.sipgo.in/rd-calculator#guide" }
+            ],
+          })}
+        </script>
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://www.sipgo.in/rd-calculator#breadcrumb",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sipgo.in/" },
+              { "@type": "ListItem", "position": 2, "name": "RD Calculator", "item": "https://www.sipgo.in/rd-calculator" }
+            ]
+          })}
+        </script>
+      </Helmet>
+
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
         Recurring Deposit Calculator
       </h1>

@@ -156,8 +156,63 @@ function NPSCalculator() {
       Math.max(0, Math.min(Number(e.target.value), maxannuityReturn))
     );
 
+  // For Schema
+  const pageTitle = "NPS Calculator - Calculate National Pension Scheme Returns";
+  const pageDescription = "Plan your retirement with our NPS Calculator. Calculate your expected pension wealth, annuity income, and lump sum at retirement.";
+  const canonicalUrl = "https://www.sipgo.in/nps-calculator";
+
+
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
+      <Helmet>
+        <title>NPS Calculator - Calculate National Pension Scheme Returns</title>
+        <meta name="description" content="Estimate your pension corpus and returns with our NPS Calculator based on your contributions and tenure." />
+        <meta name="keywords" content="NPS Calculator, National Pension Scheme, Pension Calculator, NPS Returns" />
+        <link rel="canonical" href="https://www.sipgo.in/nps-calculator" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.sipgo.in/nps-calculator" />
+        <meta property="og:title" content="NPS Calculator - Calculate National Pension Scheme Returns" />
+        <meta property="og:description" content="Estimate your pension corpus and returns with our NPS Calculator based on your contributions and tenure." />
+        <meta property="og:image" content="https://www.sipgo.in/images/nps-calculator-og.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="NPS Calculator - Calculate National Pension Scheme Returns" />
+        <meta name="twitter:description" content="Estimate your pension corpus and returns with our NPS Calculator based on your contributions and tenure." />
+        <meta name="twitter:image" content="https://www.sipgo.in/images/nps-calculator-twitter.jpg" />
+
+        {/* Schema Markup */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "NPS Calculator",
+            description: "Estimate your pension corpus and returns with our NPS Calculator based on your contributions and tenure.",
+            url: "https://www.sipgo.in/nps-calculator",
+            "@id": "https://www.sipgo.in/nps-calculator",
+            "hasPart": [
+              { "@type": "FAQPage", "@id": "https://www.sipgo.in/nps-calculator#faq" },
+              { "@type": "Article", "@id": "https://www.sipgo.in/nps-calculator#guide" }
+            ],
+          })}
+        </script>
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://www.sipgo.in/nps-calculator#breadcrumb",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sipgo.in/" },
+              { "@type": "ListItem", "position": 2, "name": "NPS Calculator", "item": "https://www.sipgo.in/nps-calculator" }
+            ]
+          })}
+        </script>
+      </Helmet>
+
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
         NPS Calculator
       </h1>

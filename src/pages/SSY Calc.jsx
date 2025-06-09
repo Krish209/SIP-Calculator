@@ -127,9 +127,65 @@ function SSY() {
     );
     setStartingPeriod(value);
   };
+ 
+  // For Schema
+  const pageTitle = "SSY Calculator - Sukanya Samriddhi Yojana Maturity Calculator";
+  const pageDescription = "Calculate the maturity amount and interest earned on your SSY account using our Sukanya Samriddhi Yojana Calculator. Ideal for girl child savings planning.";
+  const canonicalUrl = "https://www.sipgo.in/ssy-calculator";
+
+  
 
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
+      <Helmet>
+        <title>SSY Calculator - Calculate Sukanya Samriddhi Yojana Returns</title>
+        <meta name="description" content="Estimate your SSY returns with varying interest rates and tenures using our SSY Calculator." />
+        <meta name="keywords" content="SSY Calculator, Sukanya Samriddhi Yojana, SSY Interest, SSY Maturity Value" />
+        <link rel="canonical" href="https://www.sipgo.in/ssy-calculator" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.sipgo.in/ssy-calculator" />
+        <meta property="og:title" content="SSY Calculator - Calculate Sukanya Samriddhi Yojana Returns" />
+        <meta property="og:description" content="Estimate your SSY returns with varying interest rates and tenures using our SSY Calculator." />
+        <meta property="og:image" content="https://www.sipgo.in/images/ssy-calculator-og.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="SSY Calculator - Calculate Sukanya Samriddhi Yojana Returns" />
+        <meta name="twitter:description" content="Estimate your SSY returns with varying interest rates and tenures using our SSY Calculator." />
+        <meta name="twitter:image" content="https://www.sipgo.in/images/ssy-calculator-twitter.jpg" />
+
+        {/* Schema Markup */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "SSY Calculator",
+            description: "Estimate your SSY returns with varying interest rates and tenures using our SSY Calculator.",
+            url: "https://www.sipgo.in/ssy-calculator",
+            "@id": "https://www.sipgo.in/ssy-calculator",
+            "hasPart": [
+              { "@type": "FAQPage", "@id": "https://www.sipgo.in/ssy-calculator#faq" },
+              { "@type": "Article", "@id": "https://www.sipgo.in/ssy-calculator#guide" }
+            ],
+          })}
+        </script>
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://www.sipgo.in/ssy-calculator#breadcrumb",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sipgo.in/" },
+              { "@type": "ListItem", "position": 2, "name": "SSY Calculator", "item": "https://www.sipgo.in/ssy-calculator" }
+            ]
+          })}
+        </script>
+      </Helmet>
+
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
         Sukanya Samriddhi Yojana Calculator
       </h1>

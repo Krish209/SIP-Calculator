@@ -161,8 +161,62 @@ function PPF() {
   const handleCompoundFrequencyChange = (e) =>
     setCompoundFrequency(Number(e.target.value));
 
+  // Schema
+  const pageTitle = "PPF Calculator - Calculate Public Provident Fund Returns";
+  const pageDescription = "Use our PPF Calculator to estimate your Public Provident Fund maturity amount, interest earned, and investment planning over 15 years.";
+  const canonicalUrl = "https://www.sipgo.in/ppf-calculator";
+
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
+      <Helmet>
+        <title>PPF Calculator - Calculate Public Provident Fund Returns</title>
+        <meta name="description" content="Calculate your Public Provident Fund returns and maturity amount with our easy-to-use PPF Calculator." />
+        <meta name="keywords" content="PPF Calculator, Public Provident Fund, PPF Returns, Investment Calculator" />
+        <link rel="canonical" href="https://www.sipgo.in/ppf-calculator" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.sipgo.in/ppf-calculator" />
+        <meta property="og:title" content="PPF Calculator - Calculate Public Provident Fund Returns" />
+        <meta property="og:description" content="Calculate your Public Provident Fund returns and maturity amount with our easy-to-use PPF Calculator." />
+        <meta property="og:image" content="https://www.sipgo.in/images/ppf-calculator-og.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="PPF Calculator - Calculate Public Provident Fund Returns" />
+        <meta name="twitter:description" content="Calculate your Public Provident Fund returns and maturity amount with our easy-to-use PPF Calculator." />
+        <meta name="twitter:image" content="https://www.sipgo.in/images/ppf-calculator-twitter.jpg" />
+
+        {/* Schema Markup */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "PPF Calculator",
+            description: "Calculate your Public Provident Fund returns and maturity amount with our easy-to-use PPF Calculator.",
+            url: "https://www.sipgo.in/ppf-calculator",
+            "@id": "https://www.sipgo.in/ppf-calculator",
+            "hasPart": [
+              { "@type": "FAQPage", "@id": "https://www.sipgo.in/ppf-calculator#faq" },
+              { "@type": "Article", "@id": "https://www.sipgo.in/ppf-calculator#guide" }
+            ],
+          })}
+        </script>
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://www.sipgo.in/ppf-calculator#breadcrumb",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sipgo.in/" },
+              { "@type": "ListItem", "position": 2, "name": "PPF Calculator", "item": "https://www.sipgo.in/ppf-calculator" }
+            ]
+          })}
+        </script>
+      </Helmet>
+
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
         PPF Calculator
       </h1>

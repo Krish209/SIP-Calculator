@@ -52,8 +52,58 @@ function DividendYieldCalc() {
     setSharePrice(value);
   };
 
+  // For Schema
+  const pageTitle = "Dividend Calculator - Estimate Dividend Income & Yield";
+  const pageDescription = "Calculate your expected dividend income and yield based on shares held and dividend declared. Plan your income from equity investments more effectively.";
+  const canonicalUrl = "https://www.sipgo.in/dividend-calculator";
+
   return (
-    <div className="max-w-screen-lg md:mx-auto p-4 bg-white text-night">
+    <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
+      <Helmet>
+        <title>Dividend Calculator - Estimate Earnings from Stocks</title>
+        <meta name="description" content="Calculate your dividend income and yield with our dividend calculator. Useful for long-term investors and passive income seekers." />
+        <meta name="keywords" content="Dividend Calculator, Dividend Income, Stock Yield, Passive Income, Dividend Yield Calculator" />
+        <link rel="canonical" href="https://www.sipgo.in/dividend-calculator" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.sipgo.in/dividend-calculator" />
+        <meta property="og:title" content="Dividend Calculator - Estimate Earnings from Stocks" />
+        <meta property="og:description" content="Calculate your dividend income and yield with our dividend calculator. Useful for long-term investors and passive income seekers." />
+        <meta property="og:image" content="https://www.sipgo.in/images/dividend-calculator-og.jpg" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Dividend Calculator - Estimate Earnings from Stocks" />
+        <meta name="twitter:description" content="Calculate your dividend income and yield with our dividend calculator. Useful for long-term investors and passive income seekers." />
+        <meta name="twitter:image" content="https://www.sipgo.in/images/dividend-calculator-twitter.jpg" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "Dividend Calculator",
+            description: "Calculate your dividend income and yield with our dividend calculator. Useful for long-term investors and passive income seekers.",
+            url: "https://www.sipgo.in/dividend-calculator",
+            "@id": "https://www.sipgo.in/dividend-calculator",
+            hasPart: [
+              { "@type": "FAQPage", "@id": "https://www.sipgo.in/dividend-calculator#faq" },
+              { "@type": "Article", "@id": "https://www.sipgo.in/dividend-calculator#guide" }
+            ]
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://www.sipgo.in/dividend-calculator#breadcrumb",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sipgo.in/" },
+              { "@type": "ListItem", position: 2, name: "Dividend Calculator", item: "https://www.sipgo.in/dividend-calculator" }
+            ]
+          })}
+        </script>
+      </Helmet>
+
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 mb-4">
         Dividend Yield Calculator
       </h1>

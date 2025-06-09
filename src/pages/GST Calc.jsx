@@ -76,8 +76,58 @@ function GSTCalculator() {
   const handleInclusive = () => setIsInclusive(true);
   const handleExclusive = () => setIsInclusive(false);
 
+  // For Schema
+  const pageTitle = "GST Calculator - Calculate Goods and Services Tax Online";
+  const pageDescription = "Easily calculate GST amounts on products and services using our GST Calculator. Supports various tax slabs including CGST, SGST, and IGST.";
+  const canonicalUrl = "https://www.sipgo.in/gst-calculator";
+
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
+      <Helmet>
+        <title>GST Calculator - Calculate Goods & Services Tax in India</title>
+        <meta name="description" content="Use our GST calculator to find inclusive and exclusive GST values. Fast, accurate tax calculations for Indian businesses and individuals." />
+        <meta name="keywords" content="GST Calculator, India GST, Goods and Services Tax, GST Inclusive, GST Exclusive" />
+        <link rel="canonical" href="https://www.sipgo.in/gst-calculator" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.sipgo.in/gst-calculator" />
+        <meta property="og:title" content="GST Calculator - Calculate Goods & Services Tax in India" />
+        <meta property="og:description" content="Use our GST calculator to find inclusive and exclusive GST values. Fast, accurate tax calculations for Indian businesses and individuals." />
+        <meta property="og:image" content="https://www.sipgo.in/images/gst-calculator-og.jpg" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="GST Calculator - Calculate Goods & Services Tax in India" />
+        <meta name="twitter:description" content="Use our GST calculator to find inclusive and exclusive GST values. Fast, accurate tax calculations for Indian businesses and individuals." />
+        <meta name="twitter:image" content="https://www.sipgo.in/images/gst-calculator-twitter.jpg" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "GST Calculator",
+            description: "Use our GST calculator to find inclusive and exclusive GST values. Fast, accurate tax calculations for Indian businesses and individuals.",
+            url: "https://www.sipgo.in/gst-calculator",
+            "@id": "https://www.sipgo.in/gst-calculator",
+            hasPart: [
+              { "@type": "FAQPage", "@id": "https://www.sipgo.in/gst-calculator#faq" },
+              { "@type": "Article", "@id": "https://www.sipgo.in/gst-calculator#guide" }
+            ]
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://www.sipgo.in/gst-calculator#breadcrumb",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sipgo.in/" },
+              { "@type": "ListItem", position: 2, name: "GST Calculator", item: "https://www.sipgo.in/gst-calculator" }
+            ]
+          })}
+        </script>
+      </Helmet>
+
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
         GST Calculator
       </h1>

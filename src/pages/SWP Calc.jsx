@@ -161,8 +161,58 @@ function SWPCalculator() {
     });
   }, [totalInvestment, estimatedReturns, investmentPeriod, monthlyWithdrawal]);
 
+  // For Schema
+  const pageTitle = "SWP Calculator - Calculate Systematic Withdrawal Plan Returns";
+  const pageDescription = "Use our SWP Calculator to estimate how much you can withdraw regularly from your mutual fund investments without exhausting your corpus.";
+  const canonicalUrl = "https://www.sipgo.in/swp-calculator";
+
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
+      <Helmet>
+        <title>SWP Calculator - Calculate Systematic Withdrawal Plan</title>
+        <meta name="description" content="Use our SWP calculator to estimate withdrawals and balances from your mutual fund investments. Plan your passive income better." />
+        <meta name="keywords" content="SWP Calculator, Systematic Withdrawal, Mutual Fund Income, SWP Planning, Investment Withdrawals" />
+        <link rel="canonical" href="https://www.sipgo.in/swp-calculator" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.sipgo.in/swp-calculator" />
+        <meta property="og:title" content="SWP Calculator - Calculate Systematic Withdrawal Plan" />
+        <meta property="og:description" content="Use our SWP calculator to estimate withdrawals and balances from your mutual fund investments. Plan your passive income better." />
+        <meta property="og:image" content="https://www.sipgo.in/images/swp-calculator-og.jpg" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="SWP Calculator - Calculate Systematic Withdrawal Plan" />
+        <meta name="twitter:description" content="Use our SWP calculator to estimate withdrawals and balances from your mutual fund investments. Plan your passive income better." />
+        <meta name="twitter:image" content="https://www.sipgo.in/images/swp-calculator-twitter.jpg" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "SWP Calculator",
+            description: "Use our SWP calculator to estimate withdrawals and balances from your mutual fund investments. Plan your passive income better.",
+            url: "https://www.sipgo.in/swp-calculator",
+            "@id": "https://www.sipgo.in/swp-calculator",
+            hasPart: [
+              { "@type": "FAQPage", "@id": "https://www.sipgo.in/swp-calculator#faq" },
+              { "@type": "Article", "@id": "https://www.sipgo.in/swp-calculator#guide" }
+            ]
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://www.sipgo.in/swp-calculator#breadcrumb",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sipgo.in/" },
+              { "@type": "ListItem", position: 2, name: "SWP Calculator", item: "https://www.sipgo.in/swp-calculator" }
+            ]
+          })}
+        </script>
+      </Helmet>
+
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
         SWP Calculator
       </h1>

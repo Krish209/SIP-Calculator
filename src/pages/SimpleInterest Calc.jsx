@@ -174,8 +174,62 @@ function SimpleInterest() {
       Math.max(0, Math.min(Number(e.target.value), maxInvestmentPeriod))
     );
 
+  // For Schema
+  const pageTitle = "Simple Interest Calculator - Calculate Interest Easily";
+  const pageDescription = "Use our Simple Interest Calculator to quickly compute interest based on principal, rate, and time period. Ideal for short-term loans and deposits.";
+  const canonicalUrl = "https://www.sipgo.in/simple-interest-calculator";
+
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
+      <Helmet>
+        <title>Simple Interest Calculator - Calculate Simple Interest Easily</title>
+        <meta name="description" content="Calculate simple interest on your principal amount with our Simple Interest Calculator by entering rate and time period." />
+        <meta name="keywords" content="Simple Interest Calculator, Calculate Interest, Principal Interest Calculation" />
+        <link rel="canonical" href="https://www.sipgo.in/simple-interest-calculator" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.sipgo.in/simple-interest-calculator" />
+        <meta property="og:title" content="Simple Interest Calculator - Calculate Simple Interest Easily" />
+        <meta property="og:description" content="Calculate simple interest on your principal amount with our Simple Interest Calculator by entering rate and time period." />
+        <meta property="og:image" content="https://www.sipgo.in/images/simple-interest-calculator-og.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Simple Interest Calculator - Calculate Simple Interest Easily" />
+        <meta name="twitter:description" content="Calculate simple interest on your principal amount with our Simple Interest Calculator by entering rate and time period." />
+        <meta name="twitter:image" content="https://www.sipgo.in/images/simple-interest-calculator-twitter.jpg" />
+
+        {/* Schema Markup */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "Simple Interest Calculator",
+            description: "Calculate simple interest on your principal amount with our Simple Interest Calculator by entering rate and time period.",
+            url: "https://www.sipgo.in/simple-interest-calculator",
+            "@id": "https://www.sipgo.in/simple-interest-calculator",
+            "hasPart": [
+              { "@type": "FAQPage", "@id": "https://www.sipgo.in/simple-interest-calculator#faq" },
+              { "@type": "Article", "@id": "https://www.sipgo.in/simple-interest-calculator#guide" }
+            ],
+          })}
+        </script>
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://www.sipgo.in/simple-interest-calculator#breadcrumb",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sipgo.in/" },
+              { "@type": "ListItem", "position": 2, "name": "Simple Interest Calculator", "item": "https://www.sipgo.in/simple-interest-calculator" }
+            ]
+          })}
+        </script>
+      </Helmet>
+
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
         Simple Interest Calculator
       </h1>

@@ -157,8 +157,59 @@ function StepUpSIPCalculator() {
     });
   }, [monthlyInvestment, rateOfInterest, investmentPeriod, stepUpPercent]);
 
+  // For Schema
+  const pageTitle = "Step-Up SIP Calculator - Grow Your Investment with Increasing SIPs";
+  const pageDescription = "Plan your investment strategy with our Step-Up SIP Calculator. Estimate returns when you gradually increase your monthly SIP contributions.";
+  const canonicalUrl = "https://www.sipgo.in/step-up-sip-calculator";
+
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
+
+      <Helmet>
+        <title>Step-Up SIP Calculator - Plan Growing SIP Investments</title>
+        <meta name="description" content="Calculate the future value of your increasing SIP contributions using our Step-Up SIP calculator. Grow wealth smarter." />
+        <meta name="keywords" content="Step-Up SIP Calculator, Increasing SIP, Wealth Planning, SIP Growth, Mutual Fund Growth SIP" />
+        <link rel="canonical" href="https://www.sipgo.in/step-up-sip-calculator" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.sipgo.in/step-up-sip-calculator" />
+        <meta property="og:title" content="Step-Up SIP Calculator - Plan Growing SIP Investments" />
+        <meta property="og:description" content="Calculate the future value of your increasing SIP contributions using our Step-Up SIP calculator. Grow wealth smarter." />
+        <meta property="og:image" content="https://www.sipgo.in/images/step-up-sip-calculator-og.jpg" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Step-Up SIP Calculator - Plan Growing SIP Investments" />
+        <meta name="twitter:description" content="Calculate the future value of your increasing SIP contributions using our Step-Up SIP calculator. Grow wealth smarter." />
+        <meta name="twitter:image" content="https://www.sipgo.in/images/step-up-sip-calculator-twitter.jpg" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "Step-Up SIP Calculator",
+            description: "Calculate the future value of your increasing SIP contributions using our Step-Up SIP calculator. Grow wealth smarter.",
+            url: "https://www.sipgo.in/step-up-sip-calculator",
+            "@id": "https://www.sipgo.in/step-up-sip-calculator",
+            hasPart: [
+              { "@type": "FAQPage", "@id": "https://www.sipgo.in/step-up-sip-calculator#faq" },
+              { "@type": "Article", "@id": "https://www.sipgo.in/step-up-sip-calculator#guide" }
+            ]
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://www.sipgo.in/step-up-sip-calculator#breadcrumb",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sipgo.in/" },
+              { "@type": "ListItem", position: 2, name: "Step-Up SIP Calculator", item: "https://www.sipgo.in/step-up-sip-calculator" }
+            ]
+          })}
+        </script>
+      </Helmet>
+
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
         Step-Up SIP Calculator
       </h1>

@@ -76,8 +76,58 @@ function Gratuity() {
       Math.max(0, Math.min(Number(e.target.value), maxYearsWorked))
     );
 
+  // For Schema
+  const pageTitle = "Gratuity Calculator - Calculate Gratuity Amount Online";
+  const pageDescription = "Estimate your gratuity payout as per the Payment of Gratuity Act using our easy-to-use Gratuity Calculator. Useful for both private and public sector employees.";
+  const canonicalUrl = "https://www.sipgo.in/gratuity-calculator";
+
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
+      <Helmet>
+        <title>Gratuity Calculator - Calculate Gratuity Amount Online</title>
+        <meta name="description" content="Easily calculate your gratuity payout based on your salary and years of service. Ideal for salaried employees in India." />
+        <meta name="keywords" content="Gratuity Calculator, Salary Gratuity India, Gratuity Formula, Gratuity Calculation Online" />
+        <link rel="canonical" href="https://www.sipgo.in/gratuity-calculator" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.sipgo.in/gratuity-calculator" />
+        <meta property="og:title" content="Gratuity Calculator - Calculate Gratuity Amount Online" />
+        <meta property="og:description" content="Easily calculate your gratuity payout based on your salary and years of service. Ideal for salaried employees in India." />
+        <meta property="og:image" content="https://www.sipgo.in/images/gratuity-calculator-og.jpg" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Gratuity Calculator - Calculate Gratuity Amount Online" />
+        <meta name="twitter:description" content="Easily calculate your gratuity payout based on your salary and years of service. Ideal for salaried employees in India." />
+        <meta name="twitter:image" content="https://www.sipgo.in/images/gratuity-calculator-twitter.jpg" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "Gratuity Calculator",
+            description: "Easily calculate your gratuity payout based on your salary and years of service. Ideal for salaried employees in India.",
+            url: "https://www.sipgo.in/gratuity-calculator",
+            "@id": "https://www.sipgo.in/gratuity-calculator",
+            hasPart: [
+              { "@type": "FAQPage", "@id": "https://www.sipgo.in/gratuity-calculator#faq" },
+              { "@type": "Article", "@id": "https://www.sipgo.in/gratuity-calculator#guide" }
+            ]
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://www.sipgo.in/gratuity-calculator#breadcrumb",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sipgo.in/" },
+              { "@type": "ListItem", position: 2, name: "Gratuity Calculator", item: "https://www.sipgo.in/gratuity-calculator" }
+            ]
+          })}
+        </script>
+      </Helmet>
+
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
         Gratuity Calculator
       </h1>

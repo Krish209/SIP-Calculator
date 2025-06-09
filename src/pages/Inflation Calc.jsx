@@ -114,8 +114,58 @@ function InflationCalculator() {
   const handleYearsChange = (e) =>
     setYears(Math.max(0, Math.min(Number(e.target.value), maxYears)));
 
+  // For Schema
+  const pageTitle = "Inflation Calculator - Estimate Future Value of Money";
+  const pageDescription = "Understand how inflation affects your savings with our Inflation Calculator. Plan better by adjusting your investment goals for inflation.";
+  const canonicalUrl = "https://www.sipgo.in/inflation-calculator";
+
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
+      <Helmet>
+        <title>Inflation Calculator - Value of Money Over Time</title>
+        <meta name="description" content="Use our inflation calculator to understand how inflation affects the value of money over time. Plan investments accordingly." />
+        <meta name="keywords" content="Inflation Calculator, Real Value of Money, Inflation Impact, Investment Planning, Future Value Calculator" />
+        <link rel="canonical" href="https://www.sipgo.in/inflation-calculator" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.sipgo.in/inflation-calculator" />
+        <meta property="og:title" content="Inflation Calculator - Value of Money Over Time" />
+        <meta property="og:description" content="Use our inflation calculator to understand how inflation affects the value of money over time. Plan investments accordingly." />
+        <meta property="og:image" content="https://www.sipgo.in/images/inflation-calculator-og.jpg" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Inflation Calculator - Value of Money Over Time" />
+        <meta name="twitter:description" content="Use our inflation calculator to understand how inflation affects the value of money over time. Plan investments accordingly." />
+        <meta name="twitter:image" content="https://www.sipgo.in/images/inflation-calculator-twitter.jpg" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "Inflation Calculator",
+            description: "Use our inflation calculator to understand how inflation affects the value of money over time. Plan investments accordingly.",
+            url: "https://www.sipgo.in/inflation-calculator",
+            "@id": "https://www.sipgo.in/inflation-calculator",
+            hasPart: [
+              { "@type": "FAQPage", "@id": "https://www.sipgo.in/inflation-calculator#faq" },
+              { "@type": "Article", "@id": "https://www.sipgo.in/inflation-calculator#guide" }
+            ]
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://www.sipgo.in/inflation-calculator#breadcrumb",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sipgo.in/" },
+              { "@type": "ListItem", position: 2, name: "Inflation Calculator", item: "https://www.sipgo.in/inflation-calculator" }
+            ]
+          })}
+        </script>
+      </Helmet>
+
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
         Inflation Calculator
       </h1>
