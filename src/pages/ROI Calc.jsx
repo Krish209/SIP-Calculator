@@ -4,7 +4,7 @@ import { DoughnutChart } from "./chartjs/Donut";
 import { BarChart } from "./chartjs/Bar";
 import { formatNumber, formatChartNumber } from "./Calc";
 import ROIInfo from "./ROI Info";
-import ROIFAQ from "./ROI FAQ";
+import ROIFAQ from "./ROI Faq";
 
 function ROICalculator() {
   const [investedAmount, setInvestedAmount] = useState(50000); // Default ₹50,000
