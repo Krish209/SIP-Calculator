@@ -60,6 +60,7 @@ const NSCFAQ = () => {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/nsc-calculator#faq",
+          "name": "NSC FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,

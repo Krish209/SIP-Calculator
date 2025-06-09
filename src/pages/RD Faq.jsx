@@ -70,6 +70,7 @@ const RDFAQ = () => {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/rd-calculator#faq",
+          "name": "RD FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,

@@ -72,6 +72,7 @@ const SIPFAQ = () => {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/sip-calculator#faq",
+          "name": "SIP FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,

@@ -76,6 +76,7 @@ const NPSFAQ = () => {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/nps-calculator#faq",
+          "name": "NPS FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,

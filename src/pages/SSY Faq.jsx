@@ -70,6 +70,7 @@ const SSYFAQ = () => {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/ssy-calculator#faq",
+          "name": "SSY FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,

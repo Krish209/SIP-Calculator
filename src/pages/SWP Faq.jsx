@@ -65,6 +65,7 @@ const SWPFAQ = () => {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/swp-calculator#faq",
+          "name": "SWP FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,

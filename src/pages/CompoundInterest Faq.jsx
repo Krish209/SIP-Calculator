@@ -54,6 +54,7 @@ const CompoundInterestFAQ = () => {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/compound-interest-calculator#faq",
+          "name": "Compound Interest FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,

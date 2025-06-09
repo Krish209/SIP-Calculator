@@ -70,6 +70,7 @@ const GratuityFAQ = () => {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/gratuity-calculator#faq",
+          "name": "Gratuity FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,

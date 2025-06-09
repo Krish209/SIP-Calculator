@@ -55,6 +55,7 @@ const FDFaq = () => {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/fd-calculator#faq",
+          "name": "FD FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,

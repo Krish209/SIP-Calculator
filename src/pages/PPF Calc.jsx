@@ -166,42 +166,72 @@ function PPF() {
   const pageTitle = "PPF Calculator - Calculate Public Provident Fund Returns";
   const pageDescription = "Use our PPF Calculator to estimate your Public Provident Fund maturity amount, interest earned, and investment planning over 15 years.";
   const canonicalUrl = "https://www.sipgo.in/ppf-calculator";
+  const currentPPFRate = "7.1%"; // Get current PPF interest rate
 
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
       <Helmet>
-        <title>PPF Calculator - Calculate Public Provident Fund Returns</title>
-        <meta name="description" content="Calculate your Public Provident Fund returns and maturity amount with our easy-to-use PPF Calculator." />
-        <meta name="keywords" content="PPF Calculator, Public Provident Fund, PPF Returns, Investment Calculator" />
-        <link rel="canonical" href="https://www.sipgo.in/ppf-calculator" />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content="PPF Calculator, Public Provident Fund, PPF Returns, Tax Saving Calculator, 80C Investment, Government Savings Scheme" />
+        <link rel="canonical" href={canonicalUrl} />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.sipgo.in/ppf-calculator" />
-        <meta property="og:title" content="PPF Calculator - Calculate Public Provident Fund Returns" />
-        <meta property="og:description" content="Calculate your Public Provident Fund returns and maturity amount with our easy-to-use PPF Calculator." />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
         <meta property="og:image" content="https://www.sipgo.in/images/ppf-calculator-og.jpg" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="PPF Calculator - Calculate Public Provident Fund Returns" />
-        <meta name="twitter:description" content="Calculate your Public Provident Fund returns and maturity amount with our easy-to-use PPF Calculator." />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content="https://www.sipgo.in/images/ppf-calculator-twitter.jpg" />
-
-        {/* Schema Markup */}
+        
+        {/* ========== CRITICAL SCHEMA MARKUP ========== */}
         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            name: "PPF Calculator",
-            description: "Calculate your Public Provident Fund returns and maturity amount with our easy-to-use PPF Calculator.",
-            url: "https://www.sipgo.in/ppf-calculator",
-            "@id": "https://www.sipgo.in/ppf-calculator",
-            "hasPart": [
-              { "@type": "FAQPage", "@id": "https://www.sipgo.in/ppf-calculator#faq" },
-              { "@type": "Article", "@id": "https://www.sipgo.in/ppf-calculator#guide" }
-            ],
-          })}
+          {JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "PPF Calculator",
+              "description":
+                "Calculate your Public Provident Fund returns and maturity amount with our easy-to-use PPF Calculator.",
+              "url": "https://www.sipgo.in/ppf-calculator",
+              "@id": "https://www.sipgo.in/ppf-calculator",
+              "hasPart": [
+                {
+                  "@type": "FAQPage",
+                  "@id": "https://www.sipgo.in/ppf-calculator#faq"
+                },
+                {
+                  "@type": "Article",
+                  "@id": "https://www.sipgo.in/ppf-calculator#guide"
+                }
+              ]
+            },
+
+            // Financial Product Schema
+            {
+              "@context": "https://schema.org",
+              "@type": "FinancialProduct",
+              "name": "Public Provident Fund (PPF)",
+              "description":
+                "Government-backed savings scheme with EEE tax benefits under Section 80C",
+              "interestRate": currentPPFRate,
+              "feesAndCommissionsSpecification": "Zero account fees",
+              "annualPercentageRate": currentPPFRate,
+              "termsOfService": "https://www.sipgo.in/terms",
+              "category": "TaxSavingScheme",
+              "url": canonicalUrl,
+              "provider": {
+                "@type": "GovernmentOrganization",
+                "name": "Government of India"
+              },
+              
+            }
+          ])}
         </script>
 
         {/* Breadcrumb Schema */}
@@ -210,6 +240,7 @@ function PPF() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "@id": "https://www.sipgo.in/ppf-calculator#breadcrumb",
+            "name": "PPF Calculator Navigation Path",
             "itemListElement": [
               { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sipgo.in/" },
               { "@type": "ListItem", "position": 2, "name": "PPF Calculator", "item": "https://www.sipgo.in/ppf-calculator" }

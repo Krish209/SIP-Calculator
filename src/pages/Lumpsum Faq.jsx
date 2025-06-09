@@ -42,6 +42,7 @@ const LumpsumFAQ = () => {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/lumpsum-calculator#faq",
+          "name": "Lumpsum FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,

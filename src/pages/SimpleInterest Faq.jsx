@@ -56,6 +56,7 @@ const SimpleInterestFAQ = () => {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/simple-interest-calculator#faq",
+          "name": "Simple Interest FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,

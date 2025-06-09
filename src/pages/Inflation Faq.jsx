@@ -66,6 +66,7 @@ const InflationFAQ = () => {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/inflation-calculator#faq",
+          "name": "Inflation FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,

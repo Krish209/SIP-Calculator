@@ -53,6 +53,7 @@ const StepUpSIPFAQ = () => {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/step-up-sip-calculator#faq",
+          "name": "Step-Up SIP FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,

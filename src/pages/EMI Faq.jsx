@@ -60,6 +60,7 @@ const EMIFAQ = () => {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/emi-calculator#faq",
+          "name": "EMI FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,

@@ -48,6 +48,7 @@ const ROIFAQ = () => {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/roi-calculator#faq",
+          "name": "ROI FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,

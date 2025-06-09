@@ -60,6 +60,7 @@ const GSTFAQ = () => {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/gst-calculator#faq",
+          "name": "GST FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,

@@ -42,6 +42,7 @@ const KVPFAQ = () => {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/kvp-calculator#faq",
+          "name": "KVP FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,
