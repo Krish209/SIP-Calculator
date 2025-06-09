@@ -62,7 +62,7 @@ const SWPInfo = () => {
           },
           "mainEntity": {
           "@type": "Table",
-          "about": "KVP Guide Sections",
+          "about": "SWP Guide Sections",
           "table": [
             "What is a SWP?",
             "Key Features of SWP",

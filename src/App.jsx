@@ -45,6 +45,7 @@ import Random2 from "./pages/blogs/Random2";
 import StocksorMutualFunds from "./pages/blogs/Stocks or Mutual Funds";
 import SavingvsInvesting from "./pages/blogs/Saving and Investing difference";
 import BlogLayout from "./consts/BlogLayout"; // wherever your BlogLayout is located
+import LumpsumCalc from "./pages/Lumpsum Calc";
 
 function App() {
   return (
@@ -88,7 +89,7 @@ function App() {
 
           {/* Investment Options Route */}
           <Route path="sip-calculator" element={<SIPCalculator />} />
-          <Route path="lumpsum-calculator" element={<SIPCalculator />} />
+          <Route path="lumpsum-calculator" element={<LumpsumCalc />} />
           <Route path="mutual-fund-calculator" element={<SIPCalculator />} />
           <Route path="fd-calculator" element={<FdCalculator />} />
           <Route
