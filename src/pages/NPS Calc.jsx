@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async"; // for SEO, Schema Markup, etc.
 import { DoughnutChart } from "./chartjs/Donut";
 import { formatNumber, formatChartNumber } from "./Calc";
 import NPSInfo from "./NPS Info";
