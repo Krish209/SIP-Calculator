@@ -12,6 +12,7 @@ function LumpsumCalc() {
   const [lumpsumAmount, setLumpsumAmount] = useState(10000); // Default ₹10000 for Lump Sum
   const [rateOfInterest, setRateOfInterest] = useState(12); // Default 12% p.a.
   const [investmentPeriod, setInvestmentPeriod] = useState(5); // Default 5 years
+  const [isSIP, setIsSIP] = useState(false); // default to Lumpsum
 
   const [investedAmount, setInvestedAmount] = useState(0);
   const [estimatedReturns, setEstimatedReturns] = useState(0);
@@ -205,51 +206,31 @@ function LumpsumCalc() {
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
       <Helmet>
-        <title>
-          Lumpsum Calculator - Calculate Lump Sum Investments & Returns
-        </title>
-        <meta
-          name="description"
-          content="Use our lumpsum calculator to estimate your investment returns on lump sum investments. Accurate and fast calculations for your financial planning."
-        />
-        <meta
-          name="keywords"
-          content="Lumpsum Calculator, Investment Calculator, Lump Sum Investment, Financial Planning"
-        />
-        <link rel="canonical" href="https://www.sipgo.in/lumpsum-calculator" />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content="Lumpsum Calculator, Investment Calculator, Lump Sum Investment, Financial Planning" />
+        <link rel="canonical" href={canonicalUrl} />
 
+        {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://www.sipgo.in/lumpsum-calculator"
-        />
-        <meta
-          property="og:title"
-          content="Lumpsum Calculator - Calculate Lump Sum Investments & Returns"
-        />
-        <meta
-          property="og:description"
-          content="Use our lumpsum calculator to estimate your investment returns on lump sum investments. Accurate and fast calculations for your financial planning."
-        />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
         <meta
           property="og:image"
           content="https://www.sipgo.in/images/lumpsum-calculator-og.jpg"
         />
 
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Lumpsum Calculator - Calculate Lump Sum Investments & Returns"
-        />
-        <meta
-          name="twitter:description"
-          content="Use our lumpsum calculator to estimate your investment returns on lump sum investments. Accurate and fast calculations for your financial planning."
-        />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
         <meta
           name="twitter:image"
           content="https://www.sipgo.in/images/lumpsum-calculator-twitter.jpg"
         />
 
+        {/* Schema Markup */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -272,6 +253,7 @@ function LumpsumCalc() {
           })}
         </script>
 
+        {/* Breadcrumb Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -388,13 +370,6 @@ function LumpsumCalc() {
                   className="w-full cursor-pointer"
                   aria-labelledby="monthly-investment-label"
                 />
-
-                {/* <div className="flex justify-between text-sm text-gray-400 mt-0">
-                  <span>₹500</span>
-                  <span>
-                    ₹{isSIP ? maxMonthlyInvestment : maxLumpsumAmount}
-                  </span>
-                </div> */}
               </div>
             </div>
 
@@ -438,11 +413,6 @@ function LumpsumCalc() {
                   className="w-full cursor-pointer"
                   aria-labelledby="rate-label"
                 />
-
-                {/* <div className="flex justify-between text-sm text-gray-400 mt-0">
-                  <span>1%</span>
-                  <span>{maxRateOfInterest}%</span>
-                </div> */}
               </div>
             </div>
 
@@ -488,11 +458,6 @@ function LumpsumCalc() {
                   className="w-full cursor-pointer"
                   aria-labelledby="investment-period-label"
                 />
-
-                {/* <div className="flex justify-between text-sm text-gray-400 mt-0">
-                  <span>1Yr</span>
-                  <span>{maxInvestmentPeriod}Yrs</span>
-                </div> */}
               </div>
             </div>
           </div>
@@ -553,45 +518,6 @@ function LumpsumCalc() {
                   </div>
                 </div>
               </div>
-
-              {/* original */}
-              {/* <div className="space-y-4">
-              <div className="flex justify-between items-center">
-                <span>Invested Amount:</span>
-                <span className="font-semibold">
-                  ₹{formatChartNumber(investedAmount)}{" "}
-                  {formatNumber(investedAmount) ? (
-                    <span className="block vs:inline">{`(${formatNumber(
-                      investedAmount
-                    )})`}</span>
-                  ) : null}
-                </span>
-              </div>
-
-              <div className="flex justify-between items-center">
-                <span>Estimated Returns:</span>
-                <span className="font-semibold">
-                  ₹{formatChartNumber(estimatedReturns)}{" "}
-                  {formatNumber(estimatedReturns) ? (
-                    <span className="block vs:inline">{`(${formatNumber(
-                      estimatedReturns
-                    )})`}</span>
-                  ) : null}
-                </span>
-              </div>
-
-              <div className="flex justify-between items-center text-[16px] vs:text-[18px] sm:text-[19px] md:text-[17px] lg:text-lg font-semibold text-blue-600">
-                <span>Total Value:</span>
-                <span className="font-semibold">
-                  ₹{formatChartNumber(totalValue)}{" "}
-                  {formatNumber(totalValue) ? (
-                    <span className="block vs:inline">{`(${formatNumber(
-                      totalValue
-                    )})`}</span>
-                  ) : null}
-                </span>
-              </div>
-            </div> */}
             </div>
           </div>
         </div>
@@ -618,18 +544,6 @@ function LumpsumCalc() {
           <LumpsumInfo />
           <LumpsumFAQ />
         </div>
-
-        {/* Line Chart (Investment Growth Over Time) */}
-        {/* <div className="py-4 lg:py-6 lg:p-6 p-1 sm:p-2 m-1 lg:m-0 rounded-xl border">
-          {chartData && chartData.labels && chartData.datasets ? (
-            <div className="">
-              <h2 className="text-center text-lg sm:text-xl font-semibold mb-4">
-                Investment Growth Over Time
-              </h2>
-              <LineChart data={chartData} />
-            </div>
-          ) : null}
-        </div> */}
       </div>
     </div>
   );

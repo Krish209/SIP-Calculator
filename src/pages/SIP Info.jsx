@@ -4,34 +4,35 @@ import Table from "../consts/Table";
 const SIPInfo = () => {
   const datePublished = new Date("2024-06-01").toISOString();
   const dateModified = new Date("2024-06-01").toISOString();
+  
   const columns = [
-  { key: "feature", header: "Feature" },
-  { key: "sip", header: "SIP" },
-  { key: "lumpSum", header: "Lump Sum" },
-];
+    { key: "feature", header: "Feature" },
+    { key: "sip", header: "SIP" },
+    { key: "lumpSum", header: "Lump Sum" },
+  ];
 
-const data = [
-  {
-    feature: "Investment Frequency",
-    sip: "Regular",
-    lumpSum: "One-time",
-  },
-  {
-    feature: "Risk",
-    sip: "Low (due to averaging)",
-    lumpSum: "High (all at once)",
-  },
-  {
-    feature: "Returns",
-    sip: "Moderate, depends on market",
-    lumpSum: "Variable, market timing impacts",
-  },
-  {
-    feature: "Market Timing",
-    sip: "Not required",
-    lumpSum: "Crucial",
-  },
-];
+  const data = [
+    {
+      feature: "Investment Frequency",
+      sip: "Regular",
+      lumpSum: "One-time",
+    },
+    {
+      feature: "Risk",
+      sip: "Low (due to averaging)",
+      lumpSum: "High (all at once)",
+    },
+    {
+      feature: "Returns",
+      sip: "Moderate, depends on market",
+      lumpSum: "Variable, market timing impacts",
+    },
+    {
+      feature: "Market Timing",
+      sip: "Not required",
+      lumpSum: "Crucial",
+    },
+  ];
 
   return (
     <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
@@ -280,23 +281,23 @@ const data = [
           <code className="font-bold">A = P × [(1 + r)^n - 1] / r × (1 + r)</code>
           <p className="mt-2">
             Where:
-            <ul className="list-disc pl-6 space-y-1">
-              <li>
-                <strong>A</strong> = Final Amount (after interest)
-              </li>
-              <li>
-                <strong>P</strong> = Monthly Investment
-              </li>
-              <li>
-                <strong>r</strong> = Monthly Interest Rate (Annual Interest Rate
-                divided by 12)
-              </li>
-              <li>
-                <strong>n</strong> = Total Number of Months (Investment Period
-                in Years × 12)
-              </li>
-            </ul>
           </p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>
+              <strong>A</strong> = Final Amount (after interest)
+            </li>
+            <li>
+              <strong>P</strong> = Monthly Investment
+            </li>
+            <li>
+              <strong>r</strong> = Monthly Interest Rate (Annual Interest Rate
+              divided by 12)
+            </li>
+            <li>
+              <strong>n</strong> = Total Number of Months (Investment Period
+              in Years × 12)
+            </li>
+          </ul>
         </div>
 
         <p className="mt-6">
@@ -413,7 +414,7 @@ const data = [
         <h3 className="text-lg md:text-xl font-semibold mb-2">
           1. Tax on Equity Mutual Funds
         </h3>
-        <ul class="list-disc pl-6 mb-4 space-y-2">
+        <ul className="list-disc pl-6 mb-4 space-y-2">
           <li>
             <strong>Short-Term Capital Gains (STCG)</strong>: If you sell equity
             mutual fund units within 1 year, the gains are taxed at 15%.{" "}
@@ -433,7 +434,7 @@ const data = [
         <h3 className="text-lg md:text-xl font-semibold mb-2">
           2. Tax on Debt Mutual Funds
         </h3>
-        <ul class="list-disc pl-6 mb-4 space-y-2">
+        <ul className="list-disc pl-6 mb-4 space-y-2">
           <li>
             <strong>Short-Term Capital Gains (STCG)</strong>: If you sell debt
             mutual fund units within 3 years, the gains are taxed at your income
@@ -449,7 +450,7 @@ const data = [
         <h3 className="text-lg md:text-xl font-semibold mb-2">
           3. Tax on Hybrid Mutual Funds
         </h3>
-        <ul class="list-disc pl-6 mb-4 space-y-2">
+        <ul className="list-disc pl-6 mb-4 space-y-2">
           <li>
             If the equity exposure is more than 65%, it is treated as an equity
             mutual fund.
@@ -463,7 +464,7 @@ const data = [
         <h3 className="text-lg md:text-xl font-semibold mb-2">
           4. Tax on ELSS (Equity Linked Savings Schemes)
         </h3>
-        <ul class="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>ELSS funds</strong> offer tax benefits under Section 80C,
             allowing you to claim deductions up to ₹1.5 lakh in a financial

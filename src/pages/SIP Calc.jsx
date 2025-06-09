@@ -13,6 +13,7 @@ function SIPCalculator() {
   const [lumpsumAmount, setLumpsumAmount] = useState(10000); // Default ₹10000 for Lump Sum
   const [rateOfInterest, setRateOfInterest] = useState(12); // Default 12% p.a.
   const [investmentPeriod, setInvestmentPeriod] = useState(5); // Default 5 years
+  const [isSIP, setIsSIP] = useState(true); // default to SIP
 
   const [investedAmount, setInvestedAmount] = useState(0);
   const [estimatedReturns, setEstimatedReturns] = useState(0);
@@ -66,11 +67,6 @@ function SIPCalculator() {
     );
     setInvestmentPeriod(value);
   };
-
-  useEffect(() => {
-    // Reset isSIP based on pathname when route changes
-    setIsSIP(getDefaultInvestmentType(location.pathname));
-  }, [location.pathname]);
 
   // Recalculate data if inputs are valid
   useEffect(() => {

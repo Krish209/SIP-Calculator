@@ -91,7 +91,7 @@ const Contact = () => {
               <PhoneIcon className="w-6 h-6 text-indigo-600 mt-1" />
               <div>
                 <h4 className="font-semibold">Phone</h4>
-                <a href="tel:+98765 43210" class="">
+                <a href="tel:+98765 43210" className="">
                   98765 43210
                 </a>
               </div>
@@ -100,7 +100,7 @@ const Contact = () => {
               <EnvelopeIcon className="w-6 h-6 text-indigo-600 mt-1" />
               <div>
                 <h4 className="font-semibold">Email</h4>
-                <a href="mailto:support@sipgo.in" class="text-bs3">
+                <a href="mailto:support@sipgo.in" className="text-bs3">
                   support@sipgo.in
                 </a>
               </div>

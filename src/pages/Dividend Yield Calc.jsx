@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async"; // for SEO, Schema Markup, etc.
 import DividendYieldInfo from "./Dividend Yield Info";
+import DividendYieldFAQ from "./Dividend Faq";
 
 function DividendYieldCalc() {
   const [annualDividend, setAnnualDividend] = useState(10); // Default ₹1,000
@@ -213,6 +214,7 @@ function DividendYieldCalc() {
 
         <div>
           <DividendYieldInfo />
+          <DividendYieldFAQ />
         </div>
       </div>
     </div>

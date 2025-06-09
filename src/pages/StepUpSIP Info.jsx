@@ -5,43 +5,43 @@ const StepUpSIPInfo = () => {
   const datePublished = new Date("2024-06-01").toISOString();
   const dateModified = new Date("2024-06-01").toISOString();
   const columns = [
-  { key: 'details', header: 'Details' },
-  { key: 'sip', header: 'SIP' },
-  { key: 'stepUpSip', header: 'Step-Up SIP' },
-];
+    { key: 'details', header: 'Details' },
+    { key: 'sip', header: 'SIP' },
+    { key: 'stepUpSip', header: 'Step-Up SIP' },
+  ];
 
-const data = [
-  {
-    details: 'Starting Amount',
-    sip: '₹5,000/month',
-    stepUpSip: '₹5,000/month',
-  },
-  {
-    details: 'Yearly Increment',
-    sip: 'No',
-    stepUpSip: '₹500/year',
-  },
-  {
-    details: 'Total Invested',
-    sip: '₹6,00,000',
-    stepUpSip: '₹7,50,000',
-  },
-  {
-    details: 'Estimated Returns',
-    sip: '₹4,55,000',
-    stepUpSip: '₹6,90,000',
-  },
-  {
-    details: 'Final Value',
-    sip: '₹10,55,000',
-    stepUpSip: '₹14,40,000',
-  },
-  {
-    details: 'Return on Investment (ROI)',
-    sip: '~76%',
-    stepUpSip: '~92%',
-  },
-];
+  const data = [
+    {
+      details: 'Starting Amount',
+      sip: '₹5,000/month',
+      stepUpSip: '₹5,000/month',
+    },
+    {
+      details: 'Yearly Increment',
+      sip: 'No',
+      stepUpSip: '₹500/year',
+    },
+    {
+      details: 'Total Invested',
+      sip: '₹6,00,000',
+      stepUpSip: '₹7,50,000',
+    },
+    {
+      details: 'Estimated Returns',
+      sip: '₹4,55,000',
+      stepUpSip: '₹6,90,000',
+    },
+    {
+      details: 'Final Value',
+      sip: '₹10,55,000',
+      stepUpSip: '₹14,40,000',
+    },
+    {
+      details: 'Return on Investment (ROI)',
+      sip: '~76%',
+      stepUpSip: '~92%',
+    },
+  ];
 
   return (
     <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
@@ -159,26 +159,26 @@ const data = [
           </code>
           <p className="mt-2">
             Where:
-            <ul className="list-disc pl-6 space-y-1">
-              <li>
-                <strong>A</strong> = Final Amount (after interest)
-              </li>
-              <li>
-                <strong>P</strong> = Monthly Investment
-              </li>
-              <li>
-                <strong>r</strong> = Monthly Interest Rate (Annual Interest Rate
-                ÷ 12)
-              </li>
-              <li>
-                <strong>n</strong> = Total Number of Months (Investment Period
-                in Years × 12)
-              </li>
-              <li>
-                <strong>S</strong> = Increase in investment amount
-              </li>
-            </ul>
           </p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>
+              <strong>A</strong> = Final Amount (after interest)
+            </li>
+            <li>
+              <strong>P</strong> = Monthly Investment
+            </li>
+            <li>
+              <strong>r</strong> = Monthly Interest Rate (Annual Interest Rate
+              ÷ 12)
+            </li>
+            <li>
+              <strong>n</strong> = Total Number of Months (Investment Period
+              in Years × 12)
+            </li>
+            <li>
+              <strong>S</strong> = Increase in investment amount
+            </li>
+          </ul>
         </div>
 
         <p className="mb-2">

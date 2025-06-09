@@ -4,6 +4,7 @@ import Table from "../consts/Table";
 const SWPInfo = () => {
   const datePublished = new Date("2024-06-01").toISOString();
   const dateModified = new Date("2024-06-01").toISOString();
+
   const columns = [
     { key: "feature", header: "Feature" },
     { key: "sip", header: "SIP" },
@@ -41,8 +42,8 @@ const SWPInfo = () => {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "url": "https://www.sipgo.in/SWP-calculator#guide",
-          "@id": "https://www.sipgo.in/SWP-calculator#guide",
+          "url": "https://www.sipgo.in/swp-calculator#guide",
+          "@id": "https://www.sipgo.in/swp-calculator#guide",
           "headline": "SWP Calculator – Systematic Withdrawal Planning Tool",
           "description": "Plan regular withdrawals from your investments with the SWP Calculator. Estimate monthly payout and balance.",
           "image": "https://www.sipgo.in/images/logo",
@@ -189,22 +190,22 @@ const SWPInfo = () => {
           <code className="font-bold">A = B × [(1 + r/n)^n - 1] / (r/n)</code>
           <p className="mt-2">
             Where:
-            <ul className="list-disc pl-6 space-y-1">
-              <li>
-                <strong>A</strong> = Final Amount (after interest)
-              </li>
-              <li>
-                <strong>B</strong> = Periodic Withdrawal Amount
-              </li>
-
-              <li>
-                <strong>r</strong> = Annual Interest Rate
-              </li>
-              <li>
-                <strong>n</strong> = Investment Period in Years
-              </li>
-            </ul>
           </p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>
+              <strong>A</strong> = Final Amount (after interest)
+            </li>
+            <li>
+              <strong>B</strong> = Periodic Withdrawal Amount
+            </li>
+
+            <li>
+              <strong>r</strong> = Annual Interest Rate
+            </li>
+            <li>
+              <strong>n</strong> = Investment Period in Years
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -333,7 +334,7 @@ const SWPInfo = () => {
         <h3 className="text-lg md:text-xl font-semibold mb-2">
           1. Tax on Equity Funds
         </h3>
-        <ul class="list-disc pl-6 mb-4 space-y-2">
+        <ul className="list-disc pl-6 mb-4 space-y-2">
           <li>
             <strong>Short-Term Capital Gains (STCG)</strong>: If you sell equity
             mutual fund units within 1 year, the gains are taxed at 15%.{" "}
@@ -348,7 +349,7 @@ const SWPInfo = () => {
         <h3 className="text-lg md:text-xl font-semibold mb-2">
           2. Tax on Debt Funds
         </h3>
-        <ul class="list-disc pl-6 mb-4 space-y-2">
+        <ul className="list-disc pl-6 mb-4 space-y-2">
           <li>
             For investments made <strong>before April 1, 2023</strong>, if you
             sell debt mutual fund units within 3 years, the gains are taxed at
@@ -366,7 +367,7 @@ const SWPInfo = () => {
         <h3 className="text-lg md:text-xl font-semibold mb-2">
           3. Tax on ELSS (Equity Linked Savings Schemes)
         </h3>
-        <ul class="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>ELSS funds</strong> offer tax benefits under Section 80C,
             allowing you to claim deductions up to ₹1.5 lakh in a financial

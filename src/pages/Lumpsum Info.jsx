@@ -4,6 +4,7 @@ import Table from "../consts/Table";
 const LumpsumInfo = () => {
   const datePublished = new Date("2024-06-01").toISOString();
   const dateModified = new Date("2024-06-01").toISOString();
+  
   const columns = [
     { key: "feature", header: "Feature" },
     { key: "sip", header: "SIP" },
@@ -170,24 +171,22 @@ const LumpsumInfo = () => {
             The formula used to calculate Lumpsum returns is:
           </p>
           <code className="font-bold">A = P × (1 + r)^n</code>
-          <p className="mt-2">
-            Where:
-            <ul className="list-disc pl-6 space-y-1">
-              <li>
-                <strong>A</strong> = Final Amount (after interest)
-              </li>
-              <li>
-                <strong>P</strong> = Principal Investment(initial investment
-                amount)
-              </li>
-              <li>
-                <strong>r</strong> = Annual Interest Rate
-              </li>
-              <li>
-                <strong>n</strong> = Total Number of years invested
-              </li>
-            </ul>
-          </p>
+          <p className="mt-2">Where:</p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>
+              <strong>A</strong> = Final Amount (after interest)
+            </li>
+            <li>
+              <strong>P</strong> = Principal Investment(initial investment
+              amount)
+            </li>
+            <li>
+              <strong>r</strong> = Annual Interest Rate
+            </li>
+            <li>
+              <strong>n</strong> = Total Number of years invested
+            </li>
+          </ul>
         </div>
 
         <p className="mt-6">
@@ -289,7 +288,7 @@ const LumpsumInfo = () => {
         <h3 className="text-lg md:text-xl font-semibold mb-2">
           1. Equity Mutual Funds:
         </h3>
-        <ul class="list-disc pl-6 mb-4 space-y-2">
+        <ul className="list-disc pl-6 mb-4 space-y-2">
           <li>
             <strong>Short-Term Capital Gains (STCG)</strong>: If you sell equity
             mutual fund units within 1 year, the gains are taxed at 15%.
@@ -309,7 +308,7 @@ const LumpsumInfo = () => {
         <h3 className="text-lg md:text-xl font-semibold mb-2">
           2. Debt Mutual Funds:
         </h3>
-        <ul class="list-disc pl-6 mb-4 space-y-2">
+        <ul className="list-disc pl-6 mb-4 space-y-2">
           <li>
             <strong>Short-Term Capital Gains (STCG)</strong>: If you sell debt
             mutual fund units within 3 years, the gains are taxed at your income
@@ -325,7 +324,7 @@ const LumpsumInfo = () => {
         <h3 className="text-lg md:text-xl font-semibold mb-2">
           3. Tax on Hybrid Mutual Funds
         </h3>
-        <ul class="list-disc pl-6 mb-4 space-y-2">
+        <ul className="list-disc pl-6 mb-4 space-y-2">
           <li>
             If the equity exposure is more than 65%, it is treated as an equity
             mutual fund.
@@ -339,7 +338,7 @@ const LumpsumInfo = () => {
         <h3 className="text-lg md:text-xl font-semibold mb-2">
           4. Tax on ELSS (Equity Linked Savings Schemes)
         </h3>
-        <ul class="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>ELSS funds</strong> offer tax benefits under Section 80C,
             allowing you to claim deductions up to ₹1.5 lakh in a financial
