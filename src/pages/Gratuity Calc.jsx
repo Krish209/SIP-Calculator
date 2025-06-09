@@ -121,6 +121,7 @@ function Gratuity() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "@id": "https://www.sipgo.in/gratuity-calculator#breadcrumb",
+            "name": "Gratuity Calculator Navigation Path",
             itemListElement: [
               { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sipgo.in/" },
               { "@type": "ListItem", position: 2, name: "Gratuity Calculator", item: "https://www.sipgo.in/gratuity-calculator" }

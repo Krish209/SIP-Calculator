@@ -203,6 +203,7 @@ function StepUpSIPCalculator() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "@id": "https://www.sipgo.in/step-up-sip-calculator#breadcrumb",
+            "name": "Step-Up SIP Calculator Navigation Path",
             itemListElement: [
               { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sipgo.in/" },
               { "@type": "ListItem", position: 2, name: "Step-Up SIP Calculator", item: "https://www.sipgo.in/step-up-sip-calculator" }

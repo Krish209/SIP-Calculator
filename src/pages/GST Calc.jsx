@@ -121,6 +121,7 @@ function GSTCalculator() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "@id": "https://www.sipgo.in/gst-calculator#breadcrumb",
+            "name": "GST Calculator Navigation Path",
             itemListElement: [
               { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sipgo.in/" },
               { "@type": "ListItem", position: 2, name: "GST Calculator", item: "https://www.sipgo.in/gst-calculator" }

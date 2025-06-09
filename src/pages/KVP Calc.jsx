@@ -97,7 +97,8 @@ function KVP() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
-             "@id": "https://www.sipgo.in/kvp-calculator#breadcrumb",
+            "@id": "https://www.sipgo.in/kvp-calculator#breadcrumb",
+            "name": "KVP Calculator Navigation Path",
             "itemListElement": [
               {
                 "@type": "ListItem",

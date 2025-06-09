@@ -182,6 +182,7 @@ function FDCalculator() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "@id": "https://www.sipgo.in/fd-calculator#breadcrumb",
+            "name": "FD Calculator Navigation Path",
             "itemListElement": [
               {
                 "@type": "ListItem",

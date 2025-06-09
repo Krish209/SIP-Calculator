@@ -223,6 +223,7 @@ function SimpleInterest() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "@id": "https://www.sipgo.in/simple-interest-calculator#breadcrumb",
+            "name": "Simple Interest Calculator Navigation Path",
             "itemListElement": [
               { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sipgo.in/" },
               { "@type": "ListItem", "position": 2, "name": "Simple Interest Calculator", "item": "https://www.sipgo.in/simple-interest-calculator" }

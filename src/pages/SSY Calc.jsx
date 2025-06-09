@@ -134,8 +134,6 @@ function SSY() {
   const pageDescription = "Calculate the maturity amount and interest earned on your SSY account using our Sukanya Samriddhi Yojana Calculator. Ideal for girl child savings planning.";
   const canonicalUrl = "https://www.sipgo.in/ssy-calculator";
 
-  
-
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
       <Helmet>
@@ -179,6 +177,7 @@ function SSY() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "@id": "https://www.sipgo.in/ssy-calculator#breadcrumb",
+            "name": "SSY Calculator Navigation Path",
             "itemListElement": [
               { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sipgo.in/" },
               { "@type": "ListItem", "position": 2, "name": "SSY Calculator", "item": "https://www.sipgo.in/ssy-calculator" }

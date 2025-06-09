@@ -259,6 +259,7 @@ function LumpsumCalc() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "@id": "https://www.sipgo.in/lumpsum-calculator#breadcrumb",
+            "name": "Lumpsum Calculator Navigation Path",
             itemListElement: [
               {
                 "@type": "ListItem",

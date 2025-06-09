@@ -243,6 +243,7 @@ function SIPCalculator() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "@id": "https://www.sipgo.in/sip-calculator#breadcrumb",
+            "name": "SIP Calculator Navigation Path",
             itemListElement: [
               { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sipgo.in/" },
               { "@type": "ListItem", position: 2, name: "SIP Calculator", item: "https://www.sipgo.in/sip-calculator" }
