@@ -47,7 +47,7 @@ const DividendYieldFAQ = () => {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "FAQPage",
-          "@id": "https://www.sipgo.in/dividend-yield-calculator#faq",
+          "@id": "https://www.sipgo.in/dividend-calculator#faq",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,
