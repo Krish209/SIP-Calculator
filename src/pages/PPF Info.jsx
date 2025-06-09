@@ -30,19 +30,24 @@ const PPFInfo = () => {
               "url": "https://www.sipgo.in/logo.png"
             }
           },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.sipgo.in/ppf-calculator"
+          },
+
           "mainEntity": {
-          "@type": "Table",
-          "about": "PPF Guide Sections",
-          "table": [
-            "What is PPF?",
-            "Key Features of PPF",
-            "Who is Eligible?",
-            "How to Open a PPF Account",
-            "Maturity Period",
-            "Pros of PPF",
-            "Cons of PPF",
-          ]
-        }
+            "@type": "Table",
+            "about": "PPF Guide Sections",
+            "table": [
+              "What is PPF?",
+              "Key Features of PPF",
+              "Who is Eligible?",
+              "How to Open a PPF Account",
+              "Maturity Period",
+              "Pros of PPF",
+              "Cons of PPF",
+            ]
+          }
         })}
       </script>
 

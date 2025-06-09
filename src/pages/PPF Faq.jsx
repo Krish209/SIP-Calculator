@@ -51,6 +51,7 @@ const PPFFAQ = () => {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "FAQPage",
+          "headline": "Public Provident Fund (PPF) FAQs",
           "@id": "https://www.sipgo.in/ppf-calculator#faq",
           "name": "PPF Account FAQs",
           "mainEntity": questions.map((q) => ({

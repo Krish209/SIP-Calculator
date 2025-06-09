@@ -192,14 +192,15 @@ function PPF() {
         {/* ========== CRITICAL SCHEMA MARKUP ========== */}
         <script type="application/ld+json">
           {JSON.stringify([
+            // Primary WebPage Schema
             {
               "@context": "https://schema.org",
               "@type": "WebPage",
               "name": "PPF Calculator",
               "description":
                 "Calculate your Public Provident Fund returns and maturity amount with our easy-to-use PPF Calculator.",
-              "url": "https://www.sipgo.in/ppf-calculator",
-              "@id": "https://www.sipgo.in/ppf-calculator",
+              "url": canonicalUrl,
+              "@id": canonicalUrl,
               "hasPart": [
                 {
                   "@type": "FAQPage",
@@ -228,8 +229,7 @@ function PPF() {
               "provider": {
                 "@type": "GovernmentOrganization",
                 "name": "Government of India"
-              },
-              
+              },              
             }
           ])}
         </script>
