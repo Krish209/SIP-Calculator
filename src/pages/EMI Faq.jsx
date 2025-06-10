@@ -68,7 +68,7 @@ const EMIFAQ = () => {
             "acceptedAnswer": {
               "@type": "Answer",
               "text": q.answer,
-              "dateCreated": "2024-06-01"
+              "dateCreated": "2025-04-01",
             },
           })),
         })}

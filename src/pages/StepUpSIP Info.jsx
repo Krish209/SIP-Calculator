@@ -2,8 +2,8 @@ import React from "react";
 import Table from "../consts/Table";
 
 const StepUpSIPInfo = () => {
-  const datePublished = new Date("2024-06-01").toISOString();
-  const dateModified = new Date("2024-06-01").toISOString();
+  const datePublished = new Date("2025-04-01").toISOString();
+  const dateModified = new Date("2025-06-01").toISOString();
   const columns = [
     { key: 'details', header: 'Details' },
     { key: 'sip', header: 'SIP' },
@@ -58,10 +58,11 @@ const StepUpSIPInfo = () => {
           "image": "https://www.sipgo.in/images/logo",
           "author": {
             "@type": "Organization",
-            "name": "SIPGo"
+            "name": "SIPGo",
+            "url": "https://www.sipgo.in/"
           },
-          "datePublished": datePublished, // Add this
-          "dateModified":  dateModified, // Add this
+          "datePublished": datePublished,
+          "dateModified":  dateModified,
           "publisher": {
             "@type": "Organization",
             "name": "SIPGo",
@@ -72,7 +73,7 @@ const StepUpSIPInfo = () => {
           },
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://www.sipgo.in/ppf-calculator"
+            "@id": "https://www.sipgo.in/step-up-sip-calculator"
           },
           "mainEntity": {
             "@type": "Table",

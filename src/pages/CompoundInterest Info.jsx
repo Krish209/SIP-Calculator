@@ -1,8 +1,8 @@
 import React from "react";
 
 const CompoundingInterestInfo = () => {
-  const datePublished = new Date("2024-06-01").toISOString();
-  const dateModified = new Date("2024-06-01").toISOString();
+  const datePublished = new Date("2025-04-01").toISOString();
+  const dateModified = new Date("2025-06-01").toISOString();
   return (
     <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
 
@@ -18,10 +18,11 @@ const CompoundingInterestInfo = () => {
           "image": "https://www.sipgo.in/images/logo",
           "author": {
             "@type": "Organization",
-            "name": "SIPGo"
+            "name": "SIPGo",
+            "url": "https://www.sipgo.in/"
           },
-          "datePublished": datePublished, // Add this
-          "dateModified":  dateModified, // Add this
+          "datePublished": datePublished,
+          "dateModified":  dateModified,
           "publisher": {
             "@type": "Organization",
             "name": "SIPGo",
@@ -29,6 +30,10 @@ const CompoundingInterestInfo = () => {
               "@type": "ImageObject",
               "url": "https://www.sipgo.in/logo.png"
             }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.sipgo.in/compound-interest-calculator"
           },
           "mainEntity": {
             "@type": "Table",

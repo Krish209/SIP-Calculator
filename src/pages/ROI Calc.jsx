@@ -141,8 +141,10 @@ function ROICalculator() {
         <meta name="twitter:description" content="Calculate the return on investment (ROI) for your portfolio using our ROI calculator. Ideal for stock, mutual fund, and real estate tracking." />
         <meta name="twitter:image" content="https://www.sipgo.in/images/roi-calculator-twitter.jpg" />
 
+        {/* ========== CRITICAL SCHEMA MARKUP ========== */}
         <script type="application/ld+json">
           {JSON.stringify({
+            // Primary WebPage Schema
             "@context": "https://schema.org",
             "@type": "WebPage",
             name: "ROI Calculator",
