@@ -34,7 +34,6 @@ const PPFInfo = () => {
             "@type": "WebPage",
             "@id": "https://www.sipgo.in/ppf-calculator"
           },
-
           "mainEntity": {
             "@type": "Table",
             "about": "PPF Guide Sections",

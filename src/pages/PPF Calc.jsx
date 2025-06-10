@@ -201,6 +201,11 @@ function PPF() {
                 "Calculate your Public Provident Fund returns and maturity amount with our easy-to-use PPF Calculator.",
               "url": canonicalUrl,
               "@id": canonicalUrl,
+              "isPartOf": {
+                "@type": "WebSite",
+                "name": "SIPGo Financial Calculators",
+                "url": "https://www.sipgo.in"
+              },
               "hasPart": [
                 {
                   "@type": "FAQPage",
