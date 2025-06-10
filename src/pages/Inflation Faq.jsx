@@ -67,12 +67,14 @@ const InflationFAQ = () => {
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/inflation-calculator#faq",
           "name": "Inflation FAQs",
+          "headline": "Inflation FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,
             "acceptedAnswer": {
               "@type": "Answer",
               "text": q.answer,
+              "dateCreated": "2024-06-01",
             },
           })),
         })}

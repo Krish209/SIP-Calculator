@@ -61,24 +61,28 @@ const SIPInfo = () => {
               "url": "https://www.sipgo.in/logo.png"
             }
           },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.sipgo.in/ppf-calculator"
+          },
           "mainEntity": {
-          "@type": "Table",
-          "about": "SIP Guide Sections",
-          "table": [
-            "What is SIP?",
-            "Why Choose SIP?",
-            "How Does SIP Work?",
-            "Types of SIP",
-            "How Are SIP Investment Returns Calculated?",
-            "SIP Vs Lump Sum Investment",
-            "Benefits of SIP",
-            "Tax Implications of SIP",
-            "Inflation Effect on SIP",
-            "Additional Investment Options for SIP",
-            "Key Considerations for SIP",
-            "Common SIP Mistakes to Avoid"
-          ]
-        }
+            "@type": "Table",
+            "about": "SIP Guide Sections",
+            "table": [
+              "What is SIP?",
+              "Why Choose SIP?",
+              "How Does SIP Work?",
+              "Types of SIP",
+              "How Are SIP Investment Returns Calculated?",
+              "SIP Vs Lump Sum Investment",
+              "Benefits of SIP",
+              "Tax Implications of SIP",
+              "Inflation Effect on SIP",
+              "Additional Investment Options for SIP",
+              "Key Considerations for SIP",
+              "Common SIP Mistakes to Avoid"
+            ]
+          }
         })}
       </script>
 

@@ -57,12 +57,14 @@ const SimpleInterestFAQ = () => {
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/simple-interest-calculator#faq",
           "name": "Simple Interest FAQs",
+          "headline": "Simple Interest FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,
             "acceptedAnswer": {
               "@type": "Answer",
               "text": q.answer,
+              "dateCreated": "2024-06-01",
             },
           })),
         })}

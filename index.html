@@ -70,8 +70,13 @@
     
     <!-- <title>SIPGo - more than Calculator</title> -->
     <title>SIPGo - SIP Calculator, EMI, FD, PPF, Mutual Fund Tools</title>
-
+    
+    <meta name="copyright" content="SIPGo" />
     <meta property="og:site_name" content="SIPGo" />
+    <meta name="application-name" content="SIPGo">
+
+    <!-- just checking the color -->
+    <meta name="theme-color" content="#0a192f" />
 
     <!-- Add this new global tag -->
     <link rel="alternate" type="application/rss+xml" href="https://www.sipgo.in/blog/rss.xml" title="SIPGo Blog RSS" />
@@ -81,33 +86,72 @@
       {
         "@context": "https://schema.org",
         "@type": "Organization",
+        "url": "https://www.sipgo.in",
+        "logo": "https://www.sipgo.in/images/logo.png",
         "name": "SIPGo",
-        "url": "https://www.sipgo.in/",
+        "alternateName": "SIP Go",
         "description": "SIPGo provides advanced financial calculators including SIP, PPF, EMI, FD, and mutual fund tools for smart investing.",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://www.sipgo.in/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        },
-        "sameAs": [
-          "https://twitter.com/SipGo992"
-        ]
-      }
-      </script>
-
-      <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "SIPGo",
-        "url": "https://www.sipgo.in/",
+        "email": "support@sipgo.in",
         "potentialAction": {
           "@type": "SearchAction",
           "target": "https://www.sipgo.in/search?q={search_term_string}",
           "query-input": "required name=search_term_string"
         }
       }
-      </script>
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SIPGo",
+        "alternateName": "SIP Go",
+        "url": "https://www.sipgo.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.sipgo.in/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        },
+        "copyrightHolder": {
+          "@type": "Organization",
+          "name": "SIPGo"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FinancialService",
+        "name": "SIPGo Financial Calculators",
+        "description": "Free online financial calculators for investment planning",
+        "url": "https://www.sipgo.in",
+        "logo": "https://www.sipgo.in/images/logo.png",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "INR"
+        },
+        "sameAs": [
+          "https://twitter.com/SipGo992"
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "SIPGo - Financial Calculators for SIP, FD, PPF & More",
+        "description": "Access advanced financial calculators on SIPGo to calculate SIP returns, EMI, FD interest, and plan your investments smartly.",
+        "url": "https://www.sipgo.in",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "SIPGo",
+          "url": "https://www.sipgo.in"
+        }
+      }
+    </script>
    
   </head>
   

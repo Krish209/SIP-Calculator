@@ -65,21 +65,25 @@ const LumpsumInfo = () => {
               "url": "https://www.sipgo.in/logo.png"
             }
           },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.sipgo.in/ppf-calculator"
+          },
           "mainEntity": {
-          "@type": "Table",
-          "about": "Lumpsum Guide Sections",
-          "table": [
-            "What is Lumpsum Investment?",
-            "Key Features of Lump Sum",
-            "How Are Lumpsum Investment Returns Calculated?",
-            "SIP Vs Lump Sum Investment",
-            "Benefits of Lump Sum",
-            "Tax Implications of Lumpsum",
-            "Inflation Effect on Lump Sum",
-            "Key Considerations for Lumpsum",
-            "Common Lumpsum Mistakes to Avoid"
-          ]
-        }
+            "@type": "Table",
+            "about": "Lumpsum Guide Sections",
+            "table": [
+              "What is Lumpsum Investment?",
+              "Key Features of Lump Sum",
+              "How Are Lumpsum Investment Returns Calculated?",
+              "SIP Vs Lump Sum Investment",
+              "Benefits of Lump Sum",
+              "Tax Implications of Lumpsum",
+              "Inflation Effect on Lump Sum",
+              "Key Considerations for Lumpsum",
+              "Common Lumpsum Mistakes to Avoid"
+            ]
+          }
         })}
       </script>
 

@@ -30,23 +30,27 @@ const NPSInfo = () => {
               "url": "https://www.sipgo.in/logo.png"
             }
           },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.sipgo.in/ppf-calculator"
+          },
           "mainEntity": {
-          "@type": "Table",
-          "about": "NPS Guide Sections",
-          "table": [
-            "What is NPS?",
-            "Key Features of NPS",
-            "How does NPS work?",
-            "Structure of NPS",
-            "Contributions to NPS",
-            "Investment Options in NPS",
-            "Tax Benefits of NPS",
-            "Exit and Withdrawal Rules",
-            "Pros of NPS",
-            "Cons of NPS",
-            "Conclusion"
-          ]
-        }
+            "@type": "Table",
+            "about": "NPS Guide Sections",
+            "table": [
+              "What is NPS?",
+              "Key Features of NPS",
+              "How does NPS work?",
+              "Structure of NPS",
+              "Contributions to NPS",
+              "Investment Options in NPS",
+              "Tax Benefits of NPS",
+              "Exit and Withdrawal Rules",
+              "Pros of NPS",
+              "Cons of NPS",
+              "Conclusion"
+            ]
+          }
         })}
       </script>
 

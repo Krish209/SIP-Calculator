@@ -31,17 +31,16 @@ const CompoundingInterestInfo = () => {
             }
           },
           "mainEntity": {
-          "@type": "Table",
-          "about": "Compound Interest Guide Sections",
-          "table": [
-            "What is Compound Interest?",
-            "How Compound Interest Works",
-            "Benefits of Compound Interest",
-            "Types of Compound Interest",
-            "Compound Interest vs. Simple Interest",
-           
-          ]
-        }
+            "@type": "Table",
+            "about": "Compound Interest Guide Sections",
+            "table": [
+              "What is Compound Interest?",
+              "How Compound Interest Works",
+              "Benefits of Compound Interest",
+              "Types of Compound Interest",
+              "Compound Interest vs. Simple Interest",
+            ]
+          }
         })}
       </script>
 

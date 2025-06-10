@@ -43,12 +43,14 @@ const KVPFAQ = () => {
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/kvp-calculator#faq",
           "name": "KVP FAQs",
+          "headline": "KVP FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,
             "acceptedAnswer": {
               "@type": "Answer",
               "text": q.answer,
+              "dateCreated": "2024-06-01",
             },
           })),
         })}

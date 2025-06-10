@@ -30,20 +30,24 @@ const FdInfo = () => {
               "url": "https://www.sipgo.in/logo.png"
             }
           },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.sipgo.in/ppf-calculator"
+          },
           "mainEntity": {
-          "@type": "Table",
-          "about": "FD Guide Sections",
-          "table": [
-            "What is a FD?",
-            "Key Features of FD",
-            "Advantages of FDs",
-            "Deposit Insurance Coverage",
-            "Types of FDs",
-            "Choosing the Right FD Investment",
-            "Things to Consider",
-            "Is an FD Investment Right for You?"
-          ]
-        }
+            "@type": "Table",
+            "about": "FD Guide Sections",
+            "table": [
+              "What is a FD?",
+              "Key Features of FD",
+              "Advantages of FDs",
+              "Deposit Insurance Coverage",
+              "Types of FDs",
+              "Choosing the Right FD Investment",
+              "Things to Consider",
+              "Is an FD Investment Right for You?"
+            ]
+          }
         })}
       </script>
 

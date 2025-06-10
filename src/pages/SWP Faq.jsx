@@ -66,12 +66,14 @@ const SWPFAQ = () => {
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/swp-calculator#faq",
           "name": "SWP FAQs",
+          "headline": "SWP FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,
             "acceptedAnswer": {
               "@type": "Answer",
               "text": q.answer,
+              "dateCreated": "2024-06-01",
             },
           })),
         })}

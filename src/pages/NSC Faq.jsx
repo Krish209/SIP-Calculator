@@ -61,12 +61,14 @@ const NSCFAQ = () => {
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/nsc-calculator#faq",
           "name": "NSC FAQs",
+          "headline": "NSC FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,
             "acceptedAnswer": {
               "@type": "Answer",
               "text": q.answer,
+              "dateCreated": "2024-06-01",
             },
           })),
         })}

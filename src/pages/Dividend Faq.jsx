@@ -49,12 +49,14 @@ const DividendYieldFAQ = () => {
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/dividend-calculator#faq",
           "name": "Dividend FAQs",
+          "headline": "Dividend FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,
             "acceptedAnswer": {
               "@type": "Answer",
               "text": q.answer,
+              "dateCreated": "2024-06-01"
             },
           })),
         })}

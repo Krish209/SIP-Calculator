@@ -30,18 +30,22 @@ const InflationInfo = () => {
               "url": "https://www.sipgo.in/logo.png"
             }
           },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.sipgo.in/ppf-calculator"
+          },
           "mainEntity": {
-          "@type": "Table",
-          "about": "Inflation Guide Sections",
-          "table": [
-            "What is Inflation?",
-            "Causes of Inflation",
-            "Types of Inflation",
-            "Measuring Inflation",
-            "Consequences of Inflation",
-            "Inflation Control Measures"
-          ]
-        }
+            "@type": "Table",
+            "about": "Inflation Guide Sections",
+            "table": [
+              "What is Inflation?",
+              "Causes of Inflation",
+              "Types of Inflation",
+              "Measuring Inflation",
+              "Consequences of Inflation",
+              "Inflation Control Measures"
+            ]
+          }
         })}
       </script>
 

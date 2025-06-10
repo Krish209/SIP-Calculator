@@ -61,23 +61,27 @@ const SWPInfo = () => {
               "url": "https://www.sipgo.in/logo.png"
             }
           },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.sipgo.in/ppf-calculator"
+          },
           "mainEntity": {
-          "@type": "Table",
-          "about": "SWP Guide Sections",
-          "table": [
-            "What is a SWP?",
-            "Key Features of SWP",
-            "How Does SWP Work?",
-            "Types of SWP",
-            "Benefits of SWP",
-            "Pros",
-            "Cons",
-            "Key Considerations for SWP",
-            "Tax Implications of SWP",
-            "SWP vs SIP",
-            "Conclusion"
-          ]
-        }
+            "@type": "Table",
+            "about": "SWP Guide Sections",
+            "table": [
+              "What is a SWP?",
+              "Key Features of SWP",
+              "How Does SWP Work?",
+              "Types of SWP",
+              "Benefits of SWP",
+              "Pros",
+              "Cons",
+              "Key Considerations for SWP",
+              "Tax Implications of SWP",
+              "SWP vs SIP",
+              "Conclusion"
+            ]
+          }
         })}
       </script>
 

@@ -30,20 +30,24 @@ function GratuityInfo() {
               "url": "https://www.sipgo.in/logo.png"
             }
           },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.sipgo.in/ppf-calculator"
+          },
           "mainEntity": {
-          "@type": "Table",
-          "about": "Gratuity Guide Sections",
-          "table": [
-            "What is Gratuity?",
-            "Eligibility for Gratuity",
-            "How Gratuity is Calculated",
-            "Taxation on Gratuity",
-            "Gratuity in Case of Death or Disability",
-            "Gratuity Payment Process",
-            "Employer’s Obligation",
-            "Key Points to Remember"
-          ]
-        }
+            "@type": "Table",
+            "about": "Gratuity Guide Sections",
+            "table": [
+              "What is Gratuity?",
+              "Eligibility for Gratuity",
+              "How Gratuity is Calculated",
+              "Taxation on Gratuity",
+              "Gratuity in Case of Death or Disability",
+              "Gratuity Payment Process",
+              "Employer’s Obligation",
+              "Key Points to Remember"
+            ]
+          }
         })}
       </script>
 

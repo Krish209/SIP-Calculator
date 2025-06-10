@@ -30,19 +30,23 @@ function SSYInfo() {
               "url": "https://www.sipgo.in/logo.png"
             }
           },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.sipgo.in/ppf-calculator"
+          },
           "mainEntity": {
-          "@type": "Table",
-          "about": "SSY Guide Sections",
-          "table": [
-            "What is Sukanya Samriddhi Yojana?",
-            "Key Features of SSY",
-            "How to Open an SSY Account",
-            "Pros of SSY",
-            "Cons of SSY",
-            "Who Should Invest in SSY?",
-            "Conclusion"
-          ]
-        }
+            "@type": "Table",
+            "about": "SSY Guide Sections",
+            "table": [
+              "What is Sukanya Samriddhi Yojana?",
+              "Key Features of SSY",
+              "How to Open an SSY Account",
+              "Pros of SSY",
+              "Cons of SSY",
+              "Who Should Invest in SSY?",
+              "Conclusion"
+            ]
+          }
         })}
       </script>
 

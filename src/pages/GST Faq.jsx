@@ -61,12 +61,14 @@ const GSTFAQ = () => {
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/gst-calculator#faq",
           "name": "GST FAQs",
+          "headline": "GST FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,
             "acceptedAnswer": {
               "@type": "Answer",
               "text": q.answer,
+              "dateCreated": "2024-06-01",
             },
           })),
         })}

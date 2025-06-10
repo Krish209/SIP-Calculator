@@ -30,22 +30,26 @@ const NSCInfo = () => {
               "url": "https://www.sipgo.in/logo.png"
             }
           },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.sipgo.in/ppf-calculator"
+          },
           "mainEntity": {
-          "@type": "Table",
-          "about": "NSC Guide Sections",
-          "table": [
-            "What is NSC?",
-            "Key Features of NSC",
-            "How Does NSC Work?",
-            "Interest Rates on NSC",
-            "Tax Benefits of NSC",
-            "Types of NSC",
-            "Who Should Invest in NSC?",
-            "Pros of NSC",
-            "Cons of NSC",
-            "How to Buy NSC?"
-          ]
-        }
+            "@type": "Table",
+            "about": "NSC Guide Sections",
+            "table": [
+              "What is NSC?",
+              "Key Features of NSC",
+              "How Does NSC Work?",
+              "Interest Rates on NSC",
+              "Tax Benefits of NSC",
+              "Types of NSC",
+              "Who Should Invest in NSC?",
+              "Pros of NSC",
+              "Cons of NSC",
+              "How to Buy NSC?"
+            ]
+          }
         })}
       </script>
 

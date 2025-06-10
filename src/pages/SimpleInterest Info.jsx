@@ -30,14 +30,18 @@ const SimpleInterestInfo = () => {
               "url": "https://www.sipgo.in/logo.png"
             }
           },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.sipgo.in/ppf-calculator"
+          },
           "mainEntity": {
-          "@type": "Table",
-          "about": "Simple Interest Guide Sections",
-          "table": [
-            "Real-World Applications",
-            "Limitations of Simple Interest"
-          ]
-        }
+            "@type": "Table",
+            "about": "Simple Interest Guide Sections",
+            "table": [
+              "Real-World Applications",
+              "Limitations of Simple Interest"
+            ]
+          }
         })}
       </script>
 

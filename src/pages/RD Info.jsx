@@ -30,20 +30,24 @@ const RDInfo = () => {
               "url": "https://www.sipgo.in/logo.png"
             }
           },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.sipgo.in/ppf-calculator"
+          },
           "mainEntity": {
-          "@type": "Table",
-          "about": "RD Guide Sections",
-          "table": [
-            "What is an RD?",
-            "Benefits of RD",
-            "How to Open an RD?",
-            "How Does RD Work?",
-            "Interest Rates on RDs",
-            "Tax on RDs",
-            "Premature Withdrawal and Penalty",
-            "Conclusion"
-          ]
-        }
+            "@type": "Table",
+            "about": "RD Guide Sections",
+            "table": [
+              "What is an RD?",
+              "Benefits of RD",
+              "How to Open an RD?",
+              "How Does RD Work?",
+              "Interest Rates on RDs",
+              "Tax on RDs",
+              "Premature Withdrawal and Penalty",
+              "Conclusion"
+            ]
+          }
         })}
       </script>
 

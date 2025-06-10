@@ -30,22 +30,26 @@ const KVPInfo = () => {
               "url": "https://www.sipgo.in/logo.png"
             }
           },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.sipgo.in/ppf-calculator"
+          },
           "mainEntity": {
-          "@type": "Table",
-          "about": "KVP Guide Sections",
-          "table": [
-            "What is KVP?",
-            "Key Features of KVP",
-            "Who is Eligible?",
-            "Types of KVP Accounts",
-            "How Does KVP Work?",
-            "Taxation on KVP",
-            "Pros of KVP",
-            "Cons of KVP",
-            "How to Buy KVP?",
-            "Conclusion"
-          ]
-        }
+            "@type": "Table",
+            "about": "KVP Guide Sections",
+            "table": [
+              "What is KVP?",
+              "Key Features of KVP",
+              "Who is Eligible?",
+              "Types of KVP Accounts",
+              "How Does KVP Work?",
+              "Taxation on KVP",
+              "Pros of KVP",
+              "Cons of KVP",
+              "How to Buy KVP?",
+              "Conclusion"
+            ]
+          }
         })}
       </script>
 

@@ -54,13 +54,14 @@ const PPFFAQ = () => {
           "headline": "Public Provident Fund (PPF) FAQs",
           "@id": "https://www.sipgo.in/ppf-calculator#faq",
           "name": "PPF Account FAQs",
+          "headline": "PPF Account FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,
             "acceptedAnswer": {
               "@type": "Answer",
               "text": q.answer,
-              "dateCreated": "2024-06-01"
+              "dateCreated": "2024-06-01",
             },
           })),
         })}

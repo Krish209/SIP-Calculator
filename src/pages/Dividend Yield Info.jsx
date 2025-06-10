@@ -30,19 +30,23 @@ const DividendYieldInfo = () => {
               "url": "https://www.sipgo.in/logo.png"
             }
           },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.sipgo.in/ppf-calculator"
+          },
           "mainEntity": {
-          "@type": "Table",
-          "about": "Dividend Yield Guide Sections",
-          "table": [
-            "What is Dividend Yield?",
-            "Key Things to Understand",
-            "Who is Eligible?",
-            "How Does Dividend Yield Work?",
-            "Taxation on Dividend Income",
-            "Pros and Cons of High Dividend Yield",
-            "Conclusion"
-          ]
-        }
+            "@type": "Table",
+            "about": "Dividend Yield Guide Sections",
+            "table": [
+              "What is Dividend Yield?",
+              "Key Things to Understand",
+              "Who is Eligible?",
+              "How Does Dividend Yield Work?",
+              "Taxation on Dividend Income",
+              "Pros and Cons of High Dividend Yield",
+              "Conclusion"
+            ]
+          }
         })}
       </script>
 

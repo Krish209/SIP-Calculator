@@ -30,19 +30,23 @@ const ROIInfo = () => {
               "url": "https://www.sipgo.in/logo.png"
             }
           },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.sipgo.in/ppf-calculator"
+          },
           "mainEntity": {
-          "@type": "Table",
-          "about": "ROI Guide Sections",
-          "table": [
-            "What is an ROI?",
-            "How does ROI work?",
-            "Who Should Use ROI?",
-            "Types & Variations of ROI",
-            "Limitations of ROI",
-            "Best Practices",
-            "Conclusion"
-          ]
-        }
+            "@type": "Table",
+            "about": "ROI Guide Sections",
+            "table": [
+              "What is an ROI?",
+              "How does ROI work?",
+              "Who Should Use ROI?",
+              "Types & Variations of ROI",
+              "Limitations of ROI",
+              "Best Practices",
+              "Conclusion"
+            ]
+          }
         })}
       </script>
       

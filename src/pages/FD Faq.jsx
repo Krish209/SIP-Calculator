@@ -56,12 +56,14 @@ const FDFaq = () => {
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/fd-calculator#faq",
           "name": "FD FAQs",
+          "headline": "FD FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,
             "acceptedAnswer": {
               "@type": "Answer",
               "text": q.answer,
+              "dateCreated": "2024-06-01",
             },
           })),
         })}

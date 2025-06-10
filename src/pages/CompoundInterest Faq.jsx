@@ -48,6 +48,7 @@ const CompoundInterestFAQ = () => {
 
   return (
     <div className="mx-auto mb-4 text-primary">
+
       {/* JSON-LD for FAQ */}
       <script type="application/ld+json">
         {JSON.stringify({
@@ -55,12 +56,14 @@ const CompoundInterestFAQ = () => {
           "@type": "FAQPage",
           "@id": "https://www.sipgo.in/compound-interest-calculator#faq",
           "name": "Compound Interest FAQs",
+          "headline": "Compound Interest FAQs",
           "mainEntity": questions.map((q) => ({
             "@type": "Question",
             "name": q.question,
             "acceptedAnswer": {
               "@type": "Answer",
               "text": q.answer,
+              "dateCreated": "2024-06-01"
             },
           })),
         })}

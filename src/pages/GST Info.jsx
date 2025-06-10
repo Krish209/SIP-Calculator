@@ -30,24 +30,28 @@ const GSTInfo = () => {
               "url": "https://www.sipgo.in/logo.png"
             }
           },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.sipgo.in/ppf-calculator"
+          },
           "mainEntity": {
-          "@type": "Table",
-          "about": "GST Guide Sections",
-          "table": [
-            "What is GST?",
-            "Key Features of GST",
-            "Types of GST",
-            "GST Calculation Formula",
-            "GST Rates",
-            "Benefits of GST",
-            "Input Tax Credit (ITC)",
-            "GST Registration",
-            "GST Returns",
-            "Challenges of GST",
-            "GST and E-commerce",
-            "Conclusion"
-          ]
-        }
+            "@type": "Table",
+            "about": "GST Guide Sections",
+            "table": [
+              "What is GST?",
+              "Key Features of GST",
+              "Types of GST",
+              "GST Calculation Formula",
+              "GST Rates",
+              "Benefits of GST",
+              "Input Tax Credit (ITC)",
+              "GST Registration",
+              "GST Returns",
+              "Challenges of GST",
+              "GST and E-commerce",
+              "Conclusion"
+            ]
+          }
         })}
       </script>
 

@@ -70,21 +70,25 @@ const StepUpSIPInfo = () => {
               "url": "https://www.sipgo.in/logo.png"
             }
           },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.sipgo.in/ppf-calculator"
+          },
           "mainEntity": {
-          "@type": "Table",
-          "about": "Step-Up SIP Guide Sections",
-          "table": [
-            "What is a Step-Up SIP?",
-            "Key Features of Step-Up SIP",
-            "How Does Step-Up SIP Work?",
-            "Benefits of Step-Up SIP",
-            "Key Considerations for Step-Up SIP",
-            "Pros",
-            "Cons",
-            "Who Should Invest in Step-Up SIP?",
-            "Conclusion"
-          ]
-        }
+            "@type": "Table",
+            "about": "Step-Up SIP Guide Sections",
+            "table": [
+              "What is a Step-Up SIP?",
+              "Key Features of Step-Up SIP",
+              "How Does Step-Up SIP Work?",
+              "Benefits of Step-Up SIP",
+              "Key Considerations for Step-Up SIP",
+              "Pros",
+              "Cons",
+              "Who Should Invest in Step-Up SIP?",
+              "Conclusion"
+            ]
+          }
         })}
       </script>
 

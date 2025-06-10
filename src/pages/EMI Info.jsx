@@ -30,22 +30,26 @@ function EMIInfo() {
               "url": "https://www.sipgo.in/logo.png"
             }
           },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.sipgo.in/ppf-calculator"
+          },
           "mainEntity": {
-          "@type": "Table",
-          "about": "EMI Guide Sections",
-          "table": [
-            "What is EMI?",
-            "Components of EMI",
-            "How does EMI Work?",
-            "Types of EMI Calculation",
-            "Types of Loans That Use EMIs",
-            "Loan Amortization",
-            "Prepayment and Loan Foreclosure",
-            "Advantages of EMI",
-            "Disadvantages of EMI",
-            "Conclusion"
-          ]
-        }
+            "@type": "Table",
+            "about": "EMI Guide Sections",
+            "table": [
+              "What is EMI?",
+              "Components of EMI",
+              "How does EMI Work?",
+              "Types of EMI Calculation",
+              "Types of Loans That Use EMIs",
+              "Loan Amortization",
+              "Prepayment and Loan Foreclosure",
+              "Advantages of EMI",
+              "Disadvantages of EMI",
+              "Conclusion"
+            ]
+          }
         })}
       </script>
 
