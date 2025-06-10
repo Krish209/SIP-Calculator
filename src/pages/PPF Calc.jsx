@@ -218,6 +218,28 @@ function PPF() {
               ]
             },
 
+            // SoftwareApplication Schema
+            {
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              "name": "PPF Calculator",
+              "url": "https://www.sipgo.in/ppf-calculator",
+              "applicationCategory": "FinanceApplication",
+              "operatingSystem": "All",
+              "browserRequirements": "Requires JavaScript",
+              "creator": {
+                "@type": "Organization",
+                "name": "SIPGo",
+                "url": "https://www.sipgo.in"
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "INR"
+              },
+              "description": "An online PPF calculator to estimate maturity value and interest earned from your Public Provident Fund investment."
+            },
+
             // Financial Product Schema
             {
               "@context": "https://schema.org",

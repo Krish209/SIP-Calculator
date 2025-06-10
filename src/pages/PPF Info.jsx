@@ -18,7 +18,8 @@ const PPFInfo = () => {
           "image": "https://www.sipgo.in/images/logo",
           "author": {
             "@type": "Organization",
-            "name": "SIPGo"
+            "name": "SIPGo",
+            "url": "https://www.sipgo.in/"
           },
           "datePublished": datePublished, // Add this
           "dateModified":  dateModified, // Add this
