@@ -7,7 +7,7 @@ export const meta = {
   title: "How Do Inflation and Taxes Impact Investments?",
   description: "Learn how inflation and taxes can affect your investment returns and what you can do about it.",
   slug: "how-do-inflation-and-taxes-impact-investments",
-  image: "https://sipgo.in/assets/icons/blogs/tax-inflation.jpeg",
+  image: "https://www.sipgo.in/assets/icons/blogs/tax-inflation.jpeg",
   tags: ["Tax & Inflation", "Returns", "Investment Planning", "Finance"],
   date: "2025-05-29", // ISO format better for SEO
 };
@@ -125,9 +125,8 @@ const InflationandTaxesImpact = () => {
       date="May 26, 2025"
       readTime="10 min read"
       image={img}
-      tags={["Investing", "Inflation", "Finance", "Wealth"]}
       isPremium={true} // set as per your requirement
-      isWeeklyUpdated={false}
+      isWeeklyUpdated={true}
     >
       {/* Blog content here */}
       <div className="max-w-screen-lg md:mx-auto text-night">

@@ -7,7 +7,7 @@ export const meta = {
   title: "What are Stocks, ETFs, Mutual Funds, and Bonds? Explained Simply",
   description: "A quick guide to different types of financial instruments for new investors.",
   slug: "what-are-stocks-etfs-mutual-funds-and-bonds",
-  image: "https://sipgo.in/assets/icons/blogs/stocketf.jpeg",
+  image: "https://www.sipgo.in/assets/icons/blogs/stocketf.jpeg",
   tags: ["Education", "Stocks", "ETFs", "Mutual Funds", "Bonds"],
   date: "2025-05-28", // ISO format better for SEO
 };
@@ -85,9 +85,8 @@ const StockEtfMfBond = () => {
       date="May 26, 2025"
       readTime="10 min read"
       image={img}
-      tags={["Investing", "Inflation", "Finance", "Wealth"]}
       isPremium={true} // set as per your requirement
-      isWeeklyUpdated={false}
+      isWeeklyUpdated={true}
     >
       {/* Blog content here */}
       <div className="max-w-screen-lg md:mx-auto text-night">

@@ -7,7 +7,7 @@ export const meta = {
   title: "How to Invest if You are Self-Employed or a Freelancer",
   description: "Investment strategies and tips tailored for freelancers and self-employed professionals.",
   slug: "how-to-invest-if-you-are-self-employed-or-a-freelancer",
-  image: "https://sipgo.in/assets/icons/blogs/self-employed.jpeg",
+  image: "https://www.sipgo.in/assets/icons/blogs/self-employed.jpeg",
   tags: ["Self-Employed", "Freelancer", "Investing", "Financial Independence"],
   date: "2025-05-29", // ISO format better for SEO
 };
@@ -148,9 +148,8 @@ const SelfEmployedOrFreelancer = () => {
       date="May 26, 2025"
       readTime="10 min read"
       image={img}
-      tags={["Investing", "Inflation", "Finance", "Wealth"]}
       isPremium={true} // set as per your requirement
-      isWeeklyUpdated={false}
+      isWeeklyUpdated={true}
     >
       {/* Blog content here */}
       <div className="max-w-screen-lg md:mx-auto text-night">

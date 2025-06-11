@@ -7,7 +7,7 @@ export const meta = {
   title: "Why Risk is a Part of Investing – Know the Role of Risk in Returns",
   description: "Understand the relationship between risk and returns in investing.",
   slug: "why-risk-is-part-of-investing",
-  image: "https://sipgo.in/assets/icons/blogs/riskvsreward3.png",
+  image: "https://www.sipgo.in/assets/icons/blogs/riskvsreward3.png",
   tags: ["Finance Basics", "Risk Management", "Returns", "Investment Psychology"],
   date: "2025-05-26", // ISO format better for SEO
 };
@@ -107,9 +107,8 @@ const WhyRiskIsPartOfInvesting = () => {
       date="May 26, 2025"
       readTime="10 min read"
       image={img}
-      tags={["Investing", "Inflation", "Finance", "Wealth"]}
       isPremium={true} // set as per your requirement
-      isWeeklyUpdated={false}
+      isWeeklyUpdated={true}
     >
       {/* Blog content here */}
       <div className="max-w-screen-lg md:mx-auto text-night">

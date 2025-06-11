@@ -144,7 +144,7 @@ const BlogLayout = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription || excerpt} />
       <meta property="og:image" content={image} />
-      <meta property="og:url" content={`https://sipgo.in/blog/${slug}`} />
+      <meta property="og:url" content={`https://www.sipgo.in/blog/${slug}`} />
       <meta property="og:type" content="article" />
       
       {/* Twitter */}
@@ -154,7 +154,7 @@ const BlogLayout = ({
       <meta name="twitter:image" content={image} />
       
       {/* Canonical */}
-      <link rel="canonical" href={`https://sipgo.in/blog/${slug}`} />
+      <link rel="canonical" href={`https://www.sipgo.in/blog/${slug}`} />
       
       {/* Artical Schema */}
       <script type="application/ld+json">
@@ -165,7 +165,8 @@ const BlogLayout = ({
           "description": metaDescription || excerpt,
           "author": {
             "@type": "Person",
-            "name": author
+            "name": author,
+            "url": "https://www.sipgo.in/"
           },
           "datePublished": dateISO,
           "image": image,
@@ -174,12 +175,12 @@ const BlogLayout = ({
             "name": "SIPGo",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://sipgo.in/logo.png"
+              "url": "https://www.sipgo.in/logo.png"
             }
           },
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": `https://sipgo.in/blog/${slug}`
+            "@id": `https://www.sipgo.in/blog/${slug}`
           },
           "keywords": tags.join(', '),
           "articleBody": excerpt // Consider adding full text for better SEO
@@ -196,19 +197,19 @@ const BlogLayout = ({
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://sipgo.in/"
+              "item": "https://www.sipgo.in/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Blog",
-              "item": "https://sipgo.in/blog"
+              "item": "https://www.sipgo.in/blog"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": title,
-              "item": `https://sipgo.in/blog/${slug}`
+              "item": `https://www.sipgo.in/blog/${slug}`
             }
           ]
         })}
@@ -347,7 +348,7 @@ const BlogLayout = ({
               {tags.map((tag) => (
                 <a
                   key={tag}
-                  href={`/tags/${tag.toLowerCase().replace(/\s+/g, "-")}`}
+                  // href={`/tags/${tag.toLowerCase().replace(/\s+/g, "-")}`}
                   className="text-sm bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full"
                   aria-label={`Posts tagged with ${tag}`}
                 >

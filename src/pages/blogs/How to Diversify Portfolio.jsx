@@ -8,7 +8,7 @@ export const meta = {
   title: "How to Diversify Your Investment Portfolio - Complete Guide",
   description: "Step-by-step guide to portfolio diversification for Indian investors with asset allocation strategies and risk management tips.",
   slug: "how-to-diversify-your-investment-portfolio", // New URL-friendly slug
-  image: "https://sipgo.in/assets/icons/blogs/diversify.jpeg",
+  image: "https://www.sipgo.in/assets/icons/blogs/diversify.jpeg",
   tags: ["Investing", "Portfolio Diversification", "Asset Allocation", "Risk Management"],
   date: "2025-05-29", // ISO format better for SEO
 };
@@ -89,9 +89,8 @@ const DiversifyPortfolio = () => {
       date="May 29, 2025"
       readTime="4 min read"
       image={img}
-      tags={["Investing", "Inflation", "Finance", "Wealth"]}
       isPremium={true} // set as per your requirement
-      isWeeklyUpdated={false}
+      isWeeklyUpdated={true}
     >
       {/* Blog content here */}
       <div className="max-w-screen-lg md:mx-auto text-night">

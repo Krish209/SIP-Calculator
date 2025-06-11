@@ -7,7 +7,7 @@ export const meta = {
   title: "How to Create a Passive Income – Strategies That Work",
   description: "Explore various strategies to generate income with minimal ongoing effort.",
   slug: "how-to-create-passive-income-with-investments",
-  image: "https://sipgo.in/assets/icons/blogs/tree1.jpeg",
+  image: "https://www.sipgo.in/assets/icons/blogs/tree1.jpeg",
   tags: ["Passive Income", "Financial Freedom", "Investing", "Income Strategies"],
   date: "2025-05-29", // ISO format better for SEO
 };
@@ -124,9 +124,8 @@ const CreatePassiveIncome = () => {
       date="May 26, 2025"
       readTime="10 min read"
       image={img}
-      tags={["Investing", "Inflation", "Finance", "Wealth"]}
       isPremium={true} // set as per your requirement
-      isWeeklyUpdated={false}
+      isWeeklyUpdated={true}
     >
       {/* Blog content here */}
       <div className="max-w-screen-lg md:mx-auto text-night">

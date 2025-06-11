@@ -7,7 +7,7 @@ export const meta = {
   title: "SIP vs Lumpsum – Which Investment Option is Better?",
   description: "Compare Systematic Investment Plans and lump sum investments to make the right choice.",
   slug: "sip-vs-lumpsum",
-  image: "https://sipgo.in/assets/icons/blogs/sip-lump2.jpeg",
+  image: "https://www.sipgo.in/assets/icons/blogs/sip-lump2.jpeg",
   tags: ["Investment", "SIP", "Lumpsum", "Financial Planning"],
   date: "2025-05-25", // ISO format better for SEO
 };
@@ -70,9 +70,8 @@ const SIPvsLumpsum = () => {
       date="May 26, 2025"
       readTime="10 min read"
       image={img}
-      tags={["Investing", "Inflation", "Finance", "Wealth"]}
       isPremium={true} // set as per your requirement
-      isWeeklyUpdated={false}
+      isWeeklyUpdated={true}
     >
       {/* Blog content here */}
       <div className="max-w-screen-lg md:mx-auto text-night">

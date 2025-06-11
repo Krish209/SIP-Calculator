@@ -7,7 +7,7 @@ export const meta = {
   title: "What is the Difference Between Saving and Investing?",
   description: "Learn the key differences between saving and investing and when to choose one over the other.",
   slug: "difference-between-saving-and-investing",
-  image: "https://sipgo.in/assets/icons/blogs/saving-investing.jpeg",
+  image: "https://www.sipgo.in/assets/icons/blogs/saving-investing.jpeg",
   tags: ["Finance Basics", "Saving", "Investing", "Money Management"],
   date: "2025-06-01", // ISO format better for SEO
 };
@@ -67,9 +67,8 @@ const SavingvsInvesting = () => {
       date="May 26, 2025"
       readTime="10 min read"
       image={img}
-      tags={["Investing", "Inflation", "Finance", "Wealth"]}
       isPremium={true} // set as per your requirement
-      isWeeklyUpdated={false}
+      isWeeklyUpdated={true}
     >
       {/* Blog content here */}
       <div className="max-w-screen-lg md:mx-auto text-night">

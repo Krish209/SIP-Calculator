@@ -7,7 +7,7 @@ export const meta = {
   title: "How Does Compounding Work? – Unlock the Power of Growth",
   description: "Understand the powerful effect of compounding on your investments.",
   slug: "how-does-compounding-work",
-  image: "https://sipgo.in/assets/icons/blogs/compounding.jpeg",
+  image: "https://www.sipgo.in/assets/icons/blogs/compounding.jpeg",
   tags: ["Compounding", "Long-term Investing", "Growth", "Financial Education"],
   date: "2025-05-29", // ISO format better for SEO
 };
@@ -147,9 +147,8 @@ const CompoundingWork = () => {
       date="May 26, 2025"
       readTime="10 min read"
       image={img}
-      tags={["Investing", "Inflation", "Finance", "Wealth"]}
       isPremium={true} // set as per your requirement
-      isWeeklyUpdated={false}
+      isWeeklyUpdated={true}
     >
       {/* Blog content here */}
       <div className="max-w-screen-lg md:mx-auto text-night">

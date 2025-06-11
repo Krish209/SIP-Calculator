@@ -5,10 +5,10 @@ import img from "../../assets/icons/blogs/registration2.jpeg";
 
 export const meta = {
   title: "How to Get Monthly Pension from NPS - Step-by-Step Guide",
-  description: "Learn how NPS can provide you with a regular monthly income after retirement.",
+  description: "Want ₹50,000/month pension from NPS? This step-by-step guide shows how much to invest, tax benefits, and annuity strategies for a stress-free retirement.",
   slug: "how-to-achieve-a-monthly-pension-of-50k-with-nps",
-  image: "https://sipgo.in/assets/icons/blogs/registration.jpeg",
-  tags: ["Retirement", "NPS", "Pension Planning", "Wealth Management"],
+  image: "https://www.sipgo.in/assets/icons/blogs/registration.jpeg",
+  tags: ["Retirement Planning 2025", "NPS", "Pension Planning", "Passive Income", "Wealth Management"],
   date: "2025-05-25", // ISO format better for SEO
 };
 
@@ -52,9 +52,8 @@ const NpsMonthlyPension = () => {
       date="May 26, 2025"
       readTime="10 min read"
       image={img}
-      tags={["Investing", "Inflation", "Finance", "Wealth"]}
       isPremium={true} // set as per your requirement
-      isWeeklyUpdated={false}
+      isWeeklyUpdated={true}
     >
       {/* Blog content here */}
       <div className="max-w-screen-lg md:mx-auto text-night">

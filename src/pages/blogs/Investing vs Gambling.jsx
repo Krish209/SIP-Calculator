@@ -7,7 +7,7 @@ export const meta = {
   title: "Investing vs Gambling – What’s the Real Difference?",
   description: "See why investing and gambling are not the same—even if both involve risk.",
   slug: "investing-vs-gambling-whats-the-real-difference",
-  image: "https://sipgo.in/assets/icons/blogs/investingvsgambling.jpeg",
+  image: "https://www.sipgo.in/assets/icons/blogs/investingvsgambling.jpeg",
   tags: ["Finance Mindset", "Investment Psychology", "Risk", "Gambling"],
   date: "2025-05-26", // ISO format better for SEO
 };
@@ -23,9 +23,8 @@ const InvestingVsGambling = () => {
       date="May 26, 2025"
       readTime="10 min read"
       image={img}
-      tags={["Investing", "Inflation", "Finance", "Wealth"]}
       isPremium={true} // set as per your requirement
-      isWeeklyUpdated={false}
+      isWeeklyUpdated={true}
     >
       {/* Blog content here */}
       <div className="max-w-screen-lg md:mx-auto text-night">

@@ -7,7 +7,7 @@ export const meta = {
   title: "Stocks vs Mutual Funds – Which is Better for Indian Investors?",
   description: "Compare stocks and mutual funds to understand which suits your investment goals better in the Indian market.",
   slug: "stocks-vs-mutual-funds",
-  image: "https://sipgo.in/assets/icons/blogs/stock-mutualfund.jpeg",
+  image: "https://www.sipgo.in/assets/icons/blogs/stock-mutualfund.jpeg",
   tags: ["Investment", "Stocks", "Mutual Funds", "Comparison"],
   date: "2025-06-01", // ISO format better for SEO
 };
@@ -134,9 +134,8 @@ const StocksorMutualFunds = () => {
       date="June 1, 2025"
       readTime="10 min read"
       image={img}
-      tags={["Investing", "Inflation", "Finance", "Wealth"]}
       isPremium={true} // set as per your requirement
-      isWeeklyUpdated={false}
+      isWeeklyUpdated={true}
     >
       {/* Blog content here */}
       <div className="max-w-screen-lg md:mx-auto text-night">

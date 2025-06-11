@@ -6,13 +6,12 @@ import img from "../../assets/icons/blogs/inflation2.jpeg";
 // In your DiversifyPortfolio.jsx or other blog pages:
 export const meta = {
   title: "How to Beat Inflation with Smart Investing – Practical Tips",
-  description: "Learn how to protect your money from inflation by making the right investments.",
+  description: "Inflation hitting your savings? Discover 6 proven investment strategies (including Warren Buffett’s advice) to grow your wealth in 2025.",
   slug: "beating-inflation",
-  image: "https://sipgo.in/assets/icons/blogs/inflation2.jpeg",
-  tags: ["Wealth Building", "Inflation", "Smart Investing", "Financial Literacy"],
+  image: "https://www.sipgo.in/assets/icons/blogs/inflation2.jpeg",
+  tags: ["Wealth Building", "Wealth Preservation", "Inflation", "Smart Investing", "Financial Literacy"],
   date: "2025-05-28",
 };
-
 
 const BeatingInflation = () => {
   const columns = [
@@ -59,9 +58,8 @@ const BeatingInflation = () => {
       date="May 26, 2025"
       readTime="10 min read"
       image={img}
-      tags={["Investing", "Inflation", "Finance", "Wealth"]}
       isPremium={true} // set as per your requirement
-      isWeeklyUpdated={false}
+      isWeeklyUpdated={true}
     >
       {/* Blog content here */}
       <div className="max-w-screen-lg md:mx-auto text-night">
