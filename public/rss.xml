@@ -1,104 +1,116 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
   <channel>
-    <title>SIPGo – Financial Calculators & Tools</title>
-    <link>https://www.sipgo.in</link>
-    <description>Explore SIPGo’s suite of financial calculators for smart investing, saving, and planning.</description>
+    <title>SIPGo Blog</title>
+    <link>https://www.sipgo.in/blog</link>
+    <description>Investment insights, tips, and financial education from SIPGo</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 May 2025 10:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Jun 2025 00:00:00 +0000</lastBuildDate>
     <ttl>1800</ttl>
 
-    <!-- Homepage -->
     <item>
-      <title>SIPGo – Home</title>
-      <link>https://www.sipgo.in/</link>
-      <description>Welcome to SIPGo – Smart investment and savings tools for everyone.</description>
-      <pubDate>Sun, 01 Oct 2023 10:00:00 GMT</pubDate>
-      <guid>https://www.sipgo.in/</guid>
+      <title>How to Achieve a Monthly Pension of ₹50K with NPS</title>
+      <link>https://www.sipgo.in/blog/how-to-achieve-a-monthly-pension-of-50k-with-nps</link>
+      <description>Learn how NPS can help you build a monthly pension of ₹50,000 through disciplined investing.</description>
+      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.sipgo.in/blog/how-to-achieve-a-monthly-pension-of-50k-with-nps</guid>
     </item>
 
-    <!-- SIP Calculator -->
     <item>
-      <title>SIP Calculator</title>
-      <link>https://www.sipgo.in/sip-calculator</link>
-      <description>Plan your SIP investments with our easy-to-use SIP calculator.</description>
-      <pubDate>Mon, 21 Apr 2025 09:00:00 GMT</pubDate>
-      <guid>https://www.sipgo.in/sip-calculator</guid>
+      <title>SIP vs Lumpsum: Which is Better for You?</title>
+      <link>https://www.sipgo.in/blog/sip-vs-lumpsum</link>
+      <description>A detailed comparison of SIP and lump-sum investing strategies for long-term wealth creation.</description>
+      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.sipgo.in/blog/sip-vs-lumpsum</guid>
     </item>
 
-    <!-- Lumpsum Calculator -->
     <item>
-      <title>Lumpsum Calculator</title>
-      <link>https://www.sipgo.in/lumpsum-calculator</link>
-      <description>Calculate your returns on one-time investments with our lumpsum calculator.</description>
-      <pubDate>Mon, 21 Apr 2025 09:00:00 GMT</pubDate>
-      <guid>https://www.sipgo.in/lumpsum-calculator</guid>
+      <title>Why Risk is Part of Investing</title>
+      <link>https://www.sipgo.in/blog/why-risk-is-part-of-investing</link>
+      <description>Understand the role of risk in investing and how to manage it smartly.</description>
+      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.sipgo.in/blog/why-risk-is-part-of-investing</guid>
     </item>
 
-    <!-- Step-Up SIP Calculator -->
     <item>
-      <title>Step-Up SIP Calculator</title>
-      <link>https://www.sipgo.in/step-up-sip-calculator</link>
-      <description>Estimate returns on step-up SIP investments with our calculator.</description>
-      <pubDate>Mon, 21 Apr 2025 09:00:00 GMT</pubDate>
-      <guid>https://www.sipgo.in/step-up-sip-calculator</guid>
+      <title>Investing vs Gambling: What’s the Real Difference?</title>
+      <link>https://www.sipgo.in/blog/investing-vs-gambling-whats-the-real-difference</link>
+      <description>Clear the confusion between investing and gambling by understanding key differences.</description>
+      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.sipgo.in/blog/investing-vs-gambling-whats-the-real-difference</guid>
     </item>
 
-    <!-- SWP Calculator -->
     <item>
-      <title>SWP Calculator</title>
-      <link>https://www.sipgo.in/swp-calculator</link>
-      <description>Calculate your Systematic Withdrawal Plan (SWP) returns.</description>
-      <pubDate>Mon, 21 Apr 2025 09:00:00 GMT</pubDate>
-      <guid>https://www.sipgo.in/swp-calculator</guid>
+      <title>Beating Inflation with Smart Investments</title>
+      <link>https://www.sipgo.in/blog/beating-inflation</link>
+      <description>Explore investment strategies to protect and grow your money against inflation.</description>
+      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.sipgo.in/blog/beating-inflation</guid>
     </item>
 
-    <!-- EMI Calculator -->
     <item>
-      <title>EMI Calculator</title>
-      <link>https://www.sipgo.in/emi-calculator</link>
-      <description>Calculate monthly EMIs for personal, car, or home loans.</description>
-      <pubDate>Mon, 21 Apr 2025 09:00:00 GMT</pubDate>
-      <guid>https://www.sipgo.in/emi-calculator</guid>
+      <title>What are Stocks, ETFs, Mutual Funds, and Bonds?</title>
+      <link>https://www.sipgo.in/blog/what-are-stocks-etfs-mutual-funds-and-bonds</link>
+      <description>Learn the differences and use cases of common investment instruments.</description>
+      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.sipgo.in/blog/what-are-stocks-etfs-mutual-funds-and-bonds</guid>
     </item>
 
-    <!-- PPF Calculator -->
     <item>
-      <title>PPF Calculator</title>
-      <link>https://www.sipgo.in/ppf-calculator</link>
-      <description>Estimate your returns from Public Provident Fund (PPF) contributions.</description>
-      <pubDate>Mon, 21 Apr 2025 09:00:00 GMT</pubDate>
-      <guid>https://www.sipgo.in/ppf-calculator</guid>
+      <title>How to Create Passive Income with Investments</title>
+      <link>https://www.sipgo.in/blog/how-to-create-passive-income-with-investments</link>
+      <description>Learn how to build a stream of passive income through strategic investing.</description>
+      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.sipgo.in/blog/how-to-create-passive-income-with-investments</guid>
     </item>
 
-    <!-- FD Calculator -->
     <item>
-      <title>Fixed Deposit Calculator</title>
-      <link>https://www.sipgo.in/fd-calculator</link>
-      <description>Calculate maturity amounts and interest for fixed deposits.</description>
-      <pubDate>Mon, 21 Apr 2025 09:00:00 GMT</pubDate>
-      <guid>https://www.sipgo.in/fd-calculator</guid>
+      <title>How Does Compounding Work?</title>
+      <link>https://www.sipgo.in/blog/how-does-compounding-work</link>
+      <description>Discover the magic of compound interest and how it accelerates wealth growth.</description>
+      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.sipgo.in/blog/how-does-compounding-work</guid>
     </item>
 
-    <!-- RD Calculator -->
     <item>
-      <title>RD Calculator</title>
-      <link>https://www.sipgo.in/rd-calculator</link>
-      <description>Calculate returns on recurring deposits with our RD calculator.</description>
-      <pubDate>Mon, 21 Apr 2025 09:00:00 GMT</pubDate>
-      <guid>https://www.sipgo.in/rd-calculator</guid>
+      <title>How to Diversify Your Investment Portfolio</title>
+      <link>https://www.sipgo.in/blog/how-to-diversify-your-investment-portfolio</link>
+      <description>Understand the importance of diversification and how to implement it effectively.</description>
+      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.sipgo.in/blog/how-to-diversify-your-investment-portfolio</guid>
     </item>
 
-    <!-- KVP Calculator -->
     <item>
-      <title>KVP Calculator</title>
-      <link>https://www.sipgo.in/kvp-calculator</link>
-      <description>Estimate returns on Kisan Vikas Patra investments.</description>
-      <pubDate>Mon, 21 Apr 2025 09:00:00 GMT</pubDate>
-      <guid>https://www.sipgo.in/kvp-calculator</guid>
+      <title>How Do Inflation and Taxes Impact Investments?</title>
+      <link>https://www.sipgo.in/blog/how-do-inflation-and-taxes-impact-investments</link>
+      <description>Explore how inflation and taxation can affect your real investment returns.</description>
+      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.sipgo.in/blog/how-do-inflation-and-taxes-impact-investments</guid>
     </item>
 
+    <item>
+      <title>How to Invest if You Are Self-Employed or a Freelancer</title>
+      <link>https://www.sipgo.in/blog/how-to-invest-if-you-are-self-employed-or-a-freelancer</link>
+      <description>Investment tips tailored for freelancers and self-employed professionals.</description>
+      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.sipgo.in/blog/how-to-invest-if-you-are-self-employed-or-a-freelancer</guid>
+    </item>
 
+    <item>
+      <title>Stocks vs Mutual Funds: Which is Better for You?</title>
+      <link>https://www.sipgo.in/blog/stocks-vs-mutual-funds</link>
+      <description>A practical guide to choosing between direct stock investing and mutual funds.</description>
+      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.sipgo.in/blog/stocks-vs-mutual-funds</guid>
+    </item>
+
+    <item>
+      <title>Difference Between Saving and Investing</title>
+      <link>https://www.sipgo.in/blog/difference-between-saving-and-investing</link>
+      <description>Know when to save and when to invest based on your financial goals.</description>
+      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.sipgo.in/blog/difference-between-saving-and-investing</guid>
+    </item>
 
   </channel>
 </rss>
