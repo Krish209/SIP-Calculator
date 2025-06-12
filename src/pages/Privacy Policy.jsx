@@ -3,7 +3,7 @@ import React from "react";
 const PrivacyPolicy = () => {
   return (
     <section className="bg-white py-6 sm:py-12 px-4 sm:px-6 lg:px-8 text-[15px] md:text-base">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl leading-relaxed mx-auto">
         <h1 className="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4">
           Privacy Policy
         </h1>
@@ -12,20 +12,20 @@ const PrivacyPolicy = () => {
         </p>
 
         {/* Introduction */}
-        <div className="mb-6">
-          <p className="mb-2">
-            Welcome to Sipgo.in. We value your trust and are committed to
-            protecting your privacy. This Privacy Policy outlines how we handle
-            information when you visit or interact with our website.
-          </p>
-          <p>
-            By using Sipgo.in, you agree to the terms of this Privacy Policy. If
-            you do not agree with our policies and practices, please do not use
-            the website.
-          </p>
-        </div>
+        <div className="space-y-6 sm:space-y-6">
+          <div>
+            <p className="mb-2">
+              Welcome to Sipgo.in. We value your trust and are committed to
+              protecting your privacy. This Privacy Policy outlines how we
+              handle information when you visit or interact with our website.
+            </p>
+            <p>
+              By using Sipgo.in, you agree to the terms of this Privacy Policy.
+              If you do not agree with our policies and practices, please do not
+              use the website.
+            </p>
+          </div>
 
-        <div className="space-y-6 leading-relaxed">
           <div>
             <h2 className="text-xl sm:text-2xl font-semibold mb-2">
               1. Information We Do Not Collect

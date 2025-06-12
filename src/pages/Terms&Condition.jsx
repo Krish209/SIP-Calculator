@@ -3,8 +3,8 @@ import React from "react";
 const TermsAndConditions = () => {
   return (
     <section className="bg-white py-6 sm:py-12 px-4 sm:px-6 lg:px-8 text-[15px] md:text-base">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-2 sm:mb-4">
+      <div className="max-w-4xl leading-relaxed mx-auto">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4">
           Terms and Conditions
         </h1>
         <p className="mb-6">
@@ -24,7 +24,7 @@ const TermsAndConditions = () => {
             <h2 className="text-xl sm:text-2xl font-semibold mb-2">
               1. Definitions
             </h2>
-            <p>For the purposes of these Terms and Conditions:</p>
+            <p className="mb-1">For the purposes of these Terms and Conditions:</p>
             <ul className="list-disc pl-6">
               <li>
                 <strong>Affiliate</strong> means an entity that controls, is

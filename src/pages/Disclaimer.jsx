@@ -3,13 +3,13 @@ import React from "react";
 const Disclaimer = () => {
   return (
     <section className="bg-white py-6 sm:py-12 px-4 sm:px-6 lg:px-8 text-[15px] md:text-base">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-2 sm:mb-4">Disclaimer</h1>
+      <div className="max-w-4xl leading-relaxed mx-auto">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4">Disclaimer</h1>
         <p className="mb-6">
           <strong>Effective Date</strong>: June 6, 2025
         </p>
 
-        <div className="space-y-6">
+        <div className="space-y-6 sm:space-y-6">
           <div>
             <p className="mb-2">
               The information, tools, and calculators provided on Sipgo.in are
