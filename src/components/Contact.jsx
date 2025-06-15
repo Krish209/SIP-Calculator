@@ -73,7 +73,7 @@ const Contact = () => {
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 text-primary bg-white shadow-xl rounded-3xl p-8 md:p-14">
         {/* Left - Contact Info */}
         <div className="space-y-8">
-          <h2 className="text-4xl font-bold">Get in Touch</h2>
+          <h1 className="text-4xl font-bold">Get in Touch</h1>
           <p className="text-gray-600 text-lg">
             We'd love to hear from you! Whether you have a question about our
             products or want to collaborate.
@@ -83,14 +83,14 @@ const Contact = () => {
             <div className="flex items-start space-x-3">
               <FaLocationDot className="w-6 h-6 text-indigo-600 mt-1" />
               <div>
-                <h4 className="font-semibold">Our Office</h4>
+                <h3 className="font-semibold">Our Office</h3>
                 <p>123 Tech Street, Bengaluru, India 560001</p>
               </div>
             </div>
             <div className="flex items-start space-x-3">
               <PhoneIcon className="w-6 h-6 text-indigo-600 mt-1" />
               <div>
-                <h4 className="font-semibold">Phone</h4>
+                <h3 className="font-semibold">Phone</h3>
                 <a href="tel:+98765 43210" className="">
                   98765 43210
                 </a>
@@ -99,7 +99,7 @@ const Contact = () => {
             <div className="flex items-start space-x-3">
               <EnvelopeIcon className="w-6 h-6 text-indigo-600 mt-1" />
               <div>
-                <h4 className="font-semibold">Email</h4>
+                <h3 className="font-semibold">Email</h3>
                 <a href="mailto:support@sipgo.in" className="text-bs3">
                   support@sipgo.in
                 </a>
@@ -110,7 +110,7 @@ const Contact = () => {
 
         {/* Right - Form */}
         <div className="bg-white space-y-6">
-          <h3 className="text-2xl font-semibold">Send Us a Message</h3>
+          <h2 className="text-2xl font-semibold">Send Us a Message</h2>
           {submitted && (
             <div className="p-2 bg-green-100 text-green-700 rounded-md">
               ✅ Message sent successfully!

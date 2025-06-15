@@ -53,7 +53,7 @@ const AllCalculator = () => {
       title: "FD Calculator",
       description:
         "Calculate returns on Fixed Deposits with different interest rates.",
-      icon: <AiOutlineStock className="w-8 h-8 text-indigo-500" />,    
+      icon: <AiOutlineStock className="w-8 h-8 text-indigo-500" />,
       category: "Fixed Income",
       link: "/fd-calculator",
     },
@@ -99,14 +99,13 @@ const AllCalculator = () => {
       category: "Loans",
       link: "/personal-loan-calculator",
       icon: <FaChartLine className="w-8 h-8 text-indigo-500" />,
-      
     },
     {
       title: "Education Loan Calculator",
       description: "Plan your education loan with repayment insights.",
       category: "Loans",
       link: "/education-loan-calculator",
-      icon: <PiGraduationCap className="w-8 h-8 text-indigo-500" />,      
+      icon: <PiGraduationCap className="w-8 h-8 text-indigo-500" />,
     },
     {
       title: "RD Calculator",
@@ -162,7 +161,8 @@ const AllCalculator = () => {
     },
     {
       title: "Step-Up SIP Calculator",
-      description: "Estimate returns with annually increasing SIP contributions.",
+      description:
+        "Estimate returns with annually increasing SIP contributions.",
       category: "Mutual Funds",
       link: "/step-up-sip-calculator",
       icon: (
@@ -183,7 +183,8 @@ const AllCalculator = () => {
     },
     {
       title: "SWP Calculator",
-      description: "Plan your Systematic Withdrawal Plan and see how long your money lasts.",
+      description:
+        "Plan your Systematic Withdrawal Plan and see how long your money lasts.",
       icon: (
         <svg
           className="w-8 h-8 text-indigo-500"
@@ -297,35 +298,41 @@ const AllCalculator = () => {
     },
 
     // INTEREST CALCULATORS
-  {
-    title: "Simple Interest Calculator",
-    description: "Calculate basic interest on principal and rate.",
-    category: "Interest",
-    link: "/simple-interest-calculator",
-    icon: <VscPercentage className="w-8 h-8 text-indigo-500" />,
-  },
-  {
-    title: "Compound Interest Calculator",
-    description: "See how compounding grows your wealth faster.",
-    category: "Interest",
-    link: "/compound-interest-calculator",
-    icon: <ImInfinite className="w-8 h-8 text-indigo-500" />,
-  },
+    {
+      title: "Simple Interest Calculator",
+      description: "Calculate basic interest on principal and rate.",
+      category: "Interest",
+      link: "/simple-interest-calculator",
+      icon: <VscPercentage className="w-8 h-8 text-indigo-500" />,
+    },
+    {
+      title: "Compound Interest Calculator",
+      description: "See how compounding grows your wealth faster.",
+      category: "Interest",
+      link: "/compound-interest-calculator",
+      icon: <ImInfinite className="w-8 h-8 text-indigo-500" />,
+    },
   ];
 
-  const categories = ["All", ...new Set(calculators.map((calc) => calc.category))];
+  const categories = [
+    "All",
+    ...new Set(calculators.map((calc) => calc.category)),
+  ];
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const filtered = activeCategory === "All" ? calculators : calculators.filter(c => c.category === activeCategory);
+  const filtered =
+    activeCategory === "All"
+      ? calculators
+      : calculators.filter((c) => c.category === activeCategory);
 
   return (
     <div className="min-h-screen bg-gradient-to-br text-primary from-indigo-50 to-blue-50">
       {/* Calculator Categories */}
       <section className="max-w-7xl mx-auto py-4 sm:py-8 md:py-12 px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-4 sm:mb-8 md:mb-10">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
             Explore Our Financial Calculators
-          </h2>
+          </h1>
           <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto">
             Tools for every stage of your financial journey
           </p>
@@ -351,21 +358,26 @@ const AllCalculator = () => {
         {/* Cards Grid */}
         <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {filtered.map((calc, i) => (
-            <Link 
-              to={calc.link} 
-              key={i} 
+            <article
+              key={i}
               className="group focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded-xl"
             >
-              <div className="h-full bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 overflow-hidden">
+              <Link
+                to={calc.link}
+                className="block h-full bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 overflow-hidden"
+              >
                 <div className="p-4 sm:p-5 h-full flex flex-col">
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="p-2 bg-indigo-50 rounded-lg flex-shrink-0">
+                  <div className="flex gap-3 mb-3 items-center">
+                    <div className="p-2 bg-indigo-50 rounded-lg flex-shrink-0 flex items-center justify-center">
                       {calc.icon}
                     </div>
-                    <h3 className="text-base sm:text-lg font-semibold group-hover:text-indigo-600 transition">
-                      {calc.title}
-                    </h3>
+                    <div className="flex-1">
+                      <h2 className="text-base sm:text-lg font-semibold leading-snug group-hover:text-indigo-600 transition">
+                        {calc.title}
+                      </h2>
+                    </div>
                   </div>
+
                   <p className="text-gray-600 text-xs sm:text-sm mb-4 flex-grow">
                     {calc.description}
                   </p>
@@ -375,19 +387,24 @@ const AllCalculator = () => {
                     </span>
                     <span className="text-indigo-600 font-medium flex items-center">
                       Try Now
-                      <svg 
-                        className="w-3 h-3 sm:w-4 sm:h-4 ml-1" 
-                        fill="none" 
-                        stroke="currentColor" 
+                      <svg
+                        className="w-3 h-3 sm:w-4 sm:h-4 ml-1"
+                        fill="none"
+                        stroke="currentColor"
                         viewBox="0 0 24 24"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        />
                       </svg>
                     </span>
                   </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </article>
           ))}
         </div>
       </section>

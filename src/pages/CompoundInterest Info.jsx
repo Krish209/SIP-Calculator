@@ -49,14 +49,14 @@ const CompoundingInterestInfo = () => {
         })}
       </script>
 
-      <h1 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
+      <h2 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         Compound Interest - A Comprehensive Guide
-      </h1>
+      </h2>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           What is Compound Interest?
-        </h2>
+        </h3>
         <p className="mb-2">
           <strong>Compound interest</strong> is the interest on a loan or deposit that is
           calculated based on both the initial principal and the accumulated
@@ -67,9 +67,9 @@ const CompoundingInterestInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           How Compound Interest Works
-        </h2>
+        </h3>
         <p className="mb-2">
           When you invest your money or take a loan, interest is earned or paid
           on the principal. With compound interest, this interest is added to
@@ -155,9 +155,9 @@ const CompoundingInterestInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Benefits of Compound Interest
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Exponential Growth</strong>: Compound interest helps your
@@ -184,9 +184,9 @@ const CompoundingInterestInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Types of Compound Interest
-        </h2>
+        </h3>
         <p className="mb-2">
           Compound interest can be categorized based on the frequency of
           compounding:
@@ -221,9 +221,9 @@ const CompoundingInterestInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Compound Interest vs. Simple Interest
-        </h2>
+        </h3>
         <p className="mb-2">
           While compound interest grows at an exponential rate, simple interest
           is calculated only on the principal amount throughout the investment
