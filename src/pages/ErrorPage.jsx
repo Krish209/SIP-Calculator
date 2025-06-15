@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async"; // for SEO, Schema Markup, etc.
 import img from "../assets/icons/bh2.jpg"; // Galaxy background image
 import vid from "../assets/icons/sky.mp4"; // Optional video background
 import aud from "../assets/icons/ds.mp3"; // Optional background music
 import MeteorEffect from "./Meteor";
 
 const ErrorPage = () => {
-  const [countdown, setCountdown] = useState(6); // Initialize the countdown to 6
+  const [countdown, setCountdown] = useState(20); // Initialize the countdown to 6
   const navigate = useNavigate(); // Initialize the navigate function
 
   // const playBackgroundMusic = () => {
@@ -35,6 +36,12 @@ const ErrorPage = () => {
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen bg-black overflow-hidden">
+      {/* For SEO */}
+      <Helmet>
+        <title>404 Page Not Found | SIPGo</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
+
       {/* Background Image or Video */}
       <div className="absolute inset-0 w-full h-full z-0">
         <img
@@ -53,13 +60,9 @@ const ErrorPage = () => {
           Your browser does not support the video tag.
         </video> */}
       </div>
-
-      
-
       {/* Semi-Transparent Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 z-0"></div>
       {/* <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-black via-transparent to-black opacity-80 z-0"></div> */}
-
       {/* Content */}
       <div className="relative z-10 text-white text-center px-4 sm:px-6 md:px-8 lg:px-12 max-w-4xl mx-auto">
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mb-6 text-glow">
@@ -76,12 +79,11 @@ const ErrorPage = () => {
         </p>
 
         {/* Countdown Section */}
-        <div className="flex justify-center items-center mb-6 text-base vs:text-lg sm:text-xl">
-          <span>Redirecting in</span>
-          <div className="text-base vs:text-lg sm:text-2xl font-medium mx-1">
-            {countdown}
-          </div>
-          <span>seconds...</span>
+        <div
+          aria-live="polite"
+          className="flex justify-center items-center mb-6 text-base vs:text-lg sm:text-xl"
+        >
+          Redirecting in {countdown} seconds...
         </div>
 
         {/* Manual Redirect Link */}
@@ -98,7 +100,6 @@ const ErrorPage = () => {
           </p>
         </div>
       </div>
-
       {/* Stars Animation (Optional) */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
         <MeteorEffect />
