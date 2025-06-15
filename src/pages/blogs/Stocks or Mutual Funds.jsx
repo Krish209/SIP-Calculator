@@ -5,7 +5,8 @@ import img from "../../assets/icons/blogs/stock-mutualfund.jpeg";
 
 export const meta = {
   title: "Stocks vs Mutual Funds – Which is Better for Indian Investors?",
-  description: "Compare stocks and mutual funds to understand which suits your investment goals better in the Indian market.",
+  description:
+    "Compare stocks and mutual funds to understand which suits your investment goals better in the Indian market.",
   slug: "stocks-vs-mutual-funds",
   image: "https://www.sipgo.in/assets/icons/blogs/stock-mutualfund.jpeg",
   tags: ["Investment", "Stocks", "Mutual Funds", "Comparison"],
@@ -452,7 +453,22 @@ const StocksorMutualFunds = () => {
             If you’re a{" "}
             <strong>beginner, risk-averse, or time-constrained</strong>, mutual
             funds are the safer and more manageable choice. You can start small,
-            invest consistently, and benefit from compounding over time.
+            invest consistently, and benefit from compounding over time. To
+            better understand how your investments can grow, try using our and{" "}
+            <a
+              href="/mutual-fund-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              Mutual Fund Calculator
+            </a>{" "}
+            or the and{" "}
+            <a
+              href="/sip-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              SIP Calculator
+            </a>{" "}
+            to plan your systematic investments effectively.
           </p>
           <p className="mb-2">
             If you’re a{" "}
@@ -460,13 +476,23 @@ const StocksorMutualFunds = () => {
               market-savvy investor with time to research and handle volatility
             </strong>
             , direct stock investing could offer higher returns—but at a higher
-            risk.
-          </p>
-          <p className="mb-2">
-            For most Indian investors, a{" "}
-            <strong>combination of mutual funds and select stocks</strong>{" "}
-            offers the best of both worlds: stability with potential for higher
-            growth.
+            risk. For a balanced approach, you can explore our{" "}
+            <a
+              href="/lumpsum-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              Lumpsum Calculator
+            </a>{" "}
+            to see potential gains from one-time investments, or the{" "}
+            <a
+              href="/step-up-sip-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              Step-up SIP Calculator
+            </a>{" "}
+            to model increasing investments over time. Combining these tools
+            will help you make smarter decisions and optimize your portfolio for
+            long-term growth.
           </p>
         </section>
       </div>

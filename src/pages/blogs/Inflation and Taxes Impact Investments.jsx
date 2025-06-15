@@ -5,7 +5,8 @@ import img from "../../assets/icons/blogs/tax-inflation.jpeg";
 
 export const meta = {
   title: "How Do Inflation and Taxes Impact Investments?",
-  description: "Learn how inflation and taxes can affect your investment returns and what you can do about it.",
+  description:
+    "Learn how inflation and taxes can affect your investment returns and what you can do about it.",
   slug: "how-do-inflation-and-taxes-impact-investments",
   image: "https://www.sipgo.in/assets/icons/blogs/tax-inflation.jpeg",
   tags: ["Tax & Inflation", "Returns", "Investment Planning", "Finance"],
@@ -358,10 +359,29 @@ const InflationandTaxesImpact = () => {
           </h2>
           <p className="mb-2">
             Inflation and taxes silently erode your investment gains if ignored.
-            A 7% return is not impressive if inflation is at 6% and you're
-            paying 30% in taxes. To truly grow your wealth, focus on
-            tax-efficient, inflation-beating investment options. Make informed
-            choices and plan for the long term.
+            A 7% nominal return may seem decent, but with inflation at 6% and a
+            30% tax rate, your real returns could be negligible or even
+            negative. To truly grow your wealth, focus on tax-efficient and
+            inflation-beating investment options like equity mutual funds, PPF,
+            and Sovereign Gold Bonds.
+          </p>
+          <p className="mb-2">
+            To plan smarter and understand the impact of inflation and taxes on
+            your investments, use our{" "}
+            <a
+              href="/inflation-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              Inflation Calculator
+            </a>
+            . These tools help you estimate your post-tax, inflation-adjusted
+            returns and craft an optimized investment strategy tailored to your
+            goals.
+          </p>
+          <p className="mb-2">
+            Make informed choices, invest regularly, and think long term to
+            protect and grow your wealth in today’s dynamic economic
+            environment.
           </p>
         </section>
       </div>

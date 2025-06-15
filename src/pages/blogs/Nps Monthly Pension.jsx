@@ -5,10 +5,17 @@ import img from "../../assets/icons/blogs/registration2.jpeg";
 
 export const meta = {
   title: "How to Get Monthly Pension from NPS - Step-by-Step Guide",
-  description: "Want ₹50,000/month pension from NPS? This step-by-step guide shows how much to invest, tax benefits, and annuity strategies for a stress-free retirement.",
+  description:
+    "Want ₹50,000/month pension from NPS? This step-by-step guide shows how much to invest, tax benefits, and annuity strategies for a stress-free retirement.",
   slug: "how-to-achieve-a-monthly-pension-of-50k-with-nps",
   image: "https://www.sipgo.in/assets/icons/blogs/registration.jpeg",
-  tags: ["Retirement Planning 2025", "NPS", "Pension Planning", "Passive Income", "Wealth Management"],
+  tags: [
+    "Retirement Planning 2025",
+    "NPS",
+    "Pension Planning",
+    "Passive Income",
+    "Wealth Management",
+  ],
   date: "2025-05-25", // ISO format better for SEO
 };
 
@@ -110,10 +117,10 @@ const NpsMonthlyPension = () => {
             on market conditions and the provider.
           </p>
           <p className="mb-2">
-            To generate ₹6 lakh per year at a 6% return, you'll need to invest ₹1 crore
-            in an annuity plan. Since only 40% of your NPS corpus is used to buy
-            the annuity, your target NPS corpus should be ₹2.5 crore at
-            retirement.
+            To generate ₹6 lakh per year at a 6% return, you'll need to invest
+            ₹1 crore in an annuity plan. Since only 40% of your NPS corpus is
+            used to buy the annuity, your target NPS corpus should be ₹2.5 crore
+            at retirement.
           </p>
         </section>
 
@@ -192,8 +199,23 @@ const NpsMonthlyPension = () => {
             advantage of <strong>compounding and tax benefits</strong>. NPS
             offers a secure, regulated, and tax-efficient path toward
             retirement, making it one of the best options for long-term wealth
-            building in India. Use our NPS Calculator to find out exactly how
-            much you need to invest monthly to reach your retirement goals.
+            building in India.{" "}
+            <a
+              href="/nps-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              NPS Calculator
+            </a>{" "}
+            You can use our NPS Calculator to find out exactly how much you need
+            to invest monthly to reach your pension target. For more insight
+            into how your returns grow over time, check out our{" "}
+            <a
+              href="/compound-interest-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              Compound Interest Calculator
+            </a>
+            .
           </p>
         </section>
       </div>

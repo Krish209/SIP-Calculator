@@ -6,10 +6,17 @@ import img from "../../assets/icons/blogs/inflation2.jpeg";
 // In your DiversifyPortfolio.jsx or other blog pages:
 export const meta = {
   title: "How to Beat Inflation with Smart Investing – Practical Tips",
-  description: "Inflation hitting your savings? Discover 6 proven investment strategies (including Warren Buffett’s advice) to grow your wealth in 2025.",
+  description:
+    "Inflation hitting your savings? Discover 6 proven investment strategies (including Warren Buffett’s advice) to grow your wealth in 2025.",
   slug: "beating-inflation",
   image: "https://www.sipgo.in/assets/icons/blogs/inflation2.jpeg",
-  tags: ["Wealth Building", "Wealth Preservation", "Inflation", "Smart Investing", "Financial Literacy"],
+  tags: [
+    "Wealth Building",
+    "Wealth Preservation",
+    "Inflation",
+    "Smart Investing",
+    "Financial Literacy",
+  ],
   date: "2025-05-28",
 };
 
@@ -201,6 +208,23 @@ const BeatingInflation = () => {
             your investments across various asset classes and focusing on those
             that historically outperform inflation, you can ensure that your
             money works for you, not against you.
+          </p>
+          <p className="mb-2">
+            To start planning your investments, try our{" "}
+            <a
+              href="/inflation-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              Inflation Calculator
+            </a>{" "}
+            to see how inflation affects your savings over time. You can also
+            use our <a
+              href="/mutual-fund-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              Mutual Fund Calculator
+            </a>{" "} to estimate how your investments
+            might grow.
           </p>
         </section>
       </div>

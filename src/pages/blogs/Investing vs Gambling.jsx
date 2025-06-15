@@ -5,7 +5,8 @@ import img from "../../assets/icons/blogs/investingvsgambling.jpeg";
 
 export const meta = {
   title: "Investing vs Gambling – What’s the Real Difference?",
-  description: "See why investing and gambling are not the same—even if both involve risk.",
+  description:
+    "See why investing and gambling are not the same—even if both involve risk.",
   slug: "investing-vs-gambling-whats-the-real-difference",
   image: "https://www.sipgo.in/assets/icons/blogs/investingvsgambling.jpeg",
   tags: ["Finance Mindset", "Investment Psychology", "Risk", "Gambling"],
@@ -248,6 +249,31 @@ const InvestingVsGambling = () => {
             By choosing a thoughtful investment strategy and avoiding
             emotionally driven decisions, you can build a secure financial
             future and avoid the pitfalls of gambling-like behavior.
+          </p>
+          <p className="mb-2">
+            To help you get started on a more structured approach, explore our{" "}
+            <a
+              href="/sip-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              SIP Calculator
+            </a>{" "}
+            or{" "}
+            <a
+              href="/step-up-sip-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              Step-up SIP Calculator
+            </a>{" "}
+            to see how small, consistent investments can grow over time. Also,
+            read our guide on{" "}
+            <a
+              href="/blog/how-to-diversify-your-investment-portfolio"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              How to Diversify Your Investment Portfolio
+            </a>{" "}
+            to manage risk wisely.{" "}
           </p>
         </section>
       </div>

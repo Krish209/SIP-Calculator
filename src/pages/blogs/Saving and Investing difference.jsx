@@ -5,7 +5,8 @@ import img from "../../assets/icons/blogs/saving-investing.jpeg";
 
 export const meta = {
   title: "What is the Difference Between Saving and Investing?",
-  description: "Learn the key differences between saving and investing and when to choose one over the other.",
+  description:
+    "Learn the key differences between saving and investing and when to choose one over the other.",
   slug: "difference-between-saving-and-investing",
   image: "https://www.sipgo.in/assets/icons/blogs/saving-investing.jpeg",
   tags: ["Finance Basics", "Saving", "Investing", "Money Management"],
@@ -287,12 +288,29 @@ const SavingvsInvesting = () => {
             emergencies and short-term needs, while <strong>investments</strong>{" "}
             help you grow your wealth and secure your financial future.
           </p>
-          {/* <p className="mb-2">
-            If you’re still unsure where to begin, start by using an investment
-            calculator to visualize how your money can grow over time. With over
-            20 calculators for different investment options, our platform is
-            designed to help Indians make smarter financial decisions.
-          </p> */}
+          <p className="mb-2">
+            If you’re still unsure where to begin, with over{" "}
+            <a href="/calc" className="text-blue-600 hover:text-blue-700">
+              20+ calculators
+            </a>{" "}
+            for different investment options, our platform is designed to help
+            Indians make smarter financial decisions. You might also want to
+            explore our{" "}
+            <a
+              href="/sip-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              SIP Calculator
+            </a>{" "}
+            and{" "}
+            <a
+              href="/mutual-fund-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              Mutual Fund Calculator
+            </a>{" "}
+            to get tailored insights on systematic investing and mutual funds.
+          </p>
         </section>
       </div>
     </BlogLayout>

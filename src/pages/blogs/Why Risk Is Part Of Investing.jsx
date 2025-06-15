@@ -5,10 +5,16 @@ import img from "../../assets/icons/blogs/riskvsreward3.png";
 
 export const meta = {
   title: "Why Risk is a Part of Investing – Know the Role of Risk in Returns",
-  description: "Understand the relationship between risk and returns in investing.",
+  description:
+    "Understand the relationship between risk and returns in investing.",
   slug: "why-risk-is-part-of-investing",
   image: "https://www.sipgo.in/assets/icons/blogs/riskvsreward3.png",
-  tags: ["Finance Basics", "Risk Management", "Returns", "Investment Psychology"],
+  tags: [
+    "Finance Basics",
+    "Risk Management",
+    "Returns",
+    "Investment Psychology",
+  ],
   date: "2025-05-26", // ISO format better for SEO
 };
 
@@ -229,8 +235,7 @@ const WhyRiskIsPartOfInvesting = () => {
               </h3>
 
               <p className="mb-2">
-                Diversification involves spreading investments across different
-                {" "}
+                Diversification involves spreading investments across different{" "}
                 <strong>asset classes, sectors</strong>, and{" "}
                 <strong>regions</strong> to reduce overall risk. Don’t put all
                 eggs in one basket. The idea is that when one asset
@@ -337,10 +342,23 @@ const WhyRiskIsPartOfInvesting = () => {
             your destination.
           </p>
           <p className="mb-2">
-            Use tools like the Sipgo Investment Calculator to simulate different
-            scenarios, test asset allocations, and make informed decisions. Risk
-            will always be part of the journey, but with knowledge, planning,
-            and discipline, risk becomes a manageable companion—not a threat.
+            Use tools like the{" "}
+            <a
+              href="/sip-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              SIP Calculator
+            </a>{" "}
+            to simulate different investment scenarios, or explore our{" "}
+            <a
+              href="/blog/how-to-diversify-your-investment-portfolio"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              Diversification Guide
+            </a>{" "}
+            to structure your portfolio across asset classes. Risk will always
+            be part of the journey, but with knowledge, planning, and
+            discipline, it becomes a manageable companion—not a threat.
           </p>
         </section>
       </div>

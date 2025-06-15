@@ -6,10 +6,16 @@ import img from "../../assets/icons/blogs/diversify.jpeg";
 // In your DiversifyPortfolio.jsx or other blog pages:
 export const meta = {
   title: "How to Diversify Your Investment Portfolio - Complete Guide",
-  description: "Step-by-step guide to portfolio diversification for Indian investors with asset allocation strategies and risk management tips.",
+  description:
+    "Step-by-step guide to portfolio diversification for Indian investors with asset allocation strategies and risk management tips.",
   slug: "how-to-diversify-your-investment-portfolio", // New URL-friendly slug
   image: "https://www.sipgo.in/assets/icons/blogs/diversify.jpeg",
-  tags: ["Investing", "Portfolio Diversification", "Asset Allocation", "Risk Management"],
+  tags: [
+    "Investing",
+    "Portfolio Diversification",
+    "Asset Allocation",
+    "Risk Management",
+  ],
   date: "2025-05-29", // ISO format better for SEO
 };
 
@@ -162,7 +168,7 @@ const DiversifyPortfolio = () => {
               <strong>Long-Term Growth</strong>: Enhances your chance of
               consistent, compounded returns.
             </li>
-             <li>
+            <li>
               <strong>Flexibility</strong>: Allows you to adjust your portfolio
               based on changing market conditions and personal financial goals.
             </li>
@@ -359,6 +365,32 @@ const DiversifyPortfolio = () => {
             financial instruments — from mutual funds and stocks to gold, PPF,
             and REITs. The key is to choose the right mix and periodically
             review your strategy.
+          </p>
+          <p className="mb-2">
+            To help you better understand how diversification impacts your
+            investments, explore specific calculators like the{" "}
+            <a
+              href="/sip-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              SIP Calculator
+            </a>
+            ,{" "}
+            <a
+              href="/mutual-fund-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              Mutual Fund Calculator
+            </a>
+            , and{" "}
+            <a
+              href="/ppf-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              PPF Calculator
+            </a>
+            . These tools will empower you to plan your investments more
+            effectively and achieve your financial goals with confidence.
           </p>
         </section>
       </div>

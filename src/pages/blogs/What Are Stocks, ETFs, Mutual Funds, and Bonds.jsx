@@ -5,7 +5,8 @@ import img from "../../assets/icons/blogs/stocketf.jpeg";
 
 export const meta = {
   title: "What are Stocks, ETFs, Mutual Funds, and Bonds? Explained Simply",
-  description: "A quick guide to different types of financial instruments for new investors.",
+  description:
+    "Discover the fundamentals of investing in India with our beginner’s guide to stocks, ETFs, mutual funds, and bonds. Learn how each investment type works and how to choose the right one for your financial goals.",
   slug: "what-are-stocks-etfs-mutual-funds-and-bonds",
   image: "https://www.sipgo.in/assets/icons/blogs/stocketf.jpeg",
   tags: ["Education", "Stocks", "ETFs", "Mutual Funds", "Bonds"],
@@ -289,7 +290,34 @@ const StockEtfMfBond = () => {
             You don’t need to stick to just one investment type. In fact, many
             successful investors in India build diversified portfolios that
             include a mix of stocks, mutual funds, ETFs, and bonds to balance
-            risk and return.
+            risk and return. By combining these insights and balancing your
+            portfolio across different asset types, you can make smart,
+            goal-oriented financial decisions that stand the test of time.
+          </p>
+          <p className="mb-2">
+            If you want to explore how your money could grow, you can use the{" "}
+            <a
+              href="/sip-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              SIP Calculator
+            </a>{" "}
+            to estimate returns from regular investments, or the{" "}
+            <a
+              href="/lumpsum-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              Lumpsum Calculator
+            </a>{" "}
+            for one-time contributions. If you’re evaluating the effectiveness
+            of any investment, the{" "}
+            <a
+              href="/roi-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              ROI Calculator
+            </a>{" "}
+            is a helpful tool.{" "}
           </p>
         </section>
       </div>

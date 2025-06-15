@@ -5,10 +5,16 @@ import img from "../../assets/icons/blogs/tree1.jpeg";
 
 export const meta = {
   title: "How to Create a Passive Income – Strategies That Work",
-  description: "Explore various strategies to generate income with minimal ongoing effort.",
+  description:
+    "Explore various strategies to generate income with minimal ongoing effort.",
   slug: "how-to-create-passive-income-with-investments",
   image: "https://www.sipgo.in/assets/icons/blogs/tree1.jpeg",
-  tags: ["Passive Income", "Financial Freedom", "Investing", "Income Strategies"],
+  tags: [
+    "Passive Income",
+    "Financial Freedom",
+    "Investing",
+    "Income Strategies",
+  ],
   date: "2025-05-29", // ISO format better for SEO
 };
 
@@ -486,7 +492,43 @@ const CreatePassiveIncome = () => {
             reach for anyone willing to start small and stay consistent. Whether
             you're a salaried employee, freelancer, homemaker, or entrepreneur,
             the journey to financial independence starts with that first smart
-            investment.
+            investment. Use tools like the{" "}
+            <a
+              href="/swp-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              SWP calculator
+            </a>{" "}
+            to plan monthly withdrawals from mutual funds, the{" "}
+            <a
+              href="/fd-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              FD calculator
+            </a>{" "} to estimate fixed deposit interest, or the{" "}
+            <a
+              href="/dividend-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              Dividend calculator
+            </a>{" "}
+            to track earnings from stocks. If you're evaluating your total
+            returns or comparing investment options, the{" "}
+            <a
+              href="/roi-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              ROI calculator
+            </a>{" "}
+            and{" "}
+            <a
+              href="/inflation-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              Inflation Calculator
+            </a>{" "}
+            can help you measure real growth over time. Start today—with small,
+            steady steps—and let your money work for you while you sleep.
           </p>
         </section>
       </div>

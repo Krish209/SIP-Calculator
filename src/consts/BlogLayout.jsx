@@ -15,7 +15,7 @@ import {
   FaRegBookmark,
 } from "react-icons/fa";
 
-import { Helmet } from 'react-helmet-async'; // for SEO, Schema Markup, etc.
+import { Helmet } from "react-helmet-async"; // for SEO, Schema Markup, etc.
 import { useEffect, useState } from "react";
 import { useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
@@ -99,19 +99,24 @@ const BlogLayout = ({
         break;
       default:
         if (navigator.share) {
-          navigator.share({
-            title: title,
-            text: metaDescription || excerpt,
-            url: currentUrl
-          }).catch(console.error);
+          navigator
+            .share({
+              title: title,
+              text: metaDescription || excerpt,
+              url: currentUrl,
+            })
+            .catch(console.error);
         } else {
           // Fallback for desktop browsers
-          navigator.clipboard.writeText(currentUrl).then(() => {
-            alert("Link copied to clipboard!");
-          }).catch(() => {
-            // Final fallback if clipboard API fails
-            prompt("Copy this link to share:", currentUrl);
-          });
+          navigator.clipboard
+            .writeText(currentUrl)
+            .then(() => {
+              alert("Link copied to clipboard!");
+            })
+            .catch(() => {
+              // Final fallback if clipboard API fails
+              prompt("Copy this link to share:", currentUrl);
+            });
         }
     }
   };
@@ -125,98 +130,106 @@ const BlogLayout = ({
   // Generate excerpt from first paragraph if no description
   const excerpt = useMemo(() => {
     if (metaDescription) return metaDescription;
-    const firstPara = children.props.children.find(child => child.type === 'p');
-    return firstPara?.props.children.substring(0, 160) + '...';
+    const firstPara = children.props.children.find(
+      (child) => child.type === "p"
+    );
+    return firstPara?.props.children.substring(0, 160) + "...";
   }, [metaDescription, children]);
 
   return (
     <div className="bg-gray-50 text-night min-h-screen">
-      
-    {/* Inside your BlogLayout component, add this near the top of the return statement: */}
-    <Helmet>
-      <title>{title} | Sipgo</title>
-      
-      <meta name="description" content={metaDescription || `${title} - ${excerpt}`} />
-      <meta name="keywords" content={tags.join(', ')} />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={metaDescription || excerpt} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={`https://www.sipgo.in/blog/${slug}`} />
-      <meta property="og:type" content="article" />
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={metaDescription || excerpt} />
-      <meta name="twitter:image" content={image} />
-      
-      {/* Canonical */}
-      <link rel="canonical" href={`https://www.sipgo.in/blog/${slug}`} />
-      
-      {/* Artical Schema */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          "headline": title,
-          "description": metaDescription || excerpt,
-          "author": {
-            "@type": "Person",
-            "name": author,
-            "url": "https://www.sipgo.in/"
-          },
-          "datePublished": dateISO,
-          "image": image,
-          "publisher": {
-            "@type": "Organization",
-            "name": "SIPGo",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://www.sipgo.in/logo.png"
-            }
-          },
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": `https://www.sipgo.in/blog/${slug}`
-          },
-          "keywords": tags.join(', '),
-          "articleBody": excerpt // Consider adding full text for better SEO
-        })}
-      </script>
+      {/* Inside your BlogLayout component, add this near the top of the return statement: */}
+      <Helmet>
+        <title>{title} | Sipgo</title>
 
-      {/* Breadcrumb Schema */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "@id": `https://www.sipgo.in/blog/${slug}`,
-          "name": "Blog Navigation Path",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://www.sipgo.in/"
+        <meta
+          name="description"
+          content={metaDescription || `${title} - ${excerpt}`}
+        />
+        <meta name="keywords" content={tags.join(", ")} />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+        />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={metaDescription || excerpt} />
+        <meta property="og:image" content={image} />
+        <meta property="og:url" content={`https://www.sipgo.in/blog/${slug}`} />
+        <meta property="og:type" content="article" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={metaDescription || excerpt} />
+        <meta name="twitter:image" content={image} />
+
+        {/* Canonical */}
+        <link rel="canonical" href={`https://www.sipgo.in/blog/${slug}`} />
+
+        {/* Artical Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: title,
+            description: metaDescription || excerpt,
+            author: {
+              "@type": "Person",
+              name: author,
+              url: "https://www.sipgo.in/",
             },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Blog",
-              "item": "https://www.sipgo.in/blog"
+            datePublished: dateISO,
+            dateModified: "2024-05-24T00:00:00Z",
+            image: image,
+            publisher: {
+              "@type": "Organization",
+              name: "SIPGo",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://www.sipgo.in/logo.png",
+              },
             },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": title,
-              "item": `https://www.sipgo.in/blog/${slug}`
-            }
-          ]
-        })}
-      </script>
-    </Helmet>
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://www.sipgo.in/blog/${slug}`,
+            },
+            keywords: tags.join(", "),
+            articleBody: excerpt, // Consider adding full text for better SEO
+          })}
+        </script>
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": `https://www.sipgo.in/blog/${slug}`,
+            name: "Blog Navigation Path",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.sipgo.in/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Blog",
+                item: "https://www.sipgo.in/blog",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: title,
+                item: `https://www.sipgo.in/blog/${slug}`,
+              },
+            ],
+          })}
+        </script>
+      </Helmet>
 
       {/* Progress bar */}
       <div
@@ -252,12 +265,12 @@ const BlogLayout = ({
           <div className="flex justify-between items-start mb-4">
             <div className="flex space-x-2">
               {isPremium && (
-                <span className="bg-indigo-100 text-indigo-800 text-xs px-3 py-1.5 rounded-full">
-                  Premium
+                <span className="bg-indigo-100 text-indigo-800 text-xs px-3 py-1.5 rounded-full border border-indigo-200">
+                  Premium Research
                 </span>
               )}
               {isWeeklyUpdated && (
-                <span className="bg-emerald-100 text-emerald-800 text-xs px-3 py-1.5 rounded-full">
+                <span className="bg-emerald-100 text-emerald-800 text-xs px-3 py-1.5 rounded-full border border-emerald-200">
                   Updated Weekly
                 </span>
               )}
@@ -272,7 +285,11 @@ const BlogLayout = ({
             <div className="flex items-center space-x-4">
               <div className="h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center">
                 <span className="text-indigo-800 font-semibold">
-                  {author[0]}
+                  {author
+                    .split(" ")
+                    .map((namePart) => namePart[0])
+                    .join("")
+                    .toUpperCase()}
                 </span>
               </div>
               <div>
@@ -363,7 +380,7 @@ const BlogLayout = ({
 
         {randomPosts && (
           <div className="my-6 sm:my-10">
-            <h3 className="text-2xl font-bold mb-8">Continue Reading</h3>
+            <h3 className="text-2xl font-bold mb-8">You Might Also Like</h3>
             <div className="grid md:grid-cols-2 gap-4 md:gap-6">
               {randomPosts.map((post) => (
                 <Link key={post.path} to={post.path}>

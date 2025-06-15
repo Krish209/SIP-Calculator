@@ -5,7 +5,8 @@ import img from "../../assets/icons/blogs/compounding.jpeg";
 
 export const meta = {
   title: "How Does Compounding Work? – Unlock the Power of Growth",
-  description: "Understand the powerful effect of compounding on your investments.",
+  description:
+    "Understand the powerful effect of compounding on your investments.",
   slug: "how-does-compounding-work",
   image: "https://www.sipgo.in/assets/icons/blogs/compounding.jpeg",
   tags: ["Compounding", "Long-term Investing", "Growth", "Financial Education"],
@@ -418,11 +419,25 @@ const CompoundingWork = () => {
             grow—often far beyond your expectations.
           </p>
           <p className="mb-2">
-            If you're using an investment calculator or managing your finances
-            through an app, make sure to visualize compounding over long
-            periods. Let your money work for you. Understand compounding, and
-            use it to your advantage—because time is the most powerful
-            investment partner you’ll ever have.
+            To see how compounding can impact your future, use tools like the{" "}
+            <a
+              href="/compound-interest-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              compound interest calculator
+            </a>{" "}
+            or{" "}
+            <a
+              href="/sip-calculator"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              SIP calculator
+            </a>{" "}
+            to visualize how small monthly contributions grow over time. If
+            you’re planning for retirement or a financial milestone. Remember:{" "}
+            <strong>time is your greatest ally </strong> when it comes to
+            compounding—so start now, stay invested, and let your money do the
+            heavy lifting.
           </p>
         </section>
       </div>
