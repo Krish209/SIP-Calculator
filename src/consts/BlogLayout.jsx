@@ -192,6 +192,8 @@ const BlogLayout = ({
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
+          "@id": `https://www.sipgo.in/blog/${slug}`,
+          "name": "Blog Navigation Path",
           "itemListElement": [
             {
               "@type": "ListItem",
