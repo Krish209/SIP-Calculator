@@ -59,8 +59,8 @@ function App() {
           {/* About Us Route */}
           <Route path="about" element={<AboutPage />} />
 
-          <Route path="random" element={<Random />} />
-          <Route path="random2" element={<Random2 />} />
+          {/* <Route path="random" element={<Random />} />
+          <Route path="random2" element={<Random2 />} /> */}
 
           {/* Contact Us Route */}
           <Route path="contact" element={<Contact />} />
