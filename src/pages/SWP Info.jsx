@@ -86,15 +86,15 @@ const SWPInfo = () => {
         })}
       </script>
 
-      <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
+      <h2 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
         SWP - A Comprehensive Guide
-      </h1>
+      </h2>
 
       {/* Introduction */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           What is a SWP?
-        </h2>
+        </h3>
         <p className="mb-2">
           A <strong>Systematic Withdrawal Plan (SWP)</strong> is a financial
           planning tool that allows investors to withdraw a fixed amount of
@@ -116,9 +116,9 @@ const SWPInfo = () => {
 
       {/* Key Features */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Key Features of SWP
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-1">
           <li>
             <strong>Flexibility</strong>: Allows withdrawal of fixed amounts
@@ -145,9 +145,9 @@ const SWPInfo = () => {
 
       {/* How it Works */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           How Does SWP Work?
-        </h2>
+        </h3>
         <p className="mb-2">
           To set up an SWP, you first need to invest a lump sum amount in a
           mutual fund scheme. After that, you can choose the amount you want to
@@ -216,9 +216,9 @@ const SWPInfo = () => {
 
       {/* Type of SWP */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Types of SWP
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Fixed Amount SWP</strong>: The investor sets a fixed amount
@@ -242,9 +242,9 @@ const SWPInfo = () => {
 
       {/* Benefits */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Benefits of SWP
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-1">
           <li>
             <strong>Steady Income</strong>: SWP provides a predictable income
@@ -270,7 +270,7 @@ const SWPInfo = () => {
 
       {/* Pros */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">Pros</h2>
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">Pros</h3>
         <ul className="list-disc pl-6 space-y-1">
           <li>Provides a regular income without depleting investments</li>
           <li>Perfect for retirees or those needing steady cash flow</li>
@@ -282,7 +282,7 @@ const SWPInfo = () => {
 
       {/* Cons */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">Cons</h2>
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">Cons</h3>
         <ul className="list-disc pl-6 space-y-1">
           <li>
             Subject to market volatility, which can affect withdrawal amounts
@@ -297,9 +297,9 @@ const SWPInfo = () => {
 
       {/* Key Considerations for SWP */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Key Considerations for SWP
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Market Risk</strong>: NAVs fluctuate; during market
@@ -327,9 +327,9 @@ const SWPInfo = () => {
 
       {/* Tax Implications of SWP */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Tax Implications of SWP
-        </h2>
+        </h3>
         <p className="mb-2 md:mb-4">
           SWPs from mutual funds are subject to capital gains tax on the gains
           portion of the withdrawal, not the entire amount. Here’s a breakdown
@@ -387,9 +387,9 @@ const SWPInfo = () => {
 
       {/* Comparison with SIP */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           SWP vs SIP
-        </h2>
+        </h3>
 
         <p className="mb-2">
           While both Systematic Investment Plan (SIP) and Systematic Withdrawal
@@ -403,9 +403,9 @@ const SWPInfo = () => {
 
       {/* Conclusion */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Conclusion
-        </h2>
+        </h3>
         <p className="mb-2">
           Systematic Withdrawal Plans (SWPs) provide an excellent way to create
           a consistent income stream from mutual fund investments. Whether you

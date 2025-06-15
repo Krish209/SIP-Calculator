@@ -51,15 +51,15 @@ const PPFInfo = () => {
         })}
       </script>
 
-      <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
+      <h2 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
         PPF - A Comprehensive Guide
-      </h1>
+      </h2>
 
       {/* What is PPF? Section */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           What is PPF?
-        </h2>
+        </h3>
         <p className="mb-2">
           The <strong>Public Provident Fund (PPF)</strong> is a
           government-backed investment scheme aimed at promoting long-term
@@ -82,9 +82,9 @@ const PPFInfo = () => {
 
       {/* Key Features Section */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Key Features of PPF
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Tenure</strong>: 15 years (extendable in blocks of 5 years
@@ -115,9 +115,9 @@ const PPFInfo = () => {
 
       {/* Eligibility */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Who is Eligible?
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-1">
           <li>Indian citizens (residents)</li>
           <li>Minors (operated by a parent or legal guardian)</li>
@@ -131,9 +131,9 @@ const PPFInfo = () => {
 
       {/* How to Open a PPF Account Section */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           How to Open a PPF Account
-        </h2>
+        </h3>
         <p className="mb-2">
           You can open a PPF account through any designated bank or post office
           in India. Here's how:
@@ -157,9 +157,9 @@ const PPFInfo = () => {
 
       {/* Maturity Period Section */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Maturity Period
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Lock-in Period</strong>: The PPF account has a mandatory
@@ -183,9 +183,9 @@ const PPFInfo = () => {
 
       {/* Pros and Cons Section */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Pros of PPF
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Risk-Free</strong>: Backed by the government, making it a
@@ -221,9 +221,9 @@ const PPFInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Cons of PPF
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Lock-in Period</strong>: The 15-year lock-in may not be

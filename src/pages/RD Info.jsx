@@ -52,14 +52,14 @@ const RDInfo = () => {
         })}
       </script>
 
-      <h1 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
+      <h2 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         Recurring Deposit (RD) - A Comprehensive Guide
-      </h1>
+      </h2>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           What is an RD?
-        </h2>
+        </h3>
         <p className="mb-2">
           A <strong>Recurring Deposit (RD)</strong> is a popular savings scheme
           offered by banks and financial institutions in India. In an RD, you
@@ -79,9 +79,9 @@ const RDInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Benefits of RD
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-1">
           <li>
             <strong>Easy to Start</strong>: Easy to start with no large initial
@@ -115,9 +115,9 @@ const RDInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           How to Open an RD?
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-1">
           <li>
             <strong>Eligibility</strong>: Any individual (single or joint) can
@@ -136,9 +136,9 @@ const RDInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           How Does RD Work?
-        </h2>
+        </h3>
         <p className="mb-2">
           The maturity amount of a Recurring Deposit (RD) is calculated using
           the formula for compound interest, with interest is compounded
@@ -228,9 +228,9 @@ const RDInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Interest Rates on RDs
-        </h2>
+        </h3>
         <p className="mb-2">
           Interest rates for RDs vary from bank to bank and can range between 5%
           to 7% per annum. The interest is compounded quarterly, meaning that
@@ -254,9 +254,9 @@ const RDInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Tax on RDs
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-1">
           <li>
             <strong>Taxability</strong>: The interest earned on RDs is taxable
@@ -281,9 +281,9 @@ const RDInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Premature Withdrawal and Penalty
-        </h2>
+        </h3>
         <p className="mb-2">
           Early withdrawal from an RD is possible but usually comes with a
           penalty. This typically involves a reduction in the interest rate
@@ -295,9 +295,9 @@ const RDInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Conclusion
-        </h2>
+        </h3>
         <p className="mb-2">
           RDs are ideal for conservative investors who want to save money
           regularly while earning guaranteed returns. It is also suitable for

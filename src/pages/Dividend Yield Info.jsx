@@ -51,15 +51,15 @@ const DividendYieldInfo = () => {
         })}
       </script>
 
-      <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
+      <h2 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
         Dividend Yield - A Comprehensive Guide
-      </h1>
+      </h2>
 
       {/* Introduction */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           What is Dividend Yield?
-        </h2>
+        </h3>
         <p className="mb-2">
           Dividend Yield is a financial ratio that shows how much a company pays
           out in dividends each year relative to its stock price. It's expressed
@@ -72,9 +72,9 @@ const DividendYieldInfo = () => {
 
       {/* Key Things to understand */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Key Things to Understand
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>If dividends go up, yield goes up</li>
           <li>
@@ -97,9 +97,9 @@ const DividendYieldInfo = () => {
 
       {/* How Does Dividend Yield Work */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           How Does Dividend Yield Work?
-        </h2>
+        </h3>
         <p>
           When a company earns profit, it may choose to share a portion of it
           with shareholders in the form of dividends. The dividend yield tells
@@ -127,9 +127,9 @@ const DividendYieldInfo = () => {
 
       {/* Taxation on Dividend Income */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Taxation on Dividend Income
-        </h2>
+        </h3>
         <p className="mb-2">
           Dividend income is taxable in the hands of the investor, and tax is
           deducted at source (TDS) depending on the investor’s residency status.
@@ -187,9 +187,9 @@ const DividendYieldInfo = () => {
 
       {/* Pros and Cons of High Dividend Yield */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Pros and Cons of High Dividend Yield
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Pro</strong>: Provides steady income even if stock prices
@@ -212,9 +212,9 @@ const DividendYieldInfo = () => {
 
       {/* Conclusion */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Conclusion
-        </h2>
+        </h3>
         <p className="mb-2">
           Dividend yield is a valuable metric for investors seeking income from
           their investments. However, it's essential to consider other factors,

@@ -55,14 +55,14 @@ const NPSInfo = () => {
         })}
       </script>
 
-      <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
+      <h2 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
         NPS - A Comprehensive Guide
-      </h1>
+      </h2>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           What is NPS?
-        </h2>
+        </h3>
         <p>
           The <strong>National Pension System (NPS)</strong> is a
           government-backed retirement scheme designed to help individuals
@@ -77,9 +77,9 @@ const NPSInfo = () => {
 
       {/* Key Features of NPS */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Key Features of NPS
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-1">
           <li>
             <strong>Government-Backed Scheme</strong>: Regulated by the Pension
@@ -107,9 +107,9 @@ const NPSInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           How does NPS work?
-        </h2>
+        </h3>
         <p className="mb-2">
           NPS works by allowing individuals to contribute to their retirement
           account during their working years. The contributions are invested in
@@ -203,9 +203,9 @@ const NPSInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Structure of NPS
-        </h2>
+        </h3>
         <p className="mb-2">The NPS operates on a two-tier system:</p>
 
         <ul className="list-disc pl-6 space-y-2 mb-2">
@@ -232,9 +232,9 @@ const NPSInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Contributions to NPS
-        </h2>
+        </h3>
         <p className="mb-2">
           NPS is open to all Indian citizens between the ages of 18 and 60. Here
           are the details on contributions:
@@ -266,9 +266,9 @@ const NPSInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Investment Options in NPS
-        </h2>
+        </h3>
         <p className="mb-2">
           NPS provides subscribers with several investment options. They can
           allocate their contributions across different asset classes based on
@@ -308,9 +308,9 @@ const NPSInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Tax Benefits of NPS
-        </h2>
+        </h3>
         <p className="mb-2">
           NPS offers various tax benefits under the Income Tax Act:
         </p>
@@ -340,9 +340,9 @@ const NPSInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Exit and Withdrawal Rules
-        </h2>
+        </h3>
         <p className="mb-2">
           NPS is primarily intended for retirement savings, but there are
           provisions for exit and withdrawal under certain conditions:
@@ -377,9 +377,9 @@ const NPSInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Pros of NPS
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Low-Cost Management</strong>: NPS has one of the lowest fund
@@ -405,9 +405,9 @@ const NPSInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Cons of NPS
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Tax on Annuity</strong>: The annuity portion of the NPS
@@ -427,9 +427,9 @@ const NPSInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Conclusion
-        </h2>
+        </h3>
         <p className="mb-2">
           The National Pension System (NPS) is a well-regulated, cost-effective,
           and flexible retirement savings scheme tailored for long-term

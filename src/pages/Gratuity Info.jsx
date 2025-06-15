@@ -52,15 +52,15 @@ function GratuityInfo() {
         })}
       </script>
 
-      <h1 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
+      <h2 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         Gratuity - A Comprehensive Guide
-      </h1>
+      </h2>
 
       {/* Introduction Section */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           What is Gratuity?
-        </h2>
+        </h3>
         <p className="mb-2">
           <strong>Gratuity</strong> is a form of financial benefit provided by an employer to an
           employee as a reward for long-term service. In India, it is governed
@@ -74,9 +74,9 @@ function GratuityInfo() {
 
       {/* Eligibility Section */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Eligibility for Gratuity
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Minimum Service Period</strong>: The employee must have
@@ -97,9 +97,9 @@ function GratuityInfo() {
 
       {/* Calculation Section */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           How Gratuity is Calculated
-        </h2>
+        </h3>
 
         <p className="">
           The calculation of gratuity can vary depending on the laws in
@@ -162,9 +162,9 @@ function GratuityInfo() {
 
       {/* Taxation Section */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Taxation on Gratuity
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2 ">
           <li>
             <strong>For Government Employees</strong>:
@@ -181,9 +181,9 @@ function GratuityInfo() {
 
       {/* Death or Disability Section */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Gratuity in Case of Death or Disability
-        </h2>
+        </h3>
         <p className="">
           If an employee passes away or becomes physically disabled before
           completing the required years of service, the gratuity will be paid to
@@ -194,9 +194,9 @@ function GratuityInfo() {
 
       {/* Gratuity Payment Process Section */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Gratuity Payment Process
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2 ">
           <li>
             <strong>Application for Gratuity</strong>:
@@ -215,9 +215,9 @@ function GratuityInfo() {
 
       {/* Employer's Obligation Section */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Employer’s Obligation
-        </h2>
+        </h3>
         <p className="mb-2">
           Employers are obligated under the{" "}
           <strong>Payment of Gratuity Act</strong> to provide gratuity to their
@@ -232,9 +232,9 @@ function GratuityInfo() {
 
       {/* Key Points Section */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Key Points to Remember
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>Gratuity is not a pension scheme; it’s a one-time payment.</li>
           <li>Employers contribute to a Gratuity Fund to ensure payment.</li>

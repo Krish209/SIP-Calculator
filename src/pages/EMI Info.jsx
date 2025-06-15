@@ -54,14 +54,14 @@ function EMIInfo() {
         })}
       </script>
 
-      <h1 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
+      <h2 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         EMI - A Comprehensive Guide
-      </h1>
+      </h2>
       {/* Introduction Section */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           What is EMI?
-        </h2>
+        </h3>
         <p className="mb-2">
           <strong>EMI (Equated Monthly Installment)</strong> is a fixed monthly payment made by a
           borrower to a lender for a loan over a specified period of time. It is
@@ -71,9 +71,9 @@ function EMIInfo() {
       </section>
       {/* Components of EMI */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Components of EMI
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-1">
           <li>
             <strong>Principal Amount</strong>: The actual loan amount borrowed.
@@ -94,9 +94,9 @@ function EMIInfo() {
 
       {/* EMI Calculation */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           How does EMI Work?
-        </h2>
+        </h3>
         <p className="mb-2">
           When you take a loan, interest is earned or paid on the principal.
           With compound interest, this interest is added to the principal, and
@@ -136,9 +136,9 @@ function EMIInfo() {
 
       {/* Types of EMI Calculation */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Types of EMI Calculation
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Reducing Balance Method</strong>: The EMI is calculated based on
@@ -155,9 +155,9 @@ function EMIInfo() {
 
       {/* Types of Loans Section */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Types of Loans That Use EMIs
-        </h2>
+        </h3>
         <p className="mb-2">
           EMI-based loans are common for various types of borrowing. Below are
           some of the most popular types of loans where EMI is used as the
@@ -206,9 +206,9 @@ function EMIInfo() {
 
       {/* Loan Amortization Section */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Loan Amortization
-        </h2>
+        </h3>
         <p className="mb-2">
           Loan amortization refers to the process of gradually repaying a loan
           over time through regular payments (EMIs). With each EMI, a portion
@@ -289,9 +289,9 @@ function EMIInfo() {
 
       {/* Prepayment Benefits */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Prepayment and Loan Foreclosure
-        </h2>
+        </h3>
         <p className="mb-2">
           Prepaying part of your loan early can reduce the outstanding principal
           and thus lower the EMI amount or shorten the loan tenure. It's a great
@@ -305,9 +305,9 @@ function EMIInfo() {
       </section>
       {/* Advantages of EMI */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Advantages of EMI
-        </h2>
+        </h3>
         <p className="mb-4">
           Paying for big-ticket items or services upfront can be difficult for
           many, but EMI offers a way to manage large payments by splitting them
@@ -339,9 +339,9 @@ function EMIInfo() {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Disadvantages of EMI
-        </h2>
+        </h3>
         <p className="mb-4">
           While EMI offers flexibility, it's essential to understand its
           disadvantages before committing. Here are some potential downsides to
@@ -373,9 +373,9 @@ function EMIInfo() {
 
       {/* Conclusion Section */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Conclusion
-        </h2>
+        </h3>
         <p className="mb-2">
           EMI is a practical way to repay loans in manageable monthly amounts,
           but it’s important to consider the interest rate, tenure, and type of

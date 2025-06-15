@@ -87,14 +87,14 @@ const SIPInfo = () => {
         })}
       </script>
 
-      <h1 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
+      <h2 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         SIP Investment - A Comprehensive Guide
-      </h1>
+      </h2>
       {/* What is SIP? */}
       <section className="my-4 md:my-6 ">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           What is SIP?
-        </h2>
+        </h3>
         <p className="text-[15px] md:text-base">
           <strong>SIP (Systematic Investment Plan)</strong> is a way to invest
           small amounts of money regularly (usually monthly or quarterly) into
@@ -107,9 +107,9 @@ const SIPInfo = () => {
 
       {/* Why Choose SIP? */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Why Choose SIP?
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2 text-[15px] md:text-base">
           <li>
             <strong>Regular Investing Habit</strong>: SIP encourages regular
@@ -150,9 +150,9 @@ const SIPInfo = () => {
 
       {/* How SIP Works */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           How Does SIP Work?
-        </h2>
+        </h3>
         <ol className="list-decimal pl-6 space-y-2 ">
           <li>
             <strong>Choose Your Investment Amount</strong>: You decide how much
@@ -178,9 +178,9 @@ const SIPInfo = () => {
 
       {/* Types of SIP */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Types of SIP
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Fixed SIP</strong>: In Fixed SIP, you invest a fixed amount
@@ -224,9 +224,9 @@ const SIPInfo = () => {
 
       {/* How Are SIP Investment Returns Calculated */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           How Are SIP Investment Returns Calculated?
-        </h2>
+        </h3>
 
         <p className="mb-2">
           SIP returns are primarily determined by two essential factors: Net
@@ -346,9 +346,9 @@ const SIPInfo = () => {
 
       {/* SIP vs Lump Sum Investment */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           SIP Vs Lump Sum Investment
-        </h2>
+        </h3>
         <div className="space-y-2 mb-2">
           <p>
             <strong>SIP</strong>: In SIP, you invest smaller amounts regularly,
@@ -374,9 +374,9 @@ const SIPInfo = () => {
 
       {/* Benefits of SIP */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Benefits of SIP
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2 ">
           <li>
             <strong>Affordability and Flexibility</strong>: You can start with
@@ -406,9 +406,9 @@ const SIPInfo = () => {
 
       {/* Tax Implications of SIP */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Tax Implications of SIP
-        </h2>
+        </h3>
         <p className="mb-2 md:mb-4">
           SIP in mutual funds have different tax implications based on the type
           of mutual fund and the holding period. It is important to understand
@@ -490,9 +490,9 @@ const SIPInfo = () => {
 
       {/* Inflation Effect on SIP */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Inflation Effect on SIP
-        </h2>
+        </h3>
         <p className="mb-2 md:mb-4">
           Inflation can have a significant impact on your SIP. Over time,
           inflation erodes the purchasing power of your money, which can affect
@@ -560,9 +560,9 @@ const SIPInfo = () => {
 
       {/* Additional Investment Options for SIP */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Additional Investment Options for SIP
-        </h2>
+        </h3>
         <p className="mb-2 md:mb-4">
           While mutual funds are the most common option for SIPs, there are
           other investment avenues you can explore to diversify your portfolio.
@@ -624,9 +624,9 @@ const SIPInfo = () => {
 
       {/* Key Considerations for SIP */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Key Considerations for SIP
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Start Early</strong>: The earlier you begin investing in an
@@ -660,9 +660,9 @@ const SIPInfo = () => {
 
       {/* Common SIP Mistakes to Avoid */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-4">
           Common SIP Mistakes to Avoid
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2 ">
           <li>
             <strong>Not Starting Early</strong>: Delaying your SIP means you

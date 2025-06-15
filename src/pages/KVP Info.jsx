@@ -54,15 +54,15 @@ const KVPInfo = () => {
         })}
       </script>
 
-      <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
+      <h2 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
         Kisan Vikas Patra (KVP) – A Comprehensive Guide
-      </h1>
+      </h2>
 
       {/* Introduction */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           What is KVP?
-        </h2>
+        </h3>
         <p className="mb-2">
           <strong>Kisan Vikas Patra (KVP)</strong> is a government-backed
           savings scheme aimed at encouraging individuals to save for the future
@@ -77,9 +77,9 @@ const KVPInfo = () => {
 
       {/* Key Features */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Key Features of KVP
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Interest Rate</strong>: 7.5% p.a., compounded annually (as
@@ -119,9 +119,9 @@ const KVPInfo = () => {
 
       {/* Eligibility */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Who is Eligible?
-        </h2>
+        </h3>
         <p>Any Indian resident can invest in KVP. Eligibility includes:</p>
         <ul className="list-disc pl-6 space-y-1">
           <li>Minors (through a guardian)</li>
@@ -136,9 +136,9 @@ const KVPInfo = () => {
 
       {/* Account Types */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Types of KVP Accounts
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Single Holder Account</strong>: For individuals or for a
@@ -156,9 +156,9 @@ const KVPInfo = () => {
 
       {/* How does KVP Work */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           How Does KVP Work?
-        </h2>
+        </h3>
         <p>
           The maturity amount is calculated using compound interest. The formula
           is:
@@ -206,9 +206,9 @@ const KVPInfo = () => {
 
       {/* Taxation */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Taxation on KVP
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>No 80C Deductions</strong>: KVP investments are not eligible
@@ -228,9 +228,9 @@ const KVPInfo = () => {
 
       {/* Pros */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Pros of KVP
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Government-Backed</strong>: Offers safety and capital
@@ -259,9 +259,9 @@ const KVPInfo = () => {
 
       {/* Cons */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Cons of KVP
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>No Tax Benefits</strong>: Not eligible under Section 80C
@@ -282,9 +282,9 @@ const KVPInfo = () => {
 
       {/* How to Buy KVP */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           How to Buy KVP?
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-1">
           <li>Available at all India Post Office branches</li>
           <li>Also available through authorized public sector banks</li>
@@ -293,9 +293,9 @@ const KVPInfo = () => {
 
       {/* Conclusion */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Conclusion
-        </h2>
+        </h3>
         <p>
           Kisan Vikas Patra is a{" "}
           <strong>secure and stable long-term investment</strong> backed by the

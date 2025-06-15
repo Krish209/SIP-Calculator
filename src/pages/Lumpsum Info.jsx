@@ -88,14 +88,14 @@ const LumpsumInfo = () => {
         })}
       </script>
 
-      <h1 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
+      <h2 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         Lumpsum Investment - A Comprehensive Guide
-      </h1>
+      </h2>
       {/* What is Lumpsum? */}
       <section className="my-4 md:my-6 ">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           What is Lumpsum Investment?
-        </h2>
+        </h3>
         <p className="text-[15px] md:text-base">
           <strong>Lump sum investment</strong> refers to investing a large
           amount of money at one time, rather than spreading your investment
@@ -107,9 +107,9 @@ const LumpsumInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Key Features of Lump Sum
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2 ">
           <li>
             <strong>One-Time Investment</strong>: A single, large amount is
@@ -133,9 +133,9 @@ const LumpsumInfo = () => {
 
       {/* How are Lumpsum Investment Returns Calculated */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           How Are Lumpsum Investment Returns Calculated?
-        </h2>
+        </h3>
 
         <p className="mb-2">
           Lumpsum returns are primarily influenced by two essential factors: Net
@@ -232,9 +232,9 @@ const LumpsumInfo = () => {
 
       {/* SIP vs Lump Sum Investment */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           SIP Vs Lump Sum Investment
-        </h2>
+        </h3>
         <div className="space-y-2 mb-2">
           <p>
             <strong>SIP</strong>: In SIP, you invest smaller amounts regularly,
@@ -254,9 +254,9 @@ const LumpsumInfo = () => {
 
       {/* Benefits of Lump Sum */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Benefits of Lump Sum
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2 ">
           <li>
             <strong>Power of Compounding</strong>: Since the entire amount is
@@ -282,9 +282,9 @@ const LumpsumInfo = () => {
 
       {/* Tax Implications of Lumpsum */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Tax Implications of Lumpsum
-        </h2>
+        </h3>
         <p className="mb-2 md:mb-4">
           The taxation for lump sum investments in mutual funds is the same as
           SIP, depending on fund type and holding period:
@@ -358,9 +358,9 @@ const LumpsumInfo = () => {
 
       {/* Inflation Effect on Lumpsum */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Inflation Effect on Lump Sum
-        </h2>
+        </h3>
         <p className="mb-2 md:mb-4">
           Inflation can have a significant impact on your Lumpsum. Over time,
           inflation erodes the purchasing power of your money, which can affect
@@ -410,9 +410,9 @@ const LumpsumInfo = () => {
 
       {/* Key Considerations for Lumpsum */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Key Considerations for Lumpsum
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Use STP (Systematic Transfer Plan)</strong>: Park your lump
@@ -438,9 +438,9 @@ const LumpsumInfo = () => {
 
       {/* Common Lumpsum Mistakes to Avoid */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-4">
           Common Lumpsum Mistakes to Avoid
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2 ">
           <li>
             <strong>Timing Dependency</strong>: Unlike SIPs, returns can vary

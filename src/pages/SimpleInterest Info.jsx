@@ -46,9 +46,9 @@ const SimpleInterestInfo = () => {
         })}
       </script>
 
-      <h1 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
+      <h2 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         Simple Interest - A Comprehensive Guide
-      </h1>
+      </h2>
 
       <section className="my-4 md:my-6">
         <p className="mb-2">
@@ -108,9 +108,9 @@ const SimpleInterestInfo = () => {
       </p>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Real-World Applications
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Loans</strong>: Personal loans, car loans, or student loans
@@ -124,9 +124,9 @@ const SimpleInterestInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Limitations of Simple Interest
-        </h2>
+        </h3>
         <p>
           Simple interest doesn’t take the compounding effect into account,
           meaning it may not be the best choice for long-term investments. For

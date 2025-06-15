@@ -52,14 +52,14 @@ const FdInfo = () => {
         })}
       </script>
 
-      <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
+      <h2 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
         FD - A Comprehensive Guide
-      </h1>
+      </h2>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           What is a FD?
-        </h2>
+        </h3>
         <p className="mb-2">
           A <strong>Fixed Deposit (FD)</strong> is one of the safest and most
           reliable investment options available, allowing you to invest a lump
@@ -72,9 +72,9 @@ const FdInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Key Features of FDs
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Safety</strong>: FDs are considered one of the safest
@@ -117,9 +117,9 @@ const FdInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           How FD Investment Works
-        </h2>
+        </h3>
         <ul className="list-decimal pl-6 space-y-2">
           <li>
             <strong>Initial Investment</strong>: You begin by depositing a lump
@@ -156,9 +156,9 @@ const FdInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Advantages of FDs
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Guaranteed Returns</strong>: Unlike stocks or mutual funds,
@@ -195,9 +195,9 @@ const FdInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Deposit Insurance Coverage
-        </h2>
+        </h3>
         <p className="mb-2">
           In India, Fixed Deposits placed with scheduled banks are protected by
           the Deposit Insurance and Credit Guarantee Corporation (DICGC), a
@@ -224,9 +224,9 @@ const FdInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Types of FDs
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Regular FD</strong>: This is the most common type, where you
@@ -256,9 +256,9 @@ const FdInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Choosing the Right FD Investment
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Interest Rate</strong>: Compare interest rates offered by
@@ -282,9 +282,9 @@ const FdInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Things to Consider
-        </h2>
+        </h3>
         <ul className="list-decimal pl-6 space-y-2">
           <li>
             <strong>Penalty for Early Withdrawal</strong>: If you break your FD
@@ -306,9 +306,9 @@ const FdInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Is an FD Investment Right for You?
-        </h2>
+        </h3>
         <p className="mb-2">
           Fixed Deposits (FDs) are ideal for investors who:
         </p>

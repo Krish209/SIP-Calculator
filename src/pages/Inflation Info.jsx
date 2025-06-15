@@ -50,14 +50,14 @@ const InflationInfo = () => {
         })}
       </script>
 
-      <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
+      <h2 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
         Inflation - A Comprehensive Guide
-      </h1>
+      </h2>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           What is Inflation?
-        </h2>
+        </h3>
         <p className="mb-2">
           <strong>Inflation</strong> is the rate at which the general level of prices for goods
           and services rises over time, leading to a decrease in the purchasing
@@ -74,9 +74,9 @@ const InflationInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Causes of Inflation
-        </h2>
+        </h3>
         <p className="mb-2">
           Inflation can be caused by several factors, typically categorized into
           demand-pull inflation, cost-push inflation, and built-in inflation:
@@ -112,9 +112,9 @@ const InflationInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Types of Inflation
-        </h2>
+        </h3>
         <p className="mb-2">
           Inflation can be categorized into different types based on its rate
           and impact:
@@ -149,9 +149,9 @@ const InflationInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Measuring Inflation
-        </h2>
+        </h3>
         <p className="mb-2">
           Inflation is measured using price indices. The two primary indices
           are:
@@ -176,9 +176,9 @@ const InflationInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Consequences of Inflation
-        </h2>
+        </h3>
         <p className="mb-2">
           Inflation has several consequences on an economy:
         </p>
@@ -217,9 +217,9 @@ const InflationInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Inflation Control Measures
-        </h2>
+        </h3>
         <p className="mb-2">
           Policymakers use several tools to control inflation:
         </p>

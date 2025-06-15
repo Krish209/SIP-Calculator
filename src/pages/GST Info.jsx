@@ -56,15 +56,15 @@ const GSTInfo = () => {
         })}
       </script>
 
-      <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
+      <h2 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
         GST - A Comprehensive Guide
-      </h1>
+      </h2>
 
       {/* What is GST? Section */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           What is GST?
-        </h2>
+        </h3>
         <p className="mb-2">
           <strong>GST (Goods and Services Tax)</strong> is a value-added tax
           applied to the sale of goods and services. It is designed to simplify
@@ -77,9 +77,9 @@ const GSTInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Key Features of GST
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             Single tax for goods and services, simplifying the tax system.
@@ -100,9 +100,9 @@ const GSTInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Types of GST
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>CGST (Central GST)</strong>: Levied by the central
@@ -121,9 +121,9 @@ const GSTInfo = () => {
 
       {/* GST Calculation Formula Section */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           GST Calculation Formula
-        </h2>
+        </h3>
 
         {/* GST Exclusive Calculation */}
         <p className="mb-2">
@@ -167,9 +167,9 @@ const GSTInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           GST Rates
-        </h2>
+        </h3>
         <p className=" mb-4">
           GST is levied at various rates depending on the type of goods and
           services. These rates are categorized as follows:
@@ -197,9 +197,9 @@ const GSTInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Benefits of GST
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Eliminates Cascading Tax Effect</strong>: GST allows Input
@@ -225,9 +225,9 @@ const GSTInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Input Tax Credit (ITC)
-        </h2>
+        </h3>
         <p className=" mb-4">
           Input Tax Credit (ITC) allows businesses to offset the taxes paid on
           inputs (goods or services) against the taxes collected from sales.
@@ -245,9 +245,9 @@ const GSTInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           GST Registration
-        </h2>
+        </h3>
         <p className="mb-2">
           Businesses with a turnover above a certain threshold must register for
           GST. The threshold varies depending on the type of business and
@@ -269,9 +269,9 @@ const GSTInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           GST Returns
-        </h2>
+        </h3>
         <p className="mb-2">
           GST returns are mandatory for businesses to file, and the filing
           frequency depends on the business type and turnover.
@@ -291,9 +291,9 @@ const GSTInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Challenges of GST
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Initial Implementation Issues</strong>: The switch to GST
@@ -315,9 +315,9 @@ const GSTInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           GST and E-commerce
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>GST on E-commerce Platforms</strong>: E-commerce platforms
@@ -332,9 +332,9 @@ const GSTInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Conclusion
-        </h2>
+        </h3>
         <p className="mb-2">
           GST is a transformative tax reform that has streamlined the indirect
           tax structure, ensuring ease of business and greater compliance.

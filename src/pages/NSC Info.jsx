@@ -54,14 +54,14 @@ const NSCInfo = () => {
         })}
       </script>
 
-      <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
+      <h2 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
         NSC - A Comprehensive Guide
-      </h1>
+      </h2>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           What is NSC?
-        </h2>
+        </h3>
         <p className="mb-2">
           <strong>National Savings Certificate (NSC)</strong> is a
           government-backed savings scheme that offers a safe and reliable
@@ -74,9 +74,9 @@ const NSCInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Key Features of NSC
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Government-Backed</strong>: Investment scheme offering
@@ -119,9 +119,9 @@ const NSCInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           How Does NSC Work?
-        </h2>
+        </h3>
         <p className="mb-2">
           When you purchase an NSC at a Post Office, the amount you invest earns
           a fixed interest rate compounded annually. The interest is added to
@@ -137,9 +137,9 @@ const NSCInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Interest Rates on NSC
-        </h2>
+        </h3>
         <p className="mb-2">
           The interest rate on NSC is fixed by the government and is subject to
           quarterly revisions. As of Q2 FY 2025, the interest rate is 7.7% per
@@ -153,9 +153,9 @@ const NSCInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Tax Benefits of NSC
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-1">
           <li>
             <strong>Section 80C Deduction</strong>: The principal amount
@@ -181,9 +181,9 @@ const NSCInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Types of NSC
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-1">
           <li>
             <strong>NSC VIII Issue</strong>: This is the standard 5-year NSC,
@@ -194,9 +194,9 @@ const NSCInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Who Should Invest in NSC?
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-1">
           <li>Risk-averse individuals looking for a safe investment option.</li>
           <li>
@@ -215,9 +215,9 @@ const NSCInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Pros of NSC
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-1">
           <li>
             <strong>Government-Backed</strong>: The investment is backed by the
@@ -243,9 +243,9 @@ const NSCInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Cons of NSC
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-1">
           <li>
             <strong>Taxable Interest</strong>: The interest earned is taxable,
@@ -263,9 +263,9 @@ const NSCInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           How to Buy an NSC?
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-1">
           <li>You can purchase NSC at any Post Office across India.</li>
           <li>

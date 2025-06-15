@@ -93,15 +93,15 @@ const StepUpSIPInfo = () => {
         })}
       </script>
 
-      <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
+      <h2 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
         Step-Up SIP - A Comprehensive Guide
-      </h1>
+      </h2>
 
       {/* Introduction */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           What is a Step-Up SIP?
-        </h2>
+        </h3>
         <p className="mb-2">
           A <strong>Step-Up SIP</strong> (also called a <em>Top-Up SIP</em>) is
           a flexible investment strategy in mutual funds where you can
@@ -119,9 +119,9 @@ const StepUpSIPInfo = () => {
 
       {/* Key Features */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Key Features of Step-Up SIP
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-1">
           <li>
             Auto-increase SIP amount at set intervals (e.g., ₹500 every year)
@@ -136,9 +136,9 @@ const StepUpSIPInfo = () => {
 
       {/* How it Works */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           How Does Step-Up SIP Work?
-        </h2>
+        </h3>
         <p className="mb-2">
           When you set up a Step-Up SIP, you choose an initial investment amount
           and a fixed increment. For example, if you start with a SIP of ₹2,000
@@ -206,9 +206,9 @@ const StepUpSIPInfo = () => {
 
       {/* Benefits */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Benefits of Step-Up SIP
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-1">
           <li>
             <strong>Increased Wealth Creation</strong>: As your investment
@@ -240,9 +240,9 @@ const StepUpSIPInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Key Considerations for Step-Up SIP
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Income stability</strong>: Ensure you can afford increased
@@ -275,7 +275,7 @@ const StepUpSIPInfo = () => {
 
       {/* Pros */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">Pros</h2>
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">Pros</h3>
 
         <ul className="list-disc pl-6 space-y-1">
           <li>Boosts returns with rising contributions</li>
@@ -287,7 +287,7 @@ const StepUpSIPInfo = () => {
 
       {/* Cons */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">Cons</h2>
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">Cons</h3>
         <ul className="list-disc pl-6 space-y-1">
           <li>Requires steady income growth</li>
           <li>May stretch your monthly budget if not planned well</li>
@@ -300,9 +300,9 @@ const StepUpSIPInfo = () => {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Who Should Invest in Step-Up SIP?
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-1">
           <li>Salaried individuals expecting annual raises</li>
           <li>Young professionals starting with a modest income</li>
@@ -316,9 +316,9 @@ const StepUpSIPInfo = () => {
 
       {/* Summary */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Conclusion
-        </h2>
+        </h3>
         <p className="mb-2">
           A Step-Up SIP is one of the smartest ways to align your investments
           with your income growth. It helps you save more efficiently over time.

@@ -51,14 +51,14 @@ function SSYInfo() {
         })}
       </script>
 
-      <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
+      <h2 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
         SSY - A Comprehensive Guide
-      </h1>
+      </h2>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           What is Sukanya Samriddhi Yojana?
-        </h2>
+        </h3>
         <p className="mb-2">
           The <strong>Sukanya Samriddhi Yojana (SSY)</strong> is a
           government-backed savings scheme launched by the Indian government in
@@ -73,9 +73,9 @@ function SSYInfo() {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Key Features of SSY
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Eligibility</strong>: The account can be opened only for a
@@ -116,9 +116,9 @@ function SSYInfo() {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           How to Open an SSY Account
-        </h2>
+        </h3>
         <ol className="list-decimal list-inside space-y-2">
           <li>Visit the nearest post office or bank offering SSY scheme.</li>
           <li>
@@ -138,9 +138,9 @@ function SSYInfo() {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Pros of SSY
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>High-Interest Rates</strong>: It offers one of the highest
@@ -167,9 +167,9 @@ function SSYInfo() {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Cons of SSY
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Limited to Girls</strong>: This scheme is available only for
@@ -191,9 +191,9 @@ function SSYInfo() {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Who Should Invest in SSY?
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Parents of Girl Children</strong>: If you have a daughter
@@ -212,9 +212,9 @@ function SSYInfo() {
       </section>
 
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Conclusion
-        </h2>
+        </h3>
         <p className="mb-2">
           The SSY is one of the best schemes for ensuring the future financial
           security of your daughter. It combines high returns, tax benefits, and
