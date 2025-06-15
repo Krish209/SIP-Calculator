@@ -127,7 +127,7 @@ function Footer() {
             </a>
           </li>
           <li>
-            <a href="https://in.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-blue-600">
+            <a href="https://www.linkedin.com/company/justsipgo" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-blue-600">
               <FaLinkedin />
             </a>
           </li>
