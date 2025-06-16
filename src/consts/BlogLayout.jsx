@@ -24,6 +24,7 @@ import { blogPosts } from "./BlogPost";
 const BlogLayout = ({
   slug,
   title,
+  description,
   author,
   role,
   date,
@@ -121,8 +122,8 @@ const BlogLayout = ({
     }
   };
 
-  // Meta description from the post or first paragraph
-  const metaDescription = currentPost?.description;
+  // Meta description from the post itself not from common Blog home page (blogpost)
+  const metaDescription = description;
 
   // ISO date format for structured data
   const dateISO = new Date(date).toISOString();

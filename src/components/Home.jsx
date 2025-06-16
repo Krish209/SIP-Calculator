@@ -254,7 +254,7 @@ const HomeLanding = () => {
 
       {/* Calculator Categories */}
       <div>
-        <AllCalculator />
+        <AllCalculator headingLevel="h2" headingLevel2="h3"/>
       </div>
     </div>
   );

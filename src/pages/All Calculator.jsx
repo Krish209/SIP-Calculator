@@ -1,81 +1,57 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { RiMoneyRupeeCircleLine } from "react-icons/ri";
-import { AiOutlineStock } from "react-icons/ai";
+
+import { RiMoneyRupeeCircleLine, RiStockLine } from "react-icons/ri";
+import {
+  AiOutlineStock,
+  AiOutlineHome,
+  AiOutlineThunderbolt,
+  AiOutlinePieChart
+} from "react-icons/ai";
 import { ImInfinite } from "react-icons/im";
 import { VscPercentage } from "react-icons/vsc";
-import { AiOutlinePercentage } from "react-icons/ai";
-import { FaPercentage } from "react-icons/fa";
-import { GiReceiveMoney } from "react-icons/gi";
-import { FaUniversity, FaCar, FaHome, FaChartLine } from "react-icons/fa";
+import { GiReceiveMoney, GiTakeMyMoney } from "react-icons/gi";
 import { MdSchool } from "react-icons/md";
-import { AiOutlineHome } from "react-icons/ai";
-import { IoHomeOutline } from "react-icons/io5";
-import { AiTwotoneCar } from "react-icons/ai";
 import { IoCarOutline } from "react-icons/io5";
-import { PiGraduationCap } from "react-icons/pi";
-import { GrCar } from "react-icons/gr";
+import { PiGraduationCap, PiStepsDuotone } from "react-icons/pi";
+import { GoArrowRight } from "react-icons/go";
+import { FaRegCalendarAlt } from "react-icons/fa";
+import { TbPigMoney } from "react-icons/tb";
+import { FiClipboard } from "react-icons/fi";
+import { FaChildDress } from "react-icons/fa6";
+import { CgGirl } from "react-icons/cg";
+import { HiOutlineCalculator, HiOutlineChartBar, HiOutlineUserGroup } from "react-icons/hi";
+import { LuChartNoAxesCombined } from "react-icons/lu";
 
-const AllCalculator = () => {
+
+const AllCalculator = ({ headingLevel: Heading = "h1", headingLevel2: Heading2 = "h2"  }) => {
   // Data for calculators
   const calculators = [
     {
       title: "PPF Calculator",
-      description:
-        "Calculate returns on your Public Provident Fund investments with tax benefits.",
+      description: "Calculate returns on your Public Provident Fund investments with tax benefits.",
       icon: <RiMoneyRupeeCircleLine className="w-8 h-8 text-indigo-500" />,
       category: "Tax-Saving",
       link: "/ppf-calculator",
     },
     {
       title: "NPS Calculator",
-      description:
-        "Plan your National Pension Scheme contributions for retirement.",
-      icon: (
-        <svg
-          className="w-8 h-8 text-indigo-500"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-          />
-        </svg>
-      ),
+      description: "Plan your National Pension Scheme contributions for retirement.",
+      icon: <HiOutlineUserGroup className="w-8 h-8 text-indigo-500" />,
       category: "Retirement",
       link: "/nps-calculator",
     },
     {
       title: "FD Calculator",
-      description:
-        "Calculate returns on Fixed Deposits with different interest rates.",
-      icon: <AiOutlineStock className="w-8 h-8 text-indigo-500" />,
+      description: "Calculate returns on Fixed Deposits with different interest rates.",
+      icon: <AiOutlinePieChart className="w-8 h-8 text-indigo-500" />,
       category: "Fixed Income",
       link: "/fd-calculator",
     },
     {
       title: "EMI Calculator",
-      description:
-        "Calculate your Equated Monthly Installments for loans and mortgages.",
-      icon: (
-        <svg
-          className="w-8 h-8 text-indigo-500"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-          />
-        </svg>
-      ),
+      description: "Calculate your Equated Monthly Installments for loans and mortgages.",
+      icon: <FaRegCalendarAlt className="w-8 h-8 text-indigo-500" />,
       category: "Loans",
       link: "/emi-calculator",
     },
@@ -98,7 +74,7 @@ const AllCalculator = () => {
       description: "Figure out monthly EMIs for your personal loan needs.",
       category: "Loans",
       link: "/personal-loan-calculator",
-      icon: <FaChartLine className="w-8 h-8 text-indigo-500" />,
+      icon: <TbPigMoney className="w-8 h-8 text-indigo-500" />,
     },
     {
       title: "Education Loan Calculator",
@@ -109,97 +85,36 @@ const AllCalculator = () => {
     },
     {
       title: "RD Calculator",
-      description:
-        "Calculate returns on your Recurring Deposits with monthly contributions.",
+      description: "Calculate returns on your Recurring Deposits with monthly contributions.",
       icon: <AiOutlineStock className="w-8 h-8 text-indigo-500" />,
       category: "Fixed Income",
       link: "/rd-calculator",
     },
     {
       title: "SIP Calculator",
-      description:
-        "Calculate returns on your Systematic Investment Plans with compounding.",
-      icon: (
-        <svg
-          className="w-8 h-8 text-indigo-500"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-          />
-        </svg>
-      ),
+      description: "Calculate returns on your Systematic Investment Plans with compounding.",
+      icon: <HiOutlineChartBar className="w-8 h-8 text-indigo-500" />,
       category: "Mutual Funds",
       link: "/sip-calculator",
     },
     {
       title: "Lumpsum Calculator",
-      description:
-        "Calculate returns on one-time investments and compare with SIP.",
-      icon: (
-        <svg
-          className="w-8 h-8 text-indigo-500"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-          />
-        </svg>
-      ),
+      description: "Calculate returns on one-time investments and compare with SIP.",
+      icon: <HiOutlineCalculator className="w-8 h-8 text-indigo-500" />,
       category: "Mutual Funds",
       link: "/lumpsum-calculator",
     },
     {
       title: "Step-Up SIP Calculator",
-      description:
-        "Estimate returns with annually increasing SIP contributions.",
+      description: "Estimate returns with annually increasing SIP contributions.",
       category: "Mutual Funds",
       link: "/step-up-sip-calculator",
-      icon: (
-        <svg
-          className="w-8 h-8 text-indigo-500"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M3 17l6-6 4 4 8-8"
-          />
-        </svg>
-      ),
+      icon: <PiStepsDuotone className="w-8 h-8 text-indigo-500" />,
     },
     {
       title: "SWP Calculator",
-      description:
-        "Plan your Systematic Withdrawal Plan and see how long your money lasts.",
-      icon: (
-        <svg
-          className="w-8 h-8 text-indigo-500"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 12V3m0 9L8 8m4 4l4-4"
-          />
-        </svg>
-      ),
+      description: "Plan your Systematic Withdrawal Plan and see how long your money lasts.",
+      icon: <GiReceiveMoney className="w-8 h-8 text-indigo-500" />,
       category: "Mutual Funds",
       link: "/swp-calculator",
     },
@@ -208,96 +123,36 @@ const AllCalculator = () => {
       description: "Easily calculate GST for any price with reverse option.",
       category: "Investment",
       link: "/gst-calculator",
-      icon: <GiReceiveMoney className="w-8 h-8 text-indigo-500" />,
+      icon: <GiTakeMyMoney className="w-8 h-8 text-indigo-500" />,
     },
     {
       title: "NSC Calculator",
-      description:
-        "Calculate returns on National Savings Certificates with tax implications.",
-      icon: (
-        <svg
-          className="w-8 h-8 text-indigo-500"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-          />
-        </svg>
-      ),
+      description: "Calculate returns on National Savings Certificates with tax implications.",
+      icon: <FiClipboard className="w-8 h-8 text-indigo-500" />,
       category: "Tax-Saving",
       link: "/nsc-calculator",
     },
     {
       title: "SSY Calculator",
-      description:
-        "Plan Sukanya Samriddhi Yojana investments for your girl child.",
-      icon: (
-        <svg
-          className="w-8 h-8 text-indigo-500"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
-          />
-        </svg>
-      ),
+      description: "Plan Sukanya Samriddhi Yojana investments for your girl child.",
+      icon: <FaChildDress className="w-8 h-8 text-indigo-500" />,
       category: "Savings",
       link: "/ssy-calculator",
     },
     {
       title: "Mutual Fund Returns",
       description: "Calculate returns from mutual fund investments with XIRR.",
-      icon: (
-        <svg
-          className="w-8 h-8 text-indigo-500"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M13 10V3L4 14h7v7l9-11h-7z"
-          />
-        </svg>
-      ),
+      icon: <RiStockLine className="w-8 h-8 text-indigo-500" />,
       category: "Mutual Funds",
       link: "/mutual-fund-calculator",
     },
     {
       title: "Inflation Calculator",
       description: "See how inflation affects your money's purchasing power.",
-      icon: (
-        <svg
-          className="w-8 h-8 text-indigo-500"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-          />
-        </svg>
-      ),
+      icon: <LuChartNoAxesCombined className="w-8 h-8 text-indigo-500" />,
       category: "Planning",
       link: "/inflation-calculator",
     },
-
-    // INTEREST CALCULATORS
     {
       title: "Simple Interest Calculator",
       description: "Calculate basic interest on principal and rate.",
@@ -330,9 +185,9 @@ const AllCalculator = () => {
       {/* Calculator Categories */}
       <section className="max-w-7xl mx-auto py-4 sm:py-8 md:py-12 px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-4 sm:mb-8 md:mb-10">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+          <Heading className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
             Explore Our Financial Calculators
-          </h1>
+          </Heading>
           <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto">
             Tools for every stage of your financial journey
           </p>
@@ -372,9 +227,9 @@ const AllCalculator = () => {
                       {calc.icon}
                     </div>
                     <div className="flex-1">
-                      <h2 className="text-base sm:text-lg font-semibold leading-snug group-hover:text-indigo-600 transition">
+                      <Heading2 className="text-base sm:text-lg font-semibold leading-snug group-hover:text-indigo-600 transition">
                         {calc.title}
-                      </h2>
+                      </Heading2>
                     </div>
                   </div>
 
@@ -387,19 +242,7 @@ const AllCalculator = () => {
                     </span>
                     <span className="text-indigo-600 font-medium flex items-center">
                       Try Now
-                      <svg
-                        className="w-3 h-3 sm:w-4 sm:h-4 ml-1"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                        />
-                      </svg>
+                      <GoArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-1" />
                     </span>
                   </div>
                 </div>
