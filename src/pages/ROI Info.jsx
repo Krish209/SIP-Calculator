@@ -51,15 +51,15 @@ const ROIInfo = () => {
         })}
       </script>
       
-      <h1 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
+      <h2 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
         Return on Investment (ROI) - Complete Guide
-      </h1>
+      </h2>
 
       {/* Introduction */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           What is ROI?
-        </h2>
+        </h3>
         <p className="mb-2">
           Return on Investment (ROI) is a popular financial metric used to
           evaluate the profitability of an investment. It shows the percentage
@@ -71,9 +71,9 @@ const ROIInfo = () => {
 
       {/* How does ROI work */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           How does ROI work?
-        </h2>
+        </h3>
         <p className="mb-4">
           Return on Investment (ROI) is a basic profitability metric that helps
           evaluate the performance of an investment. It calculates how much
@@ -130,9 +130,9 @@ const ROIInfo = () => {
 
       {/* Who Should Use ROI */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Who Should Use ROI?
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>Individual investors assessing stock or real estate returns</li>
           <li>Businesses measuring project or marketing performance</li>
@@ -143,9 +143,9 @@ const ROIInfo = () => {
 
       {/* Variants */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Types & Variations of ROI
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>Annualized ROI</strong>: Adjusts ROI for time, helpful for
@@ -164,9 +164,9 @@ const ROIInfo = () => {
 
       {/* Limitations */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Limitations of ROI
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>Does not account for time value of money</li>
           <li>Ignores risk, external market factors, or inflation</li>
@@ -177,9 +177,9 @@ const ROIInfo = () => {
 
       {/* Best Practices */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Best Practices
-        </h2>
+        </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>Compare ROI with investment duration</li>
           <li>Use with other metrics like IRR, Payback Period, and NPV</li>
@@ -190,9 +190,9 @@ const ROIInfo = () => {
 
       {/* Conclusion */}
       <section className="my-4 md:my-6">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           Conclusion
-        </h2>
+        </h3>
         <p>
           ROI is a straightforward yet powerful tool for analyzing the
           efficiency of any investment. It helps investors and businesses make
