@@ -369,7 +369,7 @@ const BlogLayout = ({
                   key={tag}
                   // href={`/tags/${tag.toLowerCase().replace(/\s+/g, "-")}`}
                   className="text-sm bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full"
-                  aria-label={`Posts tagged with ${tag}`}
+                  // aria-label={`Posts tagged with ${tag}`}
                 >
                   #{tag}
                 </a>
