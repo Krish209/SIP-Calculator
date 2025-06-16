@@ -28,16 +28,16 @@ import Contact from "./components/Contact";
 import TermsAndConditions from "./pages/Terms&Condition";
 import PrivacyPolicy from "./pages/Privacy Policy";
 import Disclaimer from "./pages/Disclaimer";
-import NpsMonthlyPension from "./pages/blogs/Nps Monthly Pension";
+// import NpsMonthlyPension from "./pages/blogs/Nps Monthly Pension";
 import SIPvsLumpsum from "./pages/blogs/SIP vs Lumpsum";
-import WhyRiskIsPartOfInvesting from "./pages/blogs/Why Risk Is Part Of Investing";
+import WhyRiskIsPartOfInvesting from "./pages/blogs/Risk Is Part Of Investing";
 import InvestingVsGambling from "./pages/blogs/Investing vs Gambling";
 import BeatingInflation from "./pages/blogs/Beating Inflation";
-import StockEtfMfBond from "./pages/blogs/What Are Stocks, ETFs, Mutual Funds, and Bonds";
+import StockEtfMfBond from "./pages/blogs/Stocks, ETFs, Mutual Funds, and Bonds";
 import CreatePassiveIncome from "./pages/blogs/Create a Passive Income";
 import CompoundingWork from "./pages/blogs/Compounding Work";
 import BlogHome from "./consts/Blog Home";
-import DiversifyPortfolio from "./pages/blogs/How to Diversify Portfolio";
+import DiversifyPortfolio from "./pages/blogs/Diversify Portfolio";
 import InflationandTaxesImpact from "./pages/blogs/Inflation and Taxes Impact Investments";
 import SelfEmployedOrFreelancer from "./pages/blogs/Invest if You're Self-Employed or a Freelancer";
 import Random from "./pages/blogs/Random";
@@ -46,6 +46,7 @@ import StocksorMutualFunds from "./pages/blogs/Stocks or Mutual Funds";
 import SavingvsInvesting from "./pages/blogs/Saving and Investing difference";
 import BlogLayout from "./consts/BlogLayout"; // wherever your BlogLayout is located
 import LumpsumCalc from "./pages/Lumpsum Calc";
+import AchieveMonthlyPensionwithNPS from "./pages/blogs/Achieve a Monthly Pension";
 
 function App() {
   return (
@@ -73,7 +74,7 @@ function App() {
 
           <Route path="/blog" element={<BlogHome />} />
 
-          <Route path="/blog/how-to-achieve-a-monthly-pension-of-50k-with-nps" element={<NpsMonthlyPension />} />
+          <Route path="/blog/how-to-achieve-a-monthly-pension-of-50k-with-nps" element={<AchieveMonthlyPensionwithNPS />} />
           <Route path="/blog/sip-vs-lumpsum" element={<SIPvsLumpsum />} />
           <Route path="/blog/why-risk-is-part-of-investing" element={<WhyRiskIsPartOfInvesting />} />
           <Route path="/blog/investing-vs-gambling-whats-the-real-difference" element={<InvestingVsGambling />} />

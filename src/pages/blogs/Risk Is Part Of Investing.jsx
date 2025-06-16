@@ -6,7 +6,7 @@ import img from "../../assets/icons/blogs/riskvsreward3.png";
 export const meta = {
   title: "Why Risk is a Part of Investing – Know the Role of Risk in Returns",
   description:
-    "Understand the relationship between risk and returns in investing.",
+    "Learn why risk is essential to investing and how to manage it smartly. Discover strategies like SIPs, smart asset allocation, and diversification for better returns.",
   slug: "why-risk-is-part-of-investing",
   image: "https://www.sipgo.in/assets/icons/blogs/riskvsreward3.png",
   tags: [
@@ -107,7 +107,6 @@ const WhyRiskIsPartOfInvesting = () => {
     <BlogLayout
       slug={meta.slug}
       {...meta} // Spread all meta properties
-      title="Why Risk is Part of Investing – and How to Manage It"
       author="Haresh Yadav"
       role="Financial Advisor"
       date="May 26, 2025"

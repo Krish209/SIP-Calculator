@@ -4,9 +4,9 @@ import BlogLayout from "../../consts/BlogLayout";
 import img from "../../assets/icons/blogs/tree1.jpeg";
 
 export const meta = {
-  title: "How to Create a Passive Income – Strategies That Work",
+  title: "How to Create Passive Income with Investments: A Complete Guide for Indians",
   description:
-    "Explore various strategies to generate income with minimal ongoing effort.",
+    "Discover how to build passive income in India with stocks, mutual funds, real estate & more. Learn investment strategies for financial freedom & early retirement.",
   slug: "how-to-create-passive-income-with-investments",
   image: "https://www.sipgo.in/assets/icons/blogs/tree1.jpeg",
   tags: [
@@ -123,8 +123,6 @@ const CreatePassiveIncome = () => {
     <BlogLayout
       slug={meta.slug}
       {...meta} // Spread all meta properties
-      title="How to Create Passive Income with Investments: A Complete Guide for
-          Indians"
       author="Surabhi Sharma"
       role="Financial Advisor"
       date="May 26, 2025"

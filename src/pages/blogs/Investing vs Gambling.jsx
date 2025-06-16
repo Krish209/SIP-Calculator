@@ -6,7 +6,7 @@ import img from "../../assets/icons/blogs/investingvsgambling.jpeg";
 export const meta = {
   title: "Investing vs Gambling – What’s the Real Difference?",
   description:
-    "See why investing and gambling are not the same—even if both involve risk.",
+    "Understand the key differences between investing and gambling. Learn how informed strategy, time, and ownership separate smart investing from risky bets.",
   slug: "investing-vs-gambling-whats-the-real-difference",
   image: "https://www.sipgo.in/assets/icons/blogs/investingvsgambling.jpeg",
   tags: ["Finance Mindset", "Investment Psychology", "Risk", "Gambling"],
@@ -18,7 +18,6 @@ const InvestingVsGambling = () => {
     <BlogLayout
       slug={meta.slug}
       {...meta} // Spread all meta properties
-      title="Investing vs. Gambling: What’s the Real Difference?"
       author="Suresh Mohan"
       role="Financial Advisor"
       date="May 26, 2025"

@@ -3,11 +3,10 @@ import Table from "../../consts/Table";
 import BlogLayout from "../../consts/BlogLayout";
 import img from "../../assets/icons/blogs/inflation2.jpeg";
 
-// In your DiversifyPortfolio.jsx or other blog pages:
 export const meta = {
-  title: "How to Beat Inflation with Smart Investing – Practical Tips",
+  title:"Beating Inflation: How Smart Investing Protects Your Money",
   description:
-    "Inflation hitting your savings? Discover 6 proven investment strategies (including Warren Buffett’s advice) to grow your wealth in 2025.",
+    "Inflation eating your savings? Discover 6 proven investment strategies (including Warren Buffett’s advice) to grow your wealth in 2025 and beat rising prices.",
   slug: "beating-inflation",
   image: "https://www.sipgo.in/assets/icons/blogs/inflation2.jpeg",
   tags: [
@@ -59,7 +58,6 @@ const BeatingInflation = () => {
     <BlogLayout
       slug={meta.slug}
       {...meta} // Spread all meta properties
-      title="Beating Inflation: How Smart Investing Protects Your Money"
       author="Rahul Das"
       role="Financial Advisor"
       date="May 26, 2025"

@@ -4,9 +4,9 @@ import BlogLayout from "../../consts/BlogLayout";
 import img from "../../assets/icons/blogs/self-employed2.jpeg";
 
 export const meta = {
-  title: "How to Invest if You are Self-Employed or a Freelancer",
+  title: "How to Invest if You're Self-Employed or a Freelancer in India",
   description:
-    "Investment strategies and tips tailored for freelancers and self-employed professionals.",
+    "Smart investment strategies tailored for self-employed professionals and freelancers in India. Learn how to manage irregular income, save on taxes, and build long-term wealth.",
   slug: "how-to-invest-if-you-are-self-employed-or-a-freelancer",
   image: "https://www.sipgo.in/assets/icons/blogs/self-employed.jpeg",
   tags: ["Self-Employed", "Freelancer", "Investing", "Financial Independence"],
@@ -143,7 +143,6 @@ const SelfEmployedOrFreelancer = () => {
     <BlogLayout
       slug={meta.slug}
       {...meta} // Spread all meta properties
-      title="How to Invest if You're Self-Employed or a Freelancer in India"
       author="Chaitanya Rao"
       role="Financial Advisor"
       date="May 26, 2025"

@@ -4,9 +4,9 @@ import BlogLayout from "../../consts/BlogLayout";
 import img from "../../assets/icons/blogs/sip-lump2.jpeg";
 
 export const meta = {
-  title: "SIP vs Lumpsum – Which Investment Option is Better?",
+  title: "SIP vs Lumpsum – Which Investment Strategy Is Better?",
   description:
-    "Compare Systematic Investment Plans and lump sum investments to make the right choice.",
+    "Compare SIP vs lumpsum investing. Learn which suits your goals, risk profile, tax impact and market view to grow wealth with expert analysis & calculators.",
   slug: "sip-vs-lumpsum",
   image: "https://www.sipgo.in/assets/icons/blogs/sip-lump2.jpeg",
   tags: ["Investment", "SIP", "Lumpsum", "Financial Planning"],
@@ -65,7 +65,6 @@ const SIPvsLumpsum = () => {
     <BlogLayout
       slug={meta.slug}
       {...meta} // Spread all meta properties
-      title="SIP vs Lumpsum: Which Investment Strategy Is Better?"
       author="Dev Pal"
       role="Financial Advisor"
       date="May 26, 2025"

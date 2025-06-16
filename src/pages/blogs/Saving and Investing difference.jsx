@@ -6,7 +6,7 @@ import img from "../../assets/icons/blogs/saving-investing.jpeg";
 export const meta = {
   title: "What is the Difference Between Saving and Investing?",
   description:
-    "Learn the key differences between saving and investing and when to choose one over the other.",
+    "Understand the key differences between saving and investing, including risk, returns, and goals. Learn when to save, when to invest, and how to build lasting wealth.",
   slug: "difference-between-saving-and-investing",
   image: "https://www.sipgo.in/assets/icons/blogs/saving-investing.jpeg",
   tags: ["Finance Basics", "Saving", "Investing", "Money Management"],
@@ -62,7 +62,6 @@ const SavingvsInvesting = () => {
     <BlogLayout
       slug={meta.slug}
       {...meta} // Spread all meta properties
-      title="What is the Difference Between Saving and Investing?"
       author="Chaitanya Rao"
       role="Financial Advisor"
       date="May 26, 2025"

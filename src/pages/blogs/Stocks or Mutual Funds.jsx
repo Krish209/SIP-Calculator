@@ -129,7 +129,6 @@ const StocksorMutualFunds = () => {
     <BlogLayout
       slug={meta.slug}
       {...meta} // Spread all meta properties
-      title="Stocks vs Mutual Funds: Which is Better for Indian Investors?"
       author="Deepak Dube"
       role="Financial Advisor"
       date="June 1, 2025"

@@ -4,9 +4,9 @@ import BlogLayout from "../../consts/BlogLayout";
 import img from "../../assets/icons/blogs/registration2.jpeg";
 
 export const meta = {
-  title: "How to Get Monthly Pension from NPS - Step-by-Step Guide",
+  title: "How to Achieve a Monthly Pension of ₹50,000 with NPS",
   description:
-    "Want ₹50,000/month pension from NPS? This step-by-step guide shows how much to invest, tax benefits, and annuity strategies for a stress-free retirement.",
+    "Discover how to get ₹50,000 monthly pension with NPS. Learn contribution strategy, returns, and planning tips for a secure, tax-efficient retirement.",
   slug: "how-to-achieve-a-monthly-pension-of-50k-with-nps",
   image: "https://www.sipgo.in/assets/icons/blogs/registration.jpeg",
   tags: [
@@ -19,7 +19,7 @@ export const meta = {
   date: "2025-05-25", // ISO format better for SEO
 };
 
-const NpsMonthlyPension = () => {
+const AchieveMonthlyPensionwithNPS = () => {
   const columns = [
     { key: "corpus", header: "NPS Corpus" },
     { key: "annual", header: "Annual Pension" },
@@ -53,7 +53,6 @@ const NpsMonthlyPension = () => {
     <BlogLayout
       slug={meta.slug}
       {...meta} // Spread all meta properties
-      title="How to Achieve a Monthly Pension of ₹50,000 with NPS"
       author="Tarun Kumar"
       role="Financial Advisor"
       date="May 26, 2025"
@@ -223,4 +222,4 @@ const NpsMonthlyPension = () => {
   );
 };
 
-export default NpsMonthlyPension;
+export default AchieveMonthlyPensionwithNPS;

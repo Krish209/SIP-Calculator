@@ -126,6 +126,7 @@ const BlogLayout = ({
 
   // ISO date format for structured data
   const dateISO = new Date(date).toISOString();
+  const modISO = new Date("2025-06-16").toISOString();
 
   // Generate excerpt from first paragraph if no description
   const excerpt = useMemo(() => {
@@ -138,9 +139,8 @@ const BlogLayout = ({
 
   return (
     <div className="bg-gray-50 text-night min-h-screen">
-      {/* Inside your BlogLayout component, add this near the top of the return statement: */}
       <Helmet>
-        <title>{title} | Sipgo</title>
+        <title>{title}</title>
 
         <meta
           name="description"
@@ -181,7 +181,7 @@ const BlogLayout = ({
               url: "https://www.sipgo.in/",
             },
             datePublished: dateISO,
-            dateModified: "2024-05-24T00:00:00Z",
+            dateModified: modISO,
             image: image,
             publisher: {
               "@type": "Organization",
@@ -284,7 +284,7 @@ const BlogLayout = ({
           <div className="flex sm:flex-row flex-col space-y-4 sm:space-y-0 justify-between text-sm text-gray-500">
             <div className="flex items-center space-x-4">
               <div className="h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center">
-                <span className="text-indigo-800 font-semibold">
+                <span className="text-indigo-800 font-semibold tracking-wider text-lg">
                   {author
                     .split(" ")
                     .map((namePart) => namePart[0])

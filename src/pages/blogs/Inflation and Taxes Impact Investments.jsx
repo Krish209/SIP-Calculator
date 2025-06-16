@@ -4,9 +4,9 @@ import BlogLayout from "../../consts/BlogLayout";
 import img from "../../assets/icons/blogs/tax-inflation.jpeg";
 
 export const meta = {
-  title: "How Do Inflation and Taxes Impact Investments?",
+  title: "How Inflation and Taxes Impact Your Investments: A Complete Guide for Indian Investors",
   description:
-    "Learn how inflation and taxes can affect your investment returns and what you can do about it.",
+    "Understand how inflation and taxes reduce your investment returns in India. Learn strategies to protect and grow your wealth with tax-efficient, inflation-beating options.",
   slug: "how-do-inflation-and-taxes-impact-investments",
   image: "https://www.sipgo.in/assets/icons/blogs/tax-inflation.jpeg",
   tags: ["Tax & Inflation", "Returns", "Investment Planning", "Finance"],
@@ -119,8 +119,6 @@ const InflationandTaxesImpact = () => {
     <BlogLayout
       slug={meta.slug}
       {...meta} // Spread all meta properties
-      title="How Inflation and Taxes Impact Your Investments: A Complete Guide for
-          Indian Investors"
       author="Ankit Nayak"
       role="Financial Advisor"
       date="May 26, 2025"

@@ -4,7 +4,7 @@ import BlogLayout from "../../consts/BlogLayout";
 import img from "../../assets/icons/blogs/stocketf.jpeg";
 
 export const meta = {
-  title: "What are Stocks, ETFs, Mutual Funds, and Bonds? Explained Simply",
+  title: "What are Stocks, ETFs, Mutual Funds, and Bonds? | A Beginner’s Guide to Investing in India",
   description:
     "Discover the fundamentals of investing in India with our beginner’s guide to stocks, ETFs, mutual funds, and bonds. Learn how each investment type works and how to choose the right one for your financial goals.",
   slug: "what-are-stocks-etfs-mutual-funds-and-bonds",
@@ -79,8 +79,6 @@ const StockEtfMfBond = () => {
     <BlogLayout
       slug={meta.slug}
       {...meta} // Spread all meta properties
-      title="What Are Stocks, ETFs, Mutual Funds, and Bonds? | A Beginner’s Guide
-          to Investing in India"
       author="Gaurav Singh"
       role="Financial Advisor"
       date="May 26, 2025"
