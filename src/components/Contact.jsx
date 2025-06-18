@@ -120,6 +120,7 @@ const Contact = () => {
             {["name", "email"].map((field) => (
               <div key={field} className="relative">
                 <input
+                  id={field}
                   type={field === "email" ? "email" : "text"}
                   name={field}
                   required
@@ -138,6 +139,7 @@ const Contact = () => {
             ))}
             <div className="relative">
               <textarea
+                id="message"
                 name="message"
                 rows="4"
                 required

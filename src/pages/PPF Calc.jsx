@@ -206,16 +206,7 @@ function PPF() {
                 "name": "SIPGo Financial Calculators",
                 "url": "https://www.sipgo.in"
               },
-              "hasPart": [
-                {
-                  "@type": "FAQPage",
-                  "@id": "https://www.sipgo.in/ppf-calculator#faq"
-                },
-                {
-                  "@type": "Article",
-                  "@id": "https://www.sipgo.in/ppf-calculator#guide"
-                }
-              ]
+              "dateModified": "2025-06-15T00:00:00Z"
             },
 
             // SoftwareApplication Schema
