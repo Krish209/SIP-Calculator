@@ -170,9 +170,9 @@ function CompoundInterest() {
             // Primary WebPage Schema
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: "Compound Interest Calculator",
-            description: "Estimate your investment growth using our Compound Interest Calculator by providing principal, rate, time, and compounding frequency.",
-           "url": canonicalUrl,
+            name: pageTitle,
+            description: pageDescription,
+            "url": canonicalUrl,
             "@id": canonicalUrl,
             "isPartOf": {
                 "@type": "WebSite",

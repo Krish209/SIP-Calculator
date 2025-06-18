@@ -137,37 +137,42 @@ function SSY() {
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
       <Helmet>
-        <title>SSY Calculator - Calculate Sukanya Samriddhi Yojana Returns</title>
-        <meta name="description" content="Estimate your SSY returns with varying interest rates and tenures using our SSY Calculator." />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <meta name="keywords" content="SSY Calculator, Sukanya Samriddhi Yojana, SSY Interest, SSY Maturity Value" />
-        <link rel="canonical" href="https://www.sipgo.in/ssy-calculator" />
+        <link rel="canonical" href={canonicalUrl} />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.sipgo.in/ssy-calculator" />
-        <meta property="og:title" content="SSY Calculator - Calculate Sukanya Samriddhi Yojana Returns" />
-        <meta property="og:description" content="Estimate your SSY returns with varying interest rates and tenures using our SSY Calculator." />
-        <meta property="og:image" content="https://www.sipgo.in/images/ssy-calculator-og.jpg" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:image" content="https://www.sipgo.in/images/logo.png" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="SSY Calculator - Calculate Sukanya Samriddhi Yojana Returns" />
-        <meta name="twitter:description" content="Estimate your SSY returns with varying interest rates and tenures using our SSY Calculator." />
-        <meta name="twitter:image" content="https://www.sipgo.in/images/ssy-calculator-twitter.jpg" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content="https://www.sipgo.in/images/logo.png" />
+        
 
-        {/* Schema Markup */}
+        {/* ========== CRITICAL SCHEMA MARKUP ========== */}
+
         <script type="application/ld+json">
           {JSON.stringify({
+            // Primary WebPage Schema
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: "SSY Calculator",
-            description: "Estimate your SSY returns with varying interest rates and tenures using our SSY Calculator.",
-            url: "https://www.sipgo.in/ssy-calculator",
-            "@id": "https://www.sipgo.in/ssy-calculator",
-            "hasPart": [
-              { "@type": "FAQPage", "@id": "https://www.sipgo.in/ssy-calculator#faq" },
-              { "@type": "Article", "@id": "https://www.sipgo.in/ssy-calculator#guide" }
-            ],
+            name: pageTitle,
+            description: pageDescription,
+            "url": canonicalUrl,
+            "@id": canonicalUrl,
+            "isPartOf": {
+              "@type": "WebSite",
+              "name": "SIPGo Financial Calculators",
+              "url": "https://www.sipgo.in"
+            },
+            "dateModified": "2025-06-15T00:00:00Z"
           })}
         </script>
 

@@ -216,40 +216,32 @@ function LumpsumCalc() {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
-        <meta
-          property="og:image"
-          content="https://www.sipgo.in/images/lumpsum-calculator-og.jpg"
-        />
+        <meta property="og:image" content="https://www.sipgo.in/images/logo.png" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
-        <meta
-          name="twitter:image"
-          content="https://www.sipgo.in/images/lumpsum-calculator-twitter.jpg"
-        />
+        <meta name="twitter:image" content="https://www.sipgo.in/images/logo.png" />
+        
 
-        {/* Schema Markup */}
+        {/* ========== CRITICAL SCHEMA MARKUP ========== */}
+
         <script type="application/ld+json">
           {JSON.stringify({
+            // Primary WebPage Schema
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: "Lumpsum Calculator",
-            description:
-              "Use our lumpsum calculator to estimate your investment returns on lump sum investments. Accurate and fast calculations for your financial planning.",
-            url: "https://www.sipgo.in/lumpsum-calculator",
-            "@id": "https://www.sipgo.in/lumpsum-calculator",
-            hasPart: [
-              {
-                "@type": "FAQPage",
-                "@id": "https://www.sipgo.in/lumpsum-calculator#faq",
-              },
-              {
-                "@type": "Article",
-                "@id": "https://www.sipgo.in/lumpsum-calculator#guide",
-              },
-            ],
+            name: pageTitle,
+            description: pageDescription,
+            "url": canonicalUrl,
+            "@id": canonicalUrl,
+            "isPartOf": {
+              "@type": "WebSite",
+              "name": "SIPGo Financial Calculators",
+              "url": "https://www.sipgo.in"
+            },
+            "dateModified": "2025-06-15T00:00:00Z"
           })}
         </script>
 

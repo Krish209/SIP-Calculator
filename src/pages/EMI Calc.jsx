@@ -187,27 +187,32 @@ function EMI() {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content="https://www.sipgo.in/images/emi-calculator-og.jpg" />
+        <meta property="og:image" content="https://www.sipgo.in/images/logo.png" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="EMI Calculator - Calculate Your Loan EMI Easily" />
-        <meta name="twitter:description" content="Calculate your loan EMI for home, car, personal or education loans using our easy-to-use EMI Calculator." />
-        <meta name="twitter:image" content="https://www.sipgo.in/images/emi-calculator-twitter.jpg" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content="https://www.sipgo.in/images/logo.png" />
+        
 
-        {/* Schema Markup */}
+        {/* ========== CRITICAL SCHEMA MARKUP ========== */}
+
         <script type="application/ld+json">
           {JSON.stringify({
+            // Primary WebPage Schema
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: "EMI Calculator",
-            description: "Calculate your loan EMI for home, car, personal or education loans using our easy-to-use EMI Calculator.",
-            url: "https://www.sipgo.in/emi-calculator",
-            "@id": "https://www.sipgo.in/emi-calculator",
-            "hasPart": [
-              { "@type": "FAQPage", "@id": "https://www.sipgo.in/emi-calculator#faq" },
-              { "@type": "Article", "@id": "https://www.sipgo.in/emi-calculator#guide" }
-            ],
+            name: pageTitle,
+            description: pageDescription,
+            "url": canonicalUrl,
+            "@id": canonicalUrl,
+            "isPartOf": {
+              "@type": "WebSite",
+              "name": "SIPGo Financial Calculators",
+              "url": "https://www.sipgo.in"
+            },
+            "dateModified": "2025-06-15T00:00:00Z"
           })}
         </script>
 

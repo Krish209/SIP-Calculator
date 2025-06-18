@@ -166,37 +166,42 @@ function NPSCalculator() {
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
       <Helmet>
-        <title>NPS Calculator - Calculate National Pension Scheme Returns</title>
-        <meta name="description" content="Estimate your pension corpus and returns with our NPS Calculator based on your contributions and tenure." />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <meta name="keywords" content="NPS Calculator, National Pension Scheme, Pension Calculator, NPS Returns" />
-        <link rel="canonical" href="https://www.sipgo.in/nps-calculator" />
+        <link rel="canonical" href={canonicalUrl} />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.sipgo.in/nps-calculator" />
-        <meta property="og:title" content="NPS Calculator - Calculate National Pension Scheme Returns" />
-        <meta property="og:description" content="Estimate your pension corpus and returns with our NPS Calculator based on your contributions and tenure." />
-        <meta property="og:image" content="https://www.sipgo.in/images/nps-calculator-og.jpg" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:image" content="https://www.sipgo.in/images/logo.png" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="NPS Calculator - Calculate National Pension Scheme Returns" />
-        <meta name="twitter:description" content="Estimate your pension corpus and returns with our NPS Calculator based on your contributions and tenure." />
-        <meta name="twitter:image" content="https://www.sipgo.in/images/nps-calculator-twitter.jpg" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content="https://www.sipgo.in/images/logo.png" />
+        
 
-        {/* Schema Markup */}
+        {/* ========== CRITICAL SCHEMA MARKUP ========== */}
+
         <script type="application/ld+json">
           {JSON.stringify({
+            // Primary WebPage Schema
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: "NPS Calculator",
-            description: "Estimate your pension corpus and returns with our NPS Calculator based on your contributions and tenure.",
-            url: "https://www.sipgo.in/nps-calculator",
-            "@id": "https://www.sipgo.in/nps-calculator",
-            "hasPart": [
-              { "@type": "FAQPage", "@id": "https://www.sipgo.in/nps-calculator#faq" },
-              { "@type": "Article", "@id": "https://www.sipgo.in/nps-calculator#guide" }
-            ],
+            name: pageTitle,
+            description: pageDescription,
+            "url": canonicalUrl,
+            "@id": canonicalUrl,
+            "isPartOf": {
+              "@type": "WebSite",
+              "name": "SIPGo Financial Calculators",
+              "url": "https://www.sipgo.in"
+            },
+            "dateModified": "2025-06-15T00:00:00Z"
           })}
         </script>
 

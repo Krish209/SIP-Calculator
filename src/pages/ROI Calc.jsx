@@ -135,14 +135,14 @@ function ROICalculator() {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content="https://www.sipgo.in/images/roi-calculator-og.jpg" />
+        <meta property="og:image" content="https://www.sipgo.in/images/logo.png" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
-        <meta name="twitter:image" content="https://www.sipgo.in/images/roi-calculator-twitter.jpg" />
-
+        <meta name="twitter:image" content="https://www.sipgo.in/images/logo.png" />
+        
 
         {/* ========== CRITICAL SCHEMA MARKUP ========== */}
 
