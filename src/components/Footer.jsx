@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../assets/icons/logo.png";
+import logo from "../assets/icons/logo.webp";
 import {
   FaInstagram,
   FaYoutube,

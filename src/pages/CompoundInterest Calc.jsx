@@ -144,37 +144,42 @@ function CompoundInterest() {
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
       <Helmet>
-        <title>Compound Interest Calculator - Calculate Compound Interest Returns</title>
-        <meta name="description" content="Estimate your investment growth using our Compound Interest Calculator by providing principal, rate, time, and compounding frequency." />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <meta name="keywords" content="Compound Interest Calculator, Investment Calculator, Compound Interest Returns" />
-        <link rel="canonical" href="https://www.sipgo.in/compound-interest-calculator" />
+        <link rel="canonical" href={canonicalUrl} />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.sipgo.in/compound-interest-calculator" />
-        <meta property="og:title" content="Compound Interest Calculator - Calculate Compound Interest Returns" />
-        <meta property="og:description" content="Estimate your investment growth using our Compound Interest Calculator by providing principal, rate, time, and compounding frequency." />
-        <meta property="og:image" content="https://www.sipgo.in/images/compound-interest-calculator-og.jpg" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:image" content="https://www.sipgo.in/images/logo.png" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Compound Interest Calculator - Calculate Compound Interest Returns" />
-        <meta name="twitter:description" content="Estimate your investment growth using our Compound Interest Calculator by providing principal, rate, time, and compounding frequency." />
-        <meta name="twitter:image" content="https://www.sipgo.in/images/compound-interest-calculator-twitter.jpg" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content="https://www.sipgo.in/images/logo.png" />
+        
 
-        {/* Schema Markup */}
+        {/* ========== CRITICAL SCHEMA MARKUP ========== */}
+        
         <script type="application/ld+json">
           {JSON.stringify({
+            // Primary WebPage Schema
             "@context": "https://schema.org",
             "@type": "WebPage",
             name: "Compound Interest Calculator",
             description: "Estimate your investment growth using our Compound Interest Calculator by providing principal, rate, time, and compounding frequency.",
-            url: "https://www.sipgo.in/compound-interest-calculator",
-            "@id": "https://www.sipgo.in/compound-interest-calculator",
-            "hasPart": [
-              { "@type": "FAQPage", "@id": "https://www.sipgo.in/compound-interest-calculator#faq" },
-              { "@type": "Article", "@id": "https://www.sipgo.in/compound-interest-calculator#guide" }
-            ],
+           "url": canonicalUrl,
+            "@id": canonicalUrl,
+            "isPartOf": {
+                "@type": "WebSite",
+                "name": "SIPGo Financial Calculators",
+                "url": "https://www.sipgo.in"
+              },
+              "dateModified": "2025-06-15T00:00:00Z"
           })}
         </script>
 

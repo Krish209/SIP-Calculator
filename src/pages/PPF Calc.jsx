@@ -181,24 +181,25 @@ function PPF() {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content="https://www.sipgo.in/images/ppf-calculator-og.jpg" />
+        <meta property="og:image" content="https://www.sipgo.in/images/logo.png" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
-        <meta name="twitter:image" content="https://www.sipgo.in/images/ppf-calculator-twitter.jpg" />
+        <meta name="twitter:image" content="https://www.sipgo.in/images/logo.png" />
+        
         
         {/* ========== CRITICAL SCHEMA MARKUP ========== */}
+
         <script type="application/ld+json">
           {JSON.stringify([
             // Primary WebPage Schema
             {
               "@context": "https://schema.org",
               "@type": "WebPage",
-              "name": "PPF Calculator",
-              "description":
-                "Calculate your Public Provident Fund returns and maturity amount with our easy-to-use PPF Calculator.",
+              name: pageTitle,
+              description: pageDescription,
               "url": canonicalUrl,
               "@id": canonicalUrl,
               "isPartOf": {

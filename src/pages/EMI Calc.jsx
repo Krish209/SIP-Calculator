@@ -177,16 +177,16 @@ function EMI() {
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
       <Helmet>
-        <title>EMI Calculator - Calculate Your Loan EMI Easily</title>
-        <meta name="description" content="Calculate your loan EMI for home, car, personal or education loans using our easy-to-use EMI Calculator." />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <meta name="keywords" content="EMI Calculator, Loan EMI, Home Loan EMI, Car Loan EMI, Personal Loan EMI" />
-        <link rel="canonical" href="https://www.sipgo.in/emi-calculator" />
+        <link rel="canonical" href={canonicalUrl} />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.sipgo.in/emi-calculator" />
-        <meta property="og:title" content="EMI Calculator - Calculate Your Loan EMI Easily" />
-        <meta property="og:description" content="Calculate your loan EMI for home, car, personal or education loans using our easy-to-use EMI Calculator." />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
         <meta property="og:image" content="https://www.sipgo.in/images/emi-calculator-og.jpg" />
 
         {/* Twitter */}
