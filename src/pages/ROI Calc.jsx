@@ -125,20 +125,22 @@ function ROICalculator() {
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
       <Helmet>
-        <title>ROI Calculator - Return on Investment Calculator</title>
-        <meta name="description" content="Calculate the return on investment (ROI) for your portfolio using our ROI calculator. Ideal for stock, mutual fund, and real estate tracking." />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <meta name="keywords" content="ROI Calculator, Return on Investment, Investment Returns, Portfolio ROI, Financial Calculator" />
-        <link rel="canonical" href="https://www.sipgo.in/roi-calculator" />
+        <link rel="canonical" href={canonicalUrl} />
 
+        {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.sipgo.in/roi-calculator" />
-        <meta property="og:title" content="ROI Calculator - Return on Investment Calculator" />
-        <meta property="og:description" content="Calculate the return on investment (ROI) for your portfolio using our ROI calculator. Ideal for stock, mutual fund, and real estate tracking." />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
         <meta property="og:image" content="https://www.sipgo.in/images/roi-calculator-og.jpg" />
 
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="ROI Calculator - Return on Investment Calculator" />
-        <meta name="twitter:description" content="Calculate the return on investment (ROI) for your portfolio using our ROI calculator. Ideal for stock, mutual fund, and real estate tracking." />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content="https://www.sipgo.in/images/roi-calculator-twitter.jpg" />
 
         {/* ========== CRITICAL SCHEMA MARKUP ========== */}
@@ -149,15 +151,18 @@ function ROICalculator() {
             "@type": "WebPage",
             name: "ROI Calculator",
             description: "Calculate the return on investment (ROI) for your portfolio using our ROI calculator. Ideal for stock, mutual fund, and real estate tracking.",
-            url: "https://www.sipgo.in/roi-calculator",
-            "@id": "https://www.sipgo.in/roi-calculator",
-            hasPart: [
-              { "@type": "FAQPage", "@id": "https://www.sipgo.in/roi-calculator#faq" },
-              { "@type": "Article", "@id": "https://www.sipgo.in/roi-calculator#guide" }
-            ]
+            "url": canonicalUrl,
+            "@id": canonicalUrl,
+            "isPartOf": {
+              "@type": "WebSite",
+              "name": "SIPGo Financial Calculators",
+              "url": "https://www.sipgo.in"
+            },
+            "dateModified": "2025-06-15T00:00:00Z"
           })}
         </script>
 
+        {/* Breadcrumb Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

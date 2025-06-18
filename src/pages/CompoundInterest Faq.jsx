@@ -64,6 +64,10 @@ const CompoundInterestFAQ = () => {
               "@type": "Answer",
               "text": q.answer,
               "dateCreated": "2025-04-01",
+              "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": ".faq-answer"
+              }
             },
           })),
         })}

@@ -75,6 +75,10 @@ const InflationFAQ = () => {
               "@type": "Answer",
               "text": q.answer,
               "dateCreated": "2025-04-01",
+              "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": ".faq-answer"
+              }
             },
           })),
         })}
@@ -104,7 +108,7 @@ const InflationFAQ = () => {
               </span>
             </div>
             {activeIndex === index && (
-              <div className="text-[14px] md:text-[15px] px-2 py-1 md:py-3">
+              <div className="faq-answer text-[14px] md:text-[15px] px-2 py-1 md:py-3">
                 {item.answer.split("\n").map((line, i) => (
                   <React.Fragment key={i}>
                     {line}
