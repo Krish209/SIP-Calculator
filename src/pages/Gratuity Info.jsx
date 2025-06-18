@@ -15,7 +15,7 @@ function GratuityInfo() {
           "@id": "https://www.sipgo.in/gratuity-calculator#guide",
           "headline": "Gratuity Calculator – Estimate Employee Gratuity Payout",
           "description": "Use our Gratuity Calculator to determine your gratuity based on years of service and last drawn salary.",
-          "image": "https://www.sipgo.in/images/logo",
+          "image": "https://www.sipgo.in/images/logo.png",
           "author": {
             "@type": "Organization",
             "name": "SIPGo",
@@ -28,7 +28,7 @@ function GratuityInfo() {
             "name": "SIPGo",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/logo.png"
+              "url": "https://www.sipgo.in/images/logo.png"
             }
           },
           "mainEntityOfPage": {

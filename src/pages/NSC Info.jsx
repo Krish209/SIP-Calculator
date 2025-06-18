@@ -15,7 +15,7 @@ const NSCInfo = () => {
           "@id": "https://www.sipgo.in/nsc-calculator#guide",
           "headline": "NSC Calculator – National Savings Certificate Returns",
           "description": "Easily compute the maturity value and interest on your NSC investments and plan better with this NSC calculator.",
-          "image": "https://www.sipgo.in/images/logo",
+          "image": "https://www.sipgo.in/images/logo.png",
           "author": {
             "@type": "Organization",
             "name": "SIPGo",
@@ -28,7 +28,7 @@ const NSCInfo = () => {
             "name": "SIPGo",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/logo.png"
+              "url": "https://www.sipgo.in/images/logo.png"
             }
           },
           "mainEntityOfPage": {

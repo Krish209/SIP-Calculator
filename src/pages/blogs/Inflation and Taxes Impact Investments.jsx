@@ -8,7 +8,7 @@ export const meta = {
   description:
     "Understand how inflation and taxes reduce your investment returns in India. Learn strategies to protect and grow your wealth with tax-efficient, inflation-beating options.",
   slug: "how-do-inflation-and-taxes-impact-investments",
-  image: "https://www.sipgo.in/assets/icons/blogs/tax-inflation.jpeg",
+  image: "https://www.sipgo.in/images/blogs/tax-inflation.jpeg",
   tags: ["Tax & Inflation", "Returns", "Investment Planning", "Finance"],
   date: "2025-05-29", // ISO format better for SEO
 };

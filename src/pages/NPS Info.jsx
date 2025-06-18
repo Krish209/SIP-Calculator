@@ -15,7 +15,7 @@ const NPSInfo = () => {
           "@id": "https://www.sipgo.in/nps-calculator#guide",
           "headline": "NPS Calculator – National Pension Scheme Returns Estimator",
           "description": "Estimate your retirement corpus, monthly pension, and tax savings with our NPS Calculator based on your investment strategy.",
-          "image": "https://www.sipgo.in/images/logo",
+          "image": "https://www.sipgo.in/images/logo.png",
           "author": {
             "@type": "Organization",
             "name": "SIPGo",
@@ -28,7 +28,7 @@ const NPSInfo = () => {
             "name": "SIPGo",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/logo.png"
+              "url": "https://www.sipgo.in/images/logo.png"
             }
           },
           "mainEntityOfPage": {

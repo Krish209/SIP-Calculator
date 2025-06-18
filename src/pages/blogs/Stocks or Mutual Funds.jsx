@@ -8,7 +8,7 @@ export const meta = {
   description:
     "Compare stocks and mutual funds to understand which suits your investment goals better in the Indian market.",
   slug: "stocks-vs-mutual-funds",
-  image: "https://www.sipgo.in/assets/icons/blogs/stock-mutualfund.jpeg",
+  image: "https://www.sipgo.in/images/blogs/stock-mutualfund.jpeg",
   tags: ["Investment", "Stocks", "Mutual Funds", "Comparison"],
   date: "2025-06-01", // ISO format better for SEO
 };

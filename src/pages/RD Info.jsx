@@ -15,7 +15,7 @@ const RDInfo = () => {
           "@id": "https://www.sipgo.in/rd-calculator#guide",
           "headline": "RD Calculator – Recurring Deposit Interest and Maturity Calculator",
           "description": "Estimate your monthly savings growth using the RD Calculator. Calculate returns and total maturity from recurring deposits.",
-          "image": "https://www.sipgo.in/images/logo",
+          "image": "https://www.sipgo.in/images/logo.png",
           "author": {
             "@type": "Organization",
             "name": "SIPGo",
@@ -28,7 +28,7 @@ const RDInfo = () => {
             "name": "SIPGo",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/logo.png"
+              "url": "https://www.sipgo.in/images/logo.png"
             }
           },
           "mainEntityOfPage": {

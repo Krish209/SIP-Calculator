@@ -55,7 +55,7 @@ const StepUpSIPInfo = () => {
           "@id": "https://www.sipgo.in/step-up-sip-calculator#guide",
           "headline": "Step-Up SIP Calculator – Calculate Increasing Investment Returns",
           "description": "Evaluate your returns by increasing your SIP annually. Plan more effectively with our Step-Up SIP Calculator.",
-          "image": "https://www.sipgo.in/images/logo",
+          "image": "https://www.sipgo.in/images/logo.png",
           "author": {
             "@type": "Organization",
             "name": "SIPGo",
@@ -68,7 +68,7 @@ const StepUpSIPInfo = () => {
             "name": "SIPGo",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/logo.png"
+              "url": "https://www.sipgo.in/images/logo.png"
             }
           },
           "mainEntityOfPage": {

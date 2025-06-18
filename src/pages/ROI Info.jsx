@@ -15,7 +15,7 @@ const ROIInfo = () => {
           "@id": "https://www.sipgo.in/roi-calculator#guide",
           "headline": "ROI Calculator – Calculate Return on Investment",
           "description": "Evaluate the profitability of your investments by calculating ROI using our easy and accurate calculator.",
-          "image": "https://www.sipgo.in/images/logo",
+          "image": "https://www.sipgo.in/images/logo.png",
           "author": {
             "@type": "Organization",
             "name": "SIPGo",
@@ -28,7 +28,7 @@ const ROIInfo = () => {
             "name": "SIPGo",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/logo.png"
+              "url": "https://www.sipgo.in/images/logo.png"
             }
           },
           "mainEntityOfPage": {

@@ -15,7 +15,7 @@ const FdInfo = () => {
           "@id": "https://www.sipgo.in/fd-calculator#guide",
           "headline": "FD Calculator – Fixed Deposit Maturity and Interest Estimator",
           "description": "Calculate your fixed deposit interest and maturity amount based on deposit amount, tenure, and interest rate with SIPGo's FD Calculator.",
-          "image": "https://www.sipgo.in/images/logo",
+          "image": "https://www.sipgo.in/images/logo.png",
           "author": {
             "@type": "Organization",
             "name": "SIPGo",
@@ -28,7 +28,7 @@ const FdInfo = () => {
             "name": "SIPGo",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/logo.png"
+              "url": "https://www.sipgo.in/images/logo.png"
             }
           },
           "mainEntityOfPage": {

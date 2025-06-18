@@ -8,7 +8,7 @@ export const meta = {
   description:
     "Discover how to build passive income in India with stocks, mutual funds, real estate & more. Learn investment strategies for financial freedom & early retirement.",
   slug: "how-to-create-passive-income-with-investments",
-  image: "https://www.sipgo.in/assets/icons/blogs/tree1.jpeg",
+  image: "https://www.sipgo.in/images/blogs/tree1.jpeg",
   tags: [
     "Passive Income",
     "Financial Freedom",

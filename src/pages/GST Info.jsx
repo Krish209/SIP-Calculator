@@ -15,7 +15,7 @@ const GSTInfo = () => {
           "@id": "https://www.sipgo.in/gst-calculator#guide",
           "headline": "GST Calculator – Quick Tax Estimator for Goods and Services",
           "description": "Easily calculate GST amount on sales or purchases with our comprehensive GST Calculator for various rates.",
-          "image": "https://www.sipgo.in/images/logo",
+          "image": "https://www.sipgo.in/images/logo.png",
           "author": {
             "@type": "Organization",
             "name": "SIPGo",
@@ -28,7 +28,7 @@ const GSTInfo = () => {
             "name": "SIPGo",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/logo.png"
+              "url": "https://www.sipgo.in/images/logo.png"
             }
           },
           "mainEntityOfPage": {

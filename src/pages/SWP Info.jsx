@@ -46,7 +46,7 @@ const SWPInfo = () => {
           "@id": "https://www.sipgo.in/swp-calculator#guide",
           "headline": "SWP Calculator – Systematic Withdrawal Planning Tool",
           "description": "Plan regular withdrawals from your investments with the SWP Calculator. Estimate monthly payout and balance.",
-          "image": "https://www.sipgo.in/images/logo",
+          "image": "https://www.sipgo.in/images/logo.png",
           "author": {
             "@type": "Organization",
             "name": "SIPGo",
@@ -59,7 +59,7 @@ const SWPInfo = () => {
             "name": "SIPGo",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/logo.png"
+              "url": "https://www.sipgo.in/images/logo.png"
             }
           },
           "mainEntityOfPage": {

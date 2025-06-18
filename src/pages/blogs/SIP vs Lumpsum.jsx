@@ -8,7 +8,7 @@ export const meta = {
   description:
     "Compare SIP vs lumpsum investing. Learn which suits your goals, risk profile, tax impact and market view to grow wealth with expert analysis & calculators.",
   slug: "sip-vs-lumpsum",
-  image: "https://www.sipgo.in/assets/icons/blogs/sip-lump2.jpeg",
+  image: "https://www.sipgo.in/images/blogs/sip-lump2.jpeg",
   tags: ["Investment", "SIP", "Lumpsum", "Financial Planning"],
   date: "2025-05-25", // ISO format better for SEO
 };

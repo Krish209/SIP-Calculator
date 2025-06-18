@@ -9,7 +9,7 @@ export const meta = {
   description:
     "Learn how to diversify your investment portfolio in India with the right mix of equities, debt, gold, and real estate. Reduce risk and maximize returns with smart asset allocation strategies.",
   slug: "how-to-diversify-your-investment-portfolio",
-  image: "https://www.sipgo.in/assets/icons/blogs/diversify.jpeg",
+  image: "https://www.sipgo.in/images/blogs/diversify.jpeg",
   tags: [
     "Investing",
     "Portfolio Diversification",

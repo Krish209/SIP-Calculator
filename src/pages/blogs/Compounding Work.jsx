@@ -9,7 +9,7 @@ export const meta = {
   description:
     "Unlock the power of compounding: Learn how reinvesting returns turns small SIPs into crores over time. Discover tips, examples, and calculate growth with free tools & beat inflation!",
   slug: "how-does-compounding-work",
-  image: "https://www.sipgo.in/assets/icons/blogs/compounding.jpeg",
+  image: "https://www.sipgo.in/images/blogs/compounding.jpeg",
   tags: ["Compounding", "Long-term Investing", "Growth", "Financial Education"],
   date: "2025-05-29", // ISO format better for SEO
 };

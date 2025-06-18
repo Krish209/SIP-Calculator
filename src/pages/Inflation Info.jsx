@@ -15,7 +15,7 @@ const InflationInfo = () => {
           "@id": "https://www.sipgo.in/inflation-calculator#guide",
           "headline": "Inflation Calculator – Understand the Real Value of Money",
           "description": "Calculate the impact of inflation on your money over time to make better financial decisions.",
-          "image": "https://www.sipgo.in/images/logo",
+          "image": "https://www.sipgo.in/images/logo.png",
           "author": {
             "@type": "Organization",
             "name": "SIPGo",
@@ -28,7 +28,7 @@ const InflationInfo = () => {
             "name": "SIPGo",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/logo.png"
+              "url": "https://www.sipgo.in/images/logo.png"
             }
           },
           "mainEntityOfPage": {

@@ -8,7 +8,7 @@ export const meta = {
   description:
     "Understand the key differences between saving and investing, including risk, returns, and goals. Learn when to save, when to invest, and how to build lasting wealth.",
   slug: "difference-between-saving-and-investing",
-  image: "https://www.sipgo.in/assets/icons/blogs/saving-investing.jpeg",
+  image: "https://www.sipgo.in/images/blogs/saving-investing.jpeg",
   tags: ["Finance Basics", "Saving", "Investing", "Money Management"],
   date: "2025-06-01", // ISO format better for SEO
 };

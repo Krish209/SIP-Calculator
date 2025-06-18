@@ -8,7 +8,7 @@ export const meta = {
   description:
     "Discover how to get ₹50,000 monthly pension with NPS. Learn contribution strategy, returns, and planning tips for a secure, tax-efficient retirement.",
   slug: "how-to-achieve-a-monthly-pension-of-50k-with-nps",
-  image: "https://www.sipgo.in/assets/icons/blogs/registration.jpeg",
+  image: "https://www.sipgo.in/images/blogs/registration2.jpeg",
   tags: [
     "Retirement Planning 2025",
     "NPS",

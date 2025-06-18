@@ -50,7 +50,7 @@ const LumpsumInfo = () => {
           "@id": "https://www.sipgo.in/lumpsum-calculator#guide",
           "headline": "Lumpsum Calculator – One-Time Investment Growth Estimator",
           "description": "Calculate the future value of your one-time mutual fund investment using our Lumpsum Calculator.",
-          "image": "https://www.sipgo.in/images/logo",
+          "image": "https://www.sipgo.in/images/logo.png",
           "author": {
             "@type": "Organization",
             "name": "SIPGo",
@@ -63,7 +63,7 @@ const LumpsumInfo = () => {
             "name": "SIPGo",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/logo.png"
+              "url": "https://www.sipgo.in/images/logo.png"
             }
           },
           "mainEntityOfPage": {

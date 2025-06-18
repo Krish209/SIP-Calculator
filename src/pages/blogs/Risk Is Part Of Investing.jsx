@@ -8,7 +8,7 @@ export const meta = {
   description:
     "Learn why risk is essential to investing and how to manage it smartly. Discover strategies like SIPs, smart asset allocation, and diversification for better returns.",
   slug: "why-risk-is-part-of-investing",
-  image: "https://www.sipgo.in/assets/icons/blogs/riskvsreward3.png",
+  image: "https://www.sipgo.in/images/blogs/riskvsreward3.png",
   tags: [
     "Finance Basics",
     "Risk Management",

@@ -8,7 +8,7 @@ export const meta = {
   description:
     "Discover the fundamentals of investing in India with our beginner’s guide to stocks, ETFs, mutual funds, and bonds. Learn how each investment type works and how to choose the right one for your financial goals.",
   slug: "what-are-stocks-etfs-mutual-funds-and-bonds",
-  image: "https://www.sipgo.in/assets/icons/blogs/stocketf.jpeg",
+  image: "https://www.sipgo.in/images/blogs/stocketf.jpeg",
   tags: ["Education", "Stocks", "ETFs", "Mutual Funds", "Bonds"],
   date: "2025-05-28", // ISO format better for SEO
 };

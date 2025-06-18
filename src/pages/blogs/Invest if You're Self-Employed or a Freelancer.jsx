@@ -8,7 +8,7 @@ export const meta = {
   description:
     "Smart investment strategies tailored for self-employed professionals and freelancers in India. Learn how to manage irregular income, save on taxes, and build long-term wealth.",
   slug: "how-to-invest-if-you-are-self-employed-or-a-freelancer",
-  image: "https://www.sipgo.in/assets/icons/blogs/self-employed.jpeg",
+  image: "https://www.sipgo.in/images/blogs/self-employed.jpeg",
   tags: ["Self-Employed", "Freelancer", "Investing", "Financial Independence"],
   date: "2025-05-29", // ISO format better for SEO
 };

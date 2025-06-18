@@ -15,7 +15,7 @@ function SSYInfo() {
           "@id": "https://www.sipgo.in/ssy-calculator#guide",
           "headline": "SSY Calculator – Sukanya Samriddhi Yojana Growth Planner",
           "description": "Plan your daughter's future with the SSY Calculator. Calculate interest and maturity value for Sukanya Samriddhi Yojana.",
-          "image": "https://www.sipgo.in/images/logo",
+          "image": "https://www.sipgo.in/images/logo.png",
           "author": {
             "@type": "Organization",
             "name": "SIPGo",
@@ -28,7 +28,7 @@ function SSYInfo() {
             "name": "SIPGo",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/logo.png"
+              "url": "https://www.sipgo.in/images/logo.png"
             }
           },
           "mainEntityOfPage": {

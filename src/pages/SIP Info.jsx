@@ -46,7 +46,7 @@ const SIPInfo = () => {
           "@id": "https://www.sipgo.in/sip-calculator#guide",
           "headline": "SIP Calculator – Plan Systematic Investment Returns",
           "description": "Project your wealth growth through regular SIPs. Calculate returns and investment maturity with our SIP Calculator.",
-          "image": "https://www.sipgo.in/images/logo",
+          "image": "https://www.sipgo.in/images/logo.png",
           "author": {
             "@type": "Organization",
             "name": "SIPGo",
@@ -59,7 +59,7 @@ const SIPInfo = () => {
             "name": "SIPGo",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/logo.png"
+              "url": "https://www.sipgo.in/images/logo.png"
             }
           },
           "mainEntityOfPage": {

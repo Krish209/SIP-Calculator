@@ -15,7 +15,7 @@ function EMIInfo() {
           "@id": "https://www.sipgo.in/emi-calculator#guide",
           "headline": "EMI Calculator – Estimate Monthly Loan Repayments",
           "description": "Find your monthly EMI, total interest payable, and amortization schedule with SIPGo's EMI Calculator.",
-          "image": "https://www.sipgo.in/images/logo",
+          "image": "https://www.sipgo.in/images/logo.png",
           "author": {
             "@type": "Organization",
             "name": "SIPGo",
@@ -28,7 +28,7 @@ function EMIInfo() {
             "name": "SIPGo",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/logo.png"
+              "url": "https://www.sipgo.in/images/logo.png"
             }
           },
           "mainEntityOfPage": {

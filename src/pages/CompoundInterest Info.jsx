@@ -15,7 +15,7 @@ const CompoundingInterestInfo = () => {
           "@id": "https://www.sipgo.in/compound-interest-calculator#guide",
           "headline": "Compound Interest Calculator – Wealth Growth Tool",
           "description": "Understand the power of compounding with this Compound Interest Calculator. Estimate long-term returns.",
-          "image": "https://www.sipgo.in/images/logo",
+          "image": "https://www.sipgo.in/images/logo.png",
           "author": {
             "@type": "Organization",
             "name": "SIPGo",
@@ -28,7 +28,7 @@ const CompoundingInterestInfo = () => {
             "name": "SIPGo",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/logo.png"
+              "url": "https://www.sipgo.in/images/logo.png"
             }
           },
           "mainEntityOfPage": {

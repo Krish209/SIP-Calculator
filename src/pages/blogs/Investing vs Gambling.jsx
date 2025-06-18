@@ -8,7 +8,7 @@ export const meta = {
   description:
     "Understand the key differences between investing and gambling. Learn how informed strategy, time, and ownership separate smart investing from risky bets.",
   slug: "investing-vs-gambling-whats-the-real-difference",
-  image: "https://www.sipgo.in/assets/icons/blogs/investingvsgambling.jpeg",
+  image: "https://www.sipgo.in/images/blogs/investingvsgambling.jpeg",
   tags: ["Finance Mindset", "Investment Psychology", "Risk", "Gambling"],
   date: "2025-05-26", // ISO format better for SEO
 };

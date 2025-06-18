@@ -15,7 +15,7 @@ const PPFInfo = () => {
           "@id": "https://www.sipgo.in/ppf-calculator#guide",
           "headline": "PPF Calculator – Plan Your Public Provident Fund Investment",
           "description": "Use our PPF Calculator to estimate returns, maturity value, and benefits from your Public Provident Fund investments effectively.",
-          "image": "https://www.sipgo.in/images/logo",
+          "image": "hhttps://www.sipgo.in/images/logo.png",
           "author": {
             "@type": "Organization",
             "name": "SIPGo",
@@ -28,7 +28,7 @@ const PPFInfo = () => {
             "name": "SIPGo",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/logo.png"
+              "url": "https://www.sipgo.in/images/logo.png"
             }
           },
           "mainEntityOfPage": {

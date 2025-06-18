@@ -15,7 +15,7 @@ const KVPInfo = () => {
           "@id": "https://www.sipgo.in/kvp-calculator#guide",
           "headline": "Kisan Vikas Patra (KVP) – A Comprehensive Guide",
           "description": "Learn about KVP interest rates, eligibility, tax implications, and how to invest.",
-          "image": "https://www.sipgo.in/images/logo",
+          "image": "https://www.sipgo.in/images/logo.png",
           "author": {
             "@type": "Organization",
             "name": "SIPGo",
@@ -28,7 +28,7 @@ const KVPInfo = () => {
             "name": "SIPGo",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/logo.png"
+              "url": "https://www.sipgo.in/images/logo.png"
             }
           },
           "mainEntityOfPage": {

@@ -8,7 +8,7 @@ export const meta = {
   description:
     "Inflation eating your savings? Discover 6 proven investment strategies (including Warren Buffett’s advice) to grow your wealth in 2025 and beat rising prices.",
   slug: "beating-inflation",
-  image: "https://www.sipgo.in/assets/icons/blogs/inflation2.jpeg",
+  image: "https://www.sipgo.in/images/blogs/inflation2.jpeg",
   tags: [
     "Wealth Building",
     "Wealth Preservation",

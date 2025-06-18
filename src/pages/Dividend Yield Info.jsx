@@ -15,7 +15,7 @@ const DividendYieldInfo = () => {
           "@id": "https://www.sipgo.in/dividend-calculator#guide",
           "headline": "Dividend Calculator – Estimate Returns from Dividends",
           "description": "Calculate your expected dividend income and dividend yield using SIPGo’s Dividend Calculator.",
-          "image": "https://www.sipgo.in/images/logo",
+          "image": "https://www.sipgo.in/images/logo.png",
           "author": {
             "@type": "Organization",
             "name": "SIPGo",
@@ -28,7 +28,7 @@ const DividendYieldInfo = () => {
             "name": "SIPGo",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/logo.png"
+              "url": "https://www.sipgo.in/images/logo.png"
             }
           },
           "mainEntityOfPage": {
