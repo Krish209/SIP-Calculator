@@ -2,11 +2,59 @@ import React, { useState } from "react";
 import heroimg from "../assets/icons/invest.svg";
 import AllCalculator from "../pages/All Calculator";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async"; // for SEO, Schema Markup, etc.
 
 const HomeLanding = () => {
   return (
     <div className="min-h-screen bg-gray-50 font-sans overflow-hidden">
       {/* Hero Section */}
+      <Helmet>
+        <title>SIPGo - Smart Financial Calculators for Investment Planning</title>
+        <meta 
+          name="description" 
+          content="Free online financial calculators for SIP, mutual funds, PPF, FD & more. Calculate returns, compare investments & plan your financial future with SIPGo's accurate tools." 
+        />
+        <meta
+          name="keywords"
+          content="SIP calculator, investment calculator, mutual fund calculator, financial planning tools, PPF calculator, FD calculator, retirement planning, wealth management"
+        />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://www.sipgo.in/" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.sipgo.in/" />
+        <meta property="og:title" content="SIPGo - Smart Financial Calculators for Investment Planning" />
+        <meta property="og:description" content="Free online financial calculators for SIP, mutual funds, PPF, FD & more. Calculate returns, compare investments & plan your financial future." />
+        <meta property="og:image" content="https://www.sipgo.in/images/logo.png" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="SIPGo - Smart Financial Calculators for Investment Planning" />
+        <meta name="twitter:description" content="Free online financial calculators for SIP, mutual funds, PPF, FD & more. Calculate returns with accuracy." />
+        <meta name="twitter:image" content="https://www.sipgo.in/images/logo.png" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "SIPGo - Smart Financial Calculators for Investment Planning",
+            "description": "Free online financial calculators for SIP, mutual funds, PPF, FD & more",
+            "url": "https://www.sipgo.in/",
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.sipgo.in/"
+              }]
+            }
+          })}
+        </script>
+      </Helmet>
 
       <section className="bg-gradient-to-br from-indigo-600 to-purple-600 text-white py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
@@ -34,7 +82,7 @@ const HomeLanding = () => {
           <div className="w-full lg:w-1/2 flex justify-center z-1">
             <img
               src={heroimg}
-              alt="Investment tools"
+              alt="Financial investment calculators and planning tools illustration"
               className="max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[400px] h-auto object-contain"
               // loading="lazy"
             />

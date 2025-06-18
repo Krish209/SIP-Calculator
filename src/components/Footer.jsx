@@ -33,7 +33,7 @@ function Footer() {
               <img
                 src={logo}
                 className="md:h-24 sm:h-16 h-12 w-auto"
-                alt="Logo"
+                alt="Logo of the SIPGo Website"
               />
             </Link>
 
