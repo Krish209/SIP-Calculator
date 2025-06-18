@@ -42,6 +42,7 @@ const Contact = () => {
         />
         <meta property="og:url" content="https://www.sipgo.in/contact" />
         <meta property="og:type" content="website" />
+        
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -56,7 +57,6 @@ const Contact = () => {
               contactType: "customer service",
               email: "support@sipgo.in",
               areaServed: "IN",
-              availableLanguage: ["English", "Hindi"],
             },
             publisher: {
               "@type": "Organization",
@@ -131,7 +131,7 @@ const Contact = () => {
                 />
                 <label
                   htmlFor={field}
-                  className="absolute text-gray-500 left-4 top-2 text-sm transition-all peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-indigo-600"
+                  className="absolute text-gray-500 left-4 top-2 text-sm transition-all peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-2 peer-focus:text-sm peer-focus:text-indigo-600"
                 >
                   {field.charAt(0).toUpperCase() + field.slice(1)}
                 </label>
@@ -150,7 +150,7 @@ const Contact = () => {
               ></textarea>
               <label
                 htmlFor="message"
-                className="absolute text-gray-500 left-4 top-2 text-sm transition-all peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-indigo-600"
+                className="absolute text-gray-500 left-4 top-2 text-sm transition-all peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-2 peer-focus:text-sm peer-focus:text-indigo-600"
               >
                 Message
               </label>
