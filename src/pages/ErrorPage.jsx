@@ -22,8 +22,14 @@ const ErrorPage = () => {
 
     // Set 404 status (works with Netlify's redirect setup)
     // if (typeof window !== 'undefined') {
-      window.http404 = () => {}; // Marker for Netlify
+      window.http404 = true; // Marker for Netlify
     // }
+
+    // Set HTTP status for crawlers
+    const meta = document.createElement('meta');
+    meta.httpEquiv = "status";
+    meta.content = "404";
+    document.head.appendChild(meta);
 
     // Start a countdown timer
     const timer = setInterval(() => {
@@ -46,6 +52,7 @@ const ErrorPage = () => {
       <Helmet>
         <title>404 Page Not Found | SIPGo</title>
         <meta name="robots" content="noindex, nofollow" />
+        <meta http-equiv="status" content="404" />
         <link rel="canonical" href="https://www.sipgo.in/404" /> {/* Self-referential */}
       </Helmet>
 
