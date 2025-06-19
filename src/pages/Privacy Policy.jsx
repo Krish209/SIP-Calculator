@@ -1,14 +1,50 @@
-import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const PrivacyPolicy = () => {
+  // SEO variables (customize these)
+  const pageTitle = "Privacy Policy | SIPGo Financial Calculators";
+  const pageDescription =
+    "Learn how SIPGo protects your data when using our financial calculators. We comply with Indian data protection standards.";
+  const canonicalUrl = "https://www.sipgo.in/privacy-policy";
+  const effectiveDate = "2025-01-18";
+  const lastUpdated = "2025-06-11";
+
   return (
     <section className="bg-white py-6 sm:py-12 px-4 sm:px-6 lg:px-8 text-[15px] md:text-base">
+      <Helmet>
+        {/* Essential Meta Tags */}
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <link rel="canonical" href={canonicalUrl} />
+
+        {/* Single High-Value Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "Privacy Policy",
+            description: pageDescription,
+            url: canonicalUrl,
+            datePublished: effectiveDate,
+            dateModified: lastUpdated,
+            publisher: {
+              "@type": "Organization",
+              name: "SIPGo",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://www.sipgo.in/images/logo.png",
+              },
+            },
+          })}
+        </script>
+      </Helmet>
+
       <div className="max-w-4xl leading-relaxed mx-auto">
         <h1 className="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4">
           Privacy Policy
         </h1>
         <p className="mb-6">
-          <strong>Effective Date</strong>: June 11, 2025
+          <strong>Effective Date</strong>: 11th June, 2025
         </p>
 
         {/* Introduction */}

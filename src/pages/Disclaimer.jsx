@@ -1,12 +1,49 @@
-import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const Disclaimer = () => {
+  // SEO variables
+  const pageTitle = "Disclaimer | SIPGo Financial Calculators";
+  const pageDescription =
+    "Legal disclaimer for SIPGo's financial calculators. Our tools provide estimates only, not financial advice.";
+  const canonicalUrl = "https://www.sipgo.in/disclaimer";
+  const effectiveDate = "2025-01-15";
+  const lastUpdated = "2025-06-06";
+
   return (
     <section className="bg-white py-6 sm:py-12 px-4 sm:px-6 lg:px-8 text-[15px] md:text-base">
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <link rel="canonical" href={canonicalUrl} />
+
+        {/* Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "Disclaimer",
+            description: "Legal disclaimer for SIPGo financial tools",
+            url: canonicalUrl,
+            datePublished: effectiveDate,
+            dateModified: lastUpdated,
+            publisher: {
+              "@type": "Organization",
+              name: "SIPGo",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://www.sipgo.in/images/logo.png",
+              },
+            },
+          })}
+        </script>
+      </Helmet>
+
       <div className="max-w-4xl leading-relaxed mx-auto">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4">Disclaimer</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4">
+          Disclaimer
+        </h1>
         <p className="mb-6">
-          <strong>Effective Date</strong>: June 6, 2025
+          <strong>Effective Date</strong>: 6th June, 2025
         </p>
 
         <div className="space-y-6 sm:space-y-6">
@@ -147,9 +184,10 @@ const Disclaimer = () => {
               7. Changes and Updates
             </h2>
             <p className="mb-2">
-              The content, tools, data, and calculations on Sipgo.in are subject to change at any time without notice. We reserve the right to modify or remove features, update assumptions, or correct errors and omissions as needed.
-
-
+              The content, tools, data, and calculations on Sipgo.in are subject
+              to change at any time without notice. We reserve the right to
+              modify or remove features, update assumptions, or correct errors
+              and omissions as needed.
             </p>
           </div>
 
@@ -179,8 +217,8 @@ const Disclaimer = () => {
             </h2>
             <p className="mb-2">
               If you have any questions, concerns, or feedback about this
-              disclaimer or any other aspect of Sipgo.in, feel free to contact us
-              at: support@sipgo.in
+              disclaimer or any other aspect of Sipgo.in, feel free to contact
+              us at: support@sipgo.in
             </p>
           </div>
         </div>

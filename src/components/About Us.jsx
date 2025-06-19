@@ -1,33 +1,39 @@
 import { motion } from "framer-motion";
 import group from "../assets/icons/group.svg";
 import { CurrencyRupeeIcon } from "@heroicons/react/24/outline";
-import { Helmet } from 'react-helmet-async'; // for SEO, Schema Markup, etc.
+import { Helmet } from 'react-helmet-async';
 
 export default function AboutPage() {
+  // SEO variables (must match visible content)
+  const pageTitle = "About SIPGo - Financial Calculator Experts";
+  const pageDescription = "SIPGo provides accurate SIP, PPF, and FD calculators to simplify investment planning in India. Learn about our mission and expertise.";
+  const canonicalUrl = "https://www.sipgo.in/about";
+
   return (
     <div className="min-h-screen text-primary">
-
-      {/* SEO Meta Tags */}
+      {/* Minimal SEO Tags */}
       <Helmet>
-        <title>About SIPGo - Our Mission, Vision & Financial Calculator Expertise</title>
-        <meta name="description" content="Learn about SIPGo's mission to simplify financial planning in India. Discover our team's expertise in creating accurate SIP, PPF, FD, and investment calculators."/>
-        <meta property="og:title" content="About SIPGo - Our Mission, Vision & Financial Calculator Expertise" />
-        <meta property="og:description" content="Learn about SIPGo's mission to simplify financial planning in India. Discover our team's expertise in creating accurate financial calculators." />
-        <meta property="og:url" content="https://www.sipgo.in/about" />
-        <meta property="og:type" content="website" />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <link rel="canonical" href={canonicalUrl} />
+
+        {/* Single High-Value Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "AboutPage",
-            "name": "About SIPGo",
-            "description": "Information about SIPGo's financial calculator platform and team",
-            "url": "https://www.sipgo.in/about",
-            "publisher": {
+            "url": canonicalUrl,
+            "description": "Information about SIPGo's financial calculator services",
+            "mainEntity": {
               "@type": "Organization",
               "name": "SIPGo",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.sipgo.in/images/logo.png"
+              "description": "Financial calculator platform for Indian investors",
+              "foundingDate": "2024", // Only include if accurate
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Bengaluru",
+                "addressRegion": "KA",
+                "addressCountry": "IN"
               }
             }
           })}
@@ -54,10 +60,6 @@ export default function AboutPage() {
               Intelligent Calculation
             </span>
           </h1>
-          {/* <p className="text-xl md:text-2xl text-indigo-100 mb-8 max-w-3xl mx-auto">
-            Trusted by <span className="font-bold">750,000+</span> investors managing over 
-            <span className="font-bold"> ₹2,500 Crores</span> in assets
-          </p> */}
         </div>
       </motion.section>
 
@@ -65,26 +67,23 @@ export default function AboutPage() {
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl font-bold mb-6">
-              Our Mission
-            </h2>
+            <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
             <p className="text-lg leading-relaxed">
               We democratize financial planning through advanced yet accessible
               tools, helping both novice and experienced investors make informed
-              decisions. Our platform combines cutting-edge technology with
-              financial expertise to provide accurate projections and portfolio
-              analysis.
+              decisions.
             </p>
           </div>
           <img
             src={group} 
-            alt="Investment Strategies"
-            className=""
+            alt="SIPGo team discussing financial strategies"
+            className="rounded-lg shadow-xl"
+            loading="lazy"
           />
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Stats Section */}
       <section className="py-16 px-4 bg-indigo-600 text-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">

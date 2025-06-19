@@ -45,6 +45,8 @@ const HomeLanding = () => {
             "url": "https://www.sipgo.in/",
             "breadcrumb": {
               "@type": "BreadcrumbList",
+              "@id": "https://www.sipgo.in/",
+              "name": "Home Page Navigation Path",
               "itemListElement": [{
                 "@type": "ListItem",
                 "position": 1,

@@ -1,12 +1,83 @@
 import { Link } from "react-router-dom";
 import { blogPosts } from "./BlogPost";
+import { Helmet } from "react-helmet-async";
 
 function BlogHome() {
+  // SEO Meta Variables
+  const pageTitle = "Financial Blog - Expert Investment Insights & Tips | SIPGo";
+  const pageDescription = "Explore our financial blog for expert insights on SIP, mutual funds, tax planning, and wealth management strategies.";
+  const canonicalUrl = "https://www.sipgo.in/blog";
+
   return (
     <div className="min-h-screen text-primary bg-gradient-to-b from-indigo-50 to-white">
+      <Helmet>
+        {/* Primary Meta Tags */}
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content="financial blog, investment tips, SIP guide, mutual funds, tax planning" />
+        <link rel="canonical" href={canonicalUrl} />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="blog" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:image" content="https://www.sipgo.in/images/blog-social-preview.jpg" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content="https://www.sipgo.in/images/blog-social-preview.jpg" />
+
+        {/* ========== SCHEMA MARKUP ========== */}
+        {/* Blog Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "name": "SIPGo Financial Blog",
+            "description": pageDescription,
+            "url": canonicalUrl,
+            "publisher": {
+              "@type": "Organization",
+              "name": "SIPGo",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.sipgo.in/images/logo.png"
+              }
+            },
+            "dateModified": new Date().toISOString()
+          })}
+        </script>
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { 
+                "@type": "ListItem", 
+                "position": 1, 
+                "name": "Home", 
+                "item": "https://www.sipgo.in/" 
+              },
+              { 
+                "@type": "ListItem", 
+                "position": 2, 
+                "name": "Blog", 
+                "item": canonicalUrl 
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
+
+      {/* Page Content */}
       <section className="max-w-7xl mx-auto py-8 md:py-12 px-4 sm:px-6 lg:px-8">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 md:mb-12">
-          📚 Our Financial Blog
+          📚 SIPGo Financial Blog
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
@@ -19,8 +90,9 @@ function BlogHome() {
                 <div className="aspect-w-16 aspect-h-9 overflow-hidden">
                   <img
                     src={post.image}
-                    alt={post.title}
+                    alt={`Cover for ${post.title}`}
                     className="w-full h-46 object-cover transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
                   />
                 </div>
 

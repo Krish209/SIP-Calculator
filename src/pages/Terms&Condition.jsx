@@ -1,14 +1,49 @@
-import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const TermsAndConditions = () => {
+  // SEO variables
+  const pageTitle = "Terms & Conditions | SIPGo Financial Tools";
+  const pageDescription =
+    "Terms governing use of SIPGo's financial calculators and services. Learn your rights and obligations.";
+  const canonicalUrl = "https://www.sipgo.in/terms";
+  const effectiveDate = "2025-01-15";
+  const lastUpdated = "2025-06-1";
+
   return (
     <section className="bg-white py-6 sm:py-12 px-4 sm:px-6 lg:px-8 text-[15px] md:text-base">
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <link rel="canonical" href={canonicalUrl} />
+
+        {/* Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "Terms and Conditions",
+            description: "User agreement for SIPGo services",
+            url: canonicalUrl,
+            datePublished: effectiveDate,
+            dateModified: lastUpdated,
+            publisher: {
+              "@type": "Organization",
+              name: "SIPGo",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://www.sipgo.in/images/logo.png",
+              },
+            },
+          })}
+        </script>
+      </Helmet>
+
       <div className="max-w-4xl leading-relaxed mx-auto">
         <h1 className="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4">
           Terms and Conditions
         </h1>
         <p className="mb-6">
-          <strong>Effective Date</strong>: June 1, 2025
+          <strong>Effective Date</strong>: 1st June, 2025
         </p>
 
         <div className="space-y-6">
@@ -24,7 +59,9 @@ const TermsAndConditions = () => {
             <h2 className="text-xl sm:text-2xl font-semibold mb-2">
               1. Definitions
             </h2>
-            <p className="mb-1">For the purposes of these Terms and Conditions:</p>
+            <p className="mb-1">
+              For the purposes of these Terms and Conditions:
+            </p>
             <ul className="list-disc pl-6">
               <li>
                 <strong>Affiliate</strong> means an entity that controls, is
