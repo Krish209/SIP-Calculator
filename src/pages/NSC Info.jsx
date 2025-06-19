@@ -5,40 +5,40 @@ const NSCInfo = () => {
   const dateModified = new Date("2025-06-01").toISOString();
   return (
     <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-
       {/* Article as information Schema Markup */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "url": "https://www.sipgo.in/nsc-calculator#guide",
+          url: "https://www.sipgo.in/nsc-calculator#guide",
           "@id": "https://www.sipgo.in/nsc-calculator#guide",
-          "headline": "NSC Calculator – National Savings Certificate Returns",
-          "description": "Easily compute the maturity value and interest on your NSC investments and plan better with this NSC calculator.",
-          "image": "https://www.sipgo.in/images/logo.png",
-          "author": {
+          headline: "NSC Calculator – National Savings Certificate Returns",
+          description:
+            "Easily compute the maturity value and interest on your NSC investments and plan better with this NSC calculator.",
+          image: "https://www.sipgo.in/images/logo.png",
+          author: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "url": "https://www.sipgo.in/"
+            name: "SIPGo",
+            url: "https://www.sipgo.in/",
           },
-          "datePublished": datePublished,
-          "dateModified":  dateModified,
-          "publisher": {
+          datePublished: datePublished,
+          dateModified: dateModified,
+          publisher: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "logo": {
+            name: "SIPGo",
+            logo: {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/images/logo.png"
-            }
+              url: "https://www.sipgo.in/images/logo.png",
+            },
           },
-          "mainEntityOfPage": {
+          mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": "https://www.sipgo.in/nsc-calculator"
+            "@id": "https://www.sipgo.in/nsc-calculator",
           },
-          "mainEntity": {
+          mainEntity: {
             "@type": "Table",
-            "about": "NSC Guide Sections",
-            "table": [
+            about: "NSC Guide Sections",
+            table: [
               "What is NSC?",
               "Key Features of NSC",
               "How Does NSC Work?",
@@ -48,9 +48,9 @@ const NSCInfo = () => {
               "Who Should Invest in NSC?",
               "Pros of NSC",
               "Cons of NSC",
-              "How to Buy NSC?"
-            ]
-          }
+              "How to Buy NSC?",
+            ],
+          },
         })}
       </script>
 
@@ -63,7 +63,7 @@ const NSCInfo = () => {
           What is NSC?
         </h3>
         <p className="mb-2">
-          <strong>National Savings Certificate (NSC)</strong> is a
+          The <strong>National Savings Certificate (NSC)</strong> is a
           government-backed savings scheme that offers a safe and reliable
           investment option for individuals aiming to grow their savings while
           enjoying tax benefits. It is ideal for risk-averse investors and
@@ -164,7 +164,7 @@ const NSCInfo = () => {
           </li>
           <li>
             <strong>Taxable Interest</strong>: While the principal investment
-            qualifies for tax deduction, the interest earned on NSC is taxable
+            qualifies for a tax deduction, the interest earned on NSC is taxable
             under "Income from Other Sources".
           </li>
           <li>
@@ -274,7 +274,8 @@ const NSCInfo = () => {
           </li>
           <li>
             To purchase, you need to provide KYC documents like Aadhar card, PAN
-            card, and passport-sized photographs, address and identity proof (as per KYC norms).
+            card, and passport-sized photographs, address and identity proof (as
+            per KYC norms).
           </li>
         </ul>
       </section>

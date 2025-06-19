@@ -5,40 +5,40 @@ const KVPInfo = () => {
   const dateModified = new Date("2025-06-01").toISOString();
   return (
     <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-
       {/* Article as information Schema Markup */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "url": "https://www.sipgo.in/kvp-calculator#guide",
+          url: "https://www.sipgo.in/kvp-calculator#guide",
           "@id": "https://www.sipgo.in/kvp-calculator#guide",
-          "headline": "Kisan Vikas Patra (KVP) – A Comprehensive Guide",
-          "description": "Learn about KVP interest rates, eligibility, tax implications, and how to invest.",
-          "image": "https://www.sipgo.in/images/logo.png",
-          "author": {
+          headline: "Kisan Vikas Patra (KVP) – A Comprehensive Guide",
+          description:
+            "Learn about KVP interest rates, eligibility, tax implications, and how to invest.",
+          image: "https://www.sipgo.in/images/logo.png",
+          author: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "url": "https://www.sipgo.in/"
+            name: "SIPGo",
+            url: "https://www.sipgo.in/",
           },
-          "datePublished": datePublished,
-          "dateModified":  dateModified,
-          "publisher": {
+          datePublished: datePublished,
+          dateModified: dateModified,
+          publisher: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "logo": {
+            name: "SIPGo",
+            logo: {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/images/logo.png"
-            }
+              url: "https://www.sipgo.in/images/logo.png",
+            },
           },
-          "mainEntityOfPage": {
+          mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": "https://www.sipgo.in/kvp-calculator"
+            "@id": "https://www.sipgo.in/kvp-calculator",
           },
-          "mainEntity": {
+          mainEntity: {
             "@type": "Table",
-            "about": "KVP Guide Sections",
-            "table": [
+            about: "KVP Guide Sections",
+            table: [
               "What is KVP?",
               "Key Features of KVP",
               "Who is Eligible?",
@@ -48,9 +48,9 @@ const KVPInfo = () => {
               "Pros of KVP",
               "Cons of KVP",
               "How to Buy KVP?",
-              "Conclusion"
-            ]
-          }
+              "Conclusion",
+            ],
+          },
         })}
       </script>
 
@@ -67,7 +67,7 @@ const KVPInfo = () => {
           <strong>Kisan Vikas Patra (KVP)</strong> is a government-backed
           savings scheme aimed at encouraging individuals to save for the future
           while earning a fixed rate of interest. Open to all Indian residents,
-          it provides a secure investment option with guaranteed, compounded
+          it provides a secure investment option with guaranteed compounded
           returns. Introduced in 1988, KVP promotes long-term financial
           discipline across both rural and urban populations. The scheme is
           available through all post offices and select public sector banks in
@@ -96,7 +96,7 @@ const KVPInfo = () => {
           </li>
           <li>
             <strong>Mode of Holding</strong>: Available in physical or digital
-            formats
+            form.
           </li>
           <li>
             <strong>Premature Withdrawal</strong>: Permitted after 2.5 years
@@ -128,7 +128,7 @@ const KVPInfo = () => {
           <li>Joint accounts (up to 3 individuals)</li>
           <li>Trusts (excluding Hindu Undivided Families)</li>
           <li>
-            <strong>Not eligible</strong>: Non-Resident Indians (NRIs) and Hindu
+            <strong>Not Eligible</strong>: Non-Resident Indians (NRIs) and Hindu
             Undivided Families (HUFs)
           </li>
         </ul>
@@ -271,8 +271,8 @@ const KVPInfo = () => {
             financial year
           </li>
           <li>
-            <strong>Lock-in Period</strong>: Funds cannot be withdrawn before 2.5
-            years
+            <strong>Lock-in Period</strong>: Funds cannot be withdrawn before
+            2.5 years
           </li>
           <li>
             <strong>Long Tenure</strong>: Suitable only for long-term goals

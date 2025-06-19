@@ -5,40 +5,41 @@ const RDInfo = () => {
   const dateModified = new Date("2025-06-01").toISOString();
   return (
     <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-
       {/* Article as information Schema Markup */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "url": "https://www.sipgo.in/rd-calculator#guide",
+          url: "https://www.sipgo.in/rd-calculator#guide",
           "@id": "https://www.sipgo.in/rd-calculator#guide",
-          "headline": "RD Calculator – Recurring Deposit Interest and Maturity Calculator",
-          "description": "Estimate your monthly savings growth using the RD Calculator. Calculate returns and total maturity from recurring deposits.",
-          "image": "https://www.sipgo.in/images/logo.png",
-          "author": {
+          headline:
+            "RD Calculator – Recurring Deposit Interest and Maturity Calculator",
+          description:
+            "Estimate your monthly savings growth using the RD Calculator. Calculate returns and total maturity from recurring deposits.",
+          image: "https://www.sipgo.in/images/logo.png",
+          author: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "url": "https://www.sipgo.in/"
+            name: "SIPGo",
+            url: "https://www.sipgo.in/",
           },
-          "datePublished": datePublished,
-          "dateModified":  dateModified,
-          "publisher": {
+          datePublished: datePublished,
+          dateModified: dateModified,
+          publisher: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "logo": {
+            name: "SIPGo",
+            logo: {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/images/logo.png"
-            }
+              url: "https://www.sipgo.in/images/logo.png",
+            },
           },
-          "mainEntityOfPage": {
+          mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": "https://www.sipgo.in/rd-calculator"
+            "@id": "https://www.sipgo.in/rd-calculator",
           },
-          "mainEntity": {
+          mainEntity: {
             "@type": "Table",
-            "about": "RD Guide Sections",
-            "table": [
+            about: "RD Guide Sections",
+            table: [
               "What is an RD?",
               "Benefits of RD",
               "How to Open an RD?",
@@ -46,9 +47,9 @@ const RDInfo = () => {
               "Interest Rates on RDs",
               "Tax on RDs",
               "Premature Withdrawal and Penalty",
-              "Conclusion"
-            ]
-          }
+              "Conclusion",
+            ],
+          },
         })}
       </script>
 
@@ -64,14 +65,13 @@ const RDInfo = () => {
           A <strong>Recurring Deposit (RD)</strong> is a popular savings scheme
           offered by banks and financial institutions in India. In an RD, you
           deposit a fixed amount regularly for a specified time period. In
-          return, the bank provides interest on the deposited amount, which is
-          compounded periodically (usually quarterly). This type of investment
-          encourages disciplined savings and can offer good returns with minimal
-          risk.
+          return, the bank provides interest on the deposited amount, compounded
+          periodically (usually quarterly). This type of investment encourages
+          disciplined savings and can offer good returns with minimal risk.
         </p>
         <p className="mb-2">
           While it may not offer the highest returns compared to other
-          investment options like Mutual Funds, they are perfect for risk-averse
+          investment options like Mutual Funds, it is perfect for risk-averse
           individuals and those who want a disciplined, low-risk way of saving
           for medium-term goals. The regular monthly deposit forces the investor
           to save without a large initial investment.
@@ -84,8 +84,8 @@ const RDInfo = () => {
         </h3>
         <ul className="list-disc pl-6 space-y-1">
           <li>
-            <strong>Easy to Start</strong>: Easy to start with no large initial
-            investment required.
+            <strong>Easy to Start</strong>: Requires no large initial
+            investment.
           </li>
           <li>
             <strong>Safe and Risk-Free</strong>: Guaranteed returns, backed by
@@ -104,8 +104,8 @@ const RDInfo = () => {
             RD balance in case of emergency.
           </li>
           <li>
-            <strong>Premature Withdrawal</strong>: Allowed with some penalties
-            and reduced interest rates.
+            <strong>Premature Withdrawal</strong>: Allowed with penalties
+            and reduced interest.
           </li>
           <li>
             <strong>Tax-Saving Opportunity</strong>: Certain RD schemes qualify
@@ -141,7 +141,7 @@ const RDInfo = () => {
         </h3>
         <p className="mb-2">
           The maturity amount of a Recurring Deposit (RD) is calculated using
-          the formula for compound interest, with interest is compounded
+          the formula for compound interest, with interest compounded
           periodically (usually quarterly or monthly). Since an RD involves
           monthly deposits, we use a formula that accounts for those periodic
           contributions.
@@ -260,9 +260,7 @@ const RDInfo = () => {
         <ul className="list-disc pl-6 space-y-1">
           <li>
             <strong>Taxability</strong>: The interest earned on RDs is taxable
-            under the Income Tax Act. TDS (Tax Deducted at Source) is deducted
-            by the bank if the interest exceeds ₹40,000 in a financial year
-            (₹50,000 for senior citizens).
+            under the Income Tax Act.
           </li>
           <li>
             <strong>Tax-saving RDs</strong>: These come with a 5-year lock-in
@@ -270,8 +268,9 @@ const RDInfo = () => {
             Tax Act.
           </li>
           <li>
-            <strong>TDS (Tax Deducted at Source)</strong>: TDS is deducted at
-            10% if the interest exceeds the threshold limit.
+            <strong>TDS (Tax Deducted at Source)</strong>: TDS (Tax Deducted at Source) is deducted
+            by the bank if the interest earned exceeds ₹40,000 in a financial
+            year (₹50,000 for senior citizens).
           </li>
           <li>
             <strong>Form 15G/15H</strong>: You can submit these forms to avoid

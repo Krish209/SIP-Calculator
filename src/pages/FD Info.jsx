@@ -5,50 +5,51 @@ const FdInfo = () => {
   const dateModified = new Date("2025-06-01").toISOString();
   return (
     <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-
       {/* Article as information Schema Markup */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "url": "https://www.sipgo.in/fd-calculator#guide",
+          url: "https://www.sipgo.in/fd-calculator#guide",
           "@id": "https://www.sipgo.in/fd-calculator#guide",
-          "headline": "FD Calculator – Fixed Deposit Maturity and Interest Estimator",
-          "description": "Calculate your fixed deposit interest and maturity amount based on deposit amount, tenure, and interest rate with SIPGo's FD Calculator.",
-          "image": "https://www.sipgo.in/images/logo.png",
-          "author": {
+          headline:
+            "FD Calculator – Fixed Deposit Maturity and Interest Estimator",
+          description:
+            "Calculate your fixed deposit interest and maturity amount based on deposit amount, tenure, and interest rate with SIPGo's FD Calculator.",
+          image: "https://www.sipgo.in/images/logo.png",
+          author: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "url": "https://www.sipgo.in/"
+            name: "SIPGo",
+            url: "https://www.sipgo.in/",
           },
-          "datePublished": datePublished,
-          "dateModified":  dateModified,
-          "publisher": {
+          datePublished: datePublished,
+          dateModified: dateModified,
+          publisher: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "logo": {
+            name: "SIPGo",
+            logo: {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/images/logo.png"
-            }
+              url: "https://www.sipgo.in/images/logo.png",
+            },
           },
-          "mainEntityOfPage": {
+          mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": "https://www.sipgo.in/fd-calculator"
+            "@id": "https://www.sipgo.in/fd-calculator",
           },
-          "mainEntity": {
+          mainEntity: {
             "@type": "Table",
-            "about": "FD Guide Sections",
-            "table": [
-              "What is a FD?",
+            about: "FD Guide Sections",
+            table: [
+              "What is an FD?",
               "Key Features of FD",
               "Advantages of FDs",
               "Deposit Insurance Coverage",
               "Types of FDs",
               "Choosing the Right FD Investment",
               "Things to Consider",
-              "Is an FD Investment Right for You?"
-            ]
-          }
+              "Is an FD Investment Right for You?",
+            ],
+          },
         })}
       </script>
 
@@ -58,16 +59,16 @@ const FdInfo = () => {
 
       <section className="my-4 md:my-6">
         <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
-          What is a FD?
+          What is an FD?
         </h3>
         <p className="mb-2">
           A <strong>Fixed Deposit (FD)</strong> is one of the safest and most
           reliable investment options available, allowing you to invest a lump
           sum amount of money for a fixed tenure at a predetermined interest
-          rate. During this period, the investment remains locked, and
-          ppremature withdrawal is allowed in most banks but with a penalty or
-          reduced interest. In return, you earn assured returns at fixed
-          intervals (monthly, quarterly, annually) or at maturity.
+          rate. During this period, the investment remains locked, and premature
+          withdrawal is allowed in most banks but with a penalty or reduced
+          interest. In return, you earn assured returns at fixed intervals
+          (monthly, quarterly, annually) or at maturity.
         </p>
       </section>
 
@@ -176,9 +177,8 @@ const FdInfo = () => {
             financial needs without breaking the FD.
           </li>
           <li>
-            <strong>No Market Risk</strong>: Unlike stocks or mutual funds, FD
-            returns are not affected by market conditions, making them a
-            low-risk option.
+            <strong>No Market Risk</strong>: FD returns are not affected by
+            market conditions, making them a low-risk option.
           </li>
           <li>
             <strong>Nomination Facility</strong>: You can nominate a family

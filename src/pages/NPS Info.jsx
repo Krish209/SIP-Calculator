@@ -5,40 +5,41 @@ const NPSInfo = () => {
   const dateModified = new Date("2025-06-01").toISOString();
   return (
     <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-
       {/* Article as information Schema Markup */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "url": "https://www.sipgo.in/nps-calculator#guide",
+          url: "https://www.sipgo.in/nps-calculator#guide",
           "@id": "https://www.sipgo.in/nps-calculator#guide",
-          "headline": "NPS Calculator – National Pension Scheme Returns Estimator",
-          "description": "Estimate your retirement corpus, monthly pension, and tax savings with our NPS Calculator based on your investment strategy.",
-          "image": "https://www.sipgo.in/images/logo.png",
-          "author": {
+          headline:
+            "NPS Calculator – National Pension Scheme Returns Estimator",
+          description:
+            "Estimate your retirement corpus, monthly pension, and tax savings with our NPS Calculator based on your investment strategy.",
+          image: "https://www.sipgo.in/images/logo.png",
+          author: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "url": "https://www.sipgo.in/"
+            name: "SIPGo",
+            url: "https://www.sipgo.in/",
           },
-          "datePublished": datePublished,
-          "dateModified":  dateModified,
-          "publisher": {
+          datePublished: datePublished,
+          dateModified: dateModified,
+          publisher: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "logo": {
+            name: "SIPGo",
+            logo: {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/images/logo.png"
-            }
+              url: "https://www.sipgo.in/images/logo.png",
+            },
           },
-          "mainEntityOfPage": {
+          mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": "https://www.sipgo.in/nps-calculator"
+            "@id": "https://www.sipgo.in/nps-calculator",
           },
-          "mainEntity": {
+          mainEntity: {
             "@type": "Table",
-            "about": "NPS Guide Sections",
-            "table": [
+            about: "NPS Guide Sections",
+            table: [
               "What is NPS?",
               "Key Features of NPS",
               "How does NPS work?",
@@ -49,9 +50,9 @@ const NPSInfo = () => {
               "Exit and Withdrawal Rules",
               "Pros of NPS",
               "Cons of NPS",
-              "Conclusion"
-            ]
-          }
+              "Conclusion",
+            ],
+          },
         })}
       </script>
 
@@ -100,7 +101,7 @@ const NPSInfo = () => {
             and locations, even between the public and private sectors.
           </li>
           <li>
-            <strong>Low Cost </strong>: Among the lowest fund management charges
+            <strong>Low Cost</strong>: Among the lowest fund management charges
             globally (~0.01% to 0.09% per annum).
           </li>
         </ul>
@@ -158,7 +159,7 @@ const NPSInfo = () => {
           <strong>National Pension Scheme (NPS)</strong> to secure his
           retirement. Mr. Shyam will make monthly contributions of ₹5,000
           towards the scheme with expected annual return rate of 8%, which he
-          plans to do until he reaches the age of 60.
+          plans to continue until age 60.
         </p>
         <ul className="space-y-2 mb-4 pl-2">
           <li>- Monthly Investment (P) = ₹5,000</li>
@@ -364,8 +365,8 @@ const NPSInfo = () => {
           </li>
           <li>
             <strong>Deferment</strong>: If a subscriber prefers to continue
-            investing in NPS after 60, you can defer your exit and withdrawal
-            until the age of 75. You can choose to defer the lump sum
+            investing in NPS after 60, they can defer your exit and withdrawal
+            until the age of 75. They can choose to defer the lump sum
             withdrawal, the annuity purchase, or both.
           </li>
           <li>

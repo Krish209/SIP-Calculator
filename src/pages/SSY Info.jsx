@@ -5,49 +5,49 @@ function SSYInfo() {
   const dateModified = new Date("2025-06-01").toISOString();
   return (
     <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-
       {/* Article as information Schema Markup */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "url": "https://www.sipgo.in/ssy-calculator#guide",
+          url: "https://www.sipgo.in/ssy-calculator#guide",
           "@id": "https://www.sipgo.in/ssy-calculator#guide",
-          "headline": "SSY Calculator – Sukanya Samriddhi Yojana Growth Planner",
-          "description": "Plan your daughter's future with the SSY Calculator. Calculate interest and maturity value for Sukanya Samriddhi Yojana.",
-          "image": "https://www.sipgo.in/images/logo.png",
-          "author": {
+          headline: "SSY Calculator – Sukanya Samriddhi Yojana Growth Planner",
+          description:
+            "Plan your daughter's future with the SSY Calculator. Calculate interest and maturity value for Sukanya Samriddhi Yojana.",
+          image: "https://www.sipgo.in/images/logo.png",
+          author: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "url": "https://www.sipgo.in/"
+            name: "SIPGo",
+            url: "https://www.sipgo.in/",
           },
-          "datePublished": datePublished,
-          "dateModified":  dateModified,
-          "publisher": {
+          datePublished: datePublished,
+          dateModified: dateModified,
+          publisher: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "logo": {
+            name: "SIPGo",
+            logo: {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/images/logo.png"
-            }
+              url: "https://www.sipgo.in/images/logo.png",
+            },
           },
-          "mainEntityOfPage": {
+          mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": "https://www.sipgo.in/ssy-calculator"
+            "@id": "https://www.sipgo.in/ssy-calculator",
           },
-          "mainEntity": {
+          mainEntity: {
             "@type": "Table",
-            "about": "SSY Guide Sections",
-            "table": [
+            about: "SSY Guide Sections",
+            table: [
               "What is Sukanya Samriddhi Yojana?",
               "Key Features of SSY",
               "How to Open an SSY Account",
               "Pros of SSY",
               "Cons of SSY",
               "Who Should Invest in SSY?",
-              "Conclusion"
-            ]
-          }
+              "Conclusion",
+            ],
+          },
         })}
       </script>
 
@@ -62,11 +62,10 @@ function SSYInfo() {
         <p className="mb-2">
           The <strong>Sukanya Samriddhi Yojana (SSY)</strong> is a
           government-backed savings scheme launched by the Indian government in
-          2015 as part of the
-          <strong>‘Beti Bachao Beti Padhao’</strong> initiative. Its primary
-          goal is to promote the welfare and financial security of the girl
-          child by encouraging parents to save for their daughter’s future
-          education and marriage expenses. It offers{" "}
+          2015 as part of the <strong>‘Beti Bachao Beti Padhao’</strong>{" "}
+          initiative. Its primary goal is to promote the welfare and financial
+          security of the girl child by encouraging parents to save for their
+          daughter’s future education and marriage expenses. It offers{" "}
           <strong>one of the highest interest rates</strong> among various small
           savings schemes in India.
         </p>
@@ -128,7 +127,7 @@ function SSYInfo() {
           <li>Deposit the minimum required amount (₹250 or more).</li>
           <li>
             Complete the KYC (Know Your Customer) process by submitting identity
-            and address proofs.
+            and address proof documents.
           </li>
           <li>
             Receive a passbook with your account details, which will help track
@@ -219,13 +218,13 @@ function SSYInfo() {
           The SSY is one of the best schemes for ensuring the future financial
           security of your daughter. It combines high returns, tax benefits, and
           long-term savings with the security of a government-backed investment.
-          it’s one of the best options available for parents to invest in their
+          It’s one of the best options available for parents to invest in their
           girl child’s future.
         </p>
         <p className="mb-2">
           By contributing to this scheme, you not only build a financial cushion
-          for her education and marriage but also take a step toward the
-          empowerment of the girl child in India.
+          for her education and marriage but also take an important step toward
+          empowering the girl child in India.
         </p>
       </section>
     </article>
