@@ -1,17 +1,9 @@
 [[redirects]]
-  from = "/404"
-  to = "/index.html"
-  status = 404
-
-# SPA Fallback (200 OK for valid routes)
-[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-  force = true
 
-# Catch invalid paths (must be last)
 [[redirects]]
-  from = "/*"
+  from = "/404"
   to = "/index.html"
   status = 404
