@@ -30,6 +30,7 @@ import { LuChartNoAxesCombined } from "react-icons/lu";
 const AllCalculator = ({
   headingLevel: Heading = "h1",
   headingLevel2: Heading2 = "h2",
+  isStandalonePage = false, // Add this prop when used as standalone page
 }) => {
   // Data for calculators
   const calculators = [
@@ -197,8 +198,57 @@ const AllCalculator = ({
       ? calculators
       : calculators.filter((c) => c.category === activeCategory);
 
+  // SEO Meta Variables (only for standalone)
+  const pageTitle = "Financial Calculators - SIP, EMI, PPF, FD & More | SIPGo";
+  const pageDescription =
+    "Comprehensive suite of 20+ financial calculators for SIP, mutual funds, loans, tax-saving investments, and retirement planning. Compare returns instantly.";
+  const canonicalUrl = "https://www.sipgo.in/calc";
+
   return (
     <div className="min-h-screen bg-gradient-to-br text-primary from-indigo-50 to-blue-50">
+      {/* Conditional SEO Meta */}
+      {isStandalonePage && (
+        <Helmet>
+          <title>{pageTitle}</title>
+          <meta name="description" content={pageDescription} />
+          <link rel="canonical" href={canonicalUrl} />
+
+          {/* Open Graph */}
+          <meta property="og:title" content={pageTitle} />
+          <meta property="og:description" content={pageDescription} />
+          <meta property="og:url" content={canonicalUrl} />
+          <meta
+            property="og:image"
+            content="https://www.sipgo.in/images/calculators-preview.jpg"
+          />
+
+          {/* Twitter */}
+          <meta name="twitter:title" content={pageTitle} />
+          <meta name="twitter:description" content={pageDescription} />
+
+          {/* Schema Markup */}
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              name: "Financial Calculators Collection",
+              description: pageDescription,
+              url: canonicalUrl,
+              numberOfItems: calculators.length,
+              itemListElement: calculators.slice(0, 5).map((calc, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                item: {
+                  "@type": "FinancialProduct",
+                  name: calc.title,
+                  description: calc.description,
+                  url: `https://www.sipgo.in${calc.link}`,
+                },
+              })),
+            })}
+          </script>
+        </Helmet>
+      )}
       {/* Calculator Categories */}
       <section className="max-w-7xl mx-auto py-4 sm:py-8 md:py-12 px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-4 sm:mb-8 md:mb-10">
