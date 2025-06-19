@@ -1,13 +1,10 @@
-# Force HTTPS and www prefix
+# public/_redirects
 http://sipgo.in/* https://www.sipgo.in/:splat 301!
 http://www.sipgo.in/* https://www.sipgo.in/:splat 301!
 https://sipgo.in/* https://www.sipgo.in/:splat 301!
 
-# Explicit 404 route (optional)
+# Explicit 404 route
 /404 /index.html 404
 
-# SPA fallback - MUST COME FIRST
+# SPA fallback (only this one)
 /* /index.html 200
-
-# Final catch-all (will rarely trigger)
-/* /index.html 404
