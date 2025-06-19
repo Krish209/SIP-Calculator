@@ -177,7 +177,8 @@ function App() {
 
         {/* ErrorPage is displayed without HomeLayout */}
         <Route path="/404" element={<ErrorPage />} />
-        <Route path="*" element={<ErrorPage />} />
+        {/* <Route path="*" element={<ErrorPage />} /> */}
+        <Route path="*" element={<Navigate to="/404" replace />} />
         {/* Wildcard for undefined routes */}
       </Routes>
     </div>
