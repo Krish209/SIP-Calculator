@@ -3,9 +3,11 @@ http://sipgo.in/* https://www.sipgo.in/:splat 301!
 http://www.sipgo.in/* https://www.sipgo.in/:splat 301!
 https://sipgo.in/* https://www.sipgo.in/:splat 301!
 
-# Handle 404s for unknown routes
-/* /index.html 404
-/* /404.html 404
+# Explicit 404 route (optional)
+/404 /index.html 404
 
-# SPA fallback (keep your existing 200 rule)
+# SPA fallback - MUST COME FIRST
 /* /index.html 200
+
+# Final catch-all (will rarely trigger)
+/* /index.html 404
