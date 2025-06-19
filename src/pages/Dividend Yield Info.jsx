@@ -5,49 +5,49 @@ const DividendYieldInfo = () => {
   const dateModified = new Date("2025-06-01").toISOString();
   return (
     <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-
       {/* Article as information Schema Markup */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "url": "https://www.sipgo.in/dividend-calculator#guide",
+          url: "https://www.sipgo.in/dividend-calculator#guide",
           "@id": "https://www.sipgo.in/dividend-calculator#guide",
-          "headline": "Dividend Calculator – Estimate Returns from Dividends",
-          "description": "Calculate your expected dividend income and dividend yield using SIPGo’s Dividend Calculator.",
-          "image": "https://www.sipgo.in/images/logo.png",
-          "author": {
+          headline: "Dividend Calculator – Estimate Returns from Dividends",
+          description:
+            "Calculate your expected dividend income and dividend yield using SIPGo’s Dividend Calculator.",
+          image: "https://www.sipgo.in/images/logo.png",
+          author: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "url": "https://www.sipgo.in/"
+            name: "SIPGo",
+            url: "https://www.sipgo.in/",
           },
-          "datePublished": datePublished,
-          "dateModified":  dateModified,
-          "publisher": {
+          datePublished: datePublished,
+          dateModified: dateModified,
+          publisher: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "logo": {
+            name: "SIPGo",
+            logo: {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/images/logo.png"
-            }
+              url: "https://www.sipgo.in/images/logo.png",
+            },
           },
-          "mainEntityOfPage": {
+          mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": "https://www.sipgo.in/dividend-calculator"
+            "@id": "https://www.sipgo.in/dividend-calculator",
           },
-          "mainEntity": {
+          mainEntity: {
             "@type": "Table",
-            "about": "Dividend Yield Guide Sections",
-            "table": [
+            about: "Dividend Yield Guide Sections",
+            table: [
               "What is Dividend Yield?",
               "Key Things to Understand",
               "Who is Eligible?",
               "How Does Dividend Yield Work?",
               "Taxation on Dividend Income",
               "Pros and Cons of High Dividend Yield",
-              "Conclusion"
-            ]
-          }
+              "Conclusion",
+            ],
+          },
         })}
       </script>
 
@@ -107,9 +107,9 @@ const DividendYieldInfo = () => {
           invested in the stock.
         </p>
         <div className="bg-gray-100 p-2 md:p-4 rounded-lg mt-6 shadow-md">
-          <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+          <h4 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">
             Dividend Yield Formula:
-          </h3>
+          </h4>
           <code className="font-bold">
             Dividend Yield (%) = (Annual Dividend per Share / Price per Share) ×
             100

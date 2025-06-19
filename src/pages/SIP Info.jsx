@@ -90,8 +90,9 @@ const SIPInfo = () => {
       <h2 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         SIP Investment - A Comprehensive Guide
       </h2>
+      
       {/* What is SIP? */}
-      <section className="my-4 md:my-6 ">
+      <section className="my-4 md:my-6">
         <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
           What is SIP?
         </h3>
@@ -277,9 +278,9 @@ const SIPInfo = () => {
         </p>
 
         <div className="bg-gray-100 p-2 md:p-4 rounded-lg mt-6 shadow-md">
-          <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+          <h4 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">
             SIP Return Formula:
-          </h3>
+          </h4>
           <p className="mb-2 md:mb-4">
             The formula used to calculate SIP returns is:
           </p>

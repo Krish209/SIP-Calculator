@@ -4,7 +4,8 @@ import BlogLayout from "../../consts/BlogLayout";
 import img from "../../assets/icons/blogs/stocketf.jpeg";
 
 export const meta = {
-  title: "What are Stocks, ETFs, Mutual Funds, and Bonds? | A Beginner’s Guide to Investing in India",
+  title:
+    "What are Stocks, ETFs, Mutual Funds, and Bonds? | A Beginner’s Guide to Investing in India",
   description:
     "Discover the fundamentals of investing in India with our beginner’s guide to stocks, ETFs, mutual funds, and bonds. Learn how each investment type works and how to choose the right one for your financial goals.",
   slug: "what-are-stocks-etfs-mutual-funds-and-bonds",
@@ -116,7 +117,7 @@ const StockEtfMfBond = () => {
             through capital appreciation and dividends.
           </p>
 
-          <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-1 md:mb-2">
+          <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">
             Example:
           </h3>
           <p className="mb-2 md:mb-4">
@@ -125,7 +126,7 @@ const StockEtfMfBond = () => {
             investment becomes ₹30,000, giving you a capital gain of ₹5,000.
           </p>
 
-          <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-1 md:mb-2">
+          <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">
             Key Features:
           </h3>
           <ul className="list-disc space-y-1 pl-6 mb-2">
@@ -153,7 +154,7 @@ const StockEtfMfBond = () => {
             banking or IT.
           </p>
 
-          <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-1 md:mb-2">
+          <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">
             Example:
           </h3>
           <p className="mb-2 md:mb-4">
@@ -162,7 +163,7 @@ const StockEtfMfBond = () => {
             versa.
           </p>
 
-          <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-1 md:mb-2">
+          <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">
             Key Features:
           </h3>
           <ul className="list-disc space-y-1 pl-6 mb-2">
@@ -196,7 +197,7 @@ const StockEtfMfBond = () => {
             lower costs.
           </p>
 
-          <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-1 md:mb-2">
+          <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">
             Example:
           </h3>
 
@@ -207,7 +208,7 @@ const StockEtfMfBond = () => {
             stocks.
           </p>
 
-          <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-1 md:mb-2">
+          <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">
             Key Features:
           </h3>
           <ul className="list-disc space-y-1 pl-6 mb-2">
@@ -238,7 +239,7 @@ const StockEtfMfBond = () => {
             through brokers on the stock exchange.
           </p>
 
-          <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-1 md:mb-2">
+          <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">
             Example:
           </h3>
 
@@ -248,7 +249,7 @@ const StockEtfMfBond = () => {
             year and the ₹1 lakh principal after 10 years.
           </p>
 
-          <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-1 md:mb-2">
+          <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">
             Key Features:
           </h3>
           <ul className="list-disc space-y-1 pl-6 mb-2">

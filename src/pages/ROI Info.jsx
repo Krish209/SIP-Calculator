@@ -5,52 +5,52 @@ const ROIInfo = () => {
   const dateModified = new Date("2025-06-01").toISOString();
   return (
     <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-
       {/* Article as information Schema Markup */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "url": "https://www.sipgo.in/roi-calculator#guide",
+          url: "https://www.sipgo.in/roi-calculator#guide",
           "@id": "https://www.sipgo.in/roi-calculator#guide",
-          "headline": "ROI Calculator – Calculate Return on Investment",
-          "description": "Evaluate the profitability of your investments by calculating ROI using our easy and accurate calculator.",
-          "image": "https://www.sipgo.in/images/logo.png",
-          "author": {
+          headline: "ROI Calculator – Calculate Return on Investment",
+          description:
+            "Evaluate the profitability of your investments by calculating ROI using our easy and accurate calculator.",
+          image: "https://www.sipgo.in/images/logo.png",
+          author: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "url": "https://www.sipgo.in/"
+            name: "SIPGo",
+            url: "https://www.sipgo.in/",
           },
-          "datePublished": datePublished,
-          "dateModified":  dateModified,
-          "publisher": {
+          datePublished: datePublished,
+          dateModified: dateModified,
+          publisher: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "logo": {
+            name: "SIPGo",
+            logo: {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/images/logo.png"
-            }
+              url: "https://www.sipgo.in/images/logo.png",
+            },
           },
-          "mainEntityOfPage": {
+          mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": "https://www.sipgo.in/roi-calculator"
+            "@id": "https://www.sipgo.in/roi-calculator",
           },
-          "mainEntity": {
+          mainEntity: {
             "@type": "Table",
-            "about": "ROI Guide Sections",
-            "table": [
+            about: "ROI Guide Sections",
+            table: [
               "What is an ROI?",
               "How does ROI work?",
               "Who Should Use ROI?",
               "Types & Variations of ROI",
               "Limitations of ROI",
               "Best Practices",
-              "Conclusion"
-            ]
-          }
+              "Conclusion",
+            ],
+          },
         })}
       </script>
-      
+
       <h2 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
         Return on Investment (ROI) - Complete Guide
       </h2>
@@ -83,9 +83,9 @@ const ROIInfo = () => {
         </p>
 
         <div className="bg-gray-100 p-4 rounded-lg shadow-md">
-        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+          <h4 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">
             ROI Formula:
-          </h3>
+          </h4>
           <code className="font-bold">
             ROI = ((Gain from Investment - Cost of Investment) / Cost of
             Investment) × 100
@@ -119,11 +119,11 @@ const ROIInfo = () => {
 
         <div className="bg-blue-50 p-2 md:p-4 rounded-lg mt-4 shadow-md">
           <p className="">
-            <strong>Important Note</strong>:{" "}
-             CAGR helps understand annual growth rate over time, making it useful
-            for comparing investments with different durations. ROI is great for
-            quick comparisons, but for long-term investments, consider using
-            CAGR (Compound Annual Growth Rate) for a time-adjusted return.
+            <strong>Important Note</strong>: CAGR helps understand annual growth
+            rate over time, making it useful for comparing investments with
+            different durations. ROI is great for quick comparisons, but for
+            long-term investments, consider using CAGR (Compound Annual Growth
+            Rate) for a time-adjusted return.
           </p>
         </div>
       </section>

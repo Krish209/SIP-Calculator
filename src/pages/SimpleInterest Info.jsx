@@ -5,44 +5,44 @@ const SimpleInterestInfo = () => {
   const dateModified = new Date("2025-06-01").toISOString();
   return (
     <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-
       {/* Article as information Schema Markup */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "url": "https://www.sipgo.in/simple-interest-calculator#guide",
+          url: "https://www.sipgo.in/simple-interest-calculator#guide",
           "@id": "https://www.sipgo.in/simple-interest-calculator#guide",
-          "headline": "Simple Interest Calculator – Quick Interest Computation",
-          "description": "Easily compute the interest earned on your investment with our Simple Interest Calculator.",
-          "image": "https://www.sipgo.in/images/logo.png",
-          "author": {
+          headline: "Simple Interest Calculator – Quick Interest Computation",
+          description:
+            "Easily compute the interest earned on your investment with our Simple Interest Calculator.",
+          image: "https://www.sipgo.in/images/logo.png",
+          author: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "url": "https://www.sipgo.in/"
+            name: "SIPGo",
+            url: "https://www.sipgo.in/",
           },
-          "datePublished": datePublished,
-          "dateModified":  dateModified,
-          "publisher": {
+          datePublished: datePublished,
+          dateModified: dateModified,
+          publisher: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "logo": {
+            name: "SIPGo",
+            logo: {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/images/logo.png"
-            }
+              url: "https://www.sipgo.in/images/logo.png",
+            },
           },
-          "mainEntityOfPage": {
+          mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": "https://www.sipgo.in/simple-interest-calculator"
+            "@id": "https://www.sipgo.in/simple-interest-calculator",
           },
-          "mainEntity": {
+          mainEntity: {
             "@type": "Table",
-            "about": "Simple Interest Guide Sections",
-            "table": [
+            about: "Simple Interest Guide Sections",
+            table: [
               "Real-World Applications",
-              "Limitations of Simple Interest"
-            ]
-          }
+              "Limitations of Simple Interest",
+            ],
+          },
         })}
       </script>
 
@@ -52,17 +52,17 @@ const SimpleInterestInfo = () => {
 
       <section className="my-4 md:my-6">
         <p className="mb-2">
-          A <strong>Simple Interest Calculator</strong> is used to calculate the interest earned
-          or paid on a principal amount over a specified period at a fixed
-          interest rate. Unlike compound interest, simple interest is calculated
-          only on the original principal.
+          A <strong>Simple Interest Calculator</strong> is used to calculate the
+          interest earned or paid on a principal amount over a specified period
+          at a fixed interest rate. Unlike compound interest, simple interest is
+          calculated only on the original principal.
         </p>
       </section>
 
       <div className="bg-gray-100 p-2 md:p-4 rounded-lg mt-6 shadow-md">
-        <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+        <h4 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">
           Formula for Simple Interest:
-        </h3>
+        </h4>
         <p className="mb-2 md:mb-4">
           The formula used to calculate simple interest is:
         </p>

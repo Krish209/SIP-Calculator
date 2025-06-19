@@ -169,9 +169,9 @@ const LumpsumInfo = () => {
         </p>
 
         <div className="bg-gray-100 p-2 md:p-4 rounded-lg mt-6 shadow-md">
-          <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+          <h4 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">
             Lumpsum Return Formula:
-          </h3>
+          </h4>
           <p className="mb-2 md:mb-4">
             The formula used to calculate Lumpsum returns is:
           </p>

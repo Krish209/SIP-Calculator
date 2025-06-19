@@ -148,9 +148,9 @@ const RDInfo = () => {
         </p>
 
         <div className="bg-gray-100 p-2 md:p-4 rounded-lg mt-6 shadow-md">
-          <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
+          <h4 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">
             RD Calculation Formula:
-          </h3>
+          </h4>
           <p className="mb-2 md:mb-4">
             For monthly deposits, the formula for calculating the maturity
             amount (A) is:

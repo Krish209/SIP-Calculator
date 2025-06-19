@@ -21,9 +21,9 @@ const ErrorPage = () => {
   useEffect(() => {
 
     // Set 404 status (works with Netlify's redirect setup)
-    // if (typeof window !== 'undefined') {
-    //   window.http404 = () => {}; // Marker for Netlify
-    // }
+    if (typeof window !== 'undefined') {
+      window.http404 = () => {}; // Marker for Netlify
+    }
 
     // Start a countdown timer
     const timer = setInterval(() => {

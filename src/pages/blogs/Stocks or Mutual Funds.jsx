@@ -194,7 +194,7 @@ const StocksorMutualFunds = () => {
           </h2>
           <div className="space-y-5">
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">
                 Pros
               </h3>
 
@@ -224,11 +224,11 @@ const StocksorMutualFunds = () => {
                 </li>
               </ul>
             </div>
+
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">
                 Cons
               </h3>
-
               <ul className="list-disc space-y-1 pl-6 mb-2">
                 <li>
                   <strong>High Risk</strong>: Stocks are subject to market
@@ -280,7 +280,7 @@ const StocksorMutualFunds = () => {
           </h2>
           <div className="space-y-5">
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">
                 Pros
               </h3>
 
@@ -346,7 +346,7 @@ const StocksorMutualFunds = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-[17px] sm:text-lg md:text-xl font-semibold mb-2 md:mb-2">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">
                 Cons
               </h3>
 
