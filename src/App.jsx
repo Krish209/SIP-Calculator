@@ -175,7 +175,8 @@ function App() {
           <Route path="dividend-calculator" element={<DividendYieldCalc />} />
         </Route>
         {/* ErrorPage is displayed without HomeLayout */}
-        <Route path="*" element={<ErrorPage />} />{" "}
+        <Route path="/404" element={<ErrorPage />} />
+        <Route path="*" element={<ErrorPage />} />
         {/* Wildcard for undefined routes */}
       </Routes>
     </div>

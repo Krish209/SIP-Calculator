@@ -7,7 +7,7 @@ import aud from "../assets/icons/ds.mp3"; // Optional background music
 import MeteorEffect from "./Meteor";
 
 const ErrorPage = () => {
-  const [countdown, setCountdown] = useState(20); // Initialize the countdown to 6
+  const [countdown, setCountdown] = useState(10); // Initialize the countdown to 10
   const navigate = useNavigate(); // Initialize the navigate function
 
   // const playBackgroundMusic = () => {
@@ -19,12 +19,18 @@ const ErrorPage = () => {
   // };
 
   useEffect(() => {
+
+    // Set 404 status (works with Netlify's redirect setup)
+    if (typeof window !== 'undefined') {
+      window.http404 = () => {}; // Marker for Netlify
+    }
+
     // Start a countdown timer
     const timer = setInterval(() => {
       setCountdown((prev) => {
         if (prev === 1) {
           clearInterval(timer);
-          navigate("/"); // Redirect to homepage when countdown reaches 0
+          navigate("/", { replace: true }); // Redirect to homepage when countdown reaches 0
         }
         return prev - 1;
       });
@@ -40,6 +46,7 @@ const ErrorPage = () => {
       <Helmet>
         <title>404 Page Not Found | SIPGo</title>
         <meta name="robots" content="noindex, nofollow" />
+        <link rel="canonical" href="https://www.sipgo.in/404" /> {/* Self-referential */}
       </Helmet>
 
       {/* Background Image or Video */}
