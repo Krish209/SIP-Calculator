@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import HomeLayout from "./components/HomeLayout";
 
 import HomeLanding from "./components/Home";
@@ -176,9 +176,8 @@ function App() {
         </Route>
 
         {/* ErrorPage is displayed without HomeLayout */}
-        <Route path="/404" element={<ErrorPage />} />
-        {/* <Route path="*" element={<ErrorPage />} /> */}
-        <Route path="*" element={<Navigate to="/404" replace />} />
+        {/* <Route path="/404" element={<ErrorPage />} /> */}
+        <Route path="*" element={<ErrorPage />} />
         {/* Wildcard for undefined routes */}
       </Routes>
     </div>
