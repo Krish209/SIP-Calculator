@@ -6,7 +6,7 @@ import {
   AiOutlineStock,
   AiOutlineHome,
   AiOutlineThunderbolt,
-  AiOutlinePieChart
+  AiOutlinePieChart,
 } from "react-icons/ai";
 import { ImInfinite } from "react-icons/im";
 import { VscPercentage } from "react-icons/vsc";
@@ -20,37 +20,47 @@ import { TbPigMoney } from "react-icons/tb";
 import { FiClipboard } from "react-icons/fi";
 import { FaChildDress } from "react-icons/fa6";
 import { CgGirl } from "react-icons/cg";
-import { HiOutlineCalculator, HiOutlineChartBar, HiOutlineUserGroup } from "react-icons/hi";
+import {
+  HiOutlineCalculator,
+  HiOutlineChartBar,
+  HiOutlineUserGroup,
+} from "react-icons/hi";
 import { LuChartNoAxesCombined } from "react-icons/lu";
 
-
-const AllCalculator = ({ headingLevel: Heading = "h1", headingLevel2: Heading2 = "h2"  }) => {
+const AllCalculator = ({
+  headingLevel: Heading = "h1",
+  headingLevel2: Heading2 = "h2",
+}) => {
   // Data for calculators
   const calculators = [
     {
       title: "PPF Calculator",
-      description: "Calculate returns on your Public Provident Fund investments with tax benefits.",
+      description:
+        "Calculate returns on your Public Provident Fund investments with tax benefits.",
       icon: <RiMoneyRupeeCircleLine className="w-8 h-8 text-indigo-500" />,
       category: "Tax-Saving",
       link: "/ppf-calculator",
     },
     {
       title: "NPS Calculator",
-      description: "Plan your National Pension Scheme contributions for retirement.",
+      description:
+        "Plan your National Pension Scheme contributions for retirement.",
       icon: <HiOutlineUserGroup className="w-8 h-8 text-indigo-500" />,
       category: "Retirement",
       link: "/nps-calculator",
     },
     {
       title: "FD Calculator",
-      description: "Calculate returns on Fixed Deposits with different interest rates.",
+      description:
+        "Calculate returns on Fixed Deposits with different interest rates.",
       icon: <AiOutlinePieChart className="w-8 h-8 text-indigo-500" />,
       category: "Fixed Income",
       link: "/fd-calculator",
     },
     {
       title: "EMI Calculator",
-      description: "Calculate your Equated Monthly Installments for loans and mortgages.",
+      description:
+        "Calculate your Equated Monthly Installments for loans and mortgages.",
       icon: <FaRegCalendarAlt className="w-8 h-8 text-indigo-500" />,
       category: "Loans",
       link: "/emi-calculator",
@@ -85,35 +95,40 @@ const AllCalculator = ({ headingLevel: Heading = "h1", headingLevel2: Heading2 =
     },
     {
       title: "RD Calculator",
-      description: "Calculate returns on your Recurring Deposits with monthly contributions.",
+      description:
+        "Calculate returns on your Recurring Deposits with monthly contributions.",
       icon: <AiOutlineStock className="w-8 h-8 text-indigo-500" />,
       category: "Fixed Income",
       link: "/rd-calculator",
     },
     {
       title: "SIP Calculator",
-      description: "Calculate returns on your Systematic Investment Plans with compounding.",
+      description:
+        "Calculate returns on your Systematic Investment Plans with compounding.",
       icon: <HiOutlineChartBar className="w-8 h-8 text-indigo-500" />,
       category: "Mutual Funds",
       link: "/sip-calculator",
     },
     {
       title: "Lumpsum Calculator",
-      description: "Calculate returns on one-time investments and compare with SIP.",
+      description:
+        "Calculate returns on one-time investments and compare with SIP.",
       icon: <HiOutlineCalculator className="w-8 h-8 text-indigo-500" />,
       category: "Mutual Funds",
       link: "/lumpsum-calculator",
     },
     {
       title: "Step-Up SIP Calculator",
-      description: "Estimate returns with annually increasing SIP contributions.",
+      description:
+        "Estimate returns with annually increasing SIP contributions.",
       category: "Mutual Funds",
       link: "/step-up-sip-calculator",
       icon: <PiStepsDuotone className="w-8 h-8 text-indigo-500" />,
     },
     {
       title: "SWP Calculator",
-      description: "Plan your Systematic Withdrawal Plan and see how long your money lasts.",
+      description:
+        "Plan your Systematic Withdrawal Plan and see how long your money lasts.",
       icon: <GiReceiveMoney className="w-8 h-8 text-indigo-500" />,
       category: "Mutual Funds",
       link: "/swp-calculator",
@@ -127,14 +142,16 @@ const AllCalculator = ({ headingLevel: Heading = "h1", headingLevel2: Heading2 =
     },
     {
       title: "NSC Calculator",
-      description: "Calculate returns on National Savings Certificates with tax implications.",
+      description:
+        "Calculate returns on National Savings Certificates with tax implications.",
       icon: <FiClipboard className="w-8 h-8 text-indigo-500" />,
       category: "Tax-Saving",
       link: "/nsc-calculator",
     },
     {
       title: "SSY Calculator",
-      description: "Plan Sukanya Samriddhi Yojana investments for your girl child.",
+      description:
+        "Plan Sukanya Samriddhi Yojana investments for your girl child.",
       icon: <FaChildDress className="w-8 h-8 text-indigo-500" />,
       category: "Savings",
       link: "/ssy-calculator",
@@ -223,7 +240,10 @@ const AllCalculator = ({ headingLevel: Heading = "h1", headingLevel2: Heading2 =
               >
                 <div className="p-4 sm:p-5 h-full flex flex-col">
                   <div className="flex gap-3 mb-3 items-center">
-                    <div className="p-2 bg-indigo-50 rounded-lg flex-shrink-0 flex items-center justify-center">
+                    <div
+                      className="p-2 bg-indigo-50 rounded-lg flex-shrink-0 flex items-center justify-center"
+                      aria-label={`${calc.title} icon`}
+                    >
                       {calc.icon}
                     </div>
                     <div className="flex-1">

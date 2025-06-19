@@ -4,8 +4,10 @@ import { Helmet } from "react-helmet-async";
 
 function BlogHome() {
   // SEO Meta Variables
-  const pageTitle = "Financial Blog - Expert Investment Insights & Tips | SIPGo";
-  const pageDescription = "Explore our financial blog for expert insights on SIP, mutual funds, tax planning, and wealth management strategies.";
+  const pageTitle =
+    "Financial Blog - Expert Investment Insights & Tips | SIPGo";
+  const pageDescription =
+    "Explore our financial blog for expert insights on SIP, mutual funds, tax planning, and wealth management strategies.";
   const canonicalUrl = "https://www.sipgo.in/blog";
 
   return (
@@ -14,7 +16,10 @@ function BlogHome() {
         {/* Primary Meta Tags */}
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="financial blog, investment tips, SIP guide, mutual funds, tax planning" />
+        <meta
+          name="keywords"
+          content="financial blog, investment tips, SIP guide, mutual funds, tax planning"
+        />
         <link rel="canonical" href={canonicalUrl} />
 
         {/* Open Graph / Facebook */}
@@ -22,13 +27,19 @@ function BlogHome() {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content="https://www.sipgo.in/images/blog-social-preview.jpg" />
-        
+        <meta
+          property="og:image"
+          content="https://www.sipgo.in/images/blog-social-preview.jpg"
+        />
+
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
-        <meta name="twitter:image" content="https://www.sipgo.in/images/blog-social-preview.jpg" />
+        <meta
+          name="twitter:image"
+          content="https://www.sipgo.in/images/blog-social-preview.jpg"
+        />
 
         {/* ========== SCHEMA MARKUP ========== */}
         {/* Blog Schema */}
@@ -36,18 +47,18 @@ function BlogHome() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Blog",
-            "name": "SIPGo Financial Blog",
-            "description": pageDescription,
-            "url": canonicalUrl,
-            "publisher": {
+            name: "SIPGo Financial Blog",
+            description: pageDescription,
+            url: canonicalUrl,
+            publisher: {
               "@type": "Organization",
-              "name": "SIPGo",
-              "logo": {
+              name: "SIPGo",
+              logo: {
                 "@type": "ImageObject",
-                "url": "https://www.sipgo.in/images/logo.png"
-              }
+                url: "https://www.sipgo.in/images/logo.png",
+              },
             },
-            "dateModified": new Date().toISOString()
+            dateModified: new Date().toISOString(),
           })}
         </script>
 
@@ -56,20 +67,22 @@ function BlogHome() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
-            "itemListElement": [
-              { 
-                "@type": "ListItem", 
-                "position": 1, 
-                "name": "Home", 
-                "item": "https://www.sipgo.in/" 
+            "@id": "https://www.sipgo.in/blog",
+            name: "Home Blog Navigation Path",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.sipgo.in/",
               },
-              { 
-                "@type": "ListItem", 
-                "position": 2, 
-                "name": "Blog", 
-                "item": canonicalUrl 
-              }
-            ]
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Blog",
+                item: canonicalUrl,
+              },
+            ],
           })}
         </script>
       </Helmet>
@@ -90,7 +103,7 @@ function BlogHome() {
                 <div className="aspect-w-16 aspect-h-9 overflow-hidden">
                   <img
                     src={post.image}
-                    alt={`Cover for ${post.title}`}
+                    alt={`Illustration image for ${post.title}`}
                     className="w-full h-46 object-cover transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                   />

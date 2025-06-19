@@ -207,7 +207,7 @@ const BlogLayout = ({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "@id": `https://www.sipgo.in/blog/${slug}`,
-            name: "Blog Navigation Path",
+            name: "Each Blogs Navigation Path",
             itemListElement: [
               {
                 "@type": "ListItem",
@@ -389,7 +389,7 @@ const BlogLayout = ({
                     <div className="aspect-w-16 aspect-h-9 overflow-hidden">
                       <img
                         src={post.image}
-                        alt={post.title}
+                        alt={`Illustration image for ${post.title}`}
                         className="w-full h-46 object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
