@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>404 Page Not Found | SIPGo</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      background-image: url('/icons/bh2.jpg'); /* update this if path is different */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      background: linear-gradient(to right, #a78bfa, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .redirect-link {
+      color: #60a5fa;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="content">
+    <h1>404 - Lost in Space!</h1>
+    <p>It seems the page you're looking for has vanished into the cosmos.</p>
+    <p>Redirecting you to safety in <span id="countdown">10</span> seconds...</p>
+    <p>Or <a class="redirect-link" href="/">click here</a> to go home 🚀</p>
+  </div>
+  <script>
+    let seconds = 10;
+    const countdown = document.getElementById("countdown");
+
+    const interval = setInterval(() => {
+      seconds--;
+      countdown.innerText = seconds;
+      if (seconds <= 0) {
+        clearInterval(interval);
+        window.location.href = "/";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
