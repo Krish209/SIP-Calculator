@@ -4,6 +4,6 @@ http://www.sipgo.in/* https://www.sipgo.in/:splat 301!
 https://sipgo.in/* https://www.sipgo.in/:splat 301!
 
 # Handle SPA routes for React, Vue, etc.
- /404  /index.html   404
- /* /index.html 200
+/*    /index.html   200
+/404  /index.html   404
  
