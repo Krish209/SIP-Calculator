@@ -164,3 +164,106 @@
 
 //   </body>
 // </html>
+
+
+
+
+// url testing
+
+// https://www.sipgo.in
+// http://www.sipgo.in
+// http://sipgo.in
+// https://www.sipgo.in/fdjf
+// https://www.sipgo.in/bhaihafdd
+// https://www.sipgo.in/404
+// https://www.sipgo.in/about
+// https://www.sipgo.in/contact
+// https://www.sipgo.in/terms
+// https://www.sipgo.in/privacy-policy
+// https://www.sipgo.in/disclaimer
+// https://www.sipgo.in/blog
+// https://www.sipgo.in/blog/how-to-achieve-a-monthly-pension-of-50k-with-nps
+// https://www.sipgo.in/blog/sip-vs-lumpsum
+// https://www.sipgo.in/blog/why-risk-is-part-of-investing
+// https://www.sipgo.in/blog/investing-vs-gambling-whats-the-real-difference
+// https://www.sipgo.in/blog/beating-inflation
+// https://www.sipgo.in/blog/what-are-stocks-etfs-mutual-funds-and-bonds
+// https://www.sipgo.in/blog/how-to-create-passive-income-with-investments
+// https://www.sipgo.in/blog/how-does-compounding-work
+// https://www.sipgo.in/blog/how-to-diversify-your-investment-portfolio
+// https://www.sipgo.in/blog/how-do-inflation-and-taxes-impact-investments
+// https://www.sipgo.in/blog/how-to-invest-if-you-are-self-employed-or-a-freelancer
+// https://www.sipgo.in/blog/stocks-vs-mutual-funds
+// https://www.sipgo.in/blog/difference-between-saving-and-investing
+// https://www.sipgo.in/calc
+// https://www.sipgo.in/ppf-calculator
+// https://www.sipgo.in/fd-calculator
+// https://www.sipgo.in/nps-calculator
+// https://www.sipgo.in/nsc-calculator
+// https://www.sipgo.in/ssy-calculator
+// https://www.sipgo.in/rd-calculator
+// https://www.sipgo.in/kvp-calculator
+// https://www.sipgo.in/emi-calculator
+// https://www.sipgo.in/car-loan-calculator
+// https://www.sipgo.in/home-loan-calculator
+// https://www.sipgo.in/personal-loan-calculator
+// https://www.sipgo.in/education-loan-calculator
+// https://www.sipgo.in/sip-calculator
+// https://www.sipgo.in/lumpsum-calculator
+// https://www.sipgo.in/mutual-fund-calculator
+// https://www.sipgo.in/step-up-sip-calculator
+// https://www.sipgo.in/swp-calculator
+// https://www.sipgo.in/gst-calculator
+// https://www.sipgo.in/inflation-calculator
+// https://www.sipgo.in/gratuity-calculator
+// https://www.sipgo.in/roi-calculator
+// https://www.sipgo.in/dividend-calculator
+// https://www.sipgo.in/simple-interest-calculator
+// https://www.sipgo.in/compound-interest-calculator
+// https://sipgo.in
+// https://sipgo.in/about
+// https://sipgo.in/contact
+// https://sipgo.in/terms
+// https://sipgo.in/privacy-policy
+// https://sipgo.in/disclaimer
+// https://sipgo.in/blog
+// https://sipgo.in/blog/how-to-achieve-a-monthly-pension-of-50k-with-nps
+// https://sipgo.in/blog/sip-vs-lumpsum
+// https://sipgo.in/blog/why-risk-is-part-of-investing
+// https://sipgo.in/blog/investing-vs-gambling-whats-the-real-difference
+// https://sipgo.in/blog/beating-inflation
+// https://sipgo.in/blog/what-are-stocks-etfs-mutual-funds-and-bonds
+// https://sipgo.in/blog/how-to-create-passive-income-with-investments
+// https://sipgo.in/blog/how-does-compounding-work
+// https://sipgo.in/blog/how-to-diversify-your-investment-portfolio
+// https://sipgo.in/blog/how-do-inflation-and-taxes-impact-investments
+// https://sipgo.in/blog/how-to-invest-if-you-are-self-employed-or-a-freelancer
+// https://sipgo.in/blog/stocks-vs-mutual-funds
+// https://sipgo.in/blog/difference-between-saving-and-investing
+// https://sipgo.in/calc
+// https://sipgo.in/ppf-calculator
+// https://sipgo.in/fd-calculator
+// https://sipgo.in/nps-calculator
+// https://sipgo.in/nsc-calculator
+// https://sipgo.in/ssy-calculator
+// https://sipgo.in/rd-calculator
+// https://sipgo.in/kvp-calculator
+// https://sipgo.in/emi-calculator
+// https://sipgo.in/car-loan-calculator
+// https://sipgo.in/home-loan-calculator
+// https://sipgo.in/personal-loan-calculator
+// https://sipgo.in/education-loan-calculator
+// https://sipgo.in/sip-calculator
+// https://sipgo.in/lumpsum-calculator
+// https://sipgo.in/mutual-fund-calculator
+// https://sipgo.in/step-up-sip-calculator
+// https://sipgo.in/swp-calculator
+// https://sipgo.in/gst-calculator
+// https://sipgo.in/inflation-calculator
+// https://sipgo.in/gratuity-calculator
+// https://sipgo.in/roi-calculator
+// https://sipgo.in/dividend-calculator
+// https://sipgo.in/simple-interest-calculator
+// https://sipgo.in/compound-interest-calculator
+
+
