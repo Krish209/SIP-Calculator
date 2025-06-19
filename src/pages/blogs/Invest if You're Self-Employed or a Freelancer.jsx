@@ -1,7 +1,7 @@
 import React from "react";
 import Table from "../../consts/Table";
 import BlogLayout from "../../consts/BlogLayout";
-import img from "../../assets/icons/blogs/self-employed2.jpeg";
+import img from "../../assets/icons/blogs/self-employed.jpeg";
 
 export const meta = {
   title: "How to Invest if You're Self-Employed or a Freelancer in India",

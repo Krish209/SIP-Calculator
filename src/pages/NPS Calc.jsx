@@ -171,6 +171,10 @@ function NPSCalculator() {
         <meta name="keywords" content="NPS Calculator, National Pension Scheme, Pension Calculator, NPS Returns" />
         <link rel="canonical" href={canonicalUrl} />
 
+        {/* hreflang implementation */}
+        <link rel="alternate" hreflang="en" href={canonicalUrl} />
+        <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />

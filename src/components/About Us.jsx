@@ -17,6 +17,10 @@ export default function AboutPage() {
         <meta name="description" content={pageDescription} />
         <link rel="canonical" href={canonicalUrl} />
 
+        {/* hreflang implementation */}
+        <link rel="alternate" hreflang="en" href={canonicalUrl} />
+        <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+        
         {/* Single High-Value Schema */}
         <script type="application/ld+json">
           {JSON.stringify({

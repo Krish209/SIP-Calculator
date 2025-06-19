@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async"; // for SEO, Schema Markup, etc.
 
 import { RiMoneyRupeeCircleLine, RiStockLine } from "react-icons/ri";
 import {
@@ -212,6 +213,10 @@ const AllCalculator = ({
           <title>{pageTitle}</title>
           <meta name="description" content={pageDescription} />
           <link rel="canonical" href={canonicalUrl} />
+
+          {/* hreflang implementation */}
+          <link rel="alternate" hreflang="en" href={canonicalUrl} />
+          <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
 
           {/* Open Graph */}
           <meta property="og:title" content={pageTitle} />

@@ -21,15 +21,9 @@ const ErrorPage = () => {
   useEffect(() => {
 
     // Set 404 status (works with Netlify's redirect setup)
-    // if (typeof window !== 'undefined') {
-      window.http404 = true; // Marker for Netlify
-    // }
-
-    // Set HTTP status for crawlers
-    const meta = document.createElement('meta');
-    meta.httpEquiv = "status";
-    meta.content = "404";
-    document.head.appendChild(meta);
+    if (typeof window !== 'undefined') {
+      window.http404 = () => {}; // Marker for Netlify
+    }
 
     // Start a countdown timer
     const timer = setInterval(() => {
@@ -52,15 +46,14 @@ const ErrorPage = () => {
       <Helmet>
         <title>404 Page Not Found | SIPGo</title>
         <meta name="robots" content="noindex, nofollow" />
-        <meta http-equiv="status" content="404" />
-        <link rel="canonical" href="https://www.sipgo.in/404" /> {/* Self-referential */}
+        {/* <link rel="canonical" href="https://www.sipgo.in/404" /> Self-referential */}
       </Helmet>
 
       {/* Background Image or Video */}
       <div className="absolute inset-0 w-full h-full z-0">
         <img
           src={img}
-          alt="Galaxy Background"
+          alt="Galaxy Background illustoration"
           className="w-full h-full object-cover opacity-70" // Adjusted opacity for better readability
         />
         {/* Optional: Use a video background instead */}

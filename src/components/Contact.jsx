@@ -45,6 +45,10 @@ const Contact = () => {
         <meta name="keywords" content="contact SIPGo, financial calculator support, investment tools help, customer service, SIP calculator help, PPF calculator support" />
         <link rel="canonical" href={canonicalUrl} />
 
+        {/* hreflang implementation */}
+        <link rel="alternate" hreflang="en" href={canonicalUrl} />
+        <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
@@ -230,7 +234,7 @@ const Contact = () => {
           <div className="pt-4 border-t border-gray-100">
             <p className="text-sm text-gray-500">
               By submitting this form, you agree to our{' '}
-              <a href="/privacy" className="text-indigo-600 hover:underline">Privacy Policy</a>.
+              <a href="/privacy-policy" className="text-indigo-600 hover:underline">Privacy Policy</a>.
             </p>
           </div>
         </div>

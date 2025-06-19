@@ -71,7 +71,7 @@ function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-8 py-2">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2">
-            <img src={logo} alt="Logo" className="w-8 h-auto" />
+            <img src={logo} alt="Logo of the SIPGo Website" className="w-8 h-auto" />
           </Link>
 
           {/* Desktop Navigation */}

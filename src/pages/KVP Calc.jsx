@@ -51,6 +51,10 @@ function KVP() {
         <meta name="keywords" content="KVP Calculator, Kisan Vikas Patra Interest, KVP Maturity, KVP Tax, Savings Scheme India" />
         <link rel="canonical" href={canonicalUrl} />
 
+        {/* hreflang implementation */}
+        <link rel="alternate" hreflang="en" href={canonicalUrl} />
+        <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />

@@ -5,55 +5,83 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async"; // for SEO, Schema Markup, etc.
 
 const HomeLanding = () => {
+  // For Schema
+  const pageTitle =
+    "SIPGo - Smart Financial Calculators for Investment Planning";
+  const pageDescription =
+    "Free online financial calculators for SIP, mutual funds, PPF, FD & more. Calculate returns, compare investments & plan your financial future with SIPGo's accurate tools.";
+  const canonicalUrl = "https://www.sipgo.in/";
+
   return (
     <div className="min-h-screen bg-gray-50 font-sans overflow-hidden">
       {/* Hero Section */}
       <Helmet>
-        <title>SIPGo - Smart Financial Calculators for Investment Planning</title>
-        <meta 
-          name="description" 
-          content="Free online financial calculators for SIP, mutual funds, PPF, FD & more. Calculate returns, compare investments & plan your financial future with SIPGo's accurate tools." 
-        />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <meta
           name="keywords"
           content="SIP calculator, investment calculator, mutual fund calculator, financial planning tools, PPF calculator, FD calculator, retirement planning, wealth management"
         />
-        
-        {/* Canonical URL */}
-        <link rel="canonical" href="https://www.sipgo.in/" />
-        
+        <link rel="canonical" href={canonicalUrl} />
+
+        {/* hreflang implementation */}
+        <link rel="alternate" hreflang="en" href={canonicalUrl} />
+        <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.sipgo.in/" />
-        <meta property="og:title" content="SIPGo - Smart Financial Calculators for Investment Planning" />
-        <meta property="og:description" content="Free online financial calculators for SIP, mutual funds, PPF, FD & more. Calculate returns, compare investments & plan your financial future." />
-        <meta property="og:image" content="https://www.sipgo.in/images/logo.png" />
-        
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta
+          property="og:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
+
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="SIPGo - Smart Financial Calculators for Investment Planning" />
-        <meta name="twitter:description" content="Free online financial calculators for SIP, mutual funds, PPF, FD & more. Calculate returns with accuracy." />
-        <meta name="twitter:image" content="https://www.sipgo.in/images/logo.png" />
-        
-        {/* Structured Data */}
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta
+          name="twitter:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
+
+        {/* ========== CRITICAL SCHEMA MARKUP ========== */}
+
+        {/* Primary WebPage Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "SIPGo - Smart Financial Calculators for Investment Planning",
-            "description": "Free online financial calculators for SIP, mutual funds, PPF, FD & more",
-            "url": "https://www.sipgo.in/",
-            "breadcrumb": {
-              "@type": "BreadcrumbList",
-              "@id": "https://www.sipgo.in/",
-              "name": "Home Page Navigation Path",
-              "itemListElement": [{
+            name: pageTitle,
+            description: pageDescription,
+            url: canonicalUrl,
+            "@id": canonicalUrl,
+            isPartOf: {
+              "@type": "WebSite",
+              name: "SIPGo Financial Calculators",
+              url: "https://www.sipgo.in",
+            },
+            dateModified: "2025-06-15T00:00:00Z",
+          })}
+        </script>
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://www.sipgo.in/#breadcrumb",
+            name: "Home Page Navigation Path",
+            itemListElement: [
+              {
                 "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.sipgo.in/"
-              }]
-            }
+                position: 1,
+                name: "Home",
+                item: canonicalUrl,
+              },
+            ],
           })}
         </script>
       </Helmet>
@@ -304,7 +332,7 @@ const HomeLanding = () => {
 
       {/* Calculator Categories */}
       <div>
-        <AllCalculator headingLevel="h2" headingLevel2="h3"/>
+        <AllCalculator headingLevel="h2" headingLevel2="h3" />
       </div>
     </div>
   );

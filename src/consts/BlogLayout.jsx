@@ -314,7 +314,7 @@ const BlogLayout = ({
           <figure className="mb-4 sm:mb-6">
             <img
               src={image}
-              alt={`${title} cover image`} // More descriptive alt text
+              alt={`Illustration image for ${title}`} // More descriptive alt text
               className="w-full rounded-xl shadow-md"
               loading="lazy"
             />

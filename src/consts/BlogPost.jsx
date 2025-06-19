@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import imgNps from "../assets/icons/blogs/registration.jpeg";
+import imgNps from "../assets/icons/blogs/registration2.jpeg";
 import imgSipVsLumpsum from "../assets/icons/blogs/sip-lump2.jpeg";
 import imgRisk from "../assets/icons/blogs/riskvsreward3.png";
 import imgInvestingVsGambling from "../assets/icons/blogs/investingvsgambling.jpeg";

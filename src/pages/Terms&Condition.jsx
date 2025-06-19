@@ -16,6 +16,10 @@ const TermsAndConditions = () => {
         <meta name="description" content={pageDescription} />
         <link rel="canonical" href={canonicalUrl} />
 
+        {/* hreflang implementation */}
+        <link rel="alternate" hreflang="en" href={canonicalUrl} />
+        <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+
         {/* Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
