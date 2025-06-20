@@ -6,8 +6,14 @@ import { Helmet } from "react-helmet-async"; // for SEO, Schema Markup, etc.
 
 const HomeLanding = () => {
   // For Schema
+
+  // const pageTitle =  SIPGo - more than Calculator
+  // const pageTitle =  SIPGo - Free SIP, FD & EMI Calculators for Smarter Investing
   const pageTitle =
     "SIPGo - Smart Financial Calculators for Investment Planning";
+  // const pageDescription =
+  //   "SIPGo offers powerful, accurate financial calculators to estimate growth, compare returns with real-time insights. Explore detailed overviews to make smarter investment decisions.";
+
   const pageDescription =
     "Free online financial calculators for SIP, mutual funds, PPF, FD & more. Calculate returns, compare investments & plan your financial future with SIPGo's accurate tools.";
   const canonicalUrl = "https://www.sipgo.in/";
