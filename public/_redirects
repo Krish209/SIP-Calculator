@@ -3,5 +3,5 @@ http://sipgo.in/* https://www.sipgo.in/:splat 301!
 http://www.sipgo.in/* https://www.sipgo.in/:splat 301!
 https://sipgo.in/* https://www.sipgo.in/:splat 301!
 
-# Fallback for SPA — only if not matching a real file or route
+# Handle SPA routes for React, Vue, etc.
 /*    /index.html  200
