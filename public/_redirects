@@ -3,8 +3,5 @@ http://sipgo.in/* https://www.sipgo.in/:splat 301!
 http://www.sipgo.in/* https://www.sipgo.in/:splat 301!
 https://sipgo.in/* https://www.sipgo.in/:splat 301!
 
-# Custom 404 page with correct status
-/404  /404.html  404
-
 # Fallback for SPA — only if not matching a real file or route
 /*    /index.html  200
