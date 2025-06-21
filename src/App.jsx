@@ -175,16 +175,10 @@ function App() {
           <Route path="dividend-calculator" element={<DividendYieldCalc />} />
         </Route>
 
-        {/* Special 404 handler */}
-      <Route path="/not-found" element={<ErrorPage />} />
-      
-      {/* Catch-all with Netlify sync */}
-      <Route path="*" element={
-        window.location.pathname.includes('/404.html') 
-          ? <Navigate to="/not-found" replace state={{ fromNetlify: true }} />
-          : <ErrorPage />
-      } />
-    </Routes>
+        {/* ErrorPage is displayed without HomeLayout */}
+        <Route path="*" element={<ErrorPage />} />
+        {/* Wildcard for undefined routes */}
+      </Routes>
     </div>
   );
 }

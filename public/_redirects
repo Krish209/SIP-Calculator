@@ -56,5 +56,5 @@ http://www.sipgo.in/*     https://www.sipgo.in/:splat 301
 /simple-interest-calculator         /index.html 200
 /compound-interest-calculator       /index.html 200
 
-# Everything else → 404
-/* /404.html 404
+# Everything else → Show SPA but with 404 status
+/*             /index.html 404
