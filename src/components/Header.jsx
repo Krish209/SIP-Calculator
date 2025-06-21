@@ -55,27 +55,20 @@ function Header() {
     setActiveDropdown((prev) => (prev === index ? null : index));
   }, []);
 
-  // Close mobile menu if clicked outside
-  useEffect(() => {
-    const closeMenu = (e) => {
-      if (menuRef.current && !menuRef.current.contains(e.target)) {
-        setMobileMenu(false);
-      }
-    };
-    document.addEventListener("mousedown", closeMenu);
-    return () => document.removeEventListener("mousedown", closeMenu);
-  }, []);
-
   return (
     <header className="bg-white text-primary shadow-md sticky top-0 z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-8 py-2">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2">
-            <img src={logo} alt="Logo of the SIPGo Website" className="w-8 h-auto" />
+            <img
+              src={logo}
+              alt="Logo of the SIPGo Website"
+              className="w-8 h-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex lg:space-x-6 pr-5">
+          <nav role="navigation" className="hidden md:flex lg:space-x-6 pr-5">
             {links.map((item, index) => (
               <div
                 key={index}
@@ -158,7 +151,11 @@ function Header() {
         ${mobileMenu ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="px-4 sm:px-6 lg:px-8 py-2 border-b border-gray-100 flex justify-between items-center">
-          <img src={logo} alt="Logo" className="w-8 h-auto" />
+          <img
+            src={logo}
+            alt="Logo of the SIPGo Website"
+            className="w-8 h-auto"
+          />
           <button
             onClick={toggleMobileMenu}
             className="p-2 rounded-lg hover:bg-gray-100"
@@ -168,55 +165,57 @@ function Header() {
           </button>
         </div>
 
-        <nav className="p-4 overflow-y-auto">
+        <nav role="navigation" className="p-4 overflow-y-auto">
           {links.map((item, index) => (
             <div key={index} className="mb-2">
-              <button
-                onClick={() => item.submenu && handleDropdownToggle(index)}
-                className={`w-full flex items-center justify-between px-4 py-3 rounded-lg
-                  ${
-                    activeDropdown === index
-                      ? "bg-indigo-50 text-indigo-600"
-                      : "hover:bg-gray-100"
-                  }`}
-              >
+              {!item.submenu ? (
                 <NavLink
-                  to={!item.submenu ? item.link : "#"}
-                  onClick={() => !item.submenu && setMobileMenu(false)}
-                  className="flex-1 text-left"
+                  to={item.link}
+                  onClick={() => setMobileMenu(false)}
+                  className="w-full flex items-center justify-between px-4 py-3 rounded-lg hover:bg-gray-100"
                 >
                   {item.name}
                 </NavLink>
-                {item.submenu && (
-                  <FiChevronDown
-                    className={`transform transition-transform ${
-                      activeDropdown === index ? "rotate-180" : ""
+              ) : (
+                <>
+                  <button
+                    onClick={() => handleDropdownToggle(index)}
+                    className={`w-full flex items-center justify-between px-4 py-3 rounded-lg ${
+                      activeDropdown === index
+                        ? "bg-indigo-50 text-indigo-600"
+                        : "hover:bg-gray-100"
                     }`}
-                  />
-                )}
-              </button>
-
-              {/* Mobile Dropdown Menu */}
-              {item.submenu && activeDropdown === index && (
-                <div className="ml-4 mt-1 space-y-0">
-                  {item.sublinks.map((sublink, subIndex) => (
-                    <NavLink
-                      key={subIndex}
-                      to={sublink.link}
-                      onClick={() => setMobileMenu(false)}
-                      className={({ isActive }) =>
-                        `block px-4 py-2 text-sm rounded-lg
-                        ${
-                          isActive
-                            ? "bg-indigo-50 text-indigo-600"
-                            : "hover:bg-gray-100"
-                        }`
-                      }
-                    >
-                      {sublink.name}
-                    </NavLink>
-                  ))}
-                </div>
+                    aria-haspopup="true"
+                    aria-expanded={activeDropdown === index}
+                  >
+                    <span>{item.name}</span>
+                    <FiChevronDown
+                      className={`transform transition-transform ${
+                        activeDropdown === index ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  {activeDropdown === index && (
+                    <div className="ml-4 mt-1 space-y-1">
+                      {item.sublinks.map((sublink, subIndex) => (
+                        <NavLink
+                          key={subIndex}
+                          to={sublink.link}
+                          onClick={() => setMobileMenu(false)}
+                          className={({ isActive }) =>
+                            `block px-4 py-2 text-sm rounded-lg ${
+                              isActive
+                                ? "bg-indigo-50 text-indigo-600"
+                                : "hover:bg-gray-100"
+                            }`
+                          }
+                        >
+                          {sublink.name}
+                        </NavLink>
+                      ))}
+                    </div>
+                  )}
+                </>
               )}
             </div>
           ))}

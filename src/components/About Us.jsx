@@ -1,65 +1,96 @@
 import { motion } from "framer-motion";
 import group from "../assets/icons/group.svg";
 import { CurrencyRupeeIcon } from "@heroicons/react/24/outline";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 export default function AboutPage() {
   // SEO variables (must match visible content)
   const pageTitle = "About SIPGo - Financial Calculator Experts";
-  const pageDescription = "SIPGo provides accurate SIP, PPF, and FD calculators to simplify investment planning in India. Learn about our mission and expertise.";
+  const pageDescription =
+    "SIPGo provides accurate SIP, PPF, and FD calculators to simplify investment planning in India. Learn about our mission and expertise.";
   const canonicalUrl = "https://www.sipgo.in/about";
+  const logoUrl = "https://www.sipgo.in/images/logo.png";
 
   return (
     <div className="min-h-screen text-primary">
       {/* Minimal SEO Tags */}
       <Helmet>
+        {/* Meta Tags */}
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
+        <meta
+          name="keywords"
+          content="About SIPGo, Financial Calculators, Investment Tools, SIP, PPF, FD"
+        />
         <link rel="canonical" href={canonicalUrl} />
 
-        {/* hreflang implementation */}
+        {/* Hreflang */}
         <link rel="alternate" hreflang="en" href={canonicalUrl} />
         <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
-        
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:image" content={logoUrl} />
+
+        {/* Twitter Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={logoUrl} />
+
         {/* Single High-Value Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "AboutPage",
-            "url": canonicalUrl,
-            "description": "Information about SIPGo's financial calculator services",
-            "mainEntity": {
+            "@type": "WebPage",
+            url: canonicalUrl,
+            name: pageTitle,
+            description:
+              "Information about SIPGo's financial calculator services",
+            mainEntity: {
               "@type": "Organization",
-              "name": "SIPGo",
-              "description": "Financial calculator platform for Indian investors",
-              "foundingDate": "2024", // Only include if accurate
-              "address": {
+              name: "SIPGo",
+              description: "Financial calculator platform for Indian investors",
+              foundingDate: "2024", // Only include if accurate
+              address: {
                 "@type": "PostalAddress",
-                "addressLocality": "Bengaluru",
-                "addressRegion": "KA",
-                "addressCountry": "IN"
-              }
-            }
+                addressLocality: "Bengaluru",
+                addressRegion: "KA",
+                addressCountry: "IN",
+              },
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "SIPGo",
+              logo: {
+                "@type": "ImageObject",
+                url: logoUrl,
+              },
+            },
           })}
         </script>
       </Helmet>
-      
+
       {/* Hero Section */}
-      <motion.section 
+      <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="bg-gradient-to-br from-indigo-600 to-blue-500 text-white py-24 px-4"
       >
         <div className="max-w-6xl mx-auto text-center">
-          <motion.div 
+          <motion.div
             whileHover={{ scale: 1.05 }}
             className="inline-block mb-8"
           >
             <CurrencyRupeeIcon className="h-24 w-24 text-yellow-400" />
           </motion.div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Revolutionizing Financial Planning Through<br/>
+            Revolutionizing Financial Planning Through
+            <br />
             <span className="bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent">
               Intelligent Calculation
             </span>
@@ -79,7 +110,7 @@ export default function AboutPage() {
             </p>
           </div>
           <img
-            src={group} 
+            src={group}
             alt="SIPGo team discussing financial strategies"
             className="rounded-lg shadow-xl"
             loading="lazy"

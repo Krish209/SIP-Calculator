@@ -204,6 +204,7 @@ const AllCalculator = ({
   const pageDescription =
     "Comprehensive suite of 20+ financial calculators for SIP, mutual funds, loans, tax-saving investments, and retirement planning. Compare returns instantly.";
   const canonicalUrl = "https://www.sipgo.in/calc";
+  const logoUrl = "https://www.sipgo.in/images/logo.png";
 
   return (
     <div className="min-h-screen bg-gradient-to-br text-primary from-indigo-50 to-blue-50">
@@ -212,24 +213,40 @@ const AllCalculator = ({
         <Helmet>
           <title>{pageTitle}</title>
           <meta name="description" content={pageDescription} />
+          <meta
+            name="keywords"
+            content="
+              SIP Calculator, Lumpsum Calculator, Step-up SIP Calculator, SWP Calculator,
+              PPF Calculator, FD Calculator, RD Calculator, NPS Calculator,
+              NSC Calculator, SSY Calculator, Sukanya Samriddhi Calculator,
+              EMI Calculator, Home Loan Calculator, Car Loan Calculator,
+              Personal Loan Calculator, Education Loan Calculator,
+              Retirement Calculator, Child Education Calculator,
+              Inflation Calculator, Gratuity Calculator, GST Calculator,
+              Compound Interest Calculator, Simple Interest Calculator, ROI Calculator,
+              Tax Saving Investments, Financial Planning, Wealth Management Tools,
+              Investment Growth Calculator, Mutual Fund Returns,
+              SIP Returns Calculation, Investment Comparison, Retirement Planning
+          "
+          />
           <link rel="canonical" href={canonicalUrl} />
 
           {/* hreflang implementation */}
           <link rel="alternate" hreflang="en" href={canonicalUrl} />
           <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
 
-          {/* Open Graph */}
+          {/* Open Graph / Facebook */}
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={canonicalUrl} />
           <meta property="og:title" content={pageTitle} />
           <meta property="og:description" content={pageDescription} />
-          <meta property="og:url" content={canonicalUrl} />
-          <meta
-            property="og:image"
-            content="https://www.sipgo.in/images/calculators-preview.jpg"
-          />
+          <meta property="og:image" content={logoUrl} />
 
-          {/* Twitter */}
+          {/* Twitter Tags */}
+          <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content={pageTitle} />
           <meta name="twitter:description" content={pageDescription} />
+          <meta name="twitter:image" content={logoUrl} />
 
           {/* Schema Markup */}
           <script type="application/ld+json">
@@ -254,6 +271,7 @@ const AllCalculator = ({
           </script>
         </Helmet>
       )}
+
       {/* Calculator Categories */}
       <section className="max-w-7xl mx-auto py-4 sm:py-8 md:py-12 px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-4 sm:mb-8 md:mb-10">

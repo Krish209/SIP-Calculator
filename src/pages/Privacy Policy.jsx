@@ -8,18 +8,33 @@ const PrivacyPolicy = () => {
   const canonicalUrl = "https://www.sipgo.in/privacy-policy";
   const effectiveDate = "2025-01-18";
   const lastUpdated = "2025-06-11";
+  const logoUrl = "https://www.sipgo.in/images/logo.png";
 
   return (
     <section className="bg-white py-6 sm:py-12 px-4 sm:px-6 lg:px-8 text-[15px] md:text-base">
       <Helmet>
-        {/* Essential Meta Tags */}
+        {/* Meta Tags */}
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
+        <meta name="keywords" content="Privacy Policy, SIPGo, Financial Calculators, Data Protection, SIPGo Policy" />
         <link rel="canonical" href={canonicalUrl} />
 
-        {/* hreflang implementation */}
+        {/* Hreflang */}
         <link rel="alternate" hreflang="en" href={canonicalUrl} />
         <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:image" content={logoUrl} />
+
+        {/* Twitter Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={logoUrl} />
 
         {/* Single High-Value Schema */}
         <script type="application/ld+json">
@@ -36,7 +51,7 @@ const PrivacyPolicy = () => {
               name: "SIPGo",
               logo: {
                 "@type": "ImageObject",
-                url: "https://www.sipgo.in/images/logo.png",
+                url: logoUrl,
               },
             },
           })}

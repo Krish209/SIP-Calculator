@@ -18,23 +18,26 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    
+
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+
     console.log("Submitted:", formData);
     setSubmitted(true);
     setIsLoading(false);
     setFormData({ name: "", email: "", message: "" });
-    
+
     // Reset submission status after 5 seconds
     setTimeout(() => setSubmitted(false), 5000);
   };
 
   // SEO Meta Variables
-  const pageTitle = "Contact SIPGo - Get Help with Financial Calculators & Investment Tools";
-  const pageDescription = "Need help with our financial calculators? Contact SIPGo's support team for assistance with SIP, PPF, FD, and other investment calculation tools.";
+  const pageTitle =
+    "Contact SIPGo - Get Help with Financial Calculators & Investment Tools";
+  const pageDescription =
+    "Need help with our financial calculators? Contact SIPGo's support team for assistance with SIP, PPF, FD, and other investment calculation tools.";
   const canonicalUrl = "https://www.sipgo.in/contact";
+  const logoUrl = "https://www.sipgo.in/images/logo.png";
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-indigo-100 to-pink-100 flex items-center justify-center py-12 px-4">
@@ -42,7 +45,10 @@ const Contact = () => {
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="contact SIPGo, financial calculator support, investment tools help, customer service, SIP calculator help, PPF calculator support" />
+        <meta
+          name="keywords"
+          content="contact SIPGo, financial calculator support, investment tools help, customer service, SIP calculator help, PPF calculator support"
+        />
         <link rel="canonical" href={canonicalUrl} />
 
         {/* hreflang implementation */}
@@ -54,59 +60,57 @@ const Contact = () => {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content="https://www.sipgo.in/images/logo.png" />
+        <meta property="og:image" content={logoUrl} />
 
-        {/* Twitter */}
+        {/* Twitter Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
-        <meta name="twitter:image" content="https://www.sipgo.in/images/logo.png" />
+        <meta name="twitter:image" content={logoUrl} />
 
         {/* Enhanced Schema Markup */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ContactPage",
-            "name": pageTitle,
-            "description": pageDescription,
-            "url": canonicalUrl,
-            "breadcrumb": {
+            name: pageTitle,
+            description: pageDescription,
+            url: canonicalUrl,
+            breadcrumb: {
               "@type": "BreadcrumbList",
-              "itemListElement": [
+              itemListElement: [
                 {
                   "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://www.sipgo.in/"
+                  position: 1,
+                  name: "Home",
+                  item: "https://www.sipgo.in/",
                 },
                 {
                   "@type": "ListItem",
-                  "position": 2,
-                  "name": "Contact",
-                  "item": canonicalUrl
-                }
-              ]
+                  position: 2,
+                  name: "Contact",
+                  item: canonicalUrl,
+                },
+              ],
             },
-            "contactPoint": [
-              {
-                "@type": "ContactPoint",
-                "telephone": "+91-9876543210",
-                "contactType": "customer service",
-                "email": "support@sipgo.in",
-                "areaServed": ["IN"],
-                "availableLanguage": ["English", "Hindi"]
-              }
-            ],
-            "publisher": {
+            publisher: {
               "@type": "Organization",
-              "name": "SIPGo",
-              "logo": {
+              name: "SIPGo",
+              logo: {
                 "@type": "ImageObject",
-                "url": "https://www.sipgo.in/images/logo.png",
-                "width": "300",
-                "height": "60"
+                url: logoUrl,
               },
-            }
+              contactPoint: [
+                {
+                  "@type": "ContactPoint",
+                  telephone: "+91-9876543210",
+                  contactType: "Customer Service",
+                  email: "support@sipgo.in",
+                  areaServed: ["IN"],
+                  availableLanguage: ["English", "Hindi"],
+                },
+              ],
+            },
           })}
         </script>
       </Helmet>
@@ -125,29 +129,34 @@ const Contact = () => {
               <FaLocationDot className="w-6 h-6 text-indigo-600 mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold text-lg">Our Office</h3>
-                <p className="text-gray-600">123 Tech Street, Bengaluru, India 560001</p>
+                <p className="text-gray-600">
+                  123 Tech Street, Bengaluru, India 560001
+                </p>
               </div>
             </div>
-            
+
             <div className="flex items-start space-x-3">
               <PhoneIcon className="w-6 h-6 text-indigo-600 mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold text-lg">Phone Support</h3>
                 <div className="space-y-1">
-                  <a href="tel:+919876543210" className="block text-gray-600 hover:text-indigo-600">
+                  <a
+                    href="tel:+919876543210"
+                    className="block text-gray-600 hover:text-indigo-600"
+                  >
                     +91 98765 43210
                   </a>
                   {/* <p className="text-sm text-gray-500">Mon-Fri, 9AM-6PM IST</p> */}
                 </div>
               </div>
             </div>
-            
+
             <div className="flex items-start space-x-3">
               <EnvelopeIcon className="w-6 h-6 text-indigo-600 mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold text-lg">Email Us</h3>
-                <a 
-                  href="mailto:support@sipgo.in" 
+                <a
+                  href="mailto:support@sipgo.in"
                   className="text-gray-600 hover:text-indigo-600 break-all"
                 >
                   support@sipgo.in
@@ -161,11 +170,13 @@ const Contact = () => {
         {/* Right - Form */}
         <div className="space-y-6">
           <h2 className="text-2xl font-semibold">Send Us a Message</h2>
-          
+
           {submitted ? (
             <div className="p-4 bg-green-50 border border-green-200 text-green-700 rounded-lg">
               <div className="font-medium">✅ Thank you for contacting us!</div>
-              <p className="mt-1 text-sm">We've received your message and will get back to you soon.</p>
+              <p className="mt-1 text-sm">
+                We've received your message and will get back to you soon.
+              </p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -189,7 +200,7 @@ const Contact = () => {
                   </label>
                 </div>
               ))}
-              
+
               <div className="relative">
                 <textarea
                   id="message"
@@ -208,19 +219,37 @@ const Contact = () => {
                   Your Message
                 </label>
               </div>
-              
+
               <button
                 type="submit"
                 disabled={isLoading}
                 className={`w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 font-semibold rounded-lg transition-all ${
-                  isLoading ? 'opacity-75 cursor-not-allowed' : 'hover:from-purple-600 hover:to-blue-600 hover:shadow-md'
+                  isLoading
+                    ? "opacity-75 cursor-not-allowed"
+                    : "hover:from-purple-600 hover:to-blue-600 hover:shadow-md"
                 }`}
               >
                 {isLoading ? (
                   <span className="flex items-center justify-center">
-                    <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    <svg
+                      className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      ></path>
                     </svg>
                     Sending...
                   </span>
@@ -230,11 +259,17 @@ const Contact = () => {
               </button>
             </form>
           )}
-          
+
           <div className="pt-4 border-t border-gray-100">
             <p className="text-sm text-gray-500">
-              By submitting this form, you agree to our{' '}
-              <a href="/privacy-policy" className="text-indigo-600 hover:underline">Privacy Policy</a>.
+              By submitting this form, you agree to our{" "}
+              <a
+                href="/privacy-policy"
+                className="text-indigo-600 hover:underline"
+              >
+                Privacy Policy
+              </a>
+              .
             </p>
           </div>
         </div>
