@@ -33,7 +33,7 @@ function BlogHome() {
         <meta property="og:description" content={pageDescription} />
         <meta
           property="og:image"
-          content="https://www.sipgo.in/images/blog-social-preview.jpg"
+          content="https://www.sipgo.in/images/logo.png"
         />
 
         {/* Twitter */}
@@ -42,7 +42,7 @@ function BlogHome() {
         <meta name="twitter:description" content={pageDescription} />
         <meta
           name="twitter:image"
-          content="https://www.sipgo.in/images/blog-social-preview.jpg"
+          content="https://www.sipgo.in/images/logo.png"
         />
 
         {/* ========== SCHEMA MARKUP ========== */}
