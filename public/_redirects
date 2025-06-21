@@ -1,13 +1,60 @@
 # Force HTTPS and www
-http://sipgo.in/* https://www.sipgo.in/:splat 301!
-https://sipgo.in/* https://www.sipgo.in/:splat 301!
+http://sipgo.in/*         https://www.sipgo.in/:splat 301!
+https://sipgo.in/*        https://www.sipgo.in/:splat 301!
+http://www.sipgo.in/*     https://www.sipgo.in/:splat 301
 
-# Explicitly list all valid routes (200)
-/              /index.html 200
-/about         /index.html 200
-/contact       /index.html 200
-/calc          /index.html 200
-/blogs/*       /index.html 200
+# Valid pages (200)
+/                              /index.html 200
+/about                         /index.html 200
+/contact                       /index.html 200
+/terms                         /index.html 200
+/privacy-policy                /index.html 200
+/disclaimer                    /index.html 200
 
-# Everything else → 404 (MUST BE LAST LINE)
+# Blog main page
+/blog                          /index.html 200
+
+# Blog posts
+/blog/how-to-achieve-a-monthly-pension-of-50k-with-nps     /index.html 200
+/blog/sip-vs-lumpsum                                       /index.html 200
+/blog/why-risk-is-part-of-investing                        /index.html 200
+/blog/investing-vs-gambling-whats-the-real-difference      /index.html 200
+/blog/beating-inflation                                     /index.html 200
+/blog/what-are-stocks-etfs-mutual-funds-and-bonds          /index.html 200
+/blog/how-to-create-passive-income-with-investments        /index.html 200
+/blog/how-does-compounding-work                            /index.html 200
+/blog/how-to-diversify-your-investment-portfolio           /index.html 200
+/blog/how-do-inflation-and-taxes-impact-investments        /index.html 200
+/blog/how-to-invest-if-you-are-self-employed-or-a-freelancer /index.html 200
+/blog/stocks-vs-mutual-funds                               /index.html 200
+/blog/difference-between-saving-and-investing              /index.html 200
+
+# Calculators
+/calc                               /index.html 200
+/ppf-calculator                     /index.html 200
+/fd-calculator                      /index.html 200
+/nps-calculator                     /index.html 200
+/nsc-calculator                     /index.html 200
+/ssy-calculator                     /index.html 200
+/rd-calculator                      /index.html 200
+/kvp-calculator                     /index.html 200
+/emi-calculator                     /index.html 200
+/car-loan-calculator                /index.html 200
+/home-loan-calculator               /index.html 200
+/personal-loan-calculator           /index.html 200
+/education-loan-calculator          /index.html 200
+/sip-calculator                     /index.html 200
+/lumpsum-calculator                 /index.html 200
+/mutual-fund-calculator             /index.html 200
+/step-up-sip-calculator             /index.html 200
+/swp-calculator                     /index.html 200
+/gst-calculator                     /index.html 200
+/inflation-calculator               /index.html 200
+/gratuity-calculator                /index.html 200
+/roi-calculator                     /index.html 200
+/dividend-calculator                /index.html 200
+/simple-interest-calculator         /index.html 200
+/compound-interest-calculator       /index.html 200
+
+# Everything else → 404
 /* /404.html 404
