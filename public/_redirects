@@ -1,13 +1,13 @@
 # Force HTTPS and www
 http://sipgo.in/* https://www.sipgo.in/:splat 301!
-http://www.sipgo.in/* https://www.sipgo.in/:splat 301!
 https://sipgo.in/* https://www.sipgo.in/:splat 301!
 
-# Explicit 200 routes for known paths
-/ /index.html 200
-/about /index.html 200
-/calculator /index.html 200
-# Add all your valid SPA routes here
+# Explicitly list all valid routes (200)
+/              /index.html 200
+/about         /index.html 200
+/contact       /index.html 200
+/calc          /index.html 200
+/blogs/*       /index.html 200
 
-# 404 handling - MUST BE LAST
+# Everything else → 404 (MUST BE LAST LINE)
 /* /404.html 404

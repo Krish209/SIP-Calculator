@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async"; // for SEO, Schema Markup, etc.
 import img from "../assets/icons/bh2.jpg"; // Galaxy background image
 import vid from "../assets/icons/sky.mp4"; // Optional video background
@@ -9,6 +9,7 @@ import MeteorEffect from "./Meteor";
 const ErrorPage = () => {
   const [countdown, setCountdown] = useState(10); // Initialize the countdown to 10
   const navigate = useNavigate(); // Initialize the navigate function
+  const location = useLocation();
 
   // const playBackgroundMusic = () => {
   //   const audio = new Audio(ds); // Replace with your music file
@@ -20,25 +21,30 @@ const ErrorPage = () => {
 
   useEffect(() => {
 
-    // Set 404 status (works with Netlify's redirect setup)
-    // if (typeof window !== 'undefined') {
-    //   window.http404 = () => {}; // Marker for Netlify
-    // }
+    // Check if coming from Netlify's 404.html
+    const isNetlify404 = location.pathname.includes('/404.html');
+    
+    // Set HTTP 404 status marker (works with Netlify)
+    if (typeof window !== 'undefined') {
+      window.http404 = true;
+    }
 
-    // Start a countdown timer
+    // Handle redirect logic
     const timer = setInterval(() => {
       setCountdown((prev) => {
         if (prev === 1) {
           clearInterval(timer);
-          navigate("/", { replace: true }); // Redirect to homepage when countdown reaches 0
+          navigate(isNetlify404 ? "/" : "/", { 
+            replace: true,
+            state: { fromError: true } 
+          });
         }
         return prev - 1;
       });
-    }, 1000); // Update countdown every second
+    }, 1000);
 
-    // Cleanup the timer on component unmount
     return () => clearInterval(timer);
-  }, [navigate]);
+  }, [navigate, location]);
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen bg-black overflow-hidden">
