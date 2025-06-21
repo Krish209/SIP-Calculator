@@ -1,7 +1,13 @@
-# Redirect all non-www traffic to www
+# Force HTTPS and www
 http://sipgo.in/* https://www.sipgo.in/:splat 301!
 http://www.sipgo.in/* https://www.sipgo.in/:splat 301!
 https://sipgo.in/* https://www.sipgo.in/:splat 301!
 
-# Handle SPA routes for React, Vue, etc.
-/*    /index.html  200
+# Explicit 200 routes for known paths
+/ /index.html 200
+/about /index.html 200
+/calculator /index.html 200
+# Add all your valid SPA routes here
+
+# 404 handling - MUST BE LAST
+/* /404.html 404
