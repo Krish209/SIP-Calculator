@@ -128,6 +128,7 @@ const BlogLayout = ({
   // ISO date format for structured data
   const dateISO = new Date(date).toISOString();
   const modISO = new Date("2025-06-16").toISOString();
+  const canonicalUrl = `https://www.sipgo.in/blog/${slug}`;
 
   // Generate excerpt from first paragraph if no description
   const excerpt = useMemo(() => {
@@ -142,22 +143,22 @@ const BlogLayout = ({
     <div className="bg-gray-50 text-night min-h-screen">
       <Helmet>
         <title>{title}</title>
-
         <meta
           name="description"
           content={metaDescription || `${title} - ${excerpt}`}
         />
         <meta name="keywords" content={tags.join(", ")} />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-        />
+        <link rel="canonical" href={canonicalUrl} />
 
-        {/* Open Graph */}
+        {/* Hreflang */}
+        <link rel="alternate" hreflang="en" href={canonicalUrl} />
+        <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+
+        {/* Open Graph / Facebook */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={metaDescription || excerpt} />
         <meta property="og:image" content={image} />
-        <meta property="og:url" content={`https://www.sipgo.in/blog/${slug}`} />
+        <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="article" />
 
         {/* Twitter */}
@@ -165,9 +166,6 @@ const BlogLayout = ({
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={metaDescription || excerpt} />
         <meta name="twitter:image" content={image} />
-
-        {/* Canonical */}
-        <link rel="canonical" href={`https://www.sipgo.in/blog/${slug}`} />
 
         {/* Artical Schema */}
         <script type="application/ld+json">

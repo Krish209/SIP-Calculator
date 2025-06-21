@@ -93,6 +93,16 @@ const Contact = () => {
                 },
               ],
             },
+            contactPoint: [
+              {
+                "@type": "ContactPoint",
+                telephone: "+91-9876543210",
+                contactType: "customer service",
+                email: "support@sipgo.in",
+                areaServed: ["IN"],
+                availableLanguage: ["English", "Hindi"],
+              },
+            ],
             publisher: {
               "@type": "Organization",
               name: "SIPGo",
@@ -100,16 +110,6 @@ const Contact = () => {
                 "@type": "ImageObject",
                 url: logoUrl,
               },
-              contactPoint: [
-                {
-                  "@type": "ContactPoint",
-                  telephone: "+91-9876543210",
-                  contactType: "Customer Service",
-                  email: "support@sipgo.in",
-                  areaServed: ["IN"],
-                  availableLanguage: ["English", "Hindi"],
-                },
-              ],
             },
           })}
         </script>
