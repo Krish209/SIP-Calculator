@@ -5,40 +5,41 @@ const PPFInfo = () => {
   const dateModified = new Date("2025-06-01").toISOString();
   return (
     <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-
       {/* Article as information Schema Markup */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "url": "https://www.sipgo.in/ppf-calculator#guide",
+          url: "https://www.sipgo.in/ppf-calculator#guide",
           "@id": "https://www.sipgo.in/ppf-calculator#guide",
-          "headline": "PPF Calculator – Plan Your Public Provident Fund Investment",
-          "description": "Use our PPF Calculator to estimate returns, maturity value, and benefits from your Public Provident Fund investments effectively.",
-          "image": "https://www.sipgo.in/images/logo.png",
-          "author": {
+          headline:
+            "PPF Calculator – Plan Your Public Provident Fund Investment",
+          description:
+            "Use our PPF Calculator to estimate returns, maturity value, and benefits from your Public Provident Fund investments effectively.",
+          image: "https://www.sipgo.in/images/logo.png",
+          author: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "url": "https://www.sipgo.in/"
+            name: "SIPGo",
+            url: "https://www.sipgo.in/",
           },
-          "datePublished": datePublished,
-          "dateModified":  dateModified,
-          "publisher": {
+          datePublished: datePublished,
+          dateModified: dateModified,
+          publisher: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "logo": {
+            name: "SIPGo",
+            logo: {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/images/logo.png"
-            }
+              url: "https://www.sipgo.in/images/logo.png",
+            },
           },
-          "mainEntityOfPage": {
+          mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": "https://www.sipgo.in/ppf-calculator"
+            "@id": "https://www.sipgo.in/ppf-calculator",
           },
-          "mainEntity": {
+          mainEntity: {
             "@type": "Table",
-            "about": "PPF Guide Sections",
-            "table": [
+            about: "PPF Guide Sections",
+            table: [
               "What is PPF?",
               "Key Features of PPF",
               "Who is Eligible?",
@@ -46,12 +47,12 @@ const PPFInfo = () => {
               "Maturity Period",
               "Pros of PPF",
               "Cons of PPF",
-            ]
-          }
+            ],
+          },
         })}
       </script>
 
-      <h2 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
+      <h2 className="text-[22px] sm:text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         PPF - A Comprehensive Guide
       </h2>
 
@@ -63,10 +64,11 @@ const PPFInfo = () => {
         <p className="mb-2">
           The <strong>Public Provident Fund (PPF)</strong> is a
           government-backed investment scheme aimed at promoting long-term
-          savings. It offers a combination of <strong>tax benefits, guaranteed 
-          and attractive returns,</strong> and <strong>safety</strong>, making 
-          it one of the most preferred savings instruments in India. The Ministry 
-          of Finance sets the interest rate, which is subject to change.
+          savings. It offers a combination of{" "}
+          <strong>tax benefits, guaranteed and attractive returns,</strong> and{" "}
+          <strong>safety</strong>, making it one of the most preferred savings
+          instruments in India. The Ministry of Finance sets the interest rate,
+          which is subject to change.
         </p>
         <p className="mb-2">
           To maximize the benefits of your PPF investment, it is beneficial to
@@ -74,9 +76,10 @@ const PPFInfo = () => {
           <strong>between April 1st and April 5th each financial year</strong>.
           This ensures that your deposit is accounted for in the current
           financial year, and you begin earning interest from the start of the
-          year. If a lump-sum deposit isn't feasible to make a full year's deposit at once, you
-          can make <strong>monthly deposits by the 5th of each month</strong> to
-          maximize interest accrual.
+          year. If a lump-sum deposit isn't feasible to make a full year's
+          deposit at once, you can make{" "}
+          <strong>monthly deposits by the 5th of each month</strong> to maximize
+          interest accrual.
         </p>
       </section>
 

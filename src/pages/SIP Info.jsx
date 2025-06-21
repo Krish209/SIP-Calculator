@@ -4,7 +4,7 @@ import Table from "../consts/Table";
 const SIPInfo = () => {
   const datePublished = new Date("2025-04-01").toISOString();
   const dateModified = new Date("2025-06-01").toISOString();
-  
+
   const columns = [
     { key: "feature", header: "Feature" },
     { key: "sip", header: "SIP" },
@@ -36,40 +36,40 @@ const SIPInfo = () => {
 
   return (
     <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-
       {/* Article as information Schema Markup */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "url": "https://www.sipgo.in/sip-calculator#guide",
+          url: "https://www.sipgo.in/sip-calculator#guide",
           "@id": "https://www.sipgo.in/sip-calculator#guide",
-          "headline": "SIP Calculator – Plan Systematic Investment Returns",
-          "description": "Project your wealth growth through regular SIPs. Calculate returns and investment maturity with our SIP Calculator.",
-          "image": "https://www.sipgo.in/images/logo.png",
-          "author": {
+          headline: "SIP Calculator – Plan Systematic Investment Returns",
+          description:
+            "Project your wealth growth through regular SIPs. Calculate returns and investment maturity with our SIP Calculator.",
+          image: "https://www.sipgo.in/images/logo.png",
+          author: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "url": "https://www.sipgo.in/"
+            name: "SIPGo",
+            url: "https://www.sipgo.in/",
           },
-          "datePublished": datePublished,
-          "dateModified":  dateModified,
-          "publisher": {
+          datePublished: datePublished,
+          dateModified: dateModified,
+          publisher: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "logo": {
+            name: "SIPGo",
+            logo: {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/images/logo.png"
-            }
+              url: "https://www.sipgo.in/images/logo.png",
+            },
           },
-          "mainEntityOfPage": {
+          mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": "https://www.sipgo.in/sip-calculator"
+            "@id": "https://www.sipgo.in/sip-calculator",
           },
-          "mainEntity": {
+          mainEntity: {
             "@type": "Table",
-            "about": "SIP Guide Sections",
-            "table": [
+            about: "SIP Guide Sections",
+            table: [
               "What is SIP?",
               "Why Choose SIP?",
               "How Does SIP Work?",
@@ -81,16 +81,16 @@ const SIPInfo = () => {
               "Inflation Effect on SIP",
               "Additional Investment Options for SIP",
               "Key Considerations for SIP",
-              "Common SIP Mistakes to Avoid"
-            ]
-          }
+              "Common SIP Mistakes to Avoid",
+            ],
+          },
         })}
       </script>
 
-      <h2 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
+      <h2 className="text-[22px] sm:text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         SIP Investment - A Comprehensive Guide
       </h2>
-      
+
       {/* What is SIP? */}
       <section className="my-4 md:my-6">
         <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
@@ -117,9 +117,9 @@ const SIPInfo = () => {
             investing, which helps you develop a good saving habit.
           </li>
           <li>
-            <strong>Rupee Cost Averaging</strong>: SIP reduces the impact
-            of market volatility by buying more units when prices are low and
-            fewer units when prices are high.
+            <strong>Rupee Cost Averaging</strong>: SIP reduces the impact of
+            market volatility by buying more units when prices are low and fewer
+            units when prices are high.
           </li>
           <li>
             <strong>Power of Compounding</strong>: Over time, your SIP
@@ -241,9 +241,9 @@ const SIPInfo = () => {
               <strong className="">Net Asset Value (NAV)</strong>: NAV
               represents the market value of one unit of the mutual fund, and it
               fluctuates daily based on the performance of the underlying
-              assets. The lower the NAV at the time of your investment, the
-              more units you will receive for the same amount invested. NAV
-              growth contributes directly to your returns.
+              assets. The lower the NAV at the time of your investment, the more
+              units you will receive for the same amount invested. NAV growth
+              contributes directly to your returns.
             </li>
             <li>
               <strong className="">Compounding</strong>: The essence of SIP
@@ -284,10 +284,10 @@ const SIPInfo = () => {
           <p className="mb-2 md:mb-4">
             The formula used to calculate SIP returns is:
           </p>
-          <code className="font-bold">A = P × [(1 + r)^n - 1] / r × (1 + r)</code>
-          <p className="mt-2">
-            Where:
-          </p>
+          <code className="font-bold">
+            A = P × [(1 + r)^n - 1] / r × (1 + r)
+          </code>
+          <p className="mt-2">Where:</p>
           <ul className="list-disc pl-6 space-y-1">
             <li>
               <strong>A</strong> = Final Amount (after interest)
@@ -300,8 +300,8 @@ const SIPInfo = () => {
               divided by 12)
             </li>
             <li>
-              <strong>n</strong> = Total Number of Months (Investment Period
-              in Years × 12)
+              <strong>n</strong> = Total Number of Months (Investment Period in
+              Years × 12)
             </li>
           </ul>
         </div>
@@ -370,7 +370,6 @@ const SIPInfo = () => {
         </div>
 
         <Table columns={columns} data={data} />
-
       </section>
 
       {/* Benefits of SIP */}
@@ -699,8 +698,8 @@ const SIPInfo = () => {
           </li>
           <li>
             <strong>Overextending SIP Contributions</strong>: Avoid
-            overcommitting to SIP contributions without considering your
-            current cash flow needs can backfire. It's important to balance SIP
+            overcommitting to SIP contributions without considering your current
+            cash flow needs can backfire. It's important to balance SIP
             investments with other financial obligations.
           </li>
         </ul>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async"; // for SEO, Schema Markup, etc.
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
-import { formatNumber, formatChartNumber } from "./Calc";
+import { formatNumber, formatChartNumber } from "../consts/Calc";
 import RDFAQ from "./RD Faq";
 import RDINFO from "./RD Info";
 
@@ -138,8 +138,10 @@ function RD() {
     );
 
   // For Schema
-  const pageTitle = "RD Calculator - Calculate Recurring Deposit Maturity Value";
-  const pageDescription = "Estimate returns and maturity value on your recurring deposit using our RD Calculator. Helps plan monthly savings effectively.";
+  const pageTitle =
+    "RD Calculator - Calculate Recurring Deposit Maturity Value";
+  const pageDescription =
+    "Estimate returns and maturity value on your recurring deposit using our RD Calculator. Helps plan monthly savings effectively.";
   const canonicalUrl = "https://www.sipgo.in/rd-calculator";
 
   return (
@@ -147,7 +149,10 @@ function RD() {
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="RD Calculator, Recurring Deposit Returns, RD Interest, RD Maturity Value" />
+        <meta
+          name="keywords"
+          content="RD Calculator, Recurring Deposit Returns, RD Interest, RD Maturity Value"
+        />
         <link rel="canonical" href={canonicalUrl} />
 
         {/* hreflang implementation */}
@@ -159,14 +164,19 @@ function RD() {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content="https://www.sipgo.in/images/logo.png" />
+        <meta
+          property="og:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
-        <meta name="twitter:image" content="https://www.sipgo.in/images/logo.png" />
-        
+        <meta
+          name="twitter:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
 
         {/* ========== CRITICAL SCHEMA MARKUP ========== */}
 
@@ -177,14 +187,14 @@ function RD() {
             "@type": "WebPage",
             name: pageTitle,
             description: pageDescription,
-            "url": canonicalUrl,
+            url: canonicalUrl,
             "@id": canonicalUrl,
-            "isPartOf": {
+            isPartOf: {
               "@type": "WebSite",
-              "name": "SIPGo Financial Calculators",
-              "url": "https://www.sipgo.in"
+              name: "SIPGo Financial Calculators",
+              url: "https://www.sipgo.in",
             },
-            "dateModified": "2025-06-15T00:00:00Z"
+            dateModified: "2025-06-15T00:00:00Z",
           })}
         </script>
 
@@ -194,16 +204,26 @@ function RD() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "@id": "https://www.sipgo.in/rd-calculator#breadcrumb",
-            "name": "RD Calculator Navigation Path",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sipgo.in/" },
-              { "@type": "ListItem", "position": 2, "name": "RD Calculator", "item": "https://www.sipgo.in/rd-calculator" }
-            ]
+            name: "RD Calculator Navigation Path",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.sipgo.in/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "RD Calculator",
+                item: "https://www.sipgo.in/rd-calculator",
+              },
+            ],
           })}
         </script>
       </Helmet>
 
-      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
+      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold px-0.5 vs:p-0 my-2 sm:my-4">
         Recurring Deposit Calculator
       </h1>
 

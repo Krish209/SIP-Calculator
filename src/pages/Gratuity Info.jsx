@@ -5,40 +5,40 @@ function GratuityInfo() {
   const dateModified = new Date("2025-06-01").toISOString();
   return (
     <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-
       {/* Article as information Schema Markup */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "url": "https://www.sipgo.in/gratuity-calculator#guide",
+          url: "https://www.sipgo.in/gratuity-calculator#guide",
           "@id": "https://www.sipgo.in/gratuity-calculator#guide",
-          "headline": "Gratuity Calculator – Estimate Employee Gratuity Payout",
-          "description": "Use our Gratuity Calculator to determine your gratuity based on years of service and last drawn salary.",
-          "image": "https://www.sipgo.in/images/logo.png",
-          "author": {
+          headline: "Gratuity Calculator – Estimate Employee Gratuity Payout",
+          description:
+            "Use our Gratuity Calculator to determine your gratuity based on years of service and last drawn salary.",
+          image: "https://www.sipgo.in/images/logo.png",
+          author: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "url": "https://www.sipgo.in/"
+            name: "SIPGo",
+            url: "https://www.sipgo.in/",
           },
-          "datePublished": datePublished,
-          "dateModified":  dateModified,
-          "publisher": {
+          datePublished: datePublished,
+          dateModified: dateModified,
+          publisher: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "logo": {
+            name: "SIPGo",
+            logo: {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/images/logo.png"
-            }
+              url: "https://www.sipgo.in/images/logo.png",
+            },
           },
-          "mainEntityOfPage": {
+          mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": "https://www.sipgo.in/gratuity-calculator"
+            "@id": "https://www.sipgo.in/gratuity-calculator",
           },
-          "mainEntity": {
+          mainEntity: {
             "@type": "Table",
-            "about": "Gratuity Guide Sections",
-            "table": [
+            about: "Gratuity Guide Sections",
+            table: [
               "What is Gratuity?",
               "Eligibility for Gratuity",
               "How Gratuity is Calculated",
@@ -46,13 +46,13 @@ function GratuityInfo() {
               "Gratuity in Case of Death or Disability",
               "Gratuity Payment Process",
               "Employer’s Obligation",
-              "Key Points to Remember"
-            ]
-          }
+              "Key Points to Remember",
+            ],
+          },
         })}
       </script>
 
-      <h2 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
+      <h2 className="text-[22px] sm:text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         Gratuity - A Comprehensive Guide
       </h2>
 
@@ -62,13 +62,14 @@ function GratuityInfo() {
           What is Gratuity?
         </h3>
         <p className="mb-2">
-          <strong>Gratuity</strong> is a form of financial benefit provided by an employer to an
-          employee as a reward for long-term service. In India, it is governed
-          by the <strong>Payment of Gratuity Act, 1972</strong>, which ensures
-          that employees who have worked for an organization for a certain
-          number of years are entitled to a lump sum payment once they leave the
-          company, either due to retirement, resignation, or other reasons such
-          as death or disability.
+          <strong>Gratuity</strong> is a form of financial benefit provided by
+          an employer to an employee as a reward for long-term service. In
+          India, it is governed by the{" "}
+          <strong>Payment of Gratuity Act, 1972</strong>, which ensures that
+          employees who have worked for an organization for a certain number of
+          years are entitled to a lump sum payment once they leave the company,
+          either due to retirement, resignation, or other reasons such as death
+          or disability.
         </p>
       </section>
 
@@ -132,8 +133,9 @@ function GratuityInfo() {
           </ul>
 
           <p className="mt-2">
-            The constant multiplier (15/26) represents 15 days of wages for each completed year of service, calculated based on the standard number of working days in a month (26). 
-
+            The constant multiplier (15/26) represents 15 days of wages for each
+            completed year of service, calculated based on the standard number
+            of working days in a month (26).
           </p>
         </div>
 
@@ -167,14 +169,13 @@ function GratuityInfo() {
         </h3>
         <ul className="list-disc pl-6 space-y-2 ">
           <li>
-            <strong>For Government Employees</strong>:
-            Gratuity received by government employees is fully exempt from tax.
+            <strong>For Government Employees</strong>: Gratuity received by
+            government employees is fully exempt from tax.
           </li>
           <li>
-            <strong>For Private Sector Employees</strong>:
-            If the amount of gratuity is below ₹10,00,000, it is exempt from
-            tax. However, if the gratuity amount exceeds ₹10,00,000, the excess
-            amount is taxable.
+            <strong>For Private Sector Employees</strong>: If the amount of
+            gratuity is below ₹10,00,000, it is exempt from tax. However, if the
+            gratuity amount exceeds ₹10,00,000, the excess amount is taxable.
           </li>
         </ul>
       </section>
@@ -199,9 +200,8 @@ function GratuityInfo() {
         </h3>
         <ul className="list-disc pl-6 space-y-2 ">
           <li>
-            <strong>Application for Gratuity</strong>:
-            The employee must submit an application for gratuity to the
-            employer.
+            <strong>Application for Gratuity</strong>: The employee must submit
+            an application for gratuity to the employer.
           </li>
           <li>
             <strong>Verification</strong>: The employer verifies the service

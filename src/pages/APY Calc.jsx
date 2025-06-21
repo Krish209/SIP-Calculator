@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { formatNumber, formatChartNumber } from "./Calc";
+import { formatNumber, formatChartNumber } from "../consts/Calc";
 
 function APYCalc() {
   const [age, setAge] = useState(30); // Default age
@@ -29,7 +29,7 @@ function APYCalc() {
       return;
     }
     let contribution = 0;
-    
+
     setMonthlyInvestment(contribution);
 
     // Calculate investment duration and total invested amount
@@ -45,7 +45,7 @@ function APYCalc() {
 
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
-      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
+      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold px-0.5 vs:p-0 my-2 sm:my-4">
         Atal Pension Yojana (APY) Calculator
       </h1>
 
@@ -57,7 +57,9 @@ function APYCalc() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label id="age-label" className="font-medium">Age</label>
+                  <label id="age-label" className="font-medium">
+                    Age
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"

@@ -5,40 +5,40 @@ function EMIInfo() {
   const dateModified = new Date("2025-06-01").toISOString();
   return (
     <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-
       {/* Article as information Schema Markup */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "url": "https://www.sipgo.in/emi-calculator#guide",
+          url: "https://www.sipgo.in/emi-calculator#guide",
           "@id": "https://www.sipgo.in/emi-calculator#guide",
-          "headline": "EMI Calculator – Estimate Monthly Loan Repayments",
-          "description": "Find your monthly EMI, total interest payable, and amortization schedule with SIPGo's EMI Calculator.",
-          "image": "https://www.sipgo.in/images/logo.png",
-          "author": {
+          headline: "EMI Calculator – Estimate Monthly Loan Repayments",
+          description:
+            "Find your monthly EMI, total interest payable, and amortization schedule with SIPGo's EMI Calculator.",
+          image: "https://www.sipgo.in/images/logo.png",
+          author: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "url": "https://www.sipgo.in/"
+            name: "SIPGo",
+            url: "https://www.sipgo.in/",
           },
-          "datePublished": datePublished,
-          "dateModified":  dateModified,
-          "publisher": {
+          datePublished: datePublished,
+          dateModified: dateModified,
+          publisher: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "logo": {
+            name: "SIPGo",
+            logo: {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/images/logo.png"
-            }
+              url: "https://www.sipgo.in/images/logo.png",
+            },
           },
-          "mainEntityOfPage": {
+          mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": "https://www.sipgo.in/emi-calculator"
+            "@id": "https://www.sipgo.in/emi-calculator",
           },
-          "mainEntity": {
+          mainEntity: {
             "@type": "Table",
-            "about": "EMI Guide Sections",
-            "table": [
+            about: "EMI Guide Sections",
+            table: [
               "What is EMI?",
               "Components of EMI",
               "How does EMI Work?",
@@ -48,13 +48,13 @@ function EMIInfo() {
               "Prepayment and Loan Foreclosure",
               "Advantages of EMI",
               "Disadvantages of EMI",
-              "Conclusion"
-            ]
-          }
+              "Conclusion",
+            ],
+          },
         })}
       </script>
 
-      <h2 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
+      <h2 className="text-[22px] sm:text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         EMI - A Comprehensive Guide
       </h2>
       {/* Introduction Section */}
@@ -63,10 +63,11 @@ function EMIInfo() {
           What is EMI?
         </h3>
         <p className="mb-2">
-          <strong>EMI (Equated Monthly Installment)</strong> is a fixed monthly payment made by a
-          borrower to a lender for a loan over a specified period of time. It is
-          commonly used for home loans, personal loans, auto loans, and more.
-          EMI consists of both principal and interest components.
+          <strong>EMI (Equated Monthly Installment)</strong> is a fixed monthly
+          payment made by a borrower to a lender for a loan over a specified
+          period of time. It is commonly used for home loans, personal loans,
+          auto loans, and more. EMI consists of both principal and interest
+          components.
         </p>
       </section>
       {/* Components of EMI */}
@@ -117,7 +118,9 @@ function EMIInfo() {
           </h4>
           <p className="mb-2 md:mb-4">The formula to calculate EMI is:</p>
 
-          <code className="font-bold">EMI = (P × r × (1 + r)^n) / ((1 + r)^n - 1)</code>
+          <code className="font-bold">
+            EMI = (P × r × (1 + r)^n) / ((1 + r)^n - 1)
+          </code>
 
           <p className="mt-2">Where:</p>
           <ul className="list-disc pl-6 space-y-1">
@@ -141,9 +144,9 @@ function EMIInfo() {
         </h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Reducing Balance Method</strong>: The EMI is calculated based on
-            the outstanding loan balance, which reducing as the loan principal is
-            repaid.
+            <strong>Reducing Balance Method</strong>: The EMI is calculated
+            based on the outstanding loan balance, which reducing as the loan
+            principal is repaid.
           </li>
           <li>
             <strong>Flat Rate Method</strong>: EMI is calculated on the entire
@@ -212,8 +215,8 @@ function EMIInfo() {
         <p className="mb-2">
           Loan amortization refers to the process of gradually repaying a loan
           over time through regular payments (EMIs). With each EMI, a portion
-          goes toward paying off the principal loan amount, while the rest covers
-          the interest.
+          goes toward paying off the principal loan amount, while the rest
+          covers the interest.
         </p>
         <p className="mb-2">
           At the beginning of the loan term, most of the EMI goes towards paying

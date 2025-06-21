@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BarChart } from "./chartjs/Bar";
-import { formatNumber, formatChartNumber } from "./Calc";
+import { formatNumber, formatChartNumber } from "../consts/Calc";
 
 function EPF() {
   const [basicSalary, setBasicSalary] = useState(50000); // Default ₹50,000
@@ -81,7 +81,7 @@ function EPF() {
 
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
-      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
+      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold px-0.5 vs:p-0 my-2 sm:my-4">
         EPF Calculator
       </h1>
 

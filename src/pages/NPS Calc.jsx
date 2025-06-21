@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async"; // for SEO, Schema Markup, etc.
 import { DoughnutChart } from "./chartjs/Donut";
-import { formatNumber, formatChartNumber } from "./Calc";
+import { formatNumber, formatChartNumber } from "../consts/Calc";
 import NPSInfo from "./NPS Info";
 import NPSFAQ from "./NPS Faq";
 
@@ -158,17 +158,21 @@ function NPSCalculator() {
     );
 
   // For Schema
-  const pageTitle = "NPS Calculator - Calculate National Pension Scheme Returns";
-  const pageDescription = "Plan your retirement with our NPS Calculator. Calculate your expected pension wealth, annuity income, and lump sum at retirement.";
+  const pageTitle =
+    "NPS Calculator - Calculate National Pension Scheme Returns";
+  const pageDescription =
+    "Plan your retirement with our NPS Calculator. Calculate your expected pension wealth, annuity income, and lump sum at retirement.";
   const canonicalUrl = "https://www.sipgo.in/nps-calculator";
-
 
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="NPS Calculator, National Pension Scheme, Pension Calculator, NPS Returns" />
+        <meta
+          name="keywords"
+          content="NPS Calculator, National Pension Scheme, Pension Calculator, NPS Returns"
+        />
         <link rel="canonical" href={canonicalUrl} />
 
         {/* hreflang implementation */}
@@ -180,14 +184,19 @@ function NPSCalculator() {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content="https://www.sipgo.in/images/logo.png" />
+        <meta
+          property="og:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
-        <meta name="twitter:image" content="https://www.sipgo.in/images/logo.png" />
-        
+        <meta
+          name="twitter:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
 
         {/* ========== CRITICAL SCHEMA MARKUP ========== */}
 
@@ -198,14 +207,14 @@ function NPSCalculator() {
             "@type": "WebPage",
             name: pageTitle,
             description: pageDescription,
-            "url": canonicalUrl,
+            url: canonicalUrl,
             "@id": canonicalUrl,
-            "isPartOf": {
+            isPartOf: {
               "@type": "WebSite",
-              "name": "SIPGo Financial Calculators",
-              "url": "https://www.sipgo.in"
+              name: "SIPGo Financial Calculators",
+              url: "https://www.sipgo.in",
             },
-            "dateModified": "2025-06-15T00:00:00Z"
+            dateModified: "2025-06-15T00:00:00Z",
           })}
         </script>
 
@@ -215,16 +224,26 @@ function NPSCalculator() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "@id": "https://www.sipgo.in/nps-calculator#breadcrumb",
-            "name": "NPS Calculator Navigation Path",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sipgo.in/" },
-              { "@type": "ListItem", "position": 2, "name": "NPS Calculator", "item": "https://www.sipgo.in/nps-calculator" }
-            ]
+            name: "NPS Calculator Navigation Path",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.sipgo.in/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "NPS Calculator",
+                item: "https://www.sipgo.in/nps-calculator",
+              },
+            ],
           })}
         </script>
       </Helmet>
 
-      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
+      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold px-0.5 vs:p-0 my-2 sm:my-4">
         NPS Calculator
       </h1>
 

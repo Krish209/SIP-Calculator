@@ -10,7 +10,7 @@ import {
   Legend,
   ArcElement,
 } from "chart.js";
-import { formatChartNumber } from "../Calc";
+import { formatChartNumber } from "../../consts/Calc";
 
 // Register necessary components for Chart.js
 ChartJS.register(
@@ -54,7 +54,9 @@ export const BarChart = ({ data }) => (
         tooltip: {
           callbacks: {
             label: function (tooltipItem) {
-              return `${tooltipItem.label}: ₹${formatChartNumber(tooltipItem.raw)}`; // Use formatChartNumber to round the value
+              return `${tooltipItem.label}: ₹${formatChartNumber(
+                tooltipItem.raw
+              )}`; // Use formatChartNumber to round the value
             },
           },
         },
@@ -82,7 +84,7 @@ export const BarChart = ({ data }) => (
                 return `${(value / 1e7).toFixed(1)} Cr`;
               } else if (value >= 1e5) {
                 return `${(value / 1e5).toFixed(1)} Lac`;
-              } 
+              }
               return value.toLocaleString(); // Regular formatting
             },
             font: {

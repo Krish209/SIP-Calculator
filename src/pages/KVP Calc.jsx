@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async"; // for SEO, Schema Markup, etc.
-import { formatNumber, formatChartNumber } from "./Calc";
+import { formatNumber, formatChartNumber } from "../consts/Calc";
 import KVPInfo from "./KVP Info";
 import KVPFAQ from "./KVP Faq";
 
@@ -48,7 +48,10 @@ function KVP() {
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="KVP Calculator, Kisan Vikas Patra Interest, KVP Maturity, KVP Tax, Savings Scheme India" />
+        <meta
+          name="keywords"
+          content="KVP Calculator, Kisan Vikas Patra Interest, KVP Maturity, KVP Tax, Savings Scheme India"
+        />
         <link rel="canonical" href={canonicalUrl} />
 
         {/* hreflang implementation */}
@@ -60,14 +63,19 @@ function KVP() {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content="https://www.sipgo.in/images/logo.png" />
+        <meta
+          property="og:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
-        <meta name="twitter:image" content="https://www.sipgo.in/images/logo.png" />
-        
+        <meta
+          name="twitter:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
 
         {/* ========== CRITICAL SCHEMA MARKUP ========== */}
 
@@ -78,14 +86,14 @@ function KVP() {
             "@type": "WebPage",
             name: pageTitle,
             description: pageDescription,
-            "url": canonicalUrl,
+            url: canonicalUrl,
             "@id": canonicalUrl,
-            "isPartOf": {
+            isPartOf: {
               "@type": "WebSite",
-              "name": "SIPGo Financial Calculators",
-              "url": "https://www.sipgo.in"
+              name: "SIPGo Financial Calculators",
+              url: "https://www.sipgo.in",
             },
-            "dateModified": "2025-06-15T00:00:00Z"
+            dateModified: "2025-06-15T00:00:00Z",
           })}
         </script>
 
@@ -95,27 +103,27 @@ function KVP() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "@id": "https://www.sipgo.in/kvp-calculator#breadcrumb",
-            "name": "KVP Calculator Navigation Path",
-            "itemListElement": [
+            name: "KVP Calculator Navigation Path",
+            itemListElement: [
               {
                 "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.sipgo.in/"
+                position: 1,
+                name: "Home",
+                item: "https://www.sipgo.in/",
               },
               {
                 "@type": "ListItem",
-                "position": 2,
-                "name": "KVP Calculator",
-                "item": "https://www.sipgo.in/kvp-calculator"
-              }
-            ]
+                position: 2,
+                name: "KVP Calculator",
+                item: "https://www.sipgo.in/kvp-calculator",
+              },
+            ],
           })}
         </script>
       </Helmet>
 
       <main id="kvp-calculator">
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold px-0.5 vs:p-0 my-2 sm:my-4">
           KVP Calculator
         </h1>
 

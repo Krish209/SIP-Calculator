@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async"; // for SEO, Schema Markup, etc.
 import img from "../assets/icons/bh2.jpg"; // Galaxy background image
 import vid from "../assets/icons/sky.mp4"; // Optional video background
 import aud from "../assets/icons/ds.mp3"; // Optional background music
-import MeteorEffect from "./Meteor";
+import MeteorEffect from "../consts/Meteor";
 
 const ErrorPage = () => {
   const [countdown, setCountdown] = useState(10); // Initialize the countdown to 10

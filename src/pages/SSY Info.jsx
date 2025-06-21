@@ -51,7 +51,7 @@ function SSYInfo() {
         })}
       </script>
 
-      <h2 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
+      <h2 className="text-[22px] sm:text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         SSY - A Comprehensive Guide
       </h2>
 

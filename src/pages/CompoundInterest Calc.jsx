@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async"; // for SEO, Schema Markup, etc.
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
-import { formatNumber, formatChartNumber } from "./Calc";
+import { formatNumber, formatChartNumber } from "../consts/Calc";
 import CompoundInterestFAQ from "./CompoundInterest Faq";
 import CompoundingInterestInfo from "./CompoundInterest Info";
 
@@ -138,7 +138,8 @@ function CompoundInterest() {
 
   // Schema
   const pageTitle = "Compound Interest Calculator - Estimate Growth Over Time";
-  const pageDescription = "Estimate how your money grows with compounding using our Compound Interest Calculator. Great for long-term investment planning.";
+  const pageDescription =
+    "Estimate how your money grows with compounding using our Compound Interest Calculator. Great for long-term investment planning.";
   const canonicalUrl = "https://www.sipgo.in/compound-interest-calculator";
 
   return (
@@ -146,7 +147,10 @@ function CompoundInterest() {
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="Compound Interest Calculator, Investment Calculator, Compound Interest Returns" />
+        <meta
+          name="keywords"
+          content="Compound Interest Calculator, Investment Calculator, Compound Interest Returns"
+        />
         <link rel="canonical" href={canonicalUrl} />
 
         {/* hreflang implementation */}
@@ -158,17 +162,22 @@ function CompoundInterest() {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content="https://www.sipgo.in/images/logo.png" />
+        <meta
+          property="og:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
-        <meta name="twitter:image" content="https://www.sipgo.in/images/logo.png" />
-        
+        <meta
+          name="twitter:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
 
         {/* ========== CRITICAL SCHEMA MARKUP ========== */}
-        
+
         <script type="application/ld+json">
           {JSON.stringify({
             // Primary WebPage Schema
@@ -176,14 +185,14 @@ function CompoundInterest() {
             "@type": "WebPage",
             name: pageTitle,
             description: pageDescription,
-            "url": canonicalUrl,
+            url: canonicalUrl,
             "@id": canonicalUrl,
-            "isPartOf": {
-                "@type": "WebSite",
-                "name": "SIPGo Financial Calculators",
-                "url": "https://www.sipgo.in"
-              },
-              "dateModified": "2025-06-15T00:00:00Z"
+            isPartOf: {
+              "@type": "WebSite",
+              name: "SIPGo Financial Calculators",
+              url: "https://www.sipgo.in",
+            },
+            dateModified: "2025-06-15T00:00:00Z",
           })}
         </script>
 
@@ -192,17 +201,28 @@ function CompoundInterest() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
-            "@id": "https://www.sipgo.in/compound-interest-calculator#breadcrumb",
-            "name": "Compound Interest Calculator Navigation Path",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sipgo.in/" },
-              { "@type": "ListItem", "position": 2, "name": "Compound Interest Calculator", "item": "https://www.sipgo.in/compound-interest-calculator" }
-            ]
+            "@id":
+              "https://www.sipgo.in/compound-interest-calculator#breadcrumb",
+            name: "Compound Interest Calculator Navigation Path",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.sipgo.in/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Compound Interest Calculator",
+                item: "https://www.sipgo.in/compound-interest-calculator",
+              },
+            ],
           })}
         </script>
       </Helmet>
 
-      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
+      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold px-0.5 vs:p-0 my-2 sm:my-4">
         Compound Interest Calculator
       </h1>
 

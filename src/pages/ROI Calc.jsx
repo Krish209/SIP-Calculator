@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async"; // for SEO, Schema Markup, etc.
 import { DoughnutChart } from "./chartjs/Donut";
 import { BarChart } from "./chartjs/Bar";
-import { formatNumber, formatChartNumber } from "./Calc";
+import { formatNumber, formatChartNumber } from "../consts/Calc";
 import ROIInfo from "./ROI Info";
 import ROIFAQ from "./ROI Faq";
 
@@ -119,7 +119,8 @@ function ROICalculator() {
 
   // For Schema
   const pageTitle = "ROI Calculator - Return on Investment Calculator";
-  const pageDescription = "Calculate your Return on Investment (ROI) with our simple and accurate ROI Calculator. Ideal for evaluating business and personal investment returns.";
+  const pageDescription =
+    "Calculate your Return on Investment (ROI) with our simple and accurate ROI Calculator. Ideal for evaluating business and personal investment returns.";
   const canonicalUrl = "https://www.sipgo.in/roi-calculator";
 
   return (
@@ -127,7 +128,10 @@ function ROICalculator() {
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="ROI Calculator, Return on Investment, Investment Returns, Portfolio ROI, Financial Calculator" />
+        <meta
+          name="keywords"
+          content="ROI Calculator, Return on Investment, Investment Returns, Portfolio ROI, Financial Calculator"
+        />
         <link rel="canonical" href={canonicalUrl} />
 
         {/* hreflang implementation */}
@@ -139,14 +143,19 @@ function ROICalculator() {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content="https://www.sipgo.in/images/logo.png" />
+        <meta
+          property="og:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
-        <meta name="twitter:image" content="https://www.sipgo.in/images/logo.png" />
-        
+        <meta
+          name="twitter:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
 
         {/* ========== CRITICAL SCHEMA MARKUP ========== */}
 
@@ -157,14 +166,14 @@ function ROICalculator() {
             "@type": "WebPage",
             name: pageTitle,
             description: pageDescription,
-            "url": canonicalUrl,
+            url: canonicalUrl,
             "@id": canonicalUrl,
-            "isPartOf": {
+            isPartOf: {
               "@type": "WebSite",
-              "name": "SIPGo Financial Calculators",
-              "url": "https://www.sipgo.in"
+              name: "SIPGo Financial Calculators",
+              url: "https://www.sipgo.in",
             },
-            "dateModified": "2025-06-15T00:00:00Z"
+            dateModified: "2025-06-15T00:00:00Z",
           })}
         </script>
 
@@ -174,16 +183,26 @@ function ROICalculator() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "@id": "https://www.sipgo.in/roi-calculator#breadcrumb",
-            "name": "ROI Calculator Navigation Path",
+            name: "ROI Calculator Navigation Path",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sipgo.in/" },
-              { "@type": "ListItem", position: 2, name: "ROI Calculator", item: "https://www.sipgo.in/roi-calculator" }
-            ]
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.sipgo.in/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "ROI Calculator",
+                item: "https://www.sipgo.in/roi-calculator",
+              },
+            ],
           })}
         </script>
       </Helmet>
 
-      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
+      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold px-0.5 vs:p-0 my-2 sm:my-4">
         ROI Calculator
       </h1>
 

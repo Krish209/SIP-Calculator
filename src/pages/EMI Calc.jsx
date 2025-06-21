@@ -3,9 +3,15 @@ import { Helmet } from "react-helmet-async"; // for SEO, Schema Markup, etc.
 import { useLocation } from "react-router-dom";
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
-import { formatNumber, formatChartNumber, format2decimal } from "./Calc";
+import {
+  formatNumber,
+  formatChartNumber,
+  format2decimal,
+} from "../consts/Calc";
 import EMIInfo from "./EMI Info";
 import EMIFAQ from "./EMI Faq";
+import loanMetaConfig from "../consts/LoanMetaConfig"; // Import your loan meta config
+import { meta } from "@eslint/js";
 
 function EMI() {
   const location = useLocation();
@@ -29,6 +35,7 @@ function EMI() {
 
   const loanType = getLoanTypeFromPath(path);
   const initial = defaultValues[loanType] || defaultValues["emi"];
+  const metaConfig = loanMetaConfig[loanType] || loanMetaConfig["emi"];
 
   const [pageTitles, setpageTitles] = useState("EMI Calculator");
 
@@ -45,7 +52,7 @@ function EMI() {
     const currentPath = location.pathname;
     const matchedTitle = titleMap[currentPath] || "Loan Calculator";
     setpageTitles(matchedTitle);
-    document.title = matchedTitle;
+    document.title = metaConfig.title;
 
     const type = getLoanTypeFromPath(location.pathname);
     const values = defaultValues[type];
@@ -53,7 +60,7 @@ function EMI() {
     setLoanAmount(values.loan);
     setInterestRate(values.rate);
     setLoanTenure(values.tenure);
-  }, [location.pathname]);
+  }, [location.pathname, metaConfig.title]);
 
   const [loanAmount, setLoanAmount] = useState(initial.loan);
   const [interestRate, setInterestRate] = useState(initial.rate);
@@ -169,36 +176,40 @@ function EMI() {
   const handleLoanTenureChange = (e) =>
     setLoanTenure(Math.max(0, Math.min(Number(e.target.value), maxLoanTenure)));
 
-  // For Schema
-  const pageTitle = "EMI Calculator - Calculate Loan EMI Instantly";
-  const pageDescription = "Calculate your monthly EMI for any type of loan using our EMI Calculator. Adjust loan amount, interest rate, and tenure to compare results.";
-  const canonicalUrl = "https://www.sipgo.in/emi-calculator";
-
   return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
       <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="EMI Calculator, Loan EMI, Home Loan EMI, Car Loan EMI, Personal Loan EMI" />
-        <link rel="canonical" href={canonicalUrl} />
+        <title>{metaConfig.title}</title>
+        <meta name="description" content={metaConfig.description} />
+        <meta name="keywords" content={metaConfig.keywords} />
+        <link rel="canonical" href={metaConfig.canonical} />
 
         {/* hreflang implementation */}
-        <link rel="alternate" hreflang="en" href={canonicalUrl} />
-        <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+        <link rel="alternate" hreflang="en" href={metaConfig.canonical} />
+        <link
+          rel="alternate"
+          hreflang="x-default"
+          href={metaConfig.canonical}
+        />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content="https://www.sipgo.in/images/logo.png" />
+        <meta property="og:url" content={metaConfig.canonical} />
+        <meta property="og:title" content={metaConfig.title} />
+        <meta property="og:description" content={metaConfig.description} />
+        <meta
+          property="og:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={pageDescription} />
-        <meta name="twitter:image" content="https://www.sipgo.in/images/logo.png" />
-        
+        <meta name="twitter:title" content={metaConfig.title} />
+        <meta name="twitter:description" content={metaConfig.description} />
+        <meta
+          name="twitter:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
 
         {/* ========== CRITICAL SCHEMA MARKUP ========== */}
 
@@ -207,16 +218,16 @@ function EMI() {
             // Primary WebPage Schema
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: pageTitle,
-            description: pageDescription,
-            "url": canonicalUrl,
-            "@id": canonicalUrl,
-            "isPartOf": {
+            name: metaConfig.title,
+            description: metaConfig.description,
+            url: metaConfig.canonical,
+            "@id": metaConfig.canonical,
+            isPartOf: {
               "@type": "WebSite",
-              "name": "SIPGo Financial Calculators",
-              "url": "https://www.sipgo.in"
+              name: "SIPGo Financial Calculators",
+              url: "https://www.sipgo.in",
             },
-            "dateModified": "2025-06-15T00:00:00Z"
+            dateModified: "2025-06-15T00:00:00Z",
           })}
         </script>
 
@@ -226,16 +237,26 @@ function EMI() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "@id": "https://www.sipgo.in/emi-calculator#breadcrumb",
-            "name": "EMI Calculator Navigation Path",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sipgo.in/" },
-              { "@type": "ListItem", "position": 2, "name": "EMI Calculator", "item": "https://www.sipgo.in/emi-calculator" }
-            ]
+            name: metaConfig.title,
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.sipgo.in/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: metaConfig.title,
+                item: metaConfig.canonical,
+              },
+            ],
           })}
         </script>
       </Helmet>
 
-      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
+      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold px-0.5 vs:p-0 my-2 sm:my-4">
         {pageTitles}
       </h1>
 

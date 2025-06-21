@@ -53,7 +53,7 @@ const RDInfo = () => {
         })}
       </script>
 
-      <h2 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
+      <h2 className="text-[22px] sm:text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         Recurring Deposit (RD) - A Comprehensive Guide
       </h2>
 
@@ -104,8 +104,8 @@ const RDInfo = () => {
             RD balance in case of emergency.
           </li>
           <li>
-            <strong>Premature Withdrawal</strong>: Allowed with penalties
-            and reduced interest.
+            <strong>Premature Withdrawal</strong>: Allowed with penalties and
+            reduced interest.
           </li>
           <li>
             <strong>Tax-Saving Opportunity</strong>: Certain RD schemes qualify
@@ -268,9 +268,9 @@ const RDInfo = () => {
             Tax Act.
           </li>
           <li>
-            <strong>TDS (Tax Deducted at Source)</strong>: TDS (Tax Deducted at Source) is deducted
-            by the bank if the interest earned exceeds ₹40,000 in a financial
-            year (₹50,000 for senior citizens).
+            <strong>TDS (Tax Deducted at Source)</strong>: TDS (Tax Deducted at
+            Source) is deducted by the bank if the interest earned exceeds
+            ₹40,000 in a financial year (₹50,000 for senior citizens).
           </li>
           <li>
             <strong>Form 15G/15H</strong>: You can submit these forms to avoid

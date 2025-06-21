@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async"; // for SEO, Schema Markup, etc.
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
-import { formatNumber, formatChartNumber } from "./Calc";
+import { formatNumber, formatChartNumber } from "../consts/Calc";
 import PPFInfo from "./PPF Info";
 import PPFFAQ from "./PPF Faq";
 
@@ -164,7 +164,8 @@ function PPF() {
 
   // Schema
   const pageTitle = "PPF Calculator - Calculate Public Provident Fund Returns";
-  const pageDescription = "Use our PPF Calculator to estimate your Public Provident Fund maturity amount, interest earned, and investment planning over 15 years.";
+  const pageDescription =
+    "Use our PPF Calculator to estimate your Public Provident Fund maturity amount, interest earned, and investment planning over 15 years.";
   const canonicalUrl = "https://www.sipgo.in/ppf-calculator";
   const currentPPFRate = "7.1%"; // Get current PPF interest rate
 
@@ -173,7 +174,10 @@ function PPF() {
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="PPF Calculator, Public Provident Fund, PPF Returns, Tax Saving Calculator, 80C Investment, Government Savings Scheme" />
+        <meta
+          name="keywords"
+          content="PPF Calculator, Public Provident Fund, PPF Returns, Tax Saving Calculator, 80C Investment, Government Savings Scheme"
+        />
         <link rel="canonical" href={canonicalUrl} />
 
         {/* hreflang implementation */}
@@ -185,15 +189,20 @@ function PPF() {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content="https://www.sipgo.in/images/logo.png" />
+        <meta
+          property="og:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
-        <meta name="twitter:image" content="https://www.sipgo.in/images/logo.png" />
-        
-        
+        <meta
+          name="twitter:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
+
         {/* ========== CRITICAL SCHEMA MARKUP ========== */}
 
         <script type="application/ld+json">
@@ -204,56 +213,57 @@ function PPF() {
               "@type": "WebPage",
               name: pageTitle,
               description: pageDescription,
-              "url": canonicalUrl,
+              url: canonicalUrl,
               "@id": canonicalUrl,
-              "isPartOf": {
+              isPartOf: {
                 "@type": "WebSite",
-                "name": "SIPGo Financial Calculators",
-                "url": "https://www.sipgo.in"
+                name: "SIPGo Financial Calculators",
+                url: "https://www.sipgo.in",
               },
-              "dateModified": "2025-06-15T00:00:00Z"
+              dateModified: "2025-06-15T00:00:00Z",
             },
 
             // SoftwareApplication Schema
             {
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              "name": "PPF Calculator",
-              "url": "https://www.sipgo.in/ppf-calculator",
-              "applicationCategory": "FinanceApplication",
-              "operatingSystem": "All",
-              "browserRequirements": "Requires JavaScript",
-              "creator": {
+              name: "PPF Calculator",
+              url: "https://www.sipgo.in/ppf-calculator",
+              applicationCategory: "FinanceApplication",
+              operatingSystem: "All",
+              browserRequirements: "Requires JavaScript",
+              creator: {
                 "@type": "Organization",
-                "name": "SIPGo",
-                "url": "https://www.sipgo.in"
+                name: "SIPGo",
+                url: "https://www.sipgo.in",
               },
-              "offers": {
+              offers: {
                 "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "INR"
+                price: "0",
+                priceCurrency: "INR",
               },
-              "description": "An online PPF calculator to estimate maturity value and interest earned from your Public Provident Fund investment."
+              description:
+                "An online PPF calculator to estimate maturity value and interest earned from your Public Provident Fund investment.",
             },
 
             // Financial Product Schema
             {
               "@context": "https://schema.org",
               "@type": "FinancialProduct",
-              "name": "Public Provident Fund (PPF)",
-              "description":
+              name: "Public Provident Fund (PPF)",
+              description:
                 "Government-backed savings scheme with EEE tax benefits under Section 80C",
-              "interestRate": currentPPFRate,
-              "feesAndCommissionsSpecification": "Zero account fees",
-              "annualPercentageRate": currentPPFRate,
-              "termsOfService": "https://www.sipgo.in/terms",
-              "category": "TaxSavingScheme",
-              "url": canonicalUrl,
-              "provider": {
+              interestRate: currentPPFRate,
+              feesAndCommissionsSpecification: "Zero account fees",
+              annualPercentageRate: currentPPFRate,
+              termsOfService: "https://www.sipgo.in/terms",
+              category: "TaxSavingScheme",
+              url: canonicalUrl,
+              provider: {
                 "@type": "GovernmentOrganization",
-                "name": "Government of India"
-              },              
-            }
+                name: "Government of India",
+              },
+            },
           ])}
         </script>
 
@@ -263,16 +273,26 @@ function PPF() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "@id": "https://www.sipgo.in/ppf-calculator#breadcrumb",
-            "name": "PPF Calculator Navigation Path",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sipgo.in/" },
-              { "@type": "ListItem", "position": 2, "name": "PPF Calculator", "item": "https://www.sipgo.in/ppf-calculator" }
-            ]
+            name: "PPF Calculator Navigation Path",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.sipgo.in/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "PPF Calculator",
+                item: "https://www.sipgo.in/ppf-calculator",
+              },
+            ],
           })}
         </script>
       </Helmet>
 
-      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
+      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold px-0.5 vs:p-0 my-2 sm:my-4">
         PPF Calculator
       </h1>
 

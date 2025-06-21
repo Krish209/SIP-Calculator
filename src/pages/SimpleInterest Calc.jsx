@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async"; // for SEO, Schema Markup, etc.
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
-import { formatNumber, formatChartNumber } from "./Calc";
+import { formatNumber, formatChartNumber } from "../consts/Calc";
 import SimpleInterestInfo from "./SimpleInterest Info";
 import SimpleInterestFAQ from "./SimpleInterest Faq";
 
@@ -177,7 +177,8 @@ function SimpleInterest() {
 
   // For Schema
   const pageTitle = "Simple Interest Calculator - Calculate Interest Easily";
-  const pageDescription = "Use our Simple Interest Calculator to quickly compute interest based on principal, rate, and time period. Ideal for short-term loans and deposits.";
+  const pageDescription =
+    "Use our Simple Interest Calculator to quickly compute interest based on principal, rate, and time period. Ideal for short-term loans and deposits.";
   const canonicalUrl = "https://www.sipgo.in/simple-interest-calculator";
 
   return (
@@ -185,7 +186,10 @@ function SimpleInterest() {
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="Simple Interest Calculator, Calculate Interest, Principal Interest Calculation" />
+        <meta
+          name="keywords"
+          content="Simple Interest Calculator, Calculate Interest, Principal Interest Calculation"
+        />
         <link rel="canonical" href={canonicalUrl} />
 
         {/* hreflang implementation */}
@@ -197,14 +201,19 @@ function SimpleInterest() {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content="https://www.sipgo.in/images/logo.png" />
+        <meta
+          property="og:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
-        <meta name="twitter:image" content="https://www.sipgo.in/images/logo.png" />
-        
+        <meta
+          name="twitter:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
 
         {/* ========== CRITICAL SCHEMA MARKUP ========== */}
 
@@ -215,14 +224,14 @@ function SimpleInterest() {
             "@type": "WebPage",
             name: pageTitle,
             description: pageDescription,
-            "url": canonicalUrl,
+            url: canonicalUrl,
             "@id": canonicalUrl,
-            "isPartOf": {
+            isPartOf: {
               "@type": "WebSite",
-              "name": "SIPGo Financial Calculators",
-              "url": "https://www.sipgo.in"
+              name: "SIPGo Financial Calculators",
+              url: "https://www.sipgo.in",
             },
-            "dateModified": "2025-06-15T00:00:00Z"
+            dateModified: "2025-06-15T00:00:00Z",
           })}
         </script>
 
@@ -232,16 +241,26 @@ function SimpleInterest() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "@id": "https://www.sipgo.in/simple-interest-calculator#breadcrumb",
-            "name": "Simple Interest Calculator Navigation Path",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sipgo.in/" },
-              { "@type": "ListItem", "position": 2, "name": "Simple Interest Calculator", "item": "https://www.sipgo.in/simple-interest-calculator" }
-            ]
+            name: "Simple Interest Calculator Navigation Path",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.sipgo.in/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Simple Interest Calculator",
+                item: "https://www.sipgo.in/simple-interest-calculator",
+              },
+            ],
           })}
         </script>
       </Helmet>
 
-      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
+      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold px-0.5 vs:p-0 my-2 sm:my-4">
         Simple Interest Calculator
       </h1>
 

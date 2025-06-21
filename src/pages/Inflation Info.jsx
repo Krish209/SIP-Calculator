@@ -5,52 +5,52 @@ const InflationInfo = () => {
   const dateModified = new Date("2025-06-01").toISOString();
   return (
     <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-
       {/* Article as information Schema Markup */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "url": "https://www.sipgo.in/inflation-calculator#guide",
+          url: "https://www.sipgo.in/inflation-calculator#guide",
           "@id": "https://www.sipgo.in/inflation-calculator#guide",
-          "headline": "Inflation Calculator – Understand the Real Value of Money",
-          "description": "Calculate the impact of inflation on your money over time to make better financial decisions.",
-          "image": "https://www.sipgo.in/images/logo.png",
-          "author": {
+          headline: "Inflation Calculator – Understand the Real Value of Money",
+          description:
+            "Calculate the impact of inflation on your money over time to make better financial decisions.",
+          image: "https://www.sipgo.in/images/logo.png",
+          author: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "url": "https://www.sipgo.in/"
+            name: "SIPGo",
+            url: "https://www.sipgo.in/",
           },
-          "datePublished": datePublished,
-          "dateModified":  dateModified,
-          "publisher": {
+          datePublished: datePublished,
+          dateModified: dateModified,
+          publisher: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "logo": {
+            name: "SIPGo",
+            logo: {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/images/logo.png"
-            }
+              url: "https://www.sipgo.in/images/logo.png",
+            },
           },
-          "mainEntityOfPage": {
+          mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": "https://www.sipgo.in/inflation-calculator"
+            "@id": "https://www.sipgo.in/inflation-calculator",
           },
-          "mainEntity": {
+          mainEntity: {
             "@type": "Table",
-            "about": "Inflation Guide Sections",
-            "table": [
+            about: "Inflation Guide Sections",
+            table: [
               "What is Inflation?",
               "Causes of Inflation",
               "Types of Inflation",
               "Measuring Inflation",
               "Consequences of Inflation",
-              "Inflation Control Measures"
-            ]
-          }
+              "Inflation Control Measures",
+            ],
+          },
         })}
       </script>
 
-      <h2 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
+      <h2 className="text-[22px] sm:text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         Inflation - A Comprehensive Guide
       </h2>
 
@@ -59,10 +59,11 @@ const InflationInfo = () => {
           What is Inflation?
         </h3>
         <p className="mb-2">
-          <strong>Inflation</strong> is the rate at which the general level of prices for goods
-          and services rises over time, leading to a decrease in the purchasing
-          power of a currency. In simpler terms, when inflation occurs, each
-          unit of currency buys fewer goods and services than before.
+          <strong>Inflation</strong> is the rate at which the general level of
+          prices for goods and services rises over time, leading to a decrease
+          in the purchasing power of a currency. In simpler terms, when
+          inflation occurs, each unit of currency buys fewer goods and services
+          than before.
         </p>
 
         <p className="mb-2">

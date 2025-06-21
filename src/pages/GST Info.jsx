@@ -5,40 +5,41 @@ const GSTInfo = () => {
   const dateModified = new Date("2025-06-01").toISOString();
   return (
     <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-
       {/* Article as information Schema Markup */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "url": "https://www.sipgo.in/gst-calculator#guide",
+          url: "https://www.sipgo.in/gst-calculator#guide",
           "@id": "https://www.sipgo.in/gst-calculator#guide",
-          "headline": "GST Calculator – Quick Tax Estimator for Goods and Services",
-          "description": "Easily calculate GST amount on sales or purchases with our comprehensive GST Calculator for various rates.",
-          "image": "https://www.sipgo.in/images/logo.png",
-          "author": {
+          headline:
+            "GST Calculator – Quick Tax Estimator for Goods and Services",
+          description:
+            "Easily calculate GST amount on sales or purchases with our comprehensive GST Calculator for various rates.",
+          image: "https://www.sipgo.in/images/logo.png",
+          author: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "url": "https://www.sipgo.in/"
+            name: "SIPGo",
+            url: "https://www.sipgo.in/",
           },
-          "datePublished": datePublished,
-          "dateModified":  dateModified,
-          "publisher": {
+          datePublished: datePublished,
+          dateModified: dateModified,
+          publisher: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "logo": {
+            name: "SIPGo",
+            logo: {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/images/logo.png"
-            }
+              url: "https://www.sipgo.in/images/logo.png",
+            },
           },
-          "mainEntityOfPage": {
+          mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": "https://www.sipgo.in/gst-calculator"
+            "@id": "https://www.sipgo.in/gst-calculator",
           },
-          "mainEntity": {
+          mainEntity: {
             "@type": "Table",
-            "about": "GST Guide Sections",
-            "table": [
+            about: "GST Guide Sections",
+            table: [
               "What is GST?",
               "Key Features of GST",
               "Types of GST",
@@ -50,13 +51,13 @@ const GSTInfo = () => {
               "GST Returns",
               "Challenges of GST",
               "GST and E-commerce",
-              "Conclusion"
-            ]
-          }
+              "Conclusion",
+            ],
+          },
         })}
       </script>
 
-      <h2 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
+      <h2 className="text-[22px] sm:text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         GST - A Comprehensive Guide
       </h2>
 

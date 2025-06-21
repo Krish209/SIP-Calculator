@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async"; // for SEO, Schema Markup, etc.
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
-import { formatNumber, formatChartNumber } from "./Calc";
+import { formatNumber, formatChartNumber } from "../consts/Calc";
 import NSCInfo from "./NSC Info";
 import NSCFAQ from "./NSC Faq";
 
@@ -125,16 +125,21 @@ function NSC() {
     setCompoundFrequency(Number(e.target.value));
 
   // For Schema
-  const pageTitle = "NSC Calculator - Calculate National Savings Certificate Maturity";
-  const pageDescription = "Use the NSC Calculator to find the maturity value of your investment under the National Savings Certificate scheme. Includes interest rate and tenure details.";
+  const pageTitle =
+    "NSC Calculator - Calculate National Savings Certificate Maturity";
+  const pageDescription =
+    "Use the NSC Calculator to find the maturity value of your investment under the National Savings Certificate scheme. Includes interest rate and tenure details.";
   const canonicalUrl = "https://www.sipgo.in/nsc-calculator";
 
-return (
+  return (
     <div className="max-w-screen-lg md:mx-auto p-1 vs:p-4 bg-white text-night">
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="NSC Calculator, National Savings Certificate, NSC Interest, NSC Maturity Value" />
+        <meta
+          name="keywords"
+          content="NSC Calculator, National Savings Certificate, NSC Interest, NSC Maturity Value"
+        />
         <link rel="canonical" href={canonicalUrl} />
 
         {/* hreflang implementation */}
@@ -146,14 +151,19 @@ return (
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content="https://www.sipgo.in/images/logo.png" />
+        <meta
+          property="og:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
-        <meta name="twitter:image" content="https://www.sipgo.in/images/logo.png" />
-        
+        <meta
+          name="twitter:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
 
         {/* ========== CRITICAL SCHEMA MARKUP ========== */}
 
@@ -164,14 +174,14 @@ return (
             "@type": "WebPage",
             name: pageTitle,
             description: pageDescription,
-            "url": canonicalUrl,
+            url: canonicalUrl,
             "@id": canonicalUrl,
-            "isPartOf": {
+            isPartOf: {
               "@type": "WebSite",
-              "name": "SIPGo Financial Calculators",
-              "url": "https://www.sipgo.in"
+              name: "SIPGo Financial Calculators",
+              url: "https://www.sipgo.in",
             },
-            "dateModified": "2025-06-15T00:00:00Z"
+            dateModified: "2025-06-15T00:00:00Z",
           })}
         </script>
 
@@ -181,16 +191,26 @@ return (
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "@id": "https://www.sipgo.in/nsc-calculator#breadcrumb",
-            "name": "NSC Calculator Navigation Path",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sipgo.in/" },
-              { "@type": "ListItem", "position": 2, "name": "NSC Calculator", "item": "https://www.sipgo.in/nsc-calculator" }
-            ]
+            name: "NSC Calculator Navigation Path",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.sipgo.in/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "NSC Calculator",
+                item: "https://www.sipgo.in/nsc-calculator",
+              },
+            ],
           })}
         </script>
       </Helmet>
 
-      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
+      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold px-0.5 vs:p-0 my-2 sm:my-4">
         NSC Calculator
       </h1>
 

@@ -5,80 +5,81 @@ const StepUpSIPInfo = () => {
   const datePublished = new Date("2025-04-01").toISOString();
   const dateModified = new Date("2025-06-01").toISOString();
   const columns = [
-    { key: 'details', header: 'Details' },
-    { key: 'sip', header: 'SIP' },
-    { key: 'stepUpSip', header: 'Step-Up SIP' },
+    { key: "details", header: "Details" },
+    { key: "sip", header: "SIP" },
+    { key: "stepUpSip", header: "Step-Up SIP" },
   ];
 
   const data = [
     {
-      details: 'Starting Amount',
-      sip: '₹5,000/month',
-      stepUpSip: '₹5,000/month',
+      details: "Starting Amount",
+      sip: "₹5,000/month",
+      stepUpSip: "₹5,000/month",
     },
     {
-      details: 'Yearly Increment',
-      sip: 'No',
-      stepUpSip: '₹500/year',
+      details: "Yearly Increment",
+      sip: "No",
+      stepUpSip: "₹500/year",
     },
     {
-      details: 'Total Invested',
-      sip: '₹6,00,000',
-      stepUpSip: '₹7,50,000',
+      details: "Total Invested",
+      sip: "₹6,00,000",
+      stepUpSip: "₹7,50,000",
     },
     {
-      details: 'Estimated Returns',
-      sip: '₹4,55,000',
-      stepUpSip: '₹6,90,000',
+      details: "Estimated Returns",
+      sip: "₹4,55,000",
+      stepUpSip: "₹6,90,000",
     },
     {
-      details: 'Final Value',
-      sip: '₹10,55,000',
-      stepUpSip: '₹14,40,000',
+      details: "Final Value",
+      sip: "₹10,55,000",
+      stepUpSip: "₹14,40,000",
     },
     {
-      details: 'Return on Investment (ROI)',
-      sip: '~76%',
-      stepUpSip: '~92%',
+      details: "Return on Investment (ROI)",
+      sip: "~76%",
+      stepUpSip: "~92%",
     },
   ];
 
   return (
     <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-
       {/* Article as information Schema Markup */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "url": "https://www.sipgo.in/step-up-sip-calculator#guide",
+          url: "https://www.sipgo.in/step-up-sip-calculator#guide",
           "@id": "https://www.sipgo.in/step-up-sip-calculator#guide",
-          "headline": "Step-Up SIP Calculator – Calculate Increasing Investment Returns",
-          "description": "Evaluate your returns by increasing your SIP annually. Plan more effectively with our Step-Up SIP Calculator.",
-          "image": "https://www.sipgo.in/images/logo.png",
-          "author": {
+          headline:
+            "Step-Up SIP Calculator – Calculate Increasing Investment Returns",
+          description:
+            "Evaluate your returns by increasing your SIP annually. Plan more effectively with our Step-Up SIP Calculator.",
+          image: "https://www.sipgo.in/images/logo.png",
+          author: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "url": "https://www.sipgo.in/"
+            name: "SIPGo",
+            url: "https://www.sipgo.in/",
           },
-          "datePublished": datePublished,
-          "dateModified":  dateModified,
-          "publisher": {
+          datePublished: datePublished,
+          dateModified: dateModified,
+          publisher: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "logo": {
+            name: "SIPGo",
+            logo: {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/images/logo.png"
-            }
+              url: "https://www.sipgo.in/images/logo.png",
+            },
           },
-          "mainEntityOfPage": {
+          mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": "https://www.sipgo.in/step-up-sip-calculator"
+            "@id": "https://www.sipgo.in/step-up-sip-calculator",
           },
-          "mainEntity": {
+          mainEntity: {
             "@type": "Table",
-            "about": "Step-Up SIP Guide Sections",
-            "table": [
+            about: "Step-Up SIP Guide Sections",
+            table: [
               "What is a Step-Up SIP?",
               "Key Features of Step-Up SIP",
               "How Does Step-Up SIP Work?",
@@ -87,13 +88,13 @@ const StepUpSIPInfo = () => {
               "Pros",
               "Cons",
               "Who Should Invest in Step-Up SIP?",
-              "Conclusion"
-            ]
-          }
+              "Conclusion",
+            ],
+          },
         })}
       </script>
 
-      <h2 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
+      <h2 className="text-[22px] sm:text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         Step-Up SIP - A Comprehensive Guide
       </h2>
 
@@ -105,10 +106,10 @@ const StepUpSIPInfo = () => {
         <p className="mb-2">
           A <strong>Step-Up SIP</strong> (also called a <em>Top-Up SIP</em>) is
           a flexible investment strategy in mutual funds where you can
-          automatically increase your SIP contribution at fixed intervals (e.g., yearly).
-          Unlike a regular SIP where the investment amount stays constant, a
-          Step-Up SIP allows you to grow your investment periodically—usually
-          every year.
+          automatically increase your SIP contribution at fixed intervals (e.g.,
+          yearly). Unlike a regular SIP where the investment amount stays
+          constant, a Step-Up SIP allows you to grow your investment
+          periodically—usually every year.
         </p>
         <p className="mb-2">
           This strategy is ideal for investors whose income is expected to rise
@@ -162,9 +163,7 @@ const StepUpSIPInfo = () => {
           <code className="font-bold">
             A = P × [(1 + r)^n - 1] / (r/n) + S × [(1 + r)^n - 1] / (r/n)
           </code>
-          <p className="mt-2">
-            Where:
-          </p>
+          <p className="mt-2">Where:</p>
           <ul className="list-disc pl-6 space-y-1">
             <li>
               <strong>A</strong> = Final Amount (after interest)
@@ -173,12 +172,12 @@ const StepUpSIPInfo = () => {
               <strong>P</strong> = Monthly Investment
             </li>
             <li>
-              <strong>r</strong> = Monthly Interest Rate (Annual Interest Rate
-              ÷ 12)
+              <strong>r</strong> = Monthly Interest Rate (Annual Interest Rate ÷
+              12)
             </li>
             <li>
-              <strong>n</strong> = Total Number of Months (Investment Period
-              in Years × 12)
+              <strong>n</strong> = Total Number of Months (Investment Period in
+              Years × 12)
             </li>
             <li>
               <strong>S</strong> = Increase in investment amount

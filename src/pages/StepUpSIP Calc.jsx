@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async"; // for SEO, Schema Markup, etc.
-import { formatNumber, formatChartNumber } from "./Calc";
+import { formatNumber, formatChartNumber } from "../consts/Calc";
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
 import StepUpSIPInfo from "./StepUpSIP Info";
@@ -159,8 +159,10 @@ function StepUpSIPCalculator() {
   }, [monthlyInvestment, rateOfInterest, investmentPeriod, stepUpPercent]);
 
   // For Schema
-  const pageTitle = "Step-Up SIP Calculator - Grow Your Investment with Increasing SIPs";
-  const pageDescription = "Plan your investment strategy with our Step-Up SIP Calculator. Estimate returns when you gradually increase your monthly SIP contributions.";
+  const pageTitle =
+    "Step-Up SIP Calculator - Grow Your Investment with Increasing SIPs";
+  const pageDescription =
+    "Plan your investment strategy with our Step-Up SIP Calculator. Estimate returns when you gradually increase your monthly SIP contributions.";
   const canonicalUrl = "https://www.sipgo.in/step-up-sip-calculator";
 
   return (
@@ -168,7 +170,10 @@ function StepUpSIPCalculator() {
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="Step-Up SIP Calculator, Increasing SIP, Wealth Planning, SIP Growth, Mutual Fund Growth SIP" />
+        <meta
+          name="keywords"
+          content="Step-Up SIP Calculator, Increasing SIP, Wealth Planning, SIP Growth, Mutual Fund Growth SIP"
+        />
         <link rel="canonical" href={canonicalUrl} />
 
         {/* hreflang implementation */}
@@ -180,14 +185,19 @@ function StepUpSIPCalculator() {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content="https://www.sipgo.in/images/logo.png" />
+        <meta
+          property="og:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
-        <meta name="twitter:image" content="https://www.sipgo.in/images/logo.png" />
-        
+        <meta
+          name="twitter:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
 
         {/* ========== CRITICAL SCHEMA MARKUP ========== */}
 
@@ -198,14 +208,14 @@ function StepUpSIPCalculator() {
             "@type": "WebPage",
             name: pageTitle,
             description: pageDescription,
-            "url": canonicalUrl,
+            url: canonicalUrl,
             "@id": canonicalUrl,
-            "isPartOf": {
+            isPartOf: {
               "@type": "WebSite",
-              "name": "SIPGo Financial Calculators",
-              "url": "https://www.sipgo.in"
+              name: "SIPGo Financial Calculators",
+              url: "https://www.sipgo.in",
             },
-            "dateModified": "2025-06-15T00:00:00Z"
+            dateModified: "2025-06-15T00:00:00Z",
           })}
         </script>
 
@@ -215,16 +225,26 @@ function StepUpSIPCalculator() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "@id": "https://www.sipgo.in/step-up-sip-calculator#breadcrumb",
-            "name": "Step-Up SIP Calculator Navigation Path",
+            name: "Step-Up SIP Calculator Navigation Path",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sipgo.in/" },
-              { "@type": "ListItem", position: 2, name: "Step-Up SIP Calculator", item: "https://www.sipgo.in/step-up-sip-calculator" }
-            ]
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.sipgo.in/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Step-Up SIP Calculator",
+                item: "https://www.sipgo.in/step-up-sip-calculator",
+              },
+            ],
           })}
         </script>
       </Helmet>
 
-      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
+      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold px-0.5 vs:p-0 my-2 sm:my-4">
         Step-Up SIP Calculator
       </h1>
 

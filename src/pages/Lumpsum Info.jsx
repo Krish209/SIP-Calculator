@@ -4,7 +4,7 @@ import Table from "../consts/Table";
 const LumpsumInfo = () => {
   const datePublished = new Date("2025-04-01").toISOString();
   const dateModified = new Date("2025-06-01").toISOString();
-  
+
   const columns = [
     { key: "feature", header: "Feature" },
     { key: "sip", header: "SIP" },
@@ -40,40 +40,40 @@ const LumpsumInfo = () => {
   ];
   return (
     <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-
       {/* Article as information Schema Markup */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "url": "https://www.sipgo.in/lumpsum-calculator#guide",
+          url: "https://www.sipgo.in/lumpsum-calculator#guide",
           "@id": "https://www.sipgo.in/lumpsum-calculator#guide",
-          "headline": "Lumpsum Calculator – One-Time Investment Growth Estimator",
-          "description": "Calculate the future value of your one-time mutual fund investment using our Lumpsum Calculator.",
-          "image": "https://www.sipgo.in/images/logo.png",
-          "author": {
+          headline: "Lumpsum Calculator – One-Time Investment Growth Estimator",
+          description:
+            "Calculate the future value of your one-time mutual fund investment using our Lumpsum Calculator.",
+          image: "https://www.sipgo.in/images/logo.png",
+          author: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "url": "https://www.sipgo.in/"
+            name: "SIPGo",
+            url: "https://www.sipgo.in/",
           },
-          "datePublished": datePublished,
-          "dateModified":  dateModified,
-          "publisher": {
+          datePublished: datePublished,
+          dateModified: dateModified,
+          publisher: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "logo": {
+            name: "SIPGo",
+            logo: {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/images/logo.png"
-            }
+              url: "https://www.sipgo.in/images/logo.png",
+            },
           },
-          "mainEntityOfPage": {
+          mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": "https://www.sipgo.in/lumpsum-calculator"
+            "@id": "https://www.sipgo.in/lumpsum-calculator",
           },
-          "mainEntity": {
+          mainEntity: {
             "@type": "Table",
-            "about": "Lumpsum Guide Sections",
-            "table": [
+            about: "Lumpsum Guide Sections",
+            table: [
               "What is Lumpsum Investment?",
               "Key Features of Lump Sum",
               "How Are Lumpsum Investment Returns Calculated?",
@@ -82,13 +82,13 @@ const LumpsumInfo = () => {
               "Tax Implications of Lumpsum",
               "Inflation Effect on Lump Sum",
               "Key Considerations for Lumpsum",
-              "Common Lumpsum Mistakes to Avoid"
-            ]
-          }
+              "Common Lumpsum Mistakes to Avoid",
+            ],
+          },
         })}
       </script>
 
-      <h2 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
+      <h2 className="text-[22px] sm:text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         Lumpsum Investment - A Comprehensive Guide
       </h2>
       {/* What is Lumpsum? */}

@@ -5,51 +5,51 @@ const CompoundingInterestInfo = () => {
   const dateModified = new Date("2025-06-01").toISOString();
   return (
     <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-
       {/* Article as information Schema Markup */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "url": "https://www.sipgo.in/compound-interest-calculator#guide",
+          url: "https://www.sipgo.in/compound-interest-calculator#guide",
           "@id": "https://www.sipgo.in/compound-interest-calculator#guide",
-          "headline": "Compound Interest Calculator – Wealth Growth Tool",
-          "description": "Understand the power of compounding with this Compound Interest Calculator. Estimate long-term returns.",
-          "image": "https://www.sipgo.in/images/logo.png",
-          "author": {
+          headline: "Compound Interest Calculator – Wealth Growth Tool",
+          description:
+            "Understand the power of compounding with this Compound Interest Calculator. Estimate long-term returns.",
+          image: "https://www.sipgo.in/images/logo.png",
+          author: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "url": "https://www.sipgo.in/"
+            name: "SIPGo",
+            url: "https://www.sipgo.in/",
           },
-          "datePublished": datePublished,
-          "dateModified":  dateModified,
-          "publisher": {
+          datePublished: datePublished,
+          dateModified: dateModified,
+          publisher: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "logo": {
+            name: "SIPGo",
+            logo: {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/images/logo.png"
-            }
+              url: "https://www.sipgo.in/images/logo.png",
+            },
           },
-          "mainEntityOfPage": {
+          mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": "https://www.sipgo.in/compound-interest-calculator"
+            "@id": "https://www.sipgo.in/compound-interest-calculator",
           },
-          "mainEntity": {
+          mainEntity: {
             "@type": "Table",
-            "about": "Compound Interest Guide Sections",
-            "table": [
+            about: "Compound Interest Guide Sections",
+            table: [
               "What is Compound Interest?",
               "How Compound Interest Works",
               "Benefits of Compound Interest",
               "Types of Compound Interest",
               "Compound Interest vs. Simple Interest",
-            ]
-          }
+            ],
+          },
         })}
       </script>
 
-      <h2 className="text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
+      <h2 className="text-[22px] sm:text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         Compound Interest - A Comprehensive Guide
       </h2>
 
@@ -58,11 +58,11 @@ const CompoundingInterestInfo = () => {
           What is Compound Interest?
         </h3>
         <p className="mb-2">
-          <strong>Compound interest</strong> is the interest on a loan or deposit that is
-          calculated based on both the initial principal and the accumulated
-          interest from previous periods. In simpler terms, it's "interest on
-          interest" – the longer you let your money sit, the more interest you
-          earn.
+          <strong>Compound interest</strong> is the interest on a loan or
+          deposit that is calculated based on both the initial principal and the
+          accumulated interest from previous periods. In simpler terms, it's
+          "interest on interest" – the longer you let your money sit, the more
+          interest you earn.
         </p>
       </section>
 

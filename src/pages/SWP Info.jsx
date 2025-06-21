@@ -36,40 +36,40 @@ const SWPInfo = () => {
 
   return (
     <article className="p-1 sm:p-0 text-primary text-[15px] md:text-base">
-
       {/* Article as information Schema Markup */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "url": "https://www.sipgo.in/swp-calculator#guide",
+          url: "https://www.sipgo.in/swp-calculator#guide",
           "@id": "https://www.sipgo.in/swp-calculator#guide",
-          "headline": "SWP Calculator – Systematic Withdrawal Planning Tool",
-          "description": "Plan regular withdrawals from your investments with the SWP Calculator. Estimate monthly payout and balance.",
-          "image": "https://www.sipgo.in/images/logo.png",
-          "author": {
+          headline: "SWP Calculator – Systematic Withdrawal Planning Tool",
+          description:
+            "Plan regular withdrawals from your investments with the SWP Calculator. Estimate monthly payout and balance.",
+          image: "https://www.sipgo.in/images/logo.png",
+          author: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "url": "https://www.sipgo.in/"
+            name: "SIPGo",
+            url: "https://www.sipgo.in/",
           },
-          "datePublished": datePublished,
-          "dateModified":  dateModified,
-          "publisher": {
+          datePublished: datePublished,
+          dateModified: dateModified,
+          publisher: {
             "@type": "Organization",
-            "name": "SIPGo",
-            "logo": {
+            name: "SIPGo",
+            logo: {
               "@type": "ImageObject",
-              "url": "https://www.sipgo.in/images/logo.png"
-            }
+              url: "https://www.sipgo.in/images/logo.png",
+            },
           },
-          "mainEntityOfPage": {
+          mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": "https://www.sipgo.in/swp-calculator"
+            "@id": "https://www.sipgo.in/swp-calculator",
           },
-          "mainEntity": {
+          mainEntity: {
             "@type": "Table",
-            "about": "SWP Guide Sections",
-            "table": [
+            about: "SWP Guide Sections",
+            table: [
               "What is a SWP?",
               "Key Features of SWP",
               "How Does SWP Work?",
@@ -80,13 +80,13 @@ const SWPInfo = () => {
               "Key Considerations for SWP",
               "Tax Implications of SWP",
               "SWP vs SIP",
-              "Conclusion"
-            ]
-          }
+              "Conclusion",
+            ],
+          },
         })}
       </script>
 
-      <h2 className="text-2xl md:text-3xl font-bold lg:text-center mb-6 text-blue-600">
+      <h2 className="text-[22px] sm:text-2xl md:text-3xl font-bold md:text-center mb-6 text-blue-600">
         SWP - A Comprehensive Guide
       </h2>
 
@@ -193,9 +193,7 @@ const SWPInfo = () => {
             The formula used to calculate SWP returns is:
           </p>
           <code className="font-bold">A = B × [(1 + r/n)^n - 1] / (r/n)</code>
-          <p className="mt-2">
-            Where:
-          </p>
+          <p className="mt-2">Where:</p>
           <ul className="list-disc pl-6 space-y-1">
             <li>
               <strong>A</strong> = Final Amount (after interest)
@@ -398,7 +396,6 @@ const SWPInfo = () => {
         </p>
 
         <Table columns={columns} data={data} />
-        
       </section>
 
       {/* Conclusion */}

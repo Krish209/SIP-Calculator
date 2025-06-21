@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async"; // for SEO, Schema Markup, etc.
 import { BarChart } from "./chartjs/Bar";
 import { DoughnutChart } from "./chartjs/Donut";
-import { formatNumber, formatChartNumber } from "./Calc";
+import { formatNumber, formatChartNumber } from "../consts/Calc";
 import SSYInfo from "./SSY Info";
 import SSYFAQ from "./SSY Faq";
 
@@ -128,10 +128,12 @@ function SSY() {
     );
     setStartingPeriod(value);
   };
- 
+
   // For Schema
-  const pageTitle = "SSY Calculator - Sukanya Samriddhi Yojana Maturity Calculator";
-  const pageDescription = "Calculate the maturity amount and interest earned on your SSY account using our Sukanya Samriddhi Yojana Calculator. Ideal for girl child savings planning.";
+  const pageTitle =
+    "SSY Calculator - Sukanya Samriddhi Yojana Maturity Calculator";
+  const pageDescription =
+    "Calculate the maturity amount and interest earned on your SSY account using our Sukanya Samriddhi Yojana Calculator. Ideal for girl child savings planning.";
   const canonicalUrl = "https://www.sipgo.in/ssy-calculator";
 
   return (
@@ -139,7 +141,10 @@ function SSY() {
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="SSY Calculator, Sukanya Samriddhi Yojana, SSY Interest, SSY Maturity Value" />
+        <meta
+          name="keywords"
+          content="SSY Calculator, Sukanya Samriddhi Yojana, SSY Interest, SSY Maturity Value"
+        />
         <link rel="canonical" href={canonicalUrl} />
 
         {/* hreflang implementation */}
@@ -151,14 +156,19 @@ function SSY() {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content="https://www.sipgo.in/images/logo.png" />
+        <meta
+          property="og:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
-        <meta name="twitter:image" content="https://www.sipgo.in/images/logo.png" />
-        
+        <meta
+          name="twitter:image"
+          content="https://www.sipgo.in/images/logo.png"
+        />
 
         {/* ========== CRITICAL SCHEMA MARKUP ========== */}
 
@@ -169,14 +179,14 @@ function SSY() {
             "@type": "WebPage",
             name: pageTitle,
             description: pageDescription,
-            "url": canonicalUrl,
+            url: canonicalUrl,
             "@id": canonicalUrl,
-            "isPartOf": {
+            isPartOf: {
               "@type": "WebSite",
-              "name": "SIPGo Financial Calculators",
-              "url": "https://www.sipgo.in"
+              name: "SIPGo Financial Calculators",
+              url: "https://www.sipgo.in",
             },
-            "dateModified": "2025-06-15T00:00:00Z"
+            dateModified: "2025-06-15T00:00:00Z",
           })}
         </script>
 
@@ -186,16 +196,26 @@ function SSY() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "@id": "https://www.sipgo.in/ssy-calculator#breadcrumb",
-            "name": "SSY Calculator Navigation Path",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sipgo.in/" },
-              { "@type": "ListItem", "position": 2, "name": "SSY Calculator", "item": "https://www.sipgo.in/ssy-calculator" }
-            ]
+            name: "SSY Calculator Navigation Path",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.sipgo.in/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "SSY Calculator",
+                item: "https://www.sipgo.in/ssy-calculator",
+              },
+            ],
           })}
         </script>
       </Helmet>
 
-      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold pt-2 px-0.5 vs:p-0 mb-4">
+      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold px-0.5 vs:p-0 my-2 sm:my-4">
         Sukanya Samriddhi Yojana Calculator
       </h1>
 
@@ -218,7 +238,9 @@ function SSY() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label id="annualInvestmentLabel" className="font-medium">Annual Investment</label>
+                  <label id="annualInvestmentLabel" className="font-medium">
+                    Annual Investment
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -262,7 +284,9 @@ function SSY() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-11">
                 <div className="flex justify-between items-center">
-                  <label id="startYearLabel" className="font-medium">Start Year</label>
+                  <label id="startYearLabel" className="font-medium">
+                    Start Year
+                  </label>
                   <div className="relative w-28 lg:w-32">
                     <input
                       type="number"
@@ -297,7 +321,6 @@ function SSY() {
           {/* Chart & Result Section */}
           <div className="w-full lg:w-6/12 text-[15px] vs:text-[17px] sm:text-[18px] md:text-base lg:text-base m-auto">
             <div className="flex flex-col space-y-4 md:space-y-6">
-            
               {/* Doughnut Chart */}
               {donutChartData && donutChartData.datasets ? (
                 <div className="h-32 ws:h-44 md:h-32 w-auto lg:h-44 mx-auto">

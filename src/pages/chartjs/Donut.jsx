@@ -10,7 +10,7 @@ import {
   Legend,
   ArcElement,
 } from "chart.js";
-import { formatChartNumber } from "../Calc";
+import { formatChartNumber } from "../../consts/Calc";
 
 // Register necessary components for Chart.js
 ChartJS.register(
@@ -37,29 +37,30 @@ export const DoughnutChart = ({ data }) => (
     }}
     options={{
       responsive: true,
-      maintainAspectRatio: false,  // Allow resizing
+      maintainAspectRatio: false, // Allow resizing
       // aspectRatio: 1, // Optional to maintain a square shape
       plugins: {
         legend: {
           display: false, // Disables the legend completely
-          // align: 'start', 
+          // align: 'start',
           position: "top",
           labels: {
             font: {
-              size: 10,  // Set the desired font size for the legend text
+              size: 10, // Set the desired font size for the legend text
             },
           },
         },
         tooltip: {
           callbacks: {
             label: function (tooltipItem) {
-              return `${tooltipItem.label}: ₹${formatChartNumber(tooltipItem.raw)}`;
+              return `${tooltipItem.label}: ₹${formatChartNumber(
+                tooltipItem.raw
+              )}`;
             },
           },
         },
-        
       },
-      cutout: '65%',
+      cutout: "65%",
     }}
   />
 );
