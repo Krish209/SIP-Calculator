@@ -120,7 +120,7 @@ const HomeLanding = () => {
               src={heroimg}
               alt="Financial investment calculators and planning tools illustration"
               className="max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[400px] h-auto object-contain"
-              loading="lazy"
+              // loading="lazy"
             />
           </div>
         </div>

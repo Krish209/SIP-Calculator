@@ -172,7 +172,11 @@
 
 // https://www.sipgo.in
 // http://www.sipgo.in
+// http://sipgo.in/ghgh
+// http://www.sipgo.in/calc
+// http://www.sipgo.in/ygh
 // http://sipgo.in
+// http://sipgo.in/calc
 // https://www.sipgo.in/fdjf
 // https://www.sipgo.in/bhaihafdd
 // https://www.sipgo.in/404
