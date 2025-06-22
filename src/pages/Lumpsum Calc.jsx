@@ -70,16 +70,16 @@ function LumpsumCalc() {
   useEffect(() => {
     // Check if values are valid
     if (
-      monthlyInvestment < 100 ||
-      lumpsumAmount < 100 ||
+      monthlyInvestment < 500 ||
+      lumpsumAmount < 500 ||
       rateOfInterest <= 0 ||
       investmentPeriod <= 0
     ) {
       setErrorMessages({
         monthlyInvestment:
-          monthlyInvestment < 100 ? "Investment must be greater than 100" : "",
+          monthlyInvestment < 500 ? "Investment must be at least ₹500" : "",
         lumpsumAmount:
-          lumpsumAmount < 100 ? "Investment must be greater than 100" : "",
+          lumpsumAmount < 500 ? "Investment must be at least ₹500" : "",
         rateOfInterest:
           rateOfInterest <= 0
             ? "Rate of interest must be greater than zero"

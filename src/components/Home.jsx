@@ -92,7 +92,7 @@ const HomeLanding = () => {
         </script>
       </Helmet>
 
-      <section className="bg-gradient-to-br from-indigo-600 to-purple-600 text-white py-20">
+      <section className="bg-gradient-to-br from-indigo-600 to-purple-600 text-white py-8 sm:py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
           {/* Text Section */}
           <div className="text-center lg:text-left max-w-2xl min-h-[300px] sm:min-h-[350px] z-2">

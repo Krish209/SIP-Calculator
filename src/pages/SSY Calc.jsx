@@ -36,7 +36,7 @@ function SSY() {
     ) {
       setErrorMessages({
         principalAmount:
-          principalAmount < 250 ? "Principal must be greater than 250" : "",
+          principalAmount < 250 ? "Principal must be at least ₹250" : "",
         startingPeriod:
           startingPeriod < minStartingPeriod ||
           startingPeriod > maxStartingPeriod

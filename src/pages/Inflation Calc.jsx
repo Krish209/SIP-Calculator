@@ -35,9 +35,9 @@ function InflationCalculator() {
           initialAmount <= 0 ? "Initial amount must be at least ₹1000" : "",
         annualInflationRate:
           annualInflationRate < 0
-            ? "Inflation rate must be greater than or equal to zero"
+            ? "Inflation rate must be at least zero"
             : "",
-        years: years <= 0 ? "Number of years must be greater than zero" : "",
+        years: years <= 0 ? "Number of years must be at least zero" : "",
       });
       return; // Stop calculation if invalid input
     }

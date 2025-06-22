@@ -253,7 +253,7 @@ const BlogLayout = ({
           </a>
           <FiChevronRight className="mx-2 w-4 h-4" />
           <a href="/blog" className="hover:text-indigo-600">
-            Blog Articles
+            Articles
           </a>
           <FiChevronRight className="mx-2 w-4 h-4" />
           <span className="text-gray-400 truncate">{title}</span>
