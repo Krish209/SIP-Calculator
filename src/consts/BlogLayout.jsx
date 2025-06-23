@@ -247,7 +247,7 @@ const BlogLayout = ({
 
       <main className="max-w-4xl mx-auto px-2 sm:px-4 py-6 sm:py-12">
         {/* Breadcrumb */}
-        <div className="flex items-center text-sm text-gray-500 mb-4 sm:mb-8">
+        <div className="flex items-center text-sm text-gray-600 mb-4 sm:mb-8">
           <a href="/" className="hover:text-indigo-600">
             Home
           </a>
@@ -256,7 +256,7 @@ const BlogLayout = ({
             Articles
           </a>
           <FiChevronRight className="mx-2 w-4 h-4" />
-          <span className="text-gray-400 truncate">{title}</span>
+          <span className="text-gray-500 truncate">{title}</span>
         </div>
 
         {/* Header */}
@@ -280,7 +280,7 @@ const BlogLayout = ({
             {title}
           </h1>
 
-          <div className="flex sm:flex-row flex-col space-y-4 sm:space-y-0 justify-between text-sm text-gray-500">
+          <div className="flex sm:flex-row flex-col space-y-4 sm:space-y-0 justify-between text-sm text-gray-600">
             <div className="flex items-center space-x-4">
               <div className="h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center">
                 <span className="text-indigo-800 font-semibold tracking-wider text-lg">
@@ -293,7 +293,7 @@ const BlogLayout = ({
               </div>
               <div>
                 <p className="font-medium text-gray-900">{author}</p>
-                {role && <p className="text-gray-500 text-sm">{role}</p>}
+                {role && <p className="text-gray-600 text-sm">{role}</p>}
               </div>
             </div>
             <div className="flex items-center space-x-6">
@@ -364,14 +364,14 @@ const BlogLayout = ({
           <div className="my-6 sm:my-10">
             <div className="flex flex-wrap gap-3">
               {tags.map((tag) => (
-                <a
+                <span
                   key={tag}
                   // href={`/tags/${tag.toLowerCase().replace(/\s+/g, "-")}`}
                   className="text-sm bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full"
                   // aria-label={`Posts tagged with ${tag}`}
                 >
                   #{tag}
-                </a>
+                </span>
               ))}
             </div>
           </div>
@@ -379,7 +379,7 @@ const BlogLayout = ({
 
         {randomPosts && (
           <div className="my-6 sm:my-10">
-            <h3 className="text-2xl font-bold mb-8">You Might Also Like</h3>
+            <h3 className="text-2xl font-bold mb-6">You Might Also Like</h3>
             <div className="grid md:grid-cols-2 gap-4 md:gap-6">
               {randomPosts.map((post) => (
                 <Link key={post.path} to={post.path}>

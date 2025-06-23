@@ -31,7 +31,7 @@ import { LuChartNoAxesCombined } from "react-icons/lu";
 const AllCalculator = ({
   headingLevel: Heading = "h1",
   headingLevel2: Heading2 = "h2",
-  isStandalonePage = false, // Add this prop when used as standalone page
+  isStandalonePage = true, // Add this prop when used as standalone page
 }) => {
   // Data for calculators
   const calculators = [

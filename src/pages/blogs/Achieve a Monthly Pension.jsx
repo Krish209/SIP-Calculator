@@ -198,16 +198,16 @@ const AchieveMonthlyPensionwithNPS = () => {
             advantage of <strong>compounding and tax benefits</strong>. NPS
             offers a secure, regulated, and tax-efficient path toward
             retirement, making it one of the best options for long-term wealth
-            building in India.{" "}
+            building in India. You can use our{" "}
             <a
               href="/nps-calculator"
               className="text-blue-600 hover:text-blue-700"
             >
               NPS Calculator
             </a>{" "}
-            You can use our NPS Calculator to find out exactly how much you need
-            to invest monthly to reach your pension target. For more insight
-            into how your returns grow over time, check out our{" "}
+            to find out exactly how much you need to invest monthly to reach
+            your pension target. For more insight into how your returns grow
+            over time, check out our{" "}
             <a
               href="/compound-interest-calculator"
               className="text-blue-600 hover:text-blue-700"

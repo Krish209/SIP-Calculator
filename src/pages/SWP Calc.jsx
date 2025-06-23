@@ -308,7 +308,7 @@ function SWPCalculator() {
             <div className="space-y-1 sm:space-y-2 md:space-y-6">
               <div className="min-h-10 sm:h-14 md:h-10">
                 <div className="flex justify-between items-center">
-                  <label htmlFor="monthlyWithdrawal" className="font-medium">
+                  <label id="monthly-withdrawal-label" className="font-medium">
                     Monthly Withdrawal
                   </label>
                   <div className="relative w-28 lg:w-32">
@@ -333,7 +333,7 @@ function SWPCalculator() {
               </div>
               <div className="">
                 <input
-                  id="monthlyWithdrawal"
+                  // id="monthlyWithdrawal"
                   type="range"
                   min="500"
                   max={maxMonthlyWithdrawal}
@@ -341,7 +341,7 @@ function SWPCalculator() {
                   value={monthlyWithdrawal}
                   onChange={handleMonthlyWithdrawal}
                   className="w-full cursor-pointer"
-                  // aria-labelledby="monthly-withdrawal-label"
+                  aria-labelledby="monthly-withdrawal-label"
                 />
               </div>
             </div>

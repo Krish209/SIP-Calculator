@@ -60,9 +60,9 @@ const SimpleInterestInfo = () => {
       </section>
 
       <div className="bg-gray-100 p-2 md:p-4 rounded-lg mt-6 shadow-md">
-        <h4 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">
+        <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">
           Formula for Simple Interest:
-        </h4>
+        </h3>
         <p className="mb-2 md:mb-4">
           The formula used to calculate simple interest is:
         </p>

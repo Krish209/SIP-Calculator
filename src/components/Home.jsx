@@ -338,7 +338,7 @@ const HomeLanding = () => {
 
       {/* Calculator Categories */}
       <div>
-        <AllCalculator headingLevel="h2" headingLevel2="h3" />
+        <AllCalculator headingLevel="h2" headingLevel2="h3" isStandalonePage={false} />
       </div>
     </div>
   );

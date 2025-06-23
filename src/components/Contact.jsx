@@ -128,7 +128,7 @@ const Contact = () => {
             <div className="flex items-start space-x-3">
               <FaLocationDot className="w-6 h-6 text-indigo-600 mt-1 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-lg">Our Office</h3>
+                <h2 className="font-semibold text-lg">Our Office</h2>
                 <p className="text-gray-600">
                   123 Tech Street, Bengaluru, India 560001
                 </p>
@@ -138,7 +138,7 @@ const Contact = () => {
             <div className="flex items-start space-x-3">
               <PhoneIcon className="w-6 h-6 text-indigo-600 mt-1 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-lg">Phone Support</h3>
+                <h2 className="font-semibold text-lg">Phone Support</h2>
                 <div className="space-y-1">
                   <a
                     href="tel:+919876543210"
@@ -154,7 +154,7 @@ const Contact = () => {
             <div className="flex items-start space-x-3">
               <EnvelopeIcon className="w-6 h-6 text-indigo-600 mt-1 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-lg">Email Us</h3>
+                <h2 className="font-semibold text-lg">Email Us</h2>
                 <a
                   href="mailto:support@sipgo.in"
                   className="text-gray-600 hover:text-indigo-600 break-all"
@@ -268,6 +268,12 @@ const Contact = () => {
                 className="text-indigo-600 hover:underline"
               >
                 Privacy Policy
+              </a> and{" "}
+              <a
+                href="/terms"
+                className="text-indigo-600 hover:underline"
+              >
+                Terms and Condition
               </a>
               .
             </p>
