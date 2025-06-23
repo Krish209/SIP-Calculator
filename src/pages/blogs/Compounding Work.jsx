@@ -424,14 +424,14 @@ const CompoundingWork = () => {
               href="/compound-interest-calculator"
               className="text-blue-600 hover:text-blue-700"
             >
-              compound interest calculator
+              Compound Interest Calculator
             </a>{" "}
             or{" "}
             <a
               href="/sip-calculator"
               className="text-blue-600 hover:text-blue-700"
             >
-              SIP calculator
+              SIP Calculator
             </a>{" "}
             to visualize how small monthly contributions grow over time. If
             you’re planning for retirement or a financial milestone. Remember:{" "}

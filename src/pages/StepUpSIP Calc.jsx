@@ -268,10 +268,6 @@ function StepUpSIPCalculator() {
                         errorMessages.monthlyInvestment ? "border-red-500" : ""
                       }`}
                       placeholder={1000}
-                      style={{
-                        WebkitAppearance: "none", // Removes the spinner in WebKit-based browsers (Chrome, Safari)
-                        MozAppearance: "textfield", // Removes the spinner in Firefox
-                      }}
                     />
                     <span className="absolute left-4 top-2.5 text-gray-500">
                       ₹

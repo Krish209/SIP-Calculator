@@ -451,16 +451,16 @@ const StocksorMutualFunds = () => {
           <p className="mb-2">
             If you’re a{" "}
             <strong>beginner, risk-averse, or time-constrained</strong>, mutual
-            funds are the safer and more manageable choice. You can start small,
+            funds are a safer and more manageable choice. You can start small,
             invest consistently, and benefit from compounding over time. To
-            better understand how your investments can grow, try using our and{" "}
+            better understand how your investments can grow, try using our{" "}
             <a
               href="/mutual-fund-calculator"
               className="text-blue-600 hover:text-blue-700"
             >
               Mutual Fund Calculator
             </a>{" "}
-            or the and{" "}
+            or{" "}
             <a
               href="/sip-calculator"
               className="text-blue-600 hover:text-blue-700"

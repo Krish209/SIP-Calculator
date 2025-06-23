@@ -336,10 +336,6 @@ function LumpsumCalc() {
                           : ""
                       }`}
                       placeholder={isSIP ? "1000" : "10000"}
-                      style={{
-                        WebkitAppearance: "none", // Removes the spinner in WebKit-based browsers (Chrome, Safari)
-                        MozAppearance: "textfield", // Removes the spinner in Firefox
-                      }}
                     />
                     <span className="absolute left-4 top-2.5 text-gray-500">
                       ₹

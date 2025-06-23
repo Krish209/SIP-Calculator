@@ -4,6 +4,7 @@ const Table = ({ columns, data }) => {
   return (
     <div className="my-4 border border-gray-200 overflow-x-auto rounded-lg shadow-sm">
       <table className="min-w-full divide-y divide-gray-200">
+        <caption className="sr-only">Data Table</caption>
         <thead className="bg-gray-50">
           <tr>
             {columns.map((col) => (
